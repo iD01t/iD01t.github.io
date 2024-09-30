@@ -3,15 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iOS Device Bypass System</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Countdown to Launch</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .container {
+            text-align: center;
+        }
+        img {
+            width: 300px;
+        }
+        .countdown {
+            margin-top: 30px;
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 2px #00ffcc;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .countdown span {
+            color: #00ffcc;
+        }
+    </style>
 </head>
 <body>
-    <h1>iOS Device Hello Screen Bypass</h1>
-    <form action="bypass.php" method="POST">
-        <label for="device_id">Enter Device UDID:</label>
-        <input type="text" id="device_id" name="device_id" required>
-        <input type="submit" value="Bypass Hello Screen">
-    </form>
+
+    <div class="container">
+        <img src="https://ibb.co/SRXkH8q" alt="i Unlock Mobile Logo">
+        <div class="countdown" id="countdown">
+            <span id="days"></span> days 
+            <span id="hours"></span> hours 
+            <span id="minutes"></span> minutes 
+            <span id="seconds"></span> seconds
+        </div>
+    </div>
+
+    <script>
+        // Set the target date and time
+        var targetDate = new Date("October 2, 2024 08:00:00").getTime();
+
+        // Update the countdown every second
+        var countdownFunction = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = targetDate - now;
+
+            // Time calculations
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the elements with ids
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // If the countdown is finished, display some message
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
 </body>
 </html>
