@@ -3,87 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iUnlockMobile Free IMEI Lookup</title>
-    <style>
-        .lookup-box {
-            width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .lookup-box input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .lookup-box button {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .lookup-box button:hover {
-            background-color: #218838;
-        }
-
-        .result-box {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f8f9fa;
-        }
-    </style>
+    <title>iOS Device Bypass System</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<div class="lookup-box">
-    <h2>iUnlockMobile Free IMEI Lookup</h2>
-    <input type="text" id="imeiInput" placeholder="Enter IMEI Number" maxlength="15">
-    <button onclick="getIMEIInfo()">Click here to get free IMEI</button>
-
-    <div id="imeiResult" class="result-box" style="display: none;">
-        <h3>Lookup Result</h3>
-        <p id="resultText">Awaiting search...</p>
-    </div>
-</div>
-
-<script>
-    function getIMEIInfo() {
-        const imei = document.getElementById('imeiInput').value;
-        
-        if (imei.length !== 15 || isNaN(imei)) {
-            alert('Please enter a valid 15-digit IMEI number.');
-            return;
-        }
-
-        // Call your API for IMEI lookup
-        fetch(`https://api.ifreeicloud.co.uk?imei=${imei}&apikey=X93-D01-BG1-EEU-GG1-FIA-UEQ-H48`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    document.getElementById('resultText').textContent = 'Invalid IMEI or error fetching data.';
-                } else {
-                    document.getElementById('resultText').textContent = `Device Info: ${data.deviceInfo}`;
-                }
-                document.getElementById('imeiResult').style.display = 'block';
-            })
-            .catch(error => {
-                document.getElementById('resultText').textContent = 'Error retrieving IMEI information.';
-                document.getElementById('imeiResult').style.display = 'block';
-            });
-    }
-</script>
-
+    <h1>iOS Device Hello Screen Bypass</h1>
+    <form action="bypass.php" method="POST">
+        <label for="device_id">Enter Device UDID:</label>
+        <input type="text" id="device_id" name="device_id" required>
+        <input type="submit" value="Bypass Hello Screen">
+    </form>
 </body>
 </html>
