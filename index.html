@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMEI Lookup - iUnlockMobile</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="logo.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="front/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="front/css/font-awesome.min.css">
+    <link rel="stylesheet" href="front/css/swiper.min.css" />
+    <link rel="stylesheet" href="front/css/style5152.css?ver=1.0" />
+    <link rel="stylesheet" href="front/css/responsive.css" />
+    <link rel="stylesheet" href="front/css/googleHide.css" />
+
+    <title>iUnlockMobile Free IMEI Check</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
-            background-color: #f4f4f9;
-            color: black;  /* Set text color to black */
-        }
-        h1 {
-            color: black;  /* Set the heading color to black */
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            color: black;  /* Set label color to black */
-        }
-        input[type="text"] {
+        .form-signin {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            color: black; /* Set text color inside input box to black */
         }
-        input[type="submit"] {
-            background-color: #5a5aad;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        input[type="submit"]:hover {
-            background-color: #4848ad;
+
+        .g-recaptcha {
+            margin: 20px auto;
+            display: block;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>IMEI Lookup - iUnlockMobile</h1>
-        <form action="imei_lookup.php" method="POST">
-            <label for="imei">Enter IMEI Number:</label>
-            <input type="text" id="imei" name="imei" required placeholder="Enter IMEI number here">
 
-            <input type="submit" value="Lookup IMEI">
-        </form>
+<body>
+
+    <!-- Header layout start -->
+    <div class="container-fluid p-5 bg-dark my-0 py-4">
+        <div class="container">
+            <div class="checkStatus text-center">
+                <div class="titleCol titleCollg basetitle">
+                    <center>
+                        <div class="logo mb-3">
+                            <img src="https://help.apple.com/assets/656FB82AF70ABEF8DF08335A/656FB82BA24EC4713C0D0E30/en_US/1307d5b1765f8f5ea7fd5432033b1cd8.png" width="80px">
+                        </div>
+                    </center>
+                    <h2><strong>Free Checker by iUnlockMobile</strong></h2>
+                </div>
+                <p class="md-para-text basetitle">
+                    <strong>Check IMEI/SN and get all info about your device, including Blacklist, SimLock, Model, Warranty for free.</strong>
+                    <br> Supports iPhone, iPad, MacBook, and all Apple devices.
+                </p>
+                <div class="fieldStyle py-3">
+                    <form class="form-signin" method="POST">
+                        <div id="imeiWrap">
+                            <div class="row no-gutters">
+                                <div class="col-md">
+                                    <div class="inputGroupField">
+                                        <input type="text" name="imeilist" placeholder="Enter IMEI or SERIAL" id="imeiFld" required class="form-control imeiFld" maxlength="15">
+                                        <input type="hidden" id="serviceFld" value="1234">
+                                        <span class="eMsg">Please fill out this field.</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-auto">
+                                    <button class="btn btn-lg btn-primary btn-block" name="check" type="submit">Check IMEI</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="g-recaptcha" id="captcha" data-sitekey="6Lc6JbcpAAAAAN4z054EhJkx-5TX1v6yni8f_skf"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div class="quaText mt-7">
+                    <a href="https://iunlockmobile.com/resellerpricing/imei/"><span><i class="fa fa-question-circle-o" aria-hidden="true"></i></span><span>Looking for Wholesale Unlocking Point</span></a>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Banner layout close -->
+
+    <br>
+
+    <!-- Footer layout start -->
+    <footer>
+        <div class="footerCol">
+            <div class="container">
+                <div class="form-row align-items-center">
+                    <div class="col-lg-auto order-lg-last">
+                        <div class="socialIcon">
+                            <ul>
+                                <!-- Add social links here -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="footerLinks">
+                            <!-- Add footer links here -->
+                        </div>
+                    </div>
+                    <div class="col-lg-auto order-lg-first">
+                        <div class="copyrightCol">
+                            © 2024 iUnlockMobile Team. | All rights reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer layout close -->
+
+    <!-- reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="front/js/jquery-3.3.1.min.js"></script>
+    <script src="front/js/popper.min.js"></script>
+    <script src="front/js/swiper.min.js"></script>
+    <script src="front/js/bootstrap.min.js"></script>
+    <script src="front/js/imeiorder.js"></script>
 </body>
+
 </html>
