@@ -71,7 +71,7 @@
             $imei = htmlspecialchars($_POST['imei']);
 
             // API URL for IMEI Lookup (Replace with your API and key)
-            $api_url = 'https://phonevalidation.abstractapi.com/v1/?api_key=YOUR_API_KEY&phone=' . $imei;
+            $api_url = 'https://phonevalidation.abstractapi.com/v1/?api_key=3491c6553b2a4dacbe54f5bc232438c9&phone=' . $imei;
 
             // Initialize cURL
             $ch = curl_init();
