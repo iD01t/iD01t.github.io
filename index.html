@@ -1,124 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <link rel="icon" sizes="16x16 32x32 64x64" href="logo.ico">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="front/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="front/css/font-awesome.min.css">
-    <link rel="stylesheet" href="front/css/swiper.min.css" />
-    <link rel="stylesheet" href="front/css/style5152.css?ver=1.0" />
-    <link rel="stylesheet" href="front/css/responsive.css" />
-    <link rel="stylesheet" href="front/css/googleHide.css" />
-
-    <title>iUnlockMobile Free IMEI Check</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python for Beginners - iD01t Series</title>
     <style>
-        .form-signin {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-
-        .g-recaptcha {
-            margin: 20px auto;
-            display: block;
-        }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px; }
+        h1 { color: #2A7AE2; }
+        h2 { color: #1C5FB4; }
+        h3 { color: #276FBF; }
+        p { margin-bottom: 1em; }
+        .chapter-title { margin-top: 2em; }
+        .subheading { font-weight: bold; margin-top: 1em; }
     </style>
 </head>
-
 <body>
 
-    <!-- Header layout start -->
-    <div class="container-fluid p-5 bg-dark my-0 py-4">
-        <div class="container">
-            <div class="checkStatus text-center">
-                <div class="titleCol titleCollg basetitle">
-                    <center>
-                        <div class="logo mb-3">
-                            <img src="https://help.apple.com/assets/656FB82AF70ABEF8DF08335A/656FB82BA24EC4713C0D0E30/en_US/1307d5b1765f8f5ea7fd5432033b1cd8.png" width="80px">
-                        </div>
-                    </center>
-                    <h2><strong>Free Checker by iUnlockMobile</strong></h2>
-                </div>
-                <p class="md-para-text basetitle">
-                    <strong>Check IMEI/SN and get all info about your device, including Blacklist, SimLock, Model, Warranty for free.</strong>
-                    <br> Supports iPhone, iPad, MacBook, and all Apple devices.
-                </p>
-                <div class="fieldStyle py-3">
-                    <form class="form-signin" method="POST">
-                        <div id="imeiWrap">
-                            <div class="row no-gutters">
-                                <div class="col-md">
-                                    <div class="inputGroupField">
-                                        <input type="text" name="imeilist" placeholder="Enter IMEI or SERIAL" id="imeiFld" required class="form-control imeiFld" maxlength="15">
-                                        <input type="hidden" id="serviceFld" value="1234">
-                                        <span class="eMsg">Please fill out this field.</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-auto">
-                                    <button class="btn btn-lg btn-primary btn-block" name="check" type="submit">Check IMEI</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col-md">
-                                <div class="g-recaptcha" id="captcha" data-sitekey="6Lc6JbcpAAAAAN4z054EhJkx-5TX1v6yni8f_skf"></div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <br>
-                <div class="quaText mt-7">
-                    <a href="https://iunlockmobile.com/resellerpricing/imei/"><span><i class="fa fa-question-circle-o" aria-hidden="true"></i></span><span>Looking for Wholesale Unlocking Point</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Banner layout close -->
+    <!-- Book Title and Introduction -->
+    <header>
+        <h1>Python for Beginners</h1>
+        <h2>Master the Basics and Build Real Projects</h2>
+        <p><em>Welcome to the iD01t Series, a beginner-friendly guide to learning Python through real-world projects and hands-on exercises.</em></p>
+    </header>
 
-    <br>
+    <!-- Table of Contents -->
+    <section id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#chapter1">Chapter 1: Hello World! Getting Started with Python</a></li>
+            <li><a href="#chapter2">Chapter 2: Variables and Data Types</a></li>
+            <li><a href="#chapter3">Chapter 3: Control Flow with Conditionals</a></li>
+            <li><a href="#chapter4">Chapter 4: Functions</a></li>
+            <li><a href="#chapter5">Chapter 5: Introduction to Object-Oriented Programming (OOP)</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </section>
 
-    <!-- Footer layout start -->
-    <footer>
-        <div class="footerCol">
-            <div class="container">
-                <div class="form-row align-items-center">
-                    <div class="col-lg-auto order-lg-last">
-                        <div class="socialIcon">
-                            <ul>
-                                <!-- Add social links here -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg">
-                        <div class="footerLinks">
-                            <!-- Add footer links here -->
-                        </div>
-                    </div>
-                    <div class="col-lg-auto order-lg-first">
-                        <div class="copyrightCol">
-                            © 2024 iUnlockMobile Team. | All rights reserved
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer layout close -->
+    <!-- Chapter 1 -->
+    <section id="chapter1" class="chapter">
+        <h2 class="chapter-title">Chapter 1: Hello World! Getting Started with Python</h2>
+        <h3>Introduction to Python</h3>
+        <p>Python is one of the most popular programming languages, known for its readability and ease of use...</p>
+        
+        <h3>Writing Your First Program</h3>
+        <p>To get started, open your Python environment and type the following:</p>
+        <pre><code>print("Hello, World!")</code></pre>
+        <p>This simple line of code will output “Hello, World!” to the console, introducing you to basic Python syntax.</p>
+        
+        <h3>Understanding Basic Syntax</h3>
+        <p>Python syntax is clear and easy to read, with indentation playing a major role in structuring code.</p>
+    </section>
 
-    <!-- reCAPTCHA script -->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="front/js/jquery-3.3.1.min.js"></script>
-    <script src="front/js/popper.min.js"></script>
-    <script src="front/js/swiper.min.js"></script>
-    <script src="front/js/bootstrap.min.js"></script>
-    <script src="front/js/imeiorder.js"></script>
+    <!-- Chapter 2 -->
+    <section id="chapter2" class="chapter">
+        <h2 class="chapter-title">Chapter 2: Variables and Data Types</h2>
+        <h3>What Are Variables?</h3>
+        <p>Variables are placeholders for storing data. They can be assigned values and used throughout your code...</p>
+        
+        <h3>Basic Data Types</h3>
+        <ul>
+            <li><strong>Integer</strong>: Whole numbers, such as 42</li>
+            <li><strong>Float</strong>: Numbers with decimals, such as 3.14</li>
+            <li><strong>String</strong>: Text enclosed in quotes, such as "Hello, Python!"</li>
+        </ul>
+        
+        <h3>Type Conversion</h3>
+        <p>Python allows you to convert between data types with functions like <code>int()</code>, <code>float()</code>, and <code>str()</code>.</p>
+    </section>
+
+    <!-- Chapter 3 -->
+    <section id="chapter3" class="chapter">
+        <h2 class="chapter-title">Chapter 3: Control Flow with Conditionals</h2>
+        <h3>Using `if`, `elif`, and `else` Statements</h3>
+        <p>Control flow allows you to make decisions in your code using conditional statements like `if`, `elif`, and `else`...</p>
+
+        <h3>Logical Operators</h3>
+        <p>Python includes logical operators (`and`, `or`, `not`) for creating complex conditions.</p>
+    </section>
+
+    <!-- Chapter 4 -->
+    <section id="chapter4" class="chapter">
+        <h2 class="chapter-title">Chapter 4: Functions</h2>
+        <h3>Creating and Calling Functions</h3>
+        <p>Functions allow you to organize reusable code that performs specific tasks. For example:</p>
+        <pre><code>def greet(name): print("Hello, " + name)</code></pre>
+        
+        <h3>Parameters and Return Values</h3>
+        <p>Parameters let you pass values into functions, and return values allow functions to send results back to the caller.</p>
+    </section>
+
+    <!-- Chapter 5 -->
+    <section id="chapter5" class="chapter">
+        <h2 class="chapter-title">Chapter 5: Introduction to Object-Oriented Programming (OOP)</h2>
+        <h3>Classes and Objects in Python</h3>
+        <p>Object-Oriented Programming (OOP) structures code using classes, which act as blueprints for creating objects.</p>
+        
+        <h3>Attributes and Methods</h3>
+        <p>Attributes represent the properties of an object, while methods define the behaviors.</p>
+    </section>
+
+    <!-- Conclusion -->
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>Congratulations on completing this introduction to Python! By now, you've gained experience with Python syntax, functions, modules, and more...</p>
+        <p>Next steps: Practice, explore new projects, and consider diving deeper into Python for data science, web development, or automation.</p>
+        <p>We invite you to download the <strong>iD01t Softwares Chapters Python App</strong> on <a href="https://github.com/id01t" target="_blank">https://github.com/id01t</a> to keep learning with hands-on exercises and examples.</p>
+    </section>
+
 </body>
-
 </html>
