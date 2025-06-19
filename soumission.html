@@ -26,7 +26,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: 2rem auto;
       background: white;
       padding: 2rem;
@@ -54,6 +54,28 @@
       background-color: #f9fbff;
     }
 
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    button, input[type="file"] {
+      background-color: #0055cc;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #003f99;
+    }
+
     footer {
       text-align: center;
       margin-top: 3rem;
@@ -69,13 +91,15 @@
 </header>
 
 <div class="container">
-  <label for="resultat">Informations extraites automatiquement :</label>
-  <textarea id="resultat" placeholder="Les détails du contrat, des matériaux et du coût s’afficheront ici après traitement automatique du fichier PDF."></textarea>
-</div>
+  <label for="resultat">Données extraites automatiquement :</label>
+  <textarea id="resultat" placeholder="Les détails du contrat, des matériaux et du coût s’afficheront ici."></textarea>
 
-<footer>
-  &copy; 2025 QuoteSmart – Propulsé par iTechInfo MTL
-</footer>
+  <div class="buttons">
+    <input type="file" id="pdfUploader" accept="application/pdf">
+    <butURL(blob);
+    link.click();
+  }
+</script>
 
 </body>
-</html>
+    </html>
