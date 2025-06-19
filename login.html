@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - QuoteSmart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #4fc3f7;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #4fc3f7;
+        }
+        
+        .login-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+        
+        .login-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        
+        .login-header {
+            margin-bottom: 2rem;
+        }
+        
+        .login-header h1 {
+            font-size: 2.2rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .login-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .login-form {
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #4fc3f7;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-primary {
+            background: #4fc3f7;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #29b6f6;
+            transform: translateY(-2px);
+        }
+        
+        .btn-google {
+            background: #db4437;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-google:hover {
+            background: #c23321;
+            transform: translateY(-2px);
+        }
+        
+        .divider {
+            margin: 2rem 0;
+            position: relative;
+            text-align: center;
+        }
+        
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e0e0e0;
+        }
+        
+        .divider span {
+            background: white;
+            padding: 0 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .forgot-password {
+            color: #4fc3f7;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        
+        .signup-link {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+        }
+        
+        .signup-link a {
+            color: #4fc3f7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .demo-credentials {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #4fc3f7;
+        }
+        
+        .demo-credentials h4 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .demo-credentials p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .demo-credentials small {
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        footer {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        @media (max-width: 768px) {
+            .login-box {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Quote<span>Smart</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="soumission.html">Analyser</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tarification.html">Tarification</a></li>
+                        <li><a href="login.html">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>🔐 Connexion</h1>
+                <p>Accédez à votre espace QuoteSmart Premium</p>
+            </div>
+
+            <div class="demo-credentials">
+                <h4>🎯 Mode démonstration</h4>
+                <p><strong>Email:</strong> demo@quotesmart.com</p>
+                <p><strong>Mot de passe:</strong> demo123</p>
+                <small>Utilisez ces identifiants pour tester la plateforme</small>
+            </div>
+
+            <form class="login-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Se connecter</button>
+                
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                </div>
+            </form>
+
+            <div class="divider">
+                <span>ou</span>
+            </div>
+
+            <button class="btn btn-google" onclick="loginWithGoogle()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                Continuer avec Google
+            </button>
+
+            <div class="signup-link">
+                <p>Pas encore de compte ? <a href="#" onclick="showSignupInfo()">Créer un compte</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 QuoteSmart Premium. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Simulation de connexion
+            if (email === 'demo@quotesmart.com' && password === 'demo123') {
+                // Simuler une connexion réussie
+                localStorage.setItem('user', JSON.stringify({
+                    email: email,
+                    name: 'Utilisateur Démo',
+                    plan: 'Pro',
+                    loginTime: new Date().toISOString()
+                }));
+                
+                alert('Connexion réussie ! Redirection vers le dashboard...');
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Identifiants incorrects. Utilisez demo@quotesmart.com / demo123 pour la démonstration.');
+            }
+        }
+        
+        function loginWithGoogle() {
+            // Simulation de connexion Google
+            alert('Connexion Google simulée. En production, ceci utiliserait l\'API Google OAuth.');
+            
+            // Simuler une connexion réussie
+            localStorage.setItem('user', JSON.stringify({
+                email: 'utilisateur@gmail.com',
+                name: 'Utilisateur Google',
+                plan: 'Free',
+                loginTime: new Date().toISOString(),
+                provider: 'google'
+            }));
+            
+            setTimeout(() => {
+                window.location.href = 'dashboard.html';
+            }, 1000);
+        }
+        
+        function showSignupInfo() {
+            alert('Inscription disponible ! En production, ceci redirigerait vers le formulaire d\'inscription ou utiliserait une modale.');
+        }
+        
+        // Pré-remplir les champs avec les identifiants de démo
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailField = document.getElementById('email');
+            const passwordField = document.getElementById('password');
+            
+            // Ajouter un bouton pour auto-remplir
+            const loginForm = document.querySelector('.login-form');
+            const autoFillBtn = document.createElement('button');
+            autoFillBtn.type = 'button';
+            autoFillBtn.textContent = '🎯 Remplir automatiquement';
+            autoFillBtn.className = 'btn btn-secondary';
+            autoFillBtn.style.background = '#6c757d';
+            autoFillBtn.style.color = 'white';
+            autoFillBtn.style.marginBottom = '1rem';
+            
+            autoFillBtn.onclick = function() {
+                emailField.value = 'demo@quotesmart.com';
+                passwordField.value = 'demo123';
+            };
