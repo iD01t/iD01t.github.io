@@ -1,41 +1,99 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="UTF-8"><title>Nouvelle Soumission | QuoteSmart</title>
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0; padding: 2rem;
-    background: #f4f6f9;
-    color: #333;
-  }
-  header {
-    background: #003366;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 0 0 8px 8px;
-  }
-  main {
-    max-width: 800px;
-    margin: 2rem auto;
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  h1 { color: #003366; margin-top: 0; }
-  nav a {
-    margin-right: 1rem;
-    text-decoration: none;
-    color: #0073e6;
-  }
-  nav { margin-bottom: 1rem; }
-</style>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Soumission - QuoteSmart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 2rem;
+      color: #222;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #0055cc;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #003f99;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-<header><h1>Nouvelle Soumission</h1></header>
-<main>
-  <p>Importez votre soumission PDF pour extraire automatiquement les informations contractuelles essentielles.</p>
-  <form method="post" enctype="multipart/form-data">
-    <input type="file" name="pdf" required>
-    <button type="submit">Analyser la soumission</button>
+
+<header>
+  <h1>Créer une Soumission</h1>
+</header>
+
+<div class="content">
+  <form action="/submit_quote" method="POST">
+    <label for="client">Nom du client</label>
+    <input type="text" id="client" name="client" required>
+
+    <label for="adresse">Adresse du chantier</label>
+    <input type="text" id="adresse" name="adresse" required>
+
+    <label for="travaux">Description des travaux</label>
+    <textarea id="travaux" name="travaux" rows="5" required></textarea>
+
+    <label for="materiaux">Matériaux requis</label>
+    <textarea id="materiaux" name="materiaux" rows="4"></textarea>
+
+    <label for="cout">Coût estimé ($)</label>
+    <input type="number" id="cout" name="cout" required>
+
+    <button type="submit">Générer la soumission</button>
   </form>
-</main></body></html>
+</div>
+
+<footer>
+  &copy; 2025 QuoteSmart – Propulsé par iTechInfo MTL
+</footer>
+
+</body>
+</html>
