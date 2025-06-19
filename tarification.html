@@ -1,117 +1,141 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Tarifs | QuoteSmart</title>
+  <meta charset="UTF-8" />
+  <title>Plans Tarifaires – QuoteSmart</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      margin: 0; padding: 2rem;
-      background: #f4f6f9;
-      color: #333;
+      background: #f2f4f7;
+      margin: 0;
+      padding: 2rem;
+      color: #222;
     }
     header {
       background: #003366;
       color: white;
-      padding: 1rem 2rem;
-      border-radius: 0 0 8px 8px;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
     }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #003366;
-    }
+    h1 { margin: 0; font-size: 2rem; }
     .plans {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
+      margin-top: 2rem;
     }
     .plan {
-      flex: 1 1 250px;
-      background: #f0f4f8;
-      border-radius: 10px;
+      background: white;
+      border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 320px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-top: 4px solid #0055cc;
     }
-    .plan h3 {
+    .plan h2 {
       margin-top: 0;
+      font-size: 1.3rem;
       color: #003366;
     }
     .price {
-      font-size: 1.8rem;
-      color: #0073e6;
-      margin: 1rem 0;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #0055cc;
     }
-    .plan p {
-      font-size: 0.95rem;
-      line-height: 1.5;
+    .yearly {
+      font-size: 0.9rem;
+      color: #0077cc;
     }
-    .paypal-btn {
+    ul {
+      padding-left: 20px;
       margin-top: 1rem;
+    }
+    .paypal-form {
+      margin-top: 1rem;
+    }
+    .paypal-form input[type="submit"] {
+      background: #0070ba;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <header><h1>QuoteSmart</h1></header>
-  <main>
-    <h2>Nos plans de tarification</h2>
-    <div class="plans">
 
-      <div class="plan">
-        <h3>Free</h3>
-        <div class="price">0 $</div>
-        <p>Analyse manuelle<br>Accès limité</p>
-        <div class="paypal-btn">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="business" value="itechinfomtl@gmail.com">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="item_name" value="QuoteSmart - Plan Free">
-            <input type="hidden" name="amount" value="0.00">
-            <input type="hidden" name="currency_code" value="CAD">
-            <input type="submit" value="Choisir" />
-          </form>
-        </div>
-      </div>
+  <header>
+    <h1>QuoteSmart - Plans de Tarification</h1>
+  </header>
 
-      <div class="plan">
-        <h3>Pro</h3>
-        <div class="price">9,99 $</div>
-        <p>25 soumissions / mois<br>Analyse automatique</p>
-        <div class="paypal-btn">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="business" value="itechinfomtl@gmail.com">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="item_name" value="QuoteSmart - Plan Pro">
-            <input type="hidden" name="amount" value="9.99">
-            <input type="hidden" name="currency_code" value="CAD">
-            <input type="submit" value="Choisir ce plan" />
-          </form>
-        </div>
-      </div>
+  <div class="plans">
 
-      <div class="plan">
-        <h3>Entreprise</h3>
-        <div class="price">49,99 $</div>
-        <p>Soumissions illimitées<br>Export PDF<br>Support prioritaire</p>
-        <div class="paypal-btn">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="business" value="itechinfomtl@gmail.com">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="item_name" value="QuoteSmart - Plan Entreprise">
-            <input type="hidden" name="amount" value="49.99">
-            <input type="hidden" name="currency_code" value="CAD">
-            <input type="submit" value="Choisir ce plan" />
-          </form>
-        </div>
-      </div>
-
+    <div class="plan">
+      <h2>Mini Plan</h2>
+      <div class="price">9,99 $ /mois</div>
+      <div class="yearly">ou 99 $ /an</div>
+      <ul>
+        <li>3 soumissions par mois</li>
+        <li>Lecture automatique</li>
+        <li>Export PDF</li>
+        <li>Envoi par email inclus</li>
+        <li>Signature numérique : 7 $/soumission</li>
+      </ul>
     </div>
-  </main>
+
+    <div class="plan">
+      <h2>Standard</h2>
+      <div class="price">39,99 $ /mois</div>
+      <div class="yearly">ou 419,99 $ /an</div>
+      <ul>
+        <li>10 soumissions / mois</li>
+        <li>Exportation PDF</li>
+        <li>Signature numérique manuelle : 7 $</li>
+        <li>Envoi par email automatisé</li>
+        <li>Support de base</li>
+      </ul>
+    </div>
+
+    <div class="plan">
+      <h2>Pro</h2>
+      <div class="price">99,99 $ /mois</div>
+      <div class="yearly">ou 1 049,99 $ /an</div>
+      <ul>
+        <li>50 soumissions / mois</li>
+        <li>Signature numérique incluse</li>
+        <li>Historique illimité</li>
+        <li>Rapports de comparaison</li>
+        <li>Support prioritaire</li>
+      </ul>
+    </div>
+
+    <div class="plan">
+      <h2>Entreprise+</h2>
+      <div class="price">299,99 $ /mois</div>
+      <div class="yearly">ou 3 299,99 $ /an</div>
+      <ul>
+        <li>Soumissions illimitées</li>
+        <li>Signature numérique illimitée</li>
+        <li>API dédiée</li>
+        <li>Export automatique + courriels</li>
+        <li>Intégration ERP et support VIP 24/7</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 QuoteSmart. Tous droits réservés. Compte de paiement : itechinfomtl@gmail.com via PayPal.
+  </footer>
+
 </body>
 </html>
