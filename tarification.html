@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarifs | QuoteSmart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0; padding: 2rem;
+      background: #f4f6f9;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 0 0 8px 8px;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .plan {
+      flex: 1 1 250px;
+      background: #f0f4f8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .plan h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+    .price {
+      font-size: 1.8rem;
+      color: #0073e6;
+      margin: 1rem 0;
+    }
+    .plan p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .paypal-btn {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>QuoteSmart</h1></header>
+  <main>
+    <h2>Nos plans de tarification</h2>
+    <div class="plans">
+
+      <div class="plan">
+        <h3>Free</h3>
+        <div class="price">0 $</div>
+        <p>Analyse manuelle<br>Accès limité</p>
+        <div class="paypal-btn">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="business" value="itechinfomtl@gmail.com">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="item_name" value="QuoteSmart - Plan Free">
+            <input type="hidden" name="amount" value="0.00">
+            <input type="hidden" name="currency_code" value="CAD">
+            <input type="submit" value="Choisir" />
+          </form>
+        </div>
+      </div>
+
+      <div class="plan">
+        <h3>Pro</h3>
+        <div class="price">9,99 $</div>
+        <p>25 soumissions / mois<br>Analyse automatique</p>
+        <div class="paypal-btn">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="business" value="itechinfomtl@gmail.com">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="item_name" value="QuoteSmart - Plan Pro">
+            <input type="hidden" name="amount" value="9.99">
+            <input type="hidden" name="currency_code" value="CAD">
+            <input type="submit" value="Choisir ce plan" />
+          </form>
+        </div>
+      </div>
+
+      <div class="plan">
+        <h3>Entreprise</h3>
+        <div class="price">49,99 $</div>
+        <p>Soumissions illimitées<br>Export PDF<br>Support prioritaire</p>
+        <div class="paypal-btn">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="business" value="itechinfomtl@gmail.com">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="item_name" value="QuoteSmart - Plan Entreprise">
+            <input type="hidden" name="amount" value="49.99">
+            <input type="hidden" name="currency_code" value="CAD">
+            <input type="submit" value="Choisir ce plan" />
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
