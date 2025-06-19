@@ -87,19 +87,65 @@
 <body>
 
 <header>
-  <h1>Résultat de l’Analyse PDF</h1>
+  <h1>Analyse Automatique de Soumission PDF</h1>
 </header>
 
 <div class="container">
-  <label for="resultat">Données extraites automatiquement :</label>
-  <textarea id="resultat" placeholder="Les détails du contrat, des matériaux et du coût s’afficheront ici."></textarea>
+  <label for="pdfUploader">Téléverser un fichier PDF :</label>
+  <input type="file" id="pdfUploader" accept="application/pdf">
 
   <div class="buttons">
-    <input type="file" id="pdfUploader" accept="application/pdf">
-    <butURL(blob);
+    <button onclick="analyserPDF()">Analyser le PDF</button>
+    <button onclick="envoyerEmail()">Envoyer par courriel</button>
+    <button onclick="telecharger()">Télécharger</button>
+  </div>
+
+  <label for="resultat" style="margin-top:2rem;">Résultat de l’analyse :</label>
+  <textarea id="resultat" placeholder="Les données extraites du fichier PDF s’afficheront ici..."></textarea>
+</div>
+
+<footer>
+  &copy; 2025 QuoteSmart – Développé par iTechInfo MTL
+</footer>
+
+<script>
+  function analyserPDF() {
+    const input = document.getElementById("pdfUploader");
+    const textarea = document.getElementById("resultat");
+
+    if (!input.files.length) {
+      alert("Veuillez sélectionner un fichier PDF.");
+      return;
+    }
+
+    const file = input.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      textarea.value = "Analyse locale du contenu...\n\n" +
+                       "Nom du fichier : " + file.name + "\n" +
+                       "Taille : " + (file.size / 1024).toFixed(2) + " KB\n\n" +
+                       "⚠️ Traitement automatique requis côté serveur ou via Python.";
+    };
+
+    reader.readAsArrayBuffer(file);
+  }
+
+  function envoyerEmail() {
+    const contenu = document.getElementById("resultat").value;
+    const mailtoLink = `mailto:?subject=Analyse QuoteSmart&body=${encodeURIComponent(contenu)}`;
+    window.location.href = mailtoLink;
+  }
+
+  function telecharger() {
+    const texte = document.getElementById("resultat").value;
+    const blob = new Blob([texte], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.download = "analyse_quotesmart.txt";
+    link.href = URL.createObjectURL(blob);
     link.click();
   }
 </script>
 
 </body>
-    </html>
+</html>
