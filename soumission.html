@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Soumission - QuoteSmart</title>
+  <title>Analyse PDF – QuoteSmart</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -11,6 +11,7 @@
       padding: 2rem;
       color: #222;
     }
+
     header {
       background-color: #003366;
       color: white;
@@ -18,44 +19,41 @@
       border-radius: 8px;
       text-align: center;
     }
+
     h1 {
       margin: 0;
       font-size: 2rem;
     }
-    .content {
-      max-width: 800px;
+
+    .container {
+      max-width: 900px;
       margin: 2rem auto;
       background: white;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
     label {
-      display: block;
-      margin-bottom: 0.5rem;
       font-weight: bold;
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #003366;
     }
-    input, textarea {
+
+    textarea {
       width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1.5rem;
+      height: 500px;
+      padding: 1rem;
+      font-size: 1rem;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
+      border-radius: 10px;
+      resize: vertical;
+      font-family: monospace;
+      background-color: #f9fbff;
     }
-    button {
-      background-color: #0055cc;
-      color: white;
-      border: none;
-      padding: 0.75rem 2rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #003f99;
-    }
+
     footer {
       text-align: center;
       margin-top: 3rem;
@@ -67,28 +65,12 @@
 <body>
 
 <header>
-  <h1>Créer une Soumission</h1>
+  <h1>Résultat de l’Analyse PDF</h1>
 </header>
 
-<div class="content">
-  <form action="/submit_quote" method="POST">
-    <label for="client">Nom du client</label>
-    <input type="text" id="client" name="client" required>
-
-    <label for="adresse">Adresse du chantier</label>
-    <input type="text" id="adresse" name="adresse" required>
-
-    <label for="travaux">Description des travaux</label>
-    <textarea id="travaux" name="travaux" rows="5" required></textarea>
-
-    <label for="materiaux">Matériaux requis</label>
-    <textarea id="materiaux" name="materiaux" rows="4"></textarea>
-
-    <label for="cout">Coût estimé ($)</label>
-    <input type="number" id="cout" name="cout" required>
-
-    <button type="submit">Générer la soumission</button>
-  </form>
+<div class="container">
+  <label for="resultat">Informations extraites automatiquement :</label>
+  <textarea id="resultat" placeholder="Les détails du contrat, des matériaux et du coût s’afficheront ici après traitement automatique du fichier PDF."></textarea>
 </div>
 
 <footer>
