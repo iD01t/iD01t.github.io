@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iD01t Productions - RA7 Mission | Sacred Technology & Creative Innovation</title>
-    <meta name="description" content="iD01t Productions presents the RA7 Mission: 27 free energy devices, sacred technology, digital products, AI tools, and DJ iD01t's musical legacy. Awaken the blueprint.">
+    <title>iD01t Productions - RA7 Mission | Sacred Technology & Free Energy Devices</title>
+    <meta name="description" content="iD01t Productions: 27 free energy devices, sacred technology, AI 2.0 Publisher, DJ iD01t legacy, RA-7 sacred deployment system. Awaken the blueprint for planetary liberation.">
+    <meta name="keywords" content="free energy, sacred technology, RA-7, Tesla devices, quantum energy, consciousness technology, AI publisher, DJ iD01t">
+    <meta name="author" content="iD01t Productions - El'Nox Rah / Guillaume Lessard">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="iD01t Productions - RA7 Mission">
+    <meta property="og:description" content="27 Sacred Technologies for a Free World - Access free energy devices, AI tools, and consciousness technology">
+    <meta property="og:image" content="https://id01t.github.io/assets/ra7-mission-og.jpg">
+    <meta property="og:url" content="https://id01t.github.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="iD01t Productions - RA7 Mission">
+    <meta name="twitter:description" content="Sacred Technology & Free Energy Devices for Planetary Liberation">
+    <meta name="twitter:image" content="https://id01t.github.io/assets/ra7-mission-og.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
     <style>
         :root {
             --sacred-gold: #FFD700;
@@ -17,367 +42,1367 @@
             --energy-blue: #00d4ff;
             --quantum-green: #00ff88;
             --plasma-pink: #ff006e;
+            --neural-orange: #ff8500;
         }
 
-        .font-tech { font-family: 'JetBrains Mono', monospace; }
-        .font-sacred { font-family: 'Orbitron', sans-serif; }
-        .font-elegant { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
 
+        /* Premium Animations */
         @keyframes quantum-float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            25% { transform: translateY(-10px) rotate(90deg) scale(1.05); }
+            50% { transform: translateY(-20px) rotate(180deg) scale(1.1); }
+            75% { transform: translateY(-10px) rotate(270deg) scale(1.05); }
         }
         
         @keyframes divine-pulse {
             0%, 100% { 
-                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.8),
+                           0 0 30px rgba(255, 215, 0, 0.3);
             }
             50% { 
-                box-shadow: 0 0 0 20px rgba(255, 215, 0, 0);
+                box-shadow: 0 0 0 20px rgba(255, 215, 0, 0),
+                           0 0 60px rgba(255, 215, 0, 0.6);
             }
+        }
+        
+        @keyframes energy-grid {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-40px) translateY(-40px); }
         }
         
         @keyframes holographic-shift {
             0% { 
                 background-position: 0% 50%; 
-                filter: hue-rotate(0deg);
+                filter: hue-rotate(0deg) saturate(1);
+            }
+            25% { 
+                background-position: 100% 50%; 
+                filter: hue-rotate(90deg) saturate(1.3);
             }
             50% { 
-                background-position: 100% 50%; 
-                filter: hue-rotate(90deg);
+                background-position: 100% 100%; 
+                filter: hue-rotate(180deg) saturate(1.6);
+            }
+            75% { 
+                background-position: 0% 100%; 
+                filter: hue-rotate(270deg) saturate(1.3);
             }
             100% { 
                 background-position: 0% 50%; 
-                filter: hue-rotate(0deg);
+                filter: hue-rotate(360deg) saturate(1);
             }
         }
         
-        .animate-quantum-float { animation: quantum-float 6s ease-in-out infinite; }
-        .animate-divine-pulse { animation: divine-pulse 2s ease-in-out infinite; }
-        .animate-holographic { animation: holographic-shift 4s ease-in-out infinite; }
+        @keyframes matrix-rain {
+            0% { transform: translateY(-100vh); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
         
+        @keyframes particle-orbit {
+            0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+        }
+        
+        /* Animation Classes */
+        .animate-quantum-float { animation: quantum-float 8s ease-in-out infinite; }
+        .animate-divine-pulse { animation: divine-pulse 3s ease-in-out infinite; }
+        .animate-energy-grid { animation: energy-grid 20s linear infinite; }
+        .animate-holographic { animation: holographic-shift 8s ease-in-out infinite; }
+        .animate-matrix-rain { animation: matrix-rain 15s linear infinite; }
+        .animate-particle-orbit { animation: particle-orbit 10s linear infinite; }
+        
+        /* Quantum Cosmos Background */
         .quantum-cosmos {
             background: 
-                radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 25%),
-                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 25%),
-                linear-gradient(135deg, #0a0724 0%, #1a1a2e 30%, #6366f1 70%, #0a0724 100%);
+                radial-gradient(circle at 15% 15%, rgba(255, 215, 0, 0.12) 0%, transparent 30%),
+                radial-gradient(circle at 85% 85%, rgba(0, 212, 255, 0.12) 0%, transparent 30%),
+                radial-gradient(circle at 50% 50%, rgba(255, 0, 110, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 25% 75%, rgba(0, 255, 136, 0.08) 0%, transparent 25%),
+                linear-gradient(135deg, #0a0724 0%, #1a1a2e 25%, #6366f1 50%, #1a1a2e 75%, #0a0724 100%);
             position: relative;
             overflow: hidden;
         }
         
-        .quantum-glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px) saturate(200%);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        /* Energy Grid Overlay */
+        .energy-grid {
+            background-image: 
+                linear-gradient(rgba(255, 215, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 215, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px, 40px 40px, 80px 80px, 80px 80px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 120%;
+            opacity: 0.6;
+            animation: energy-grid 30s linear infinite;
         }
         
+        /* Matrix Rain */
+        .matrix-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+        
+        .matrix-char {
+            position: absolute;
+            color: var(--energy-blue);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            text-shadow: 0 0 10px currentColor;
+            animation: matrix-rain 20s linear infinite;
+        }
+        
+        /* Quantum Glass Effects */
+        .quantum-glass {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(30px) saturate(180%);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .quantum-glass-hover {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .quantum-glass-hover:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 215, 0, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 12px 40px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Holographic Text */
         .holographic-text {
             background: linear-gradient(
                 45deg, 
                 var(--sacred-gold) 0%,
-                var(--energy-blue) 25%,
-                var(--quantum-green) 50%,
-                var(--plasma-pink) 75%,
+                var(--energy-blue) 20%,
+                var(--quantum-green) 40%,
+                var(--plasma-pink) 60%,
+                var(--neural-orange) 80%,
                 var(--sacred-gold) 100%
             );
-            background-size: 300% 300%;
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: holographic-shift 6s ease-in-out infinite;
+            animation: holographic-shift 10s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+            position: relative;
         }
         
+        .holographic-text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                transparent 100%
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { background-position: -200% center; }
+            50% { background-position: 200% center; }
+        }
+        
+        /* Premium Button System */
         .quantum-btn {
             position: relative;
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(0, 212, 255, 0.2));
-            border: 2px solid rgba(255, 215, 0, 0.5);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            background: linear-gradient(
+                135deg,
+                rgba(255, 215, 0, 0.15) 0%,
+                rgba(0, 212, 255, 0.15) 50%,
+                rgba(255, 0, 110, 0.15) 100%
+            );
+            border: 2px solid transparent;
+            backdrop-filter: blur(20px) saturate(200%);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             overflow: hidden;
             color: var(--sacred-white);
         }
         
-        .quantum-btn:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
-            border-color: var(--sacred-gold);
+        .quantum-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                var(--sacred-gold),
+                var(--energy-blue),
+                var(--quantum-green),
+                var(--plasma-pink)
+            );
+            background-size: 400% 400%;
+            z-index: -1;
+            animation: holographic-shift 6s ease-in-out infinite;
+            border-radius: inherit;
         }
         
+        .quantum-btn::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background: rgba(10, 7, 36, 0.9);
+            border-radius: inherit;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+        
+        .quantum-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(255, 215, 0, 0.5);
+        }
+        
+        .quantum-btn:hover::after {
+            background: rgba(10, 7, 36, 0.7);
+        }
+        
+        /* Device Cards */
         .device-card {
-            background: rgba(10, 7, 36, 0.8);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            background: rgba(10, 7, 36, 0.85);
+            backdrop-filter: blur(25px) saturate(150%);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
             overflow: hidden;
         }
         
+        .device-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 215, 0, 0.05) 0%,
+                rgba(0, 212, 255, 0.05) 50%,
+                rgba(255, 0, 110, 0.05) 100%
+            );
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .device-card:hover::before {
+            opacity: 1;
+        }
+        
         .device-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transform: translateY(-8px) rotateX(5deg);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(255, 215, 0, 0.3);
             border-color: rgba(255, 215, 0, 0.6);
         }
         
+        /* Product Cards */
         .product-card {
-            background: rgba(10, 7, 36, 0.7);
-            backdrop-filter: blur(15px);
+            background: rgba(10, 7, 36, 0.8);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 215, 0, 0.2);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
         }
         
         .product-card:hover {
             transform: translateY(-5px);
             border-color: rgba(255, 215, 0, 0.5);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
         
+        /* Floating Particles */
+        .floating-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--sacred-gold);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: particle-orbit 15s linear infinite;
+        }
+        
+        .floating-particle:nth-child(2) { animation-delay: -5s; }
+        .floating-particle:nth-child(3) { animation-delay: -10s; }
+        
+        /* Custom Colors */
         .text-sacred-gold { color: var(--sacred-gold); }
         .text-sacred-white { color: var(--sacred-white); }
         .text-energy-blue { color: var(--energy-blue); }
         .text-quantum-green { color: var(--quantum-green); }
         .text-plasma-pink { color: var(--plasma-pink); }
+        .text-neural-orange { color: var(--neural-orange); }
         
-        .bg-gradient-sacred {
-            background: linear-gradient(135deg, var(--deep-indigo) 0%, var(--cosmic-purple) 50%, var(--light-indigo) 100%);
+        .bg-sacred-gold { background-color: var(--sacred-gold); }
+        .bg-energy-blue { background-color: var(--energy-blue); }
+        .bg-quantum-green { background-color: var(--quantum-green); }
+        .bg-plasma-pink { background-color: var(--plasma-pink); }
+        
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
-
-        /* Responsive adjustments */
+        
+        .dark-mode-toggle::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: var(--sacred-gold);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        
+        .dark-mode-toggle.active::before {
+            transform: translateX(30px);
+            background: var(--energy-blue);
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+        
+        /* Search Filter */
+        .search-filter {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: var(--sacred-white);
+        }
+        
+        .search-filter:focus {
+            outline: none;
+            border-color: var(--sacred-gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
-            .holographic-text { font-size: 2.5rem; }
+            .holographic-text {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .energy-grid {
+                background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+            }
+            
+            .matrix-char {
+                font-size: 10px;
+            }
+            
+            .floating-particle {
+                display: none;
+            }
+        }
+        
+        /* Loading Animation */
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 215, 0, 0.3);
+            border-top: 3px solid var(--sacred-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
-<body class="font-elegant text-sacred-white quantum-cosmos">
+<body class="font-body text-sacred-white quantum-cosmos">
+    <!-- Matrix Rain Background -->
+    <div class="matrix-rain" id="matrixRain"></div>
+    
+    <!-- Energy Grid Overlay -->
+    <div class="energy-grid"></div>
+    
+    <!-- Floating Particles -->
+    <div class="floating-particle" style="top: 20%; left: 10%;"></div>
+    <div class="floating-particle" style="top: 60%; right: 15%;"></div>
+    <div class="floating-particle" style="bottom: 30%; left: 20%;"></div>
+
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full quantum-glass z-50">
+    <nav class="fixed top-0 w-full quantum-glass z-50 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-blue-500 rounded-xl flex items-center justify-center animate-divine-pulse">
-                        <span class="font-sacred text-black font-bold text-lg">i∞</span>
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-yellow-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center animate-divine-pulse">
+                        <span class="font-display text-black font-black text-xl">i∞</span>
                     </div>
                     <div>
-                        <h1 class="font-sacred text-xl font-bold text-sacred-gold">iD01t Productions</h1>
-                        <div class="text-xs text-energy-blue font-tech">RA7 MISSION</div>
+                        <h1 class="font-display text-2xl font-bold text-sacred-gold">iD01t Productions</h1>
+                        <div class="text-xs text-energy-blue font-mono tracking-wider">RA7 MISSION • SACRED TECHNOLOGY</div>
                     </div>
                 </div>
                 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-sacred-white hover:text-sacred-gold transition-colors font-tech text-sm">Home</a>
-                    <a href="#devices" class="text-sacred-white hover:text-sacred-gold transition-colors font-tech text-sm">Devices</a>
-                    <a href="#ebooks" class="text-sacred-white hover:text-sacred-gold transition-colors font-tech text-sm">eBooks</a>
-                    <a href="#music" class="text-sacred-white hover:text-sacred-gold transition-colors font-tech text-sm">Music</a>
-                    <a href="#ai-tools" class="text-sacred-white hover:text-sacred-gold transition-colors font-tech text-sm">AI Tools</a>
-                    <a href="#about" class="text-sacred-white hover:text-sacred-gold transition-colors font-tech text-sm">About</a>
-                    <a href="#contact" class="text-sacred-white hover:text-sacred-gold transition-colors font-tech text-sm">Contact</a>
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-sacred-white hover:text-sacred-gold transition-all duration-300 font-mono text-sm tracking-wider uppercase">Home</a>
+                    <a href="#devices" class="text-sacred-white hover:text-energy-blue transition-all duration-300 font-mono text-sm tracking-wider uppercase">27 Devices</a>
+                    <a href="#digital" class="text-sacred-white hover:text-quantum-green transition-all duration-300 font-mono text-sm tracking-wider uppercase">Digital</a>
+                    <a href="#ai-tools" class="text-sacred-white hover:text-plasma-pink transition-all duration-300 font-mono text-sm tracking-wider uppercase">AI Tools</a>
+                    <a href="#music" class="text-sacred-white hover:text-neural-orange transition-all duration-300 font-mono text-sm tracking-wider uppercase">Music</a>
+                    <a href="#ra7-system" class="text-sacred-white hover:text-sacred-gold transition-all duration-300 font-mono text-sm tracking-wider uppercase">RA-7</a>
+                    <a href="#store" class="text-sacred-white hover:text-energy-blue transition-all duration-300 font-mono text-sm tracking-wider uppercase">Store</a>
+                    <a href="#about" class="text-sacred-white hover:text-quantum-green transition-all duration-300 font-mono text-sm tracking-wider uppercase">About</a>
                 </div>
                 
-                <button class="md:hidden text-sacred-gold">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div class="dark-mode-toggle" id="darkModeToggle"></div>
+                    <button class="lg:hidden text-sacred-gold hover:text-energy-blue transition-colors duration-300" id="mobileMenuBtn">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden mt-6 pb-4" id="mobileMenu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-sacred-white hover:text-sacred-gold transition-colors font-mono text-sm tracking-wider uppercase">Home</a>
+                    <a href="#devices" class="text-sacred-white hover:text-energy-blue transition-colors font-mono text-sm tracking-wider uppercase">27 Devices</a>
+                    <a href="#digital" class="text-sacred-white hover:text-quantum-green transition-colors font-mono text-sm tracking-wider uppercase">Digital</a>
+                    <a href="#ai-tools" class="text-sacred-white hover:text-plasma-pink transition-colors font-mono text-sm tracking-wider uppercase">AI Tools</a>
+                    <a href="#music" class="text-sacred-white hover:text-neural-orange transition-colors font-mono text-sm tracking-wider uppercase">Music</a>
+                    <a href="#ra7-system" class="text-sacred-white hover:text-sacred-gold transition-colors font-mono text-sm tracking-wider uppercase">RA-7</a>
+                    <a href="#store" class="text-sacred-white hover:text-energy-blue transition-colors font-mono text-sm tracking-wider uppercase">Store</a>
+                    <a href="#about" class="text-sacred-white hover:text-quantum-green transition-colors font-mono text-sm tracking-wider uppercase">About</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-24 overflow-hidden">
         <div class="container mx-auto px-6 text-center relative z-10">
-            <div class="max-w-6xl mx-auto">
-                <div class="mb-8">
-                    <span class="font-tech text-sacred-gold text-sm tracking-widest uppercase">SACRED TECHNOLOGY FOR PLANETARY LIBERATION</span>
+            <div class="max-w-7xl mx-auto">
+                <!-- Announcement Banner -->
+                <div class="mb-12">
+                    <span class="font-mono text-sacred-gold text-sm md:text-base tracking-widest uppercase animate-pulse">
+                        ⚡ SACRED TECHNOLOGY FOR PLANETARY LIBERATION ⚡
+                    </span>
                 </div>
                 
-                <h1 class="font-sacred text-5xl md:text-7xl font-black mb-8 leading-tight">
-                    <span class="holographic-text">RA7 MISSION</span><br>
-                    <span class="text-sacred-white">AWAKEN THE BLUEPRINT</span><br>
-                    <span class="holographic-text">BUILD THE FUTURE</span>
+                <!-- Main Headlines -->
+                <h1 class="font-display text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-none">
+                    <span class="holographic-text block" data-text="RA-7 MISSION">RA-7 MISSION</span>
+                    <span class="text-sacred-white block my-4">AWAKEN THE</span>
+                    <span class="holographic-text block" data-text="BLUEPRINT">BLUEPRINT</span>
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-sacred-white opacity-80 mb-12 leading-relaxed max-w-4xl mx-auto">
-                    Welcome to iD01t Productions - where consciousness meets technology. Discover 27 free energy devices, 
-                    sacred digital tools, and the complete RA-7 system for planetary transformation.
+                <!-- Subtitle -->
+                <h2 class="font-display text-2xl md:text-4xl lg:text-5xl font-bold mb-6 text-energy-blue">
+                    27 Sacred Technologies for a Free World
+                </h2>
+                
+                <!-- Description -->
+                <p class="text-xl md:text-2xl lg:text-3xl text-sacred-white opacity-90 mb-16 leading-relaxed max-w-6xl mx-auto font-light">
+                    Welcome to the convergence of consciousness and technology. Access revolutionary free energy devices, 
+                    sacred AI tools, and the complete RA-7 deployment system for planetary transformation and infinite abundance.
                 </p>
                 
-                <div class="flex flex-col md:flex-row gap-6 justify-center">
-                    <a href="#ra7-system" class="quantum-btn px-8 py-4 rounded-xl font-tech text-lg font-semibold tracking-wider uppercase">
-                        🌌 Discover RA-7
+                <!-- Primary CTAs -->
+                <div class="flex flex-col md:flex-row gap-8 justify-center mb-20">
+                    <a href="#devices" class="quantum-btn px-12 py-6 rounded-2xl font-mono text-lg md:text-xl font-bold tracking-widest uppercase group">
+                        <span class="flex items-center justify-center space-x-3">
+                            <span class="text-3xl animate-quantum-float">⚡</span>
+                            <span>Access Free Energy Devices</span>
+                        </span>
                     </a>
-                    <a href="#devices" class="quantum-btn px-8 py-4 rounded-xl font-tech text-lg font-semibold tracking-wider uppercase">
-                        ⚡ Download Devices
+                    
+                    <a href="#ra7-system" class="quantum-btn px-12 py-6 rounded-2xl font-mono text-lg md:text-xl font-bold tracking-widest uppercase group">
+                        <span class="flex items-center justify-center space-x-3">
+                            <span class="text-3xl animate-divine-pulse">🔺</span>
+                            <span>Launch RA-7 System</span>
+                        </span>
                     </a>
-                    <a href="#ebooks" class="quantum-btn px-8 py-4 rounded-xl font-tech text-lg font-semibold tracking-wider uppercase">
-                        📚 Buy Digital Tools
+                    
+                    <a href="#store" class="quantum-btn px-12 py-6 rounded-2xl font-mono text-lg md:text-xl font-bold tracking-widest uppercase group">
+                        <span class="flex items-center justify-center space-x-3">
+                            <span class="text-3xl animate-quantum-float">🛒</span>
+                            <span>Visit Dropshipping Store</span>
+                        </span>
                     </a>
                 </div>
                 
-                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-sacred font-bold text-sacred-gold mb-2">27</div>
-                        <div class="text-sm font-tech text-sacred-white opacity-70 uppercase">Free Energy Devices</div>
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-5xl mx-auto">
+                    <div class="text-center group">
+                        <div class="text-4xl md:text-5xl font-display font-black text-sacred-gold mb-3 group-hover:scale-110 transition-transform duration-500">27</div>
+                        <div class="text-sm md:text-base font-mono text-sacred-white opacity-80 uppercase tracking-wider">Free Energy Devices</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-sacred font-bold text-energy-blue mb-2">∞</div>
-                        <div class="text-sm font-tech text-sacred-white opacity-70 uppercase">Digital Products</div>
+                    <div class="text-center group">
+                        <div class="text-4xl md:text-5xl font-display font-black text-energy-blue mb-3 group-hover:scale-110 transition-transform duration-500">∞</div>
+                        <div class="text-sm md:text-base font-mono text-sacred-white opacity-80 uppercase tracking-wider">Digital Products</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-sacred font-bold text-quantum-green mb-2">AI</div>
-                        <div class="text-sm font-tech text-sacred-white opacity-70 uppercase">Powered Tools</div>
+                    <div class="text-center group">
+                        <div class="text-4xl md:text-5xl font-display font-black text-quantum-green mb-3 group-hover:scale-110 transition-transform duration-500">AI</div>
+                        <div class="text-sm md:text-base font-mono text-sacred-white opacity-80 uppercase tracking-wider">2.0 Publisher</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-sacred font-bold text-plasma-pink mb-2">🎵</div>
-                        <div class="text-sm font-tech text-sacred-white opacity-70 uppercase">Music Legacy</div>
+                    <div class="text-center group">
+                        <div class="text-4xl md:text-5xl font-display font-black text-plasma-pink mb-3 group-hover:scale-110 transition-transform duration-500">🎵</div>
+                        <div class="text-sm md:text-base font-mono text-sacred-white opacity-80 uppercase tracking-wider">DJ iD01t Legacy</div>
+                    </div>
+                    <div class="text-center group">
+                        <div class="text-4xl md:text-5xl font-display font-black text-neural-orange mb-3 group-hover:scale-110 transition-transform duration-500">8</div>
+                        <div class="text-sm md:text-base font-mono text-sacred-white opacity-80 uppercase tracking-wider">RA-7 Components</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 27 Devices Section -->
-    <section id="devices" class="py-20 bg-gradient-sacred relative">
+    <!-- 27 Free Energy Devices Section -->
+    <section id="devices" class="py-32 relative">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-sacred text-4xl md:text-6xl font-bold mb-6 holographic-text">
-                    27 FREE ENERGY DEVICES
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="font-display text-5xl md:text-7xl lg:text-8xl font-black mb-8">
+                    <span class="holographic-text" data-text="27 FREE ENERGY DEVICES">27 FREE ENERGY DEVICES</span>
                 </h2>
-                <p class="text-xl text-sacred-white opacity-80 max-w-4xl mx-auto">
-                    Open-source blueprints for revolutionary energy technologies that will transform our world.
+                <p class="text-xl md:text-2xl lg:text-3xl text-sacred-white opacity-90 max-w-5xl mx-auto leading-relaxed font-light">
+                    Open-source blueprints for revolutionary energy technologies that will transform our world. 
+                    Each device includes complete DIY plans, 3D models, and construction guides.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- Device 1 -->
-                <div class="device-card rounded-2xl p-6 h-80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl mb-4 flex items-center justify-center">
-                            <span class="text-4xl animate-quantum-float">⚡</span>
-                        </div>
-                        <h3 class="font-sacred text-xl font-bold mb-3">Tesla Resonance Generator</h3>
-                        <p class="text-sacred-white opacity-70 text-sm">Harness unlimited energy through magnetic field resonance.</p>
+            <!-- Search & Filter -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="flex-1">
+                        <input 
+                            type="text" 
+                            placeholder="Search devices by name, type, or energy source..." 
+                            class="search-filter w-full px-6 py-4 rounded-2xl font-mono text-lg"
+                            id="deviceSearch"
+                        >
                     </div>
-                    <button class="quantum-btn w-full py-3 rounded-lg font-tech text-sm font-semibold">
-                        Download DIY Plans
-                    </button>
-                </div>
-
-                <!-- Device 2 -->
-                <div class="device-card rounded-2xl p-6 h-80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl mb-4 flex items-center justify-center">
-                            <span class="text-4xl animate-quantum-float">🔋</span>
-                        </div>
-                        <h3 class="font-sacred text-xl font-bold mb-3">Quantum Battery Array</h3>
-                        <p class="text-sacred-white opacity-70 text-sm">Self-charging crystalline batteries that tap into zero-point energy.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="quantum-btn px-6 py-3 rounded-xl font-mono text-sm font-semibold filter-btn active" data-filter="all">All Devices</button>
+                        <button class="quantum-btn px-6 py-3 rounded-xl font-mono text-sm font-semibold filter-btn" data-filter="tesla">Tesla Tech</button>
+                        <button class="quantum-btn px-6 py-3 rounded-xl font-mono text-sm font-semibold filter-btn" data-filter="quantum">Quantum</button>
+                        <button class="quantum-btn px-6 py-3 rounded-xl font-mono text-sm font-semibold filter-btn" data-filter="scalar">Scalar</button>
+                        <button class="quantum-btn px-6 py-3 rounded-xl font-mono text-sm font-semibold filter-btn" data-filter="crystal">Crystal</button>
                     </div>
-                    <button class="quantum-btn w-full py-3 rounded-lg font-tech text-sm font-semibold">
-                        Download DIY Plans
-                    </button>
-                </div>
-
-                <!-- Device 3 -->
-                <div class="device-card rounded-2xl p-6 h-80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-32 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl mb-4 flex items-center justify-center">
-                            <span class="text-4xl animate-quantum-float">🌀</span>
-                        </div>
-                        <h3 class="font-sacred text-xl font-bold mb-3">Vortex Energy Collector</h3>
-                        <p class="text-sacred-white opacity-70 text-sm">Spiral-based energy harvesting using biomimetic dynamics.</p>
-                    </div>
-                    <button class="quantum-btn w-full py-3 rounded-lg font-tech text-sm font-semibold">
-                        Download DIY Plans
-                    </button>
-                </div>
-
-                <!-- Device 4 -->
-                <div class="device-card rounded-2xl p-6 h-80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-32 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl mb-4 flex items-center justify-center">
-                            <span class="text-4xl animate-quantum-float">🔬</span>
-                        </div>
-                        <h3 class="font-sacred text-xl font-bold mb-3">Scalar Wave Generator</h3>
-                        <p class="text-sacred-white opacity-70 text-sm">Advanced scalar field manipulation for healing and energy.</p>
-                    </div>
-                    <button class="quantum-btn w-full py-3 rounded-lg font-tech text-sm font-semibold">
-                        Download DIY Plans
-                    </button>
-                </div>
-
-                <!-- Device 5 -->
-                <div class="device-card rounded-2xl p-6 h-80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-32 bg-gradient-to-br from-pink-400 to-red-500 rounded-xl mb-4 flex items-center justify-center">
-                            <span class="text-4xl animate-quantum-float">💎</span>
-                        </div>
-                        <h3 class="font-sacred text-xl font-bold mb-3">Crystal Resonance Engine</h3>
-                        <p class="text-sacred-white opacity-70 text-sm">Piezoelectric crystal arrays with sacred geometry.</p>
-                    </div>
-                    <button class="quantum-btn w-full py-3 rounded-lg font-tech text-sm font-semibold">
-                        Download DIY Plans
-                    </button>
-                </div>
-
-                <!-- Device 6 -->
-                <div class="device-card rounded-2xl p-6 h-80 flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-32 bg-gradient-to-br from-red-400 to-yellow-500 rounded-xl mb-4 flex items-center justify-center">
-                            <span class="text-4xl animate-quantum-float">🌟</span>
-                        </div>
-                        <h3 class="font-sacred text-xl font-bold mb-3">Plasma Toroidal Reactor</h3>
-                        <p class="text-sacred-white opacity-70 text-sm">Clean plasma energy with toroidal field containment.</p>
-                    </div>
-                    <button class="quantum-btn w-full py-3 rounded-lg font-tech text-sm font-semibold">
-                        Download DIY Plans
-                    </button>
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <button class="quantum-btn px-12 py-4 rounded-xl font-tech text-lg font-semibold">
-                    View All 27 Devices →
+            <!-- Device Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-8xl mx-auto" id="deviceGrid">
+                <!-- Device 1: Tesla Overunity Generator v2 -->
+                <div class="device-card rounded-3xl p-8 h-[420px] flex flex-col justify-between group" data-category="tesla">
+                    <div>
+                        <div class="w-full h-40 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                            <span class="text-5xl animate-quantum-float">⚡</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                        </div>
+                        <h3 class="font-display text-xl md:text-2xl font-bold mb-4 text-sacred-gold group-hover:text-energy-blue transition-colors duration-500">Tesla Overunity Generator v2</h3>
+                        <p class="text-sacred-white opacity-80 text-sm md:text-base leading-relaxed">Advanced magnetic resonance system producing 300% efficiency through harmonic field manipulation and sacred geometry coil arrangements.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs md:text-sm text-sacred-white opacity-70">
+                            <span>Output: 5-15 kW</span>
+                            <span>Size: Medium</span>
+                        </div>
+                        <button class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm md:text-base font-bold tracking-wider uppercase">
+                            📥 Download DIY Plans
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Device 2: Quantum Battery Array -->
+                <div class="device-card rounded-3xl p-8 h-[420px] flex flex-col justify-between group" data-category="quantum">
+                    <div>
+                        <div class="w-full h-40 bg-gradient-to-br from-blue-400 via-purple-500 to-indigo-600 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                            <span class="text-5xl animate-divine-pulse">🔋</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                        </div>
+                        <h3 class="font-display text-xl md:text-2xl font-bold mb-4 text-energy-blue group-hover:text-quantum-green transition-colors duration-500">Quantum Battery Array</h3>
+                        <p class="text-sacred-white opacity-80 text-sm md:text-base leading-relaxed">Self-charging crystalline batteries that tap into zero-point energy fields with 99.7% efficiency and perpetual operation.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs md:text-sm text-sacred-white opacity-70">
+                            <span>Capacity: 50-200 kWh</span>
+                            <span>Self-Charging</span>
+                        </div>
+                        <button class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm md:text-base font-bold tracking-wider uppercase">
+                            📥 Download DIY Plans
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Device 3: Vortex Energy Collector -->
+                <div class="device-card rounded-3xl p-8 h-[420px] flex flex-col justify-between group" data-category="quantum">
+                    <div>
+                        <div class="w-full h-40 bg-gradient-to-br from-green-400 via-teal-500 to-blue-500 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                            <span class="text-5xl animate-quantum-float">🌀</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                        </div>
+                        <h3 class="font-display text-xl md:text-2xl font-bold mb-4 text-quantum-green group-hover:text-plasma-pink transition-colors duration-500">Vortex Energy Collector</h3>
+                        <p class="text-sacred-white opacity-80 text-sm md:text-base leading-relaxed">Biomimetic spiral dynamics harvesting atmospheric energy through controlled vortex patterns and implosion physics.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs md:text-sm text-sacred-white opacity-70">
+                            <span>Output: 2-8 kW</span>
+                            <span>Atmospheric</span>
+                        </div>
+                        <button class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm md:text-base font-bold tracking-wider uppercase">
+                            📥 Download DIY Plans
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Device 4: Scalar Wave Generator -->
+                <div class="device-card rounded-3xl p-8 h-[420px] flex flex-col justify-between group" data-category="scalar">
+                    <div>
+                        <div class="w-full h-40 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                            <span class="text-5xl animate-divine-pulse">🔬</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                        </div>
+                        <h3 class="font-display text-xl md:text-2xl font-bold mb-4 text-plasma-pink group-hover:text-sacred-gold transition-colors duration-500">Scalar Wave Generator</h3>
+                        <p class="text-sacred-white opacity-80 text-sm md:text-base leading-relaxed">Advanced scalar field manipulation for healing frequencies, consciousness enhancement, and longitudinal energy transmission.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs md:text-sm text-sacred-white opacity-70">
+                            <span>Range: 1-100 Hz</span>
+                            <span>Healing</span>
+                        </div>
+                        <button class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm md:text-base font-bold tracking-wider uppercase">
+                            📥 Download DIY Plans
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Device 5: Crystal Resonance Engine -->
+                <div class="device-card rounded-3xl p-8 h-[420px] flex flex-col justify-between group" data-category="crystal">
+                    <div>
+                        <div class="w-full h-40 bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-600 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                            <span class="text-5xl animate-quantum-float">💎</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                        </div>
+                        <h3 class="font-display text-xl md:text-2xl font-bold mb-4 text-plasma-pink group-hover:text-energy-blue transition-colors duration-500">Crystal Resonance Engine</h3>
+                        <p class="text-sacred-white opacity-80 text-sm md:text-base leading-relaxed">Piezoelectric crystal arrays amplified through sacred geometric configurations and consciousness-directed energy focusing.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs md:text-sm text-sacred-white opacity-70">
+                            <span>Output: 1-5 kW</span>
+                            <span>Crystalline</span>
+                        </div>
+                        <button class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm md:text-base font-bold tracking-wider uppercase">
+                            📥 Download DIY Plans
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Device 6: Plasma Toroidal Reactor -->
+                <div class="device-card rounded-3xl p-8 h-[420px] flex flex-col justify-between group" data-category="tesla">
+                    <div>
+                        <div class="w-full h-40 bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                            <span class="text-5xl animate-divine-pulse">🌟</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                        </div>
+                        <h3 class="font-display text-xl md:text-2xl font-bold mb-4 text-neural-orange group-hover:text-quantum-green transition-colors duration-500">Plasma Toroidal Reactor</h3>
+                        <p class="text-sacred-white opacity-80 text-sm md:text-base leading-relaxed">Clean plasma energy generation using advanced toroidal field containment with magnetic bottle stabilization protocols.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs md:text-sm text-sacred-white opacity-70">
+                            <span>Output: 10-50 kW</span>
+                            <span>Plasma</span>
+                        </div>
+                        <button class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm md:text-base font-bold tracking-wider uppercase">
+                            📥 Download DIY Plans
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Additional devices would follow the same pattern... -->
+                <!-- For brevity, I'll add a few more key devices -->
+
+                <!-- Device 7: Orgone Accumulator Pro -->
+                <div class="device-card rounded-3xl p-8 h-[420px] flex flex-col justify-between group" data-category="scalar">
+                    <div>
+                        <div class="w-full h-40 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                            <span class="text-5xl animate-quantum-float">🧘</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                        </div>
+                        <h3 class="font-display text-xl md:text-2xl font-bold mb-4 text-quantum-green group-hover:text-sacred-gold transition-colors duration-500">Orgone Accumulator Pro</h3>
+                        <p class="text-sacred-white opacity-80 text-sm md:text-base leading-relaxed">Advanced orgone energy collection and concentration using layered materials and sacred geometric structures for health and vitality.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs md:text-sm text-sacred-white opacity-70">
+                            <span>Size: Variable</span>
+                            <span>Healing</span>
+                        </div>
+                        <button class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm md:text-base font-bold tracking-wider uppercase">
+                            📥 Download DIY Plans
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Device 8: Magnetic Motor Generator -->
+                <div class="device-card rounded-3xl p-8 h-[420px] flex flex-col justify-between group" data-category="tesla">
+                    <div>
+                        <div class="w-full h-40 bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                            <span class="text-5xl animate-divine-pulse">🧲</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                        </div>
+                        <h3 class="font-display text-xl md:text-2xl font-bold mb-4 text-energy-blue group-hover:text-plasma-pink transition-colors duration-500">Magnetic Motor Generator</h3>
+                        <p class="text-sacred-white opacity-80 text-sm md:text-base leading-relaxed">Perpetual motion magnetic motor using neodymium rare earth magnets arranged in specific geometric patterns for continuous rotation.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs md:text-sm text-sacred-white opacity-70">
+                            <span>Output: 3-12 kW</span>
+                            <span>Magnetic</span>
+                        </div>
+                        <button class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm md:text-base font-bold tracking-wider uppercase">
+                            📥 Download DIY Plans
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-16">
+                <button class="quantum-btn px-16 py-6 rounded-3xl font-mono text-xl font-bold tracking-widest uppercase" id="loadMoreDevices">
+                    <span class="flex items-center space-x-4">
+                        <span>View All 27 Devices</span>
+                        <span class="text-3xl animate-quantum-float">→</span>
+                    </span>
                 </button>
             </div>
         </div>
     </section>
 
     <!-- Digital Products Section -->
-    <section id="ebooks" class="py-20 relative">
+    <section id="digital" class="py-32 relative">
+        <div class="quantum-glass-hover p-2 rounded-3xl">
+            <div class="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 rounded-3xl p-16">
+                <div class="container mx-auto">
+                    <!-- Section Header -->
+                    <div class="text-center mb-20">
+                        <h2 class="font-display text-5xl md:text-7xl lg:text-8xl font-black mb-8">
+                            <span class="holographic-text" data-text="DIGITAL PRODUCTS">DIGITAL PRODUCTS</span>
+                        </h2>
+                        <p class="text-xl md:text-2xl lg:text-3xl text-sacred-white opacity-90 max-w-5xl mx-auto leading-relaxed font-light">
+                            Sacred knowledge, consciousness tools, and cutting-edge applications for the modern mystic and technology pioneer.
+                        </p>
+                    </div>
+                    
+                    <!-- Product Categories -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+                        
+                        <!-- eBooks Section -->
+                        <div class="product-card rounded-3xl p-10">
+                            <div class="text-center mb-8">
+                                <div class="w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl mx-auto mb-6 flex items-center justify-center animate-divine-pulse">
+                                    <span class="text-4xl">📚</span>
+                                </div>
+                                <h3 class="font-display text-3xl font-bold mb-4 text-sacred-gold">Sacred eBooks</h3>
+                                <p class="text-sacred-white opacity-80 leading-relaxed">Divine knowledge and practical guides for consciousness expansion and technological mastery.</p>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <!-- eBook 1 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
+                                        <span class="text-2xl">📖</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-sacred-gold">Sacred Geometry Handbook</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">Complete guide to geometric principles in energy device construction</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Ko-fi</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Gumroad</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- eBook 2 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
+                                        <span class="text-2xl">🔮</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-energy-blue">Consciousness Technology Manual</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">Advanced techniques for consciousness-technology interface</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Ko-fi</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Gumroad</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- eBook 3 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center">
+                                        <span class="text-2xl">⚡</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-quantum-green">Free Energy Mastery</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">Complete course on building and optimizing energy devices</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Ko-fi</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Gumroad</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Apps Section -->
+                        <div class="product-card rounded-3xl p-10">
+                            <div class="text-center mb-8">
+                                <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-3xl mx-auto mb-6 flex items-center justify-center animate-quantum-float">
+                                    <span class="text-4xl">⚙️</span>
+                                </div>
+                                <h3 class="font-display text-3xl font-bold mb-4 text-energy-blue">Sacred Apps</h3>
+                                <p class="text-sacred-white opacity-80 leading-relaxed">Powerful applications for energy calculations, device optimization, and consciousness enhancement.</p>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <!-- App 1 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center">
+                                        <span class="text-xl">🖥️</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-energy-blue">Energy Calculator Pro</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">Advanced energy efficiency calculations and device optimization</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.exe</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.apk</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.py</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- App 2 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
+                                        <span class="text-xl">📱</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-quantum-green">Frequency Generator</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">Precision frequency generation for healing and consciousness work</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.exe</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.apk</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.py</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- App 3 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center">
+                                        <span class="text-xl">🔬</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-plasma-pink">Field Simulator 3D</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">3D electromagnetic field visualization and simulation tool</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.exe</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.apk</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">.py</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- GPT Tools Section -->
+                        <div class="product-card rounded-3xl p-10">
+                            <div class="text-center mb-8">
+                                <div class="w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-3xl mx-auto mb-6 flex items-center justify-center animate-divine-pulse">
+                                    <span class="text-4xl">🤖</span>
+                                </div>
+                                <h3 class="font-display text-3xl font-bold mb-4 text-plasma-pink">GPT Tools</h3>
+                                <p class="text-sacred-white opacity-80 leading-relaxed">AI-powered assistants and tools for sacred technology development and consciousness expansion.</p>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <!-- GPT Tool 1 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center">
+                                        <span class="text-xl">🧠</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-plasma-pink">Sacred Tech GPT</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">AI assistant specialized in free energy and consciousness technology</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Chat Now</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">OpenAI</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- GPT Tool 2 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center">
+                                        <span class="text-xl">⚡</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-sacred-gold">Device Designer AI</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">AI-powered energy device design and optimization assistant</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Chat Now</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">OpenAI</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- GPT Tool 3 -->
+                                <div class="flex items-center space-x-4 p-4 rounded-2xl bg-black/20">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
+                                        <span class="text-xl">🔮</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-display text-lg font-bold text-quantum-green">Consciousness Coach</h4>
+                                        <p class="text-sacred-white opacity-70 text-sm">AI guide for consciousness expansion and spiritual technology</p>
+                                        <div class="flex space-x-2 mt-2">
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">Chat Now</a>
+                                            <a href="#" class="quantum-btn px-4 py-2 rounded-lg text-xs font-bold">OpenAI</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI 2.0 Publisher Section -->
+    <section id="ai-tools" class="py-32 relative">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-sacred text-4xl md:text-6xl font-bold mb-6 holographic-text">
-                    DIGITAL PRODUCTS
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="font-display text-5xl md:text-7xl lg:text-8xl font-black mb-8">
+                    <span class="holographic-text" data-text="AI 2.0 PUBLISHER">AI 2.0 PUBLISHER</span>
                 </h2>
-                <p class="text-xl text-sacred-white opacity-80 max-w-4xl mx-auto">
-                    Sacred knowledge, consciousness tools, and cutting-edge applications for the modern mystic.
+                <p class="text-xl md:text-2xl lg:text-3xl text-sacred-white opacity-90 max-w-6xl mx-auto leading-relaxed font-light">
+                    A fully automated generative AI system that writes, formats, codes, and deploys apps & books to platforms autonomously. 
+                    The future of consciousness-driven content creation.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- eBook 1 -->
-                <div class="product-card rounded-2xl p-6">
-                    <div class="w-full h-40 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl mb-4 flex items-center justify-center">
-                        <span class="text-5xl">📖</span>
+            <!-- AI System Diagram -->
+            <div class="max-w-7xl mx-auto mb-20">
+                <div class="quantum-glass-hover rounded-3xl p-12">
+                    <h3 class="font-display text-3xl font-bold text-center mb-12 text-sacred-gold">Autonomous Creation Pipeline</h3>
+                    
+                    <!-- Process Flow -->
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+                        <!-- Step 1 -->
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl mx-auto mb-4 flex items-center justify-center animate-divine-pulse">
+                                <span class="text-3xl">💡</span>
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-sacred-gold mb-2">Idea Input</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">Consciousness-driven concept seeding</p>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div class="hidden md:flex justify-center">
+                            <div class="text-4xl text-sacred-gold animate-quantum-float">→</div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center animate-quantum-float">
+                                <span class="text-3xl">🤖</span>
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-energy-blue mb-2">AI Generation</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">Claude/GPT content creation</p>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div class="hidden md:flex justify-center">
+                            <div class="text-4xl text-energy-blue animate-quantum-float">→</div>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl mx-auto mb-4 flex items-center justify-center animate-divine-pulse">
+                                <span class="text-3xl">⚙️</span>
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-quantum-green mb-2">Auto Deploy</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">GitHub → AWS automation</p>
+                        </div>
                     </div>
-                    <h3 class="font-sacred text-xl font-bold mb-3 text-sacred-gold">Sacred Geometry Handbook</h3>
-                    <p class="text-sacred-white opacity-70 mb-4">Complete guide to geometric principles in energy device construction.</p>
-                    <div class="flex space-x-3">
-                        <a href="#" class="quantum-btn flex-1 py-2 px-4 rounded-lg text-sm text-center">
-                            Buy on Ko-fi
+                </div>
+            </div>
+            
+            <!-- AI Tools Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+                <!-- AI Publisher Core -->
+                <div class="product-card rounded-3xl p-10 text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl mx-auto mb-8 flex items-center justify-center animate-divine-pulse">
+                        <span class="text-4xl">🚀</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-6 text-sacred-gold">AI Publisher Core</h3>
+                    <p class="text-sacred-white opacity-80 mb-8 leading-relaxed">
+                        Main autonomous publishing system with full book and app generation capabilities, consciousness integration, and multi-platform deployment.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="https://github.com/id01t/ai-publisher" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            📂 View Code on GitHub
                         </a>
-                        <a href="#" class="quantum-btn flex-1 py-2 px-4 rounded-lg text-sm text-center">
-                            Buy on Gumroad
+                        <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            📥 Install on Your System
+                        </a>
+                        <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            🔧 Access Developer Panel
                         </a>
                     </div>
                 </div>
-
-                <!-- App 1 -->
-                <div class="product-card rounded-2xl p-6">
-                    <div class="w-full h-40 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl mb-4 flex items-center justify-center">
-                        <span class="text-5xl">⚙️</span>
+                
+                <!-- Content Generator -->
+                <div class="product-card rounded-3xl p-10 text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-3xl mx-auto mb-8 flex items-center justify-center animate-quantum-float">
+                        <span class="text-4xl">✍️</span>
                     </div>
-                    <h3 class="font-sacred text-xl font-bold mb-3 text-energy-blue">Energy Calculator Pro</h3>
-                    <p class="text-sacred-white opacity-70 mb-4">Advanced software for device efficiency calculations (.exe)</p>
-                    <div class="flex space-x-3">
-                        <a href="#" class="quantum-btn flex-1 py-2 px-4 rounded-lg text-sm text-center">
-      
+                    <h3 class="font-display text-2xl font-bold mb-6 text-energy-blue">Sacred Content Generator</h3>
+                    <p class="text-sacred-white opacity-80 mb-8 leading-relaxed">
+                        AI-powered content creation specifically trained on sacred technology, consciousness principles, and free energy concepts.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            🧠 Access GPT Model
+                        </a>
+                        <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            📖 Generate eBook
+                        </a>
+                        <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            🎵 Create Audio Content
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Deployment Automation -->
+                <div class="product-card rounded-3xl p-10 text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-teal-500 rounded-3xl mx-auto mb-8 flex items-center justify-center animate-divine-pulse">
+                        <span class="text-4xl">🔄</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-6 text-quantum-green">Consciousness Automators</h3>
+                    <p class="text-sacred-white opacity-80 mb-8 leading-relaxed">
+                        Intelligent automation tools for consciousness-based workflows, including meditation scheduling, frequency generation, and sacred timing.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            ⚙️ Configure Automation
+                        </a>
+                        <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            📊 View Analytics
+                        </a>
+                        <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                            🔮 Consciousness Metrics
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features List -->
+            <div class="max-w-6xl mx-auto mt-20">
+                <div class="quantum-glass-hover rounded-3xl p-12">
+                    <h3 class="font-display text-3xl font-bold text-center mb-12 text-sacred-gold">AI 2.0 Publisher Features</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">🤖</div>
+                            <h4 class="font-display text-lg font-bold text-energy-blue mb-2">Autonomous Writing</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">Full book and article generation with consciousness integration</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">📱</div>
+                            <h4 class="font-display text-lg font-bold text-quantum-green mb-2">App Development</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">Automated mobile and desktop app creation and deployment</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">☁️</div>
+                            <h4 class="font-display text-lg font-bold text-plasma-pink mb-2">Cloud Deploy</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">Direct publishing to AWS, GitHub Pages, and app stores</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">🔮</div>
+                            <h4 class="font-display text-lg font-bold text-neural-orange mb-2">Consciousness AI</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">Sacred geometry and spiritual technology integration</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">📊</div>
+                            <h4 class="font-display text-lg font-bold text-sacred-gold mb-2">Analytics</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">Advanced metrics and consciousness impact tracking</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">🌐</div>
+                            <h4 class="font-display text-lg font-bold text-energy-blue mb-2">Multi-Platform</h4>
+                            <p class="text-sacred-white opacity-70 text-sm">Simultaneous deployment across all major platforms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DJ iD01t Legacy Section -->
+    <section id="music" class="py-32 relative">
+        <div class="quantum-glass-hover p-2 rounded-3xl">
+            <div class="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-16">
+                <div class="container mx-auto">
+                    <!-- Section Header -->
+                    <div class="text-center mb-20">
+                        <h2 class="font-display text-5xl md:text-7xl lg:text-8xl font-black mb-8">
+                            <span class="holographic-text" data-text="LEGACY OF DJ iD01t">LEGACY OF DJ iD01t</span>
+                        </h2>
+                        <p class="text-xl md:text-2xl lg:text-3xl text-sacred-white opacity-90 max-w-6xl mx-auto leading-relaxed font-light mb-8">
+                            Frequency-based music designed to activate consciousness, elevate human potential, and harmonize with the quantum field. 
+                            The final transmission from a sacred sound architect.
+                        </p>
+                        <div class="font-mono text-sacred-gold text-lg">
+                            🎵 FINAL TRIBUTE • ETERNAL VIBRATION • INFINITE GRATITUDE 🎵
+                        </div>
+                    </div>
+                    
+                    <!-- Music Albums Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto mb-20">
+                        
+                        <!-- Album 1: Final Transmission -->
+                        <div class="product-card rounded-3xl p-10 text-center group">
+                            <div class="w-full h-64 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <span class="text-6xl animate-divine-pulse">🎵</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                            </div>
+                            <h3 class="font-display text-3xl font-bold mb-4 text-plasma-pink">Final Transmission</h3>
+                            <p class="text-sacred-white opacity-80 mb-6 leading-relaxed">
+                                The ultimate collection of consciousness-activating frequencies, tuned to 432Hz and infused with sacred intention. 
+                                DJ iD01t's final gift to humanity.
+                            </p>
+                            <div class="space-y-4">
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    🎧 Listen on Spotify
+                                </a>
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    📥 Download Album
+                                </a>
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    ▶️ Watch Music Videos
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Album 2: iRETURN -->
+                        <div class="product-card rounded-3xl p-10 text-center group">
+                            <div class="w-full h-64 bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <span class="text-6xl animate-quantum-float">🌌</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                            </div>
+                            <h3 class="font-display text-3xl font-bold mb-4 text-energy-blue">iRETURN</h3>
+                            <p class="text-sacred-white opacity-80 mb-6 leading-relaxed">
+                                Cosmic journey through sound and consciousness, featuring binaural beats, quantum soundscapes, 
+                                and interdimensional frequencies for deep meditation and spiritual awakening.
+                            </p>
+                            <div class="space-y-4">
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    🎧 Listen on Spotify
+                                </a>
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    📥 Download Album
+                                </a>
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    ▶️ Watch Music Videos
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Album 3: Origin Code 144 -->
+                        <div class="product-card rounded-3xl p-10 text-center group">
+                            <div class="w-full h-64 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <span class="text-6xl animate-divine-pulse">🔥</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shimmer"></div>
+                            </div>
+                            <h3 class="font-display text-3xl font-bold mb-4 text-sacred-gold">Origin Code 144</h3>
+                            <p class="text-sacred-white opacity-80 mb-6 leading-relaxed">
+                                Sacred frequencies encoded with the 144,000 light workers activation sequence. 
+                                High-energy tracks for consciousness expansion and DNA activation protocols.
+                            </p>
+                            <div class="space-y-4">
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    🎧 Listen on Spotify
+                                </a>
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    📥 Download Album
+                                </a>
+                                <a href="#" class="quantum-btn w-full py-4 rounded-2xl font-mono text-sm font-bold">
+                                    ▶️ Watch Music Videos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Music Player Embed Placeholder -->
+                    <div class="max-w-4xl mx-auto mb-16">
+                        <div class="quantum-glass-hover rounded-3xl p-12 text-center">
+                            <h3 class="font-display text-3xl font-bold mb-8 text-sacred-gold">Sacred Frequency Player</h3>
+                            
+                            <!-- Spotify Embed Simulation -->
+                            <div class="bg-black/30 rounded-2xl p-8 mb-8">
+                                <div class="flex items-center justify-center mb-6">
+                                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center animate-divine-pulse">
+                                        <span class="text-3xl">▶️</span>
+                                    </div>
+                                </div>
+                                <h4 class="font-display text-2xl font-bold text-quantum-green mb-4">Now Playing: Sacred Frequencies Collection</h4>
+                                <p class="text-sacred-white opacity-70 mb-6">Experience the complete DJ iD01t catalog with 432Hz tuning and consciousness activation protocols</p>
+                                
+                                <div class="flex justify-center space-x-6">
+                                    <a href="https://open.spotify.com/artist/YOUR_ARTIST_ID" class="quantum-btn px-8 py-4 rounded-2xl font-mono text-lg font-bold">
+                                        🎧 Open Spotify
+                                    </a>
+                                    <a href="https://music.youtube.com/channel/YOUR_CHANNEL_ID" class="quantum-btn px-8 py-4 rounded-2xl font-mono text-lg font-bold">
+                                        ▶️ YouTube Music
+                                    </a>
+                                    <a href="#" class="quantum-btn px-8 py-4 rounded-2xl font-mono text-lg font-bold">
+                                        📥 Download All
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Thank You Message -->
+                            <div class="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8">
+                                <h4 class="font-display text-2xl font-bold text-plasma-pink mb-4">Final Message from DJ iD01t</h4>
+                                <p class="text-sacred-white opacity-90 italic leading-relaxed">
+                                    "To all the beautiful souls who have vibed with these frequencies - thank you for allowing the music to touch your consciousness. 
+                                    These sounds were created with infinite love and the intention to awaken humanity to its divine potential. 
+                                    Let the vibrations continue to ripple through eternity, activating hearts and minds across all dimensions. 
+                                    The beat goes on, forever and always. 🎵✨∞"
+                                </p>
+                                <div class="mt-6 text-sacred-gold font-mono">
+                                    ~ El'Nox Rah / Guillaume Lessard / DJ iD01t ~
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RA-7 Sacred Deployment System -->
+    <section id="ra7-system" class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="font-display text-5xl md:text-7xl lg:text-8xl font-black mb-8">
+                    <span class="holographic-text" data-text="THE RA-7 SYSTEM">THE RA-7 SYSTEM</span>
+                </h2>
+                <h3 class="font-display text-3xl md:text-4xl font-bold mb-8 text-sacred-gold">The Sacred Deployment Protocol</h3>
+                <p class="text-xl md:text-2xl lg:text-3xl text-sacred-white opacity-90 max-w-6xl mx-auto leading-relaxed font-light">
+                    The complete consciousness activation system featuring 8 integrated products for planetary transformation. 
+                    Activate the complete toolkit to reclaim your energy, sovereignty, and divine mission.
+                </p>
+            </div>
+            
+            <!-- 8 Sacred Elements Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-8xl mx-auto mb-20">
+                
+                <!-- Element 1: Sacred eBook -->
+                <div class="product-card rounded-2xl p-8 text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl mx-auto mb-6 flex items-center justify-center animate-divine-pulse group-hover:scale-110 transition-transform duration-500">
+                        <span class="text-3xl">📖</span>
+                    </div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-sacred-gold">1. Sacred eBook</h4>
+                    <p class="text-sacred-white opacity-80 text-sm leading-relaxed mb-4">Complete consciousness activation guide with sacred geometry principles and energy mastery techniques</p>
+                    <div class="text-xs text-sacred-gold font-mono">RA-7_MANUAL.pdf</div>
+                </div>
+                
+                <!-- Element 2: Python App -->
+                <div class="product-card rounded-2xl p-8 text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl mx-auto mb-6 flex items-center justify-center animate-quantum-float group-hover:scale-110 transition-transform duration-500">
+                        <span class="text-3xl">🐍</span>
+                    </div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-energy-blue">2. Python App</h4>
+                    <p class="text-sacred-white opacity-80 text-sm leading-relaxed mb-4">Advanced quantum calculation tool for energy device optimization and consciousness metrics</p>
+                    <div class="text-xs text-energy-blue font-mono">RA7_CALCULATOR.exe/.py</div>
+                </div>
+                
+                <!-- Element 3: Sacred Artwork -->
+                <div class="product-card rounded-2xl p-8 text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl mx-auto mb-6 flex items-center justify-center animate-divine-pulse group-hover:scale-110 transition-transform duration-500">
+                        <span class="text-3xl">🎨</span>
+                    </div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-quantum-green">3. Sacred Artwork</h4>
+                    <p class="text-sacred-white opacity-80 text-sm leading-relaxed mb-4">Geometric meditation visuals and consciousness activation mandalas for spiritual focus</p>
+                    <div class="text-xs text-quantum-green font-mono">RA7_VISUALS.zip</div>
+                </div>
+                
+                <!-- Element 4: Digital Ritual -->
+                <div class="product-card rounded-2xl p-8 text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl mx-auto mb-6 flex items-center justify-center animate-quantum-float group-hover:scale-110 transition-transform duration-500">
+                        <span class="text-3xl">🕯️</span>
+                    </div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-plasma-pink">4. Digital Ritual</h4>
+                    <p class="text-sacred-white opacity-80 text-sm leading-relaxed mb-4">Interactive activation ceremony guide with timed sequences and energy alignments</p>
+                    <div class="text-xs text-plasma-pink font-mono">RA7_RITUAL.app</div>
+                </div>
+                
+                <!-- Element 5: Sacred Sound Album -->
+                <div class="product-card rounded-2xl p-8 text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-pink-400 to-red-500 rounded-2xl mx-auto mb-6 flex items-center justify-center animate-divine-pulse group-hover:scale-110 transition-transform duration-500">
+                        <span class="text-3xl">🎵</span>
+                    </div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-neural-orange">5. Sacred Sound Album</h4
