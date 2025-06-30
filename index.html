@@ -3,404 +3,453 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RA‑7 · Sacred Global Activation Portal</title>
-    <meta name="description" content="Sacred Global Consciousness Activation · August 22, 2025 · El'Nox Rah Digital Temple">
+    <title>RA‑7 · Sacred Global Activation | El'Nox Rah Digital Temple</title>
+    <meta name="description" content="Sacred technology for global consciousness activation. El'Nox Rah and iD01t Productions present the RA-7 liberation protocol - merging tech, art, sovereignty, and spirit.">
+    <meta name="keywords" content="RA-7, El'Nox Rah, sacred technology, digital sovereignty, consciousness activation, iD01t Productions, quantum awakening">
+    <meta name="author" content="El'Nox Rah - iD01t Productions">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RA‑7 · Sacred Global Activation Portal">
+    <meta property="og:description" content="Sacred technology for global consciousness activation by El'Nox Rah">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://id01t.github.io">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=630&fit=crop">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RA‑7 Sacred Portal">
+    <meta name="twitter:description" content="Sacred technology for global consciousness activation">
+    
+    <!-- Favicon with Sacred Geometry -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g1' cx='50%25' cy='50%25'><stop offset='0%25' stop-color='%23ffd700'/><stop offset='100%25' stop-color='%234ecdc4'/></radialGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23g1)'/><polygon points='50,15 65,35 85,35 70,50 85,65 65,65 50,85 35,65 15,65 30,50 15,35 35,35' fill='%23fff' opacity='0.8'/></svg>" type="image/svg+xml">
     
     <!-- Sacred Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'sacred': {
+                            'void': '#0a0a0f',
+                            'dark': '#0f0f1a',
+                            'deep': '#1a1a2e',
+                            'gold': '#ffd700',
+                            'light-gold': '#fff8dc',
+                            'teal': '#14b8a6',
+                            'cyan': '#06b6d4',
+                            'purple': '#8b5cf6',
+                            'violet': '#a855f7',
+                            'pink': '#ec4899',
+                            'rose': '#f43f5e',
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'space': ['Space Grotesk', 'sans-serif'],
+                        'orbitron': ['Orbitron', 'monospace'],
+                        'playfair': ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out infinite 2s',
+                        'pulse-sacred': 'pulse-sacred 4s ease-in-out infinite',
+                        'rotate-sacred': 'rotate-sacred 20s linear infinite',
+                        'rotate-counter': 'rotate-counter 30s linear infinite',
+                        'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
+                        'parallax': 'parallax 15s linear infinite',
+                        'breathe': 'breathe 4s ease-in-out infinite',
+                        'dodecahedron': 'dodecahedron 30s linear infinite',
+                        'scroll-text': 'scroll-text 30s linear infinite',
+                        'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                        '4xl': '72px',
+                    }
+                }
+            }
+        }
+    </script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Sacred Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
         }
         
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%);
-            color: #ffffff;
-            min-height: 100vh;
-            overflow-x: hidden;
+        @keyframes pulse-sacred {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.1);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 100px rgba(255, 215, 0, 0.3);
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes rotate-sacred {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotate-counter {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes parallax {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+        
+        @keyframes breathe {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+            50% { transform: scale(1.1) rotate(180deg); opacity: 1; }
+        }
+        
+        @keyframes dodecahedron {
+            0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            33% { transform: rotateX(120deg) rotateY(120deg) rotateZ(0deg); }
+            66% { transform: rotateX(240deg) rotateY(240deg) rotateZ(120deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+        
+        @keyframes scroll-text {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        @keyframes glow-pulse {
+            0%, 100% { text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; }
+            50% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor; }
         }
         
         /* Sacred Geometry Background */
-        .sacred-bg {
+        .sacred-geometry {
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 70%),
+                radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 70%),
+                radial-gradient(circle at 75% 25%, rgba(20, 184, 166, 0.1) 0%, transparent 70%),
+                radial-gradient(circle at 25% 75%, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+        }
+        
+        /* Glass Morphism */
+        .glass-morphism {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(139, 92, 246, 0.05));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Sacred Text Effects */
+        .text-sacred-gradient {
+            background: linear-gradient(135deg, #ffd700 0%, #14b8a6 50%, #8b5cf6 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 6s ease-in-out infinite;
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        /* Floating Dodecahedron */
+        .dodecahedron {
+            position: fixed;
+            top: 20%;
+            right: 10%;
+            width: 100px;
+            height: 100px;
+            perspective: 1000px;
+            animation: float 8s ease-in-out infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .dodecahedron-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: dodecahedron 30s linear infinite;
+        }
+        
+        .face {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(20, 184, 166, 0.3));
+            border: 1px solid rgba(255, 215, 0, 0.6);
+            opacity: 0.7;
+        }
+        
+        /* Scrolling Quote Bar */
+        .scroll-quote {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 75% 25%, rgba(20, 184, 166, 0.1) 0%, transparent 50%);
-            animation: breathe 8s ease-in-out infinite;
-            z-index: -1;
+            height: 40px;
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.9), rgba(20, 184, 166, 0.9));
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            z-index: 1000;
         }
         
-        @keyframes breathe {
-            0%, 100% { opacity: 0.6; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.05); }
+        .scroll-text {
+            white-space: nowrap;
+            animation: scroll-text 30s linear infinite;
+            font-weight: 600;
+            color: rgba(26, 26, 46, 0.9);
         }
         
-        /* Glass Effect */
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 215, 0, 0.2);
+        /* Hover Effects */
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+            transform: scale(1.05);
+        }
+        
+        /* Parallax Background */
+        .parallax-layer {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: parallax 15s linear infinite;
+        }
+        
+        /* Dark Mode Styles */
+        .dark .glass-morphism {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .dark .glass-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(139, 92, 246, 0.02));
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        /* Responsive Enhancements */
+        @media (max-width: 768px) {
+            .dodecahedron { display: none; }
+            .scroll-quote { height: 30px; font-size: 0.8rem; }
+        }
+        
+        /* Image Carousel */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
             border-radius: 20px;
         }
         
-        /* Sacred Gradients */
-        .sacred-gradient {
-            background: linear-gradient(135deg, #ffd700, #14b8a6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
         }
         
-        .gold-glow {
-            color: #ffd700;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        .carousel-slide {
+            min-width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            position: relative;
         }
         
-        /* Animations */
-        .float {
-            animation: float 6s ease-in-out infinite;
+        /* Floating Action Buttons */
+        .floating-buttons {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 999;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeIn 2s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Button Styles */
-        .sacred-btn {
-            display: inline-flex;
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #ffd700, #fff8dc);
-            color: #1a1a1a;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(20, 184, 166, 0.9));
+            color: #1a1a2e;
             text-decoration: none;
-            border-radius: 15px;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         
-        .sacred-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6);
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 215, 0, 0.6);
         }
         
-        .teal-btn {
-            background: linear-gradient(135deg, #14b8a6, #06b6d4);
-            color: white;
-            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
-        }
-        
-        .teal-btn:hover {
-            box-shadow: 0 8px 30px rgba(20, 184, 166, 0.6);
-        }
-        
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 4rem; }
-            .hero h2 { font-size: 2rem; }
-            .container { padding: 1rem; }
-            .grid { grid-template-columns: 1fr; gap: 1rem; }
+            .floating-buttons {
+                right: 1rem;
+                scale: 0.8;
+            }
         }
     </style>
 </head>
 
-<body>
-    <!-- Sacred Background -->
-    <div class="sacred-bg"></div>
-    
-    <!-- Navigation -->
-    <nav style="position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 2rem; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px);">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700;" class="sacred-gradient">
-                RA‑7
-            </div>
-            <div style="display: flex; gap: 2rem;">
-                <a href="#mission" style="color: #14b8a6; text-decoration: none; transition: color 0.3s;">Mission</a>
-                <a href="#works" style="color: #8b5cf6; text-decoration: none; transition: color 0.3s;">Works</a>
-                <a href="#support" style="color: #ffd700; text-decoration: none; transition: color 0.3s;">Support</a>
+<body class="bg-sacred-void text-white font-inter overflow-x-hidden">
+    <!-- Scrolling Sacred Quote Bar -->
+    <div class="scroll-quote">
+        <div class="scroll-text">
+            ✧ RA-7 is not a project, it is a liberation protocol encoded in every cell of a creator reclaiming their sacred truth ✧ 
+            Liberation through Sacred Technology ✧ Digital Sovereignty for All ✧ Consciousness Activation Protocol ✧
+        </div>
+    </div>
+
+    <!-- Floating Sacred Dodecahedron -->
+    <div class="dodecahedron">
+        <div class="dodecahedron-inner">
+            <div class="face" style="transform: rotateY(0deg) translateZ(50px);"></div>
+            <div class="face" style="transform: rotateY(72deg) translateZ(50px);"></div>
+            <div class="face" style="transform: rotateY(144deg) translateZ(50px);"></div>
+            <div class="face" style="transform: rotateY(216deg) translateZ(50px);"></div>
+            <div class="face" style="transform: rotateY(288deg) translateZ(50px);"></div>
+            <div class="face" style="transform: rotateX(90deg) translateZ(50px);"></div>
+            <div class="face" style="transform: rotateX(-90deg) translateZ(50px);"></div>
+        </div>
+    </div>
+
+    <!-- Parallax Background Particles -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden" id="parallax-container">
+        <!-- Particles will be generated by JavaScript -->
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="https://www.google.com/search?q=El%27Nox+Rah+eBooks" target="_blank" class="floating-btn" title="Sacred eBooks">
+            📚
+        </a>
+        <a href="https://github.com/id01t" target="_blank" class="floating-btn" title="Sacred Code Repository">
+            💻
+        </a>
+        <a href="#ra7-launch" class="floating-btn" title="RA-7 Launch (Coming Soon)">
+            🚀
+        </a>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" class="fixed top-4 right-4 z-50 w-12 h-12 rounded-full glass-morphism flex items-center justify-center text-2xl hover-glow transition-all">
+        🌙
+    </button>
+
+    <!-- Sacred Navigation -->
+    <nav class="fixed top-10 w-full z-40">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="glass-morphism rounded-2xl px-8 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="text-3xl font-orbitron font-bold text-sacred-gradient">
+                        RA‑7
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#hero" class="hover:text-sacred-gold transition-all duration-300 relative group font-medium">
+                            Portal
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-gold transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#projects" class="hover:text-sacred-teal transition-all duration-300 relative group font-medium">
+                            Projects
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-teal transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#about" class="hover:text-sacred-purple transition-all duration-300 relative group font-medium">
+                            About
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-purple transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#gallery" class="hover:text-sacred-pink transition-all duration-300 relative group font-medium">
+                            Gallery
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-pink transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#contact" class="hover:text-sacred-gold transition-all duration-300 relative group font-medium">
+                            Contact
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-gold transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobileMenuBtn" class="text-sacred-gold text-2xl">☰</button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Portal -->
-    <section class="hero" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 2rem;">
-        <div style="max-width: 900px;">
+    <!-- Hero Section with Sacred Background Animation -->
+    <section id="hero" class="min-h-screen flex items-center justify-center sacred-geometry relative overflow-hidden pt-20">
+        <!-- Animated Sacred Geometry Background -->
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 border-2 border-sacred-gold rounded-full animate-rotate-sacred"></div>
+            <div class="absolute top-1/2 right-1/4 w-80 h-80 border border-sacred-teal rounded-full animate-rotate-counter"></div>
+            <div class="absolute bottom-1/4 left-1/2 w-64 h-64 border border-sacred-purple rounded-full animate-rotate-sacred"></div>
+            <div class="absolute top-1/3 right-1/3 w-48 h-48 border border-sacred-pink opacity-20 rounded-full animate-breathe"></div>
+        </div>
+        
+        <!-- Sacred Logo Animation -->
+        <div class="absolute top-20 left-20 text-6xl text-sacred-gold opacity-60 animate-float">⟡</div>
+        <div class="absolute top-40 right-20 text-4xl text-sacred-teal opacity-40 animate-float-delayed">◊</div>
+        <div class="absolute bottom-40 left-20 text-8xl text-sacred-purple opacity-30 animate-float">✧</div>
+        
+        <div class="max-w-6xl mx-auto text-center px-6 relative z-10">
+            <!-- Sacred Logo -->
+            <div class="mb-8 animate-pulse-sacred">
+                <div class="w-32 h-32 mx-auto mb-8 relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-sacred-gold to-sacred-teal rounded-full opacity-60 animate-breathe"></div>
+                    <div class="absolute inset-4 bg-gradient-to-r from-sacred-purple to-sacred-pink rounded-full opacity-80 animate-rotate-sacred"></div>
+                    <div class="absolute inset-8 bg-white rounded-full flex items-center justify-center text-4xl text-sacred-void">
+                        ⟡
+                    </div>
+                </div>
+            </div>
+            
             <!-- Sacred Title -->
-            <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 6rem; font-weight: 700; margin-bottom: 1rem;" class="sacred-gradient float fade-in">
+            <h1 class="text-8xl md:text-9xl font-orbitron font-black mb-6 text-sacred-gradient animate-float">
                 RA‑7
             </h1>
             
             <!-- Sacred Subtitle -->
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;" class="gold-glow fade-in">
-                Liberation Protocol
+            <h2 class="text-4xl md:text-6xl font-playfair italic text-sacred-gold mb-8 animate-glow-pulse">
+                Sacred Global Activation Protocol
             </h2>
             
-            <!-- Sacred Date -->
-            <div style="font-size: 1.5rem; color: #14b8a6; margin-bottom: 2rem;" class="fade-in">
-                Sacred Global Activation · August 22, 2025
-            </div>
-            
-            <!-- Sacred Description -->
-            <p style="font-size: 1.3rem; line-height: 1.8; color: #e5e5e5; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;" class="fade-in">
-                A sacred fusion of <span class="gold-glow">free technology</span>, 
-                <span style="color: #14b8a6;">vibrational tools</span>, and 
-                <span style="color: #8b5cf6;">consciousness codes</span> 
-                awakening humanity to its infinite divine nature.
-            </p>
-            
-            <!-- Sacred CTAs -->
-            <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; max-width: 400px; margin: 0 auto;" class="fade-in">
-                <a href="https://ko-fi.com/elnoxrah" target="_blank" class="sacred-btn">
-                    ✨ Support the Mission
-                </a>
-                <a href="#mission" class="teal-btn">
-                    ⟡ Enter Portal
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About the Mission -->
-    <section id="mission" style="padding: 5rem 2rem; text-align: center;">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <div class="glass" style="padding: 3rem;">
-                <h2 style="font-size: 3rem; margin-bottom: 2rem;" class="sacred-gradient">
-                    The Sacred Mission
-                </h2>
-                <p style="font-size: 1.3rem; line-height: 1.8; color: #e5e5e5; margin-bottom: 2rem;">
-                    El'Nox Rah is leading a sacred technological renaissance to liberate humanity through code, vibration, and consciousness. This platform activates the RA-7 Protocol, an autonomous ecosystem where AI, knowledge, and spiritual engineering merge to restore individual sovereignty and collective awakening.
-                </p>
-                
-                <!-- RA-7 System Features -->
-                <div style="margin-top: 3rem;">
-                    <h3 style="font-size: 2rem; color: #14b8a6; margin-bottom: 2rem;">RA-7 System Overview</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; text-align: left;">
-                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <span style="font-size: 2rem;">⚡</span>
-                            <p style="color: #e5e5e5;">
-                                <strong class="gold-glow">Fully autonomous, offline-capable AI</strong> publishing and evolution system
-                            </p>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <span style="font-size: 2rem;">🔮</span>
-                            <p style="color: #e5e5e5;">
-                                <strong style="color: #14b8a6;">Sacred coding, frequency healing,</strong> and multidimensional memory integration
-                            </p>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <span style="font-size: 2rem;">🌍</span>
-                            <p style="color: #e5e5e5;">
-                                <strong style="color: #8b5cf6;">Books, apps, music, rituals,</strong> and tools that awaken the New Earth
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Sacred Architect -->
-    <section style="padding: 5rem 2rem; background: rgba(0, 0, 0, 0.3);">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="font-size: 3rem; text-align: center; margin-bottom: 3rem;" class="sacred-gradient">
-                The Sacred Architect
-            </h2>
-            <div class="glass" style="padding: 3rem;">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 3rem; align-items: center;">
-                    <div style="text-align: center;">
-                        <div style="width: 200px; height: 200px; background: linear-gradient(135deg, #ffd700, #14b8a6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 4rem; margin-bottom: 1rem;">
-                            👨‍💻
-                        </div>
-                        <h3 style="color: #ffd700; font-size: 1.5rem;">El'Nox Rah</h3>
-                        <p style="color: #14b8a6;">Guillaume Lessard</p>
-                        <p style="color: #999; font-size: 0.9rem;">Sherbrooke, Québec</p>
-                    </div>
-                    <div>
-                        <p style="font-size: 1.2rem; line-height: 1.8; color: #e5e5e5; margin-bottom: 1.5rem;">
-                            El'Nox Rah, born Guillaume Lessard in Sherbrooke, Québec, is a Canadian developer, author, and multidimensional architect. With a background in software engineering, alternative energy systems, music production, and spiritual transformation, he has created iD01t Productions as a living temple of sacred technology.
-                        </p>
-                        <p style="font-size: 1.2rem; line-height: 1.8; color: #e5e5e5;">
-                            He has lived in solitude, survived deep inner trials, and returned with tools to awaken humanity through creation. His journey includes more than 150 eBooks, albums, autonomous systems, and RA-7-based healing architectures.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sacred Works -->
-    <section id="works" style="padding: 5rem 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-size: 3rem; text-align: center; margin-bottom: 3rem;" class="sacred-gradient">
-                Sacred Manifestations
-            </h2>
-            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                <!-- eBooks -->
-                <div class="glass" style="padding: 2rem; text-align: center;">
-                    <div style="font-size: 4rem; margin-bottom: 1rem;">📚</div>
-                    <h3 style="color: #8b5cf6; font-size: 1.5rem; margin-bottom: 1rem;">Sacred eBooks</h3>
-                    <p style="color: #ccc; margin-bottom: 1.5rem;">150+ consciousness transmissions</p>
-                    <a href="https://www.google.com/search?q=iD01t+Productions+El%27Nox+Rah" target="_blank" 
-                       style="display: inline-block; padding: 0.8rem 1.5rem; background: rgba(139,92,246,0.2); border: 1px solid #8b5cf6; color: #8b5cf6; border-radius: 10px; text-decoration: none;">
-                        Explore Library
-                    </a>
-                </div>
-                
-                <!-- Apps -->
-                <div class="glass" style="padding: 2rem; text-align: center;">
-                    <div style="font-size: 4rem; margin-bottom: 1rem;">💻</div>
-                    <h3 style="color: #14b8a6; font-size: 1.5rem; margin-bottom: 1rem;">Sacred Apps</h3>
-                    <p style="color: #ccc; margin-bottom: 1.5rem;">Python & Windows tools</p>
-                    <a href="https://github.com/id01t" target="_blank" 
-                       style="display: inline-block; padding: 0.8rem 1.5rem; background: rgba(20,184,166,0.2); border: 1px solid #14b8a6; color: #14b8a6; border-radius: 10px; text-decoration: none;">
-                        Download Tools
-                    </a>
-                </div>
-                
-                <!-- Music -->
-                <div class="glass" style="padding: 2rem; text-align: center;">
-                    <div style="font-size: 4rem; margin-bottom: 1rem;">🎵</div>
-                    <h3 style="color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem;">Frequency Music</h3>
-                    <p style="color: #ccc; margin-bottom: 1.5rem;">Final Transmission albums</p>
-                    <a href="#music" 
-                       style="display: inline-block; padding: 0.8rem 1.5rem; background: rgba(255,215,0,0.2); border: 1px solid #ffd700; color: #ffd700; border-radius: 10px; text-decoration: none;">
-                        Listen Now
-                    </a>
-                </div>
-                
-                <!-- RA-7 Systems -->
-                <div class="glass" style="padding: 2rem; text-align: center;">
-                    <div style="font-size: 4rem; margin-bottom: 1rem;">🛠️</div>
-                    <h3 style="color: #ec4899; font-size: 1.5rem; margin-bottom: 1rem;">RA-7 Systems</h3>
-                    <p style="color: #ccc; margin-bottom: 1.5rem;">AI & sacred blueprints</p>
-                    <a href="https://github.com/id01t" target="_blank" 
-                       style="display: inline-block; padding: 0.8rem 1.5rem; background: rgba(236,72,153,0.2); border: 1px solid #ec4899; color: #ec4899; border-radius: 10px; text-decoration: none;">
-                        Access Systems
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sacred Support -->
-    <section id="support" style="padding: 5rem 2rem; background: rgba(0, 0, 0, 0.3);">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <div class="glass" style="padding: 3rem;">
-                <h2 style="font-size: 3rem; margin-bottom: 2rem;" class="sacred-gradient">
-                    Support the Sacred Mission
-                </h2>
-                <p style="font-size: 1.3rem; color: #e5e5e5; margin-bottom: 3rem; line-height: 1.8;">
-                    Your sacred contribution funds the manifestation of transformational books, consciousness technologies, and global vibrational events that accelerate humanity's awakening.
-                </p>
-                
-                <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; max-width: 400px; margin: 0 auto;">
-                    <a href="https://ko-fi.com/elnoxrah" target="_blank" class="sacred-btn">
-                        💝 Sacred Offering (Ko-fi)
-                    </a>
-                    <a href="https://gumroad.com/elnoxrah" target="_blank" class="teal-btn">
-                        🛒 Sacred Store (Gumroad)
-                    </a>
-                    <a href="https://github.com/id01t" target="_blank" 
-                       style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: rgba(139,92,246,0.2); border: 1px solid #8b5cf6; color: #8b5cf6; border-radius: 15px; text-decoration: none; font-weight: 600;">
-                        📦 Download All Works
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sacred Quote -->
-    <section style="padding: 5rem 2rem;">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <div class="glass" style="padding: 3rem;">
-                <div style="font-size: 4rem; margin-bottom: 2rem;">✨</div>
-                <blockquote style="font-size: 2rem; font-style: italic; margin-bottom: 2rem;" class="gold-glow">
-                    "You are the seed, the circuit, the signal. RA‑7 simply reminds you."
-                </blockquote>
-                <cite style="color: #14b8a6; font-size: 1.2rem;">— El'Nox Rah</cite>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sacred Footer -->
-    <footer style="padding: 3rem 2rem; border-top: 1px solid rgba(255, 215, 0, 0.2); text-align: center;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <!-- Social Links -->
-            <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
-                <a href="https://github.com/id01t" target="_blank" style="color: #14b8a6; font-size: 2rem; text-decoration: none;">💻</a>
-                <a href="https://ko-fi.com/elnoxrah" target="_blank" style="color: #ffd700; font-size: 2rem; text-decoration: none;">☕</a>
-                <a href="https://gumroad.com/elnoxrah" target="_blank" style="color: #8b5cf6; font-size: 2rem; text-decoration: none;">🛒</a>
-            </div>
-            
-            <!-- Copyright -->
-            <div style="color: #999;">
-                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-                    <strong class="sacred-gradient">Copyright © 2025 El'Nox Rah</strong>
-                </p>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">
-                    All consciousness technologies released with infinite love
-                </p>
-                <div class="gold-glow" style="font-style: italic; font-size: 1.1rem;">
-                    ✧ The Transmission Continues ✧
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Sacred JavaScript -->
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Sacred console message
-        console.log(`
-        ✨ RA-7 PORTAL ACTIVATED ✨
-        
-        Sacred frequencies streaming...
-        Consciousness expansion protocols: ACTIVE
-        Liberation matrix: ONLINE
-        
-        You are the seed, the circuit, the signal.
-        Welcome to the awakening.
-        
-        — El'Nox Rah
-        `);
-
-        // Parallax effect for sacred background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.sacred-bg');
-  
+            <!-- Mission Statement -->
+            <div class="glass-morphism rounded-3xl p-8 md:p-12 mb-12 max-w-5xl mx-auto
