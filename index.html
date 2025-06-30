@@ -28,63 +28,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'sacred': {
-                            'void': '#0a0a0f',
-                            'dark': '#0f0f1a',
-                            'deep': '#1a1a2e',
-                            'gold': '#ffd700',
-                            'light-gold': '#fff8dc',
-                            'teal': '#14b8a6',
-                            'cyan': '#06b6d4',
-                            'purple': '#8b5cf6',
-                            'violet': '#a855f7',
-                            'pink': '#ec4899',
-                            'rose': '#f43f5e',
-                        }
-                    },
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                        'space': ['Space Grotesk', 'sans-serif'],
-                        'orbitron': ['Orbitron', 'monospace'],
-                        'playfair': ['Playfair Display', 'serif'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'float-delayed': 'float 6s ease-in-out infinite 2s',
-                        'pulse-sacred': 'pulse-sacred 4s ease-in-out infinite',
-                        'rotate-sacred': 'rotate-sacred 20s linear infinite',
-                        'rotate-counter': 'rotate-counter 30s linear infinite',
-                        'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
-                        'parallax': 'parallax 15s linear infinite',
-                        'breathe': 'breathe 4s ease-in-out infinite',
-                        'dodecahedron': 'dodecahedron 30s linear infinite',
-                        'scroll-text': 'scroll-text 30s linear infinite',
-                        'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
-                    },
-                    backdropBlur: {
-                        'xs': '2px',
-                        '4xl': '72px',
-                    }
-                }
-            }
-        }
-    </script>
-    
     <style>
+        /* CSS Variables for Sacred Theme */
+        :root {
+            --sacred-void: #0a0a0f;
+            --sacred-dark: #0f0f1a;
+            --sacred-deep: #1a1a2e;
+            --sacred-gold: #ffd700;
+            --sacred-light-gold: #fff8dc;
+            --sacred-teal: #14b8a6;
+            --sacred-cyan: #06b6d4;
+            --sacred-purple: #8b5cf6;
+            --sacred-violet: #a855f7;
+            --sacred-pink: #ec4899;
+            --sacred-rose: #f43f5e;
+            --sacred-white: #ffffff;
+            --sacred-gray: #6b7280;
+            --sacred-light-gray: #e5e7eb;
+        }
+
+        /* Dark Mode Variables */
+        .dark {
+            --sacred-void: #f9fafb;
+            --sacred-dark: #f3f4f6;
+            --sacred-deep: #e5e7eb;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--sacred-void) 0%, var(--sacred-deep) 50%, var(--sacred-dark) 100%);
+            color: var(--sacred-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-space { font-family: 'Space Grotesk', sans-serif; }
+        .font-orbitron { font-family: 'Orbitron', monospace; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+
         /* Sacred Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(2deg); }
         }
-        
+
         @keyframes pulse-sacred {
             0%, 100% { 
                 box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.1);
@@ -95,49 +91,68 @@
                 transform: scale(1.05);
             }
         }
-        
+
         @keyframes rotate-sacred {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-        
+
         @keyframes rotate-counter {
             from { transform: rotate(360deg); }
             to { transform: rotate(0deg); }
         }
-        
+
         @keyframes gradient-shift {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
-        
+
         @keyframes parallax {
             0% { transform: translateY(0) rotate(0deg); }
             100% { transform: translateY(-100vh) rotate(360deg); }
         }
-        
+
         @keyframes breathe {
             0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
             50% { transform: scale(1.1) rotate(180deg); opacity: 1; }
         }
-        
+
         @keyframes dodecahedron {
             0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
             33% { transform: rotateX(120deg) rotateY(120deg) rotateZ(0deg); }
             66% { transform: rotateX(240deg) rotateY(240deg) rotateZ(120deg); }
             100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
         }
-        
+
         @keyframes scroll-text {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-        
+
         @keyframes glow-pulse {
             0%, 100% { text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; }
             50% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor; }
         }
-        
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animation Classes */
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 6s ease-in-out infinite 2s; }
+        .animate-pulse-sacred { animation: pulse-sacred 4s ease-in-out infinite; }
+        .animate-rotate-sacred { animation: rotate-sacred 20s linear infinite; }
+        .animate-rotate-counter { animation: rotate-counter 30s linear infinite; }
+        .animate-gradient-shift { animation: gradient-shift 8s ease-in-out infinite; }
+        .animate-parallax { animation: parallax 15s linear infinite; }
+        .animate-breathe { animation: breathe 4s ease-in-out infinite; }
+        .animate-dodecahedron { animation: dodecahedron 30s linear infinite; }
+        .animate-scroll-text { animation: scroll-text 30s linear infinite; }
+        .animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+        .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+
         /* Sacred Geometry Background */
         .sacred-geometry {
             background: 
@@ -146,36 +161,182 @@
                 radial-gradient(circle at 75% 25%, rgba(20, 184, 166, 0.1) 0%, transparent 70%),
                 radial-gradient(circle at 25% 75%, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
         }
-        
-        /* Glass Morphism */
+
+        /* Glass Morphism Effects */
         .glass-morphism {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
-        
+
         .glass-card {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(139, 92, 246, 0.05));
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 215, 0, 0.2);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
         }
-        
+
         /* Sacred Text Effects */
         .text-sacred-gradient {
-            background: linear-gradient(135deg, #ffd700 0%, #14b8a6 50%, #8b5cf6 100%);
+            background: linear-gradient(135deg, var(--sacred-gold) 0%, var(--sacred-teal) 50%, var(--sacred-purple) 100%);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: gradient-shift 6s ease-in-out infinite;
         }
-        
-        .text-glow {
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
+
+        .text-glow { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3); }
+        .text-gold { color: var(--sacred-gold); }
+        .text-teal { color: var(--sacred-teal); }
+        .text-purple { color: var(--sacred-purple); }
+        .text-pink { color: var(--sacred-pink); }
+        .text-white { color: var(--sacred-white); }
+        .text-gray-200 { color: #e5e7eb; }
+        .text-gray-300 { color: #d1d5db; }
+        .text-gray-400 { color: #9ca3af; }
+
+        /* Layout Utilities */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 6rem 1.5rem; }
+        .text-center { text-align: center; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+        .gap-12 { gap: 3rem; }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .fixed { position: fixed; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-10 { z-index: 10; }
+        .z-40 { z-index: 40; }
+        .z-50 { z-index: 50; }
+        .z-999 { z-index: 999; }
+        .z-1000 { z-index: 1000; }
+
+        /* Spacing */
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .p-12 { padding: 3rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+        .m-0 { margin: 0; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mb-20 { margin-bottom: 5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        /* Typography Sizes */
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .text-5xl { font-size: 3rem; }
+        .text-6xl { font-size: 3.75rem; }
+        .text-7xl { font-size: 4.5rem; }
+        .text-8xl { font-size: 6rem; }
+        .text-9xl { font-size: 8rem; }
+        .font-light { font-weight: 300; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-black { font-weight: 900; }
+        .italic { font-style: italic; }
+        .leading-relaxed { line-height: 1.625; }
+
+        /* Borders and Radius */
+        .rounded-full { border-radius: 9999px; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-3xl { border-radius: 1.5rem; }
+        .border { border-width: 1px; }
+        .border-2 { border-width: 2px; }
+        .border-t { border-top-width: 1px; }
+
+        /* Backgrounds */
+        .bg-sacred-void { background-color: var(--sacred-void); }
+        .bg-sacred-dark { background-color: var(--sacred-dark); }
+        .bg-opacity-30 { background-color: rgba(0, 0, 0, 0.3); }
+        .bg-opacity-50 { background-color: rgba(0, 0, 0, 0.5); }
+        .bg-gradient-gold { background: linear-gradient(135deg, var(--sacred-gold), var(--sacred-light-gold)); }
+        .bg-gradient-teal { background: linear-gradient(135deg, var(--sacred-teal), var(--sacred-cyan)); }
+        .bg-gradient-purple { background: linear-gradient(135deg, var(--sacred-purple), var(--sacred-violet)); }
+
+        /* Hover Effects */
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+        }
+
+        .hover-glow {
+            transition: all 0.3s ease;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* Buttons */
+        .btn-sacred {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--sacred-gold), var(--sacred-light-gold));
+            color: var(--sacred-dark);
+            text-decoration: none;
+            border-radius: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-sacred:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6);
+        }
+
+        .btn-teal {
+            background: linear-gradient(135deg, var(--sacred-teal), var(--sacred-cyan));
+            color: white;
+            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+        }
+
+        .btn-teal:hover {
+            box-shadow: 0 8px 30px rgba(20, 184, 166, 0.6);
+        }
+
         /* Floating Dodecahedron */
         .dodecahedron {
             position: fixed;
@@ -188,7 +349,7 @@
             z-index: 1;
             pointer-events: none;
         }
-        
+
         .dodecahedron-inner {
             width: 100%;
             height: 100%;
@@ -196,7 +357,7 @@
             transform-style: preserve-3d;
             animation: dodecahedron 30s linear infinite;
         }
-        
+
         .face {
             position: absolute;
             width: 40px;
@@ -205,7 +366,7 @@
             border: 1px solid rgba(255, 215, 0, 0.6);
             opacity: 0.7;
         }
-        
+
         /* Scrolling Quote Bar */
         .scroll-quote {
             position: fixed;
@@ -219,77 +380,24 @@
             overflow: hidden;
             z-index: 1000;
         }
-        
+
         .scroll-text {
             white-space: nowrap;
             animation: scroll-text 30s linear infinite;
             font-weight: 600;
             color: rgba(26, 26, 46, 0.9);
         }
-        
-        /* Hover Effects */
-        .hover-lift {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
-        }
-        
-        .hover-glow:hover {
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
-            transform: scale(1.05);
-        }
-        
+
         /* Parallax Background */
         .parallax-layer {
             position: absolute;
             width: 2px;
             height: 2px;
-            background: #ffd700;
+            background: var(--sacred-gold);
             border-radius: 50%;
             animation: parallax 15s linear infinite;
         }
-        
-        /* Dark Mode Styles */
-        .dark .glass-morphism {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
-            border: 1px solid rgba(255, 215, 0, 0.3);
-        }
-        
-        .dark .glass-card {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(139, 92, 246, 0.02));
-            border: 1px solid rgba(255, 215, 0, 0.1);
-        }
-        
-        /* Responsive Enhancements */
-        @media (max-width: 768px) {
-            .dodecahedron { display: none; }
-            .scroll-quote { height: 30px; font-size: 0.8rem; }
-        }
-        
-        /* Image Carousel */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-        }
-        
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        
-        .carousel-slide {
-            min-width: 100%;
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 20px;
-            position: relative;
-        }
-        
+
         /* Floating Action Buttons */
         .floating-buttons {
             position: fixed;
@@ -301,7 +409,7 @@
             gap: 1rem;
             z-index: 999;
         }
-        
+
         .floating-btn {
             width: 60px;
             height: 60px;
@@ -310,146 +418,102 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(20, 184, 166, 0.9));
-            color: #1a1a2e;
+            color: var(--sacred-deep);
             text-decoration: none;
             font-size: 1.5rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         .floating-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 30px rgba(255, 215, 0, 0.6);
         }
-        
-        @media (max-width: 768px) {
-            .floating-buttons {
-                right: 1rem;
-                scale: 0.8;
-            }
+
+        /* Carousel */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
         }
-    </style>
-</head>
 
-<body class="bg-sacred-void text-white font-inter overflow-x-hidden">
-    <!-- Scrolling Sacred Quote Bar -->
-    <div class="scroll-quote">
-        <div class="scroll-text">
-            ✧ RA-7 is not a project, it is a liberation protocol encoded in every cell of a creator reclaiming their sacred truth ✧ 
-            Liberation through Sacred Technology ✧ Digital Sovereignty for All ✧ Consciousness Activation Protocol ✧
-        </div>
-    </div>
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
-    <!-- Floating Sacred Dodecahedron -->
-    <div class="dodecahedron">
-        <div class="dodecahedron-inner">
-            <div class="face" style="transform: rotateY(0deg) translateZ(50px);"></div>
-            <div class="face" style="transform: rotateY(72deg) translateZ(50px);"></div>
-            <div class="face" style="transform: rotateY(144deg) translateZ(50px);"></div>
-            <div class="face" style="transform: rotateY(216deg) translateZ(50px);"></div>
-            <div class="face" style="transform: rotateY(288deg) translateZ(50px);"></div>
-            <div class="face" style="transform: rotateX(90deg) translateZ(50px);"></div>
-            <div class="face" style="transform: rotateX(-90deg) translateZ(50px);"></div>
-        </div>
-    </div>
+        .carousel-slide {
+            min-width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            position: relative;
+        }
 
-    <!-- Parallax Background Particles -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden" id="parallax-container">
-        <!-- Particles will be generated by JavaScript -->
-    </div>
+        /* Forms */
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(10, 10, 15, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 1rem;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
 
-    <!-- Floating Action Buttons -->
-    <div class="floating-buttons">
-        <a href="https://www.google.com/search?q=El%27Nox+Rah+eBooks" target="_blank" class="floating-btn" title="Sacred eBooks">
-            📚
-        </a>
-        <a href="https://github.com/id01t" target="_blank" class="floating-btn" title="Sacred Code Repository">
-            💻
-        </a>
-        <a href="#ra7-launch" class="floating-btn" title="RA-7 Launch (Coming Soon)">
-            🚀
-        </a>
-    </div>
+        .form-input:focus {
+            outline: none;
+            border-color: var(--sacred-gold);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+        }
 
-    <!-- Dark Mode Toggle -->
-    <button id="darkModeToggle" class="fixed top-4 right-4 z-50 w-12 h-12 rounded-full glass-morphism flex items-center justify-center text-2xl hover-glow transition-all">
-        🌙
-    </button>
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
 
-    <!-- Sacred Navigation -->
-    <nav class="fixed top-10 w-full z-40">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="glass-morphism rounded-2xl px-8 py-4">
-                <div class="flex justify-between items-center">
-                    <div class="text-3xl font-orbitron font-bold text-sacred-gradient">
-                        RA‑7
-                    </div>
-                    <div class="hidden md:flex space-x-8">
-                        <a href="#hero" class="hover:text-sacred-gold transition-all duration-300 relative group font-medium">
-                            Portal
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-gold transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                        <a href="#projects" class="hover:text-sacred-teal transition-all duration-300 relative group font-medium">
-                            Projects
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-teal transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                        <a href="#about" class="hover:text-sacred-purple transition-all duration-300 relative group font-medium">
-                            About
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-purple transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                        <a href="#gallery" class="hover:text-sacred-pink transition-all duration-300 relative group font-medium">
-                            Gallery
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-pink transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                        <a href="#contact" class="hover:text-sacred-gold transition-all duration-300 relative group font-medium">
-                            Contact
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-gold transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                    </div>
-                    <div class="md:hidden">
-                        <button id="mobileMenuBtn" class="text-sacred-gold text-2xl">☰</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+        /* Dark Mode Overrides */
+        .dark .glass-morphism {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
 
-    <!-- Hero Section with Sacred Background Animation -->
-    <section id="hero" class="min-h-screen flex items-center justify-center sacred-geometry relative overflow-hidden pt-20">
-        <!-- Animated Sacred Geometry Background -->
-        <div class="absolute inset-0 opacity-30">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 border-2 border-sacred-gold rounded-full animate-rotate-sacred"></div>
-            <div class="absolute top-1/2 right-1/4 w-80 h-80 border border-sacred-teal rounded-full animate-rotate-counter"></div>
-            <div class="absolute bottom-1/4 left-1/2 w-64 h-64 border border-sacred-purple rounded-full animate-rotate-sacred"></div>
-            <div class="absolute top-1/3 right-1/3 w-48 h-48 border border-sacred-pink opacity-20 rounded-full animate-breathe"></div>
-        </div>
-        
-        <!-- Sacred Logo Animation -->
-        <div class="absolute top-20 left-20 text-6xl text-sacred-gold opacity-60 animate-float">⟡</div>
-        <div class="absolute top-40 right-20 text-4xl text-sacred-teal opacity-40 animate-float-delayed">◊</div>
-        <div class="absolute bottom-40 left-20 text-8xl text-sacred-purple opacity-30 animate-float">✧</div>
-        
-        <div class="max-w-6xl mx-auto text-center px-6 relative z-10">
-            <!-- Sacred Logo -->
-            <div class="mb-8 animate-pulse-sacred">
-                <div class="w-32 h-32 mx-auto mb-8 relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-sacred-gold to-sacred-teal rounded-full opacity-60 animate-breathe"></div>
-                    <div class="absolute inset-4 bg-gradient-to-r from-sacred-purple to-sacred-pink rounded-full opacity-80 animate-rotate-sacred"></div>
-                    <div class="absolute inset-8 bg-white rounded-full flex items-center justify-center text-4xl text-sacred-void">
-                        ⟡
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sacred Title -->
-            <h1 class="text-8xl md:text-9xl font-orbitron font-black mb-6 text-sacred-gradient animate-float">
-                RA‑7
-            </h1>
-            
-            <!-- Sacred Subtitle -->
-            <h2 class="text-4xl md:text-6xl font-playfair italic text-sacred-gold mb-8 animate-glow-pulse">
-                Sacred Global Activation Protocol
-            </h2>
-            
-            <!-- Mission Statement -->
-            <div class="glass-morphism rounded-3xl p-8 md:p-12 mb-12 max-w-5xl mx-auto
+        .dark .glass-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(139, 92, 246, 0.02));
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 3rem 1rem; }
+            .text-9xl { font-size: 4rem; }
+            .text-8xl { font-size: 3.5rem; }
+            .text-7xl { font-size: 3rem; }
+            .text-6xl { font-size: 2.5rem; }
+            .text-5xl { font-size: 2rem; }
+            .grid-cols-3 { grid-template-columns: repeat(1, 1fr); }
+            .grid-cols-2 { grid-template-columns: repeat(1, 1fr); }
+            .dodecahedron { display: none; }
+            .scroll-quote { height: 30px; font-size: 0.8rem; }
+            .floating-buttons { right: 1rem; scale: 0.8; }
+            .flex-col-mobile { flex-direction: column; }
+        }
+
+        @media (min-width: 769px) {
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+            .md\:flex-row { flex-direction: row; }
+            .md\:text-6xl { font-size: 3.75rem; }
+            .md\:text-7xl { font-size: 4.5rem; }
+            .md\:text-8xl { font-size: 6rem; }
+            .md\:text-9xl { font-size: 8rem; }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* Min-height utilities */
+        .min-h-screen { min-height: 100v
