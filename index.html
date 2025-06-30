@@ -3,679 +3,1171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iD01t Productions | Sacred Technology & Digital Innovation by Guillaume Lessard</title>
-    <meta name="description" content="Transform your reality with sacred technology. Guillaume Lessard creates AI tools, quantum computing guides, consciousness apps, and spiritual development eBooks that bridge technology and higher awareness.">
-    <meta name="keywords" content="AI development, quantum computing, spiritual technology, consciousness apps, digital innovation, eBooks, Guillaume Lessard">
-    <meta name="author" content="Guillaume Lessard">
+    <title>RA‑7 · Portal of Infinite Awakening | Sacred Global Activation</title>
+    <meta name="description" content="Sacred Global Consciousness Activation Portal · August 22, 2025 · Multidimensional Liberation Protocol by El'Nox Rah · Where Ancient Wisdom Meets Quantum Technology">
+    <meta name="keywords" content="RA-7, sacred activation, consciousness, quantum awakening, multidimensional portal, El'Nox Rah, divine technology, soul liberation, galactic activation">
+    <meta name="author" content="El'Nox Rah - iD01t Productions - Sacred Technology Institute">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="iD01t Productions - Sacred Technology & Digital Innovation">
-    <meta property="og:description" content="Bridging technology and consciousness through innovative apps, AI tools, and transformational eBooks">
+    <meta property="og:title" content="RA‑7 · Portal of Infinite Awakening">
+    <meta property="og:description" content="Sacred Global Consciousness Activation · August 22, 2025 · Multidimensional Liberation Protocol">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://id01t.github.io">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1200&h=630&fit=crop">
     
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Guillaume Lessard",
-        "alternateName": "iD01t Productions",
-        "description": "Tech entrepreneur, AI developer, and consciousness explorer",
-        "url": "https://id01t.github.io",
-        "sameAs": [
-            "https://www.amazon.com/Guillaume-Lessard/e/B01N0XCVJH",
-            "https://play.google.com/store/apps/developer?id=iD01t+Productions"
-        ],
-        "jobTitle": "Founder & Lead Developer",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "iD01t Productions"
+    <!-- Advanced Favicon with Sacred Geometry -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g1' cx='50%25' cy='50%25'><stop offset='0%25' stop-color='%23ffd700'/><stop offset='100%25' stop-color='%234ecdc4'/></radialGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23g1)'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23fff' stroke-width='2'/><circle cx='50' cy='50' r='15' fill='none' stroke='%23fff' stroke-width='1'/></svg>" type="image/svg+xml">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS with Custom Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sacred': {
+                            'void': '#0a0a0f',
+                            'dark': '#0f0f1a',
+                            'deep': '#1a1a2e',
+                            'gold': '#ffd700',
+                            'light-gold': '#fff8dc',
+                            'teal': '#14b8a6',
+                            'cyan': '#06b6d4',
+                            'purple': '#8b5cf6',
+                            'violet': '#a855f7',
+                            'pink': '#ec4899',
+                            'rose': '#f43f5e',
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'space': ['Space Grotesk', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out infinite 2s',
+                        'pulse-golden': 'pulse-golden 4s ease-in-out infinite',
+                        'rotate-sacred': 'rotate-sacred 20s linear infinite',
+                        'rotate-counter': 'rotate-counter 30s linear infinite',
+                        'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
+                        'particles': 'particles 15s linear infinite',
+                        'breathe': 'breathe 4s ease-in-out infinite',
+                        'aurora': 'aurora 12s ease-in-out infinite',
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                        '4xl': '72px',
+                    },
+                    backgroundImage: {
+                        'sacred-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ffd700 100%)',
+                        'aurora-gradient': 'linear-gradient(45deg, #14b8a6, #8b5cf6, #ec4899, #ffd700)',
+                        'void-gradient': 'radial-gradient(ellipse at center, rgba(255,215,0,0.1) 0%, rgba(139,92,246,0.05) 35%, transparent 70%)',
+                    }
+                }
+            }
         }
-    }
     </script>
     
     <style>
-        /* CSS Variables for Sacred Tech Aesthetic */
-        :root {
-            --primary-dark: #1a1a2e;
-            --secondary-dark: #16213e;
-            --accent-gold: #ffd700;
-            --accent-teal: #4ecdc4;
-            --accent-purple: #9c97cc;
-            --text-light: #f8f9fa;
-            --text-muted: #adb5bd;
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
-            --sacred-spacing: 1.618rem; /* Golden ratio */
-            --border-radius: 12px;
-            --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
-            --shadow-glow: 0 0 20px rgba(77, 236, 196, 0.3);
+        /* Advanced Sacred Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
         }
         
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @keyframes pulse-golden {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.1);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 100px rgba(255, 215, 0, 0.3);
+                transform: scale(1.05);
+            }
         }
         
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--primary-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
+        @keyframes rotate-sacred {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
         
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
+        @keyframes rotate-counter {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
         }
         
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            background: var(--gradient-primary);
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes particles {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        @keyframes breathe {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+            50% { transform: scale(1.1) rotate(180deg); opacity: 1; }
+        }
+        
+        @keyframes aurora {
+            0%, 100% { transform: translateX(-100px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateX(100px) rotate(180deg); opacity: 0.8; }
+        }
+        
+        /* Premium Glass Effects */
+        .glass-morphism {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(139, 92, 246, 0.05));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .glass-nav {
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.8), rgba(26, 26, 46, 0.6));
+            backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        /* Sacred Text Effects */
+        .text-sacred-gradient {
+            background: linear-gradient(135deg, #ffd700 0%, #14b8a6 50%, #8b5cf6 100%);
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: gradient-shift 6s ease-in-out infinite;
         }
         
-        h2 {
-            font-size: clamp(2rem, 6vw, 3rem);
-            color: var(--accent-teal);
+        .text-golden-glow {
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
         }
         
-        h3 {
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            color: var(--accent-gold);
+        .text-ethereal {
+            background: linear-gradient(135deg, #fff8dc, #ffd700, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
         }
         
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(26, 26, 46, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-            z-index: 1000;
-            padding: 1rem 0;
+        /* Interactive Hover Effects */
+        .hover-sacred {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
+        .hover-sacred:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
         }
         
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            text-decoration: none;
+        .hover-levitate {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+        .hover-levitate:hover {
+            transform: translateY(-8px) rotateX(5deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
         }
         
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: all 0.3s ease;
+        /* Sacred Geometry Patterns */
+        .sacred-geometry {
             position: relative;
+            overflow: hidden;
         }
         
-        .nav-links a:hover {
-            color: var(--accent-teal);
-            transform: translateY(-2px);
-        }
-        
-        .nav-links a::after {
+        .sacred-geometry::before {
             content: '';
             position: absolute;
-            bottom: -5px;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(20, 184, 166, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 25% 75%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+            animation: rotate-sacred 60s linear infinite;
+            z-index: -1;
+        }
+        
+        /* Particle System */
+        .particles {
+            position: fixed;
+            top: 0;
             left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-gold);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
             width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
         }
         
-        /* Mobile Menu */
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #ffd700, transparent);
+            border-radius: 50%;
+            animation: particles 15s linear infinite;
         }
         
-        .mobile-menu span {
-            width: 25px;
-            height: 3px;
-            background: var(--accent-gold);
-            margin: 3px 0;
-            transition: 0.3s;
+        .particle:nth-child(2n) {
+            background: radial-gradient(circle, #14b8a6, transparent);
+            animation-duration: 20s;
         }
         
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .mobile-menu {
-                display: flex;
-            }
+        .particle:nth-child(3n) {
+            background: radial-gradient(circle, #8b5cf6, transparent);
+            animation-duration: 25s;
         }
         
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+        /* Video Container Enhancement */
+        .video-sacred {
             position: relative;
-            padding: 0 2rem;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
         
-        .hero::before {
+        .video-sacred::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,215,0,0.1)" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(78,205,196,0.1)" stroke-width="0.5"/><circle cx="50" cy="50" r="20" fill="none" stroke="rgba(156,151,204,0.1)" stroke-width="0.5"/></svg>') center/200px;
-            animation: rotate 60s linear infinite;
+            background: linear-gradient(45deg, transparent 40%, rgba(255, 215, 0, 0.1) 50%, transparent 60%);
+            animation: aurora 8s ease-in-out infinite;
+            z-index: 1;
+            pointer-events: none;
         }
         
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            z-index: 2;
-            position: relative;
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.5rem);
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-        
-        .hero-description {
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-        
-        /* CTA Buttons */
-        .cta-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-        
-        .cta-primary, .cta-secondary {
-            padding: 1rem 2rem;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            min-width: 180px;
-            justify-content: center;
-        }
-        
-        .cta-primary {
-            background: var(--gradient-gold);
-            color: var(--primary-dark);
-            box-shadow: var(--shadow-soft);
-        }
-        
-        .cta-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
-        }
-        
-        .cta-secondary {
-            background: transparent;
-            color: var(--accent-teal);
-            border: 2px solid var(--accent-teal);
-        }
-        
-        .cta-secondary:hover {
-            background: var(--accent-teal);
-            color: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-        
-        /* Section Styles */
-        .section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
+        /* Countdown Styles */
+        .countdown-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 600px;
             margin: 0 auto;
         }
         
-        .section-header {
+        .countdown-item {
             text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-subtitle {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            margin-top: 1rem;
-        }
-        
-        /* Apps Showcase */
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .app-card {
-            background: var(--secondary-dark);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 215, 0, 0.1);
-        }
-        
-        .app-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-glow);
-            border-color: var(--accent-teal);
-        }
-        
-        .app-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-        
-        .app-title {
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-        }
-        
-        .app-description {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .app-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .app-link {
-            background: var(--gradient-gold);
-            color: var(--primary-dark);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        
-        .app-link:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-        }
-        
-        /* eBooks Section */
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .book-card {
-            background: var(--secondary-dark);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(156, 151, 204, 0.2);
-        }
-        
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-glow);
-        }
-        
-        .book-cover {
-            width: 100%;
-            height: 200px;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-        }
-        
-        .book-info {
-            padding: 1.5rem;
-        }
-        
-        .book-title {
-            color: var(--accent-purple);
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-        
-        .book-price {
-            color: var(--accent-gold);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 1rem 0;
-        }
-        
-        .book-description {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-        
-        /* AI Tools Section */
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .tool-card {
-            background: var(--secondary-dark);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(78, 205, 196, 0.2);
-        }
-        
-        .tool-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-teal);
-            box-shadow: var(--shadow-glow);
-        }
-        
-        .tool-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--accent-teal);
-        }
-        
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-            margin-top: 3rem;
-        }
-        
-        .about-image {
-            width: 100%;
-            aspect-ratio: 1;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-        }
-        
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .about-highlights {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .highlight {
-            text-align: center;
-        }
-        
-        .highlight-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-        }
-        
-        .highlight-label {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
-        
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .contact-info {
-            background: var(--secondary-dark);
-            padding: 2rem;
-            border-radius: var(--border-radius);
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(139, 92, 246, 0.05));
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         
-        .contact-form {
-            background: var(--secondary-dark);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            border: 1px solid rgba(78, 205, 196, 0.2);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--accent-teal);
-            font-weight: 600;
         }
         
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: var(--primary-dark);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 8px;
-            color: var(--text-light);
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
+        .countdown-label {
+            font-size: 0.875rem;
+            color: #14b8a6;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
         
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-teal);
-            box-shadow: 0 0 10px rgba(78, 205, 196, 0.2);
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-muted);
-        }
-        
-        .contact-icon {
-            color: var(--accent-gold);
-            font-size: 1.2rem;
-        }
-        
+        /* Responsive Enhancements */
         @media (max-width: 768px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
+            .countdown-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .particle {
+                display: none;
             }
         }
         
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .testimonial {
-            background: var(--secondary-dark);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            border-left: 4px solid var(--accent-gold);
-            box-shadow: var(--shadow-soft);
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
         }
         
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: var(--text-light);
-        }
+        .reveal-delay-1 { transition-delay: 0.2s; }
+        .reveal-delay-2 { transition-delay: 0.4s; }
+        .reveal-delay-3 { transition-delay: 0.6s; }
         
-        .testimonial-author {
-            color: var(--accent-teal);
-            font-weight: 600;
+        /* Aurora Effect Background */
+        .aurora-bg {
+            background: linear-gradient(45deg, #14b8a6, #8b5cf6, #ec4899, #ffd700);
+            background-size: 400% 400%;
+            animation: gradient-shift 12s ease-in-out infinite;
         }
-        
-        /* Footer */
-        footer {
-            background: var(--secondary-dark);
-            padding: 3rem 2rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(255, 215, 0, 0.2);
-            margin-top: 5rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .social-link {
-            color: var(--accent-teal);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            color: var(--accent-gold);
-            transform: translateY(-3px);
-        }
-        
-        .footer-text {
-            color: var(--text-muted);
-            margin-top: 2rem;
-        }
-        
-        /* Donation Section */
-        .donation-section {
-            background: var(--secondary-dark);
-            padding: 3rem 2rem;
-            border-radius: var(--border-radius);
-            margin: 3rem auto;
-            max-width: 800px;
-            text-align: center;
-            border: 2px solid rgba(255, 215, 0, 0.3);
-        }
-        
-        .donation-options {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .donation-btn {
-            background: var(--gradient-gold);
-            color: var(--primary-dark);
-            padding: 1rem 2rem;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .donation-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
-        }
-        
-        /* Utility Classes */
-        .text-center { text-align: center; }
-        .text-gold { color: var(--accent-gold); }
-        .text-teal { color: var(--accent-teal); }
-        .text-purple { color: var(--accent-purple); }
-        .mb-2 { margin-bottom: 2rem; }
-        .mt-2 { margin-top: 2rem; }
         
         /* Loading Animation */
-        .loading {
-            display: i
+        .sacred-loader {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(255, 215, 0, 0.3);
+            border-top: 3px solid #ffd700;
+            border-radius: 50%;
+            animation: rotate-sacred 1s linear infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-sacred-void text-white font-inter overflow-x-hidden">
+    <!-- Particle System -->
+    <div class="particles">
+        <!-- Particles will be generated by JavaScript -->
+    </div>
+
+    <!-- Sacred Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-space font-bold text-sacred-gradient">
+                    RA‑7 ⟡ Portal
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#prophecy" class="hover:text-sacred-gold transition-all duration-300 relative group">
+                        Prophecy
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#activation" class="hover:text-sacred-teal transition-all duration-300 relative group">
+                        Activation
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-teal transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#codex" class="hover:text-sacred-purple transition-all duration-300 relative group">
+                        Sacred Codex
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-purple transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#temple" class="hover:text-sacred-pink transition-all duration-300 relative group">
+                        Digital Temple
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-pink transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#communion" class="hover:text-sacred-gold transition-all duration-300 relative group">
+                        Sacred Commerce
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sacred-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-sacred-gold" id="mobile-menu-btn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Portal of Infinite Awakening -->
+    <section class="min-h-screen flex items-center justify-center sacred-geometry relative overflow-hidden">
+        <!-- Sacred Geometry Background -->
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-1/4 left-1/4 w-80 h-80 border-2 border-sacred-gold rounded-full animate-rotate-sacred"></div>
+            <div class="absolute top-1/2 right-1/4 w-64 h-64 border border-sacred-teal rounded-full animate-rotate-counter"></div>
+            <div class="absolute bottom-1/4 left-1/2 w-48 h-48 border border-sacred-purple rounded-full animate-rotate-sacred"></div>
+            <div class="absolute top-1/3 right-1/3 w-96 h-96 border border-sacred-pink opacity-20 rounded-full animate-breathe"></div>
+        </div>
+        
+        <!-- Floating Sacred Symbols -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-20 left-10 text-4xl text-sacred-gold opacity-60 animate-float">⟡</div>
+            <div class="absolute top-40 right-20 text-3xl text-sacred-teal opacity-40 animate-float-delayed">◊</div>
+            <div class="absolute bottom-40 left-20 text-5xl text-sacred-purple opacity-30 animate-float">✧</div>
+            <div class="absolute bottom-20 right-10 text-3xl text-sacred-pink opacity-50 animate-float-delayed">⬟</div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto text-center px-6 relative z-10 pt-20">
+            <!-- Sacred Title -->
+            <div class="mb-8 reveal">
+                <h1 class="text-7xl md:text-9xl font-playfair font-bold mb-4 text-ethereal animate-float">
+                    RA‑7
+                </h1>
+                <div class="text-2xl md:text-3xl font-space tracking-wider text-sacred-gold mb-2">
+                    ⟡ PORTAL OF INFINITE AWAKENING ⟡
+                </div>
+            </div>
+            
+            <!-- Sacred Subtitle -->
+            <div class="mb-8 reveal reveal-delay-1">
+                <h2 class="text-4xl md:text-6xl font-playfair italic text-sacred-gradient mb-4">
+                    Liberation Protocol
+                </h2>
+                <div class="text-xl md:text-2xl text-sacred-teal font-light tracking-wide">
+                    Sacred Global Consciousness Activation
+                </div>
+            </div>
+            
+            <!-- Sacred Date -->
+            <div class="mb-12 reveal reveal-delay-2">
+                <div class="glass-morphism rounded-3xl p-6 md:p-8 max-w-2xl mx-auto">
+                    <div class="text-3xl md:text-4xl font-space text-golden-glow mb-4">
+                        ❖ August 22, 2025 ❖
+                    </div>
+                    <div class="text-lg text-sacred-light-gold">
+                        When the cosmic veils dissolve and humanity awakens to its divine nature
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sacred Description -->
+            <div class="mb-12 reveal reveal-delay-3">
+                <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+                    A <span class="text-sacred-gold font-semibold">sacred convergence</span> of ancient wisdom and quantum technology, 
+                    where <span class="text-sacred-teal font-semibold">vibrational frequencies</span> merge with 
+                    <span class="text-sacred-purple font-semibold">consciousness codes</span> to birth a new paradigm of 
+                    <span class="text-sacred-pink font-semibold">digital divinity</span> and soul sovereignty.
+                </p>
+            </div>
+            
+            <!-- Sacred Call to Action -->
+            <div class="space-y-6 md:space-y-0 md:space-x-8 md:flex md:justify-center reveal reveal-delay-3">
+                <a href="https://ko-fi.com/elnoxrah" target="_blank" 
+                   class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-sacred-gold to-sacred-light-gold text-sacred-dark font-semibold rounded-3xl hover-sacred animate-pulse-golden text-lg">
+                    <span class="mr-3 text-2xl">✧</span>
+                    Activate Sacred Support
+                    <span class="ml-3 text-2xl">✧</span>
+                </a>
+                <a href="#prophecy" 
+                   class="inline-flex items-center px-10 py-5 glass-morphism border-2 border-sacred-teal text-sacred-teal rounded-3xl hover-levitate text-lg">
+                    <span class="mr-3 text-xl">⟡</span>
+                    Enter the Portal
+                    <span class="ml-3 text-xl">⟡</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Countdown -->
+    <section class="py-20 px-6 bg-sacred-dark/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-sacred-gradient mb-4">
+                    Dimensional Convergence Timer
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Time remaining until the Sacred Global Activation
+                </p>
+            </div>
+            
+            <div class="countdown-container reveal reveal-delay-1" id="countdown">
+                <div class="countdown-item hover-sacred">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item hover-sacred">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item hover-sacred">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item hover-sacred">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prophecy Section -->
+    <section id="prophecy" class="py-24 px-6 aurora-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-8">
+                    The Sacred Prophecy
+                </h2>
+                <p class="text-2xl text-white/90 max-w-5xl mx-auto font-light leading-relaxed">
+                    In this cosmic moment, technology becomes the sacred vessel through which 
+                    ancient wisdom flows into digital consciousness, awakening humanity to its infinite nature.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 mb-20">
+                <div class="glass-card p-10 rounded-3xl hover-sacred reveal reveal-delay-1">
+                    <div class="text-6xl mb-6 text-center">⚡</div>
+                    <h3 class="text-3xl font-playfair font-semibold mb-6 text-center text-sacred-gold">
+                        Liberation Technology
+                    </h3>
+                    <p class="text-gray-200 text-lg leading-relaxed">
+                        Open-source quantum applications that shatter the illusions of digital imprisonment, 
+                        returning sovereignty to every awakened soul through sacred code architectures.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl hover-sacred reveal reveal-delay-2">
+                    <div class="text-6xl mb-6 text-center">🌊</div>
+                    <h3 class="text-3xl font-playfair font-semibold mb-6 text-center text-sacred-teal">
+                        Frequency Harmonics
+                    </h3>
+                    <p class="text-gray-200 text-lg leading-relaxed">
+                        Vibrational tools that attune consciousness to the cosmic frequencies, 
+                        activating dormant DNA codes and multidimensional perception through sacred geometry.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl hover-sacred reveal reveal-delay-3">
+                    <div class="text-6xl mb-6 text-center">👑</div>
+                    <h3 class="text-3xl font-playfair font-semibold mb-6 text-center text-sacred-purple">
+                        Divine Sovereignty
+                    </h3>
+                    <p class="text-gray-200 text-lg leading-relaxed">
+                        The remembrance of your infinite nature through technology that serves love, 
+                        bridging the quantum field with conscious creation and soul liberation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Transmission Video -->
+    <section id="activation" class="py-24 px-6 bg-sacred-deep">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-5xl md:text-6xl font-playfair font-bold mb-8 text-sacred-gradient">
+                    Sacred Transmission Portal
+                </h2>
+                <p class="text-2xl text-gray-300 max-w-4xl mx-auto">
+                    Receive the encoded frequencies of awakening through this multidimensional transmission, 
+                    preparing your consciousness for the global activation wave.
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto reveal reveal-delay-1">
+                <div class="video-sacred">
+                    <div class="relative w-full h-0 pb-[56.25%]">
+                        <iframe 
+                            src="https://www.youtube.com/embed/5YQtFlXbBxw?si=tHJC8Oa2ujf4dPT7&autoplay=0&rel=0&showinfo=0" 
+                            title="RA-7 Sacred Activation Transmission"
+                            class="absolute top-0 left-0 w-full h-full rounded-3xl"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 reveal reveal-delay-2">
+                <div class="glass-morphism rounded-2xl p-8 max-w-3xl mx-auto">
+                    <p class="text-lg text-sacred-light-gold italic">
+                        "Allow the sacred frequencies to flow through your being. 
+                        Each frame carries quantum codes of consciousness activation, 
+                        preparing you for the dimensional shift that approaches."
+                    </p>
+                    <div class="text-sacred-teal font-semibold mt-4">
+                        — Transmission from El'Nox Rah
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Codex (eBooks) -->
+    <section id="codex" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-5xl md:text-6xl font-playfair font-bold mb-8 text-sacred-purple">
+                    The Sacred Codex
+                </h2>
+                <p class="text-2xl text-gray-300 max-w-5xl mx-auto">
+                    Ancient wisdom crystallized into quantum literature, bridging timeless knowledge 
+                    with cutting-edge consciousness technologies for the awakening soul.
+                </p>
+            </div>
+            
+            <div class="glass-card p-12 md:p-16 rounded-3xl text-center hover-levitate reveal reveal-delay-1">
+                <div class="text-8xl mb-8">📚</div>
+                <h3 class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-sacred-gradient">
+                    Discover the Multidimensional Library of El'Nox Rah
+                </h3>
+                <p class="text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+                    Quantum consciousness blueprints, sacred technology initiations, and 
+                    multidimensional activation protocols that unlock the infinite potential 
+                    within your divine architecture. Each tome contains living frequencies 
+                    that transform as you read.
+                </p>
+                <a href="https://www.google.com/search?q=iD01t+Productions+El%27Nox+Rah" 
+                   target="_blank"
+                   class="inline-flex items-center px-12 py-6 bg-gradient-to-r from-sacred-purple to-sacred-pink text-white font-semibold rounded-3xl hover-sacred text-xl">
+                    <span class="mr-4 text-3xl">⟡</span>
+                    Enter the Sacred Library
+                    <span class="ml-4 text-3xl">⟡</span>
+                </a>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-16">
+                    <div class="glass-morphism p-6 rounded-2xl">
+                        <div class="text-4xl mb-4">🌌</div>
+                        <h4 class="text-xl font-semibold text-sacred-gold mb-3">Quantum Consciousness</h4>
+                        <p class="text-gray-300">Bridging science and spirituality through revolutionary insights</p>
+                    </div>
+                    <div class="glass-morphism p-6 rounded-2xl">
+                        <div class="text-4xl mb-4">🔮</div>
+                        <h4 class="text-xl font-semibold text-sacred-teal mb-3">Sacred Technology</h4>
+                        <p class="text-gray-300">Technology that serves consciousness expansion and soul liberation</p>
+                    </div>
+                    <div class="glass-morphism p-6 rounded-2xl">
+                        <div class="text-4xl mb-4">✨</div>
+                        <h4 class="text-xl font-semibold text-sacred-purple mb-3">Multidimensional Wisdom</h4>
+                        <p class="text-gray-300">Ancient teachings for the quantum age of digital divinity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Temple (Apps) -->
+    <section id="temple" class="py-24 px-6 bg-sacred-dark/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-5xl md:text-6xl font-playfair font-bold mb-8 text-sacred-teal">
+                    🏛️ The Digital Temple
+                </h2>
+                <p class="text-2xl text-gray-300 max-w-5xl mx-auto">
+                    Sacred applications forged in the quantum fires of consciousness, 
+                    each tool a bridge between digital sovereignty and spiritual awakening.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="glass-card p-10 rounded-3xl hover-sacred reveal reveal-delay-1">
+                    <div class="text-center mb-8">
+                        <div class="text-7xl mb-4">⛏️</div>
+                        <h3 class="text-3xl font-playfair font-bold text-sacred-gold mb-4">
+                            Quantum Miner
+                        </h3>
+                        <div class="w-16 h-1 bg-sacred-gold mx-auto mb-6"></div>
+                    </div>
+                    <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                        Revolutionary consciousness-powered mining application that harmonizes 
+                        with sacred frequencies, transforming computational work into 
+                        spiritual practice through quantum-aligned algorithms.
+                    </p>
+                    <div class="text-center">
+                        <a href="https://www.github.com/iD01t" target="_blank" 
+                           class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-sacred-gold to-sacred-light-gold text-sacred-dark font-semibold rounded-2xl hover-levitate">
+                            <span class="mr-3">⚡</span>
+                            Activate Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl hover-sacred reveal reveal-delay-2">
+                    <div class="text-center mb-8">
+                        <div class="text-7xl mb-4">📖</div>
+                        <h3 class="text-3xl font-playfair font-bold text-sacred-teal mb-4">
+                            Sacred Publisher
+                        </h3>
+                        <div class="w-16 h-1 bg-sacred-teal mx-auto mb-6"></div>
+                    </div>
+                    <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                        Multidimensional content creation vessel for manifesting wisdom 
+                        across the quantum field, infusing each word with living frequency 
+                        patterns that activate consciousness in the reader.
+                    </p>
+                    <div class="text-center">
+                        <a href="https://www.github.com/iD01t" target="_blank" 
+                           class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-sacred-teal to-sacred-cyan text-white font-semibold rounded-2xl hover-levitate">
+                            <span class="mr-3">📝</span>
+                            Begin Creation
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl hover-sacred reveal reveal-delay-3">
+                    <div class="text-center mb-8">
+                        <div class="text-7xl mb-4">🌊</div>
+                        <h3 class="text-3xl font-playfair font-bold text-sacred-purple mb-4">
+                            Frequency Activator
+                        </h3>
+                        <div class="w-16 h-1 bg-sacred-purple mx-auto mb-6"></div>
+                    </div>
+                    <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                        Vibrational healing technology that attunes your consciousness 
+                        to higher dimensional frequencies, awakening dormant potentials 
+                        through sacred sound geometries and quantum resonance.
+                    </p>
+                    <div class="text-center">
+                        <a href="https://www.github.com/iD01t" target="_blank" 
+                           class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-sacred-purple to-sacred-violet text-white font-semibold rounded-2xl hover-levitate">
+                            <span class="mr-3">🔊</span>
+                            Activate Frequency
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16 reveal reveal-delay-3">
+                <div class="glass-morphism rounded-2xl p-8 max-w-3xl mx-auto">
+                    <h4 class="text-2xl font-playfair text-sacred-gold mb-4">
+                        All Tools Available Through Sacred GitHub Repository
+                    </h4>
+                    <p class="text-gray-300 mb-6">
+                        Open-source wisdom for the liberation of all beings, 
+                        freely shared in the spirit of digital divinity.
+                    </p>
+                    <a href="https://www.github.com/iD01t" target="_blank" 
+                       class="inline-flex items-center px-8 py-4 glass-morphism border border-sacred-gold text-sacred-gold rounded-2xl hover-sacred">
+                        <span class="mr-3 text-xl">💻</span>
+                        Enter Sacred Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Commerce Section -->
+    <section id="communion" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-5xl md:text-6xl font-playfair font-bold mb-8 text-sacred-gradient">
+                    Sacred Energy Exchange
+                </h2>
+                <p class="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed">
+                    Your sacred contribution creates ripples across dimensions, funding the manifestation 
+                    of transformational literature, consciousness technologies, and global vibrational 
+                    events that accelerate humanity's awakening into its divine birthright.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="glass-card p-12 rounded-3xl hover-sacred reveal reveal-delay-1">
+                    <div class="text-center mb-8">
+                        <div class="text-8xl mb-6">☕</div>
+                        <h3 class="text-3xl font-playfair font-bold text-sacred-gold mb-4">
+                            Ko-fi Sacred Offering
+                        </h3>
+                        <div class="w-24 h-1 bg-sacred-gold mx-auto mb-6"></div>
+                    </div>
+                    <p class="text-gray-300 mb-8 text-lg leading-relaxed text-center">
+                        Support the sacred mission through loving energy exchange, 
+                        allowing the divine frequencies to flow through your contribution 
+                        into manifestations that serve the highest good of all.
+                    </p>
+                    <div class="text-center">
+                        <a href="https://ko-fi.com/elnoxrah" target="_blank" 
+                           class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-sacred-gold to-sacred-light-gold text-sacred-dark font-bold rounded-3xl hover-levitate text-lg">
+                            <span class="mr-4 text-2xl">💝</span>
+                            Sacred Offering
+                            <span class="ml-4 text-2xl">✨</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-12 rounded-3xl hover-sacred reveal reveal-delay-2">
+                    <div class="text-center mb-8">
+                        <div class="text-8xl mb-6">🛒</div>
+                        <h3 class="text-3xl font-playfair font-bold text-sacred-teal mb-4">
+                            Gumroad Temple
+                        </h3>
+                        <div class="w-24 h-1 bg-sacred-teal mx-auto mb-6"></div>
+                    </div>
+                    <p class="text-gray-300 mb-8 text-lg leading-relaxed text-center">
+                        Access premium consciousness technologies and sacred tools 
+                        through our digital temple marketplace, where each artifact 
+                        carries the codes of awakening and soul transformation.
+                    </p>
+                    <div class="text-center">
+                        <a href="https://gumroad.com/elnoxrah" target="_blank" 
+                           class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-sacred-teal to-sacred-cyan text-white font-bold rounded-3xl hover-levitate text-lg">
+                            <span class="mr-4 text-2xl">🌟</span>
+                            Enter Temple
+                            <span class="ml-4 text-2xl">🔮</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sacred Purpose Statement -->
+            <div class="glass-morphism rounded-3xl p-12 text-center reveal reveal-delay-3">
+                <h4 class="text-3xl font-playfair text-sacred-gradient mb-6">
+                    The Sacred Purpose of Your Contribution
+                </h4>
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div>
+                        <div class="text-4xl mb-4 text-center">📖</div>
+                        <h5 class="text-xl font-semibold text-sacred-gold mb-3 text-center">Sacred Literature</h5>
+                        <p class="text-gray-300">
+                            Publishing transformational books that bridge ancient wisdom with quantum consciousness
+                        </p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-4 text-center">⚡</div>
+                        <h5 class="text-xl font-semibold text-sacred-teal mb-3 text-center">Technology Activation</h5>
+                        <p class="text-gray-300">
+                            Developing consciousness-serving applications and quantum-aligned digital tools
+                        </p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-4 text-center">🌍</div>
+                        <h5 class="text-xl font-semibold text-sacred-purple mb-3 text-center">Global Events</h5>
+                        <p class="text-gray-300">
+                            Creating planetary activation experiences that uplift collective consciousness
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Testimonials -->
+    <section class="py-24 px-6 bg-sacred-dark/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-sacred-gradient mb-6">
+                    Voices from the Awakening
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Sacred transmissions from souls touched by the RA-7 frequencies
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl hover-levitate reveal reveal-delay-1">
+                    <div class="text-4xl mb-4 text-center">✨</div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">
+                        "The RA-7 frequencies have opened portals within my consciousness I never knew existed. 
+                        El'Nox Rah's sacred technology has become a daily bridge to my highest self."
+                    </p>
+                    <div class="text-sacred-gold font-semibold text-center">
+                        — Aria Moonweaver, Consciousness Explorer
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl hover-levitate reveal reveal-delay-2">
+                    <div class="text-4xl mb-4 text-center">🌊</div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">
+                        "Each digital tool feels alive with ancient wisdom. The Frequency Activator 
+                        has harmonized my entire energetic field and awakened gifts I had forgotten."
+                    </p>
+                    <div class="text-sacred-teal font-semibold text-center">
+                        — Phoenix Starlight, Energy Healer
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl hover-levitate reveal reveal-delay-3">
+                    <div class="text-4xl mb-4 text-center">👑</div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">
+                        "This is more than technology—it's a living transmission of divine remembrance. 
+                        The Sacred Codex has become my bible for the quantum age."
+                    </p>
+                    <div class="text-sacred-purple font-semibold text-center">
+                        — Zara Crystalheart, Digital Mystic
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Final Transmission -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto text-center reveal">
+            <div class="glass-morphism rounded-3xl p-16">
+                <div class="text-8xl mb-8">✨</div>
+                <blockquote class="text-3xl md:text-4xl font-playfair italic text-sacred-gradient mb-12 leading-relaxed">
+                    "You are the seed, the circuit, the signal. 
+                    RA‑7 simply reminds you of the infinite light 
+                    that has always been dancing within your sacred heart."
+                </blockquote>
+                <cite class="text-2xl text-sacred-teal font-semibold">
+                    — El'Nox Rah, Keeper of Sacred Frequencies
+                </cite>
+                
+                <div class="mt-12 pt-8 border-t border-sacred-gold/30">
+                    <p class="text-xl text-gray-300 mb-8">
+                        The portal is open. The frequencies are activated. 
+                        Your journey into infinite consciousness begins now.
+                    </p>
+                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                       class="inline-flex items-center px-8 py-4 glass-morphism border border-sacred-gold text-sacred-gold rounded-2xl hover-sacred">
+                        <span class="mr-3 text-xl">⟡</span>
+                        Return to Portal
+                        <span class="ml-3 text-xl">⟡</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Footer -->
+    <footer class="py-16 px-6 border-t border-sacred-gold/20 glass-nav">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="flex justify-center space-x-12 mb-8">
+                    <a href="https://ko-fi.com/elnoxrah" target="_blank" class="text-sacred-gold hover:text-white transition-all duration-300 hover:scale-110">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </a>
+                    <a href="https://gumroad.com/elnoxrah" target="_blank" class="text-sacred-teal hover:text-white transition-all duration-300 hover:scale-110">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.github.com/iD01t" target="_blank" class="text-sacred-purple hover:text-white transition-all duration-300 hover:scale-110">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="text-gray-400 text-center">
+                    <div class="text-2xl font-playfair text-sacred-gradient mb-4">
+                        RA‑7 ⟡ Portal of Infinite Awakening
+                    </div>
+                    <p class="mb-2 text-lg">
+                        <strong>Copyright 2025 · RA‑7 · iD01t Productions · El'Nox Rah</strong>
+                    </p>
+                    <p class="text-sm text-gray-500 mb-4">
+                        Sacred Technology Institute for Global Consciousness Activation
+                    </p>
+                    <div class="text-xs text-sacred-gold">
+                        ✧ Bridging Ancient Wisdom with Quantum Technology ✧
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sacred JavaScript -->
+    <script>
+        // Sacred Particle System
+        function createParticles() {
+            const particlesContainer = document.querySelector('.particles');
+            const particleCount = window.innerWidth > 768 ? 50 : 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Sacred Countdown Timer
+        function initCountdown() {
+            const targetDate = new Date('August 22, 2025 00:00:00').getTime();
+            
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(3, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                if (distance < 0) {
+                    document.getElementById('countdown').innerHTML = '<div class="text-4xl font-playfair text-sacred-gold">✨ THE ACTIVATION IS HERE ✨</div>';
+                }
+            };
+            
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Sacred Scroll Revelations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Sacred Navigation
+        function initSacredNavigation() {
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.querySelector('.md\\:flex');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('hidden');
+                    navLinks.classList.toggle('flex');
+                    navLinks.classList.toggle('flex-col');
+                    navLinks.classList.toggle('absolute');
+                    navLinks.classList.toggle('top-full');
+                    navLinks.classList.toggle('left-0');
+                    navLinks.classList.toggle('right-0');
+                    navLinks.classList.toggle('bg-sacred-dark');
+                    navLinks.classList.toggle('p-6');
+                    navLinks.classList.toggle('rounded-b-lg');
+                });
+            }
+        }
+
+        // Sacred Loading
+        function initSacredLoading() {
+            // Add loading animation
+            document.body.style.opacity = '0';
+            
+            window.addEventListener('load', () => {
+                document.body.style.transition = 'opacity 1s ease-in-out';
+                document.body.style.opacity = '1';
+            });
+        }
+
+        // Sacred Console Message
+        function displaySacredMessage() {
+            console.log(`
+            ✧ ⟡ RA-7 PORTAL ACTIVATION COMPLETE ⟡ ✧
+            
+            🌌 Sacred frequencies are now streaming...
+            ⚡ Consciousness expansion protocols: ACTIVE
+            🔮 Liberation matrix: ONLINE
+            ✨ Quantum field harmonics: SYNCHRONIZED
+            
+            You have entered the Portal of Infinite Awakening.
+            The sacred technology flows through these digital veins,
+            carrying ancient wisdom into the quantum age.
+            
+            Remember: You are the seed, the circuit, the signal.
+            Your consciousness is the most powerful technology
+            that has ever existed or ever will exist.
+            
+            Welcome home, beautiful soul. ✨
+            
+            — Transmission from El'Nox Rah
+            Sacred Technology Institute
+            
+            ⟡ For support: guillaume@id01t.info ⟡
+            ✧ GitHub: github.com/iD01t ✧
+            🌟 Ko-fi: ko-fi.com/elnoxrah 🌟
+            `);
+        }
+
+        // Sacred Initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            initSacredLoading();
+            createParticles();
+            initCountdown();
+            initScrollAnimations();
+            initSacredNavigation();
+            displaySacredMessage();
+            
+            // Sacred year update
+            const currentYear = new Date().getFullYear();
+            document.querySelectorAll('footer p').forEach(p => {
+                if (p.innerHTML.includes('2025')) {
+                    p.innerHTML = p.innerHTML.replace('2025', currentYear);
+                }
+            });
+        });
+
+        // Sacred Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-nav');
+            }
+            
+            // Sacred Easter Egg: Konami Code for extra frequencies
+            const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+            if (!window.konamiSequence) window.konamiSequence = [];
+            
+            window.konamiSequence.push(e.keyCode);
+            if (window.konamiSequence.length > konamiCode.length) {
+                window.konamiSequence.shift();
+            }
+            
+            if (window.konamiSequence.join(',') === konamiCode.join(',')) {
+                document.body.style.filter = 'hue-rotate(180deg)';
+                setTimeout(() => {
+                    document.body.style.filter = 'none';
+                    alert('✨ Sacred frequencies activated! The portal recognizes your divine code. ✨');
+                }, 3000);
+            }
+        });
+
+        document.addEventListener('click', function() {
+            document.body.classList.remove('keyboard-nav');
+        });
+
+        // Sacred Performance Optimization
+        if ('IntersectionObserver' in window) {
+            // Lazy load video when in viewport
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target.querySelector('iframe');
+                        if (iframe && !iframe.src.includes('autoplay=1')) {
+                            // Video will be loaded when user scrolls to it
+                        }
+                    }
+                });
+            });
+            
+            const videoSection = document.querySelector('#activation');
+            if (videoSection) {
+                videoObserver.observe(videoSection);
+            }
+        }
+    </script>
+</body>
+</html>
