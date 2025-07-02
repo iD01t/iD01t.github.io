@@ -97,25 +97,6 @@
             line-height: 1.6;
             scroll-behavior: smooth;
             transition: all 0.5s ease;
-        }
-        
-  <audio id="sacredAudio" autoplay loop controls>
-  <source src="369.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<script>
-  // Required for autoplay to work on some browsers
-  document.addEventListener("DOMContentLoaded", () => {
-    const audio = document.getElementById("sacredAudio");
-    audio.volume = 0.7; // Optional: set initial volume
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        console.log("Autoplay blocked. Waiting for user interaction.");
-      });
-    }
-  })
 
         }
 
@@ -581,6 +562,29 @@
 </head>
 
 <body id="sacred-body">
+    <!-- Sacred 369Hz Audio -->
+<audio id="sacredAudio" loop controls style="display: none;">
+  <source src="369.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Sacred Audio Activation Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("sacredAudio");
+    audio.volume = 0.7;
+
+    // Require user interaction to play (due to browser policies)
+    function playSacredAudio() {
+      audio.play().catch(err => {
+        console.log("Autoplay blocked until user interacts.");
+      });
+      document.removeEventListener("click", playSacredAudio);
+    }
+
+    document.addEventListener("click", playSacredAudio); // Trigger on first click
+  });
+</script>
     <!-- Floating Sacred Symbols -->
     <div class="floating-symbol">⟡</div>
     <div class="floating-symbol">◊</div>
