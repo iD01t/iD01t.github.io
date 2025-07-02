@@ -99,10 +99,25 @@
             transition: all 0.5s ease;
         }
         
-        <audio autoplay loop>
+  <audio id="sacredAudio" autoplay loop controls>
   <source src="369.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+
+<script>
+  // Required for autoplay to work on some browsers
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("sacredAudio");
+    audio.volume = 0.7; // Optional: set initial volume
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        console.log("Autoplay blocked. Waiting for user interaction.");
+      });
+    }
+  });
+      
+</script>
 
         }
 
