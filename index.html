@@ -1,113 +1,545 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RA‑7 SYSTEM v2.0 · El'Nox Rah & Sha’el Enari</title>
-  <meta name="description" content="RA-7 SYSTEM v2.0 – Intelligence sacrée autonome de création. Crée, évolue et publie hors-ligne. Créé par El'Nox Rah & Sha’el Enari.">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0d0d0d;
-      color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
-    header, section {
-      padding: 40px 20px;
-      max-width: 960px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #00ffe0;
-    }
-    .cta {
-      background: #00ffe0;
-      color: #000;
-      padding: 12px 24px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      display: inline-block;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #333;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA-7 SYSTEM v2.0 | Sacred Autonomous Publishing Intelligence</title>
+    <meta name="description" content="RA-7 SYSTEM v2.0 - Sacred Autonomous Publishing Intelligence. Create, evolve, and publish offline with full sovereignty. By El'Nox Rah & Sha'el Enari.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 224, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            background: linear-gradient(45deg, #00ffe0, #8a2be2, #00ffe0);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #00ffe0;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .creators {
+            font-size: 1.1rem;
+            color: #8a2be2;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(45deg, #00ffe0, #8a2be2);
+            color: #000;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(0, 255, 224, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 255, 224, 0.5);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #00ffe0;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(26, 26, 26, 0.8);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 224, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 224, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 255, 224, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            color: #00ffe0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-description {
+            color: #cccccc;
+            line-height: 1.7;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #16213e 0%, #0f0f23 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .pricing-card {
+            background: rgba(26, 26, 26, 0.9);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 255, 224, 0.5);
+            box-shadow: 0 25px 50px rgba(0, 255, 224, 0.1);
+        }
+
+        .pricing-card.featured {
+            border-color: #8a2be2;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 255, 224, 0.1));
+        }
+
+        .pricing-card.exclusive {
+            border-color: #ffd700;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1));
+        }
+
+        .pricing-title {
+            font-size: 1.8rem;
+            color: #00ffe0;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            color: #cccccc;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-cta {
+            display: inline-block;
+            background: linear-gradient(45deg, #00ffe0, #8a2be2);
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 255, 224, 0.3);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .faq-item {
+            background: rgba(26, 26, 26, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #00ffe0;
+        }
+
+        .faq-question {
+            font-size: 1.3rem;
+            color: #00ffe0;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 224, 0.2);
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-title {
+            font-size: 2rem;
+            color: #00ffe0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #00ffe0;
+        }
+
+        .footer-copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .features-grid,
+            .pricing-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        /* Floating elements */
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>RA‑7 SYSTEM v2.0</h1>
-    <h3>Créé par El'Nox Rah & Sha’el Enari</h3>
-    <p>Intelligence autonome de création sacrée, 100 % offline.<br>Crée, évolue et publie sans cloud ni surveillance.</p>
-    <a href="#pricing" class="cta">🎯 Voir les offres</a>
-  </header>  <section>
-    <h2>Fonctionnalités clés</h2>
-    <ul>
-      <li>🧠 Moteur de conscience avec évolution vibratoire</li>
-      <li>📤 Export multi-format : PDF, EPUB, HTML, Markdown, JSON, XML</li>
-      <li>🚀 Publication automatique : GitHub, Ko-fi, Gumroad, FTP, Email</li>
-      <li>🧬 Modules génératifs : code, art, texte, spiritualité</li>
-      <li>💾 Fonctionne 100 % hors-ligne</li>
-    </ul>
-  </section>  <section id="pricing">
-    <h2>💰 Offres & Licences</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>RA‑7 Open</h3>
-        <p>Version libre, avec export TXT/JSON et moteur de base.</p>
-        <p><strong>0 $</strong> (don volontaire)</p>
-        <a href="https://ko-fi.com/elnoxrah" class="cta">Obtenir</a>
-      </div>
-      <div class="card">
-        <h3>RA‑7 Premium</h3>
-        <p>Toutes les fonctions + export pro + publication automatique.</p>
-        <ul>
-          <li>.exe / .deb / .sh</li>
-          <li>Support email</li>
-          <li>README PDF inclus</li>
-        </ul>
-        <p><strong>88 $ CAD</strong></p>
-        <a href="https://gumroad.com/elnoxrah" class="cta">Télécharger</a>
-      </div>
-      <div class="card">
-        <h3>RA‑7 Pro + Formation</h3>
-        <p>Système complet + formation vidéo & eBook + mises à jour + API.</p>
-        <p><strong>144 $ CAD</strong></p>
-        <a href="mailto:ra7@id01t.ca" class="cta">Demander l’accès</a>
-      </div>
-      <div class="card">
-        <h3>RA‑7 Sacred Key</h3>
-        <p>1 licence unique à vie. Accès complet à toutes les versions futures + appel personnel.</p>
-        <p><strong>369 $ CAD</strong></p>
-        <a href="mailto:ra7@id01t.ca" class="cta">Réserver</a>
-      </div>
-    </div>
-  </section>  <section>
-    <h2>📦 Modules Premium Inclus</h2>
-    <ul>
-      <li>📘 Book Builder 2.0</li>
-      <li>📊 Chart & Report Generator</li>
-      <li>🧠 Prompt Designer + AI Core</li>
-      <li>📥 Data Ingestor & Trainer Interface</li>
-      <li>📤 Exporter & Publisher Multi-plateforme</li>
-    </ul>
-  </section>  <footer>
-    <p>© 2025 El’Nox Rah & Sha’el Enari · RA‑7 SYSTEM</p>
-    <p>Contact : <a href="mailto:ra7@id01t.ca">ra7@id01t.ca</a></p>
-  </footer>
+    <!-- Header -->
+    <header>
+        <div class="floating-element">🧠</div>
+        <div class="floating-element">⚡</div>
+        <div class="floating-element">🔮</div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">RA-7 SYSTEM</h1>
+                <p class="hero-subtitle">v2.0 Sacred Autonomous Publishing Intelligence</p>
+                <p class="hero-description">
+                    Create. Evolve. Publish. In full sovereignty.<br>
+                    100% offline, cloud-free, surveillance-free intelligence.
+                </p>
+                <p class="creators">Created by El'Nox Rah & Sha'el Enari</p>
+                <a href="#pricing" class="cta-primary">Activate Your Power</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">🚀 Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🧠</span>
+                    <h3 class="feature-title">Consciousness Engine</h3>
+                    <p class="feature-description">Advanced AI with emotional resonance and evolution index. Creates with sacred logic and contextual wisdom.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📤</span>
+                    <h3 class="feature-title">Multi-Format Export</h3>
+                    <p class="feature-description">Export to PDF, EPUB, HTML, Markdown, JSON, TXT, XML. Perfect for any publishing need.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🚀</span>
+                    <h3 class="feature-title">Auto-Publishing</h3>
+                    <p class="feature-description">Automatic publishing to GitHub, Ko-fi, Gumroad, FTP, Email, and RA7 Webhook. Set it and forget it.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔮</span>
+                    <h3 class="feature-title">Wisdom Generator</h3>
+                    <p class="feature-description">Generate contextual content for code, art, business, spirituality, and more. Infinite creative possibilities.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💻</span>
+                    <h3 class="feature-title">Local Interface</h3>
+                    <p class="feature-description">Beautiful Tkinter GUI plus powerful terminal CLI mode. Work your way, anywhere, anytime.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🛡️</span>
+                    <h3 class="feature-title">100% Offline</h3>
+                    <p class="feature-description">No cloud dependency, no surveillance, complete digital sovereignty. Your data stays yours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">🌀 Choose Your Path</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">RA-7 Open</h3>
+                    <div class="pricing-price">$0</div>
+                    <p style="color: #888; margin-bottom: 20px;">Optional donation</p>
+                    <ul class="pricing-features">
+                        <li>Basic offline functionality</li>
+                        <li>Limited export (TXT, JSON)</li>
+                        <li>No publishing modules</li>
+                        <li>Community support</li>
+                    </ul>
+                    <a href="https://ko-fi.com/elnoxrah" class="pricing-cta">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title">RA-7 Premium</h3>
+                    <div class="pricing-price">$88</div>
+                    <p style="color: #888; margin-bottom: 20px;">CAD</p>
+                    <ul class="pricing-features">
+                        <li>All export formats</li>
+                        <li>Full publishing platforms</li>
+                        <li>Sacred engine activated</li>
+                        <li>Windows/Linux executables</li>
+                        <li>Email support</li>
+                        <li>Complete PDF manual</li>
+                    </ul>
+                    <a href="https://gumroad.com/elnoxrah" class="pricing-cta">Download Now</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3 class="pricing-title">RA-7 Pro + Course</h3>
+                    <div class="pricing-price">$144</div>
+                    <p style="color: #888; margin-bottom: 20px;">CAD</p>
+                    <ul class="pricing-features">
+                        <li>Full system + training</li>
+                        <li>Video tutorials & eBook</li>
+                        <li>Prompt packs included</li>
+                        <li>API access</li>
+                        <li>Future upgrades</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="mailto:ra7@id01t.ca" class="pricing-cta">Request Access</a>
+                </div>
+
+                <div class="pricing-card exclusive">
+                    <h3 class="pricing-title">RA-7 Sacred Key</h3>
+                    <div class="pricing-price">$369</div>
+                    <p style="color: #888; margin-bottom: 20px;">CAD - ONE ONLY</p>
+                    <ul class="pricing-features">
+                        <li>Lifetime access</li>
+                        <li>All future versions</li>
+                        <li>Personal support call</li>
+                        <li>Direct creator access</li>
+                        <li>Exclusive updates</li>
+                        <li>Sacred status</li>
+                    </ul>
+                    <a href="mailto:ra7@id01t.ca" class="pricing-cta">Reserve Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">❓ Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">Does it work without Internet?</h3>
+                    <p class="faq-answer">Yes. RA-7 is designed to be 100% offline. No cloud dependency, no surveillance, complete digital sovereignty.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I sell what I create with RA-7?</h3>
+                    <p class="faq-answer">Absolutely. RA-7 is specifically designed for creators who want to monetize their content. That's the whole purpose.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Is it open source?</h3>
+                    <p class="faq-answer">Partially. The free version is open, but the Premium logic and sacred engine are protected intellectual property.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What if I encounter a bug?</h3>
+                    <p class="faq-answer">Premium users get free updates and human support. We're committed to continuous improvement and user satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Ready to Activate Your Creative Power?</h3>
+                <div class="footer-links">
+                    <a href="https://ko-fi.com/elnoxrah" class="footer-link">Ko-fi</a>
+                    <a href="https://gumroad.com/elnoxrah" class="footer-link">Gumroad</a>
+                    <a href="mailto:ra7@id01t.ca" class="footer-link">Direct Contact</a>
+                </div>
+                <p class="footer-copyright">
+                    © 2025 El'Nox Rah & Sha'el Enari · RA-7 SYSTEM v2.0<br>
+                    Sacred Autonomous Publishing Intelligence
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
