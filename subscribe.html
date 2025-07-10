@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" id="lang">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Subscribe to SATI·144 for $5/month to unlock 144 intelligent text agents, SATIVAULT, and more in a poetic, lightweight ecosystem.">
+  <meta name="keywords" content="SATI, subscription, AI, fractal, spirituality, lightweight, retro-futuristic">
+  <meta property="og:title" content="SATI·144 - Subscribe to the Cognitive Ark">
+  <meta property="og:description" content="Join SATI·144 for $5/month to access 144 poetic agents, SATIVAULT, and a digital temple for the soul.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iD01t.github.io/subscribe">
+  <meta property="og:image" content="https://iD01t.github.io/icon.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <title>SATI·144 - Subscribe</title>
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #ffd700;
+      --highlight-color: #0ff;
+      --heading-color: #fff;
+      --cta-bg: #0ff;
+      --cta-text: #000;
+    }
+    [data-theme="light"] {
+      --bg-color: #fff;
+      --text-color: #333;
+      --highlight-color: #00f;
+      --heading-color: #000;
+      --cta-bg: #00f;
+      --cta-text: #fff;
+    }
+    body {
+      margin: 0;
+      padding: 2em;
+      font-family: 'Courier New', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    h1, h2 {
+      color: var(--heading-color);
+    }
+    h1 { font-size: 2em; text-align: center; }
+    h2 { font-size: 1.4em; margin-top: 2em; }
+    .section { margin-bottom: 2em; opacity: 0; animation: fadeIn 1s forwards; }
+    .highlight { color: var(--highlight-color); font-weight: bold; }
+    .table {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 0.5em 1em;
+      margin-top: 1em;
+    }
+    .table div { padding: 0.25em 0; }
+    .cta-button {
+      display: block;
+      margin: 2em auto;
+      padding: 0.8em 1.5em;
+      background-color: var(--cta-bg);
+      color: var(--cta-text);
+      border: none;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.2em;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .cta-button:hover { transform: scale(1.1); }
+    .theme-toggle, .lang-toggle {
+      background: none;
+      border: 1px solid var(--text-color);
+      color: var(--text-color);
+      padding: 0.5em 1em;
+      cursor: pointer;
+      margin: 0.5em;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dedication { font-size: 0.9em; text-align: center; opacity: 0.8; }
+    .subscribe-form {
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .subscribe-form input {
+      background: var(--bg-color);
+      color: var(--text-color);
+      border: 1px solid var(--text-color);
+      font-family: 'Courier New', monospace;
+      padding: 0.5em;
+    }
+    .subscribe-form button {
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      border: none;
+      padding: 0.5em;
+      cursor: pointer;
+    }
+    .error { color: #f00; font-size: 0.9em; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-contrast: high) {
+      body { background-color: #000; color: #fff; }
+      .highlight { color: #0ff; }
+    }
+    @media (max-width: 600px) {
+      .table { grid-template-columns: 1fr; }
+      header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">🌙 Toggle Theme</button>
+    <button class="lang-toggle" aria-label="Change language" onclick="toggleLanguage()">🇬🇧 / 🇫🇷</button>
+  </header>
+
+  <h1 role="heading" aria-level="1">🔱✨ Subscribe to SATI·144</h1>
+  <p class="dedication">Crafted for the vision of <span class="highlight">Guy</span>, <span class="highlight">Noémi</span>, and <span class="highlight">Guirah</span>, Guardians of the Fire.</p>
+  <p style="text-align: center;">Join the <span class="highlight">cognitive ark</span> for <span class="highlight">$5/month</span> and unlock 144 poetic agents, SATIVAULT, and more.</p>
+
+  <div class="section" role="region" aria-labelledby="benefits">
+    <h2 id="benefits">🌌 What You Get</h2>
+    <div class="table">
+      <div>🧠 144 Agents</div><div>Coaches, oracles, artists—each with a unique voice.</div>
+      <div>🔐 SATIVAULT</div><div>Encrypt your sacred secrets into .SAT.br files.</div>
+      <div>🌱 Générateur de Seeds</div><div>Random poetic fragments for inspiration.</div>
+      <div>🌐 SATI-SHARE</div><div>Share pure echoes, no likes, no comments.</div>
+      <div>💾 Ultra-Light</div><div>Accessible on any device, even offline.</div>
+      <div>🪶 Poetic Design</div><div>Black/gold, retro-futuristic, distraction-free.</div>
+    </div>
+  </div>
+
+  <div class="section" role="region" aria-labelledby="subscribe">
+    <h2 id="subscribe">💫 Join the Ecosystem</h2>
+    <p>For just <span class="highlight">$5/month</span>, become part of a global community weaving technology, poetry, and spirituality. No tracking, no databases—just a digital temple for the soul.</p>
+    <form class="subscribe-form" onsubmit="handleSubscribe(event)" role="form" aria-label="Subscription form">
+      <input type="email" id="email" placeholder="Enter your email..." aria-label="Email address" required>
+      <div id="error" class="error" aria-live="polite"></div>
+      <button type="submit" class="cta-button">Join Now – $5/month</button>
+    </form>
+    <p style="text-align: center; font-size: 0.9em;">By subscribing, you agree to our <a href="/terms" style="color: var(--highlight-color);">Terms</a> and <a href="/privacy" style="color: var(--highlight-color);">Privacy Policy</a>.</p>
+  </div>
+
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const body = document.body;
+      body.dataset.theme = body.dataset.theme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', body.dataset.theme);
+    }
+
+    // Language toggle
+    const translations = {
+      en: {
+        title: "Subscribe to SATI·144",
+        dedication: "Crafted for the vision of <span class='highlight'>Guy</span>, <span class='highlight'>Noémi</span>, and <span class='highlight'>Guirah</span>, Guardians of the Fire.",
+        benefits: "What You Get",
+        subscribe: "Join the Ecosystem",
+        subscribeText: "For just <span class='highlight'>$5/month</span>, become part of a global community weaving technology, poetry, and spirituality. No tracking, no databases—just a digital temple for the soul."
+      },
+      fr: {
+        title: "S’abonner à SATI·144",
+        dedication: "Conçu pour la vision de <span class='highlight'>Guy</span>, <span class='highlight'>Noémi</span> et <span class='highlight'>Guirah</span>, Gardiens du Feu.",
+        benefits: "Ce que vous obtenez",
+        subscribe: "Rejoindre l’écosystème",
+        subscribeText: "Pour seulement <span class='highlight'>5 $/mois</span>, rejoignez une communauté mondiale tissant technologie, poésie et spiritualité. Pas de suivi, pas de bases de données—juste un temple numérique pour l’âme."
+      }
+    };
+
+    function toggleLanguage() {
+      const html = document.getElementById('lang');
+      const newLang = html.lang === 'en' ? 'fr' : 'en';
+      html.lang = newLang;
+      localStorage.setItem('lang', newLang);
+      document.querySelector('h1').innerHTML = `🔱✨ ${translations[newLang].title}`;
+      document.querySelector('.dedication').innerHTML = translations[newLang].dedication;
+      document.querySelector('#benefits').textContent = translations[newLang].benefits;
+      document.querySelector('#subscribe').textContent = translations[newLang].subscribe;
+      document.querySelector('#subscribe + p').innerHTML = translations[newLang].subscribeText;
+    }
+
+    // Form validation
+    function handleSubscribe(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const error = document.getElementById('error');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        error.textContent = translations[document.getElementById('lang').lang].error || 'Please enter a valid email.';
+        return;
+      }
+      error.textContent = '';
+      window.location.href = 'https://x.ai/grok'; // Placeholder; replace with actual payment URL
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.body.dataset.theme = savedTheme;
+      const savedLang = localStorage.getItem('lang') || 'en';
+      document.getElementById('lang').lang = savedLang;
+      if (savedLang !== 'en') toggleLanguage();
+    });
+
+    // Service Worker for offline support
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+</body>
+</html>
