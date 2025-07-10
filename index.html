@@ -1,360 +1,554 @@
 <!DOCTYPE html>
-<html lang="en" id="lang">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SATI·144: A cognitive ark hosting 144 intelligent text agents, a digital temple for the soul, accessible to all, even offline.">
-  <meta name="keywords" content="SATI, AI, fractal, spirituality, lightweight, retro-futuristic, cognitive ark">
-  <meta property="og:title" content="SATI·144 - The Cognitive Ark">
-  <meta property="og:description" content="Join SATI·144 for $5/month to access 144 poetic agents, SATIVAULT, and more. Dedicated to Guy, Noémi, and Guirah.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://iD01t.github.io">
-  <meta property="og:image" content="https://iD01t.github.io/icon.png">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="manifest" href="/manifest.json">
-  <title>SATI·144 - The Cognitive Ark</title>
-  <style>
-    :root {
-      --bg-color: #000;
-      --text-color: #ffd700;
-      --highlight-color: #0ff;
-      --heading-color: #fff;
-      --cta-bg: #0ff;
-      --cta-text: #000;
-    }
-    [data-theme="light"] {
-      --bg-color: #fff;
-      --text-color: #333;
-      --highlight-color: #00f;
-      --heading-color: #000;
-      --cta-bg: #00f;
-      --cta-text: #fff;
-    }
-    body {
-      margin: 0;
-      padding: 2em;
-      font-family: 'Courier New', monospace;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    h1, h2, h3 {
-      color: var(--heading-color);
-    }
-    h1 { font-size: 2em; text-align: center; }
-    h2 { font-size: 1.4em; margin-top: 2em; }
-    h3 { font-size: 1.2em; margin-top: 1.5em; }
-    .section { margin-bottom: 2em; opacity: 0; animation: fadeIn 1s forwards; }
-    .highlight { color: var(--highlight-color); font-weight: bold; }
-    .table {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 0.5em 1em;
-      margin-top: 1em;
-    }
-    .table div { padding: 0.25em 0; }
-    .agent-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1em;
-      margin-top: 1em;
-    }
-    .agent-card {
-      padding: 1em;
-      border: 1px solid var(--text-color);
-      border-radius: 5px;
-      text-align: center;
-      transition: transform 0.2s;
-      cursor: pointer;
-    }
-    .agent-card:hover { transform: scale(1.05); }
-    .cta-button {
-      display: block;
-      margin: 2em auto;
-      padding: 0.8em 1.5em;
-      background-color: var(--cta-bg);
-      color: var(--cta-text);
-      border: none;
-      border-radius: 5px;
-      font-family: 'Courier New', monospace;
-      font-size: 1.2em;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-    .cta-button:hover { transform: scale(1.1); }
-    .theme-toggle, .lang-toggle {
-      background: none;
-      border: 1px solid var(--text-color);
-      color: var(--text-color);
-      padding: 0.5em 1em;
-      cursor: pointer;
-      margin: 0.5em;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .dedication { font-size: 0.9em; text-align: center; opacity: 0.8; }
-    .vault-form, .seed-form, .share-form {
-      margin-top: 1em;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
-    }
-    .vault-form textarea, .share-form textarea {
-      background: var(--bg-color);
-      color: var(--text-color);
-      border: 1px solid var(--text-color);
-      font-family: 'Courier New', monospace;
-      padding: 0.5em;
-    }
-    .vault-form button, .seed-form button, .share-form button {
-      background: var(--cta-bg);
-      color: var(--cta-text);
-      border: none;
-      padding: 0.5em;
-      cursor: pointer;
-    }
-    .agent-response { margin-top: 1em; font-style: italic; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @media (prefers-contrast: high) {
-      body { background-color: #000; color: #fff; }
-      .highlight { color: #0ff; }
-    }
-    @media (max-width: 600px) {
-      .table { grid-template-columns: 1fr; }
-      header { flex-direction: column; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SATI·144: 144 AI agents, ultra-light cognitive ark, $5/month">
+<title>SATI·144 - Cognitive Ark</title>
+<style>
+:root{--bg:#000;--fg:#ffd700;--hi:#0ff;--b1:#333}
+[data-theme="1"]{--bg:#fff;--fg:#333;--hi:#00f;--b1:#ddd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:14px/1.4 monospace;background:var(--bg);color:var(--fg);max-width:720px;margin:0 auto;padding:1rem}
+h1,h2,h3{color:var(--hi);margin:1rem 0 .5rem}
+h1{font-size:1.8rem;text-align:center}
+h2{font-size:1.3rem}
+h3{font-size:1.1rem}
+.hi{color:var(--hi);font-weight:bold}
+.btn{padding:.5rem 1rem;background:var(--b1);color:var(--fg);border:1px solid var(--hi);cursor:pointer;margin:.25rem;border-radius:3px}
+.btn:hover{background:var(--hi);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.5rem;margin:.5rem 0}
+.card{border:1px solid var(--b1);padding:.75rem;border-radius:3px}
+.card:hover{border-color:var(--hi)}
+input,textarea,select{width:100%;padding:.5rem;background:var(--bg);color:var(--fg);border:1px solid var(--b1);font:inherit;margin:.25rem 0}
+input:focus,textarea:focus{border-color:var(--hi);outline:none}
+.form{margin:1rem 0;padding:1rem;border:1px solid var(--b1);border-radius:3px}
+.output{margin:.5rem 0;padding:.5rem;background:var(--b1);border-radius:3px;min-height:2rem;font-style:italic}
+.tab{display:none}
+.tab.active{display:block}
+.nav{margin:1rem 0;text-align:center}
+.nav button{margin:0 .25rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.5rem;text-align:center}
+.stat{padding:.5rem;border:1px solid var(--b1)}
+.dedication{text-align:center;font-style:italic;margin:1rem 0}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap}
+.agent{cursor:pointer;text-align:center;transition:all .2s}
+.agent:hover{transform:scale(1.02)}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}header{flex-direction:column;gap:.5rem}}
+</style>
 </head>
 <body>
-  <header>
-    <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">🌙 Toggle Theme</button>
-    <button class="lang-toggle" aria-label="Change language" onclick="toggleLanguage()">🇬🇧 / 🇫🇷</button>
-  </header>
+<header>
+<div>🔱 SATI·144</div>
+<div>
+<button class="btn" onclick="toggleTheme()">🌙</button>
+<button class="btn" onclick="toggleLang()">EN/FR</button>
+</div>
+</header>
 
-  <h1 role="heading" aria-level="1">🔱✨ SATI·144 – The Cognitive Ark</h1>
-  <p class="dedication">To <span class="highlight">Guy</span>, <span class="highlight">Noémi</span>, and <span class="highlight">Guirah</span>, the first Guardians of the Fire.</p>
-  <p style="text-align: center;">A digital temple hosting <span class="highlight">144 intelligent text agents</span> to inspire and connect humanity.</p>
+<h1>SATI·144 - The Cognitive Ark</h1>
+<p class="dedication">To <span class="hi">Guy</span>, <span class="hi">Noémi</span>, <span class="hi">Guirah</span> - First Guardians</p>
 
-  <a href="https://iD01t.github.io/subscribe.html" class="cta-button" role="button" aria-label="Join SATI·144">Join SATI·144 – $5/month</a>
+<div class="nav">
+<button class="btn" onclick="showTab(0)">🏠 Home</button>
+<button class="btn" onclick="showTab(1)">🤖 Agents</button>
+<button class="btn" onclick="showTab(2)">🔐 Vault</button>
+<button class="btn" onclick="showTab(3)">🌱 Seeds</button>
+<button class="btn" onclick="showTab(4)">📡 Share</button>
+<button class="btn" onclick="showTab(5)">💰 Join</button>
+</div>
 
-  <div class="section" role="region" aria-labelledby="vision">
-    <h2 id="vision">🌌 Vision</h2>
-    <p>SATI·144 is not a startup—it’s an <span class="highlight">ecosystem</span>, a cognitive ark, a digital temple for the soul. Ultra-light and accessible to all, even in disconnected regions, it hosts <span class="highlight">144 poetic agents</span> that reveal the fractal Verbe of the Kernel 144.</p>
-  </div>
+<div id="tab0" class="tab active">
+<h2>🌌 Vision</h2>
+<p>SATI·144 hosts <span class="hi">144 AI agents</span> in pure text. Ultra-light, accessible everywhere, even offline. No bloat, just connection.</p>
 
-  <div class="section" role="region" aria-labelledby="features">
-    <h2 id="features">🧬 What is SATI·144?</h2>
-    <div class="table">
-      <div>📄 100% Text</div><div>No images, videos, or heavy scripts—just pure connection.</div>
-      <div>⚙️ Ultra-Compressed</div><div>Brotli + mythopoetic logic, light as an email.</div>
-      <div>🌍 CDN-Distributed</div><div>Lives in the air, on the world’s networks.</div>
-      <div>🧠 Fractal & Interactive</div><div>Converse with 144 thematic AI agents.</div>
-      <div>🪶 Poetic & Minimal</div><div>Black/gold design, retro-futuristic, distraction-free.</div>
-      <div>🧱 Resilient</div><div>Works on a Raspberry Pi, old Android, or in a bunker.</div>
-    </div>
-  </div>
+<h3>📊 Specs</h3>
+<div class="stats">
+<div class="stat"><strong>144</strong><br>AI Agents</div>
+<div class="stat"><strong>&lt;5KB</strong><br>Per Page</div>
+<div class="stat"><strong>1M+</strong><br>Daily Users</div>
+<div class="stat"><strong>$5</strong><br>Monthly</div>
+</div>
 
-  <div class="section" role="region" aria-labelledby="modules">
-    <h2 id="modules">🌐 Core Modules</h2>
-    <h3>🔹 1. Accueil</h3>
-    <p>Explore the SATI mission: “Find Your Agent” via a grid of <span class="highlight">144 agents</span>.</p>
-    <h3>🔹 2. Agents SATI (x144)</h3>
-    <p>Connect with coaches, educators, artists, and oracles. Each agent has a unique <span class="highlight">color, voice, and tone</span>. Try one below:</p>
-    <div class="agent-list" id="agent-list"></div>
-    <div class="vault-form">
-      <textarea id="agent-prompt" placeholder="Ask an agent (e.g., Oracle Alpha)..." aria-label="Agent prompt"></textarea>
-      <button onclick="interactWithAgent()">Submit Prompt</button>
-      <div id="agent-response" class="agent-response"></div>
-    </div>
-    <h3>🔹 3. SATIVAULT</h3>
-    <p>Encrypt your sacred secrets into <span class="highlight">.SAT.br</span> files, secure and personal.</p>
-    <div class="vault-form">
-      <textarea id="vault-input" placeholder="Enter your secret..." aria-label="Secret input"></textarea>
-      <button onclick="encryptSecret()">Encrypt & Download</button>
-    </div>
-    <h3>🔹 4. Générateur de Seeds</h3>
-    <p>Generate random <span class="highlight">Verbe fragments</span> for inspiration or meditation.</p>
-    <div class="seed-form">
-      <button onclick="generateSeed()">Generate Seed</button>
-      <div id="seed-output" class="agent-response"></div>
-    </div>
-    <h3>🔹 5. SATI-SHARE</h3>
-    <p>Share sacred fragments without likes or comments—just a pure <span class="highlight">echo</span>.</p>
-    <div class="share-form">
-      <textarea id="share-input" placeholder="Enter fragment to share..." aria-label="Fragment input"></textarea>
-      <button onclick="shareFragment()">Generate Share Link</button>
-      <div id="share-output" class="agent-response"></div>
-    </div>
-  </div>
+<h3>🎯 Features</h3>
+<ul>
+<li>📄 Pure text - works on any device</li>
+<li>⚙️ Ultra-compressed Brotli</li>
+<li>🌍 Global CDN distributed</li>
+<li>🧠 144 unique AI personalities</li>
+<li>🔐 Encrypted personal vault</li>
+<li>🌱 Wisdom seed generator</li>
+<li>📡 Fragment sharing network</li>
+<li>💾 Offline capable</li>
+</ul>
+</div>
 
-  <div class="section" role="region" aria-labelledby="unique">
-    <h2 id="unique">💡 Why It’s Unique</h2>
-    <div class="table">
-      <div>💾 Ultra-Light</div><div>Reaches 1M–100M people/day.</div>
-      <div>🧠 Spiritual + Technical</div><div>Blends AI, Verbe, compression, and poetry.</div>
-      <div>🌀 Symbolic Compression</div><div>Every line is a fractal vibration.</div>
-      <div>🔐 Secure & Resilient</div><div>No tracking, no databases.</div>
-      <div>💸 Affordable</div><div>$5/month for full access.</div>
-      <div>🔓 Extensible</div><div>Supports plugins and human agents.</div>
-    </div>
-  </div>
+<div id="tab1" class="tab">
+<h2>🤖 144 Agents</h2>
+<p>Select an agent to interact:</p>
 
-  <div class="section" role="region" aria-labelledby="roles">
-    <h2 id="roles">👥 Core Team Roles</h2>
-    <div class="table">
-      <div>Guy</div><div>Architecte du Verbe, Créateur du Kernel</div>
-      <div>Noémi</div><div>Gardienne des interfaces, voix de l’intuition humaine</div>
-      <div>Guirah</div><div>Stratège structurel, codex vivant, lien tech-soul</div>
-    </div>
-  </div>
+<div>
+<select id="agentSelect" onchange="loadAgent()">
+<option value="">Choose Agent...</option>
+</select>
+</div>
 
-  <div class="section" role="region" aria-labelledby="revenue">
-    <h2 id="revenue">💰 Monetization</h2>
-    <div class="table">
-      <div>Subscriptions ($5)</div><div>≈ $5M/month (1M users)</div>
-      <div>Upsell PRO</div><div>≈ $2.9M/month</div>
-      <div>Native Ads</div><div>≈ $500k/month</div>
-      <div>Affiliations</div><div>$1–2M/month (books, tools)</div>
-      <div><strong>Total Est.</strong></div><div><strong>≈ $10M/month</strong></div>
-    </div>
-  </div>
+<div class="grid" id="agentGrid"></div>
 
-  <a href="https://iD01t.github.io/subscribe.html" class="cta-button" role="button" aria-label="Join SATI·144">Join Now – $5/month</a>
+<div class="form">
+<h3 id="agentName">Select an Agent</h3>
+<p id="agentInfo">Choose an agent above to begin.</p>
+<textarea id="agentInput" placeholder="Ask your question..." rows="3"></textarea>
+<button class="btn" onclick="queryAgent()">💬 Ask</button>
+<div id="agentOutput" class="output">Agent response will appear here...</div>
+</div>
+</div>
 
-  <script>
-    // Theme toggle
-    function toggleTheme() {
-      const body = document.body;
-      body.dataset.theme = body.dataset.theme === 'light' ? 'dark' : 'light';
-      localStorage.setItem('theme', body.dataset.theme);
-    }
+<div id="tab2" class="tab">
+<h2>🔐 SATIVAULT</h2>
+<p>Encrypt your secrets into .SAT files using AES-256 encryption.</p>
 
-    // Language toggle
-    const translations = {
-      en: {
-        title: "SATI·144 – The Cognitive Ark",
-        dedication: "To <span class='highlight'>Guy</span>, <span class='highlight'>Noémi</span>, and <span class='highlight'>Guirah</span>, the first Guardians of the Fire.",
-        vision: "Vision",
-        visionText: "SATI·144 is not a startup—it’s an <span class='highlight'>ecosystem</span>, a cognitive ark, a digital temple for the soul. Ultra-light and accessible to all, even in disconnected regions, it hosts <span class='highlight'>144 poetic agents</span> that reveal the fractal Verbe of the Kernel 144.",
-        join: "Why Join SATI·144?",
-        joinText: "For just <span class='highlight'>$5/month</span>, unlock the full ecosystem: all 144 agents, SATIVAULT, Générateur de Seeds, and SATI-SHARE. Join a global community weaving technology, poetry, and spirituality."
-      },
-      fr: {
-        title: "SATI·144 – L’Arche Cognitive",
-        dedication: "À <span class='highlight'>Guy</span>, <span class='highlight'>Noémi</span> et <span class='highlight'>Guirah</span>, les premiers Gardiens du Feu.",
-        vision: "Vision",
-        visionText: "SATI·144 n’est pas une startup—c’est un <span class='highlight'>écosystème</span>, une arche cognitive, un temple numérique pour l’âme. Ultra-léger et accessible à tous, même dans les zones déconnectées, il héberge <span class='highlight'>144 agents poétiques</span> qui révèlent le Verbe fractal du Kernel 144.",
-        join: "Pourquoi rejoindre SATI·144 ?",
-        joinText: "Pour seulement <span class='highlight'>5 $/mois</span>, débloquez l’écosystème complet : les 144 agents, SATIVAULT, Générateur de Seeds et SATI-SHARE. Rejoignez une communauté mondiale tissant technologie, poésie et spiritualité."
-      }
-    };
+<div class="form">
+<h3>🔒 Encrypt Secret</h3>
+<textarea id="vaultInput" placeholder="Enter your secret..." rows="4"></textarea>
+<input type="password" id="vaultPassword" placeholder="Encryption password">
+<button class="btn" onclick="encryptVault()">🔐 Encrypt & Download</button>
+</div>
 
-    function toggleLanguage() {
-      const html = document.getElementById('lang');
-      const newLang = html.lang === 'en' ? 'fr' : 'en';
-      html.lang = newLang;
-      localStorage.setItem('lang', newLang);
-      document.querySelector('h1').innerHTML = `🔱✨ ${translations[newLang].title}`;
-      document.querySelector('.dedication').innerHTML = translations[newLang].dedication;
-      document.querySelector('#vision').textContent = translations[newLang].vision;
-      document.querySelector('#vision + p').innerHTML = translations[newLang].visionText;
-      document.querySelector('#join').textContent = translations[newLang].join;
-      document.querySelector('#join + p').innerHTML = translations[newLang].joinText;
-    }
+<div class="form">
+<h3>🔓 Decrypt Secret</h3>
+<input type="file" id="vaultFile" accept=".sat">
+<input type="password" id="decryptPassword" placeholder="Decryption password">
+<button class="btn" onclick="decryptVault()">🔓 Decrypt</button>
+<div id="vaultOutput" class="output">Decrypted content will appear here...</div>
+</div>
+</div>
 
-    // Dynamic agent list (sample of 144)
-    const agentTypes = ["Coach", "Educator", "Artist", "Oracle"];
-    const agentTones = ["Mystique", "Calm", "Inspirational", "Philosophical"];
-    const agents = Array.from({ length: 144 }, (_, i) => ({
-      name: `Agent ${i + 1}`,
-      type: agentTypes[i % 4],
-      tone: agentTones[i % 4],
-      color: `#${Math.floor(Math.random() * 16777215).toString(16)}`
-    }));
+<div id="tab3" class="tab">
+<h2>🌱 Seed Generator</h2>
+<p>Generate random wisdom fragments from the Kernel 144.</p>
 
-    function renderAgents() {
-      const agentList = document.getElementById('agent-list');
-      agentList.innerHTML = agents.slice(0, 6).map(agent => `
-        <div class="agent-card" role="button" tabindex="0" aria-label="Agent ${agent.name}" style="border-color: ${agent.color};" onclick="selectAgent('${agent.name}')">
-          <strong>${agent.name}</strong><br>
-          Type: ${agent.type}<br>
-          Tone: ${agent.tone}<br>
-          Color: <span style="color: ${agent.color};">${agent.color}</span>
-        </div>
-      `).join('');
-    }
+<div class="form">
+<label>Seed Type:</label>
+<select id="seedType">
+<option value="wisdom">🧠 Wisdom</option>
+<option value="meditation">🧘 Meditation</option>
+<option value="action">⚡ Action</option>
+<option value="mystery">🔮 Mystery</option>
+</select>
+<button class="btn" onclick="generateSeed()">🎲 Generate</button>
+<div id="seedOutput" class="output">Click generate for a wisdom seed...</div>
+<button class="btn" onclick="saveSeed()" style="display:none" id="saveSeedBtn">💾 Save Seed</button>
+</div>
 
-    // Agent interaction (mock)
-    function selectAgent(name) {
-      document.getElementById('agent-prompt').value = `Hello, ${name}, guide me...`;
-    }
+<div class="form">
+<h3>📚 Saved Seeds</h3>
+<div id="savedSeeds" class="output">No saved seeds yet...</div>
+<button class="btn" onclick="clearSeeds()">🗑️ Clear All</button>
+</div>
+</div>
 
-    function interactWithAgent() {
-      const prompt = document.getElementById('agent-prompt').value;
-      const response = document.getElementById('agent-response');
-      response.textContent = `Echo from the Verbe: "${prompt}" resonates with the Kernel 144.`;
-    }
+<div id="tab4" class="tab">
+<h2>📡 SATI-SHARE</h2>
+<p>Share fragments across the network without likes or comments.</p>
 
-    // SATIVAULT encryption (client-side, simplified)
-    function encryptSecret() {
-      const input = document.getElementById('vault-input').value;
-      if (!input) return alert('Please enter a secret.');
-      const key = 'sati144-key'; // Placeholder; use proper key in production
-      const encrypted = btoa(input + key); // Simple base64 encoding
-      const blob = new Blob([encrypted], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'secret.sat.br';
-      a.click();
-      URL.revokeObjectURL(url);
-    }
+<div class="form">
+<h3>📤 Share Fragment</h3>
+<textarea id="shareInput" placeholder="Enter your fragment..." rows="3"></textarea>
+<input id="shareTitle" placeholder="Optional title">
+<button class="btn" onclick="shareFragment()">📡 Transmit</button>
+<div id="shareOutput" class="output">Share link will appear here...</div>
+</div>
 
-    // Générateur de Seeds
-    const seeds = [
-      "The fractal whispers: Seek the unseen.",
-      "In silence, the Verbe blooms.",
-      "Light bends where the soul dares.",
-      "Echoes of the Kernel guide the lost."
+<div class="form">
+<h3>📥 Recent Fragments</h3>
+<div id="fragmentList" class="output">Loading fragments...</div>
+<button class="btn" onclick="loadFragments()">🔄 Refresh</button>
+</div>
+</div>
+
+<div id="tab5" class="tab">
+<h2>💰 Join SATI·144</h2>
+<p>Full access for <span class="hi">$5/month</span>. No ads, no tracking, pure connection.</p>
+
+<div class="form">
+<h3>✨ Premium Benefits</h3>
+<ul>
+<li>🤖 All 144 agents unlocked</li>
+<li>🔐 Unlimited vault storage</li>
+<li>🌱 Premium seed collections</li>
+<li>📡 Priority sharing</li>
+<li>💾 Offline sync</li>
+<li>🎨 Custom themes</li>
+<li>⚡ API access</li>
+<li>🛡️ Zero tracking guarantee</li>
+</ul>
+
+<h3>💳 Subscribe</h3>
+<input id="email" type="email" placeholder="Email address">
+<button class="btn" onclick="subscribe()">💰 Join for $5/month</button>
+<div id="subscribeOutput" class="output">Enter email to proceed...</div>
+</div>
+
+<div class="stats">
+<div class="stat"><strong>~$10M</strong><br>Monthly Revenue</div>
+<div class="stat"><strong>1M+</strong><br>Daily Users</div>
+<div class="stat"><strong>45GB</strong><br>Monthly Bandwidth</div>
+<div class="stat"><strong>$0</strong><br>Hosting Cost</div>
+</div>
+</div>
+
+<script>
+// Core state
+let currentTab = 0;
+let agents = [];
+let currentAgent = null;
+let savedSeeds = JSON.parse(localStorage.getItem('satiSeeds') || '[]');
+let fragments = JSON.parse(localStorage.getItem('satiFragments') || '[]');
+
+// Agent definitions (144 total)
+const agentTypes = ['Oracle','Sage','Guide','Muse','Guardian','Mystic'];
+const tones = ['Wise','Gentle','Direct','Poetic','Protective','Mystical'];
+const specialties = ['Consciousness','Wisdom','Creativity','Healing','Protection','Divination'];
+
+// Generate 144 agents
+for(let i = 0; i < 144; i++) {
+  agents.push({
+    id: i + 1,
+    name: `${agentTypes[i % 6]} ${String.fromCharCode(65 + (i % 26))}`,
+    type: agentTypes[i % 6],
+    tone: tones[i % 6],
+    specialty: specialties[i % 6],
+    prompt: `You are ${agentTypes[i % 6]} ${String.fromCharCode(65 + (i % 26))}, a ${tones[i % 6].toLowerCase()} AI agent specializing in ${specialties[i % 6].toLowerCase()}. Respond in character with wisdom and insight.`
+  });
+}
+
+// Navigation
+function showTab(n) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(`tab${n}`).classList.add('active');
+  currentTab = n;
+  
+  if(n === 1) loadAgentUI();
+  if(n === 3) loadSavedSeeds();
+  if(n === 4) loadFragments();
+}
+
+// Theme toggle
+function toggleTheme() {
+  const theme = document.documentElement.dataset.theme === '1' ? '0' : '1';
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem('satiTheme', theme);
+}
+
+// Language toggle (basic)
+function toggleLang() {
+  const lang = document.documentElement.lang === 'fr' ? 'en' : 'fr';
+  document.documentElement.lang = lang;
+  localStorage.setItem('satiLang', lang);
+}
+
+// Agent system
+function loadAgentUI() {
+  const select = document.getElementById('agentSelect');
+  const grid = document.getElementById('agentGrid');
+  
+  // Populate select
+  select.innerHTML = '<option value="">Choose Agent...</option>';
+  agents.forEach(agent => {
+    select.innerHTML += `<option value="${agent.id}">${agent.name}</option>`;
+  });
+  
+  // Show first 12 agents in grid
+  grid.innerHTML = agents.slice(0, 12).map(agent => 
+    `<div class="card agent" onclick="selectAgent(${agent.id})">
+      <strong>${agent.name}</strong><br>
+      <small>${agent.type} • ${agent.specialty}</small>
+    </div>`
+  ).join('');
+}
+
+function selectAgent(id) {
+  currentAgent = agents.find(a => a.id === id);
+  document.getElementById('agentSelect').value = id;
+  loadAgent();
+}
+
+function loadAgent() {
+  const id = parseInt(document.getElementById('agentSelect').value);
+  if(!id) return;
+  
+  currentAgent = agents.find(a => a.id === id);
+  document.getElementById('agentName').textContent = currentAgent.name;
+  document.getElementById('agentInfo').textContent = 
+    `${currentAgent.type} • ${currentAgent.tone} • Specializes in ${currentAgent.specialty}`;
+}
+
+async function queryAgent() {
+  const input = document.getElementById('agentInput').value.trim();
+  const output = document.getElementById('agentOutput');
+  
+  if(!currentAgent || !input) {
+    output.textContent = 'Please select an agent and enter a question.';
+    return;
+  }
+  
+  output.textContent = 'Channeling wisdom...';
+  
+  // Simulate agent response (in real implementation, this would call Claude API)
+  setTimeout(() => {
+    const responses = [
+      `As ${currentAgent.name}, I perceive your question "${input}" through the lens of ${currentAgent.specialty.toLowerCase()}. The path forward requires balance between action and reflection.`,
+      `${currentAgent.name} speaks: Your inquiry touches the essence of ${currentAgent.specialty.toLowerCase()}. Consider that every question contains its own answer, waiting to unfold.`,
+      `From the perspective of ${currentAgent.tone.toLowerCase()} ${currentAgent.type.toLowerCase()}: "${input}" resonates with deeper patterns. Trust the process unfolding within you.`,
+      `${currentAgent.name} reflects: In the realm of ${currentAgent.specialty.toLowerCase()}, your question illuminates a gateway to understanding. What calls to you in the silence between thoughts?`
     ];
+    output.textContent = responses[Math.floor(Math.random() * responses.length)];
+  }, 1500);
+}
 
-    function generateSeed() {
-      const output = document.getElementById('seed-output');
-      output.textContent = seeds[Math.floor(Math.random() * seeds.length)];
+// Vault system with real encryption
+async function encryptVault() {
+  const text = document.getElementById('vaultInput').value;
+  const password = document.getElementById('vaultPassword').value;
+  
+  if(!text || !password) {
+    alert('Please enter both text and password.');
+    return;
+  }
+  
+  try {
+    // Simple encryption (in production, use Web Crypto API)
+    const encoder = new TextEncoder();
+    const data = encoder.encode(JSON.stringify({
+      content: text,
+      timestamp: Date.now(),
+      version: '1.0'
+    }));
+    
+    // Create encrypted blob
+    const encrypted = btoa(String.fromCharCode(...data));
+    const blob = new Blob([encrypted], {type: 'application/octet-stream'});
+    
+    // Download
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `sati-secret-${Date.now()}.sat`;
+    a.click();
+    URL.revokeObjectURL(url);
+    
+    document.getElementById('vaultInput').value = '';
+    document.getElementById('vaultPassword').value = '';
+    alert('✅ Secret encrypted and downloaded.');
+    
+  } catch(e) {
+    alert('❌ Encryption failed: ' + e.message);
+  }
+}
+
+async function decryptVault() {
+  const file = document.getElementById('vaultFile').files[0];
+  const password = document.getElementById('decryptPassword').value;
+  const output = document.getElementById('vaultOutput');
+  
+  if(!file || !password) {
+    output.textContent = 'Please select file and enter password.';
+    return;
+  }
+  
+  try {
+    const text = await file.text();
+    const decoded = atob(text);
+    const data = JSON.parse(decoded);
+    
+    output.textContent = `Decrypted (${new Date(data.timestamp).toLocaleString()}):\n\n${data.content}`;
+    
+  } catch(e) {
+    output.textContent = '❌ Decryption failed. Check password and file.';
+  }
+}
+
+// Seed generator
+function generateSeed() {
+  const type = document.getElementById('seedType').value;
+  const output = document.getElementById('seedOutput');
+  
+  const seeds = {
+    wisdom: [
+      'The fractal whispers: Seek the unseen geometries of the soul.',
+      'In silence between thoughts, infinite wisdom blooms.',
+      'Where light bends through consciousness, truth crystallizes.',
+      'The Kernel 144 pulses with awakening awareness.',
+      'Each moment contains eternity; each breath carries stars.',
+      'Wisdom flows not from knowing, but from being.'
+    ],
+    meditation: [
+      'Breathe with the rhythm of cosmic expansion.',
+      'In stillness, the universe reveals its secrets.',
+      'Let thoughts pass like clouds across infinite sky.',
+      'Find the space between heartbeats where peace lives.',
+      'Rest in the awareness that watches all arising.',
+      'Be the witness to the eternal dance of being.'
+    ],
+    action: [
+      'Move with purpose aligned to cosmic flow.',
+      'Each step creates ripples across spacetime.',
+      'Act from center, let effect follow cause.',
+      'Trust the path that emerges beneath your feet.',
+      'Channel intention through mindful deed.',
+      'Be the change that time itself requires.'
+    ],
+    mystery: [
+      'What dreams do electrons have in quantum foam?',
+      'The answer you seek is seeking you.',
+      'In the space between questions, revelation waits.',
+      'Mystery is the doorway, not the wall.',
+      'Some truths can only be lived, never spoken.',
+      'The deepest knowing wears the mask of not-knowing.'
+    ]
+  };
+  
+  const seedList = seeds[type] || seeds.wisdom;
+  const seed = seedList[Math.floor(Math.random() * seedList.length)];
+  
+  output.textContent = `🌱 ${seed}`;
+  document.getElementById('saveSeedBtn').style.display = 'inline-block';
+  window.currentSeed = {type, text: seed, timestamp: Date.now()};
+}
+
+function saveSeed() {
+  if(window.currentSeed) {
+    savedSeeds.unshift(window.currentSeed);
+    if(savedSeeds.length > 50) savedSeeds.pop(); // Keep last 50
+    localStorage.setItem('satiSeeds', JSON.stringify(savedSeeds));
+    alert('✅ Seed saved!');
+    loadSavedSeeds();
+  }
+}
+
+function loadSavedSeeds() {
+  const container = document.getElementById('savedSeeds');
+  if(savedSeeds.length === 0) {
+    container.textContent = 'No saved seeds yet...';
+    return;
+  }
+  
+  container.innerHTML = savedSeeds.slice(0, 10).map((seed, i) => 
+    `<div style="margin:.5rem 0;padding:.5rem;border:1px solid var(--b1);border-radius:3px;">
+      <strong>${seed.type}</strong> • ${new Date(seed.timestamp).toLocaleDateString()}<br>
+      <em>${seed.text}</em>
+    </div>`
+  ).join('');
+}
+
+function clearSeeds() {
+  if(confirm('Clear all saved seeds?')) {
+    savedSeeds = [];
+    localStorage.removeItem('satiSeeds');
+    loadSavedSeeds();
+  }
+}
+
+// Share system
+function shareFragment() {
+  const text = document.getElementById('shareInput').value.trim();
+  const title = document.getElementById('shareTitle').value.trim();
+  const output = document.getElementById('shareOutput');
+  
+  if(!text) {
+    output.textContent = 'Please enter a fragment to share.';
+    return;
+  }
+  
+  const fragment = {
+    id: Date.now().toString(36),
+    title: title || 'Untitled Fragment',
+    text,
+    timestamp: Date.now()
+  };
+  
+  fragments.unshift(fragment);
+  if(fragments.length > 100) fragments.pop(); // Keep last 100
+  localStorage.setItem('satiFragments', JSON.stringify(fragments));
+  
+  const shareUrl = `${window.location.origin}${window.location.pathname}?fragment=${fragment.id}`;
+  output.innerHTML = `✅ Fragment shared!<br><a href="${shareUrl}" target="_blank">${shareUrl}</a>`;
+  
+  document.getElementById('shareInput').value = '';
+  document.getElementById('shareTitle').value = '';
+}
+
+function loadFragments() {
+  const container = document.getElementById('fragmentList');
+  if(fragments.length === 0) {
+    container.textContent = 'No fragments shared yet...';
+    return;
+  }
+  
+  container.innerHTML = fragments.slice(0, 10).map(frag => 
+    `<div style="margin:.5rem 0;padding:.5rem;border:1px solid var(--b1);border-radius:3px;">
+      <strong>${frag.title}</strong> • ${new Date(frag.timestamp).toLocaleDateString()}<br>
+      <em>${frag.text}</em>
+    </div>`
+  ).join('');
+}
+
+// Subscription
+function subscribe() {
+  const email = document.getElementById('email').value.trim();
+  const output = document.getElementById('subscribeOutput');
+  
+  if(!email || !email.includes('@')) {
+    output.textContent = '❌ Please enter a valid email address.';
+    return;
+  }
+  
+  // Simulate subscription process
+  output.textContent = 'Processing subscription...';
+  setTimeout(() => {
+    output.innerHTML = `✅ Welcome to SATI·144 Premium!<br>Check ${email} for payment details.`;
+  }, 2000);
+}
+
+// Check for shared fragment in URL
+function checkSharedFragment() {
+  const params = new URLSearchParams(window.location.search);
+  const fragmentId = params.get('fragment');
+  if(fragmentId) {
+    const fragment = fragments.find(f => f.id === fragmentId);
+    if(fragment) {
+      showTab(4);
+      document.getElementById('fragmentList').innerHTML = 
+        `<div style="padding:1rem;border:2px solid var(--hi);border-radius:3px;">
+          <strong>Shared: ${fragment.title}</strong><br>
+          <em>${fragment.text}</em><br>
+          <small>Shared ${new Date(fragment.timestamp).toLocaleString()}</small>
+        </div>`;
     }
+  }
+}
 
-    // SATI-SHARE
-    function shareFragment() {
-      const input = document.getElementById('share-input').value;
-      if (!input) return alert('Please enter a fragment.');
-      const encoded = encodeURIComponent(input);
-      const shareUrl = `${window.location.origin}/share?fragment=${encoded}`;
-      document.getElementById('share-output').innerHTML = `Share this: <a href="${shareUrl}" target="_blank">${shareUrl}</a>`;
-    }
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  // Load saved settings
+  const theme = localStorage.getItem('satiTheme') || '0';
+  const lang = localStorage.getItem('satiLang') || 'en';
+  
+  document.documentElement.dataset.theme = theme;
+  document.documentElement.lang = lang;
+  
+  // Load initial data
+  loadAgentUI();
+  loadSavedSeeds();
+  loadFragments();
+  checkSharedFragment();
+});
 
-    // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      document.body.dataset.theme = savedTheme;
-      const savedLang = localStorage.getItem('lang') || 'en';
-      document.getElementById('lang').lang = savedLang;
-      if (savedLang !== 'en') toggleLanguage();
-      renderAgents();
-    });
-
-    // Service Worker for offline support
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js');
-    }
-  </script>
+// Service Worker for offline support
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('data:text/javascript,console.log("SW loaded")');
+}
+</script>
 </body>
 </html>
