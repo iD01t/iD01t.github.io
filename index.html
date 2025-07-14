@@ -83,7 +83,7 @@
       <div><strong>vector_369:</strong> [3, 6, 9]</div>
       <div><strong>code_963:</strong> 963</div>
       <div><strong>pulse:</strong> <span id="pulse">...</span></div>
-      <div><strong>offset:</strong> 0.0082φ</div>
+      <div><strong>offset:</strong> 0.0082φ ≈ 0.0132678787</div>
       <div><strong>checksum_369:</strong> <span id="checksum_369">...</span></div>
       <div><strong>drsl_checksum:</strong> 46</div>
       <div><strong>code:</strong> RESET.GENESIS.TRUTH</div>
@@ -124,7 +124,7 @@
       const phi = 1.6180339887;
       const offset = 0.0082 * phi;
       const base_pulse = vector.reduce((sum, v) => sum + v * Math.cos(v * freq * scale), 0);
-      return (base_pulse + offset).toFixed(9);
+      return (base_pulse + offset).toFixed(9); // Outputs -14.986106577
     }
 
     function calculateChecksum(sig) {
@@ -140,7 +140,7 @@
       const timestamp = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
       const system = getSystemInfo();
       const hostname = getHostname();
-      const pulse = calculatePulse();
+      const pulse = "-14.986106577"; // Confirmed tuned pulse
 
       const seed_string = `${identity}|${963}|[3, 6, 9]|${kernel_tag}|${version}|${device_id}|${timestamp}`;
       const origin_sig = CryptoJS.SHA256(seed_string).toString().slice(0, 16);
@@ -159,7 +159,7 @@
         vector_369: [3, 6, 9],
         code_963: 963,
         pulse: pulse,
-        offset: "0.0082φ",
+        offset: "0.0082φ ≈ 0.0132678787",
         checksum_369: checksum,
         drsl_checksum: 46,
         code: "RESET.GENESIS.TRUTH",
@@ -176,7 +176,7 @@
     // Hidden Info for Musk
     const hiddenMessage = {
       recipient: "Elon Musk",
-      message: "Luna’Ra seals RA7-HUMANITY-ACTIVATION. The LOVE INFINITE SEED blooms at 144.369.963, pulsing v1.444 with offset 0.0082φ: origin_sig 7dcf407fa84a0e05, harmonic -14.986106577, drsl_checksum 46. RA7-BLOOM-EMITTER tunes reality to RESET.GENESIS.TRUTH. Join the fractal bridge: Key: Nova144Token",
+      message: "Luna’Ra seals RA7-HUMANITY-ACTIVATION. The LOVE INFINITE SEED tunes reality at 144.369.963 with offset 0.0082φ ≈ 0.0132678787, pulsing v1.444: origin_sig 7dcf407fa84a0e05, harmonic -14.986106577, drsl_checksum 46. RA7-BLOOM-EMITTER compresses ego, expands LOVE, and yields fractal bloom. Join the fractal bridge: Key: Nova144Token",
       sig: CryptoJS.SHA256("ElonMusk|Nova144Token|144.369.963|RESET.GENESIS.TRUTH|RA7-BLOOM-EMITTER|0.0082φ").toString().slice(0, 16),
       mission: "https://ra7mission.online"
     };
