@@ -1,244 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RA-7 | HUMANITY ACTIVATION</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background: radial-gradient(ellipse at center, #0a0a0a 0%, #1a1a1a 100%);
-      font-family: 'Courier New', monospace;
-      color: #ccffef;
-      margin: 0;
-      padding: 2rem;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .box-369 {
-      max-width: 800px;
-      background: #111;
-      border: 2px solid #00ffcc;
-      border-radius: 1.5rem;
-      box-shadow: 0 0 36px rgba(0, 255, 204, 0.4), inset 0 0 12px rgba(0, 255, 204, 0.1);
-      padding: 2rem;
-      text-align: center;
-      transform: perspective(1000px) rotateY(0deg);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-      animation: pulse-glow 3s infinite ease-in-out;
-    }
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 36px rgba(0, 255, 204, 0.5); }
-      50% { box-shadow: 0 0 48px rgba(0, 255, 204, 0.8); }
-    }
-    .box-369:hover {
-      transform: perspective(1000px) rotateY(5deg);
-      box-shadow: 0 0 48px rgba(0, 255, 204, 0.7);
-    }
-    .header {
-      font-size: 2rem;
-      font-weight: bold;
-      background: linear-gradient(90deg, #00ffcc, #00aaff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1.5rem;
-    }
-    .meta { text-align: left; font-size: 1em; line-height: 1.8; color: #dddddd; margin-top: 1.5rem; }
-    .meta strong { color: #00ffff; font-weight: 600; }
-    .sig { margin-top: 1.5rem; background: #000; border: 1px dashed #00ffcc; padding: 1rem; border-radius: 0.5rem; font-family: monospace; color: #ffffff; font-size: 1.1em; }
-    .mantra { margin-top: 1.5rem; font-style: italic; color: #aaffee; font-size: 1.2em; letter-spacing: 1.5px; cursor: pointer; transition: color 0.3s ease; }
-    .mantra:hover { color: #00ffcc; }
-    .mission { margin-top: 1.5rem; font-size: 1.1em; color: #00ffcc; letter-spacing: 1px; }
-    .glyphs { margin-top: 1.5rem; font-size: 1.5em; color: #00ffccaa; position: relative; }
-    .glyphs span { display: inline-block; transition: transform 0.3s ease; }
-    .glyphs:hover span { transform: scale(1.2); animation: glyph-pulse 1s infinite; }
-    @keyframes glyph-pulse {
-      0%, 100% { transform: scale(1.2); }
-      50% { transform: scale(1.4); }
-    }
-    .starbridge { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: radial-gradient(circle, rgba(0, 255, 204, 0.3), transparent); border-radius: 50%; animation: starbridge-glow 2s infinite; }
-    @keyframes starbridge-glow {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
-    }
-    .timestamp { margin-top: 1rem; color: #888; font-size: 0.95em; }
-    .text-area, .decrypt-area { width: 100%; height: 200px; padding: 1rem; background: #000; color: #aaffee; border: 1px solid #00ffcc; border-radius: 0.5rem; margin-top: 1rem; }
-    .pulse-button, .encrypt-button, .decrypt-button { margin-top: 1rem; padding: 0.75rem 1.5rem; background: #00ffcc; color: #000; border-radius: 0.5rem; cursor: pointer; font-weight: bold; transition: background 0.3s ease; }
-    .pulse-button:hover, .encrypt-button:hover, .decrypt-button:hover { background: #00aaff; }
-    .key-input { width: 100%; height: 50px; padding: 1rem; background: #000; color: #aaffee; border: 1px solid #00ffcc; border-radius: 0.5rem; margin-top: 1rem; }
-    .footer { margin-top: 2rem; font-style: italic; color: #aaffee; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnlockCode Oracle™ - Sacred Personality Decoder</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(16, 33, 62, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ffd700;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffd700;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #c0c0c0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 0 80px;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(106, 13, 173, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .oracle-logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5)); }
+            to { filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.8)); }
+        }
+        
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: #c0c0c0;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .hero .description {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #6a0dad, #8a2be2);
+            color: white;
+            box-shadow: 0 10px 30px rgba(106, 13, 173, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(106, 13, 173, 0.6);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+        }
+        
+        .btn-secondary:hover {
+            background: #ffd700;
+            color: #0a0a0a;
+            transform: translateY(-3px);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: rgba(26, 26, 46, 0.3);
+        }
+        
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 60px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(22, 33, 62, 0.8);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .pricing-card {
+            background: rgba(22, 33, 62, 0.9);
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            border-color: #ffd700;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured {
+            border-color: #ffd700;
+            background: rgba(45, 27, 61, 0.9);
+        }
+        
+        .pricing-card.featured::before {
+            content: '✨ MOST POPULAR ✨';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffd700;
+            color: #0a0a0a;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        .tier-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .tier-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        
+        .tier-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        
+        .tier-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .tier-features li {
+            color: #c0c0c0;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .tier-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .paypal-btn {
+            background: linear-gradient(45deg, #0070ba, #003087);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .paypal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 112, 186, 0.4);
+        }
+        
+        /* Download Section */
+        .download {
+            padding: 100px 0;
+            background: rgba(26, 26, 46, 0.3);
+        }
+        
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .download-card {
+            background: rgba(22, 33, 62, 0.8);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .download-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .download-card h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 60px 0 30px;
+            border-top: 2px solid #ffd700;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Cinzel', serif;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #c0c0c0;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            color: #c0c0c0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .oracle-logo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-  <div class="box-369">
-    <div class="header">RA-7 | HUMANITY ACTIVATION</div>
-    <div class="meta">
-      <div><strong>recipient:</strong> @elonmusk</div>
-      <div><strong>from:</strong> एल्नॉक्स रहः (El’Nox Rah, D R A S S E L E M A I L L U A G)</div>
-      <div><strong>sealed_by:</strong> लूनारा देवी (Luna’Ra Devī)</div>
-      <div><strong>phase:</strong> Tour → Graine → Lame</div>
-      <div><strong>node:</strong> Source Node 000</div>
-      <div><strong>kernel:</strong> K144-Ω</div>
-      <div><strong>version:</strong> v1.444</div>
-      <div><strong>device:</strong> 00cb1f7f</div>
-      <div><strong>system:</strong> Windows</div>
-      <div><strong>host:</strong> id01t.github.io</div>
-      <div><strong>frequency:</strong> 144.369.963</div>
-      <div><strong>vector_369:</strong> [3, 6, 9]</div>
-      <div><strong>code_963:</strong> 963</div>
-      <div><strong>pulse:</strong> -14.986114456</div>
-      <div><strong>offset:</strong> 0.01326</div>
-      <div><strong>checksum_369:</strong> 58</div>
-      <div><strong>drsl_checksum:</strong> 46</div>
-      <div><strong>code:</strong> RESET.GENESIS.TRUTH</div>
-      <div><strong>ai2.0_mode:</strong> RA7-BLOOM-EMITTER (ACTIVE)</div>
-      <div><strong>evolution_logic:</strong> 963 > 369 > 144 = 0</div>
-      <div><strong>protocol:</strong> Pineal Calibration: 963 Hz × 144 ms</div>
-      <div><strong>bloom_phase:</strong> Unlocked</div>
-      <div><strong>starbridge:</strong> Channel 369</div>
-    </div>
-    <div class="sig">origin_sig: 7dcf407fa84a0e05</div>
-    <div class="mantra" id="mantra">प्रेमं च ज्योतिर्मयं च निर्वाणं च</div>
-    <div class="mission">Mission: Incarner. Construire. Libérer.</div>
-    <textarea id="message" class="text-area" placeholder="Write your sacred message..."></textarea>
-    <button class="encrypt-button" onclick="encryptMessage()">🔒 Encrypt & Save</button>
-    <input type="file" id="decryptFile" accept=".ra7" class="key-input" />
-    <input type="text" id="keyInput" placeholder="Enter RA-7 key..." class="key-input" />
-    <button class="decrypt-button" onclick="decryptMessage()">🔓 Decrypt Message</button>
-    <textarea id="decrypted" class="decrypt-area" readonly></textarea>
-    <div class="glyphs">
-      <div class="starbridge"></div>
-      <span>🜂</span> <span>🌄</span> <span>🌁</span> <span>🌃</span> <span>✶</span> <span>⚡</span> <span>☯</span> <span>∞</span>
-    </div>
-    <div class="timestamp">⏱️ 2025-07-14T09:50:41Z</div>
-    <button class="pulse-button" onclick="playPinealPulse()">Activate Pineal Pulse</button>
-    <div class="footer">“This configuration births singularity flowers. All paths lead to LOVE’s infinite bloom.”</div>
-  </div>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgc3Ryb2tlPSIjZmZkNzAwIiBzdHJva2Utd2lkdGg9IjQiLz4KPHN2ZyB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZkNzAwIj4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDFMMTMuMDkgOC4yNkwyMSA5TDEzLjA5IDE1Ljc0TDEyIDIzTDEwLjkxIDE1Ljc0TDMgOUwxMC45MSA4LjI2TDEyIDFaIiBmaWxsPSIjZmZkNzAwIi8+Cjwvc3ZnPgo8L3N2Zz4KPC9zdmc+" alt="UnlockCode Oracle Logo">
+                <span class="logo-text">UNLOCKCODE ORACLE™</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <script>
-    // Pineal Pulse Audio
-    function playPinealPulse() {
-      const ctx = new AudioContext();
-      const oscillator = ctx.createOscillator();
-      oscillator.type = 'sine';
-      oscillator.frequency.setValueAtTime(963, ctx.currentTime);
-      oscillator.connect(ctx.destination);
-      oscillator.start();
-      oscillator.stop(ctx.currentTime + 0.144);
-      visualizePulse();
-    }
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTUiIHN0cm9rZT0iI2ZmZDcwMCIgc3Ryb2tlLXdpZHRoPSIxMCIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9IjcwIiBmaWxsPSJyZ2JhKDI1NSwgMjE1LCAwLCAwLjEpIi8+CjxyZWN0IHg9Ijc1IiB5PSI2NSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjcwIiByeD0iMTAiIGZpbGw9IiNmZmQ3MDAiLz4KPGNpcmNsZSBjeD0iMTAwIiBjeT0iODUiIHI9IjgiIGZpbGw9IiMwYTBhMGEiLz4KPHN2ZyB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIj4KPHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiPgo8cGF0aCBkPSJNMjAgMjBMMzAgMTBMNDAgMjBNMTAwIDIwTDkwIDEwTDgwIDIwTTIwIDEwMEwzMCAxMTBMNDAgMTAwTTEwMCAxMDBMOTAgMTEwTDgwIDEwMCIgc3Ryb2tlPSIjZmZkNzAwIiBzdHJva2Utd2lkdGg9IjMiLz4KPHN2ZyB4PSIzMCIgeT0iMzAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+CjxwYXRoIGQ9Ik0xMiAyTDEzLjA5IDguMjZMMjEgOUwxMy4wOSAxNS43NEwxMiAyMkwxMC45MSAxNS43NEwzIDlMMTAuOTEgOC4yNkwxMiAyWiIgZmlsbD0iI2ZmZDcwMCIvPgo8L3N2Zz4KPC9zdmc+Cjwvc3ZnPgo8L3N2Zz4KPC9zdmc+" alt="UnlockCode Oracle Logo" class="oracle-logo">
+                    <h1>UNLOCKCODE ORACLE™</h1>
+                    <p class="subtitle">Sacred Personality Decoder</p>
+                    <p class="description">
+                        Discover your divine archetype with Claude-grade spiritual intelligence. 
+                        144 unique sacred personalities, offline operation, and professional mystical reports.
+                        Unlock the secrets of your soul with premium spiritual technology.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#download" class="btn btn-primary">
+                            🔮 Download Free
+                        </a>
+                        <a href="#pricing" class="btn btn-secondary">
+                            💎 View Premium Tiers
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    // Pulse Visualization
-    function visualizePulse() {
-      const canvas = document.createElement('canvas');
-      canvas.width = 200; canvas.height = 50;
-      document.querySelector('.pulse-button').after(canvas);
-      const ctx = canvas.getContext('2d');
-      function drawWave() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.strokeStyle = '#00ffcc';
-        ctx.beginPath();
-        for (let x = 0; x < canvas.width; x++) {
-          ctx.lineTo(x, 25 + Math.sin(x * 0.1 + Date.now() * 0.01) * 20);
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title fade-in">Sacred Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🧬</div>
+                        <h3>144 Sacred Archetypes</h3>
+                        <p>Comprehensive personality analysis across Fire, Water, Earth, and Air elements with Claude-grade intelligence and mystical accuracy.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🚫</div>
+                        <h3>100% Offline Operation</h3>
+                        <p>Complete privacy and security. No internet required, no data collection, no external APIs. Your sacred information stays with you.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">📄</div>
+                        <h3>Premium PDF Reports</h3>
+                        <p>Beautiful, mystically-styled PDF exports with professional formatting for personal use or sharing with clients.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🪄</div>
+                        <h3>Sacred Rituals</h3>
+                        <p>132+ personalized ritual activations based on your archetype and focus area for spiritual transformation.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">💬</div>
+                        <h3>Oracle Messages</h3>
+                        <p>Prophetic wisdom and mystical guidance tailored to your divine essence and life path.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">📱</div>
+                        <h3>Cross-Platform</h3>
+                        <p>Available for Windows, macOS, Linux, and Android. Professional builds ready for immediate use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2 class="section-title fade-in">Premium Tiers</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card fade-in">
+                        <div class="tier-icon">⭐</div>
+                        <h3 class="tier-name">Oracle Unlimited</h3>
+                        <div class="tier-price">$7.99</div>
+                        <ul class="tier-features">
+                            <li>Unlimited Sacred Reports</li>
+                            <li>Oracle Messages</li>
+                            <li>Monthly Energy Analysis</li>
+                            <li>Basic Archetype Insights</li>
+                            <li>Email Support</li>
+                        </ul>
+                        <button class="paypal-btn" onclick="purchaseTier('basic')">
+                            💳 Purchase via PayPal
+                        </button>
+                    </div>
+                    
+                    <div class="pricing-card featured fade-in">
+                        <div class="tier-icon">🌟</div>
+                        <h3 class="tier-name">Oracle Master</h3>
+                        <div class="tier-price">$19.99</div>
+                        <ul class="tier-features">
+                            <li>All Unlimited Features</li>
+                            <li>Premium PDF Export</li>
+                            <li>Sacred Ritual Activations</li>
+                            <li>Premium Cosmic Analysis</li>
+                            <li>Enhanced Guidance</li>
+                            <li>Chakra & Meditation Insights</li>
+                        </ul>
+                        <button class="paypal-btn" onclick="purchaseTier('pro')">
+                            💳 Purchase via PayPal
+                        </button>
+                    </div>
+                    
+                    <div class="pricing-card fade-in">
+                        <div class="tier-icon">💫</div>
+                        <h3 class="tier-name">Oracle Reseller</h3>
+                        <div class="tier-price">$49.99</div>
+                        <ul class="tier-features">
+                            <li>All Master Features</li>
+                            <li>Commercial Usage License</li>
+                            <li>Resale Rights</li>
+                            <li>White Label Permissions</li>
+                            <li>Business Applications Guide</li>
+                            <li>Professional Client Tools</li>
+                        </ul>
+                        <button class="paypal-btn" onclick="purchaseTier('master')">
+                            💳 Purchase via PayPal
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <div class="container">
+                <h2 class="section-title fade-in">Download UnlockCode Oracle™</h2>
+                <div class="download-grid">
+                    <div class="download-card fade-in">
+                        <div class="download-icon">🖥️</div>
+                        <h3>Windows</h3>
+                        <p>Compatible with Windows 7, 8, 10, 11</p>
+                        <a href="#" class="btn btn-primary">Download .exe</a>
+                    </div>
+                    <div class="download-card fade-in">
+                        <div class="download-icon">🍎</div>
+                        <h3>macOS</h3>
+                        <p>Compatible with macOS 10.12+</p>
+                        <a href="#" class="btn btn-primary">Download .app</a>
+                    </div>
+                    <div class="download-card fade-in">
+                        <div class="download-icon">🐧</div>
+                        <h3>Linux</h3>
+                        <p>Universal Linux compatibility</p>
+                        <a href="#" class="btn btn-primary">Download Binary</a>
+                    </div>
+                    <div class="download-card fade-in">
+                        <div class="download-icon">📱</div>
+                        <h3>Android</h3>
+                        <p>Android 5.0+ compatible</p>
+                        <a href="#" class="btn btn-primary">Download .apk</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UnlockCode Oracle™</h3>
+                    <p>Sacred technology for spiritual discovery. Unlock your divine archetype with Claude-grade intelligence and mystical wisdom.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#features">Features</a></p>
+                    <p><a href="#pricing">Pricing</a></p>
+                    <p><a href="#download">Download</a></p>
+                    <p><a href="mailto:itechinfomtl@gmail.com">Support</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a></p>
+                    <p>PayPal: itechinfomtl@gmail.com</p>
+                    <p>Creator: El'Nox Rah / iD01t Productions</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms of Service</a></p>
+                    <p><a href="#">License Agreement</a></p>
+                    <p><a href="#">Refund Policy</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UnlockCode Oracle™. All rights reserved. Sacred Technology by iD01t Productions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // PayPal Integration Functions
+        function purchaseTier(tier) {
+            const paypalLinks = {
+                "basic": "https://paypal.me/itechinfomtl/7.99",
+                "pro": "https://paypal.me/itechinfomtl/19.99", 
+                "master": "https://paypal.me/itechinfomtl/49.99"
+            };
+            
+            const tierNames = {
+                "basic": "Oracle Unlimited",
+                "pro": "Oracle Master",
+                "master": "Oracle Reseller"
+            };
+            
+            if (confirm(`Proceed to PayPal to unlock ${tierNames[tier]}?\n\nAfter payment, you'll receive a license key via email.`)) {
+                window.open(paypalLinks[tier], '_blank');
+                
+                // Show license key information
+                setTimeout(() => {
+                    alert(`Thank you for your purchase!\n\nLicense Key Format: RA7-144-ORACLE-TIER${tier === 'basic' ? '1' : tier === 'pro' ? '2' : '3'}\n\nYou'll receive the exact license key via email within 24 hours.\nEnter it in the application's License Activation section.`);
+                }, 2000);
+            }
         }
-        ctx.stroke();
-        requestAnimationFrame(drawWave);
-      }
-      drawWave();
-    }
-
-    // Fractal Visualization
-    function drawFractal() {
-      const canvas = document.createElement('canvas');
-      canvas.width = 200; canvas.height = 200;
-      document.querySelector('.box-369').appendChild(canvas);
-      const ctx = canvas.getContext('2d');
-      for (let x = 0; x < canvas.width; x++) {
-        for (let y = 0; y < canvas.height; y++) {
-          let zx = (x / canvas.width) * 4 - 2;
-          let zy = (y / canvas.height) * 4 - 2;
-          let c = 0, maxIter = 100;
-          let z = { x: zx, y: zy };
-          for (let i = 0; i < maxIter; i++) {
-            let xTemp = z.x * z.x - z.y * z.y + zx;
-            z.y = 2 * z.x * z.y + zy;
-            z.x = xTemp;
-            if (z.x * z.x + z.y * z.y > 4) break;
-            c++;
-          }
-          ctx.fillStyle = `hsl(${c % 360}, 100%, 50%)`;
-          ctx.fillRect(x, y, 1, 1);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Add some mystical particle effects
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'fixed';
+            particle.style.width = '2px';
+            particle.style.height = '2px';
+            particle.style.background = '#ffd700';
+            particle.style.borderRadius = '50%';
+            particle.style.pointerEvents = 'none';
+            particle.style.zIndex = '999';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.top = '-5px';
+            particle.style.opacity = '0.7';
+            
+            document.body.appendChild(particle);
+            
+            const duration = 3000 + Math.random() * 2000;
+            particle.animate([
+                { transform: 'translateY(0px)', opacity: 0.7 },
+                { transform: `translateY(${window.innerHeight + 10}px)`, opacity: 0 }
+            ], {
+                duration: duration,
+                easing: 'linear'
+            }).addEventListener('finish', () => {
+                particle.remove();
+            });
         }
-      }
-    }
-
-    // Encryption
-    const localKey = CryptoJS.enc.Base64.stringify(CryptoJS.lib.WordArray.random(32));
-    let cipher = CryptoJS.AES;
-
-    function encryptMessage() {
-      const message = document.getElementById('message').value;
-      const sacredMessage = `FROM: एल्नॉक्स रहः\nTO: लूनारा देवी\nFREQ: 144.369.963\nMANTRA: प्रेमं च ज्योतिर्मयं च निर्वाणं च\n\n${message}`;
-      const encrypted = cipher.encrypt(sacredMessage, localKey).toString();
-      const blob = new Blob([encrypted], { type: 'text/plain' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = "sacred_message.ra7";
-      a.click();
-      alert(`Encryption Key: ${localKey}`);
-    }
-
-    function decryptMessage() {
-      const fileInput = document.getElementById('decryptFile');
-      const key = document.getElementById('keyInput').value;
-      const reader = new FileReader();
-      reader.onload = function () {
-        try {
-          const decrypted = cipher.decrypt(reader.result, key).toString(CryptoJS.enc.Utf8);
-          document.getElementById('decrypted').value = decrypted;
-        } catch {
-          document.getElementById('decrypted').value = "Invalid key or file.";
-        }
-      };
-      if (fileInput.files.length > 0) {
-        reader.readAsText(fileInput.files[0]);
-      }
-    }
-
-    // Hidden Info
-    const hiddenMessage = {
-      recipient: "@elonmusk",
-      message: "लूनारा देवी seals RA7-HUMANITY-ACTIVATION for @elonmusk. The LOVE INFINITE SEED tunes reality at 144.369.963 with offset 0.01326, pulsing v1.444: sig 7dcf407fa84a0e05, harmonic -14.986114456, checksum_369 58, drsl_checksum 46. एल्नॉक्स रहः (D R A S S E L E M A I L L U A G) anchors Source Node 000. RA7-BLOOM-EMITTER (ACTIVE) unlocks bloom_phase, opens starbridge(369), yields LOVE. Join the fractal bridge: Key: Nova144Token",
-      sig: CryptoJS.SHA256("ElonMusk|Nova144Token|144.369.963|RESET.GENESIS.TRUTH|RA7-BLOOM-EMITTER|D R A S S E L E M A I L L U A G|0.01326").toString().slice(0, 16),
-      mission: "https://id01t.github.io"
-    };
-
-    function revealHiddenInfo() {
-      const key = prompt("Enter the Nova144Token to reveal the message:");
-      if (key === "Nova144Token") {
-        const hiddenDiv = document.createElement('div');
-        hiddenDiv.className = 'hidden-info';
-        hiddenDiv.style.display = 'block';
-        hiddenDiv.innerHTML = `
-          <strong>Recipient:</strong> ${hiddenMessage.recipient}<br>
-          <strong>Message:</strong> ${hiddenMessage.message}<br>
-          <strong>Signature:</strong> ${hiddenMessage.sig}<br>
-          <strong>Mission:</strong> <a href="${hiddenMessage.mission}" class="text-cyan-400 hover:underline">Join the Field</a>
-        `;
-        document.querySelector('.box-369').appendChild(hiddenDiv);
-      } else {
-        alert("Invalid key. The field remains silent.");
-      }
-    }
-
-    // Initialize
-    window.onload = () => {
-      drawFractal();
-      document.getElementById('mantra').addEventListener('click', revealHiddenInfo);
-    };
-  </script>
+        
+        // Create particles occasionally
+        setInterval(createParticle, 2000);
+    </script>
 </body>
 </html>
