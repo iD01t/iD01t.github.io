@@ -1,237 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title>Doom-2-like in 1 file</title>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<style>
-  html,body{margin:0;height:100%;background:#000;color:#0f0;font-family:monospace;cursor:none}
-  #screen{width:100%;height:100%;display:block;image-rendering:pixelated}
-  #hud{position:fixed;bottom:0;left:0;right:0;height:64px;background:#0008;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:20px}
-  #weapon{height:128px;position:fixed;bottom:0;right:16px;image-rendering:pixelated}
-</style>
-<link rel="manifest" href="data:application/json,{"name":"DOOM-2-like","short_name":"DOOM2","display":"fullscreen","background_color":"#000","theme_color":"#0f0"}"/>
+  <meta charset="UTF-8" />
+  <title>KIMI K2: Agentic Intelligence Guide – $39.99</title>
+  <meta name="description" content="244 pages, 100+ code examples, 20 prompts. Master autonomous AI deployment & monetization with Kimi K2."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:title" content="KIMI K2 Guide – $39.99" />
+  <meta property="og:description" content="Unlock the ultimate agentic AI playbook for just $39.99." />
+  <meta property="og:image" content="https://storage.ko-fi.com/cdn/useruploads/display/e4d9b070-1016-40bd-a642-8ef3b117c24e_1000001857.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0a;--card:#111;--text:#f5f5f5;--cyan:#00d4ff;--teal:#00ffc8;--radius:10px;--max:800px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    img{max-width:100%;border-radius:var(--radius)}
+    .btn{display:inline-block;padding:14px 40px;font-weight:700;background:linear-gradient(135deg,var(--cyan),var(--teal));color:#000;border-radius:var(--radius);transition:.3s}
+    .btn:hover{transform:translateY(-2px)}
+    .container{width:92%;max-width:var(--max);margin:auto}
+    header{text-align:center;padding:30px 0}
+    header h1{font-size:2.4rem;color:var(--cyan)}
+    .hero{display:flex;flex-direction:column;align-items:center;gap:30px;padding:60px 0;text-align:center}
+    .hero img{max-width:260px;box-shadow:0 0 25px rgba(0,212,255,.4)}
+    .hero h2{font-size:2.2rem;font-weight:700;margin-bottom:10px}
+    .hero p{color:#ccc;margin-bottom:25px}
+    .features{display:grid;gap:25px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:50px 0}
+    .card{background:var(--card);border:1px solid #222;border-radius:var(--radius);padding:25px;text-align:center}
+    .card h3{margin:15px 0 8px;font-size:1.2rem;color:var(--cyan)}
+    .author{background:var(--card);border-radius:var(--radius);padding:30px;margin:50px 0}
+    .author h3{color:var(--teal);margin-bottom:15px}
+    .contact{background:var(--card);border-radius:var(--radius);padding:30px;margin:50px 0;text-align:center}
+    .contact input,.contact textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #333;border-radius:var(--radius);background:#0a0a0a;color:var(--text)}
+    .contact input:focus,.contact textarea:focus{outline:none;border-color:var(--cyan)}
+    footer{background:#060606;color:#555;text-align:center;padding:20px 0;font-size:.85rem}
+    @media(min-width:768px){.hero{flex-direction:row;text-align:left}}
+  </style>
 </head>
 <body>
-<canvas id="screen"></canvas>
-<div id="hud">
-  <span id="ammo">--/--</span>
-  <span id="health">100</span>
-  <span id="armor">0</span>
-  <span id="keys">🔴🟡🔵</span>
-</div>
-<img id="weapon" style="display:none"/>
+  <header>
+    <h1>KIMI K2: Agentic Intelligence Guide</h1>
+  </header>
 
-<script type="module">
-/*****************************************************************************************
- *  DOOM-2-LIKE SINGLE-FILE ENGINE
- *  (c) 2025 — public domain / CC0
- *****************************************************************************************/
+  <section class="hero container">
+    <img src="https://storage.ko-fi.com/cdn/useruploads/display/e4d9b070-1016-40bd-a642-8ef3b117c24e_1000001857.jpg" alt="KIMI K2 eBook Cover">
+    <div>
+      <h2>⚡ Unlock the Power of Autonomous AI</h2>
+      <p>KIMI K2 is not just another AI model. It’s a full agentic system capable of reasoning, coding, creating, and executing tasks with autonomy.</p>
+      <p><strong>244 pages • 100+ code examples • 20 high-impact prompts • proven monetization blueprints</strong></p>
+      <a href="https://ko-fi.com/s/234c7b8517" target="_blank" class="btn">Get It Now – $39.99</a>
+    </div>
+  </section>
 
-/* ---------- CONFIG ---------- */
-const W = 960, H = 540;
-const cvs = document.getElementById('screen'); cvs.width = W; cvs.height = H;
-const ctx = cvs.getContext('2d');
-ctx.imageSmoothingEnabled = false;
-const imgData = ctx.createImageData(W, H);
-const buf = new Uint32Array(imgData.data.buffer);
-const MAP_W = 32, MAP_H = 32, TEX_SZ = 64;
-const FOV = Math.PI/3;
+  <section class="features container">
+    <div class="card">
+      <h3>100+ Copy-Paste Code Snippets</h3>
+      <p>Python, JavaScript & Docker examples ready for immediate deployment.</p>
+    </div>
+    <div class="card">
+      <h3>20 High-Impact Prompts</h3>
+      <p>Drive autonomous workflows and scale faster.</p>
+    </div>
+    <div class="card">
+      <h3>5 Real Case Studies</h3>
+      <p>Full breakdowns from idea to profit.</p>
+    </div>
+  </section>
 
-/* ---------- INPUT ---------- */
-const keys={}; onkeydown=e=>keys[e.code]=1; onkeyup=e=>keys[e.code]=0;
-let mouseX=0; onmousemove=e=>{mouseX=e.movementX||0;};
+  <section class="author container">
+    <h3>About Guillaume Lessard</h3>
+    <p>Canadian developer, author & founder of <strong>iD01t Productions</strong> with 20+ years building monetizable AI systems. This guide distills thousands of hours of Kimi K2 experimentation into a 244-page blueprint for creators, freelancers, and entrepreneurs ready to automate, scale, and profit.</p>
+  </section>
 
-/* ---------- TEXTURES (procedural) ---------- */
-const texture = (r,g,b)=>{ const t=new Uint32Array(TEX_SZ*TEX_SZ); for(let i=0;i<TEX_SZ*TEX_SZ;i++)t[i]=(r<<24)|(g<<16)|(b<<8)|255; return t; };
-const textures = [
-  texture(128,128,128),  // 0 wall
-  texture(255,  0,  0),  // 1 door
-  texture(  0,255,  0),  // 2 lift
-  texture(  0,  0,255),  // 3 water
-  texture(255,255,255),  // 4 muzzle
-  texture( 50, 50, 50),  // 5 floor
-  texture(  0,  0,  0)   // 6 ceil
-];
-const spriteTex = {
-  10:texture(255,255,0), // zombie
-  11:texture(255,100,0), // shotgunner
-  12:texture(0,255,255), // imp
-  13:texture(255,0,255), // demon
-  14:texture(255,255,255), // caco
-  15:texture(255,0,0)   // cyberdemon
-};
+  <section class="contact container">
+    <h3>Contact the Author</h3>
+    <form action="https://formspree.io/f/mjkoygdy" method="POST">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
 
-/* ---------- MAP ---------- */
-const map = [
- "###############################",
- "#....#.............#....#.....#",
- "#..##.############.##...#.##..#",
- "#......#####......##......#...#",
- "###.###......#######.#####.##.#",
- "#...#..............#.....#....#",
- "#.#.###########.###.#####.####",
- "#.#.....#.......#...#.........#",
- "#.#####.#######.###.##########",
- "#.....#.#.....#.#.#.#.........#",
- "####.###.#####.#.#.###.#####.#",
- "#.............#.....#.........#",
- "############.#######.########.#",
- "#....#......#.........#.......#",
- "#.##.######.#########.#.######",
- "#.............................#",
- "###.########################.##",
- "#.............................#",
- "#.##########################.##",
- "#.............................#",
- "###############################"
-];
-let level = [];
-for(let y=0;y<MAP_H;y++){
-  level[y]=[];
-  for(let x=0;x<MAP_W;x++){
-    const ch = map[y][x];
-    level[y][x] = ch==='#'?0:(ch==='.'?-1:parseInt(ch));
-  }
-}
-
-/* ---------- PLAYER ---------- */
-const player = {x:2.5,y:2.5,ang:0,pitch:0,health:100,armor:0,keys:0,weap:1,ammo:[0,50,24,200,5]};
-const weapons = ['fist','pistol','shotgun','chaingun','rocket'];
-const enemies = [];
-function spawnEnemies(){
-  for(let y=0;y<MAP_H;y++)
-    for(let x=0;x<MAP_W;x++)
-      if(Math.random()<0.02){
-        enemies.push({type:10+Math.floor(Math.random()*6),x:x+0.5,y:y+0.5,hp:20,state:0});
-      }
-}
-spawnEnemies();
-
-/* ---------- DOORS & LIFTS ---------- */
-const doors = [];
-const lifts = [];
-
-/* ---------- RAY-CASTER ---------- */
-const ZBUF = new Float32Array(W);
-function castRays(){
-  ZBUF.fill(Infinity);
-  const sinA=Math.sin(player.ang), cosA=Math.cos(player.ang);
-  for(let i=0;i<W;i++){
-    const rayAng = player.ang - FOV/2 + i*FOV/W;
-    const sinR=Math.sin(rayAng), cosR=Math.cos(rayAng);
-    let dist=0, hitSide=0, texX=0, tex=0;
-    // DDA
-    let mapX=Math.floor(player.x), mapY=Math.floor(player.y);
-    let deltaDistX=Math.abs(1/cosR), deltaDistY=Math.abs(1/sinR);
-    let stepX, stepY, sideDistX, sideDistY;
-    if(cosR<0){stepX=-1;sideDistX=(player.x-mapX)*deltaDistX;}else{stepX=1;sideDistX=(mapX+1-player.x)*deltaDistX;}
-    if(sinR<0){stepY=-1;sideDistY=(player.y-mapY)*deltaDistY;}else{stepY=1;sideDistY=(mapY+1-player.y)*deltaDistY;}
-    while(1){
-      if(sideDistX<sideDistY){sideDistX+=deltaDistX;mapX+=stepX;hitSide=0;}
-      else{sideDistY+=deltaDistY;mapY+=stepY;hitSide=1;}
-      const cell = level[mapY][mapX];
-      if(cell>=0){dist=(hitSide===0)?(mapX-player.x+(1-stepX)/2)/cosR:(mapY-player.y+(1-stepY)/2)/sinR;tex=cell;break;}
-    }
-    ZBUF[i]=dist;
-    // wall slice
-    const lineH = (TEX_SZ*H)/dist;
-    const drawStart = Math.max(0, -lineH/2 + H/2 + player.pitch);
-    const drawEnd   = Math.min(H, lineH/2 + H/2 + player.pitch);
-    texX = (hitSide===0 ? player.y+dist*sinR : player.x+dist*cosR)*TEX_SZ%TEX_SZ|0;
-    const texStep = TEX_SZ/lineH;
-    let texPos = (drawStart - (H/2+player.pitch) + lineH/2)*texStep;
-    for(let y=drawStart;y<drawEnd;y++){
-      const texY = texPos|0;
-      buf[y*W+i] = textures[tex][texY*TEX_SZ+texX];
-      texPos += texStep;
-    }
-    // floor/ceiling
-    for(let y=0;y<drawStart;y++) buf[y*W+i]=0xff000000;
-    for(let y=drawEnd;y<H;y++) buf[y*W+i]=0xff303030;
-  }
-}
-
-/* ---------- SPRITES ---------- */
-function drawSprites(){
-  // sort by distance
-  const sorted = enemies.slice().sort((a,b)=>{
-    const da=(player.x-a.x)**2+(player.y-a.y)**2;
-    const db=(player.x-b.x)**2+(player.y-b.y)**2;
-    return db-da;
-  });
-  sorted.forEach(e=>{
-    const dx=e.x-player.x, dy=e.y-player.y;
-    const dist=Math.sqrt(dx*dx+dy*dy);
-    const angle=Math.atan2(dy,dx)-player.ang;
-    const size=(TEX_SZ*H)/dist;
-    const x=W/2+Math.tan(angle)*(W/2);
-    const y=H/2;
-    if(x>-size && x<W+size){
-      ctx.fillStyle=`hsl(${(e.type*60)%360},100%,50%)`;
-      ctx.fillRect(x-size/2, y-size/2, size, size);
-    }
-  });
-}
-
-/* ---------- WEAPON/SHOOT ---------- */
-let fireRate=0;
-function shoot(){
-  if(fireRate>0) return;
-  const w=player.weap;
-  if(player.ammo[w]<=0)return;
-  player.ammo[w]--;
-  fireRate=weap==4?30:weap==3?2:weap==2?20:weap==1?10:5;
-  // hit scan
-  const ang=player.ang;
-  enemies.forEach((e,i)=>{
-    const dx=e.x-player.x, dy=e.y-player.y;
-    const dist=Math.sqrt(dx*dx+dy*dy);
-    const angle=Math.atan2(dy,dx)-ang;
-    if(Math.abs(angle)<0.05 && dist<10){
-      e.hp-=w*10;
-      if(e.hp<=0) enemies.splice(i,1);
-    }
-  });
-}
-
-/* ---------- HUD ---------- */
-function drawHud(){
-  document.getElementById('health').textContent=player.health;
-  document.getElementById('armor').textContent=player.armor;
-  document.getElementById('ammo').textContent=`${player.ammo[player.weap]}/${weapons[player.weap]}`;
-}
-
-/* ---------- INPUT ---------- */
-function input(){
-  const spd=keys['ShiftLeft']?0.15:0.08;
-  const sin=Math.sin(player.ang), cos=Math.cos(player.ang);
-  if(keys['KeyW']){player.x+=cos*spd;player.y+=sin*spd;}
-  if(keys['KeyS']){player.x-=cos*spd;player.y-=sin*spd;}
-  if(keys['KeyA']){player.x+=sin*spd;player.y-=cos*spd;}
-  if(keys['KeyD']){player.x-=sin*spd;player.y+=cos*spd;}
-  player.ang+=mouseX*0.002;
-  if(keys['Space']) shoot();
-  mouseX=0;
-}
-
-/* ---------- MAIN LOOP ---------- */
-function frame(){
-  input();
-  castRays();
-  drawSprites();
-  ctx.putImageData(imgData,0,0);
-  drawHud();
-  if(fireRate>0)fireRate--;
-  requestAnimationFrame(frame);
-}
-requestAnimationFrame(frame);
-
-/* ---------- SERVICE WORKER (inline) ---------- */
-navigator.serviceWorker?.register(URL.createObjectURL(new Blob([`
-self.oninstall=e=>e.waitUntil(caches.open('doom').then(c=>c.addAll(['./'])));
-self.onfetch=e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));
-`],{type:'application/javascript'})));
-</script>
+  <footer>
+    © 2025 Guillaume Lessard • iD01t Productions • Quebec, Canada
+  </footer>
 </body>
 </html>
