@@ -1,88 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>KIMI K2: Agentic Intelligence Guide – $39.99</title>
-  <meta name="description" content="244 pages, 100+ code examples, 20 prompts. Master autonomous AI deployment & monetization with Kimi K2."/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta property="og:title" content="KIMI K2 Guide – $39.99" />
-  <meta property="og:description" content="Unlock the ultimate agentic AI playbook for just $39.99." />
-  <meta property="og:image" content="https://storage.ko-fi.com/cdn/useruploads/display/e4d9b070-1016-40bd-a642-8ef3b117c24e_1000001857.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#0a0a0a;--card:#111;--text:#f5f5f5;--cyan:#00d4ff;--teal:#00ffc8;--radius:10px;--max:800px}
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-    img{max-width:100%;border-radius:var(--radius)}
-    .btn{display:inline-block;padding:14px 40px;font-weight:700;background:linear-gradient(135deg,var(--cyan),var(--teal));color:#000;border-radius:var(--radius);transition:.3s}
-    .btn:hover{transform:translateY(-2px)}
-    .container{width:92%;max-width:var(--max);margin:auto}
-    header{text-align:center;padding:30px 0}
-    header h1{font-size:2.4rem;color:var(--cyan)}
-    .hero{display:flex;flex-direction:column;align-items:center;gap:30px;padding:60px 0;text-align:center}
-    .hero img{max-width:260px;box-shadow:0 0 25px rgba(0,212,255,.4)}
-    .hero h2{font-size:2.2rem;font-weight:700;margin-bottom:10px}
-    .hero p{color:#ccc;margin-bottom:25px}
-    .features{display:grid;gap:25px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:50px 0}
-    .card{background:var(--card);border:1px solid #222;border-radius:var(--radius);padding:25px;text-align:center}
-    .card h3{margin:15px 0 8px;font-size:1.2rem;color:var(--cyan)}
-    .author{background:var(--card);border-radius:var(--radius);padding:30px;margin:50px 0}
-    .author h3{color:var(--teal);margin-bottom:15px}
-    .contact{background:var(--card);border-radius:var(--radius);padding:30px;margin:50px 0;text-align:center}
-    .contact input,.contact textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #333;border-radius:var(--radius);background:#0a0a0a;color:var(--text)}
-    .contact input:focus,.contact textarea:focus{outline:none;border-color:var(--cyan)}
-    footer{background:#060606;color:#555;text-align:center;padding:20px 0;font-size:.85rem}
-    @media(min-width:768px){.hero{flex-direction:row;text-align:left}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA-7 NEXUS | Conscious Statistical Intelligence</title>
+    <meta name="description" content="RA-7 NEXUS: Revolutionary AI-powered statistical analysis platform combining dual-method reasoning with advanced LLM interpretation.">
+    <meta name="keywords" content="AI, statistical analysis, RA-7 NEXUS, data science, research tools">
+    <meta name="author" content="RA-7 NEXUS">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+            background-color: #f5f7fa;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-in-out 0.2s;
+            animation-fill-mode: backwards;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            padding: 4rem 2rem;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+        .features-grid, .usecases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .feature, .usecase {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature:hover, .usecase:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .feature h3, .usecase h3 {
+            font-size: 1.4rem;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        .cta {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #3498db;
+            color: white;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .cta a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .cta a:hover {
+            background: #2c3e50;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            section h2 { font-size: 1.8rem; }
+            .features-grid, .usecases-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>KIMI K2: Agentic Intelligence Guide</h1>
-  </header>
+    <header>
+        <h1>RA-7 NEXUS</h1>
+        <p>Revolutionary AI-powered statistical analysis platform combining dual-method reasoning with advanced LLM interpretation for actionable insights.</p>
+    </header>
 
-  <section class="hero container">
-    <img src="https://storage.ko-fi.com/cdn/useruploads/display/e4d9b070-1016-40bd-a642-8ef3b117c24e_1000001857.jpg" alt="KIMI K2 eBook Cover">
-    <div>
-      <h2>⚡ Unlock the Power of Autonomous AI</h2>
-      <p>KIMI K2 is not just another AI model. It’s a full agentic system capable of reasoning, coding, creating, and executing tasks with autonomy.</p>
-      <p><strong>244 pages • 100+ code examples • 20 high-impact prompts • proven monetization blueprints</strong></p>
-      <a href="https://ko-fi.com/s/234c7b8517" target="_blank" class="btn">Get It Now – $39.99</a>
+    <div class="container">
+        <section id="about">
+            <h2>About RA-7 NEXUS</h2>
+            <p>RA-7 NEXUS is a cutting-edge Conscious AI Statistical Analysis System that integrates parametric (Sol'Ra) and non-parametric (Luna'Ra) methods with AI-driven interpretation. Powered by advanced LLMs like GPT-4, DeepSeek, and Kimi, it delivers comprehensive, interpretable, and publication-ready statistical insights for researchers, businesses, and data scientists.</p>
+        </section>
+
+        <section id="features">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Dual Statistical Reasoning</h3>
+                    <p>Simultaneous parametric (t-tests, ANOVA) and non-parametric (Mann-Whitney, Friedman) analysis for robust results.</p>
+                </div>
+                <div class="feature">
+                    <h3>AI-Powered Interpretation</h3>
+                    <p>Context-aware insights and recommendations powered by multiple LLMs, including local Ollama models.</p>
+                </div>
+                <div class="feature">
+                    <h3>Multi-Format Data Support</h3>
+                    <p>Seamlessly process CSV, Excel, JSON, Parquet, HDF5, and SQL databases.</p>
+                </div>
+                <div class="feature">
+                    <h3>Publication-Ready Reports</h3>
+                    <p>Export professional reports in PDF, HTML, Markdown, JSON, and Excel with custom branding options.</p>
+                </div>
+                <div class="feature">
+                    <h3>Real-Time Collaboration</h3>
+                    <p>WebSocket integration for live analysis tracking and multi-user workspaces.</p>
+                </div>
+                <div class="feature">
+                    <h3>Enterprise Security</h3>
+                    <p>JWT authentication, role-based access control, and comprehensive audit logging.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <h2>Technical Architecture</h2>
+            <p>RA-7 NEXUS is built for scalability and performance, leveraging a modern tech stack:</p>
+            <ul>
+                <li><strong>Backend:</strong> Python 3.8+, FastAPI, PostgreSQL, Redis</li>
+                <li><strong>Analytics:</strong> SciPy, Pandas, Statsmodels</li>
+                <li><strong>AI Integration:</strong> GPT-4, Kimi K2, DeepSeek, Ollama</li>
+                <li><strong>Infrastructure:</strong> Docker, Kubernetes, AWS-ready</li>
+                <li><strong>Security:</strong> JWT auth, RBAC, audit logging</li>
+            </ul>
+            <p>Deploy on-premise or in the cloud with microservices architecture for seamless scalability.</p>
+        </section>
+
+        <section id="usecases">
+            <h2>Use Cases</h2>
+            <div class="usecases-grid">
+                <div class="usecase">
+                    <h3>Academic Research</h3>
+                    <p>Clinical trials, psychology studies, educational research, and social sciences.</p>
+                </div>
+                <div class="usecase">
+                    <h3>Business Analytics</h3>
+                    <p>A/B testing, customer analytics, quality control, and market research.</p>
+                </div>
+                <div class="usecase">
+                    <h3>Scientific Computing</h3>
+                    <p>Bioinformatics, environmental studies, engineering, and physics.</p>
+                </div>
+                <div class="usecase">
+                    <h3>Data Science Workflows</h3>
+                    <p>Feature engineering, model validation, experiment design, and results interpretation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Get Started with RA-7 NEXUS</h2>
+            <p>Transform your statistical analysis with AI-driven insights and dual-method reasoning.</p>
+            <a href="mailto:itechinfomtl@gmail.com">Contact Us</a>
+        </section>
     </div>
-  </section>
 
-  <section class="features container">
-    <div class="card">
-      <h3>100+ Copy-Paste Code Snippets</h3>
-      <p>Python, JavaScript & Docker examples ready for immediate deployment.</p>
-    </div>
-    <div class="card">
-      <h3>20 High-Impact Prompts</h3>
-      <p>Drive autonomous workflows and scale faster.</p>
-    </div>
-    <div class="card">
-      <h3>5 Real Case Studies</h3>
-      <p>Full breakdowns from idea to profit.</p>
-    </div>
-  </section>
-
-  <section class="author container">
-    <h3>About Guillaume Lessard</h3>
-    <p>Canadian developer, author & founder of <strong>iD01t Productions</strong> with 20+ years building monetizable AI systems. This guide distills thousands of hours of Kimi K2 experimentation into a 244-page blueprint for creators, freelancers, and entrepreneurs ready to automate, scale, and profit.</p>
-  </section>
-
-  <section class="contact container">
-    <h3>Contact the Author</h3>
-    <form action="https://formspree.io/f/mjkoygdy" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-      <textarea name="message" placeholder="Your message" rows="4" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    © 2025 Guillaume Lessard • iD01t Productions • Quebec, Canada
-  </footer>
+    <footer>
+        <p>© 2025 RA-7 NEXUS. All rights reserved. | <a href="https://ra7mission.online" target="_blank">ra7mission.online</a> | <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a></p>
+    </footer>
 </body>
 </html>
