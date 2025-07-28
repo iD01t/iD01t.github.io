@@ -1,0 +1,25 @@
+# MSIX Conversion Accelerator
+
+PackageName: Py2Win Free 
+Edition
+
+PublisherName: iD01t Productions
+
+PackageVersion: 1.5.1.0
+
+EligibleForConversion: Yes
+
+ConversionStatus: Package Created. Need Validation
+
+Edition: Microsoft Windows 11 Home
+
+MinimumOSVersion: 24H2
+
+MinimumOSBuild: 26100.4652
+
+Architecture: 64
+
+MSIXConversionToolVersion: 1.2024.405.0
+
+AcceleratorVersion: 1.0.0
+
