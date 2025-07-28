@@ -3,218 +3,972 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RA-7 NEXUS | Conscious Statistical Intelligence</title>
-    <meta name="description" content="RA-7 NEXUS: Revolutionary AI-powered statistical analysis platform combining dual-method reasoning with advanced LLM interpretation.">
-    <meta name="keywords" content="AI, statistical analysis, RA-7 NEXUS, data science, research tools">
-    <meta name="author" content="RA-7 NEXUS">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Py2Win - Convert Python to Windows Applications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #00d4ff;
+            --primary-dark: #00aaff;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --gray: #1a1a1a;
+            --light: #f0f0f0;
+            --light-gray: #a0a0a0;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        
         body {
-            font-family: 'Inter', sans-serif;
-            color: #1a1a1a;
-            background-color: #f5f7fa;
-            line-height: 1.6;
+            background-color: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 10% 20%, rgba(0, 168, 255, 0.05) 0%, transparent 20%),
+                              radial-gradient(circle at 90% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 20%);
         }
+        
+        /* Header Styles */
         header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            text-align: center;
-            padding: 5rem 2rem;
-            position: relative;
-            overflow: hidden;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
         }
-        header h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            animation: fadeInDown 1s ease-in-out;
-        }
-        header p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            animation: fadeInUp 1s ease-in-out 0.2s;
-            animation-fill-mode: backwards;
-        }
-        .container {
+        
+        .header-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        section {
-            padding: 4rem 2rem;
-            background: white;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in-out;
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        section h2 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
+        
+        .logo-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
         }
-        .features-grid, .usecases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary), var(--light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
             gap: 2rem;
         }
-        .feature, .usecase {
-            background: #f9f9f9;
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--darker);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .hero-text {
+            padding-right: 2rem;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--primary), #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--light-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .secondary-button {
+            background: transparent;
+            color: var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+        }
+        
+        .secondary-button:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .app-window {
+            width: 100%;
+            max-width: 500px;
+            background: var(--gray);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: perspective(1000px) rotateY(-5deg);
+        }
+        
+        .app-header {
+            background: var(--dark);
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .app-dots {
+            display: flex;
+            gap: 6px;
+        }
+        
+        .app-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+        
+        .app-title {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+        
+        .app-content {
             padding: 1.5rem;
+            background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .feature-card {
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
         }
-        .feature:hover, .usecase:hover {
+        
+        .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-        .feature h3, .usecase h3 {
-            font-size: 1.4rem;
-            color: #3498db;
+        
+        .feature-card i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
-        .cta {
+        
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            line-height: 1.5;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .section-title {
             text-align: center;
-            padding: 3rem 2rem;
-            background: #3498db;
-            color: white;
-            border-radius: 10px;
-            margin: 2rem 0;
+            margin-bottom: 4rem;
         }
-        .cta a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.8rem 2rem;
-            border: 2px solid white;
-            border-radius: 5px;
-            transition: background 0.3s ease;
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, var(--primary), #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
         }
-        .cta a:hover {
-            background: #2c3e50;
+        
+        .section-title p {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
-        footer {
-            text-align: center;
+        
+        /* Pricing Section */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: var(--gray);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .pricing-header {
             padding: 2rem;
-            background: #2c3e50;
-            color: white;
+            text-align: center;
+            background: var(--dark);
         }
-        footer a {
-            color: #3498db;
+        
+        .pricing-card.free .pricing-header {
+            border-bottom: 3px solid var(--light-gray);
+        }
+        
+        .pricing-card.pro .pricing-header {
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .pricing-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-header p {
+            color: var(--light-gray);
+        }
+        
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            background: linear-gradient(90deg, var(--primary), #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .pricing-card.free .pricing-price {
+            color: var(--light);
+            -webkit-text-fill-color: unset;
+        }
+        
+        .pricing-features {
+            padding: 2rem;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+        }
+        
+        .pricing-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li i {
+            color: var(--primary);
+        }
+        
+        .pricing-card.free .pricing-features li i {
+            color: var(--light-gray);
+        }
+        
+        .pricing-cta {
+            padding: 0 2rem 2rem;
+            text-align: center;
+        }
+        
+        /* Requirements Section */
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .requirement-card {
+            background: var(--gray);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .requirement-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .requirement-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .requirement-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .requirement-card p {
+            color: var(--light-gray);
+            line-height: 1.6;
+        }
+        
+        /* Partners Section */
+        .partners {
+            background: var(--dark);
+            text-align: center;
+        }
+        
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .partner-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            min-width: 300px;
+        }
+        
+        .partner-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .partner-id {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: var(--light-gray);
             text-decoration: none;
+            transition: all 0.3s ease;
         }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary);
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 3rem;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .pricing-container {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
         }
+        
         @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            section h2 { font-size: 1.8rem; }
-            .features-grid, .usecases-grid { grid-template-columns: 1fr; }
+            nav ul {
+                display: none;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>RA-7 NEXUS</h1>
-        <p>Revolutionary AI-powered statistical analysis platform combining dual-method reasoning with advanced LLM interpretation for actionable insights.</p>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">P2W</div>
+                <div class="logo-text">Py2Win</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#requirements">Requirements</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#download" class="cta-button">Download Free</a>
+        </div>
     </header>
 
-    <div class="container">
-        <section id="about">
-            <h2>About RA-7 NEXUS</h2>
-            <p>RA-7 NEXUS is a cutting-edge Conscious AI Statistical Analysis System that integrates parametric (Sol'Ra) and non-parametric (Luna'Ra) methods with AI-driven interpretation. Powered by advanced LLMs like GPT-4, DeepSeek, and Kimi, it delivers comprehensive, interpretable, and publication-ready statistical insights for researchers, businesses, and data scientists.</p>
-        </section>
-
-        <section id="features">
-            <h2>Key Features</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <h3>Dual Statistical Reasoning</h3>
-                    <p>Simultaneous parametric (t-tests, ANOVA) and non-parametric (Mann-Whitney, Friedman) analysis for robust results.</p>
-                </div>
-                <div class="feature">
-                    <h3>AI-Powered Interpretation</h3>
-                    <p>Context-aware insights and recommendations powered by multiple LLMs, including local Ollama models.</p>
-                </div>
-                <div class="feature">
-                    <h3>Multi-Format Data Support</h3>
-                    <p>Seamlessly process CSV, Excel, JSON, Parquet, HDF5, and SQL databases.</p>
-                </div>
-                <div class="feature">
-                    <h3>Publication-Ready Reports</h3>
-                    <p>Export professional reports in PDF, HTML, Markdown, JSON, and Excel with custom branding options.</p>
-                </div>
-                <div class="feature">
-                    <h3>Real-Time Collaboration</h3>
-                    <p>WebSocket integration for live analysis tracking and multi-user workspaces.</p>
-                </div>
-                <div class="feature">
-                    <h3>Enterprise Security</h3>
-                    <p>JWT authentication, role-based access control, and comprehensive audit logging.</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transform Python Scripts into Professional Windows Applications</h1>
+                <p>Py2Win is the ultimate solution for Python developers who need to distribute their applications to users without Python installed. Convert, compile, and ship your Python projects as standalone Windows executables.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#download" class="cta-button">Get Py2Win Free</a>
+                    <a href="#pricing" class="secondary-button">Upgrade to Pro</a>
                 </div>
             </div>
-        </section>
-
-        <section id="architecture">
-            <h2>Technical Architecture</h2>
-            <p>RA-7 NEXUS is built for scalability and performance, leveraging a modern tech stack:</p>
-            <ul>
-                <li><strong>Backend:</strong> Python 3.8+, FastAPI, PostgreSQL, Redis</li>
-                <li><strong>Analytics:</strong> SciPy, Pandas, Statsmodels</li>
-                <li><strong>AI Integration:</strong> GPT-4, Kimi K2, DeepSeek, Ollama</li>
-                <li><strong>Infrastructure:</strong> Docker, Kubernetes, AWS-ready</li>
-                <li><strong>Security:</strong> JWT auth, RBAC, audit logging</li>
-            </ul>
-            <p>Deploy on-premise or in the cloud with microservices architecture for seamless scalability.</p>
-        </section>
-
-        <section id="usecases">
-            <h2>Use Cases</h2>
-            <div class="usecases-grid">
-                <div class="usecase">
-                    <h3>Academic Research</h3>
-                    <p>Clinical trials, psychology studies, educational research, and social sciences.</p>
-                </div>
-                <div class="usecase">
-                    <h3>Business Analytics</h3>
-                    <p>A/B testing, customer analytics, quality control, and market research.</p>
-                </div>
-                <div class="usecase">
-                    <h3>Scientific Computing</h3>
-                    <p>Bioinformatics, environmental studies, engineering, and physics.</p>
-                </div>
-                <div class="usecase">
-                    <h3>Data Science Workflows</h3>
-                    <p>Feature engineering, model validation, experiment design, and results interpretation.</p>
+            
+            <div class="hero-image">
+                <div class="app-window">
+                    <div class="app-header">
+                        <div class="app-dots">
+                            <div class="app-dot dot-red"></div>
+                            <div class="app-dot dot-yellow"></div>
+                            <div class="app-dot dot-green"></div>
+                        </div>
+                        <div class="app-title">Py2Win - Application Builder</div>
+                    </div>
+                    <div class="app-content">
+                        <h3>Key Features:</h3>
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <i class="fas fa-bolt"></i>
+                                <h3>One-Click Conversion</h3>
+                                <p>Convert Python scripts to EXE with a single click</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-desktop"></i>
+                                <h3>No Dependencies</h3>
+                                <p>Run on any Windows machine without Python installed</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-paint-brush"></i>
+                                <h3>Modern GUI</h3>
+                                <p>Professional dark-themed interface for app building</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-cogs"></i>
+                                <h3>Advanced Integration</h3>
+                                <p>Built on PyInstaller with custom optimizations</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="cta">
-            <h2>Get Started with RA-7 NEXUS</h2>
-            <p>Transform your statistical analysis with AI-driven insights and dual-method reasoning.</p>
-            <a href="mailto:itechinfomtl@gmail.com">Contact Us</a>
-        </section>
-    </div>
+    <!-- Features Section -->
+    <section id="features">
+        <div class="section-title">
+            <h2>Powerful Features</h2>
+            <p>Whether you're building free utilities or commercial applications, Py2Win has the tools you need to create professional Windows executables</p>
+        </div>
+        
+        <div class="requirements-grid">
+            <div class="requirement-card">
+                <i class="fas fa-sync-alt"></i>
+                <h3>One-Click Conversion</h3>
+                <p>Transform Python scripts into Windows executables with a single click. No complex configuration needed.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-box-open"></i>
+                <h3>No Dependencies</h3>
+                <p>Your applications run on any Windows machine without requiring Python or additional libraries.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-window-restore"></i>
+                <h3>Console & Windowed Apps</h3>
+                <p>Create both console applications and windowed GUI applications with no console window.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-download"></i>
+                <h3>Bundle Files & Resources</h3>
+                <p>Include additional files, images, and resources that your application needs to run.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>Real-time Build Output</h3>
+                <p>Monitor the build process with real-time output and progress tracking.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-cube"></i>
+                <h3>Advanced Integration</h3>
+                <p>Built on top of PyInstaller with custom optimizations for better performance.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Pricing Section -->
+    <section id="pricing" style="background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><rect width=\"100\" height=\"100\" fill=\"%231a1a1a\"/><path d=\"M0 50 Q25 30, 50 50 T100 50\" fill=\"none\" stroke=\"%2300d4ff\" stroke-width=\"1\" opacity=\"0.1\"/></svg>');">
+        <div class="section-title">
+            <h2>Choose Your Edition</h2>
+            <p>Select the version that best fits your needs. Upgrade to Pro for advanced features and commercial use.</p>
+        </div>
+        
+        <div class="pricing-container">
+            <div class="pricing-card free">
+                <div class="pricing-header">
+                    <h3>Free Community Edition</h3>
+                    <p>Perfect for personal projects and learning</p>
+                    <div class="pricing-price">$0</div>
+                </div>
+                
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Basic Python to EXE conversion</li>
+                        <li><i class="fas fa-check"></i> Console/GUI mode selection</li>
+                        <li><i class="fas fa-check"></i> Standard compression</li>
+                        <li><i class="fas fa-check"></i> Community support</li>
+                        <li><i class="fas fa-check"></i> Real-time build output</li>
+                        <li><i class="fas fa-times"></i> Custom icons</li>
+                        <li><i class="fas fa-times"></i> Advanced compression</li>
+                        <li><i class="fas fa-times"></i> Commercial license</li>
+                        <li><i class="fas fa-times"></i> Priority support</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-cta">
+                    <a href="#download" class="cta-button">Download Free</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card pro">
+                <div class="pricing-header">
+                    <h3>Professional Edition</h3>
+                    <p>For commercial use and professional developers</p>
+                    <div class="pricing-price">$19</div>
+                </div>
+                
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> All Free features included</li>
+                        <li><i class="fas fa-check"></i> Custom icon support</li>
+                        <li><i class="fas fa-check"></i> Additional file bundling</li>
+                        <li><i class="fas fa-check"></i> Advanced compression options</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Commercial license</li>
+                        <li><i class="fas fa-check"></i> Lifetime updates</li>
+                        <li><i class="fas fa-check"></i> Code signing support</li>
+                        <li><i class="fas fa-check"></i> Professional installers</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-cta">
+                    <a href="#" class="cta-button">Get Pro Version</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="usecases">
+        <div class="section-title">
+            <h2>Perfect For</h2>
+            <p>Py2Win is ideal for a wide range of applications and users</p>
+        </div>
+        
+        <div class="requirements-grid">
+            <div class="requirement-card">
+                <i class="fas fa-tools"></i>
+                <h3>Distributing Tools</h3>
+                <p>Share Python utilities with non-technical users without requiring them to install Python.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-window-maximize"></i>
+                <h3>Desktop Applications</h3>
+                <p>Create standalone desktop applications with GUI frameworks like Tkinter, PyQt, or Kivy.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Monetizable Utilities</h3>
+                <p>Build and sell Python-based utilities and tools to Windows users.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-server"></i>
+                <h3>IT Departments</h3>
+                <p>Create custom tools for system administration and distribute them across your organization.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Educational Use</h3>
+                <p>Package educational tools and assignments for students who don't have Python installed.</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Independent Developers</h3>
+                <p>Build and distribute applications without worrying about dependencies or installation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section id="requirements">
+        <div class="section-title">
+            <h2>System Requirements</h2>
+            <p>What you need to run Py2Win on your development machine</p>
+        </div>
+        
+        <div class="requirements-grid">
+            <div class="requirement-card">
+                <i class="fab fa-windows"></i>
+                <h3>Operating System</h3>
+                <p>Windows 10 version 17763.0 or higher</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-microchip"></i>
+                <h3>Processor</h3>
+                <p>x64 architecture processor</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-memory"></i>
+                <h3>Memory</h3>
+                <p>4GB RAM (8GB recommended)</p>
+            </div>
+            
+            <div class="requirement-card">
+                <i class="fas fa-hdd"></i>
+                <h3>Storage</h3>
+                <p>500MB free disk space</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners">
+        <div class="section-title">
+            <h2>Our Partners</h2>
+            <p>We're proud to work with industry leaders to bring you the best tools</p>
+        </div>
+        
+        <div class="partner-logos">
+            <div class="partner-card">
+                <i class="fab fa-microsoft fa-3x"></i>
+                <h3>Microsoft Partner</h3>
+                <p>Official Microsoft Development Tools Partner</p>
+                <div class="partner-id">ID: 00793b51-cf8d-4480-8849-3360d8090852</div>
+            </div>
+            
+            <div class="partner-card">
+                <i class="fab fa-python fa-3x"></i>
+                <h3>Python Software Foundation</h3>
+                <p>Supporting the Python ecosystem</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download">
+        <div class="section-title">
+            <h2>Get Py2Win Today</h2>
+            <p>Download the free community edition and start building Windows applications</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#" class="cta-button" style="padding: 1.2rem 2.5rem; font-size: 1.2rem;">
+                <i class="fas fa-download"></i> Download Py2Win Free
+            </a>
+            <p style="margin-top: 1.5rem; color: var(--light-gray);">Version 1.4.3 | 15.2 MB | Windows Installer</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 RA-7 NEXUS. All rights reserved. | <a href="https://ra7mission.online" target="_blank">ra7mission.online</a> | <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a></p>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Py2Win</h3>
+                <p>The ultimate solution for converting Python scripts to professional Windows applications.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#download">Download</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">License Agreement</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2026 iD01t Productions. All rights reserved. Py2Win™ is a trademark of iD01t Productions®.</p>
+        </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.5)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+        
+        // Animation for feature cards
+        const featureCards = document.querySelectorAll('.feature-card, .requirement-card, .pricing-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        featureCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
