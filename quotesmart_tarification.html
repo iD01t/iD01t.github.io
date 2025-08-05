@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarification - QuoteSmart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #4fc3f7;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #4fc3f7;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+        }
+        
+        .pricing-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .pricing-header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .pricing-container {
+            background: white;
+            margin: 2rem 0;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card.popular {
+            border-color: #4fc3f7;
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(79, 195, 247, 0.2);
+        }
+        
+        .pricing-card.popular::before {
+            content: '⭐ LE PLUS POPULAIRE';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4fc3f7;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        
+        .plan-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .plan-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .plan-description {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        
+        .plan-price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .plan-price .currency {
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+        
+        .plan-period {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .features-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .features-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+        
+        .features-list li.unavailable {
+            color: #999;
+        }
+        
+        .features-list li.unavailable::before {
+            content: '❌';
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #4fc3f7;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #29b6f6;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #333;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .btn-secondary:hover {
+            background: #e0e0e0;
+            border-color: #ccc;
+        }
+        
+        .btn-premium {
+            background: linear-gradient(135deg, #ff6b6b, #ffa500);
+            color: white;
+        }
+        
+        .btn-premium:hover {
+            background: linear-gradient(135deg, #ff5252, #ff9800);
+            transform: translateY(-2px);
+        }
+        
+        .faq-section {
+            margin-top: 3rem;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            color: #1e3c72;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .faq-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #4fc3f7;
+        }
+        
+        .faq-item h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-item p {
+            color: #666;
+        }
+        
+        .money-back {
+            text-align: center;
+            background: #e8f5e8;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            border: 2px solid #4caf50;
+        }
+        
+        .money-back h3 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+        
+        .money-back p {
+            color: #4caf50;
+            font-weight: 500;
+        }
+        
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .pricing-container {
+                padding: 2rem 1rem;
+            }
+            
+            .pricing-card.popular {
+                transform: none;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Quote<span>Smart</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="soumission.html">Analyser</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tarification.html">Tarification</a></li>
+                        <li><a href="login.html">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="pricing-header">
+        <div class="container">
+            <h1>💰 Choisissez votre plan</h1>
+            <p>Des solutions adaptées à chaque besoin, de l'entrepreneur individuel à la grande entreprise</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="pricing-container">
+            <div class="pricing-grid">
+                <!-- Plan Gratuit -->
+                <div class="pricing-card">
+                    <div class="plan-icon">🆓</div>
+                    <div class="plan-name">Gratuit</div>
+                    <div class="plan-description">Parfait pour découvrir QuoteSmart</div>
+                    <div class="plan-price">
+                        <span class="currency">$</span>0
+                    </div>
+                    <div class="plan-period">Toujours gratuit</div>
+                    
+                    <ul class="features-list">
+                        <li>3 analyses par mois</li>
+                        <li>Extraction manuelle des données</li>
+                        <li>Dashboard basique</li>
+                        <li>Support communautaire</li>
+                        <li class="unavailable">Export PDF</li>
+                        <li class="unavailable">Analyses illimitées</li>
+                        <li class="unavailable">Support prioritaire</li>
+                    </ul>
+                    
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="itechinfomtl@gmail.com">
+                        <input type="hidden" name="item_name" value="QuoteSmart - Plan Gratuit">
+                        <input type="hidden" name="amount" value="0.00">
+                        <input type="hidden" name="currency_code" value="CAD">
+                        <button type="submit" class="btn btn-secondary">Commencer gratuitement</button>
+                    </form>
+                </div>
+
+                <!-- Plan Pro -->
+                <div class="pricing-card popular">
+                    <div class="plan-icon">⚡</div>
+                    <div class="plan-name">Pro</div>
+                    <div class="plan-description">Idéal pour les professionnels actifs</div>
+                    <div class="plan-price">
+                        <span class="currency">$</span>9<span style="font-size: 1.5rem;">.99</span>
+                    </div>
+                    <div class="plan-period">par mois</div>
+                    
+                    <ul class="features-list">
+                        <li>25 analyses par mois</li>
+                        <li>Extraction automatique IA</li>
+                        <li>Dashboard avancé avec graphiques</li>
+                        <li>Export PDF personnalisé</li>
+                        <li>Historique complet</li>
+                        <li>Support email prioritaire</li>
+                        <li>Intégrations tierces</li>
+                    </ul>
+                    
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="itechinfomtl@gmail.com">
+                        <input type="hidden" name="item_name" value="QuoteSmart Pro - Abonnement mensuel">
+                        <input type="hidden" name="amount" value="9.99">
+                        <input type="hidden" name="currency_code" value="CAD">
+                        <input type="hidden" name="return" value="https://www.votresite.com/success">
+                        <input type="hidden" name="cancel_return" value="https://www.votresite.com/cancel">
+                        <button type="submit" class="btn btn-primary">Choisir Pro</button>
+                    </form>
+                </div>
+
+                <!-- Plan Entreprise -->
+                <div class="pricing-card">
+                    <div class="plan-icon">🏢</div>
+                    <div class="plan-name">Entreprise</div>
+                    <div class="plan-description">Pour les équipes et grandes entreprises</div>
+                    <div class="plan-price">
+                        <span class="currency">$</span>49<span style="font-size: 1.5rem;">.99</span>
+                    </div>
+                    <div class="plan-period">par mois</div>
+                    
+                    <ul class="features-list">
+                        <li>Analyses illimitées</li>
+                        <li>IA avancée haute précision</li>
+                        <li>Dashboard multi-utilisateurs</li>
+                        <li>Exports personnalisés illimités</li>
+                        <li>API complète</li>
+                        <li>Support téléphonique dédié</li>
+                        <li>Formation personnalisée</li>
+                        <li>Gestion d'équipe avancée</li>
+                    </ul>
+                    
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="itechinfomtl@gmail.com">
+                        <input type="hidden" name="item_name" value="QuoteSmart Entreprise - Abonnement mensuel">
+                        <input type="hidden" name="amount" value="49.99">
+                        <input type="hidden" name="currency_code" value="CAD">
+                        <input type="hidden" name="return" value="https://www.votresite.com/success">
+                        <input type="hidden" name="cancel_return" value="https://www.votresite.com/cancel">
+                        <button type="submit" class="btn btn-premium">Choisir Entreprise</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="money-back">
+                <h3>💯 Garantie 30 jours satisfait ou remboursé</h3>
+                <p>Essayez QuoteSmart sans risque. Si vous n'êtes pas entièrement satisfait, nous remboursons intégralement votre abonnement.</p>
+            </div>
+
+            <div class="faq-section">
+                <h2>❓ Questions fréquentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Comment fonctionne l'analyse automatique ?</h3>
+                        <p>Notre IA analyse vos PDF et extrait automatiquement les informations clés : prix, matériaux, quantités, coordonnées client et délais. Plus besoin de saisie manuelle !</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Puis-je changer de plan à tout moment ?</h3>
+                        <p>Absolument ! Vous pouvez upgrader ou downgrader votre plan à tout moment depuis votre dashboard. Les changements prennent effet immédiatement.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Mes données sont-elles sécurisées ?</h3>
+                        <p>Vos documents sont traités avec un chiffrement de niveau bancaire et supprimés automatiquement après analyse. Nous ne stockons aucune donnée sensible.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Y a-t-il des frais cachés ?</h3>
+                        <p>Aucun frais caché ! Le prix affiché est le prix final. Pas de frais d'installation, de configuration ou de résiliation.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Quels formats de fichiers acceptez-vous ?</h3>
+                        <p>Nous acceptons tous les formats PDF, même les plus complexes avec images et tableaux. Taille maximum : 10 MB par fichier.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Comment contacter le support ?</h3>
+                        <p>Plan Gratuit : support communautaire. Plan Pro : email prioritaire. Plan Entreprise : téléphone dédié + formation personnalisée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 QuoteSmart Premium. Tous droits réservés. | Paiements sécurisés par PayPal</p>
+        </div>
+    </footer>
+
+    <script>
+        // Ajouter des animations au scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.pricing-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+        
+        // Tracker les clics sur les boutons PayPal pour analytics
+        document.querySelectorAll('form[action*="paypal"]').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                const plan = this.querySelector('input[name="item_name"]').value;
+                console.log('Plan sélectionné:', plan);
+                
+                // Ici vous pourriez ajouter Google Analytics ou autre
+                // gtag('event', 'purchase_intent', { plan: plan });
+            });
+        });
+    </script>
+</body>
+</html>
