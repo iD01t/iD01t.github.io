@@ -1,10 +1,81 @@
-# Write an updated professional index.html that fixes "New Releases" and "Best Sellers" loading,
-# and adds "Music" and "Software" sections. It includes a dynamic .mtmtl dropdown using GitHub API
-# and uses inline JS to render content without external JS dependencies.
-
-html_content = r"""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iD01t Store</title>
+    <meta name="description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://id01tstore.github.io/">
+    <meta property="og:title" content="iD01t Store">
+    <meta property="og:description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
+    <!-- <meta property="og:image" content="https://id01tstore.github.io/og-image.png"> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://id01tstore.github.io/">
+    <meta property="twitter:title" content="iD01t Store">
+    <meta property="twitter:description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
+    <!-- <meta property="twitter:image" content="https://id01tstore.github.io/og-image.png"> -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* --- Featured Product --- */
+        .featured-product-card {
+            background-color: var(--secondary-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .featured-product-card a {
+            text-decoration: none;
+            color: inherit;
+            display: grid;
+            grid-template-columns: 256px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .featured-product-card a:hover h3 {
+            color: var(--accent-color);
+        }
+
+        .featured-product-card img {
+            border-radius: 8px;
+            width: 256px;
+            height: auto;
+        }
+
+        .featured-product-info h3 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .featured-product-info p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    </style>
+
+    <!-- JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "iD01t Store",
+      "url": "https://id01tstore.github.io/",
+      "logo": "https://id01tstore.github.io/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "admin@id01t.store",
+        "contactType": "Customer Service"
+      }
+=======
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>iD01t Store</title>
@@ -59,6 +130,7 @@ html_content = r"""<!DOCTYPE html>
       min-width:320px;max-height:60vh;overflow:auto;
       background:var(--card);border:1px solid var(--border);border-radius:.8rem;box-shadow:0 10px 30px rgba(0,0,0,.5);
       display:none;padding:.5rem
+
     }
     .dropdown.open .dropdown-menu{display:block}
     .dropdown h4{margin:.25rem .5rem .5rem;font-size:.9rem;color:var(--muted);font-weight:600}
@@ -108,6 +180,19 @@ html_content = r"""<!DOCTYPE html>
         <a href="#music">Music</a>
         <a href="#software">Software</a>
 
+<<<<<<< fix/static-site
+        <h3>Featured Product</h3>
+        <div id="featured-product-section">
+            <div class="featured-product-card">
+                <a href="product.html?id=L_b-EAAAQBAJ">
+                    <img src="https://books.google.com/books/content?id=L_b-EAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api" alt="Cover of The Phoenix Project">
+                    <div class="featured-product-info">
+                        <h3>The Phoenix Project</h3>
+                        <p>By Gene Kim, Kevin Behr, George Spafford</p>
+                        <p>Bill is an IT manager at Parts Unlimited. It's Tuesday morning and on his drive into the office, Bill gets a call from the CEO. The company's new IT initiative, code named Phoenix Project, is critical to the future of Parts Unlimited, but the project is massively over budget and very late. The CEO wants Bill to report directly to him and fix the mess in ninety days or else Bill's entire department will be outsourced...</p>
+                    </div>
+                </a>
+            </div>
         <!-- Dynamic .mtmtl menu -->
         <div class="dropdown" id="mtmtlDropdown">
           <button type="button" aria-expanded="false" aria-controls="mtmtlMenu">MTMTL Files</button>
@@ -117,6 +202,7 @@ html_content = r"""<!DOCTYPE html>
               <li class="empty">Scanning repo, one moment…</li>
             </ul>
           </div>
+
         </div>
       </nav>
     </div>
