@@ -1,69 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iD01t Store</title>
-    <meta name="description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iD01t Store</title>
+  <meta name="description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
+  <link rel="icon" href="favicon.ico">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://id01tstore.github.io/">
-    <meta property="og:title" content="iD01t Store">
-    <meta property="og:description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
-    <!-- <meta property="og:image" content="https://id01tstore.github.io/og-image.png"> -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://id01tstore.github.io/">
+  <meta property="og:title" content="iD01t Store">
+  <meta property="og:description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://id01tstore.github.io/">
-    <meta property="twitter:title" content="iD01t Store">
-    <meta property="twitter:description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
-    <!-- <meta property="twitter:image" content="https://id01tstore.github.io/og-image.png"> -->
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://id01tstore.github.io/">
+  <meta property="twitter:title" content="iD01t Store">
+  <meta property="twitter:description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        /* --- Featured Product --- */
-        .featured-product-card {
-            background-color: var(--secondary-bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
+  <style>
+    :root{
+      --bg: #0b0e14;
+      --fg: #e6e9ef;
+      --muted: #9aa0a6;
+      --accent: #6ae3ff;
+      --card: #121722;
+      --border: #1d2433;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:inherit}
+    /* Top Bar */
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(11,14,20,.85);backdrop-filter:saturate(120%) blur(8px);
+      border-bottom:1px solid var(--border)
+    }
+    .topbar-inner{
+      max-width:1200px;margin:0 auto;padding:.75rem 1rem;display:flex;align-items:center;gap:1rem
+    }
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+    .brand img{width:28px;height:28px;border-radius:6px;display:block}
+    .brand span{font-weight:700;letter-spacing:.3px}
+    .nav{margin-left:auto;display:flex;align-items:center;gap:.75rem}
+    .nav a, .nav button{
+      padding:.5rem .8rem;border:1px solid var(--border);border-radius:.6rem;background:transparent;color:var(--fg);
+      text-decoration:none;cursor:pointer
+    }
+    .nav a:hover, .nav button:hover{border-color:var(--accent)}
+    /* Dropdown */
+    .dropdown{position:relative}
+    .dropdown-menu{
+      position:absolute;right:0;top:calc(100% + .5rem);
+      min-width:320px;max-height:60vh;overflow:auto;
+      background:var(--card);border:1px solid var(--border);border-radius:.8rem;box-shadow:0 10px 30px rgba(0,0,0,.5);
+      display:none;padding:.5rem
+    }
+    .dropdown.open .dropdown-menu{display:block}
+    .dropdown h4{margin:.25rem .5rem .5rem;font-size:.9rem;color:var(--muted);font-weight:600}
+    .file-list{list-style:none;margin:0;padding:0}
+    .file-list li{border-radius:.5rem}
+    .file-list a{display:block;padding:.55rem .6rem;border-radius:.5rem;color:var(--fg);text-decoration:none}
+    .file-list a:hover{background:#0f1421;border-color:transparent;color:var(--accent)}
+    .empty{padding:.75rem .6rem;color:var(--muted)}
+    /* Main */
+    main{max-width:1200px;margin:2rem auto;padding:0 1rem}
+    .featured-product-card{
+      background-color:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;margin-bottom:2rem
+    }
+    .featured-product-card a{text-decoration:none;color:inherit;display:grid;grid-template-columns:256px 1fr;gap:2rem;align-items:start}
+    .featured-product-card a:hover h3{color:var(--accent)}
+    .featured-product-card img{border-radius:8px;width:256px;height:auto}
+    .featured-product-info h3{margin-top:0;font-size:1.8rem}
+    .featured-product-info p{font-size:1rem;line-height:1.7;color:var(--muted)}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+    hr{margin:20px 0;border:0;border-top:1px solid var(--border)}
+    footer{max-width:1200px;margin:2rem auto;padding:1rem;color:var(--muted)}
+    .pill{font-size:.85rem;border:1px solid var(--border);padding:.25rem .5rem;border-radius:999px;color:var(--muted)}
+    /* Small screens */
+    @media (max-width:720px){
+      .featured-product-card a{grid-template-columns:1fr}
+      .dropdown-menu{min-width:92vw;right:1rem}
+    }
+  </style>
 
-        .featured-product-card a {
-            text-decoration: none;
-            color: inherit;
-            display: grid;
-            grid-template-columns: 256px 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .featured-product-card a:hover h3 {
-            color: var(--accent-color);
-        }
-
-        .featured-product-card img {
-            border-radius: 8px;
-            width: 256px;
-            height: auto;
-        }
-
-        .featured-product-info h3 {
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-
-        .featured-product-info p {
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-    </style>
-
-    <!-- JSON-LD for SEO -->
-    <script type="application/ld+json">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -76,51 +100,147 @@
         "contactType": "Customer Service"
       }
     }
-    </script>
+  </script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
+  <!-- Top Bar -->
+  <header class="topbar" role="banner">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-label="iD01t Store, home">
+        <img src="logo.png" alt="" onerror="this.style.display='none'">
+        <span>iD01t Store</span>
+      </a>
 
-    <main>
-        <h2>Welcome to the iD01t Store</h2>
-        <p>Your source for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.</p>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="./" aria-current="page">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="about.html">About</a>
 
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
-
-        <h3>Featured Product</h3>
-        <div id="featured-product-section">
-            <div class="featured-product-card">
-                <a href="product.html?id=L_b-EAAAQBAJ">
-                    <img src="https://books.google.com/books/content?id=L_b-EAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api" alt="Cover of The Phoenix Project">
-                    <div class="featured-product-info">
-                        <h3>The Phoenix Project</h3>
-                        <p>By Gene Kim, Kevin Behr, George Spafford</p>
-                        <p>Bill is an IT manager at Parts Unlimited. It's Tuesday morning and on his drive into the office, Bill gets a call from the CEO. The company's new IT initiative, code named Phoenix Project, is critical to the future of Parts Unlimited, but the project is massively over budget and very late. The CEO wants Bill to report directly to him and fix the mess in ninety days or else Bill's entire department will be outsourced...</p>
-                    </div>
-                </a>
-            </div>
+        <!-- Dynamic .mtmtl menu -->
+        <div class="dropdown" id="mtmtlDropdown">
+          <button type="button" aria-expanded="false" aria-controls="mtmtlMenu">MTMTL Files</button>
+          <div class="dropdown-menu" id="mtmtlMenu" role="menu" aria-label=".mtmtl file list">
+            <h4>.mtmtl in this repo</h4>
+            <ul class="file-list" id="mtmtlList">
+              <li class="empty">Scanning repo, one moment…</li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </div>
+  </header>
 
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
+  <main>
+    <h2>Welcome to the iD01t Store</h2>
+    <p>Your source for ebooks and audiobooks by Guillaume Lessard and iD01t Productions. <span class="pill">Live</span></p>
 
-        <h3>New Releases</h3>
-        <div id="new-releases-grid" class="product-grid">
-            <p>Loading new releases...</p>
-        </div>
+    <hr>
 
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
+    <h3>Featured Product</h3>
+    <div id="featured-product-section">
+      <div class="featured-product-card">
+        <a href="product.html?id=L_b-EAAAQBAJ">
+          <img src="https://books.google.com/books/content?id=L_b-EAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api" alt="Cover of The Phoenix Project">
+          <div class="featured-product-info">
+            <h3>The Phoenix Project</h3>
+            <p>By Gene Kim, Kevin Behr, George Spafford</p>
+            <p>Bill is an IT manager at Parts Unlimited. It is Tuesday morning and on his drive into the office, Bill gets a call from the CEO. The company’s new IT initiative, code named Phoenix Project, is critical to the future of Parts Unlimited, but the project is massively over budget and very late. The CEO wants Bill to report directly to him and fix the mess in ninety days, or else Bill’s entire department will be outsourced.</p>
+          </div>
+        </a>
+      </div>
+    </div>
 
-        <h3>Best Sellers</h3>
-        <div id="best-sellers-grid" class="product-grid">
-            <p>Loading best sellers...</p>
-        </div>
-    </main>
+    <hr>
 
-    <div id="footer-placeholder"></div>
+    <h3>New Releases</h3>
+    <div id="new-releases-grid" class="product-grid">
+      <p>Loading new releases…</p>
+    </div>
 
-    <script src="js/templating.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/main.js"></script>
+    <hr>
+
+    <h3>Best Sellers</h3>
+    <div id="best-sellers-grid" class="product-grid">
+      <p>Loading best sellers…</p>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="y"></span> iD01t Productions. All rights reserved.</small>
+  </footer>
+
+  <!-- Existing scripts -->
+  <script src="js/templating.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Pro: Dynamic .mtmtl discovery via GitHub API -->
+  <script>
+    // Config, update if you rename the repo
+    const GH_OWNER = "iD01tStore";
+    const GH_REPO  = "id01tstore.github.io";
+    const BRANCH   = "main"; // or "master" if applicable
+
+    // Dropdown toggle
+    (function(){
+      const dd = document.getElementById("mtmtlDropdown");
+      const btn = dd.querySelector("button");
+      btn.addEventListener("click", () => {
+        const open = dd.classList.toggle("open");
+        btn.setAttribute("aria-expanded", String(open));
+      });
+      // Close on outside click
+      document.addEventListener("click", (e) => {
+        if(!dd.contains(e.target)) {
+          dd.classList.remove("open");
+          btn.setAttribute("aria-expanded","false");
+        }
+      });
+    })();
+
+    // Fetch all files via Git Trees API and list *.mtmtl
+    async function loadMtmtl(){
+      const list = document.getElementById("mtmtlList");
+      list.innerHTML = '<li class="empty">Scanning repo, one moment…</li>';
+
+      try{
+        // Get the tree (recursive)
+        const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/git/trees/${BRANCH}?recursive=1`;
+        const res = await fetch(url, { headers: { "Accept": "application/vnd.github+json" }});
+        if(!res.ok) throw new Error("GitHub API error: " + res.status);
+        const data = await res.json();
+        const files = (data.tree || []).filter(n => n.type === "blob" && /\.mtmtl$/i.test(n.path));
+
+        if(!files.length){
+          list.innerHTML = '<li class="empty">No .mtmtl files found.</li>';
+          return;
+        }
+
+        // Build links that work on GitHub Pages
+        const frag = document.createDocumentFragment();
+        files.sort((a,b)=>a.path.localeCompare(b.path));
+        files.forEach(file => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          // If these are meant to be opened as raw pages, adjust mapping below
+          a.href = `/${encodeURI(file.path)}`;
+          a.textContent = file.path;
+          a.setAttribute("role","menuitem");
+          li.appendChild(a);
+          frag.appendChild(li);
+        });
+        list.innerHTML = "";
+        list.appendChild(frag);
+      }catch(err){
+        console.error(err);
+        list.innerHTML = '<li class="empty">Could not load .mtmtl files. Check repo name or branch.</li>';
+      }
+    }
+    loadMtmtl();
+
+    // Footer year
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
