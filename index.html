@@ -50,12 +50,12 @@
     .file-list a{display:block;padding:.55rem .6rem;border-radius:.5rem;color:var(--fg);text-decoration:none}
     .file-list a:hover{background:#0f1421;color:var(--accent)}
     .empty{padding:.75rem .6rem;color:var(--muted)}
-    /* Main */
+    /* Main layout */
     main{max-width:1200px;margin:2rem auto;padding:0 1rem}
     .pill{font-size:.85rem;border:1px solid var(--border);padding:.25rem .5rem;border-radius:999px;color:var(--muted)}
     hr{margin:20px 0;border:0;border-top:1px solid var(--border)}
     footer{max-width:1200px;margin:2rem auto;padding:1rem;color:var(--muted)}
-    /* Cards */
+    /* Grids and cards */
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
     .card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
     .thumb{width:100%;aspect-ratio:16/10;object-fit:cover}
@@ -72,18 +72,9 @@
     .featured{display:grid;grid-template-columns:320px 1fr;gap:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:2rem}
     .featured img{width:100%;height:auto;border-radius:8px}
     @media (max-width:820px){.featured{grid-template-columns:1fr}}
-    /* Hero section */
-    .hero{position:relative;border-radius:12px;overflow:hidden;margin:2rem auto;max-width:1200px}
-    .hero img{width:100%;display:block;height:auto;object-fit:cover}
-    .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);color:var(--fg);text-align:center;padding:2rem}
-    .hero-overlay h1{margin:0;font-size:2rem}
-    .hero-overlay p{margin-top:.5rem;font-size:1.1rem;color:var(--muted)}
-    .hero-cta{margin-top:1rem;padding:.6rem 1.2rem;background:var(--accent);color:#0b0e14;border-radius:.6rem;text-decoration:none;font-weight:600}
-    .hero-cta:hover{opacity:.85}
-    @media (max-width:820px){.hero-overlay{padding:1rem}}
   </style>
 
-  <!-- JSON-LD for SEO -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -113,11 +104,11 @@
         <a href="#ebooks">eBooks</a>
         <a href="#music">Music</a>
         <a href="#software">Software</a>
-        <!-- Pages dropdown -->
+        <!-- Dynamic .html menu -->
         <div class="dropdown" id="pagesDropdown">
           <button type="button" aria-expanded="false" aria-controls="pagesMenu">Pages</button>
           <div class="dropdown-menu" id="pagesMenu" role="menu" aria-label="HTML file list">
-            <h4>HTML files</h4>
+            <h4>Pages in this repo</h4>
             <ul class="file-list" id="pagesList">
               <li class="empty">Scanning repo, one moment…</li>
             </ul>
@@ -126,16 +117,6 @@
       </nav>
     </div>
   </header>
-
-  <!-- Hero -->
-  <section class="hero" aria-label="Hero">
-    <img src="https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?auto=format&fit=crop&w=1600&q=80" alt="Futuristic tech abstract background" class="hero-img">
-    <div class="hero-overlay">
-      <h1>Empowering Creators</h1>
-      <p>Discover eBooks, music &amp; software to build your future.</p>
-      <a href="#new-releases-grid" class="hero-cta">Browse New Releases</a>
-    </div>
-  </section>
 
   <main>
     <h2>Welcome to the iD01t Store <span class="pill">Live</span></h2>
@@ -156,7 +137,7 @@
     </section>
 
     <!-- New Releases -->
-    <div class="section-head" id="ebooks"><h3>New Releases</h3><small>Updated</small></div>
+    <div class="section-head" id="ebooks"><h3>New Releases</h3><small>Hot off the press</small></div>
     <section id="new-releases-grid" class="grid" aria-label="New Releases"></section>
 
     <hr>
@@ -182,11 +163,11 @@
     <small>&copy; <span id="y"></span> iD01t Productions, all rights reserved.</small>
   </footer>
 
-  <!-- Inline JS for dynamic content -->
+  <!-- Inline JS -->
   <script>
     // Config for GitHub API
     const GH_OWNER = "iD01t";
-    const GH_REPO  = "id01t.github.io";
+    const GH_REPO  = "iD01t.github.io";
     const BRANCH   = "main";
 
     // Dropdown toggle for pages
@@ -205,7 +186,7 @@
       });
     })();
 
-    // Discover .html files in the repo (excluding index.html and partials)
+    // Discover .html files from repo (excluding index and partials)
     async function loadPages(){
       const list = document.getElementById("pagesList");
       list.innerHTML = '<li class="empty">Scanning repo, one moment…</li>';
@@ -214,75 +195,148 @@
         const res = await fetch(url, { headers: { "Accept": "application/vnd.github+json" }});
         if(!res.ok) throw new Error("GitHub API error: " + res.status);
         const data = await res.json();
-        const pages = (data.tree || []).filter(item => {
-          return item.type === "blob" &&
-                 item.path.endsWith(".html") &&
-                 item.path !== "index.html" &&
-                 !item.path.startsWith("_");
-        });
-        if(!pages.length){
-          list.innerHTML = '<li class="empty">No HTML files found.</li>';
+        const files = (data.tree || []).filter(n => n.type === "blob" && /\.html$/i.test(n.path));
+        const filtered = files.filter(f => !/index\.html$/i.test(f.path) && !/^(_|\.)/.test(f.path.split("/").pop()));
+        if(!filtered.length){
+          list.innerHTML = '<li class="empty">No pages found.</li>';
           return;
         }
-        pages.sort((a,b) => a.path.localeCompare(b.path));
         const frag = document.createDocumentFragment();
-        pages.forEach(page => {
+        filtered.sort((a,b)=>a.path.localeCompare(b.path));
+        filtered.forEach(file => {
           const li = document.createElement("li");
           const a = document.createElement("a");
-          a.href = `/${encodeURI(page.path)}`;
-          a.textContent = page.path;
-          a.setAttribute("role","menuitem");
+          a.href = `/${encodeURI(file.path)}`;
+          a.textContent = file.path;
           li.appendChild(a);
           frag.appendChild(li);
         });
         list.innerHTML = "";
         list.appendChild(frag);
-      } catch(err){
+      }catch(err){
         console.error(err);
-        list.innerHTML = '<li class="empty">Could not load HTML files.</li>';
+        list.innerHTML = '<li class="empty">Could not load pages.</li>';
       }
     }
 
-    // Data for featured and product sections
+    // Data for products
     const DATA = {
       featured: {
-        img: "assets/covers/final-transmission.jpg",
-        title: "Final Transmission",
-        meta: "Album by DJ iD01t",
-        desc: "Thirteen tracks of cinematic electronica, official music video series included.",
-        primary: { href: "https://open.spotify.com/album/placeholder", label: "Listen" },
-        secondary: { href: "https://youtube.com/playlist?list=placeholder", label: "Watch" }
+        img: "https://books.google.com/books/content?id=0Yo2EQAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+        title: "Before the storm",
+        meta: "eBook",
+        desc: "Investigative journalist Olivia Grant uncovers a high-stakes conspiracy tied to corporate corruption and environmental destruction, leading to forbidden romance and a fight for truth.",
+        primary: { href: "product.html?id=0Yo2EQAAQBAJ", label: "View" },
+        secondary: { href: "https://play.google.com/store/books/details?id=0Yo2EQAAQBAJ", label: "Google Books" }
       },
       newReleases: [
-        { img: "assets/covers/echo-protocol.jpg", title: "Echo Protocol", meta: "eBook", desc: "Creative systems, narrative AI, and production pipeline behind Echo Protocol.", links: [{href:"#",label:"View"}] },
-        { img: "assets/covers/no-master-needed.jpg", title: "No Master Needed", meta: "Album", desc: "Industrial, techno, and story driven soundscapes.", links: [{href:"#",label:"Listen"}] },
-        { img: "assets/covers/python-zero-to-hero-2.jpg", title: "Python Zero to Hero, Edition 2", meta: "eBook", desc: "Expanded projects, GUI apps, packaging and distribution, monetization ready.", links: [{href:"#",label:"View"}] },
-        { img: "assets/covers/quote-forge-ai.jpg", title: "QuoteForgeAI", meta: "Software", desc: "AI powered contract and quote builder with PDF export and desktop support.", links: [{href:"#",label:"Download"}] }
+        {
+          img: "https://books.google.com/books/content?id=FA5EQAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          title: "To the Top of the Mountain",
+          meta: "eBook",
+          desc: "A journey of health, wellness, and adventure as climbers push their limits while exploring the intersection of nature and personal growth.",
+          links: [{href:"product.html?id=FA5EQAAQBAJ",label:"View"}]
+        },
+        {
+          img: "https://books.google.com/books/content?id=H_A4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          title: "The Architect's Legacy",
+          meta: "eBook",
+          desc: "A struggle for freedom in a dystopian world where architects fight against oppression and hidden agendas to reclaim their future.",
+          links: [{href:"product.html?id=H_A4EQAQBAJ",label:"View"}]
+        },
+        {
+          img: "https://books.google.com/books/content?id=Rvk5EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          title: "Windows Zero to Hero",
+          meta: "eBook",
+          desc: "Master Windows and transition from novice to expert with this comprehensive, step-by-step guide.",
+          links: [{href:"product.html?id=Rvk5EQAQBAJ",label:"View"}]
+        },
+        {
+          img: "https://books.google.com/books/content?id=kY09EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          title: "AI Today: Transforming Lives and Industries for the Future",
+          meta: "eBook",
+          desc: "Explore how artificial intelligence reshapes healthcare, education, business, and society, unlocking new possibilities.",
+          links: [{href:"product.html?id=kY09EQAQBAJ",label:"View"}]
+        }
       ],
       bestSellers: [
-        { img: "assets/covers/unstoppable.jpg", title: "Unstoppable", meta: "eBook", desc: "Mindset, habits, and execution systems for creators and founders.", links: [{href:"#",label:"View"}] },
-        { img: "assets/covers/free-energy-free-life.jpg", title: "Free Energy, Free Life", meta: "eBook", desc: "Tesla inspired research and modern interpretations for sovereign living.", links: [{href:"#",label:"View"}] },
-        { img: "assets/covers/id01t-academy-python-2.jpg", title: "iD01t Academy, Python Exercises Book 2, Edition 2", meta: "Software and eBook", desc: "Full GUI app and exercises, packaged for Windows.", links: [{href:"#",label:"Download"}] },
-        { img: "assets/covers/contractbuilder.jpg", title: "ContractBuilder AI", meta: "Software", desc: "Quotes and contracts generator with email integration and templates.", links: [{href:"#",label:"Download"}] }
+        {
+          img: "https://books.google.com/books/content?id=Kwo4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          title: "Echoes of the Heart",
+          meta: "eBook",
+          desc: "Investigative journalist Olivia Bennett faces a dangerous investigation while falling for enigmatic attorney Jack Hawthorne in this romantic thriller.",
+          links: [{href:"product.html?id=Kwo4EQAQBAJ",label:"View"}]
+        },
+        {
+          img: "https://books.google.com/books/content?id=QQo4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          title: "Echoes of Truth",
+          meta: "eBook",
+          desc: "Claire Mitchell uncovers a dangerous web of lies linking her husband to powerful figures, embarking on a journey of mystery, betrayal, and redemption.",
+          links: [{href:"product.html?id=QQo4EQAQBAJ",label:"View"}]
+        },
+        {
+          img: "https://books.google.com/books/content?id=Iwo4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          title: "Intersection: The Moment Their Paths Crossed",
+          meta: "eBook",
+          desc: "Investigative journalist Olivia Bennett and attorney Jack Hawthorne find their lives intersected by a dangerous conspiracy in this thriller about courage, love, and sacrifice.",
+          links: [{href:"product.html?id=Iwo4EQAQBAJ",label:"View"}]
+        },
+        {
+          img: "https://books.google.com/books/content?id=OQo4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          title: "Legacy of Shadows",
+          meta: "eBook",
+          desc: "Olivia Bennett and Jack Hawthorne confront deception and global conspiracies as their love is tested by betrayal and sinister forces.",
+          links: [{href:"product.html?id=OQo4EQAQBAJ",label:"View"}]
+        }
       ],
       music: [
-        { img: "assets/covers/final-transmission.jpg", title: "Final Transmission", meta: "Album, 13 tracks", desc: "Available on Spotify, YouTube, Amazon Music, and more.", links: [
-          {href:"https://youtube.com/playlist?list=placeholder",label:"Watch"},
-          {href:"#",label:"Listen"}
-        ] },
-        { img: "assets/covers/no-master-needed.jpg", title: "No Master Needed", meta: "Official Video", desc: "High energy visual built with Veo and Sora style cinematics.", links: [{href:"#",label:"Watch"}] }
+        {
+          img: "assets/covers/final-transmission.jpg",
+          title: "Final Transmission",
+          meta: "Album, 13 tracks",
+          desc: "Thirteen tracks of cinematic electronica, official music video series included.",
+          links: [
+            {href:"https://open.spotify.com/album/placeholder",label:"Listen"},
+            {href:"https://youtube.com/playlist?list=placeholder",label:"Watch"}
+          ]
+        },
+        {
+          img: "assets/covers/no-master-needed.jpg",
+          title: "No Master Needed",
+          meta: "Album",
+          desc: "Industrial, techno, and story-driven soundscapes.",
+          links: [{href:"https://youtube.com/playlist?list=placeholder",label:"Watch"}]
+        }
       ],
       software: [
-        { img: "assets/covers/py2win.jpg", title: "Py2Win", meta: "Windows Packaging", desc: "Turn Python apps into polished Windows installers, documented for Microsoft Store.", links: [
-          {href:"https://github.com/iD01tStore/Py2win/releases",label:"Releases"},
-          {href:"https://github.com/iD01tStore/Py2win",label:"GitHub"}
-        ] },
-        { img: "assets/covers/quote-forge-ai.jpg", title: "QuoteForgeAI", meta: "Desktop App", desc: "Quote and contract builder, OpenAI ready, email integration, PDF export.", links: [{href:"#",label:"Download"}] },
-        { img: "assets/covers/ra7-conscious-creator.jpg", title: "RA 7 Conscious Creator", meta: "Creator System", desc: "Autonomous content engine with book builder, chart dashboard, and report generator.", links: [{href:"#",label:"Download"}] }
+        {
+          img: "assets/covers/py2win.jpg",
+          title: "Py2Win",
+          meta: "Windows Packaging",
+          desc: "Turn Python apps into polished Windows installers, documented for Microsoft Store.",
+          links: [
+            {href:"https://github.com/iD01tStore/Py2win/releases",label:"Releases"},
+            {href:"https://github.com/iD01tStore/Py2win",label:"GitHub"}
+          ]
+        },
+        {
+          img: "assets/covers/quote-forge-ai.jpg",
+          title: "QuoteForgeAI",
+          meta: "Desktop App",
+          desc: "AI powered contract and quote builder with PDF export and desktop support.",
+          links: [{href:"#",label:"Download"}]
+        },
+        {
+          img: "assets/covers/ra7-conscious-creator.jpg",
+          title: "RA 7 Conscious Creator",
+          meta: "Creator System",
+          desc: "Autonomous content engine with book builder, chart dashboard, and report generator.",
+          links: [{href:"#",label:"Download"}]
+        }
       ]
     };
 
-    // Render helpers
+    // Helper: create elements
     function el(tag, attrs={}, children=[]){
       const e = document.createElement(tag);
       Object.entries(attrs).forEach(([k,v]) => {
@@ -295,32 +349,42 @@
       return e;
     }
 
+    // Card builder
     function card(item){
       const img = el("img", {class:"thumb", src:item.img, alt:item.title, loading:"lazy"});
       const title = el("div", {class:"title"}, [item.title]);
       const meta = el("p", {class:"meta"}, [item.meta]);
       const desc = el("p", {}, [item.desc]);
-      const cta = el("div", {class:"cta"}, (item.links||[]).map(l=>el("a",{class:"btn",href:l.href,target:"_blank",rel:"noopener"},[l.label])));
+      const cta = el("div", {class:"cta"}, (item.links||[]).map(l => el("a",{class:"btn",href:l.href,target:"_blank"},[l.label])));
       return el("article", {class:"card"}, [img, el("div",{class:"pad"},[title, meta, desc]), cta]);
     }
 
+    // Render grid
     function renderGrid(id, items){
       const root = document.getElementById(id);
       root.innerHTML = "";
       items.forEach(it => root.appendChild(card(it)));
     }
 
+    // Render featured
     function renderFeatured(f){
-      document.getElementById("featuredImg").src = f.img;
-      document.getElementById("featuredTitle").textContent = f.title;
-      document.getElementById("featuredMeta").textContent = f.meta;
-      document.getElementById("featuredDesc").textContent = f.desc;
-      document.getElementById("featuredPrimary").href = f.primary.href;
-      document.getElementById("featuredPrimary").textContent = f.primary.label;
-      document.getElementById("featuredSecondary").href = f.secondary.href;
-      document.getElementById("featuredSecondary").textContent = f.secondary.label;
+      const img = document.getElementById("featuredImg");
+      const title = document.getElementById("featuredTitle");
+      const meta = document.getElementById("featuredMeta");
+      const desc = document.getElementById("featuredDesc");
+      const primary = document.getElementById("featuredPrimary");
+      const secondary = document.getElementById("featuredSecondary");
+      img.src = f.img;
+      title.textContent = f.title;
+      meta.textContent = f.meta;
+      desc.textContent = f.desc;
+      primary.href = f.primary.href;
+      primary.textContent = f.primary.label;
+      secondary.href = f.secondary.href;
+      secondary.textContent = f.secondary.label;
     }
 
+    // Init
     function init(){
       loadPages();
       renderFeatured(DATA.featured);
