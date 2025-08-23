@@ -222,7 +222,8 @@
     // Data for products
     const DATA = {
       featured: {
-        img: "https://books.google.com/books/content?id=0Yo2EQAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+        // Use the high-resolution cover hosted on Google Play for "Before the storm"
+        img: "https://play.google.com/books/publisher/content/images/frontcover/0Yo2EQAAQBAJ?fife=w240-h345",
         title: "Before the storm",
         meta: "eBook",
         desc: "Investigative journalist Olivia Grant uncovers a high-stakes conspiracy tied to corporate corruption and environmental destruction, leading to forbidden romance and a fight for truth.",
@@ -235,21 +236,26 @@
           title: "To the Top of the Mountain",
           meta: "eBook",
           desc: "A journey of health, wellness, and adventure as climbers push their limits while exploring the intersection of nature and personal growth.",
-          links: [{href:"product.html?id=FA5EQAAQBAJ",label:"View"}]
+          // Updated product link to the negative ID version for this volume; use absolute URL for consistency
+          links: [{href:"https://id01t.github.io/product.html?id=-FA5EQAAQBAJ",label:"View"}]
         },
         {
-          img: "https://books.google.com/books/content?id=H_A4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          // Corrected ID for The Architect's Legacy (both image and product link)
+          img: "https://books.google.com/books/content?id=H_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
           title: "The Architect's Legacy",
           meta: "eBook",
           desc: "A struggle for freedom in a dystopian world where architects fight against oppression and hidden agendas to reclaim their future.",
-          links: [{href:"product.html?id=H_A4EQAQBAJ",label:"View"}]
+          // Use absolute URL for product link to ensure the page opens correctly on GitHub Pages
+          links: [{href:"https://id01t.github.io/product.html?id=H_A4EQAAQBAJ",label:"View"}]
         },
         {
-          img: "https://books.google.com/books/content?id=Rvk5EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          // Corrected ID for Windows Zero to Hero (both image and product link)
+          img: "https://books.google.com/books/content?id=Rvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
           title: "Windows Zero to Hero",
           meta: "eBook",
           desc: "Master Windows and transition from novice to expert with this comprehensive, step-by-step guide.",
-          links: [{href:"product.html?id=Rvk5EQAQBAJ",label:"View"}]
+          // Use absolute URL for product link to ensure the page opens correctly on GitHub Pages
+          links: [{href:"https://id01t.github.io/product.html?id=Rvk5EQAAQBAJ",label:"View"}]
         },
         {
           img: "https://books.google.com/books/content?id=kY09EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
@@ -295,9 +301,10 @@
           title: "Final Transmission",
           meta: "Album, 13 tracks",
           desc: "Thirteen tracks of cinematic electronica, official music video series included.",
+          // Updated streaming links for Final Transmission: Spotify and YouTube
           links: [
-            {href:"https://open.spotify.com/album/placeholder",label:"Listen"},
-            {href:"https://youtube.com/playlist?list=placeholder",label:"Watch"}
+            {href:"https://open.spotify.com/album/7acmUMIp3LjMq8geiNJVkc",label:"Listen"},
+            {href:"https://youtu.be/EWeQqnDHKTg?si=NxfCZ9XcAJZmC_0D&t=289",label:"Watch"}
           ]
         },
         {
