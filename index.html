@@ -59,7 +59,13 @@
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
     .card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
     /* Show full image without cropping */
-    .thumb{width:100%;height:auto;object-fit:contain;display:block}
+    /* Ensure all eBook covers have the same size (uniform aspect ratio) */
+    .thumb{
+      width: 100%;
+      aspect-ratio: 240/345;
+      object-fit: cover;
+      border-radius: 8px;
+    }
     .pad{padding:1rem}
     .title{font-size:1.05rem;margin:.2rem 0 .4rem 0}
     .meta{font-size:.9rem;color:var(--muted);margin:0}
@@ -84,7 +90,7 @@
     .video-embed iframe {
       display: block;
       width: 100%;
-      height: 360px;
+      height: 500px;
       border: 0;
     }
   </style>
@@ -119,16 +125,10 @@
         <a href="https://id01t.github.io/catalog.html">eBooks</a>
         <a href="#music">Music</a>
         <a href="#software">Software</a>
-        <!-- Dynamic .html menu -->
-        <div class="dropdown" id="pagesDropdown">
-          <button type="button" aria-expanded="false" aria-controls="pagesMenu">Pages</button>
-          <div class="dropdown-menu" id="pagesMenu" role="menu" aria-label="HTML file list">
-            <h4>Pages in this repo</h4>
-            <ul class="file-list" id="pagesList">
-              <li class="empty">Scanning repo, one moment…</li>
-            </ul>
-          </div>
-        </div>
+        <a href="contact.html">Contact</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="login.html">Login</a>
       </nav>
     </div>
   </header>
@@ -189,54 +189,6 @@
     const GH_REPO  = "iD01t.github.io";
     const BRANCH   = "main";
 
-    // Dropdown toggle for pages
-    (function(){
-      const dd = document.getElementById("pagesDropdown");
-      const btn = dd.querySelector("button");
-      btn.addEventListener("click", () => {
-        const open = dd.classList.toggle("open");
-        btn.setAttribute("aria-expanded", String(open));
-      });
-      document.addEventListener("click", (e) => {
-        if(!dd.contains(e.target)) {
-          dd.classList.remove("open");
-          btn.setAttribute("aria-expanded","false");
-        }
-      });
-    })();
-
-    // Discover .html files from repo (excluding index and partials)
-    async function loadPages(){
-      const list = document.getElementById("pagesList");
-      list.innerHTML = '<li class="empty">Scanning repo, one moment…</li>';
-      try{
-        const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/git/trees/${BRANCH}?recursive=1`;
-        const res = await fetch(url, { headers: { "Accept": "application/vnd.github+json" }});
-        if(!res.ok) throw new Error("GitHub API error: " + res.status);
-        const data = await res.json();
-        const files = (data.tree || []).filter(n => n.type === "blob" && /\.html$/i.test(n.path));
-        const filtered = files.filter(f => !/index\.html$/i.test(f.path) && !/^(_|\.)/.test(f.path.split("/").pop()));
-        if(!filtered.length){
-          list.innerHTML = '<li class="empty">No pages found.</li>';
-          return;
-        }
-        const frag = document.createDocumentFragment();
-        filtered.sort((a,b)=>a.path.localeCompare(b.path));
-        filtered.forEach(file => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = `/${encodeURI(file.path)}`;
-          a.textContent = file.path;
-          li.appendChild(a);
-          frag.appendChild(li);
-        });
-        list.innerHTML = "";
-        list.appendChild(frag);
-      }catch(err){
-        console.error(err);
-        list.innerHTML = '<li class="empty">Could not load pages.</li>';
-      }
-    }
 
     // Data for products
     const DATA = {
@@ -295,12 +247,12 @@
           links: [{href:"https://id01t.github.io/product.html?id=Kwo4EQAAQBAJ",label:"View"}]
         },
         {
-          img: "https://books.google.com/books/content?id=QQo4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
+          img: "https://books.google.com/books/publisher/content?id=QQo4EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE737L2sXNbD4UssbKSgr6TJcUZU4sH5IVTlpf4v5pHRQw_G3umrq9T3g5itcVL5ffaf-4nOKN8Qwfq22Q3F3VBYC0UjkrnhpL_9rBsGIIVHPxdrbE8HYYamTg-Mgfx6agjStJOHq&source=gbs_api",
           title: "Echoes of Truth",
           meta: "eBook",
           desc: "Claire Mitchell uncovers a dangerous web of lies linking her husband to powerful figures, embarking on a journey of mystery, betrayal, and redemption.",
-          // Use absolute URL for product page
-          links: [{href:"https://id01t.github.io/product.html?id=QQo4EQAQBAJ",label:"View"}]
+          // Use absolute URL for product page (corrected ID)
+          links: [{href:"https://id01t.github.io/product.html?id=QQo4EQAAQBAJ",label:"View"}]
         },
         {
           img: "https://books.google.com/books/publisher/content?id=Iwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71wSzwMLTjtVbd0p95DmZzqQf3tal2BH0kvzZ110s-NpCI_X6fRnvcMa6baQLuyT2neu8YZyh3DKgztjCQAszVgoASdv0ojg94rAkJmMilCh6OiqjGyagtB07Ms7C_yFCfTP7uF&source=gbs_api",
@@ -404,7 +356,6 @@
 
     // Init
     function init(){
-      loadPages();
       renderFeatured(DATA.featured);
       renderGrid("new-releases-grid", DATA.newReleases);
       renderGrid("best-sellers-grid", DATA.bestSellers);
