@@ -104,12 +104,12 @@
         <a href="#ebooks">eBooks</a>
         <a href="#music">Music</a>
         <a href="#software">Software</a>
-        <!-- Dynamic .mtmtl menu -->
-        <div class="dropdown" id="mtmtlDropdown">
-          <button type="button" aria-expanded="false" aria-controls="mtmtlMenu">MTMTL Files</button>
-          <div class="dropdown-menu" id="mtmtlMenu" role="menu" aria-label=".mtmtl file list">
-            <h4>.mtmtl in this repo</h4>
-            <ul class="file-list" id="mtmtlList">
+        <!-- Pages dropdown -->
+        <div class="dropdown" id="pagesDropdown">
+          <button type="button" aria-expanded="false" aria-controls="pagesMenu">Pages</button>
+          <div class="dropdown-menu" id="pagesMenu" role="menu" aria-label="HTML file list">
+            <h4>HTML files</h4>
+            <ul class="file-list" id="pagesList">
               <li class="empty">Scanning repo, one moment…</li>
             </ul>
           </div>
@@ -163,15 +163,16 @@
     <small>&copy; <span id="y"></span> iD01t Productions, all rights reserved.</small>
   </footer>
 
+  <!-- Inline JS for dynamic content -->
   <script>
-    // Config
-    const GH_OWNER = "iD01tStore";
-    const GH_REPO  = "id01tstore.github.io";
+    // Config for GitHub API
+    const GH_OWNER = "iD01t";
+    const GH_REPO  = "id01t.github.io";
     const BRANCH   = "main";
 
-    // Dropdown toggle
+    // Dropdown toggle for pages
     (function(){
-      const dd = document.getElementById("mtmtlDropdown");
+      const dd = document.getElementById("pagesDropdown");
       const btn = dd.querySelector("button");
       btn.addEventListener("click", () => {
         const open = dd.classList.toggle("open");
@@ -185,39 +186,45 @@
       });
     })();
 
-    // Load .mtmtl files
-    async function loadMtmtl(){
-      const list = document.getElementById("mtmtlList");
+    // Discover .html files in the repo (excluding index.html and partials)
+    async function loadPages(){
+      const list = document.getElementById("pagesList");
       list.innerHTML = '<li class="empty">Scanning repo, one moment…</li>';
       try{
         const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/git/trees/${BRANCH}?recursive=1`;
         const res = await fetch(url, { headers: { "Accept": "application/vnd.github+json" }});
         if(!res.ok) throw new Error("GitHub API error: " + res.status);
         const data = await res.json();
-        const files = (data.tree || []).filter(n => n.type === "blob" && /\.mtmtl$/i.test(n.path));
-        if(!files.length){
-          list.innerHTML = '<li class="empty">No .mtmtl files found.</li>';
+        const pages = (data.tree || []).filter(item => {
+          return item.type === "blob" &&
+                 item.path.endsWith(".html") &&
+                 item.path !== "index.html" &&
+                 !item.path.startsWith("_");
+        });
+        if(!pages.length){
+          list.innerHTML = '<li class="empty">No HTML files found.</li>';
           return;
         }
+        pages.sort((a,b) => a.path.localeCompare(b.path));
         const frag = document.createDocumentFragment();
-        files.sort((a,b)=>a.path.localeCompare(b.path));
-        files.forEach(file => {
+        pages.forEach(page => {
           const li = document.createElement("li");
           const a = document.createElement("a");
-          a.href = `/${encodeURI(file.path)}`;
-          a.textContent = file.path;
+          a.href = `/${encodeURI(page.path)}`;
+          a.textContent = page.path;
+          a.setAttribute("role","menuitem");
           li.appendChild(a);
           frag.appendChild(li);
         });
         list.innerHTML = "";
         list.appendChild(frag);
-      }catch(err){
+      } catch(err){
         console.error(err);
-        list.innerHTML = '<li class="empty">Could not load .mtmtl files.</li>';
+        list.innerHTML = '<li class="empty">Could not load HTML files.</li>';
       }
     }
 
-    // Data
+    // Data for featured and product sections
     const DATA = {
       featured: {
         img: "assets/covers/final-transmission.jpg",
@@ -229,16 +236,30 @@
       },
       newReleases: [
         { img: "assets/covers/echo-protocol.jpg", title: "Echo Protocol", meta: "eBook", desc: "Creative systems, narrative AI, and production pipeline behind Echo Protocol.", links: [{href:"#",label:"View"}] },
-        { img: "assets/covers/no-master-needed.jpg", title: "No Master Needed", meta: "Album", desc: "Industrial, techno, and story driven soundscapes.", links: [{href:"#",label:"Listen"}] }
+        { img: "assets/covers/no-master-needed.jpg", title: "No Master Needed", meta: "Album", desc: "Industrial, techno, and story driven soundscapes.", links: [{href:"#",label:"Listen"}] },
+        { img: "assets/covers/python-zero-to-hero-2.jpg", title: "Python Zero to Hero, Edition 2", meta: "eBook", desc: "Expanded projects, GUI apps, packaging and distribution, monetization ready.", links: [{href:"#",label:"View"}] },
+        { img: "assets/covers/quote-forge-ai.jpg", title: "QuoteForgeAI", meta: "Software", desc: "AI powered contract and quote builder with PDF export and desktop support.", links: [{href:"#",label:"Download"}] }
       ],
       bestSellers: [
-        { img: "assets/covers/unstoppable.jpg", title: "Unstoppable", meta: "eBook", desc: "Mindset, habits, and execution systems for creators and founders.", links: [{href:"#",label:"View"}] }
+        { img: "assets/covers/unstoppable.jpg", title: "Unstoppable", meta: "eBook", desc: "Mindset, habits, and execution systems for creators and founders.", links: [{href:"#",label:"View"}] },
+        { img: "assets/covers/free-energy-free-life.jpg", title: "Free Energy, Free Life", meta: "eBook", desc: "Tesla inspired research and modern interpretations for sovereign living.", links: [{href:"#",label:"View"}] },
+        { img: "assets/covers/id01t-academy-python-2.jpg", title: "iD01t Academy, Python Exercises Book 2, Edition 2", meta: "Software and eBook", desc: "Full GUI app and exercises, packaged for Windows.", links: [{href:"#",label:"Download"}] },
+        { img: "assets/covers/contractbuilder.jpg", title: "ContractBuilder AI", meta: "Software", desc: "Quotes and contracts generator with email integration and templates.", links: [{href:"#",label:"Download"}] }
       ],
       music: [
-        { img: "assets/covers/final-transmission.jpg", title: "Final Transmission", meta: "Album", desc: "Available on Spotify, YouTube, Amazon Music.", links: [{href:"#",label:"Listen"}] }
+        { img: "assets/covers/final-transmission.jpg", title: "Final Transmission", meta: "Album, 13 tracks", desc: "Available on Spotify, YouTube, Amazon Music, and more.", links: [
+          {href:"https://youtube.com/playlist?list=placeholder",label:"Watch"},
+          {href:"#",label:"Listen"}
+        ] },
+        { img: "assets/covers/no-master-needed.jpg", title: "No Master Needed", meta: "Official Video", desc: "High energy visual built with Veo and Sora style cinematics.", links: [{href:"#",label:"Watch"}] }
       ],
       software: [
-        { img: "assets/covers/py2win.jpg", title: "Py2Win", meta: "Windows Packaging", desc: "Turn Python apps into polished Windows installers.", links: [{href:"https://github.com/iD01tStore/Py2win/releases",label:"Releases"}] }
+        { img: "assets/covers/py2win.jpg", title: "Py2Win", meta: "Windows Packaging", desc: "Turn Python apps into polished Windows installers, documented for Microsoft Store.", links: [
+          {href:"https://github.com/iD01tStore/Py2win/releases",label:"Releases"},
+          {href:"https://github.com/iD01tStore/Py2win",label:"GitHub"}
+        ] },
+        { img: "assets/covers/quote-forge-ai.jpg", title: "QuoteForgeAI", meta: "Desktop App", desc: "Quote and contract builder, OpenAI ready, email integration, PDF export.", links: [{href:"#",label:"Download"}] },
+        { img: "assets/covers/ra7-conscious-creator.jpg", title: "RA 7 Conscious Creator", meta: "Creator System", desc: "Autonomous content engine with book builder, chart dashboard, and report generator.", links: [{href:"#",label:"Download"}] }
       ]
     };
 
@@ -260,7 +281,7 @@
       const title = el("div", {class:"title"}, [item.title]);
       const meta = el("p", {class:"meta"}, [item.meta]);
       const desc = el("p", {}, [item.desc]);
-      const cta = el("div", {class:"cta"}, (item.links||[]).map(l=>el("a",{class:"btn",href:l.href,target:"_blank"},[l.label])));
+      const cta = el("div", {class:"cta"}, (item.links||[]).map(l=>el("a",{class:"btn",href:l.href,target:"_blank",rel:"noopener"},[l.label])));
       return el("article", {class:"card"}, [img, el("div",{class:"pad"},[title, meta, desc]), cta]);
     }
 
@@ -282,7 +303,7 @@
     }
 
     function init(){
-      loadMtmtl();
+      loadPages();
       renderFeatured(DATA.featured);
       renderGrid("new-releases-grid", DATA.newReleases);
       renderGrid("best-sellers-grid", DATA.bestSellers);
