@@ -22,6 +22,46 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        /* --- Featured Product --- */
+        .featured-product-card {
+            background-color: var(--secondary-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .featured-product-card a {
+            text-decoration: none;
+            color: inherit;
+            display: grid;
+            grid-template-columns: 256px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .featured-product-card a:hover h3 {
+            color: var(--accent-color);
+        }
+
+        .featured-product-card img {
+            border-radius: 8px;
+            width: 256px;
+            height: auto;
+        }
+
+        .featured-product-info h3 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .featured-product-info p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    </style>
+
     <!-- JSON-LD for SEO -->
     <script type="application/ld+json">
     {
@@ -49,7 +89,16 @@
 
         <h3>Featured Product</h3>
         <div id="featured-product-section">
-            <p>Loading featured product...</p>
+            <div class="featured-product-card">
+                <a href="product.html?id=L_b-EAAAQBAJ">
+                    <img src="https://books.google.com/books/content?id=L_b-EAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api" alt="Cover of The Phoenix Project">
+                    <div class="featured-product-info">
+                        <h3>The Phoenix Project</h3>
+                        <p>By Gene Kim, Kevin Behr, George Spafford</p>
+                        <p>Bill is an IT manager at Parts Unlimited. It's Tuesday morning and on his drive into the office, Bill gets a call from the CEO. The company's new IT initiative, code named Phoenix Project, is critical to the future of Parts Unlimited, but the project is massively over budget and very late. The CEO wants Bill to report directly to him and fix the mess in ninety days or else Bill's entire department will be outsourced...</p>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
