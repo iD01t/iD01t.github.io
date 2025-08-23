@@ -58,7 +58,8 @@
     /* Grids and cards */
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
     .card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
-    .thumb{width:100%;aspect-ratio:16/10;object-fit:cover}
+    /* Show full image without cropping */
+    .thumb{width:100%;height:auto;object-fit:contain;display:block}
     .pad{padding:1rem}
     .title{font-size:1.05rem;margin:.2rem 0 .4rem 0}
     .meta{font-size:.9rem;color:var(--muted);margin:0}
@@ -262,7 +263,8 @@
           title: "AI Today: Transforming Lives and Industries for the Future",
           meta: "eBook",
           desc: "Explore how artificial intelligence reshapes healthcare, education, business, and society, unlocking new possibilities.",
-          links: [{href:"product.html?id=kY09EQAQBAJ",label:"View"}]
+          // Use absolute URL for product page
+          links: [{href:"https://id01t.github.io/product.html?id=kY09EQAQBAJ",label:"View"}]
         }
       ],
       bestSellers: [
@@ -271,28 +273,32 @@
           title: "Echoes of the Heart",
           meta: "eBook",
           desc: "Investigative journalist Olivia Bennett faces a dangerous investigation while falling for enigmatic attorney Jack Hawthorne in this romantic thriller.",
-          links: [{href:"product.html?id=Kwo4EQAQBAJ",label:"View"}]
+          // Use absolute URL for product page
+          links: [{href:"https://id01t.github.io/product.html?id=Kwo4EQAQBAJ",label:"View"}]
         },
         {
           img: "https://books.google.com/books/content?id=QQo4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
           title: "Echoes of Truth",
           meta: "eBook",
           desc: "Claire Mitchell uncovers a dangerous web of lies linking her husband to powerful figures, embarking on a journey of mystery, betrayal, and redemption.",
-          links: [{href:"product.html?id=QQo4EQAQBAJ",label:"View"}]
+          // Use absolute URL for product page
+          links: [{href:"https://id01t.github.io/product.html?id=QQo4EQAQBAJ",label:"View"}]
         },
         {
           img: "https://books.google.com/books/content?id=Iwo4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
           title: "Intersection: The Moment Their Paths Crossed",
           meta: "eBook",
           desc: "Investigative journalist Olivia Bennett and attorney Jack Hawthorne find their lives intersected by a dangerous conspiracy in this thriller about courage, love, and sacrifice.",
-          links: [{href:"product.html?id=Iwo4EQAQBAJ",label:"View"}]
+          // Use absolute URL for product page
+          links: [{href:"https://id01t.github.io/product.html?id=Iwo4EQAQBAJ",label:"View"}]
         },
         {
           img: "https://books.google.com/books/content?id=OQo4EQAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
           title: "Legacy of Shadows",
           meta: "eBook",
           desc: "Olivia Bennett and Jack Hawthorne confront deception and global conspiracies as their love is tested by betrayal and sinister forces.",
-          links: [{href:"product.html?id=OQo4EQAQBAJ",label:"View"}]
+          // Use absolute URL for product page
+          links: [{href:"https://id01t.github.io/product.html?id=OQo4EQAQBAJ",label:"View"}]
         }
       ],
       music: [
@@ -317,7 +323,8 @@
       ],
       software: [
         {
-          img: "assets/covers/py2win.jpg",
+          // Updated logo for Py2Win from its GitHub repository
+          img: "https://raw.githubusercontent.com/iD01t/Py2Win/c6922c396bc5ba387083159e02d4b9d6340e6db6/Py2Win.png",
           title: "Py2Win",
           meta: "Windows Packaging",
           desc: "Turn Python apps into polished Windows installers, documented for Microsoft Store.",
