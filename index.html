@@ -1,506 +1,54 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traducteur d'Âme</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --primary-color: #a890f0;
-            --input-bg: #2a2a2a;
-        }
+    <title>iD01t Store</title>
+    <meta name="description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
 
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://id01tstore.github.io/">
+    <meta property="og:title" content="iD01t Store">
+    <meta property="og:description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
+    <!-- <meta property="og:image" content="https://id01tstore.github.io/og-image.png"> -->
 
-        .container {
-            text-align: center;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 10;
-        }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://id01tstore.github.io/">
+    <meta property="twitter:title" content="iD01t Store">
+    <meta property="twitter:description" content="The official storefront for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.">
+    <!-- <meta property="twitter:image" content="https://id01tstore.github.io/og-image.png"> -->
 
-        h1 {
-            font-weight: 300;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            opacity: 0.9;
-        }
+    <link rel="stylesheet" href="css/style.css">
 
-        #input-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        #seed-input {
-            background-color: var(--input-bg);
-            border: 1px solid var(--primary-color);
-            color: var(--text-color);
-            padding: 15px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            text-align: center;
-            width: 300px;
-            transition: all 0.3s ease;
-        }
-
-        #seed-input:focus {
-            outline: none;
-            box-shadow: 0 0 15px rgba(168, 144, 240, 0.5);
-        }
-
-        #transmute-button {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
-            border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        #transmute-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(168, 144, 240, 0.4);
-        }
-        
-        #info-text {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
-
-        #visual-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-    </style>
+    <!-- JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "iD01t Store",
+      "url": "https://id01tstore.github.io/",
+      "logo": "https://id01tstore.github.io/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "admin@id01t.store",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
 </head>
 <body>
+    <div id="header-placeholder"></div>
 
-    <div class="container">
-        <h1>Traducteur d'Âme</h1>
-        <div id="input-container">
-            <input type="text" id="seed-input" placeholder="Quelle est ta vérité ?">
-            <button id="transmute-button">Transmuter</button>
-        </div>
-        <p id="info-text">Essaie : paix, fatigue, unité, amour, doute</p>
-    </div>
+    <main>
+        <h2>Welcome to the iD01t Store</h2>
+        <p>Your source for ebooks and audiobooks by Guillaume Lessard and iD01t Productions.</p>
+    </main>
 
-    <canvas id="visual-canvas"></canvas>
+    <div id="footer-placeholder"></div>
 
-    <script>
-        // --- SETUP ---
-        const canvas = document.getElementById('visual-canvas');
-        const ctx = canvas.getContext('2d');
-        const input = document.getElementById('seed-input');
-        const button = document.getElementById('transmute-button');
-
-        let animationFrameId;
-        let currentAnimation = null;
-        let audioInitialized = false;
-
-        // Redimensionner le canvas pour remplir l'écran
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        // --- MOTEUR AUDIO (Tone.js) ---
-        // Les synthétiseurs sont créés ici pour être réutilisés
-        const synth = new Tone.Synth({ oscillator: { type: 'sine' }, envelope: { attack: 2, decay: 1, sustain: 0.8, release: 4 } }).toDestination();
-        const synthPad = new Tone.PolySynth(Tone.Synth, { oscillator: { type: 'fatsine' }, envelope: { attack: 4, decay: 0.5, sustain: 0.8, release: 4 } }).toDestination();
-        const noise = new Tone.Noise("pink").toDestination();
-        noise.volume.value = -20;
-        
-        // Fonction pour arrêter tous les sons en douceur
-        function stopAllSounds() {
-            synth.triggerRelease();
-            synthPad.releaseAll();
-            if (noise.state === 'started') {
-                noise.stop();
-            }
-        }
-        
-        // Initialiser l'audio au premier clic pour les politiques de navigateur
-        async function initializeAudio() {
-            if (!audioInitialized) {
-                await Tone.start();
-                console.log('Audio context started');
-                audioInitialized = true;
-            }
-        }
-
-        // --- GESTIONNAIRE D'ÉVÉNEMENTS ---
-        button.addEventListener('click', () => {
-            initializeAudio();
-            const seed = input.value.trim().toLowerCase();
-            transmute(seed);
-        });
-        
-        input.addEventListener('keyup', (event) => {
-            if (event.key === 'Enter') {
-                initializeAudio();
-                const seed = input.value.trim().toLowerCase();
-                transmute(seed);
-            }
-        });
-
-
-        // --- FONCTION DE TRANSMUTATION PRINCIPALE ---
-        function transmute(seed) {
-            // Arrêter l'animation et les sons précédents
-            if (animationFrameId) {
-                cancelAnimationFrame(animationFrameId);
-                animationFrameId = null;
-            }
-            stopAllSounds();
-            
-            // Effacer le canvas avec un fondu
-            ctx.fillStyle = 'rgba(26, 26, 26, 0.3)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            // Sélectionner la nouvelle animation/son
-            switch (seed) {
-                case 'paix':
-                    currentAnimation = peaceAnimation();
-                    break;
-                case 'fatigue':
-                    currentAnimation = fatigueAnimation();
-                    break;
-                case 'unité':
-                    currentAnimation = unityAnimation();
-                    break;
-                case 'amour':
-                    currentAnimation = loveAnimation();
-                    break;
-                case 'doute':
-                    currentAnimation = doubtAnimation();
-                    break;
-                default:
-                    currentAnimation = null;
-                    // Animation par défaut si le mot n'est pas reconnu
-                    ctx.fillStyle = 'white';
-                    ctx.font = '20px Inter';
-                    ctx.textAlign = 'center';
-                    ctx.fillText("L'univers attend ta semence.", canvas.width / 2, canvas.height / 2);
-            }
-
-            if (currentAnimation) {
-                currentAnimation.init();
-                animate();
-            }
-        }
-
-        // --- BOUCLE D'ANIMATION GLOBALE ---
-        function animate() {
-            // Effet de fondu pour laisser une traînée subtile
-            ctx.fillStyle = 'rgba(26, 26, 26, 0.1)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            if (currentAnimation) {
-                currentAnimation.update();
-            }
-            animationFrameId = requestAnimationFrame(animate);
-        }
-
-        // --- MODULES DE VISUALISATION & SON ---
-
-        // 1. PAIX
-        function peaceAnimation() {
-            let radius, opacity, hue;
-            
-            function init() {
-                radius = 0;
-                opacity = 1;
-                hue = 240; // Bleu/Violet
-                synthPad.triggerAttackRelease(['C2', 'G2'], '8n');
-            }
-
-            function update() {
-                radius += 0.5;
-                opacity -= 0.005;
-                hue += 0.1;
-
-                if (opacity <= 0) {
-                    radius = 0;
-                    opacity = 1;
-                    hue = 240;
-                }
-
-                ctx.beginPath();
-                ctx.arc(canvas.width / 2, canvas.height / 2, radius, 0, Math.PI * 2);
-                ctx.fillStyle = `hsla(${hue}, 100%, 70%, ${opacity})`;
-                ctx.fill();
-            }
-            return { init, update };
-        }
-
-        // 2. FATIGUE
-        function fatigueAnimation() {
-            let radius, alpha;
-
-            function init() {
-                radius = 0;
-                alpha = 0;
-                stopAllSounds(); // Commence en silence
-                ctx.fillStyle = '#1a1a1a'; // Fond sombre
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-            }
-
-            function update() {
-                if (radius < 100) {
-                    radius += 0.1;
-                    alpha += 0.001;
-                    // Le son émerge doucement avec la lumière
-                    if (synth.volume.value < -6) {
-                         synth.volume.value += 0.02;
-                    }
-                }
-                
-                if (radius > 1 && synth.state !== 'started') {
-                    synth.volume.value = -40;
-                    synth.triggerAttack('C3');
-                }
-
-                // Dégradé radial pour la lumière
-                const gradient = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, radius * 3);
-                gradient.addColorStop(0, `rgba(255, 240, 200, ${alpha * 2})`);
-                gradient.addColorStop(1, `rgba(255, 240, 200, 0)`);
-                
-                ctx.fillStyle = gradient;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-            }
-            return { init, update };
-        }
-
-        // 3. UNITÉ (Dodécaèdre)
-        function unityAnimation() {
-            let angleX, angleY;
-            const vertices = [];
-            const edges = [];
-            const scale = Math.min(canvas.width, canvas.height) / 6;
-            
-            function init() {
-                angleX = 0;
-                angleY = 0;
-                
-                // Calculer les sommets d'un dodécaèdre
-                const phi = (1 + Math.sqrt(5)) / 2; // Le Nombre d'Or
-                const a = 1 / phi;
-                const b = phi;
-
-                // Générer les 20 sommets
-                const points = [
-                    [1, 1, 1], [-1, 1, 1], [1, -1, 1], [-1, -1, 1],
-                    [1, 1, -1], [-1, 1, -1], [1, -1, -1], [-1, -1, -1],
-                    [0, a, b], [0, -a, b], [0, a, -b], [0, -a, -b],
-                    [a, b, 0], [-a, b, 0], [a, -b, 0], [-a, -b, 0],
-                    [b, 0, a], [-b, 0, a], [b, 0, -a], [-b, 0, -a]
-                ];
-                
-                vertices.length = 0; // Vider le tableau
-                points.forEach(p => vertices.push({x: p[0], y: p[1], z: p[2]}));
-                
-                // Définir les 30 arêtes
-                edges.length = 0;
-                edges.push(
-                    [0, 12], [0, 16], [0, 2], [12, 13], [12, 4], [16, 17], [16, 1],
-                    [2, 9], [2, 14], [9, 8], [9, 3], [14, 15], [14, 6], [8, 1], [8, 17],
-                    [1, 13], [3, 15], [3, 17], [13, 5], [15, 7], [5, 10], [5, 19],
-                    [7, 11], [7, 18], [10, 4], [10, 11], [4, 18], [11, 19], [18, 19], [6, 18], [6, 7]
-                );
-                
-                // Son de l'unité : une quinte parfaite
-                synthPad.triggerAttackRelease(['C3', 'G3'], '2m');
-            }
-
-            function rotate(point, angX, angY) {
-                // Rotation Y
-                let sinY = Math.sin(angY);
-                let cosY = Math.cos(angY);
-                let x1 = point.x * cosY - point.z * sinY;
-                let z1 = point.z * cosY + point.x * sinY;
-                // Rotation X
-                let sinX = Math.sin(angX);
-                let cosX = Math.cos(angX);
-                let y2 = point.y * cosX - z1 * sinX;
-                let z2 = z1 * cosX + point.y * sinX;
-                return { x: x1, y: y2, z: z2 };
-            }
-
-            function project(point) {
-                // Projection 3D simple sur un plan 2D
-                const perspective = 300;
-                const factor = perspective / (perspective + point.z * scale);
-                return {
-                    x: point.x * scale * factor + canvas.width / 2,
-                    y: point.y * scale * factor + canvas.height / 2
-                };
-            }
-
-            function update() {
-                angleX += 0.005;
-                angleY += 0.003;
-
-                const projectedPoints = vertices.map(v => project(rotate(v, angleX, angleY)));
-
-                ctx.strokeStyle = 'rgba(168, 144, 240, 0.7)';
-                ctx.lineWidth = 1.5;
-                ctx.beginPath();
-                edges.forEach(edge => {
-                    const p1 = projectedPoints[edge[0]];
-                    const p2 = projectedPoints[edge[1]];
-                    ctx.moveTo(p1.x, p1.y);
-                    ctx.lineTo(p2.x, p2.y);
-                });
-                ctx.stroke();
-            }
-            return { init, update };
-        }
-
-        // 4. AMOUR
-        function loveAnimation() {
-            let time, hue;
-
-            function init() {
-                time = 0;
-                hue = 0; // Commence dans les rouges
-                // Un arpège doux et majeur
-                const arp = new Tone.Pattern((time, note) => {
-                    synth.triggerAttackRelease(note, '8n', time);
-                }, ['C4', 'E4', 'G4', 'C5'], "randomWalk").start(0);
-                arp.interval = '4n';
-                Tone.Transport.start();
-            }
-
-            function update() {
-                time += 0.02;
-                hue = (hue + 0.2) % 360;
-                
-                ctx.save();
-                ctx.translate(canvas.width / 2, canvas.height / 2);
-                
-                ctx.beginPath();
-                for (let i = 0; i < Math.PI * 2; i += 0.01) {
-                    const r = 150 * (1 - Math.sin(i));
-                    const x = r * Math.cos(i);
-                    const y = -r * Math.sin(i) - 50;
-                    if (i === 0) ctx.moveTo(x, y);
-                    else ctx.lineTo(x, y);
-                }
-                ctx.closePath();
-                
-                ctx.fillStyle = `hsla(${hue}, 90%, 65%, 0.5)`;
-                ctx.fill();
-                ctx.strokeStyle = `hsla(${hue}, 90%, 85%, 0.8)`;
-                ctx.lineWidth = 3;
-                ctx.stroke();
-
-                ctx.restore();
-            }
-            
-            // S'assurer d'arrêter le transport de Tone.js
-            const originalInit = init;
-            init = () => {
-                Tone.Transport.stop();
-                Tone.Transport.cancel();
-                originalInit();
-            };
-            
-            return { init, update };
-        }
-        
-        // 5. DOUTE
-        function doubtAnimation() {
-            let points, chaosFactor;
-
-            function init() {
-                points = [];
-                for (let i = 0; i < 50; i++) {
-                    points.push({
-                        x: Math.random() * canvas.width,
-                        y: Math.random() * canvas.height,
-                        vx: (Math.random() - 0.5) * 2,
-                        vy: (Math.random() - 0.5) * 2
-                    });
-                }
-                chaosFactor = 1.0;
-                
-                // Son dissonant qui se résout
-                synthPad.triggerAttack('C#3');
-                setTimeout(() => synthPad.set({notes: ['C3']}), 2000); // Résolution vers C
-                noise.start().stop('+4'); // Bruit de fond qui s'estompe
-            }
-
-            function update() {
-                if (chaosFactor > 0.01) {
-                    chaosFactor -= 0.001;
-                }
-
-                ctx.strokeStyle = `rgba(200, 200, 200, 0.4)`;
-                ctx.lineWidth = 0.5;
-                ctx.beginPath();
-                for (let i = 0; i < points.length; i++) {
-                    const p1 = points[i];
-                    // Mouvement chaotique qui se calme
-                    p1.x += p1.vx * chaosFactor;
-                    p1.y += p1.vy * chaosFactor;
-                    
-                    // Rebond sur les bords
-                    if (p1.x < 0 || p1.x > canvas.width) p1.vx *= -1;
-                    if (p1.y < 0 || p1.y > canvas.height) p1.vy *= -1;
-
-                    // Relier les points proches
-                    for (let j = i + 1; j < points.length; j++) {
-                        const p2 = points[j];
-                        const dx = p1.x - p2.x;
-                        const dy = p1.y - p2.y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        if (dist < 150) {
-                            ctx.moveTo(p1.x, p1.y);
-                            ctx.lineTo(p2.x, p2.y);
-                        }
-                    }
-                }
-                ctx.stroke();
-            }
-            return { init, update };
-        }
-
-
-    </script>
+    <script src="js/templating.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
-
