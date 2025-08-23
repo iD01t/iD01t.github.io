@@ -56,7 +56,15 @@ function createFeaturedProductCard(book) {
     card.className = 'featured-product-card'; // Use a different class for styling
 
     const productLink = document.createElement('a');
-    productLink.href = `product.html?id=${book.id}`;
+card.className = 'featured-product-card'; // Use a different class for styling
+
+    const productLink = document.createElement('a');
+    // Import DOMPurify for sanitization
+    // DOMPurify is used to sanitize user input and prevent XSS attacks
+    productLink.href = `product.html?id=${DOMPurify.sanitize(book.id)}`;
+
+    const coverImage = document.createElement('img');
+    coverImage.src = book.coverUrl?.replace('&zoom=1', '&zoom=2') || 'https://via.placeholder.com/256x384.png?text=No+Cover';
 
     const coverImage = document.createElement('img');
     coverImage.src = book.coverUrl?.replace('&zoom=1', '&zoom=2') || 'https://via.placeholder.com/256x384.png?text=No+Cover';
