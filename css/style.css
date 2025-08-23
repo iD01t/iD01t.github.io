@@ -133,3 +133,41 @@ footer .social-links a, footer .footer-nav a {
     background-color: #0056b3;
     text-decoration: none;
 }
+
+/* --- Featured Product --- */
+.featured-product-card {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.featured-product-card a {
+    text-decoration: none;
+    color: inherit;
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.featured-product-card a:hover h3 {
+    color: var(--accent-color);
+}
+
+.featured-product-card img {
+    border-radius: 8px;
+    width: 256px;
+    height: auto;
+}
+
+.featured-product-info h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.featured-product-info p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
