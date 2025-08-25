@@ -29,7 +29,17 @@ export const getProductBySlug = async (slug: string): Promise<Product | null> =>
     const products = await getProducts();
     return products.find((p) => p.slug === slug) || null;
   } catch (error) {
-    console.error(`Failed to get product by slug "${slug}":`, error);
+// Import the sanitize-log package for log sanitization
+// sanitizeLog function removes or encodes potentially harmful characters
+import { sanitizeLog } from 'sanitize-log';
+
+try {
+  const products = await getProducts();
+  return products.find((p) => p.slug === slug) || null;
+} catch (error) {
+  console.error(`Failed to get product by slug "${sanitizeLog(slug)}":`, error);
+  return null;
+}
     return null;
   }
 };
