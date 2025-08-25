@@ -3,8 +3,8 @@
     "id": "gumroad-prod-1",
     "slug": "pro-notion-template-pack",
     "title": "Pro Notion Template Pack",
-    "subtitle": "Organize your life and work.",
-    "description": "A comprehensive pack of Notion templates for productivity, project management, and personal growth.",
+    "subtitle": "The last productivity system you'll ever need.",
+    "description": "50+ interconnected templates for ultimate organization.\nSecond Brain for knowledge management.\nAdvanced Project & Task Manager.\nComprehensive Content Creation Calendar.\nFree lifetime updates.",
     "price": 49,
     "compareAtPrice": 79,
     "platform": "Gumroad",
@@ -12,59 +12,42 @@
     "media": [
       "/images/mock/product-1.webp"
     ],
-    "tags": [
-      "notion",
-      "productivity",
-      "templates"
-    ],
+    "tags": ["notion", "productivity", "templates"],
     "category": "eBooks",
     "releaseDate": "2024-08-15T10:00:00Z",
     "version": "2.0",
-    "badges": [
-      "Best Seller",
-      "Updated"
-    ]
+    "badges": ["Best Seller", "Updated"]
   },
   {
     "id": "kofi-prod-1",
     "slug": "pixel-art-icon-set",
     "title": "Pixel Art Icon Set",
-    "subtitle": "8-bit style icons for your projects.",
-    "description": "A collection of 100+ pixel art icons, perfect for games, websites, and apps. Includes source files.",
+    "subtitle": "100+ 8-bit style icons for your projects.",
+    "description": "Over 100 high-quality pixel art icons.\nIncludes .png and .aseprite source files.\nPerfect for retro games and apps.\nCommercial use license included.",
     "price": 15,
     "platform": "Ko-fi",
     "buyUrl": "https://ko-fi.com/s/fakesampleid",
     "media": [
       "/images/mock/product-2.webp"
     ],
-    "tags": [
-      "pixel art",
-      "icons",
-      "assets"
-    ],
+    "tags": ["pixel art", "icons", "assets"],
     "category": "Apps",
     "releaseDate": "2024-07-20T10:00:00Z",
-    "badges": [
-      "New"
-    ]
+    "badges": ["New"]
   },
   {
     "id": "itchio-prod-1",
     "slug": "indie-game-soundtrack",
     "title": "Indie Game Soundtrack Vol. 1",
     "subtitle": "Royalty-free music for your games.",
-    "description": "A collection of 10 original tracks, perfect for platformers, RPGs, and puzzle games. Looped and ready to use.",
+    "description": "10 original, loopable tracks.\nCovers multiple genres (8-bit, orchestral, ambient).\nHigh-quality WAV and MP3 formats.\nRoyalty-free for unlimited commercial projects.",
     "price": 25,
     "platform": "Itch.io",
     "buyUrl": "https://fake-developer.itch.io/indie-game-soundtrack",
     "media": [
       "/images/mock/product-3.webp"
     ],
-    "tags": [
-      "music",
-      "soundtrack",
-      "gamedev"
-    ],
+    "tags": ["music", "soundtrack", "gamedev"],
     "category": "Music",
     "releaseDate": "2024-06-01T10:00:00Z"
   },
@@ -72,19 +55,15 @@
     "id": "google-books-1",
     "slug": "the-art-of-conversion-copywriting",
     "title": "The Art of Conversion Copywriting",
-    "subtitle": "Turn words into revenue.",
-    "description": "A deep dive into the psychology and strategy behind high-converting copy. Learn frameworks used by top growth marketers.",
+    "subtitle": "Turn words into revenue. Instantly.",
+    "description": "Learn the AIDA & PAS frameworks.\nMaster psychological triggers that drive clicks.\nIncludes 10+ real-world case studies.\nComes with a bonus headline-writing cheat sheet.",
     "price": 9.99,
     "platform": "Google Books",
     "buyUrl": "https://play.google.com/store/books/details?id=fakeid",
     "media": [
       "/images/mock/product-4.webp"
     ],
-    "tags": [
-      "copywriting",
-      "marketing",
-      "business"
-    ],
+    "tags": ["copywriting", "marketing", "business"],
     "category": "eBooks",
     "releaseDate": "2024-05-10T10:00:00Z"
   },
@@ -92,19 +71,15 @@
     "id": "manual-prod-1",
     "slug": "premium-consulting-session",
     "title": "Premium Consulting Session",
-    "subtitle": "1-on-1 strategy call.",
-    "description": "A 60-minute one-on-one consulting session to discuss your project, strategy, or code. We will dive deep into your challenges and unlock new growth opportunities.",
+    "subtitle": "A 60-minute 1-on-1 strategy call.",
+    "description": "Deep dive into your project's code or strategy.\nActionable feedback and clear next steps.\nRecording of the session provided.\nFollow-up email summary with key takeaways.",
     "price": 499,
     "platform": "Manual",
     "buyUrl": "/contact?service=consulting",
     "media": [
       "/images/mock/product-5.webp"
     ],
-    "tags": [
-      "consulting",
-      "strategy",
-      "1-on-1"
-    ],
+    "tags": ["consulting", "strategy", "1-on-1"],
     "category": "Services",
     "releaseDate": "2024-01-01T10:00:00Z"
   }

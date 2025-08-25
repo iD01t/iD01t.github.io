@@ -6,10 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "sync": "npx tsx scripts/sync-products.ts"
+    "lint": "next lint",
+    "sync": "npx tsx scripts/sync-products.ts",
+    "test": "npx tsx scripts/run-unit-tests.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-separator": "^1.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.541.0",
