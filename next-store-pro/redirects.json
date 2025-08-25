@@ -1,0 +1,12 @@
+[
+  {
+    "source": "/old-product-page",
+    "destination": "/products/new-product-slug",
+    "permanent": true
+  },
+  {
+    "source": "/old-blog/:slug",
+    "destination": "/blog/:slug",
+    "permanent": false
+  }
+]
