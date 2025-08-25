@@ -19,7 +19,33 @@ export const CookieBanner = () => {
 
   const handleAccept = () => {
     // In a real app, you might distinguish between 'accepted' and 'denied'.
-    localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+useEffect(() => {
+    // The banner is only shown if consent has not been explicitly given or denied.
+    try {
+      const consentStatus = localStorage.getItem(COOKIE_CONSENT_KEY);
+      if (!consentStatus) {
+        setShowBanner(true);
+      }
+    } catch (error) {
+      console.error('Error accessing localStorage:', error);
+      setShowBanner(true);
+    }
+  }, []);
+
+  const handleAccept = () => {
+    // In a real app, you might distinguish between 'accepted' and 'denied'.
+    try {
+      localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+      setShowBanner(false);
+      // Reload the page to apply analytics scripts if they were blocked.
+      // A more sophisticated approach might use a state management solution.
+      window.location.reload();
+    } catch (error) {
+      console.error('Error setting localStorage:', error);
+    }
+  };
+
+  if (!showBanner) {
     setShowBanner(false);
     // Reload the page to apply analytics scripts if they were blocked.
     // A more sophisticated approach might use a state management solution.
