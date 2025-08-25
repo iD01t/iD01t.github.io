@@ -72,7 +72,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="flex flex-col gap-4">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border shadow-sm">
               <Image
-                src={product.media[0]}
+<div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border">
+              <Image
+                src={product.media[0] || '/images/placeholder.webp'}
+                alt={product.title}
+                fill
+                className="object-cover"
                 alt={product.title}
                 fill
                 className="object-cover"
