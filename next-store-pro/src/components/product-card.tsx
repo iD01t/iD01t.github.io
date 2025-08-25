@@ -15,7 +15,13 @@ export const ProductCard = ({ product, className }: ProductCardProps) => {
       <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-shadow hover:shadow-md">
         <div className="relative aspect-[4/3] w-full overflow-hidden">
           <Image
-            src={product.media[0] || '/images/placeholder.webp'}
+<div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-shadow hover:shadow-md">
+        <div className="relative aspect-[4/3] w-full overflow-hidden">
+          <Image
+            src={product.media?.length > 0 ? product.media[0] : '/images/placeholder.webp'}
+            alt={product.title}
+            fill
+            className="object-cover transition-transform group-hover:scale-105"
             alt={product.title}
             fill
             className="object-cover transition-transform group-hover:scale-105"
