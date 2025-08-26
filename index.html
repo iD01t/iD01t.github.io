@@ -1,420 +1,125 @@
-# Write an updated professional index.html that fixes "New Releases" and "Best Sellers" loading,
-# and adds "Music" and "Software" sections. It includes a dynamic .mtmtl dropdown using GitHub API
-# and uses inline JS to render content without external JS dependencies.
-
-html_content = r"""<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>iD01t Store</title>
-  <meta name="description" content="Official hub for eBooks, music, and software by Guillaume Lessard and iD01t Productions.">
-  <link rel="icon" href="favicon.ico">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://id01tstore.github.io/">
-  <meta property="og:title" content="iD01t Store">
-  <meta property="og:description" content="Official hub for eBooks, music, and software by Guillaume Lessard and iD01t Productions.">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://id01tstore.github.io/">
-  <meta property="twitter:title" content="iD01t Store">
-  <meta property="twitter:description" content="Official hub for eBooks, music, and software by Guillaume Lessard and iD01t Productions.">
-
-  <style>
-    :root{
-      --bg: #0b0e14;
-      --fg: #e6e9ef;
-      --muted: #9aa0a6;
-      --accent: #6ae3ff;
-      --card: #121722;
-      --border: #1d2433;
-    }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,Segoe UI,Roboto,Inter,Arial,sans-serif}
-    a{color:inherit}
-    /* Top Bar */
-    .topbar{
-      position:sticky;top:0;z-index:50;
-      background:rgba(11,14,20,.85);backdrop-filter:saturate(120%) blur(8px);
-      border-bottom:1px solid var(--border)
-    }
-    .topbar-inner{
-      max-width:1200px;margin:0 auto;padding:.75rem 1rem;display:flex;align-items:center;gap:1rem
-    }
-    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
-    .brand img{width:28px;height:28px;border-radius:6px;display:block}
-    .brand span{font-weight:700;letter-spacing:.3px}
-    .nav{margin-left:auto;display:flex;align-items:center;gap:.75rem}
-    .nav a, .nav button{
-      padding:.5rem .8rem;border:1px solid var(--border);border-radius:.6rem;background:transparent;color:var(--fg);
-      text-decoration:none;cursor:pointer
-    }
-    .nav a:hover, .nav button:hover{border-color:var(--accent)}
-    /* Dropdown */
-    .dropdown{position:relative}
-    .dropdown-menu{
-      position:absolute;right:0;top:calc(100% + .5rem);
-      min-width:320px;max-height:60vh;overflow:auto;
-      background:var(--card);border:1px solid var(--border);border-radius:.8rem;box-shadow:0 10px 30px rgba(0,0,0,.5);
-      display:none;padding:.5rem
-    }
-    .dropdown.open .dropdown-menu{display:block}
-    .dropdown h4{margin:.25rem .5rem .5rem;font-size:.9rem;color:var(--muted);font-weight:600}
-    .file-list{list-style:none;margin:0;padding:0}
-    .file-list li{border-radius:.5rem}
-    .file-list a{display:block;padding:.55rem .6rem;border-radius:.5rem;color:var(--fg);text-decoration:none}
-    .file-list a:hover{background:#0f1421;border-color:transparent;color:var(--accent)}
-    .empty{padding:.75rem .6rem;color:var(--muted)}
-    /* Main */
-    main{max-width:1200px;margin:2rem auto;padding:0 1rem}
-    .pill{font-size:.85rem;border:1px solid var(--border);padding:.25rem .5rem;border-radius:999px;color:var(--muted)}
-    hr{margin:20px 0;border:0;border-top:1px solid var(--border)}
-    footer{max-width:1200px;margin:2rem auto;padding:1rem;color:var(--muted)}
-    /* Cards */
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
-    .thumb{width:100%;aspect-ratio:16/10;object-fit:cover}
-    .pad{padding:1rem}
-    .title{font-size:1.05rem;margin:.2rem 0 .4rem 0}
-    .meta{font-size:.9rem;color:var(--muted);margin:0}
-    .cta{margin-top:auto;display:flex;gap:.5rem;padding:1rem}
-    .btn{flex:1;text-align:center;border:1px solid var(--border);border-radius:.6rem;padding:.55rem .8rem;text-decoration:none}
-    .btn:hover{border-color:var(--accent)}
-    .section-head{display:flex;align-items:baseline;gap:.75rem}
-    .section-head h3{margin:.2rem 0}
-    .section-head small{color:var(--muted)}
-    /* Featured */
-    .featured{display:grid;grid-template-columns:320px 1fr;gap:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:2rem}
-    .featured img{width:100%;height:auto;border-radius:8px}
-    @media (max-width:820px){
-      .featured{grid-template-columns:1fr}
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>iD01t Productions — Creative Dev & Production</title>
+  <meta name="description" content="iD01t Productions — professional web & media production, development, and creative services." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Top Bar -->
-  <header class="topbar" role="banner">
-    <div class="topbar-inner">
-      <a class="brand" href="./" aria-label="iD01t Store, home">
-        <img src="logo.png" alt="" onerror="this.style.display='none'">
-        <span>iD01t Store</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="iD01t Productions Home">
+        <!-- inline SVG logo -->
+        <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <rect width="100" height="100" rx="20" fill="#0f172a"></rect>
+          <text x="50" y="60" font-size="48" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif">iD</text>
+        </svg>
+        <span class="brand-name">iD01t Productions</span>
       </a>
 
-      <nav class="nav" role="navigation" aria-label="Primary">
-        <a href="./" aria-current="page">Home</a>
-        <a href="#ebooks">eBooks</a>
-        <a href="#music">Music</a>
-        <a href="#software">Software</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
 
-        <!-- Dynamic .mtmtl menu -->
-        <div class="dropdown" id="mtmtlDropdown">
-          <button type="button" aria-expanded="false" aria-controls="mtmtlMenu">MTMTL Files</button>
-          <div class="dropdown-menu" id="mtmtlMenu" role="menu" aria-label=".mtmtl file list">
-            <h4>.mtmtl in this repo</h4>
-            <ul class="file-list" id="mtmtlList">
-              <li class="empty">Scanning repo, one moment…</li>
-            </ul>
-          </div>
-        </div>
+      <nav id="primary-nav" class="primary-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="cta">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <h2>Welcome to the iD01t Store <span class="pill">Live</span></h2>
-    <p>Discover fresh releases, music, and software by Guillaume Lessard and iD01t Productions.</p>
-
-    <!-- Featured -->
-    <section id="featured" class="featured" aria-label="Featured">
-      <img id="featuredImg" src="" alt="Featured cover">
-      <div>
-        <h3 id="featuredTitle"></h3>
-        <p class="meta" id="featuredMeta"></p>
-        <p id="featuredDesc"></p>
-        <div class="cta">
-          <a id="featuredPrimary" class="btn" href="#" target="_blank" rel="noopener">View</a>
-          <a id="featuredSecondary" class="btn" href="#" target="_blank" rel="noopener">Details</a>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>We craft meaningful digital experiences & cinematic production.</h1>
+          <p class="lead">Design-driven web development, video production, and creative consulting for teams and brands that want to stand out.</p>
+          <p>
+            <a href="portfolio.html" class="btn">View Work</a>
+            <a href="contact.html" class="btn btn-outline">Start a Project</a>
+          </p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="device-mockup">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="">
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- New Releases -->
-    <div class="section-head"><h3>New Releases</h3><small>Updated</small></div>
-    <section id="new-releases-grid" class="grid" aria-label="New Releases">
-      <!-- Cards injected by JS -->
+    <section class="services container">
+      <h2>Services</h2>
+      <div class="grid services-grid">
+        <article class="card">
+          <h3>Web Development</h3>
+          <p>React, Vue, static sites, progressive web apps, accessible and SEO-friendly code.</p>
+        </article>
+        <article class="card">
+          <h3>Video & Production</h3>
+          <p>Short films, corporate video, editing, color grading and motion graphics.</p>
+        </article>
+        <article class="card">
+          <h3>Brand & Design</h3>
+          <p>Identity, visual design, UX consulting and creative direction.</p>
+        </article>
+      </div>
     </section>
 
-    <hr>
-
-    <!-- Best Sellers -->
-    <div class="section-head"><h3>Best Sellers</h3><small>Community favorites</small></div>
-    <section id="best-sellers-grid" class="grid" aria-label="Best Sellers">
-      <!-- Cards injected by JS -->
+    <section class="portfolio-preview container">
+      <h2>Featured Projects</h2>
+      <div class="grid portfolio-grid">
+        <figure class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="Campaign visual">
+          <figcaption>
+            <h4>Brand Campaign</h4>
+            <p>Strategy, production, and web campaign launch.</p>
+          </figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="App UI">
+          <figcaption>
+            <h4>Product Website</h4>
+            <p>Frontend and performance-first build with CMS integration.</p>
+          </figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1508923567004-3a6b8004f3d1?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="Editorial shoot">
+          <figcaption>
+            <h4>Editorial Series</h4>
+            <p>Photo and editorial video series for print and web.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="align-center"><a href="portfolio.html" class="btn btn-outline">See full portfolio</a></p>
     </section>
 
-    <hr>
-
-    <!-- Music -->
-    <div id="music" class="section-head"><h3>Music</h3><small>Official albums and videos</small></div>
-    <section id="music-grid" class="grid" aria-label="Music">
-      <!-- Cards injected by JS -->
-    </section>
-
-    <hr>
-
-    <!-- Software -->
-    <div id="software" class="section-head"><h3>Software</h3><small>Apps and tools</small></div>
-    <section id="software-grid" class="grid" aria-label="Software">
-      <!-- Cards injected by JS -->
+    <section class="signup-cta">
+      <div class="container">
+        <div class="cta-inner">
+          <h3>Ready to start?</h3>
+          <p>Tell us about your project and we'll propose a plan tailored to your goals.</p>
+          <a href="contact.html" class="btn">Get in touch</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <small>&copy; <span id="y"></span> iD01t Productions, all rights reserved.</small>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> iD01t Productions — All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/iD01t" rel="noopener" target="_blank">GitHub</a>
+      </nav>
+    </div>
   </footer>
 
-  <!-- Inline JS so it runs on GitHub Pages without extra files -->
-  <script>
-    // -------- Config: Update owner, repo, branch if needed --------
-    const GH_OWNER = "iD01tStore";
-    const GH_REPO  = "id01tstore.github.io";
-    const BRANCH   = "main";
-
-    // -------- Dropdown toggle for .mtmtl --------
-    (function(){
-      const dd = document.getElementById("mtmtlDropdown");
-      const btn = dd.querySelector("button");
-      btn.addEventListener("click", () => {
-        const open = dd.classList.toggle("open");
-        btn.setAttribute("aria-expanded", String(open));
-      });
-      document.addEventListener("click", (e) => {
-        if(!dd.contains(e.target)) {
-          dd.classList.remove("open");
-          btn.setAttribute("aria-expanded","false");
-        }
-      });
-    })();
-
-    // -------- Discover .mtmtl files from repo --------
-    async function loadMtmtl(){
-      const list = document.getElementById("mtmtlList");
-      list.innerHTML = '<li class="empty">Scanning repo, one moment…</li>';
-      try{
-        const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/git/trees/${BRANCH}?recursive=1`;
-        const res = await fetch(url, { headers: { "Accept": "application/vnd.github+json" }});
-        if(!res.ok) throw new Error("GitHub API error: " + res.status);
-        const data = await res.json();
-        const files = (data.tree || []).filter(n => n.type === "blob" && /\.mtmtl$/i.test(n.path));
-        if(!files.length){
-          list.innerHTML = '<li class="empty">No .mtmtl files found.</li>';
-          return;
-        }
-        const frag = document.createDocumentFragment();
-        files.sort((a,b)=>a.path.localeCompare(b.path));
-        files.forEach(file => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = `/${encodeURI(file.path)}`; // Adjust if you prefer a viewer
-          a.textContent = file.path;
-          a.setAttribute("role","menuitem");
-          li.appendChild(a);
-          frag.appendChild(li);
-        });
-        list.innerHTML = "";
-        list.appendChild(frag);
-      }catch(err){
-        console.error(err);
-        list.innerHTML = '<li class="empty">Could not load .mtmtl files, check repo name or branch.</li>';
-      }
-    }
-
-    // -------- Data: Curated items from our work --------
-    const DATA = {
-      featured: {
-        img: "assets/covers/final-transmission.jpg",
-        title: "Final Transmission",
-        meta: "Album by DJ iD01t",
-        desc: "Thirteen tracks of cinematic electronica, official music video series included, created with an autonomous creative workflow.",
-        primary: { href: "https://open.spotify.com/album/placeholder", label: "Listen" },
-        secondary: { href: "https://youtube.com/playlist?list=placeholder", label: "Watch" }
-      },
-      newReleases: [
-        {
-          img: "assets/covers/echo-protocol.jpg",
-          title: "Echo Protocol",
-          meta: "eBook, Science and Story",
-          desc: "Creative systems, narrative AI, and production pipeline behind Echo Protocol.",
-          links: [{href:"#",label:"View"}]
-        },
-        {
-          img: "assets/covers/no-master-needed.jpg",
-          title: "No Master Needed",
-          meta: "Album",
-          desc: "Industrial, techno, and story driven soundscapes, official video included.",
-          links: [{href:"#",label:"Listen"}]
-        },
-        {
-          img: "assets/covers/python-zero-to-hero-2.jpg",
-          title: "Python Zero to Hero, Edition 2",
-          meta: "eBook",
-          desc: "Expanded projects, GUI apps, packaging and distribution, monetization ready.",
-          links: [{href:"#",label:"View"}]
-        },
-        {
-          img: "assets/covers/quote-forge-ai.jpg",
-          title: "QuoteForgeAI",
-          meta: "Software",
-          desc: "AI powered contract and quote builder with PDF export and desktop support.",
-          links: [{href:"#",label:"Download"}]
-        }
-      ],
-      bestSellers: [
-        {
-          img: "assets/covers/unstoppable.jpg",
-          title: "Unstoppable",
-          meta: "eBook",
-          desc: "Mindset, habits, and execution systems for creators and founders.",
-          links: [{href:"#",label:"View"}]
-        },
-        {
-          img: "assets/covers/free-energy-free-life.jpg",
-          title: "Free Energy, Free Life",
-          meta: "eBook",
-          desc: "Tesla inspired research and modern interpretations for sovereign living.",
-          links: [{href:"#",label:"View"}]
-        },
-        {
-          img: "assets/covers/id01t-academy-python-2.jpg",
-          title: "iD01t Academy, Python Exercises Book 2, Edition 2",
-          meta: "Software and eBook",
-          desc: "Full GUI app and exercises, packaged for Windows.",
-          links: [{href:"#",label:"Download"}]
-        },
-        {
-          img: "assets/covers/contractbuilder.jpg",
-          title: "ContractBuilder AI",
-          meta: "Software",
-          desc: "Quotes and contracts generator with email integration and templates.",
-          links: [{href:"#",label:"Download"}]
-        }
-      ],
-      music: [
-        {
-          img: "assets/covers/final-transmission.jpg",
-          title: "Final Transmission",
-          meta: "Album, 13 tracks",
-          desc: "Available on Spotify, YouTube, Amazon Music, and more.",
-          links: [
-            {href:"https://youtube.com/playlist?list=placeholder",label:"Watch"},
-            {href:"#",label:"Listen"}
-          ]
-        },
-        {
-          img: "assets/covers/no-master-needed.jpg",
-          title: "No Master Needed",
-          meta: "Official Video",
-          desc: "High energy visual built with Veo and Sora style cinematics.",
-          links: [{href:"#",label:"Watch"}]
-        }
-      ],
-      software: [
-        {
-          img: "assets/covers/py2win.jpg",
-          title: "Py2Win",
-          meta: "Windows Packaging",
-          desc: "Turn Python apps into polished Windows installers, documented for Microsoft Store.",
-          links: [
-            {href:"https://github.com/iD01tStore/Py2win/releases",label:"Releases"},
-            {href:"https://github.com/iD01tStore/Py2win",label:"GitHub"}
-          ]
-        },
-        {
-          img: "assets/covers/quote-forge-ai.jpg",
-          title: "QuoteForgeAI",
-          meta: "Desktop App",
-          desc: "Quote and contract builder, OpenAI ready, email integration, PDF export.",
-          links: [{href:"#",label:"Download"}]
-        },
-        {
-          img: "assets/covers/ra7-conscious-creator.jpg",
-          title: "RA 7 Conscious Creator",
-          meta: "Creator System",
-          desc: "Autonomous content engine with book builder, chart dashboard, and report generator.",
-          links: [{href:"#",label:"Download"}]
-        }
-      ]
-    };
-
-    // -------- Render helpers --------
-    function el(tag, attrs={}, children=[]){
-      const e = document.createElement(tag);
-      Object.entries(attrs).forEach(([k,v]) => {
-        if(k === "class") e.className = v;
-        else if(k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
-        else if(k === "html") e.innerHTML = v;
-        else e.setAttribute(k,v);
-      });
-      children.forEach(c => e.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
-      return e;
-    }
-
-    function card(item){
-      const img = el("img", {class:"thumb", src:item.img || "assets/placeholder.jpg", alt: item.title || "Cover", loading:"lazy"});
-      const title = el("div", {class:"title"}, [item.title || "Untitled"]);
-      const meta = el("p", {class:"meta"}, [item.meta || ""]);
-      const desc = el("p", {}, [item.desc || ""]);
-      const cta = el("div", {class:"cta"}, (item.links||[]).map(l=>el("a",{class:"btn",href:l.href,target:"_blank",rel:"noopener"},[l.label])));
-      return el("article", {class:"card"}, [img, el("div",{class:"pad"},[title, meta, desc]), cta]);
-    }
-
-    function renderGrid(id, items){
-      const root = document.getElementById(id);
-      root.innerHTML = "";
-      if(!items || !items.length){
-        root.appendChild(el("p",{class:"meta"},["No items to display."]));
-        return;
-      }
-      items.forEach(it => root.appendChild(card(it)));
-    }
-
-    function renderFeatured(f){
-      const img = document.getElementById("featuredImg");
-      const title = document.getElementById("featuredTitle");
-      const meta = document.getElementById("featuredMeta");
-      const desc = document.getElementById("featuredDesc");
-      const a1 = document.getElementById("featuredPrimary");
-      const a2 = document.getElementById("featuredSecondary");
-
-      img.src = f.img || "assets/placeholder.jpg";
-      title.textContent = f.title || "";
-      meta.textContent = f.meta || "";
-      desc.textContent = f.desc || "";
-      a1.href = (f.primary && f.primary.href) || "#";
-      a1.textContent = (f.primary && f.primary.label) || "View";
-      a2.href = (f.secondary && f.secondary.href) || "#";
-      a2.textContent = (f.secondary && f.secondary.label) || "Details";
-    }
-
-    // -------- Init --------
-    function init(){
-      loadMtmtl();
-      renderFeatured(DATA.featured);
-      renderGrid("new-releases-grid", DATA.newReleases);
-      renderGrid("best-sellers-grid", DATA.bestSellers);
-      renderGrid("music-grid", DATA.music);
-      renderGrid("software-grid", DATA.software);
-      document.getElementById("y").textContent = new Date().getFullYear();
-    }
-    document.addEventListener("DOMContentLoaded", init);
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
-"""
-
-with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
-
-"/mnt/data/index.html"

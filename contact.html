@@ -1,25 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - iD01t Store</title>
-    <meta name="description" content="Contact iD01t Productions for support or inquiries.">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — iD01t Productions</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="header-placeholder"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0f172a"></rect><text x="50" y="60" font-size="48" text-anchor="middle" fill="#fff">iD</text></svg><span class="brand-name">iD01t Productions</span></a>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="cta active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <h2>Contact Us</h2>
-        <p>For any questions, support requests, or general inquiries, please reach out to us.</p>
-        <p><strong>Primary Contact:</strong> <a href="mailto:admin@id01t.store">admin@id01t.store</a></p>
-        <p>We typically respond within 1-2 business days.</p>
-    </main>
+  <main class="container contact-page">
+    <h1>Contact</h1>
+    <p>Tell us about your project. We'll respond within 2 business days.</p>
 
-    <div id="footer-placeholder"></div>
+    <!-- Example: Formspree endpoint. Replace with your form backend or Formspree ID -->
+    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <label>
+        Name
+        <input required type="text" name="name" placeholder="Your name">
+      </label>
 
-    <script src="js/templating.js"></script>
-    <script src="js/main.js"></script>
+      <label>
+        Email
+        <input required type="email" name="_replyto" placeholder="you@example.com">
+      </label>
+
+      <label>
+        Project details
+        <textarea required name="message" rows="6" placeholder="Tell us about your needs"></textarea>
+      </label>
+
+      <input type="hidden" name="_subject" value="New inquiry from website">
+      <button type="submit" class="btn">Send</button>
+      <p class="muted">Or email us directly at <a href="mailto:hello@id01tproductions.example">hello@id01tproductions.example</a></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year-contact"></span> iD01t Productions</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year-contact').textContent = new Date().getFullYear();</script>
 </body>
 </html>
