@@ -1,121 +1,57 @@
-/* iD01t Productions - Custom CSS Overrides */
+/* iD01t Productions Website - Custom CSS */
 /* Small overrides and print-friendly rules */
 
 /* Print styles */
 @media print {
-  * {
-    background: white !important;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  
-  body {
-    font-size: 12pt;
-    line-height: 1.4;
-  }
-  
-  header, footer, nav, .no-print {
+  /* Hide navigation and non-essential elements */
+  header,
+  nav,
+  footer,
+  .no-print {
     display: none !important;
   }
   
-  a[href]:after {
-    content: " (" attr(href) ")";
+  /* Ensure white background and black text */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
   }
   
-  .page-break {
-    page-break-before: always;
+  /* Optimize page breaks */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  /* Ensure images print well */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Remove shadows and borders for clean print */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 }
 
 /* Custom utility classes */
-.text-balance {
-  text-wrap: balance;
+.card-hover {
+  transition: all 0.2s ease-in-out;
 }
 
-.aspect-16-10 {
-  aspect-ratio: 16 / 10;
+.card-hover:hover {
+  transform: translateY(-2px);
 }
 
-/* Smooth transitions for theme switching */
-* {
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-/* Focus styles for accessibility */
-.focus-visible:focus-visible {
-  outline: 2px solid #545cff;
-  outline-offset: 2px;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: #1e293b;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #475569;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
-}
-
-/* Loading states */
-.loading {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border: 2px solid #f3f4f6;
-  border-top: 2px solid #545cff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Modal backdrop blur */
-.modal-backdrop {
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-/* Custom link underline animation */
-.link-underline-custom {
+.link-underline {
   position: relative;
   text-decoration: none;
 }
 
-.link-underline-custom::after {
+.link-underline::after {
   content: '';
   position: absolute;
   width: 0;
@@ -123,70 +59,77 @@
   bottom: -2px;
   left: 0;
   background-color: currentColor;
-  transition: width 0.3s ease;
+  transition: width 0.2s ease-in-out;
 }
 
-.link-underline-custom:hover::after {
+.link-underline:hover::after {
   width: 100%;
-}
-
-/* Card hover effects */
-.card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.dark .card-hover:hover {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #545cff 0%, #7a82ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Custom button styles */
-.btn-primary {
-  @apply bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200;
-}
-
-.btn-secondary {
-  @apply border border-slate-300 dark:border-slate-700 px-6 py-3 rounded-full font-medium transition-colors duration-200 hover:bg-slate-50 dark:hover:bg-slate-900;
 }
 
 /* Form input focus states */
 .form-input:focus {
   outline: none;
-  border-color: #545cff;
-  box-shadow: 0 0 0 3px rgba(84, 92, 255, 0.1);
+  border-color: rgb(59 130 246);
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
 }
 
-/* Dark mode specific overrides */
+/* Dark mode form input focus */
 .dark .form-input:focus {
-  box-shadow: 0 0 0 3px rgba(84, 92, 255, 0.2);
+  border-color: rgb(96 165 250);
+  box-shadow: 0 0 0 3px rgb(96 165 250 / 0.1);
 }
 
-/* Responsive text sizing */
-.text-responsive-xl {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+/* Modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
 }
 
-.text-responsive-lg {
-  font-size: clamp(1.25rem, 3vw, 2rem);
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* Custom grid layouts */
-.grid-auto-fit {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
 }
 
-.grid-auto-fill {
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Focus visible styles */
+.focus-visible:focus {
+  outline: 2px solid rgb(59 130 246);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .border {
+    border-width: 2px;
+  }
+  
+  .ring {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

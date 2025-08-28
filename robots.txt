@@ -3,6 +3,3 @@ Allow: /
 
 # Sitemap
 Sitemap: https://id01t.github.io/sitemap.xml
-
-# Crawl-delay (optional, be respectful to servers)
-Crawl-delay: 1
