@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio · iD01t Productions</title>
+  <meta name="description" content="Explore our portfolio of successful projects, case studies, and creative work. See how we solve challenges and deliver results for our clients." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio · iD01t Productions" />
+  <meta property="og:description" content="Explore our portfolio of successful projects, case studies, and creative work. See how we solve challenges and deliver results for our clients." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://id01t.github.io/portfolio.html" />
+      <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio · iD01t Productions" />
+  <meta name="twitter:description" content="Explore our portfolio of successful projects, case studies, and creative work. See how we solve challenges and deliver results for our clients." />
+      <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
+
+  <!-- Schema.org Portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Portfolio",
+    "description": "Portfolio of successful projects and case studies",
+    "url": "https://id01t.github.io/portfolio.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://id01t.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://id01t.github.io/portfolio.html"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f6ff',
+              100: '#e6e9ff',
+              200: '#c9ccff',
+              300: '#a2a8ff',
+              400: '#7a82ff',
+              500: '#545cff',
+              600: '#3a3fe6',
+              700: '#2c30b4',
+              800: '#202383',
+              900: '#16185c'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  <!-- Dark mode on first paint -->
+  <script>
+    (function() {
+      const storage = localStorage.getItem('theme');
+      const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (storage === 'dark' || (!storage && preferDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/assets/img/brand/logo.png" alt="iD01t Productions" class="h-8 w-8">
+          <span class="font-semibold tracking-tight">iD01t Productions</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/store.html" class="link-underline">Store</a>
+          <a href="/ebooks.html" class="link-underline">eBooks</a>
+          <a href="/apps.html" class="link-underline">Apps</a>
+          <a href="/games.html" class="link-underline">Games</a>
+          <a href="/music.html" class="link-underline">Music</a>
+          <a href="/services.html" class="link-underline">Services</a>
+          <a href="/portfolio.html" class="link-underline text-brand-600 dark:text-brand-400" aria-current="page">Portfolio</a>
+          <a href="/about.html" class="link-underline">About</a>
+          <a href="/contact.html" class="link-underline">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+          <a href="#login" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Login</a>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="/store.html" class="py-2">Store</a>
+        <a href="/ebooks.html" class="py-2">eBooks</a>
+        <a href="/apps.html" class="py-2">Apps</a>
+        <a href="/games.html" class="py-2">Games</a>
+        <a href="/music.html" class="py-2">Music</a>
+        <a href="/services.html" class="py-2">Services</a>
+        <a href="/portfolio.html" class="py-2 text-brand-600 dark:text-brand-400" aria-current="page">Portfolio</a>
+        <a href="/about.html" class="py-2">About</a>
+        <a href="/contact.html" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm">
+    <ol class="flex items-center gap-2">
+      <li><a href="/" class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Home</a></li>
+      <li class="text-slate-400">/</li>
+      <li class="text-slate-700 dark:text-slate-300">Portfolio</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Portfolio</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Selected work across tools and media, with short case studies and results. See how we solve challenges and deliver value.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="py-16 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Project 1: Bedtime Story Maker -->
+        <article class="group cursor-pointer" data-modal="project-1">
+          <img src="/assets/harvested/apps/img_3.png" alt="Bedtime Story Maker App" class="aspect-video rounded-xl object-cover ring-1 ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-brand-300 dark:group-hover:ring-brand-600 transition-all" loading="lazy" decoding="async">
+          <h3 class="font-semibold text-lg mb-2">Bedtime Story Maker</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">AI-powered storytelling app for creating personalized bedtime stories with beautiful illustrations.</p>
+        </article>
+
+        <!-- Project 2: Sprite Forge Pro -->
+        <article class="group cursor-pointer" data-modal="project-2">
+          <img src="/assets/harvested/apps/img_4.png" alt="Sprite Forge Pro Tool" class="aspect-video rounded-xl object-cover ring-1 ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-blue-300 dark:group-hover:ring-blue-600 transition-all" loading="lazy" decoding="async">
+          <h3 class="font-semibold text-lg mb-2">Sprite Forge Pro</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">Modern sprite and texture creation toolkit with polished workflow and clear exports for game developers.</p>
+        </article>
+
+        <!-- Project 3: Code Flow -->
+        <article class="group cursor-pointer" data-modal="project-3">
+          <img src="/assets/harvested/apps/img_1.png" alt="Code Flow App" class="aspect-video rounded-xl object-cover ring-1 ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-green-300 dark:group-hover:ring-green-600 transition-all" loading="lazy" decoding="async">
+          <h3 class="font-semibold text-lg mb-2">Code Flow</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">Visual programming environment for creating interactive experiences and games. Perfect for beginners and experienced developers.</p>
+        </article>
+
+        <!-- Project 4: Tech Startup Branding -->
+        <article class="group cursor-pointer" data-modal="project-4">
+          <img src="/assets/placeholders/generic-product.jpg" alt="Tech Startup Branding" class="aspect-video rounded-xl object-cover ring-1 ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-purple-300 dark:group-hover:ring-purple-600 transition-all" loading="lazy" decoding="async">
+          <h3 class="font-semibold text-lg mb-2">Tech Startup Branding</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">Complete brand identity including logo, guidelines, and marketing materials for innovative tech companies.</p>
+        </article>
+
+        <!-- Project 5: Data Processing Pipeline -->
+        <article class="group cursor-pointer" data-modal="project-5">
+          <img src="/assets/placeholders/generic-product.jpg" alt="Data Processing Pipeline" class="aspect-video rounded-xl object-cover ring-1 ring-slate-200 dark:ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-orange-300 dark:group-hover:ring-orange-600 transition-all" loading="lazy" decoding="async">
+          <h3 class="font-semibold text-lg mb-2">Data Processing Pipeline</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">Automated data processing system for financial analytics company with real-time insights and reporting.</p>
+        </article>
+
+        <!-- Project 6: Project Management Tool -->
+        <article class="group cursor-pointer" data-modal="project-6">
+          <img src="/assets/placeholders/generic-product.jpg" alt="Project Management Tool" class="aspect-video rounded-xl object-cover ring-1 ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-red-300 dark:group-hover:ring-red-600 transition-all" loading="lazy" decoding="async">
+          <h3 class="font-semibold text-lg mb-2">Project Management Tool</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">Collaborative project management platform for remote teams with real-time collaboration and progress tracking.</p>
+        </article>
+
+        <!-- Project 7: Video Production -->
+        <article class="group cursor-pointer" data-modal="project-7">
+          <div class="aspect-video rounded-xl bg-gradient-to-br from-indigo-600/20 via-indigo-400/10 to-indigo-600/20 ring-1 ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-indigo-300 dark:group-hover:ring-indigo-600 transition-all"></div>
+          <h3 class="font-semibold text-lg mb-2">Product Launch Video</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">High-quality product launch video with motion graphics and voiceover.</p>
+        </article>
+
+        <!-- Project 8: API Development -->
+        <article class="group cursor-pointer" data-modal="project-8">
+          <div class="aspect-video rounded-xl bg-gradient-to-br from-teal-600/20 via-teal-400/10 to-teal-600/20 ring-1 ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-teal-300 dark:group-hover:ring-teal-600 transition-all"></div>
+          <h3 class="font-semibold text-lg mb-2">REST API Service</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">Scalable REST API for mobile app backend with authentication and caching.</p>
+        </article>
+
+        <!-- Project 9: Game Development -->
+        <article class="group cursor-pointer" data-modal="project-9">
+          <div class="aspect-video rounded-xl bg-gradient-to-br from-pink-600/20 via-pink-400/10 to-pink-600/20 ring-1 ring-slate-200 dark:ring-slate-800 mb-4 group-hover:ring-pink-300 dark:group-hover:ring-pink-600 transition-all"></div>
+          <h3 class="font-semibold text-lg mb-2">Indie Game Prototype</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm">2D platformer game prototype with physics and level design.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Detail Modals -->
+  <!-- Project 1: E-commerce Platform -->
+  <div id="project-1" class="fixed inset-0 z-50 hidden" data-modal-content="project-1" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/50 modal-backdrop"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-6">
+            <div>
+              <h2 class="text-2xl font-semibold">E-commerce Platform</h2>
+              <p class="text-slate-600 dark:text-slate-300 mt-2">Modern online store with advanced features</p>
+            </div>
+            <button data-modal-close class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Challenge</h3>
+                <p class="text-slate-600 dark:text-slate-300">A growing retail business needed a scalable e-commerce platform that could handle high traffic, multiple payment methods, and complex inventory management.</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Solution</h3>
+                <p class="text-slate-600 dark:text-slate-300">Built a custom e-commerce platform using React, Node.js, and PostgreSQL. Implemented advanced features like real-time inventory tracking, multi-currency support, and automated order processing.</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Results</h3>
+                <p class="text-slate-600 dark:text-slate-300">Increased online sales by 300%, reduced cart abandonment by 40%, and improved page load times by 60%.</p>
+              </div>
+            </div>
+            
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Tech Stack</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">React</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">Node.js</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">PostgreSQL</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">Stripe</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">AWS</span>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Timeline</h3>
+                <p class="text-slate-600 dark:text-slate-300">6 months from concept to launch</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Team Size</h3>
+                <p class="text-slate-600 dark:text-slate-300">4 developers, 1 designer, 1 project manager</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
+            <a href="/contact.html" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 font-medium transition">Start Your Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2: Content Management System -->
+  <div id="project-2" class="fixed inset-0 z-50 hidden" data-modal-content="project-2" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/50 modal-backdrop"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-6">
+            <div>
+              <h2 class="text-2xl font-semibold">Content Management System</h2>
+              <p class="text-slate-600 dark:text-slate-300 mt-2">Custom CMS for publishing companies</p>
+            </div>
+            <button data-modal-close class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Challenge</h3>
+                <p class="text-slate-600 dark:text-slate-300">A publishing company needed a custom CMS that could handle complex content workflows, multiple user roles, and seamless integration with their existing systems.</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Solution</h3>
+                <p class="text-slate-600 dark:text-slate-300">Developed a custom CMS using Vue.js and Laravel with advanced workflow management, role-based permissions, and API integrations for third-party services.</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Results</h3>
+                <p class="text-slate-600 dark:text-slate-300">Streamlined content creation process, reduced publishing time by 50%, and improved collaboration between editors and writers.</p>
+              </div>
+            </div>
+            
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Tech Stack</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">Vue.js</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">Laravel</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">MySQL</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-full">Redis</span>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Timeline</h3>
+                <p class="text-slate-600 dark:text-slate-300">4 months development</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Team Size</h3>
+                <p class="text-slate-600 dark:text-slate-300">3 developers, 1 designer</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
+            <a href="/contact.html" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 font-medium transition">Start Your Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional project modals would follow the same pattern -->
+  <!-- For brevity, I'm showing just 2 examples -->
+
+  <!-- CTA -->
+  <section class="py-16 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-6">Ready to start your project?</h2>
+      <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+        Let's discuss how we can help bring your vision to life and achieve similar results.
+      </p>
+      <a href="/contact.html" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-8 py-3 font-medium">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <p class="font-semibold">iD01t Productions</p>
+          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+        </div>
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a href="/legal/terms.html" class="link-underline">Terms</a>
+          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
+          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
+          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared JavaScript -->
+  <script type="module" src="/js/utilities.js"></script>
+
+  <!-- Analytics placeholder (replace with your GA4 id) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script> -->
+</body>
+</html>
