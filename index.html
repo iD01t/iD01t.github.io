@@ -1,20 +1,17 @@
-# Update /mnt/data/index.html with an enhanced version of the user's site.
-# The page keeps Tailwind CDN and improves SEO, accessibility, content, and forms (Netlify-ready).
-
-content = r"""<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>iD01t Productions · Apps, eBooks, Games, Music · Official Site</title>
-  <meta name="description" content="iD01t Productions: premium apps, eBooks, games, and music. Built for speed, automation, and ROI. Beta Nini’s Adventures: Kitties Mayhem on September 24, 2025." />
+  <title>iD01t Productions Â· Apps, eBooks, Games, Music Â· Official Site</title>
+  <meta name="description" content="iD01t Productions: premium apps, eBooks, games, and music. Built for speed, automation, and ROI. Beta Niniâ€™s Adventures: Kitties Mayhem on September 24, 2025." />
   <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://id01t.github.io/" />
   <meta name="theme-color" content="#16185c" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="iD01t Productions" />
-  <meta property="og:description" content="Apps, eBooks, games, music, and services. Growth-focused. Beta Nini’s Adventures on September 24, 2025." />
+  <meta property="og:description" content="Apps, eBooks, games, music, and services. Growth-focused. Beta Niniâ€™s Adventures on September 24, 2025." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://id01t.github.io/" />
   <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
@@ -48,7 +45,7 @@ content = r"""<!DOCTYPE html>
   {
     "@context": "https://schema.org",
     "@type": "VideoGame",
-    "name": "Nini’s Adventures: Kitties Mayhem!",
+    "name": "Niniâ€™s Adventures: Kitties Mayhem!",
     "gamePlatform": "PC",
     "applicationCategory": "Game",
     "author": {"@type": "Organization", "name": "iD01t Productions"},
@@ -121,23 +118,25 @@ content = r"""<!DOCTYPE html>
   <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="#home" class="flex items-center gap-2" aria-label="Aller à l'accueil">
+        <a href="#home" class="flex items-center gap-2" aria-label="Aller Ã  l'accueil">
           <img src="/assets/img/brand/logo.png" alt="Logo iD01t Productions" class="h-8 w-8" loading="eager" decoding="async">
           <span class="font-semibold tracking-tight">iD01t Productions</span>
         </a>
-        <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
-          <a href="/store.html" class="link-underline">Store</a>
-          <a href="/ebooks.html" class="link-underline">eBooks</a>
-          <a href="/apps.html" class="link-underline">Apps</a>
-          <a href="/games.html" class="link-underline">Games</a>
-          <a href="/music.html" class="link-underline">Music</a>
-          <a href="/services.html" class="link-underline">Services</a>
-          <a href="/portfolio.html" class="link-underline">Portfolio</a>
-          <a href="/about.html" class="link-underline">About</a>
-          <a href="/contact.html" class="link-underline">Contact</a>
-        </nav>
+                  <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
+            <a href="/store.html" class="link-underline">Store</a>
+            <a href="/ebooks.html" class="link-underline">eBooks</a>
+            <a href="/audiobooks.html" class="link-underline">Audiobooks</a>
+            <a href="/series.html" class="link-underline">Series</a>
+            <a href="/apps.html" class="link-underline">Apps</a>
+            <a href="/games.html" class="link-underline">Games</a>
+            <a href="/music.html" class="link-underline">Music</a>
+            <a href="/services.html" class="link-underline">Services</a>
+            <a href="/portfolio.html" class="link-underline">Portfolio</a>
+            <a href="/about.html" class="link-underline">About</a>
+            <a href="/contact.html" class="link-underline">Contact</a>
+          </nav>
         <div class="flex items-center gap-3">
-          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm" aria-pressed="false" aria-label="Basculer le thème">Theme</button>
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm" aria-pressed="false" aria-label="Basculer le thÃ¨me">Theme</button>
           <a href="#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
           <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -147,16 +146,19 @@ content = r"""<!DOCTYPE html>
     </div>
     <!-- Mobile menu -->
     <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/store.html" class="py-2">Store</a>
-        <a href="/ebooks.html" class="py-2">eBooks</a>
-        <a href="/apps.html" class="py-2">Apps</a>
-        <a href="/games.html" class="py-2">Games</a>
-        <a href="/music.html" class="py-2">Music</a>
-        <a href="/services.html" class="py-2">Services</a>
-        <a href="/portfolio.html" class="py-2">Portfolio</a>
-        <a href="/about.html" class="py-2">About</a>
-        <a href="/contact.html" class="py-2">Contact</a>
+              <div class="px-4 py-3 flex flex-col gap-2">
+          <a href="/store.html" class="py-2">Store</a>
+          <a href="/ebooks.html" class="py-2">eBooks</a>
+          <a href="/audiobooks.html" class="py-2">Audiobooks</a>
+          <a href="/series.html" class="py-2">Series</a>
+          <a href="/apps.html" class="py-2">Apps</a>
+          <a href="/games.html" class="py-2">Games</a>
+          <a href="/music.html" class="py-2">Music</a>
+          <a href="/services.html" class="py-2">Services</a>
+          <a href="/portfolio.html" class="py-2">Portfolio</a>
+          <a href="/about.html" class="py-2">About</a>
+          <a href="/contact.html" class="py-2">Contact</a>
+        </div>
       </div>
     </div>
   </header>
@@ -170,7 +172,7 @@ content = r"""<!DOCTYPE html>
           <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">We build tools and stories for creators with clarity, speed, and measurable value. Designed for growth, automation, and a clean user journey.</p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="/store.html" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Visit Store</a>
-            <a href="#nini-beta" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3">Join Nini’s Beta</a>
+            <a href="#nini-beta" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3">Join Niniâ€™s Beta</a>
             <a href="/portfolio.html" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3">See Work</a>
           </div>
         </div>
@@ -186,7 +188,7 @@ content = r"""<!DOCTYPE html>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 class="text-3xl font-semibold">Nini’s Adventures: Kitties Mayhem! — Public PC Beta</h2>
+          <h2 class="text-3xl font-semibold">Niniâ€™s Adventures: Kitties Mayhem! â€” Public PC Beta</h2>
           <p class="mt-3 text-slate-600 dark:text-slate-300">Explosive online multiplayer shooter. Public beta on <strong>September 24, 2025</strong>. No single-player. PC only for first beta. AWS-powered servers. Limited seats.</p>
           <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300">
             <li>High-energy deathmatches with unique feline abilities</li>
@@ -195,7 +197,7 @@ content = r"""<!DOCTYPE html>
           </ul>
         </div>
         <div>
-          <img src="/assets/harvested/games/nini_hero.webp" alt="Nini’s Adventures: Kitties Mayhem artwork" class="rounded-2xl aspect-[16/10] object-cover ring-1 ring-slate-200 dark:ring-slate-800" loading="lazy" decoding="async">
+          <img src="/assets/harvested/games/nini_hero.webp" alt="Niniâ€™s Adventures: Kitties Mayhem artwork" class="rounded-2xl aspect-[16/10] object-cover ring-1 ring-slate-200 dark:ring-slate-800" loading="lazy" decoding="async">
           <form class="mt-6 grid sm:grid-cols-2 gap-3" name="nini-beta" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="nini-beta" />
             <input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="email" type="email" placeholder="Email for beta access" required>
@@ -218,7 +220,7 @@ content = r"""<!DOCTYPE html>
         <!-- Card 1 -->
         <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
           <img src="/assets/harvested/apps/img_3.png" alt="Bedtime Story Maker for Windows" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900" loading="lazy" decoding="async">
-          <h3 class="mt-4 font-semibold">Bedtime Story Maker · Windows</h3>
+          <h3 class="mt-4 font-semibold">Bedtime Story Maker Â· Windows</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Create full stories in seconds, bilingual, friendly UI, frequent updates.</p>
           <div class="mt-4 flex items-center justify-between">
             <span class="font-semibold">$9.99 CAD</span>
@@ -228,7 +230,7 @@ content = r"""<!DOCTYPE html>
         <!-- Card 2 -->
         <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
           <img src="/assets/harvested/ebooks/img_30.jpg" alt="Veo3 JSON Guide eBook" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900" loading="lazy" decoding="async">
-          <h3 class="mt-4 font-semibold">Veo3 JSON Guide · eBook</h3>
+          <h3 class="mt-4 font-semibold">Veo3 JSON Guide Â· eBook</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Learn smart JSON skills for cinematic results with real templates.</p>
           <div class="mt-4 flex items-center justify-between">
             <span class="font-semibold">$7.99 CAD</span>
@@ -238,7 +240,7 @@ content = r"""<!DOCTYPE html>
         <!-- Card 3 -->
         <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
           <img src="/assets/harvested/apps/img_4.png" alt="Sprite Forge Pro toolkit" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900" loading="lazy" decoding="async">
-          <h3 class="mt-4 font-semibold">Sprite Forge Pro · Toolkit</h3>
+          <h3 class="mt-4 font-semibold">Sprite Forge Pro Â· Toolkit</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Modern sprite and texture creation, polished workflow, clear exports.</p>
           <div class="mt-4 flex items-center justify-between">
             <span class="font-semibold">$19.00 CAD</span>
@@ -380,7 +382,7 @@ content = r"""<!DOCTYPE html>
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <p class="font-semibold">iD01t Productions</p>
-          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+          <p class="text-sm text-slate-500">Â© <span id="year"></span> All rights reserved</p>
         </div>
         <nav class="flex flex-wrap gap-4 text-sm" aria-label="Liens de pied de page">
           <a href="/legal/terms.html" class="link-underline">Terms</a>
@@ -418,19 +420,23 @@ content = r"""<!DOCTYPE html>
     }
   </script>
 
-  <!-- Analytics placeholder -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script> -->
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CHX65WY0WZ');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-M39S87SN');</script>
 
   <!-- NOTE: Ensure referenced images exist at /assets/... or update paths accordingly. -->
 </body>
 </html>
-"""
-with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
-    f.write(content)
 
-"/mnt/data/index.html saved"
