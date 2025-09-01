@@ -1,0 +1,78 @@
+{
+  "ebooks": [
+    {
+      "title": "Echo Protocol",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=",
+      "link": "https://www.google.ca/books/edition/C_Zero_to_Hero/KuB_EQAAQBAJ?hl=en&gbpv=0"
+    },
+    {
+      "title": "Quantum Jumping Unlocked Edition 2",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "/assets/images/qj2.jpg",
+      "link": "/ebooks/quantum-jumping-unlocked-edition-2.html"
+    },
+    {
+      "title": "Python Mastery",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "/assets/images/python-mastery.jpg",
+      "link": "https://play.google.com/store/books/author?id=Guillaume_Lessard"
+    },
+    {
+      "title": "AI Revolution",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "/assets/images/ai-revolution.jpg",
+      "link": "https://books.apple.com/us/author/guillaume-lessard/id1750250586"
+    }
+  ],
+  "audiobooks": [
+    {
+      "title": "Quantum Jumping Unlocked Edition 2",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=",
+      "link": "https://play.google.com/store/books/details?id=KuB_EQAAQBAJ"
+    },
+    {
+      "title": "Python Mastery",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "/assets/images/python-mastery.jpg",
+      "link": "https://play.google.com/store/books/author?id=Guillaume_Lessard"
+    },
+    {
+      "title": "Chess Mastery",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "/assets/images/chess-mastery.jpg",
+      "link": "https://books.apple.com/us/author/guillaume-lessard/id1750250586"
+    }
+  ],
+  "series": [
+    {
+      "title": "Understanding Your Cat's Mind",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "/assets/images/cats-series.jpg",
+      "link": "/series/understanding-your-cats-mind.html"
+    },
+    {
+      "title": "Python Academy Exercise Books",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "/assets/images/python-academy.jpg",
+      "link": "/series/python-academy.html"
+    },
+    {
+      "title": "Shadows Legacy",
+      "author": "Guillaume Lessard",
+      "lang": "EN",
+      "image": "/assets/images/shadows-series.jpg",
+      "link": "/series/shadows-legacy.html"
+    }
+  ]
+}
