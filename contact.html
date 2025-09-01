@@ -1,27 +1,26 @@
+&lt;!doctype html&gt;
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact · iD01t Productions</title>
-  <meta name="description" content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." />
-  <link rel="icon" href="/favicon.ico" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Contact · iD01t Productions" />
-  <meta property="og:description" content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://id01t.github.io/contact.html" />
-      <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact · iD01t Productions" />
-  <meta name="twitter:description" content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." />
-      <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
-
-  <!-- Schema.org ContactPage -->
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Contact · iD01t Productions</title>
+<meta content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." name="description"/>
+<link href="/favicon.ico" rel="icon"/>
+<!-- Open Graph -->
+<meta content="Contact · iD01t Productions" property="og:title"/>
+<meta content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.github.io/contact.html" property="og:url"/>
+<meta content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Contact · iD01t Productions" name="twitter:title"/>
+<meta content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." name="twitter:description"/>
+<meta content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" name="twitter:image"/>
+<!-- Schema.org ContactPage -->
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -47,10 +46,9 @@
     }
   }
   </script>
-
-  <!-- Tailwind CSS CDN (no build step) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<!-- Tailwind CSS CDN (no build step) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     // Tailwind config
     tailwind.config = {
       theme: {
@@ -73,12 +71,10 @@
       }
     };
   </script>
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/custom.css">
-  
-  <!-- Dark mode on first paint -->
-  <script>
+<!-- Custom CSS -->
+<link href="/css/custom.css" rel="stylesheet"/>
+<!-- Dark mode on first paint -->
+<script>
     (function() {
       const storage = localStorage.getItem('theme');
       const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -87,262 +83,210 @@
       }
     })();
   </script>
-</head>
+<link href="/assets/site.css" rel="stylesheet"/></head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="flex items-center gap-2">
-          <img src="/assets/img/brand/logo.png" alt="iD01t Productions" class="h-8 w-8">
-          <span class="font-semibold tracking-tight">iD01t Productions</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6">
-          <a href="/store.html" class="link-underline">Store</a>
-          <a href="/ebooks.html" class="link-underline">eBooks</a>
-          <a href="/apps.html" class="link-underline">Apps</a>
-          <a href="/games.html" class="link-underline">Games</a>
-          <a href="/music.html" class="link-underline">Music</a>
-          <a href="/services.html" class="link-underline">Services</a>
-          <a href="/portfolio.html" class="link-underline">Portfolio</a>
-          <a href="/about.html" class="link-underline">About</a>
-          <a href="/contact.html" class="link-underline text-brand-600 dark:text-brand-400" aria-current="page">Contact</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-          <a href="#login" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Login</a>
-          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/store.html" class="py-2">Store</a>
-        <a href="/ebooks.html" class="py-2">eBooks</a>
-        <a href="/apps.html" class="py-2">Apps</a>
-        <a href="/games.html" class="py-2">Games</a>
-        <a href="/music.html" class="py-2">Music</a>
-        <a href="/services.html" class="py-2">Services</a>
-        <a href="/portfolio.html" class="py-2">Portfolio</a>
-        <a href="/about.html" class="py-2">About</a>
-        <a href="/contact.html" class="py-2 text-brand-600 dark:text-brand-400" aria-current="page">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Breadcrumb -->
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm">
-    <ol class="flex items-center gap-2">
-      <li><a href="/" class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Home</a></li>
-      <li class="text-slate-400">/</li>
-      <li class="text-slate-700 dark:text-slate-300">Contact</li>
-    </ol>
-  </nav>
-
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-      <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Contact</h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Get in touch with us. We're here to help with your projects, questions, and collaboration opportunities.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form and Info -->
-  <section class="py-16 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16">
-        <!-- Contact Form -->
-        <div>
-          <h2 class="text-2xl font-semibold mb-6">Send us a message</h2>
-          <form class="space-y-6" name="contact" method="POST" data-netlify="true" data-success="success">
-            <input type="hidden" name="form-name" value="contact" />
-            
-            <!-- Honeypot field for spam protection -->
-            <div class="hidden">
-              <input name="bot-field" type="text" />
-            </div>
-            
-            <div class="grid sm:grid-cols-2 gap-6">
-              <div>
-                <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Name *</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  required 
-                  class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent"
-                  placeholder="Your full name"
-                >
-              </div>
-              <div>
-                <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email *</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  required 
-                  class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent"
-                  placeholder="your.email@example.com"
-                >
-              </div>
-            </div>
-            
-            <div>
-              <label for="subject" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Subject</label>
-              <select 
-                id="subject" 
-                name="subject" 
-                class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent"
-              >
-                <option value="">Select a subject</option>
-                <option value="project-inquiry">Project Inquiry</option>
-                <option value="collaboration">Collaboration</option>
-                <option value="support">Support</option>
-                <option value="general">General Question</option>
-                <option value="feedback">Feedback</option>
-              </select>
-            </div>
-            
-            <div>
-              <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Message *</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="6" 
-                required 
-                class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent"
-                placeholder="Tell us about your project or question..."
-              ></textarea>
-            </div>
-            
-            <div class="flex items-start gap-3">
-              <input 
-                type="checkbox" 
-                id="privacy" 
-                name="privacy" 
-                required 
-                class="mt-1 h-4 w-4 text-brand-600 focus:ring-brand-500 border-slate-300 rounded"
-              >
-              <label for="privacy" class="text-sm text-slate-600 dark:text-slate-300">
-                I agree to the <a href="/legal/privacy.html" class="text-brand-600 hover:text-brand-700 underline">Privacy Policy</a> and accept that my data will be processed to handle my request.
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<a class="flex items-center gap-2" href="/">
+<img alt="iD01t Productions" class="h-8 w-8" src="/assets/img/brand/logo.png"/>
+<span class="font-semibold tracking-tight">iD01t Productions</span>
+</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="link-underline" href="/store.html">Store</a>
+<a class="link-underline" href="/ebooks.html">eBooks</a>
+<a class="link-underline" href="/apps.html">Apps</a>
+<a class="link-underline" href="/games.html">Games</a>
+<a class="link-underline" href="/music.html">Music</a>
+<a class="link-underline" href="/services.html">Services</a>
+<a class="link-underline" href="/portfolio.html">Portfolio</a>
+<a class="link-underline" href="/about.html">About</a>
+<a aria-current="page" class="link-underline text-brand-600 dark:text-brand-400" href="/contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm" id="themeToggle">Theme</button>
+<a class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2" href="#login">Login</a>
+<button aria-label="Open menu" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" id="mobileMenuBtn">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" id="mobileMenu">
+<div class="px-4 py-3 flex flex-col gap-2">
+<a class="py-2" href="/store.html">Store</a>
+<a class="py-2" href="/ebooks.html">eBooks</a>
+<a class="py-2" href="/apps.html">Apps</a>
+<a class="py-2" href="/games.html">Games</a>
+<a class="py-2" href="/music.html">Music</a>
+<a class="py-2" href="/services.html">Services</a>
+<a class="py-2" href="/portfolio.html">Portfolio</a>
+<a class="py-2" href="/about.html">About</a>
+<a aria-current="page" class="py-2 text-brand-600 dark:text-brand-400" href="/contact.html">Contact</a>
+</div>
+</div>
+</header>
+<!-- Breadcrumb -->
+<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm">
+<ol class="flex items-center gap-2">
+<li><a class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300" href="/">Home</a></li>
+<li class="text-slate-400">/</li>
+<li class="text-slate-700 dark:text-slate-300">Contact</li>
+</ol>
+</nav>
+<!-- Hero -->
+<section class="relative overflow-hidden">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+<div class="text-center">
+<h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Contact</h1>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Get in touch with us. We're here to help with your projects, questions, and collaboration opportunities.</p>
+</div>
+</div>
+</section>
+<!-- Contact Form and Info -->
+<section class="py-16 border-t border-slate-200 dark:border-slate-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16">
+<!-- Contact Form -->
+<div>
+<h2 class="text-2xl font-semibold mb-6">Send us a message</h2>
+<form class="space-y-6" data-netlify="true" data-success="success" method="POST" name="contact">
+<input name="form-name" type="hidden" value="contact"/>
+<!-- Honeypot field for spam protection -->
+<div class="hidden">
+<input name="bot-field" type="text"/>
+</div>
+<div class="grid sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="name">Name *</label>
+<input class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="email">Email *</label>
+<input class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent" id="email" name="email" placeholder="your.email@example.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="subject">Subject</label>
+<select class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent" id="subject" name="subject">
+<option value="">Select a subject</option>
+<option value="project-inquiry">Project Inquiry</option>
+<option value="collaboration">Collaboration</option>
+<option value="support">Support</option>
+<option value="general">General Question</option>
+<option value="feedback">Feedback</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="message">Message *</label>
+<textarea class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent" id="message" name="message" placeholder="Tell us about your project or question..." required="" rows="6"></textarea>
+</div>
+<div class="flex items-start gap-3">
+<input class="mt-1 h-4 w-4 text-brand-600 focus:ring-brand-500 border-slate-300 rounded" id="privacy" name="privacy" required="" type="checkbox"/>
+<label class="text-sm text-slate-600 dark:text-slate-300" for="privacy">
+                I agree to the <a class="text-brand-600 hover:text-brand-700 underline" href="/legal/privacy.html">Privacy Policy</a> and accept that my data will be processed to handle my request.
               </label>
-            </div>
-            
-            <button 
-              type="submit" 
-              class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-brand-500"
-            >
+</div>
+<button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-brand-500" type="submit">
               Send Message
             </button>
-          </form>
-        </div>
-        
-        <!-- Contact Information -->
-        <div>
-          <div class="mb-6">
-            <img src="/assets/harvested/brand/og_brand.png" alt="iD01t Productions" class="h-16 w-auto mb-4" loading="lazy" decoding="async">
-          </div>
-          <h2 class="text-2xl font-semibold mb-6">Get in touch</h2>
-          <div class="space-y-6">
-            <div>
-              <h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Email</h3>
-              <p class="text-slate-600 dark:text-slate-300">hello@id01t.com</p>
-              <p class="text-sm text-slate-500 mt-1">We typically respond within 24 hours</p>
-            </div>
-            
-            <div>
-              <h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Support</h3>
-              <p class="text-slate-600 dark:text-slate-300">support@id01t.com</p>
-              <p class="text-sm text-slate-500 mt-1">For technical support and product questions</p>
-            </div>
-            
-            <div>
-              <h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Address</h3>
-              <p class="text-slate-600 dark:text-slate-300">
-                iD01t Productions<br>
-                Montreal, Quebec<br>
+</form>
+</div>
+<!-- Contact Information -->
+<div>
+<div class="mb-6">
+<img alt="iD01t Productions" class="h-16 w-auto mb-4" decoding="async" loading="lazy" src="/assets/harvested/brand/og_brand.png"/>
+</div>
+<h2 class="text-2xl font-semibold mb-6">Get in touch</h2>
+<div class="space-y-6">
+<div>
+<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Email</h3>
+<p class="text-slate-600 dark:text-slate-300">hello@id01t.com</p>
+<p class="text-sm text-slate-500 mt-1">We typically respond within 24 hours</p>
+</div>
+<div>
+<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Support</h3>
+<p class="text-slate-600 dark:text-slate-300">support@id01t.com</p>
+<p class="text-sm text-slate-500 mt-1">For technical support and product questions</p>
+</div>
+<div>
+<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Address</h3>
+<p class="text-slate-600 dark:text-slate-300">
+                iD01t Productions<br/>
+                Montreal, Quebec<br/>
                 Canada
               </p>
-            </div>
-            
-            <div>
-              <h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Business Hours</h3>
-              <p class="text-slate-600 dark:text-slate-300">
-                Monday - Friday: 9:00 AM - 6:00 PM EST<br>
-                Saturday: 10:00 AM - 4:00 PM EST<br>
+</div>
+<div>
+<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Business Hours</h3>
+<p class="text-slate-600 dark:text-slate-300">
+                Monday - Friday: 9:00 AM - 6:00 PM EST<br/>
+                Saturday: 10:00 AM - 4:00 PM EST<br/>
                 Sunday: Closed
               </p>
-            </div>
-            
-            <div class="pt-6 border-t border-slate-200 dark:border-slate-700">
-              <h3 class="font-medium text-slate-900 dark:text-slate-100 mb-3">Follow us</h3>
-              <div class="flex gap-4">
-                <a href="https://github.com/id01t" target="_blank" rel="noopener" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <a href="https://id01t.itch.io" target="_blank" rel="noopener" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 3a7 7 0 0 0-7 7v4h2v-4a5 5 0 0 1 10 0v4h2v-4a7 7 0 0 0-7-7z"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Success Message -->
-  <div id="success" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-black/50 modal-backdrop"></div>
-    <div class="relative min-h-screen flex items-center justify-center p-4">
-      <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-md w-full p-8 text-center">
-        <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-          </svg>
-        </div>
-        <h2 class="text-2xl font-semibold mb-4">Message Sent!</h2>
-        <p class="text-slate-600 dark:text-slate-300 mb-6">Thank you for reaching out. We'll get back to you within 24 hours.</p>
-        <button onclick="document.getElementById('success').classList.add('hidden')" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-200">
+</div>
+<div class="pt-6 border-t border-slate-200 dark:border-slate-700">
+<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-3">Follow us</h3>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300" href="https://github.com/id01t" rel="noopener" target="_blank">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300" href="https://id01t.itch.io" rel="noopener" target="_blank">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 3a7 7 0 0 0-7 7v4h2v-4a5 5 0 0 1 10 0v4h2v-4a7 7 0 0 0-7-7z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Message -->
+<div class="fixed inset-0 z-50 hidden" id="success">
+<div class="absolute inset-0 bg-black/50 modal-backdrop"></div>
+<div class="relative min-h-screen flex items-center justify-center p-4">
+<div class="bg-white dark:bg-slate-900 rounded-2xl max-w-md w-full p-8 text-center">
+<div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-6">
+<svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-semibold mb-4">Message Sent!</h2>
+<p class="text-slate-600 dark:text-slate-300 mb-6">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+<button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-200" onclick="document.getElementById('success').classList.add('hidden')">
           Close
         </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <p class="font-semibold">iD01t Productions</p>
-          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
-        </div>
-        <nav class="flex flex-wrap gap-4 text-sm">
-          <a href="/legal/terms.html" class="link-underline">Terms</a>
-          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
-          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
-          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Shared JavaScript -->
-  <script type="module" src="/js/utilities.js"></script>
-
-  <!-- Analytics placeholder (replace with your GA4 id) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div>
+<p class="font-semibold">iD01t Productions</p>
+<p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+</div>
+<nav class="flex flex-wrap gap-4 text-sm">
+<a class="link-underline" href="/legal/terms.html">Terms</a>
+<a class="link-underline" href="/legal/privacy.html">Privacy</a>
+<a class="link-underline" href="/legal/refunds.html">Refunds</a>
+<a class="link-underline" href="https://github.com/id01t" rel="noopener" target="_blank">GitHub</a>
+<a class="link-underline" href="https://id01t.itch.io" rel="noopener" target="_blank">itch.io</a>
+</nav>
+</div>
+</div>
+</footer>
+<!-- Shared JavaScript -->
+<script src="/js/utilities.js" type="module"></script>
+<!-- Analytics placeholder (replace with your GA4 id) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
     gtag('config', 'G-XXXXXXX');
   </script> -->
-</body>
+<script defer="" src="/assets/site.js"></script></body>
 </html>

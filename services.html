@@ -1,27 +1,26 @@
+&lt;!doctype html&gt;
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services · iD01t Productions</title>
-  <meta name="description" content="Professional web development, brand design, and automation services from iD01t Productions. Clear process, transparent pricing, and quality results." />
-  <link rel="icon" href="/favicon.ico" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Services · iD01t Productions" />
-  <meta property="og:description" content="Professional web development, brand design, and automation services from iD01t Productions. Clear process, transparent pricing, and quality results." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://id01t.github.io/services.html" />
-      <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Services · iD01t Productions" />
-  <meta name="twitter:description" content="Professional web development, brand design, and automation services from iD01t Productions. Clear process, transparent pricing, and quality results." />
-      <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
-
-  <!-- Schema.org Service -->
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Services · iD01t Productions</title>
+<meta content="Professional web development, brand design, and automation services from iD01t Productions. Clear process, transparent pricing, and quality results." name="description"/>
+<link href="/favicon.ico" rel="icon"/>
+<!-- Open Graph -->
+<meta content="Services · iD01t Productions" property="og:title"/>
+<meta content="Professional web development, brand design, and automation services from iD01t Productions. Clear process, transparent pricing, and quality results." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.github.io/services.html" property="og:url"/>
+<meta content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Services · iD01t Productions" name="twitter:title"/>
+<meta content="Professional web development, brand design, and automation services from iD01t Productions. Clear process, transparent pricing, and quality results." name="twitter:description"/>
+<meta content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" name="twitter:image"/>
+<!-- Schema.org Service -->
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -47,10 +46,9 @@
     }
   }
   </script>
-
-  <!-- Tailwind CSS CDN (no build step) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<!-- Tailwind CSS CDN (no build step) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     // Tailwind config
     tailwind.config = {
       theme: {
@@ -73,12 +71,10 @@
       }
     };
   </script>
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/custom.css">
-  
-  <!-- Dark mode on first paint -->
-  <script>
+<!-- Custom CSS -->
+<link href="/css/custom.css" rel="stylesheet"/>
+<!-- Dark mode on first paint -->
+<script>
     (function() {
       const storage = localStorage.getItem('theme');
       const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -87,380 +83,359 @@
       }
     })();
   </script>
-</head>
+<link href="/assets/site.css" rel="stylesheet"/></head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="flex items-center gap-2">
-          <img src="/assets/img/brand/logo.png" alt="iD01t Productions" class="h-8 w-8">
-          <span class="font-semibold tracking-tight">iD01t Productions</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6">
-          <a href="/store.html" class="link-underline">Store</a>
-          <a href="/ebooks.html" class="link-underline">eBooks</a>
-          <a href="/apps.html" class="link-underline">Apps</a>
-          <a href="/games.html" class="link-underline">Games</a>
-          <a href="/music.html" class="link-underline">Music</a>
-          <a href="/services.html" class="link-underline text-brand-600 dark:text-brand-400" aria-current="page">Services</a>
-          <a href="/portfolio.html" class="link-underline">Portfolio</a>
-          <a href="/about.html" class="link-underline">About</a>
-          <a href="/contact.html" class="link-underline">Contact</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-          <a href="#login" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Login</a>
-          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/store.html" class="py-2">Store</a>
-        <a href="/ebooks.html" class="py-2">eBooks</a>
-        <a href="/apps.html" class="py-2">Apps</a>
-        <a href="/games.html" class="py-2">Games</a>
-        <a href="/music.html" class="py-2">Music</a>
-        <a href="/services.html" class="py-2 text-brand-600 dark:text-brand-400" aria-current="page">Services</a>
-        <a href="/portfolio.html" class="py-2">Portfolio</a>
-        <a href="/about.html" class="py-2">About</a>
-        <a href="/contact.html" class="py-2">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Breadcrumb -->
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm">
-    <ol class="flex items-center gap-2">
-      <li><a href="/" class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Home</a></li>
-      <li class="text-slate-400">/</li>
-      <li class="text-slate-700 dark:text-slate-300">Services</li>
-    </ol>
-  </nav>
-
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-      <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Services</h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Professional web development, brand design, and automation services. We deliver quality results with clear communication and transparent processes.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Blocks -->
-  <section class="py-16 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid gap-8 md:grid-cols-3">
-        <!-- Web and Apps -->
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8 hover:shadow-lg transition card-hover">
-          <div class="w-16 h-16 bg-brand-100 dark:bg-brand-900 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4">Web and Apps</h3>
-          <p class="text-slate-600 dark:text-slate-300 mb-6">Custom web applications, mobile apps, and responsive websites built with modern technologies and best practices.</p>
-          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<a class="flex items-center gap-2" href="/">
+<img alt="iD01t Productions" class="h-8 w-8" src="/assets/img/brand/logo.png"/>
+<span class="font-semibold tracking-tight">iD01t Productions</span>
+</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="link-underline" href="/store.html">Store</a>
+<a class="link-underline" href="/ebooks.html">eBooks</a>
+<a class="link-underline" href="/apps.html">Apps</a>
+<a class="link-underline" href="/games.html">Games</a>
+<a class="link-underline" href="/music.html">Music</a>
+<a aria-current="page" class="link-underline text-brand-600 dark:text-brand-400" href="/services.html">Services</a>
+<a class="link-underline" href="/portfolio.html">Portfolio</a>
+<a class="link-underline" href="/about.html">About</a>
+<a class="link-underline" href="/contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm" id="themeToggle">Theme</button>
+<a class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2" href="#login">Login</a>
+<button aria-label="Open menu" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" id="mobileMenuBtn">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" id="mobileMenu">
+<div class="px-4 py-3 flex flex-col gap-2">
+<a class="py-2" href="/store.html">Store</a>
+<a class="py-2" href="/ebooks.html">eBooks</a>
+<a class="py-2" href="/apps.html">Apps</a>
+<a class="py-2" href="/games.html">Games</a>
+<a class="py-2" href="/music.html">Music</a>
+<a aria-current="page" class="py-2 text-brand-600 dark:text-brand-400" href="/services.html">Services</a>
+<a class="py-2" href="/portfolio.html">Portfolio</a>
+<a class="py-2" href="/about.html">About</a>
+<a class="py-2" href="/contact.html">Contact</a>
+</div>
+</div>
+</header>
+<!-- Breadcrumb -->
+<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm">
+<ol class="flex items-center gap-2">
+<li><a class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300" href="/">Home</a></li>
+<li class="text-slate-400">/</li>
+<li class="text-slate-700 dark:text-slate-300">Services</li>
+</ol>
+</nav>
+<!-- Hero -->
+<section class="relative overflow-hidden">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+<div class="text-center">
+<h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Services</h1>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Professional web development, brand design, and automation services. We deliver quality results with clear communication and transparent processes.</p>
+</div>
+</div>
+</section>
+<!-- Service Blocks -->
+<section class="py-16 border-t border-slate-200 dark:border-slate-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid gap-8 md:grid-cols-3">
+<!-- Web and Apps -->
+<div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8 hover:shadow-lg transition card-hover">
+<div class="w-16 h-16 bg-brand-100 dark:bg-brand-900 rounded-xl flex items-center justify-center mb-6">
+<svg class="w-8 h-8 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-semibold mb-4">Web and Apps</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-6">Custom web applications, mobile apps, and responsive websites built with modern technologies and best practices.</p>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Responsive design
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Modern frameworks
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Performance optimization
             </li>
-          </ul>
-        </div>
-
-        <!-- Brand and Media -->
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8 hover:shadow-lg transition card-hover">
-          <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4">Brand and Media</h3>
-          <p class="text-slate-600 dark:text-slate-300 mb-6">Logo design, brand identity, video production, and visual content that tells your story and connects with your audience.</p>
-          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+</ul>
+</div>
+<!-- Brand and Media -->
+<div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8 hover:shadow-lg transition card-hover">
+<div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mb-6">
+<svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-semibold mb-4">Brand and Media</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-6">Logo design, brand identity, video production, and visual content that tells your story and connects with your audience.</p>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Logo and branding
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Video production
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Visual content
             </li>
-          </ul>
-        </div>
-
-        <!-- Automation -->
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8 hover:shadow-lg transition card-hover">
-          <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4">Automation</h3>
-          <p class="text-slate-600 dark:text-slate-300 mb-6">Custom scripts, workflows, and automation solutions that save time and eliminate repetitive tasks for your team.</p>
-          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+</ul>
+</div>
+<!-- Automation -->
+<div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8 hover:shadow-lg transition card-hover">
+<div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mb-6">
+<svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-semibold mb-4">Automation</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-6">Custom scripts, workflows, and automation solutions that save time and eliminate repetitive tasks for your team.</p>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Workflow automation
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Custom scripts
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               API integration
             </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process Steps -->
-  <section class="py-16">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-16">Our Process</h2>
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-          <h3 class="text-xl font-semibold mb-3">Discovery</h3>
-          <p class="text-slate-600 dark:text-slate-300">We start by understanding your goals, requirements, and vision for the project.</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-          <h3 class="text-xl font-semibold mb-3">Build</h3>
-          <p class="text-slate-600 dark:text-slate-300">We develop your solution using the best technologies and practices for your needs.</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-          <h3 class="text-xl font-semibold mb-3">Ship</h3>
-          <p class="text-slate-600 dark:text-slate-300">We deploy your project and ensure everything is working perfectly in production.</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
-          <h3 class="text-xl font-semibold mb-3">Evolve</h3>
-          <p class="text-slate-600 dark:text-slate-300">We provide ongoing support and help you iterate and improve your solution.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing Bands -->
-  <section class="py-16 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-16">Pricing</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Starter -->
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8">
-          <h3 class="text-2xl font-semibold mb-4">Starter</h3>
-          <p class="text-slate-600 dark:text-slate-300 mb-6">Perfect for small projects and startups getting started.</p>
-          <div class="text-3xl font-bold mb-6">$2,500<span class="text-lg font-normal text-slate-500">/project</span></div>
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Steps -->
+<section class="py-16">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Our Process</h2>
+<div class="grid md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+<h3 class="text-xl font-semibold mb-3">Discovery</h3>
+<p class="text-slate-600 dark:text-slate-300">We start by understanding your goals, requirements, and vision for the project.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+<h3 class="text-xl font-semibold mb-3">Build</h3>
+<p class="text-slate-600 dark:text-slate-300">We develop your solution using the best technologies and practices for your needs.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+<h3 class="text-xl font-semibold mb-3">Ship</h3>
+<p class="text-slate-600 dark:text-slate-300">We deploy your project and ensure everything is working perfectly in production.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+<h3 class="text-xl font-semibold mb-3">Evolve</h3>
+<p class="text-slate-600 dark:text-slate-300">We provide ongoing support and help you iterate and improve your solution.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Bands -->
+<section class="py-16 border-t border-slate-200 dark:border-slate-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Pricing</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Starter -->
+<div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8">
+<h3 class="text-2xl font-semibold mb-4">Starter</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-6">Perfect for small projects and startups getting started.</p>
+<div class="text-3xl font-bold mb-6">$2,500<span class="text-lg font-normal text-slate-500">/project</span></div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Basic consultation
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Project delivery
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               30 days support
             </li>
-          </ul>
-          <a href="/contact.html" class="w-full text-center py-3 px-6 border border-slate-300 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">Get Started</a>
-        </div>
-
-        <!-- Pro -->
-        <div class="rounded-2xl border-2 border-brand-600 p-8 relative">
-          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
-          <h3 class="text-2xl font-semibold mb-4">Pro</h3>
-          <p class="text-slate-600 dark:text-slate-300 mb-6">Ideal for growing businesses with more complex requirements.</p>
-          <div class="text-3xl font-bold mb-6">$5,000<span class="text-lg font-normal text-slate-500">/project</span></div>
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+</ul>
+<a class="w-full text-center py-3 px-6 border border-slate-300 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition" href="/contact.html">Get Started</a>
+</div>
+<!-- Pro -->
+<div class="rounded-2xl border-2 border-brand-600 p-8 relative">
+<div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
+<h3 class="text-2xl font-semibold mb-4">Pro</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-6">Ideal for growing businesses with more complex requirements.</p>
+<div class="text-3xl font-bold mb-6">$5,000<span class="text-lg font-normal text-slate-500">/project</span></div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Everything in Starter
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Advanced features
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               90 days support
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Training session
             </li>
-          </ul>
-          <a href="/contact.html" class="w-full text-center py-3 px-6 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition">Get Started</a>
-        </div>
-
-        <!-- Custom -->
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8">
-          <h3 class="text-2xl font-semibold mb-4">Custom</h3>
-          <p class="text-slate-600 dark:text-slate-300 mb-6">For enterprise projects with unique requirements and ongoing needs.</p>
-          <div class="text-3xl font-bold mb-6">Custom<span class="text-lg font-normal text-slate-500"> pricing</span></div>
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+</ul>
+<a class="w-full text-center py-3 px-6 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition" href="/contact.html">Get Started</a>
+</div>
+<!-- Custom -->
+<div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8">
+<h3 class="text-2xl font-semibold mb-4">Custom</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-6">For enterprise projects with unique requirements and ongoing needs.</p>
+<div class="text-3xl font-bold mb-6">Custom<span class="text-lg font-normal text-slate-500"> pricing</span></div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Everything in Pro
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Dedicated team
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Ongoing support
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
               Custom features
             </li>
-          </ul>
-          <a href="/contact.html" class="w-full text-center py-3 px-6 border border-slate-300 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">Contact Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="py-16">
-    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
-      <div class="space-y-4">
-        <!-- FAQ Item 1 -->
-        <div class="border border-slate-200 dark:border-slate-700 rounded-lg">
-          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion aria-expanded="false">
-            <span class="font-medium">How long does a typical project take?</span>
-            <svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="px-6 pb-4 hidden">
-            <p class="text-slate-600 dark:text-slate-300">Project timelines vary based on complexity and scope. A simple website might take 2-4 weeks, while a complex web application could take 2-3 months. We'll provide a detailed timeline during our discovery phase.</p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div class="border border-slate-200 dark:border-slate-700 rounded-lg">
-          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion aria-expanded="false">
-            <span class="font-medium">Do you provide ongoing support after launch?</span>
-            <svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="px-6 pb-4 hidden">
-            <p class="text-slate-600 dark:text-slate-300">Yes, all our packages include post-launch support. We offer ongoing maintenance, updates, and technical support to ensure your project continues to perform optimally.</p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 3 -->
-        <div class="border border-slate-200 dark:border-slate-700 rounded-lg">
-          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion aria-expanded="false">
-            <span class="font-medium">Can you work with existing systems and APIs?</span>
-            <svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="px-6 pb-4 hidden">
-            <p class="text-slate-600 dark:text-slate-300">Absolutely! We specialize in integrating with existing systems, APIs, and databases. We can work with your current tech stack or recommend improvements based on your needs.</p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div class="border border-slate-200 dark:border-slate-700 rounded-lg">
-          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion aria-expanded="false">
-            <span class="font-medium">What technologies do you use?</span>
-            <svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="px-6 pb-4 hidden">
-            <p class="text-slate-600 dark:text-slate-300">We use modern, proven technologies including React, Vue.js, Node.js, Python, and cloud platforms like AWS and Vercel. We choose the best stack for each project's specific requirements.</p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 5 -->
-        <div class="border border-slate-200 dark:border-slate-700 rounded-lg">
-          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion aria-expanded="false">
-            <span class="font-medium">How do you handle project communication?</span>
-            <svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="px-6 pb-4 hidden">
-            <p class="text-slate-600 dark:text-slate-300">We maintain clear, regular communication throughout the project. You'll have a dedicated project manager, regular status updates, and access to our project management tools for transparency.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-6">Ready to start your project?</h2>
-      <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+</ul>
+<a class="w-full text-center py-3 px-6 border border-slate-300 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition" href="/contact.html">Contact Us</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-16">
+<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="border border-slate-200 dark:border-slate-700 rounded-lg">
+<button aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion="">
+<span class="font-medium">How long does a typical project take?</span>
+<svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon="" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="px-6 pb-4 hidden">
+<p class="text-slate-600 dark:text-slate-300">Project timelines vary based on complexity and scope. A simple website might take 2-4 weeks, while a complex web application could take 2-3 months. We'll provide a detailed timeline during our discovery phase.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border border-slate-200 dark:border-slate-700 rounded-lg">
+<button aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion="">
+<span class="font-medium">Do you provide ongoing support after launch?</span>
+<svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon="" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="px-6 pb-4 hidden">
+<p class="text-slate-600 dark:text-slate-300">Yes, all our packages include post-launch support. We offer ongoing maintenance, updates, and technical support to ensure your project continues to perform optimally.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border border-slate-200 dark:border-slate-700 rounded-lg">
+<button aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion="">
+<span class="font-medium">Can you work with existing systems and APIs?</span>
+<svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon="" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="px-6 pb-4 hidden">
+<p class="text-slate-600 dark:text-slate-300">Absolutely! We specialize in integrating with existing systems, APIs, and databases. We can work with your current tech stack or recommend improvements based on your needs.</p>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border border-slate-200 dark:border-slate-700 rounded-lg">
+<button aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion="">
+<span class="font-medium">What technologies do you use?</span>
+<svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon="" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="px-6 pb-4 hidden">
+<p class="text-slate-600 dark:text-slate-300">We use modern, proven technologies including React, Vue.js, Node.js, Python, and cloud platforms like AWS and Vercel. We choose the best stack for each project's specific requirements.</p>
+</div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="border border-slate-200 dark:border-slate-700 rounded-lg">
+<button aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-900 transition" data-accordion="">
+<span class="font-medium">How do you handle project communication?</span>
+<svg class="w-5 h-5 text-slate-500 transition-transform" data-accordion-icon="" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="px-6 pb-4 hidden">
+<p class="text-slate-600 dark:text-slate-300">We maintain clear, regular communication throughout the project. You'll have a dedicated project manager, regular status updates, and access to our project management tools for transparency.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="py-16 border-t border-slate-200 dark:border-slate-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold mb-6">Ready to start your project?</h2>
+<p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
         Let's discuss your project requirements and how we can help bring your vision to life.
       </p>
-      <a href="/contact.html" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-8 py-3 font-medium">Get Started</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <p class="font-semibold">iD01t Productions</p>
-          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
-        </div>
-        <nav class="flex flex-wrap gap-4 text-sm">
-          <a href="/legal/terms.html" class="link-underline">Terms</a>
-          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
-          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
-          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Shared JavaScript -->
-  <script type="module" src="/js/utilities.js"></script>
-
-  <!-- Analytics placeholder (replace with your GA4 id) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<a class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-8 py-3 font-medium" href="/contact.html">Get Started</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div>
+<p class="font-semibold">iD01t Productions</p>
+<p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+</div>
+<nav class="flex flex-wrap gap-4 text-sm">
+<a class="link-underline" href="/legal/terms.html">Terms</a>
+<a class="link-underline" href="/legal/privacy.html">Privacy</a>
+<a class="link-underline" href="/legal/refunds.html">Refunds</a>
+<a class="link-underline" href="https://github.com/id01t" rel="noopener" target="_blank">GitHub</a>
+<a class="link-underline" href="https://id01t.itch.io" rel="noopener" target="_blank">itch.io</a>
+</nav>
+</div>
+</div>
+</footer>
+<!-- Shared JavaScript -->
+<script src="/js/utilities.js" type="module"></script>
+<!-- Analytics placeholder (replace with your GA4 id) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
     gtag('config', 'G-XXXXXXX');
   </script> -->
-</body>
+<script defer="" src="/assets/site.js"></script></body>
 </html>

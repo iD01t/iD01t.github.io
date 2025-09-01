@@ -1,25 +1,41 @@
-<!doctype html><html lang="en"><meta charset="utf-8">
-<title>404 • iD01t Productions</title>
-<link rel="stylesheet" href="/assets/site.css">
-<body>
-<div class="container">
-  <h1 class="page-title">404 • Page Not Found</h1>
-  <p>We couldn't find that page. Taking you home…</p>
-  <p><a class="btn" href="/">Go Home</a></p>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>404 • Page Not Found • iD01t Productions</title>
+<meta content="The page you're looking for couldn't be found" name="description"/>
+<link href="/404.html" rel="canonical"/>
+<link href="/assets/site.css" rel="stylesheet"/>
+</head>
+<body data-active="404">
+<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 32px 20px;">
+<div>
+<h1 class="page-title">404 • Page Not Found</h1>
+<p>
+                We couldn't find that page. Taking you home in a moment...
+            </p>
+<a class="btn" href="/">Go Home Now</a>
 </div>
-  <script>
-  // Try to map common mistakes like /audiobooks/index.html
-  const p = location.pathname.toLowerCase();
-  const map = {
-    "/audiobooks/index.html": "/audiobooks.html",
-    "/ebooks/index.html": "/ebooks.html",
-    "/series/index.html": "/series.html",
-    "/audiobooks/": "/audiobooks.html",
-    "/ebooks/": "/ebooks.html",
-    "/series/": "/series.html"
-  };
-  const target = map[p];
-  if(target) location.replace(target);
-  else setTimeout(()=>location.href="/", 1500);
-  </script>
-</body></html>
+</div>
+<script>
+        // Smart redirect for common URL mistakes
+        const p = location.pathname.toLowerCase();
+        const map = {
+            "/audiobooks/index.html": "/audiobooks.html",
+            "/ebooks/index.html": "/ebooks.html",
+            "/series/index.html": "/series.html",
+            "/audiobooks/": "/audiobooks.html",
+            "/ebooks/": "/ebooks.html",
+            "/series/": "/series.html"
+        };
+        const target = map[p];
+        if(target) {
+            location.replace(target);
+        } else {
+            setTimeout(() => location.href = "/", 2000);
+        }
+    </script>
+<script defer="" src="/assets/site.js"></script></body>
+</html>
