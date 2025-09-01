@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found · iD01t Productions</title>
+  <meta name="description" content="The page you're looking for couldn't be found. Return to the iD01t Productions homepage." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Page Not Found · iD01t Productions" />
+  <meta property="og:description" content="The page you're looking for couldn't be found. Return to the iD01t Productions homepage." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://id01t.github.io/404.html" />
+      <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Page Not Found · iD01t Productions" />
+  <meta name="twitter:description" content="The page you're looking for couldn't be found. Return to the iD01t Productions homepage." />
+      <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
+
+  <!-- Tailwind CSS CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f6ff',
+              100: '#e6e9ff',
+              200: '#c9ccff',
+              300: '#a2a8ff',
+              400: '#7a82ff',
+              500: '#545cff',
+              600: '#3a3fe6',
+              700: '#2c30b4',
+              800: '#202383',
+              900: '#16185c'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  <!-- Dark mode on first paint -->
+  <script>
+    (function() {
+      const storage = localStorage.getItem('theme');
+      const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (storage === 'dark' || (!storage && preferDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/assets/img/brand/logo.png" alt="iD01t Productions" class="h-8 w-8">
+          <span class="font-semibold tracking-tight">iD01t Productions</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/store.html" class="link-underline">Store</a>
+          <a href="/ebooks.html" class="link-underline">eBooks</a>
+          <a href="/apps.html" class="link-underline">Apps</a>
+          <a href="/games.html" class="link-underline">Games</a>
+          <a href="/music.html" class="link-underline">Music</a>
+          <a href="/services.html" class="link-underline">Services</a>
+          <a href="/portfolio.html" class="link-underline">Portfolio</a>
+          <a href="/about.html" class="link-underline">About</a>
+          <a href="/contact.html" class="link-underline">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+          <a href="#login" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Login</a>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="/store.html" class="py-2">Store</a>
+        <a href="/ebooks.html" class="py-2">eBooks</a>
+        <a href="/apps.html" class="py-2">Apps</a>
+        <a href="/games.html" class="py-2">Games</a>
+        <a href="/music.html" class="py-2">Music</a>
+        <a href="/services.html" class="py-2">Services</a>
+        <a href="/portfolio.html" class="py-2">Portfolio</a>
+        <a href="/about.html" class="py-2">About</a>
+        <a href="/contact.html" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Content -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-24 text-center">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="text-6xl sm:text-8xl font-bold tracking-tight text-brand-600 dark:text-brand-400 mb-8">404</h1>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Page Not Found</h2>
+        <p class="text-lg text-slate-600 dark:text-slate-300 mb-8">The page you're looking for doesn't exist or has been moved. Don't worry, you can find your way back to our main content.</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-8 py-3">Go Home</a>
+          <a href="/store.html" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-8 py-3">Visit Store</a>
+        </div>
+        
+        <div class="mt-12 p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl">
+          <h3 class="font-semibold mb-4">Popular Pages</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+            <a href="/store.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Store</a>
+            <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">eBooks</a>
+            <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Apps</a>
+            <a href="/about.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">About</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid gap-8 md:grid-cols-4">
+        <div>
+          <h3 class="font-semibold mb-4">iD01t Productions</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Creating premium apps, ebooks, games, and music for creators and teams.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Products</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/store.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Store</a></li>
+            <li><a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">eBooks</a></li>
+            <li><a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Apps</a></li>
+            <li><a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Games</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/about.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">About</a></li>
+            <li><a href="/services.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Services</a></li>
+            <li><a href="/portfolio.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Portfolio</a></li>
+            <li><a href="/contact.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/legal/privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Privacy</a></li>
+            <li><a href="/legal/terms.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Terms</a></li>
+            <li><a href="/legal/refunds.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Refunds</a></li>
+            <li><a href="/legal/cookies.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-600 dark:text-slate-300">&copy; <span id="currentYear"></span> iD01t Productions. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="https://github.com/id01t" target="_blank" rel="noopener" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://id01t.itch.io" target="_blank" rel="noopener" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/js/utilities.js"></script>
+  
+  <!-- Update year in footer -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
