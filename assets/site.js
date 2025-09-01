@@ -16,6 +16,8 @@
     const links = [
       ["Store","/store.html"],
       ["eBooks","/ebooks.html"],
+      ["Audiobooks","/audiobooks.html"],
+      ["Series","/series.html"],
       ["Apps","/apps.html"],
       ["Games","/games.html"],
       ["Music","/music.html"],
