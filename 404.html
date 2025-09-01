@@ -7,7 +7,7 @@
   <p>We couldn't find that page. Taking you home…</p>
   <p><a class="btn" href="/">Go Home</a></p>
 </div>
-<script>
+  <script>
   // Try to map common mistakes like /audiobooks/index.html
   const p = location.pathname.toLowerCase();
   const map = {
@@ -21,5 +21,5 @@
   const target = map[p];
   if(target) location.replace(target);
   else setTimeout(()=>location.href="/", 1500);
-</script>
+  </script>
 </body></html>

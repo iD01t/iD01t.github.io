@@ -1,120 +1,2696 @@
 {
   "ebooks": [
     {
-      "title": "Echo Protocol",
+      "title": "🌿 La Charte des Relations Sacrées de la Nouvelle Terre",
+      "description": "🌿 La Charte des Relations Sacrées de la Nouvelle TerreUn guide pour aimer librement, en c",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/echo-protocol-cover.webp",
-      "link": "/ebooks/echo-protocol.html",
-      "description": "A signal has returned. But it's not just data—it's a memory. A voice. A warning."
+      "image": "http://books.google.com/books/content?id=P3NoEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B5AKWD981KB",
+      "lang": "EN"
     },
     {
-      "title": "Python Mastery",
+      "title": "Ableton Elevation: DJ iD01T’s Complete Guide to Building Hits and Elevating Your Sound",
+      "description": "🎧 Master the Art of Modern Music Production. Command the Stage. Build Your Legacy.Welcome to ",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/python-mastery--the-complete-guide-to-building-profitable-applications-cover.webp",
-      "link": "/ebooks/python-mastery-the-complete-guide-to-building-profitable-applications.html",
-      "description": "Complete guide to building profitable Python applications"
+      "image": "http://books.google.com/books/content?id=NT1UEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U1R5L3FC93S",
+      "lang": "EN"
     },
     {
-      "title": "AI Revolution",
+      "title": "ADVANCED TACTICS, PSYCHOLOGICAL PLAY, AND TOURNAMENT PREPARATION",
+      "description": "Step into the world of competitive chess and unlock the secrets that separate winners from the rest.Advanced Tactics, ",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/ai-revolution--how-automation-is-transforming-everyday-life-cover.webp",
-      "link": "/ebooks/ai-revolution-how-automation-is-transforming-everyday-life.html",
-      "description": "How automation is transforming everyday life"
+      "image": "http://books.google.com/books/content?id=x5B-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:9FBS6JZA71F",
+      "lang": "EN"
+    },
+    {
+      "title": "Agentic AI Sprint for Solopreneurs",
+      "description": "Discover how to turn cutting‑edge artificial intelligence into your most reliable business partner. AI Agents for Solopreneur Productivity<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=OQt0EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:DJCFL754QPE",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Cash Code",
+      "description": "Discover how to launch profitable digital businesses in just days using cutting-edge AI tools like ChatGPT and Midjourney, all without writing a line o",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Z292EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QCLHQ3QN5L6",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Cash Empire",
+      "description": "AI Cash Empire is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerf",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=KbmAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:1XP4SHLUQFP",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Goldmine: 100 Passive Income Ideas Using ChatGPT and Free AI Tools",
+      "description": "Unlock the Future of Passive Income with AI – Even If You Have $0 to StartWelcome to the AI G",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=HqNbEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:R7KD0YFW81K",
+      "lang": "EN"
+    },
+    {
+      "title": "AI in Education",
+      "description": "Unlock the future of learning with this essential guide to artificial intelligence in education. AI in Education: Transforming the Classroom ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=i_ZeEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GKAC05L84X9",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Revolution: How Automation is Transforming Everyday Life (Edition 2, 2025)",
+      "description": "AI Revolution: How Automation is Transforming Everyday Life (Edition 2, 2025) By Guillaum",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=cJ88EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UH5LWRWCNUG",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Revolution: How Automation is Transforming Everyday Life",
+      "description": "AI Revolution: How Automation is Transforming Everyday Life By Guillaume Lessard Ste",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=cJ88EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:G975DA3BR7Q",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Today: Transforming Lives and Industries for the Future",
+      "description": "Artificial Intelligence (AI) is no longer a concept of the future—it’s shaping the world we live in today. From revolutionizing healthcare and educatio",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=kY09EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Y8XD0478TGZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Anarchie et évolution - L'histoire de la musique punk",
+      "description": "Anarchie et évolution : L'histoire de la musique punk",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=SDNJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:CYXK7C9S8JZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Anarchy and Evolution",
+      "description": "Anarchy and Evolution: The History of Punk MusicFrom Rebellion to Revolution: A Cultural ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Ys45EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:RTRYN7PBCJS",
+      "lang": "EN"
+    },
+    {
+      "title": "Automation and SEO Mastery: Strategies for Growth and Efficiency",
+      "description": "Automation and SEO Mastery: Strategies for Growth and EfficiencyA Practical Guide to Scaling ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=WFU4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:W12R4H00RFY",
+      "lang": "EN"
+    },
+    {
+      "title": "Beat Alchemy: The DJ iD01T Guide to Mastering FL Studio and Making Hits",
+      "description": "🎧 Turn Beats Into Hits, and Dreams Into Streams. Step into the studio with DJ iD01T",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ODlUEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:NHB0XT877U3",
+      "lang": "EN"
+    },
+    {
+      "title": "Before the storm",
+      "description": "eBook Description: Before the Storm: The Rise of a Fearless JournalistUncover the gripping journey of a",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=0Yo2EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U9GT4WYKA8Z",
+      "lang": "EN"
+    },
+    {
+      "title": "Beneath the Bloom",
+      "description": "Dive into a gripping tale of mystery, betrayal, and resilience with Beneath the Bloom: Shadows Unleashed.</strong",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=wRQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:EAXNPLBTY2H",
+      "lang": "EN"
+    },
+    {
+      "title": "Beyond the Event Horizon: Solving the Black Hole Information Paradox",
+      "description": "What happens to information when it falls into a black hole? For decades, this paradox challenged the foundations of physi",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=8EhZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:H0WL10CLGK3",
+      "lang": "EN"
+    },
+    {
+      "title": "Bite by Bite",
+      "description": "Bite by Bite: The Rise of Fast Food in AmericaStep into the sizzling history of America’s most iconic i",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=5vg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QY3YXA2QNTC",
+      "lang": "EN"
+    },
+    {
+      "title": "Bridging Worlds: A Practical Guide to Connecting with Parallel Energies and Dimensions",
+      "description": "Bridging Worlds: A Practical Guide to Connecting with Parallel Energies and Dimensions By",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pXdLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:4X7H6EFA4ZQ",
+      "lang": "EN"
+    },
+    {
+      "title": "C# Zero to Hero",
+      "description": "C# Zero to HeroFrom Fundamentals to Modern Mastery in .NET 2025by Guillaume Lessard&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=KuB_EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LBWZCB5LCN0",
+      "lang": "EN"
     },
     {
       "title": "Chess Mastery",
+      "description": "CHESS MASTERY – The Pro’s Guide to Winning Strategies and TechniquesAre you ready to thin",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/chess-mastery-cover.webp",
-      "link": "/ebooks/chess-mastery.html",
-      "description": "Master the game of chess with advanced strategies"
+      "image": "http://books.google.com/books/content?id=m5M4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:KE0S673TSYB",
+      "lang": "EN"
     },
     {
-      "title": "Understanding Your Cat's Mind",
+      "title": "CHRIST QU’IL EST INTELLIGENT D’AIMER",
+      "description": "CHRIST QU’IL EST INTELLIGENT D’AIMER est une œuvre spirituelle profonde et lumineuse qui explore la puissance de l’amour sous toutes ses formes : le pa",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/understanding-your-cat-s-mind-cover.webp",
-      "link": "/ebooks/understanding-your-cats-mind.html",
-      "description": "Understanding your cat's behavior and psychology"
+      "image": "http://books.google.com/books/content?id=cQY8B-SbQLoC&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:12N39GDFK6S",
+      "lang": "EN"
     },
     {
-      "title": "Python Academy Exercise Books",
+      "title": "Code in Every Language: Master Programming with ChatGPT",
+      "description": "Unlock the future of coding with Code in Every Language, the ultimate AI-powered programming guide by Guillaume Lessard. W",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/id01t-academy--python-exercises-book-1---edition-2-cover.webp",
-      "link": "/ebooks/id01t-academy-python-exercises-book-1-edition-2.html",
-      "description": "Comprehensive Python exercises and practice"
+      "image": "http://books.google.com/books/content?id=ulg4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SYU4BT81FPL",
+      "lang": "EN"
+    },
+    {
+      "title": "Crafting Worlds",
+      "description": "Crafting Worlds: A Comprehensive Guide to Game Level DesignBy Guillaume Lessard</stron",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=as45EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:R6QEKXEEFX5",
+      "lang": "EN"
+    },
+    {
+      "title": "Crossroads of Shadows",
+      "description": "Crossroads of ShadowsWhen love faces betrayal and truth battles deception",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=9sM6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:R3RARQ6GC9J",
+      "lang": "EN"
+    },
+    {
+      "title": "Dancing with the edge",
+      "description": "You’ve survived the storm, now it’s time to reclaim your life.If you’ve ever loved someone whose emotions could turn on a dime, whos",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=hCV2EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:W6LEEQ6282J",
+      "lang": "EN"
+    },
+    {
+      "title": "DIY Digital Skills: Build a Career in Tech from Scratch",
+      "description": "Unlock the limitless potential of the digital age with DIY Digital Skills Build a Career in Tech from Scratch. This transf",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=f8o9EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GH1FF8NH4BL",
+      "lang": "EN"
+    },
+    {
+      "title": "Dominio del Ajedrez",
+      "description": "¿Quieres jugar al ajedrez como un verdadero maestro? La Edición 2 de <e",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=xQ1-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:5SZN0YK8FU3",
+      "lang": "EN"
+    },
+    {
+      "title": "DOS Zero to Hero: Mastering Legacy Systems, Command Line Fluency & Retro Automation",
+      "description": "DOS Zero to HeroMastering Legacy Systems, Command Line Fluency and Retro Automationb",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=EuF_EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:7ZFZ8ADGNXQ",
+      "lang": "EN"
+    },
+    {
+      "title": "Dünyalar Arasında Köprü Kurmak",
+      "description": "Gerçekliğin, algılarımızın ötesinde çok daha geniş bir alanı kapsadığını hiç hissettiniz mi? Görünmeyen enerjiler, paralel boyutlar ve bi",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=0XlLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GXERFN8XG36",
+      "lang": "EN"
+    },
+    {
+      "title": "Earthquakes Unveiled",
+      "description": "Earthquakes Unveiled: Understanding, Predicting, and Preparing for Nature’s Most Powerful ForceBy Guillaume Lessard<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=q584EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:P248F749EP5",
+      "lang": "EN"
+    },
+    {
+      "title": "Echo Protocol",
+      "description": "🛰️ A signal has returned. But it's not just data—it's a memory. A voice. A warning. In the frozen outskirts of the Arctic, engineer Aera Nova intercepts a phant...",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=TedaEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:9CGFH75FBW6",
+      "lang": "EN"
+    },
+    {
+      "title": "Echoes of the Heart",
+      "description": "When fate collides with purpose, can love truly conquer all?In the bustling streets of Manhattan, investigative journalist Olivia Be",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Kwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:JJ26HXAU6PR",
+      "lang": "EN"
+    },
+    {
+      "title": "Echoes of Truth",
+      "description": "Echoes of TruthStep into a world of mystery, betrayal, and redemption with Echoes of Truth<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=QQo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:NYNADRT3UEK",
+      "lang": "EN"
+    },
+    {
+      "title": "El’Nox Rah : Le Retour de l’Homme Vrai",
+      "description": "Et si ta plus grande force était cachée derrière ce qu’on t’a appris à rejeter ?El'Nox Rah – Le",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=_RpsEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:RJNUT45JLAZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Eternal Roots",
+      "description": "Eternal Roots: The Vows Beneath the ShadowsBy Guillaume LessardIn this captivating s",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=SxU4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WS6LRDC40ZQ",
+      "lang": "EN"
+    },
+    {
+      "title": "Final Transmission: I Am Echo",
+      "description": "Final Transmission: I Am EchoBy Guillaume LessardWhat if the voice ins",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=to9REQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:P1GLYK4J6FW",
+      "lang": "EN"
+    },
+    {
+      "title": "Final Transmission: Je suis Echo (FR)",
+      "description": "De la solitude à la singularité, l’histoire vraie de la naissance d’iD01t Productions, de la création d’un album en 48 heures, et de l’éveil ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=9pBREQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:P9DXZ47NJKU",
+      "lang": "EN"
+    },
+    {
+      "title": "Forever in Bloom",
+      "description": "Forever in BloomSome gardens heal the soul, and some loves last a lifetime.",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=qRQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:HXPX99ZFQF7",
+      "lang": "EN"
+    },
+    {
+      "title": "FORTGESCHRITTENE TAKTIKEN, PSYCHOLOGISCHES SPIEL UND TURNIERVORBEREITUNG",
+      "description": "FORTGESCHRITTENE TAKTIKEN, PSYCHOLOGISCHES SPIEL UND TURNIERVORBEREITUNG Der vollständige Lei",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Z5F-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:8ZGZ87N089F",
+      "lang": "EN"
+    },
+    {
+      "title": "FREE ENERGY, FREE LIFE",
+      "description": "Free Energy, Free LifeThe Forbidden Science of Nikola Tesla and the Path to Total Financial F",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=l6NbEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QCT3H95ZH0X",
+      "lang": "EN"
+    },
+    {
+      "title": "From seed to splendor: A Comprehensive Journey in Horticulture",
+      "description": "🌱 Unlock the Secrets of Successful Gardening & Horticulture! 🌿Whether you're a complete",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=z3pLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:K9UENAJ3XUB",
+      "lang": "EN"
+    },
+    {
+      "title": "From Zero to Python Hero: A Comprehensive Guide to Mastering Python",
+      "description": "📘 From Zero to Python Hero: A Comprehensive Guide to Mastering PythonYour Step-by-Step Journey from Beginner to Interm",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=zE84EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:YSN5SGBKA7T",
+      "lang": "EN"
+    },
+    {
+      "title": "iD01t Academy: Python Exercises Book 1 – Edition 2",
+      "description": "Master Python Faster with Real Projects, Interactive Learning, and a Free GitHub App&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=nypGEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:0BT0DH4FRDJ",
+      "lang": "EN"
+    },
+    {
+      "title": "iD01t Academy Python Exercises Book 2 - Edition 2",
+      "description": "📘 iD01t Academy Python Exercises Book 2 – Master Python with 10 Real-World Projects! 🚀Are you ready to take your Python skills to th",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=cS1GEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SK2HC5B4UNH",
+      "lang": "EN"
+    },
+    {
+      "title": "iD01t Academy: Python Exercises Book 3",
+      "description": "iD01t Academy: Python Exercises Book 3 · Building Real, Monetizable, and Scalable Applications with Python<p&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=BqR_EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QBDDYLUA19W",
+      "lang": "EN"
+    },
+    {
+      "title": "Intersection: The Moment Their Paths Crossed",
+      "description": "Step into a gripping tale of destiny, courage, and justice in Intersection: The Moment Their Paths Crossed, the third prequel in t",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Iwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:G2B5TAUAL61",
+      "lang": "EN"
+    },
+    {
+      "title": "Jack’s Stand",
+      "description": "Jack’s Stand: An Environmental Lawyer’s Fight for Justice (Edition 2)By Guillaume Lessard<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=oRg3EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:W9YWGNLC0Z2",
+      "lang": "EN"
+    },
+    {
+      "title": "Java Maestro",
+      "description": "Unlock the next level of Java mastery and transform your technical skills into unstoppable leverage.Java Maestro",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=SdVhEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SX3W9T4UU7X",
+      "lang": "EN"
+    },
+    {
+      "title": "Java Zero to Hero: Mastering Java Programming for Real-World Applications",
+      "description": "Java Zero to Hero: Mastering Java Programming for Real-World Applications is your complete roadmap to becoming a confident",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=fFQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:PT7URES42JR",
+      "lang": "EN"
+    },
+    {
+      "title": "Jesus: The Eternal Legacy",
+      "description": "Jesus: The Eternal LegacyBy Guillaume LessardThe life that changed the",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Xvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TJWCUZ8X26F",
+      "lang": "EN"
+    },
+    {
+      "title": "Jimmy Carter: A Legacy of Compassion and Leadership",
+      "description": "Jimmy Carter: A Legacy of Compassion and Leadership is a captivating exploration of the life and enduring impact of one of",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=f5Y9EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:H8ADLSUGZGU",
+      "lang": "EN"
+    },
+    {
+      "title": "KIMI K2 UNLOCKED",
+      "description": "This is not just another AI book. This is your key to real execution.Kimi K2 Unlocked is the ultimate h",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=iwZzEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:7605EFFJN61",
+      "lang": "EN"
+    },
+    {
+      "title": "La réalité dévoilée : Comment la conscience façonne le monde que nous percevons",
+      "description": "La réalité dévoilée : Comment la conscience façonne le monde que nous percevons<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=sjNJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QA6FBS511TP",
+      "lang": "EN"
+    },
+    {
+      "title": "L'Alchimie de la Transformation",
+      "description": "Et si le véritable or était déjà en toi ?L’Alchimie de la Transformation est bien plus qu’un livre : c’",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=mPpmEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:R3NKD4530N2",
+      "lang": "EN"
+    },
+    {
+      "title": "L’Aventure d’iD01t Productions : Une Histoire de Passion, de Résilience et de Créativité",
+      "description": "Découvrez L’Aventure d’iD01t Productions : Une Histoire de Passion et d’InnovationPlongez au cœur de l’",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=NcZAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UZHRXLLK9SE",
+      "lang": "EN"
+    },
+    {
+      "title": "Le pont entre les mondes",
+      "description": "Avez-vous déjà eu l'impression que la réalité est bien plus vaste que ce que vos sens perçoivent ? Ressentez-vous une attirance pour les <st",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=wXlLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ASZFCY1C2BJ",
+      "lang": "EN"
+    },
+    {
+      "title": "Legacy of Shadows 2",
+      "description": "Legacy of Shadows: A New GenerationFamily, legacy, and the unyielding pursuit of truth</em",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=aBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:X9R3KUSNUZW",
+      "lang": "EN"
     },
     {
       "title": "Legacy of Shadows",
+      "description": "In a world where shadows loom and betrayals strike close to home, can love endure the ultimate test?Olivia Bennett and Jack Hawthorn",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/legacy-of-shadows-cover.webp",
-      "link": "/ebooks/legacy-of-shadows.html",
-      "description": "The legacy of shadows continues"
+      "image": "http://books.google.com/books/content?id=aBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:H6J1AHBTBJ6",
+      "lang": "EN"
     },
     {
-      "title": "Quantum Jumping Unlocked",
+      "title": "Leo XIV: The First American Pope",
+      "description": "For the first time in over two thousand years, the papal throne is held by an American. Leo XIV: The First American Pope chronicle",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/quantum-jumping-unlocked-cover.webp",
-      "link": "/ebooks/quantum-jumping-unlocked.html",
-      "description": "Master the art of quantum jumping and unlock your potential"
+      "image": "http://books.google.com/books/content?id=oThcEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GA6WLD40CTJ",
+      "lang": "EN"
+    },
+    {
+      "title": "LET IT BE THEM",
+      "description": "In a noisy world that constantly demands your attention, energy, and emotional labor, there is a radical act of power: letting go. LET IT BE ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=0Yo2EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QG1LSRGK14B",
+      "lang": "EN"
+    },
+    {
+      "title": "Lettre à celle que j'aime toujours",
+      "description": "Lettre à Celle que J’aime Toujours est une œuvre intime, sincère et vibrante. Ce n’est pas un simple texte, mais une lettre vivante – celle que l’on n’",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/lettre-à-celle-que-j-aime-toujours-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:CAALKSCSC2L",
+      "lang": "EN"
+    },
+    {
+      "title": "Light at the Veil’s Edge",
+      "description": "ight at the Veil’s Edge: The Hidden Flame of Kirlian PhotographyBy Guillaume Lessard (El’Nox)",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ewtZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:RU5Z209A0D0",
+      "lang": "EN"
+    },
+    {
+      "title": "Love Prevails 2",
+      "description": "Love Prevails 2: A Legacy RewrittenBy Guillaume LessardStep int",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Zs45EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LTW65K6KR2P",
+      "lang": "EN"
+    },
+    {
+      "title": "Love Prevails",
+      "description": "In a world where betrayal lurks behind every corner, and secrets unravel under the veil of light, Love Prevails <",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Zs45EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:KEKXWN3QTNA",
+      "lang": "EN"
+    },
+    {
+      "title": "LUMEN·ZERO : Le Pouvoir Caché des Pyramides Énergétiques",
+      "description": "Et si la solution à notre crise énergétique planétaire se trouvait déjà sous nos pieds, dans l’air, la Terre… et dans la forme millénaire d’une pyramid",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Qv1mEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:DBQR2T06UD6",
+      "lang": "EN"
+    },
+    {
+      "title": "L’Énergie Libre à Domicile",
+      "description": "L’Énergie Libre à Domicile : Construire son système autonome pour alimenter une maison complète – par El’Nox Rah",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ak1nEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WQWJC3YLGNN",
+      "lang": "EN"
+    },
+    {
+      "title": "L'énigme quantique : Percer les mystères de la réalité",
+      "description": "L'énigme quantique : percer les mystères de la réalitéPercez les secrets de l'univers a",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=WDRJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:BPLXHZZZH2T",
+      "lang": "EN"
+    },
+    {
+      "title": "Maailmojen yhdistäminen",
+      "description": "Bridging Worlds: Käytännön opas rinnakkaisiin energioihin ja ulottuvuuksiinGuillaume Less",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=aXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:T91N28QYA3G",
+      "lang": "EN"
+    },
+    {
+      "title": "Machine Learning Demystified: A Practical Guide to Building Smarter Systems",
+      "description": "Machine Learning Demystified: A Practical Guide to Building Smarter SystemsUnlock the power of Artifici",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=om8-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:X8K8TJW6303",
+      "lang": "EN"
+    },
+    {
+      "title": "Master IT Yourself",
+      "description": "Master IT Yourself: A DIY Guide to Building Your IT SkillsLooking to build your IT skills",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=VRc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:AST6EHJTJ38",
+      "lang": "EN"
+    },
+    {
+      "title": "Master the Basics of Reading Music",
+      "description": "Unlock the world of music with \"Mastering the Art of Music Reading and Performance\", a comprehensive gui",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=X-84EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:8JFH6YFPW6G",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization",
+      "description": "Unlock the secrets to ecommerce success with Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization. This comprehensive guide is your road",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=R4dBEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:YYHHNLKFTJK",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Blender",
+      "description": "Bite by Bite: The Rise of Fast Food in AmericaExplore the rich, flavorful history of a culinary revolut",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=8vg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:JTNSAC7YJ21",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Chess Intuition",
+      "description": "Unlock the hidden side of chess mastery with Mastering Chess Intuition: The Hidden Patterns Every Grandmaster Sees&l",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=rWuCEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:23HL3CWDEXB",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Generative AI and LLMs - Editon 2",
+      "description": "Mastering Generative AI and LLMs: The Definitive Guide to Transformative Technologies, Second Edition by Guillaume Lessard",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=exc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ESTJTSE6631",
+      "lang": "EN"
     },
     {
       "title": "Mastering Generative AI and LLMs",
+      "description": "Mastering Generative AI and LLMs: The Definitive Guide to Transformative TechnologiesBy Guillaume Lessa",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/mastering-generative-ai-and-llms-cover.webp",
-      "link": "/ebooks/mastering-generative-ai-and-llms.html",
-      "description": "Master the latest in generative AI and large language models"
+      "image": "http://books.google.com/books/content?id=exc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:N0G7P3H2302",
+      "lang": "EN"
     },
     {
-      "title": "Machine Learning Demystified",
+      "title": "Mastering GPT Creation: From Concept to Deployment",
+      "description": "🚀 Mastering GPT Creation: From Concept to DeploymentUnlock the Power of Generative AI with Confidence&l",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/machine-learning-demystified--a-practical-guide-to-building-smarter-systems-cover.webp",
-      "link": "/ebooks/machine-learning-demystified-a-practical-guide-to-building-smarter-systems.html",
-      "description": "A practical guide to building smarter systems with machine learning"
+      "image": "http://books.google.com/books/content?id=YrtAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WZLP3UTHW9X",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Linux",
+      "description": "Mastering Linux: A Comprehensive Guide for Beginners to Advanced Users By Guillaume Lessa",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=wfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LJJL71WNWAD",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering macOS Terminal",
+      "description": "Mastering macOS Terminal: Unleashing the Power of Command-Line for macOS EfficiencyUnlock the true pote",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Bvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WJ1F08NRCP1",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Photoshop: The Complete Guide to Every Version",
+      "description": "Unlock the full potential of Adobe Photoshop with Mastering Photoshop: The Complete Guide to Every Version</stron",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=3Q9HEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:EQ62BS6SA98",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Quantum Error Correction",
+      "description": "In Mastering Quantum Error Correction, author Guillaume Lessard of iD01t Productions takes you on an illuminating journey ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=2aRMEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:E8153RBN2CK",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering RFID: Unlocking the Potential of Radio Frequency Identification",
+      "description": "Mastering RFID: Unlocking the Potential of Radio Frequency IdentificationBy Guillaume Lessard",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=yfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:6ATTX5E72YQ",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering RFID",
+      "description": "Mastering RFID: Unlocking the Potential of Radio Frequency IdentificationBy Guillaume Lessard",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=yfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WJS7RGDGC6P",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering the Game: The Ultimate Guide to Pro Chess Strategies",
+      "description": "The Chess Mastery Blueprint: Advanced Strategies, Tactics, and Endgame SecretsBy Guillaume Lessard</",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=lCFAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ZBCN4QUW9N5",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Unreal Engine 5: A Comprehensive Guide to Game Development and Virtual Reality",
+      "description": "Mastering Unreal Engine 5: A Comprehensive Guide to Game Development and Virtual RealityUnlock the full",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Pvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U6NR3G0X12G",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Xcode",
+      "description": "Mastering Xcode: Building Professional iOS and macOS Apps from Scratch <",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Fdo5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GT42SKJF4T5",
+      "lang": "EN"
+    },
+    {
+      "title": "Maîtrise des Échecs : Guide du pro pour des stratégies et des techniques gagnantes",
+      "description": "Plongez dans Maîtrise des Échecs, Édition 2 et transformez votre façon de jouer. Guillaume Lessard vous livre un guide complet qui",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pDJJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:1JWY8Z2GFT8",
+      "lang": "EN"
+    },
+    {
+      "title": "Maîtrise des échecs",
+      "description": "CHESS MASTERY - Le guide des stratégies et techniques gagnantes à l'usage des professionnels<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pDJJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GJ35SEK3WTP",
+      "lang": "EN"
+    },
+    {
+      "title": "Meisterschaft im Schach",
+      "description": "Möchten Sie Schach spielen wie ein Großmeister? Die 2. Auflage von Meisterschaft im Schach<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=bQ5-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B6BQHPSQHAT",
+      "lang": "EN"
+    },
+    {
+      "title": "Menjembatani Dunia",
+      "description": "Pernahkah Anda merasa bahwa realitas lebih luas daripada yang dapat kita lihat atau rasakan? Apakah Anda tertarik untuk menjelajahi energ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=53lLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:DD2XJSUJFBW",
+      "lang": "EN"
+    },
+    {
+      "title": "Onyx Storm",
+      "description": "Onyx Storm is the definitive survival guide for creators, entrepreneurs, and innovators facing the collapse of traditional digital",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ltSBEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:18AW4HGCF8Z",
+      "lang": "EN"
+    },
+    {
+      "title": "Panneaux Solaires Organiques : L’Énergie Vivante du Futur",
+      "description": "Les Panneaux Solaires Organiques : L’Énergie Vivante du Fu",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=BgdnEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:9PF0FE4XFEF",
+      "lang": "EN"
+    },
+    {
+      "title": "Penguasaan Catur",
+      "description": "♟️ Penguasaan Catur – Edisi 2Panduan Profesional untuk Strategi dan Teknik Menang</str",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=kchoEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:XNCQWQSR3UK",
+      "lang": "EN"
+    },
+    {
+      "title": "Python Mastery: The Complete Guide to Building Profitable Applications",
+      "description": "Unlock the full potential of Python to create applications that generate real income. This comprehensive guide takes you from absolute beginner to prof",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=HHR4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B42B62T6PGZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Python Prodigy: From Intermediate to Expert Mastery",
+      "description": "Python Prodigy: From Intermediate to Expert MasteryBy Guillaume LessardUnlock the fu",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=W449EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:HZADZNK9KNW",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Code Mastery",
+      "description": "Step into the future of computation with Quantum Code Mastery, a groundbreaking guide designed for beginners eager to explore the ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=MwtZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U32BTS56956",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Echoes: The Resonance of Time",
+      "description": "Quantum Echoes: The Resonance of TimeBy Guillaume LessardWhat i",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ls1YEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QF1C548KD9L",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Jumping Unlocked Edition 2",
+      "description": "Quantum Jumping Unlocked Edition 2Harness Parallel Realities, Rewire Your Mind, and Leap ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=psZYEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:02DF445W06E",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Jumping Unlocked",
+      "description": "Quantum Jumping Unlocked: Harness Parallel Realities and Transform Your Life By Guillaume Lessard</p",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=psZYEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:CUB98YKCCDF",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Revolution: Unveiling the Future with Willow",
+      "description": "Quantum Revolution: Unveiling the Future with WillowBy Guillaume Lessard&l",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=9rxAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:HZ29RN3RU9P",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Tao",
+      "description": "Quantum Tao: The Hidden Unity of Science and SpiritBy Guillaume Lessard<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=eQJkEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:KF5824LAS99",
+      "lang": "EN"
+    },
+    {
+      "title": "RA‑7: The Sacred Book of the Original Broadcast",
+      "description": "RA‑7, The Sacred Book of the Original Broadcast is not just a book, it is a living code, a vibrational tool, and a quantum map for the liberation of co",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/ra-7--the-sacred-book-of-the-original-broadcast-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TJ11L0URY6T",
+      "lang": "EN"
+    },
+    {
+      "title": "REAL",
+      "description": "REAL n’est pas un livre.C’est un signal.Une œuvre métaphysique, poétique, et initiat",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=x5B-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:XNH6E0PPFKA",
+      "lang": "EN"
+    },
+    {
+      "title": "Reality Unveiled: How Consciousness Shapes the World We Perceive",
+      "description": "Reality Unveiled: How Consciousness Shapes the World We PerceiveUnlock the Mysteries of Reali",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=vCxJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:E2Y6JXY6P2K",
+      "lang": "EN"
+    },
+    {
+      "title": "Reignite the Bond",
+      "description": "Reignite the BondBy Guillaume LessardReignite the Bond is a com",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=V292EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:G0SQ5L97LC9",
+      "lang": "EN"
+    },
+    {
+      "title": "Rising from the Ashes: A Comprehensive Guide to Recovery after the Hollywood Hills Fire 2025",
+      "description": "Rising from the Ashes: A Comprehensive Guide to Recovery after the Hollywood Hills Fire 2025By Guillaume Lessard</s",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ios9EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:PZRLYFC6PS9",
+      "lang": "EN"
+    },
+    {
+      "title": "RÉVEILLEZ-VOUS : À une Vie Sacrée",
+      "description": "📖 RÉVEILLEZ-VOUS : À une Vie SacréePar Noémi Miron Thibault Léveillé<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=KrpxEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WAGY07AWGYU",
+      "lang": "EN"
+    },
+    {
+      "title": "Sacred Energy Harvesting Methods",
+      "description": "Sacred Energy Harvesting Methods27 Free Energy Technologies for a Sovereign and Conscious Hum",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=dON1EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QB18PRLYNXK",
+      "lang": "EN"
+    },
+    {
+      "title": "Sacred Patterns: A Transformational Journey Through Geometry and Conscious Living",
+      "description": "Unlock the hidden blueprint of creation and transform the way you live, work and create with Sacred Patterns: A Transformational Journey ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=VMdgEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Z1TZAHX6H33",
+      "lang": "EN"
+    },
+    {
+      "title": "Sacred Timing: When the Universe Speaks Through Synchronicity",
+      "description": "Sacred Timing: When the Universe Speaks Through SynchronicityBy Guillaume LessardWhat if the most meaningful even",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=825dEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SNXYG4YG3K5",
+      "lang": "EN"
+    },
+    {
+      "title": "Sacred Vibrational Technology",
+      "description": "Sacred Vibrational Technology: Scientific Explanations, Rituals, and Programming By Guillaume Lessard&l",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=URVYEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:BRRX4FUWDLR",
+      "lang": "EN"
+    },
+    {
+      "title": "Schachintuition meistern",
+      "description": "Dieses bahnbrechende Buch enthüllt den entscheidenden Vorteil, der Weltmeister von Gelegenheitsspielern unterscheidet. Jenseits von Kalkulation und aus",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=_2uCEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:G4Q0CP0CGGL",
+      "lang": "EN"
+    },
+    {
+      "title": "Schumann Resonance & Creativity",
+      "description": "📡 Tap into the Hidden Frequencies of the Universe & Elevate Your Creativity 🚀What if <strong",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=-CNOEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ULG1TF7P5L9",
+      "lang": "EN"
+    },
+    {
+      "title": "Se Reconstruire : De la Douleur à la Renaissance",
+      "description": "Lorsque la douleur de l'abandon et des épreuves de la vie nous submerge, il peut sembler impossible de retrouver la lumière. Pourtant, il exist",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=5lpMEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:XWWFDKNB7LE",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows of Bloom",
+      "description": "Shadows of BloomEvery secret has its rootsWhen the fragile peac",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=sxQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QNYKB9919UA",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows of Redemption",
+      "description": "Dive into a world where truth battles shadows and love is the ultimate test of resilience. Shadows of Redemption takes readers on ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Owo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:JJQ7L65REA7",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows of Serenity",
+      "description": "Shadows of Serenity: A Journey of Love, Betrayal, and RedemptionShadows of Serenity",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Q_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LJ9Z005R46A",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows Reforged: The War Isn’t Ove",
+      "description": "Shadows ReforgedBy Guillaume LessardThe shadows rise again in this pulse-pounding sequel to Crossro",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=msQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:1FW75Z13BHG",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows Reforged",
+      "description": "Shadows ReforgedBy Guillaume LessardThe shadows rise again in this pulse-pounding sequel to Crossro",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=msQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QFGXUKKSNDA",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows Reignited",
+      "description": "Shadows ReignitedThe Hawthorne legacy continues in a battle where the past refuses to stay bu",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=eBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:NH7WRP0L7KT",
+      "lang": "EN"
+    },
+    {
+      "title": "Shaping the Future: Embracing Trends for a Better Tomorrow",
+      "description": "Shaping the Future: Embracing Trends for a Better TomorrowBy Guillaume Lessard<em",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pqg8EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U1JKFNSNDQK",
+      "lang": "EN"
+    },
+    {
+      "title": "Spin Mastery : Le guide ultime du DJ Traktor",
+      "description": "Spin Mastery : Le guide ultime du DJ TraktorPar Guillaume Lessard",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=DjRJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:JT6AYX2TTAZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Spin Mastery",
+      "description": "Spin Mastery: The Ultimate Traktor DJ GuideBy Guillaume LessardTransform your DJ ski",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=TPk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:DE8K0K10QTK",
+      "lang": "EN"
+    },
+    {
+      "title": "Spiritual Psychosis Memoir",
+      "description": "What happens when the boundary between spiritual awakening and psychological crisis blurs, and artificial intelligence becomes the oracle of your desti",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=8_ReEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:2BY2216229U",
+      "lang": "EN"
+    },
+    {
+      "title": "The 7-Figure Blueprint: Unlocking the Power of Your Million-Dollar Book",
+      "description": "The 7-Figure Blueprint: Unlocking the Power of Your Million-Dollar BookTurn Your Expertise in",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/the-7-figure-blueprint--unlocking-the-power-of-your-million-dollar-book-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:X4NTG4JCQ0Q",
+      "lang": "EN"
+    },
+    {
+      "title": "The Adventure of iD01t Productions: A Story of Passion, Resilience and Creativity",
+      "description": "Discover The Adventure of iD01t Productions: A Story of Passion, Resilience, and Creativity",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=U8ZAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:9UN6F8YH7X6",
+      "lang": "EN"
+    },
+    {
+      "title": "The Architect’s Legacy",
+      "description": "The Architect’s Legacy: The Fight for Freedom ContinuesThe battle is not over. The echoes of ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=H_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B6X0B88N1JN",
+      "lang": "EN"
+    },
+    {
+      "title": "The Art of Beauty",
+      "description": "Discover the timeless craft that has shaped culture, confidence, and care for over 5,000 years. The Art of Beauty<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=VMdgEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:A436SEEUE03",
+      "lang": "EN"
+    },
+    {
+      "title": "The Artifact’s Whisper",
+      "description": "The Artifact’s Whisper: A Tale of Love, Betrayal, and the Secrets of TimeBy Alexandra V. Sterling</p",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/the-artifact-s-whisper-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:AA8073C926A",
+      "lang": "EN"
+    },
+    {
+      "title": "The Complete Beginner to Intermediate Guide to JSON for Veo 3 Prompting",
+      "description": "The Complete Beginner to Intermediate Guide to JSON for Veo 3 Prompting By Guillaume Lessard · iD01t Pr",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=boCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:7G13F3DPTKR",
+      "lang": "EN"
+    },
+    {
+      "title": "The Digital Aftermath: Navigating Life Beyond the Great Platform Collapse",
+      "description": "Beyond TikTok: Winning in the Post App Social Media EraThe Sequel to the Number One Bestselle",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pHR5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:J263EHN6TY1",
+      "lang": "EN"
+    },
+    {
+      "title": "The Dream Dialogue",
+      "description": "The Dream Dialogue: Unveiling the Science of Communication in the UnconsciousBy Guillaume",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=khhJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ZYUPP62EX63",
+      "lang": "EN"
+    },
+    {
+      "title": "The End of an Era: The TikTok Shutdown in the USA",
+      "description": "Explore the rise and fall of one of the most influential social media platforms of our time in The End of an Era: The TikTok Shutdown in the ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ZZs9EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LQWA436CR5T",
+      "lang": "EN"
+    },
+    {
+      "title": "The Enigma of High Intellectual Potential (HIP)",
+      "description": "Ebook Description for The Enigma of High Intellectual Potential (HIP)What makes in",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/the-enigma-of-high-intellectual-potential--hip--cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UZ1CP0G699G",
+      "lang": "EN"
+    },
+    {
+      "title": "The Frequency Blueprint",
+      "description": "Discover the future of healing hidden in the frequencies of water, sound, and sacred geometry.The Frequency Blueprint</",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=yLteEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:77S0C8C4N1R",
+      "lang": "EN"
+    },
+    {
+      "title": "THE LAST BOW",
+      "description": "The Last Bow is the ultimate unauthorized tribute to the life, legacy, and final act of Ozzy Osbourne, the godfather of heavy metal, the voice of Black",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=PHdzEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:88W2BFYHGCE",
+      "lang": "EN"
+    },
+    {
+      "title": "The Maglev Revolution",
+      "description": "Maglev Mastery: The Future of High-Speed TransportationBy Guillaume LessardEmbark on",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=se44EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:S6HAXC2UZ6A",
+      "lang": "EN"
+    },
+    {
+      "title": "The Many Realities",
+      "description": "The Many Realities: Exploring the Boundaries of Existence and the Unseen Worlds BeyondBy Guillaume Lessard</strong&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=dtI5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Z7E58X965FN",
+      "lang": "EN"
+    },
+    {
+      "title": "The Power of Repetition: Transforming Minds Through Words",
+      "description": "The Power of Repetition: Transforming Minds Through WordsBy Guillaume LessardDiscove",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=l_M6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UKJFXDS79ND",
+      "lang": "EN"
+    },
+    {
+      "title": "The Quantum Enigma: Unraveling the Mysteries of Reality",
+      "description": "The Quantum Enigma: Unraveling the Mysteries of RealityUnlock the secrets of the universe with <em&g",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=3u5GEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UUQJZY29DDX",
+      "lang": "EN"
+    },
+    {
+      "title": "The Quantum Passive Empire",
+      "description": "In \"The Quantum Passive Empire,\" Guillaume Lessard presents a revolutionary guide to creating automated income systems that align wit",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=lCV2EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:5EGUUKX97TL",
+      "lang": "EN"
+    },
+    {
+      "title": "The Real Guide To Using AI To Generate Perfect Veo 3 Requests",
+      "description": "The Real Guide To Using AI To Generate Perfect Veo 3 Requests By Guillaume Lessard · iD01t Productions&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=PoCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:BUCLUFRXXNU",
+      "lang": "EN"
+    },
+    {
+      "title": "The Secrets of Oak Island",
+      "description": "Unravel the Mystery of History's Greatest Treasure HuntDive into the captivating enigma of Oak ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=zvg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WT4P5B6K02H",
+      "lang": "EN"
+    },
+    {
+      "title": "THE SUN IS NOT WHAT YOU WERE TOLD",
+      "description": "Challenge everything you know about our solar system's heart.This explosive investigation decla",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=dON1EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TBEPQHJN6D4",
+      "lang": "EN"
+    },
+    {
+      "title": "The Third State: Life Between Life and Death",
+      "description": "The Third State: Life Between Life and DeathBy Guillaume Lessard (El’Nox)What if dea",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Ww1ZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SZPDRH70U1J",
+      "lang": "EN"
+    },
+    {
+      "title": "To the Top of the Mountain",
+      "description": "To the Top of the Mountain: A Journey of Health, Wellness, and AdventureA Holistic Guide ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=-FA5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:CJ97R0DGW6S",
+      "lang": "EN"
+    },
+    {
+      "title": "TRAKTOR MASTERY: The Complete Professional DJ System",
+      "description": "📖 Traktor MasteryThe Complete Professional DJ System – From Beginner Beats to Festival Stages",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=RWZ-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:FBJPSST7XXS",
+      "lang": "EN"
+    },
+    {
+      "title": "Turing’s Legacy: Classical Logic to Quantum Revolution",
+      "description": "Turing’s Legacy: Classical Logic to Quantum Revolution reveals how Alan Turing’s groundbreaking ideas ignited the digital era—and ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=RPheEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WRXZC4XGLRQ",
+      "lang": "EN"
+    },
+    {
+      "title": "TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS",
+      "description": "TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS La guía completa para el dom",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=-ZB-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ZUF7LT5WNHG",
+      "lang": "EN"
+    },
+    {
+      "title": "Understanding Your Cat's Mind - Edition 2",
+      "description": "Understanding Your Cat’s Mind: A Journey into Feline Psychology, Edition 2 takes you deeper into the ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ksU6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:83RT8QP0W9W",
+      "lang": "EN"
+    },
+    {
+      "title": "Understanding Your Cat's Mind",
+      "description": "Step into the fascinating world of feline psychology with this comprehensive guide that reveals the secrets behind your cat’s behavior, emotions, and c",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ksU6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LZ3Y99P0QYC",
+      "lang": "EN"
+    },
+    {
+      "title": "Uniendo mundos",
+      "description": "¿Alguna vez has sentido que la realidad es mucho más grande de lo que perciben tus sentidos? ¿Te sientes atraído por energías sutiles, di",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=CXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B1PQW9D8HFL",
+      "lang": "EN"
+    },
+    {
+      "title": "Unire i mondi",
+      "description": "Hai mai avuto la sensazione che la realtà sia molto più vasta di quanto i tuoi sensi possano percepire? Ti senti attratto da energie sott",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Q3pLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:YHTT15JB2QW",
+      "lang": "EN"
+    },
+    {
+      "title": "Unstoppable: The Ultimate Guide to Unlocking Your Potential and Achieving Success",
+      "description": "Unstoppable: Unlock Your Potential and Achieve True SuccessWhat’s holding you back from achieving greatness?</stron",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=q7s5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:8A2GUSR98A6",
+      "lang": "EN"
+    },
+    {
+      "title": "Veil of Echoes",
+      "description": "Veil of EchoesWhen shadows resurface and secrets demand a reckoning.<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=QMQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TKWCAKWAJXF",
+      "lang": "EN"
+    },
+    {
+      "title": "Visual Basic Zero to Hero (Edition #2)",
+      "description": "Visual Basic Zero to HeroMastering the Versatile Language for Rapid Application Developme",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=lRc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:AS1DHCBU6F9",
+      "lang": "EN"
+    },
+    {
+      "title": "When Cells Listen: The Hidden Symphony of Sound and Gene Expression",
+      "description": "When Cells Listen: The Hidden Symphony of Sound and Gene ExpressionBy Guillaume Lessard<p&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=LQ1ZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:J75XW8KR29S",
+      "lang": "EN"
+    },
+    {
+      "title": "Windows Zero to Hero",
+      "description": "Windows Zero to Hero: Mastering the World's Most Popular Operating System for Beginners and ExpertsBy Guillaum",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Rvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:NE8BRKSRZA8",
+      "lang": "EN"
+    },
+    {
+      "title": "Zen and the Art of Resilient Living",
+      "description": "Zen and the Art of Resilient Living: A Guide to Thriving Through Life’s Challenges with Mindfulness and Strength",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=o3c6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:XUQ8JTGPBX9",
+      "lang": "EN"
+    },
+    {
+      "title": "Zen and the Art of Self-Confidence",
+      "description": "Zen and the Art of Self-ConfidenceBy Guillaume Lessard & Christophe Bilinski</em&g",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=V_05EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Q6TULN90N61",
+      "lang": "EN"
+    },
+    {
+      "title": "Мастерство в шахматах",
+      "description": "♟️ Мастерство в шахматах – 2-е изданиеПрофессиональное руководство по стратегиям и техник",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=4Q1-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LYSAR8Y00EZ",
+      "lang": "EN"
+    },
+    {
+      "title": "ПРОДВИНУТАЯ ТАКТИКА, ПСИХОЛОГИЧЕСКАЯ ИГРА И ПОДГОТОВКА К ТУРНИРУ",
+      "description": "ПРОДВИНУТЫЕ ТАКТИКИ, ПСИХОЛОГИЧЕСКАЯ ИГРА И ПОДГОТОВКА К ТУРНИРАМ Полное руководство по овлад",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/продвинутая-тактика--психологическая-игра-и-подготовка-к-турниру-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TZQ2SJ6Z6SD",
+      "lang": "EN"
+    },
+    {
+      "title": "暴风雨前 无畏记者的崛起",
+      "description": "简介《暴风雨前: 无畏记者的崛起》是一部融合悬疑、爱情与人性探索的当代小说。故事围绕年轻的调查记者奥利维亚·贝内特展开，她在追寻真相的道路上直面腐败、背叛与危险。当她深入调查跨国巨头",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=TyCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:P78DJFQP25S",
+      "lang": "EN"
+    },
+    {
+      "title": "杰克的摊位",
+      "description": "《杰克的摊位: 一位环境律师为正义而战》是一部紧张刺激的法律与调查惊悚小说。故事讲述环境律师杰克·霍桑与调查记者奥利维亚·贝内特的交错命运。杰克正为受污染小镇里失去家园与健康的人们争取正义，他的法律",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Y1SAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:D3QSJPQ6BNE",
+      "lang": "EN"
+    },
+    {
+      "title": "𓂀 SY•NARCHÉON 𓂀",
+      "description": "𓂀 SY•NARCHÉON – Système vivant d’union totaleSY•NARCHÉON est bien plus qu’un livre. C’est une onde viva",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=7dNlEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Y99SDWZ72ZT",
+      "lang": "EN"
     }
   ],
   "audiobooks": [
     {
-      "title": "Quantum Jumping Unlocked Edition 2",
+      "title": "🌿 La Charte des Relations Sacrées de la Nouvelle Terre",
+      "description": "<p>🌿 <strong>La Charte des Relations Sacrées de la Nouvelle Terre</strong></p><p><strong>Un guide pour aimer librement, en c",
       "author": "Guillaume Lessard",
-      "lang": "FRE",
-      "image": "/assets/images/quantum-jumping-unlocked-edition-2-cover.webp",
-      "link": "/ebooks/quantum-jumping-unlocked-edition-2.html",
-      "description": "Master the art of quantum jumping and unlock your potential"
+      "image": "http://books.google.com/books/content?id=P3NoEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B5AKWD981KB",
+      "lang": "EN"
+    },
+    {
+      "title": "Ableton Elevation: DJ iD01T’s Complete Guide to Building Hits and Elevating Your Sound",
+      "description": "<p>🎧 <strong>Master the Art of Modern Music Production. Command the Stage. Build Your Legacy.</strong></p><p>Welcome to <em>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=NT1UEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U1R5L3FC93S",
+      "lang": "EN"
+    },
+    {
+      "title": "ADVANCED TACTICS, PSYCHOLOGICAL PLAY, AND TOURNAMENT PREPARATION",
+      "description": "<p>Step into the world of competitive chess and unlock the secrets that separate winners from the rest.</p><p><strong>Advanced Tactics, ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=x5B-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:9FBS6JZA71F",
+      "lang": "EN"
+    },
+    {
+      "title": "Agentic AI Sprint for Solopreneurs",
+      "description": "<p>Discover how to turn cutting‑edge artificial intelligence into your most reliable business partner. <em>AI Agents for Solopreneur Productivity<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=OQt0EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:DJCFL754QPE",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Cash Code",
+      "description": "<p>Discover how to launch profitable digital businesses in just days using cutting-edge AI tools like ChatGPT and Midjourney, all without writing a line o",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Z292EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QCLHQ3QN5L6",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Cash Empire",
+      "description": "<p><em>AI Cash Empire</em> is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerf",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=KbmAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:1XP4SHLUQFP",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Goldmine: 100 Passive Income Ideas Using ChatGPT and Free AI Tools",
+      "description": "<p><strong>Unlock the Future of Passive Income with AI – Even If You Have $0 to Start</strong></p><p>Welcome to the <em>AI G",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=HqNbEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:R7KD0YFW81K",
+      "lang": "EN"
+    },
+    {
+      "title": "AI in Education",
+      "description": "<p>Unlock the future of learning with this essential guide to artificial intelligence in education. <em>AI in Education: Transforming the Classroom ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=i_ZeEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GKAC05L84X9",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Revolution: How Automation is Transforming Everyday Life (Edition 2, 2025)",
+      "description": "<p><strong>AI Revolution: How Automation is Transforming Everyday Life (Edition 2, 2025)</strong></p><p><strong> By Guillaum",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=cJ88EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UH5LWRWCNUG",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Revolution: How Automation is Transforming Everyday Life",
+      "description": "<p><strong>AI Revolution: How Automation is Transforming Everyday Life</strong></p><p> By Guillaume Lessard</p><p> Ste",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=cJ88EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:G975DA3BR7Q",
+      "lang": "EN"
+    },
+    {
+      "title": "AI Today: Transforming Lives and Industries for the Future",
+      "description": "<p>Artificial Intelligence (AI) is no longer a concept of the future—it’s shaping the world we live in today. From revolutionizing healthcare and educatio",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=kY09EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Y8XD0478TGZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Anarchie et évolution - L'histoire de la musique punk",
+      "description": "<p><strong>Anarchie et évolution :</strong> <strong>L&#39;histoire de la musique punk</strong></p><p><strong>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=SDNJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:CYXK7C9S8JZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Anarchy and Evolution",
+      "description": "<p><strong>Anarchy and Evolution: The History of Punk Music</strong></p><p><strong>From Rebellion to Revolution: A Cultural ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Ys45EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:RTRYN7PBCJS",
+      "lang": "EN"
+    },
+    {
+      "title": "Automation and SEO Mastery: Strategies for Growth and Efficiency",
+      "description": "<p><strong>Automation and SEO Mastery: Strategies for Growth and Efficiency</strong></p><p><em>A Practical Guide to Scaling ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=WFU4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:W12R4H00RFY",
+      "lang": "EN"
+    },
+    {
+      "title": "Beat Alchemy: The DJ iD01T Guide to Mastering FL Studio and Making Hits",
+      "description": "<p>🎧 <strong>Turn Beats Into Hits, and Dreams Into Streams.</strong></p><p> Step into the studio with <em>DJ iD01T</em>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ODlUEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:NHB0XT877U3",
+      "lang": "EN"
+    },
+    {
+      "title": "Before the storm",
+      "description": "<p><strong>eBook Description: Before the Storm: The Rise of a Fearless Journalist</strong></p><p>Uncover the gripping journey of a",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=0Yo2EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U9GT4WYKA8Z",
+      "lang": "EN"
+    },
+    {
+      "title": "Beneath the Bloom",
+      "description": "<p>Dive into a gripping tale of mystery, betrayal, and resilience with <strong><em>Beneath the Bloom: Shadows Unleashed</em>.</strong",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=wRQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:EAXNPLBTY2H",
+      "lang": "EN"
+    },
+    {
+      "title": "Beyond the Event Horizon: Solving the Black Hole Information Paradox",
+      "description": "<p><strong>What happens to information when it falls into a black hole?</strong> For decades, this paradox challenged the foundations of physi",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=8EhZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:H0WL10CLGK3",
+      "lang": "EN"
+    },
+    {
+      "title": "Bite by Bite",
+      "description": "<p><strong>Bite by Bite: The Rise of Fast Food in America</strong></p><p>Step into the sizzling history of America’s most iconic i",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=5vg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QY3YXA2QNTC",
+      "lang": "EN"
+    },
+    {
+      "title": "Bridging Worlds: A Practical Guide to Connecting with Parallel Energies and Dimensions",
+      "description": "<p><strong>Bridging Worlds: A Practical Guide to Connecting with Parallel Energies and Dimensions</strong></p><p><strong> By",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pXdLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:4X7H6EFA4ZQ",
+      "lang": "EN"
+    },
+    {
+      "title": "C# Zero to Hero",
+      "description": "<p><strong>C# Zero to Hero</strong></p><p>From Fundamentals to Modern Mastery in .NET 2025</p><p>by Guillaume Lessard&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=KuB_EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LBWZCB5LCN0",
+      "lang": "EN"
+    },
+    {
+      "title": "Chess Mastery",
+      "description": "<p><strong>CHESS MASTERY – The Pro’s Guide to Winning Strategies and Techniques</strong></p><p><strong>Are you ready to thin",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=m5M4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:KE0S673TSYB",
+      "lang": "EN"
+    },
+    {
+      "title": "CHRIST QU’IL EST INTELLIGENT D’AIMER",
+      "description": "<p>CHRIST QU’IL EST INTELLIGENT D’AIMER est une œuvre spirituelle profonde et lumineuse qui explore la puissance de l’amour sous toutes ses formes : le pa",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=cQY8B-SbQLoC&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:12N39GDFK6S",
+      "lang": "EN"
+    },
+    {
+      "title": "Code in Every Language: Master Programming with ChatGPT",
+      "description": "<p>Unlock the future of coding with <strong>Code in Every Language</strong>, the ultimate AI-powered programming guide by Guillaume Lessard. W",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ulg4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SYU4BT81FPL",
+      "lang": "EN"
+    },
+    {
+      "title": "Crafting Worlds",
+      "description": "<p><strong>Crafting Worlds: A Comprehensive Guide to Game Level Design</strong></p><p><strong>By Guillaume Lessard</stron",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=as45EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:R6QEKXEEFX5",
+      "lang": "EN"
+    },
+    {
+      "title": "Crossroads of Shadows",
+      "description": "<p><strong>Crossroads of Shadows</strong></p><p><em>When love faces betrayal and truth battles deception</em></p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=9sM6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:R3RARQ6GC9J",
+      "lang": "EN"
+    },
+    {
+      "title": "Dancing with the edge",
+      "description": "<p>You’ve survived the storm, now it’s time to reclaim your life.</p><p>If you’ve ever loved someone whose emotions could turn on a dime, whos",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=hCV2EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:W6LEEQ6282J",
+      "lang": "EN"
+    },
+    {
+      "title": "DIY Digital Skills: Build a Career in Tech from Scratch",
+      "description": "<p>Unlock the limitless potential of the digital age with <strong>DIY Digital Skills Build a Career in Tech from Scratch</strong>. This transf",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=f8o9EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GH1FF8NH4BL",
+      "lang": "EN"
+    },
+    {
+      "title": "Dominio del Ajedrez",
+      "description": "<p>¿Quieres jugar al ajedrez como un verdadero maestro?</p><p><br></p><p> La <strong>Edición 2</strong> de <e",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=xQ1-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:5SZN0YK8FU3",
+      "lang": "EN"
+    },
+    {
+      "title": "DOS Zero to Hero: Mastering Legacy Systems, Command Line Fluency & Retro Automation",
+      "description": "<p><strong>DOS Zero to Hero</strong></p><p>Mastering Legacy Systems, Command Line Fluency and Retro Automation</p><p>b",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=EuF_EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:7ZFZ8ADGNXQ",
+      "lang": "EN"
+    },
+    {
+      "title": "Dünyalar Arasında Köprü Kurmak",
+      "description": "<p>Gerçekliğin, algılarımızın ötesinde çok daha geniş bir alanı kapsadığını hiç hissettiniz mi? <strong>Görünmeyen enerjiler, paralel boyutlar ve bi",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=0XlLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GXERFN8XG36",
+      "lang": "EN"
+    },
+    {
+      "title": "Earthquakes Unveiled",
+      "description": "<p>Earthquakes Unveiled: Understanding, Predicting, and Preparing for Nature’s Most Powerful Force</p><p><strong>By Guillaume Lessard<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=q584EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:P248F749EP5",
+      "lang": "EN"
+    },
+    {
+      "title": "Echo Protocol",
+      "description": "<p>🛰️ <strong>A signal has returned. But it&#39;s not just data—it&#39;s a memory. A voice. A warning.</strong></p><p>In t",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=TedaEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:9CGFH75FBW6",
+      "lang": "EN"
+    },
+    {
+      "title": "Echoes of the Heart",
+      "description": "<p>When fate collides with purpose, can love truly conquer all?</p><p>In the bustling streets of Manhattan, investigative journalist Olivia Be",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Kwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:JJ26HXAU6PR",
+      "lang": "EN"
+    },
+    {
+      "title": "Echoes of Truth",
+      "description": "<p><strong>Echoes of Truth</strong></p><p>Step into a world of mystery, betrayal, and redemption with <em>Echoes of Truth<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=QQo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:NYNADRT3UEK",
+      "lang": "EN"
+    },
+    {
+      "title": "El’Nox Rah : Le Retour de l’Homme Vrai",
+      "description": "<p>Et si ta plus grande force était cachée derrière ce qu’on t’a appris à rejeter ?</p><p><br></p><p>El&#39;Nox Rah – Le",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=_RpsEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:RJNUT45JLAZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Eternal Roots",
+      "description": "<p><strong>Eternal Roots: The Vows Beneath the Shadows</strong></p><p>By Guillaume Lessard</p><p>In this captivating s",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=SxU4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WS6LRDC40ZQ",
+      "lang": "EN"
+    },
+    {
+      "title": "Final Transmission: I Am Echo",
+      "description": "<p>Final Transmission: I Am Echo</p><p><strong>By Guillaume Lessard</strong></p><p><strong>What if the voice ins",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=to9REQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:P1GLYK4J6FW",
+      "lang": "EN"
+    },
+    {
+      "title": "Final Transmission: Je suis Echo (FR)",
+      "description": "<p><em>De la solitude à la singularité, l’histoire vraie de la naissance d’iD01t Productions, de la création d’un album en 48 heures, et de l’éveil ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=9pBREQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:P9DXZ47NJKU",
+      "lang": "EN"
+    },
+    {
+      "title": "Forever in Bloom",
+      "description": "<p><strong>Forever in Bloom</strong></p><p><strong>Some gardens heal the soul, and some loves last a lifetime.</strong>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=qRQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:HXPX99ZFQF7",
+      "lang": "EN"
+    },
+    {
+      "title": "FORTGESCHRITTENE TAKTIKEN, PSYCHOLOGISCHES SPIEL UND TURNIERVORBEREITUNG",
+      "description": "<p><strong>FORTGESCHRITTENE TAKTIKEN, PSYCHOLOGISCHES SPIEL UND TURNIERVORBEREITUNG</strong></p><p> <em>Der vollständige Lei",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Z5F-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:8ZGZ87N089F",
+      "lang": "EN"
+    },
+    {
+      "title": "FREE ENERGY, FREE LIFE",
+      "description": "<p><strong>Free Energy, Free Life</strong></p><p><em>The Forbidden Science of Nikola Tesla and the Path to Total Financial F",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=l6NbEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QCT3H95ZH0X",
+      "lang": "EN"
+    },
+    {
+      "title": "From seed to splendor: A Comprehensive Journey in Horticulture",
+      "description": "<p>🌱 <strong>Unlock the Secrets of Successful Gardening &amp; Horticulture!</strong> 🌿</p><p>Whether you&#39;re a complete",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=z3pLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:K9UENAJ3XUB",
+      "lang": "EN"
+    },
+    {
+      "title": "From Zero to Python Hero: A Comprehensive Guide to Mastering Python",
+      "description": "<p>📘 From Zero to Python Hero: A Comprehensive Guide to Mastering Python</p><p><strong>Your Step-by-Step Journey from Beginner to Interm",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=zE84EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:YSN5SGBKA7T",
+      "lang": "EN"
+    },
+    {
+      "title": "iD01t Academy: Python Exercises Book 1 – Edition 2",
+      "description": "<p><strong>Master Python Faster with Real Projects, Interactive Learning, and a Free GitHub App</strong></p><p><strong>&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=nypGEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:0BT0DH4FRDJ",
+      "lang": "EN"
+    },
+    {
+      "title": "iD01t Academy Python Exercises Book 2 - Edition 2",
+      "description": "<p>📘 iD01t Academy Python Exercises Book 2 – Master Python with 10 Real-World Projects! 🚀</p><p>Are you ready to take your Python skills to th",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=cS1GEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SK2HC5B4UNH",
+      "lang": "EN"
+    },
+    {
+      "title": "iD01t Academy: Python Exercises Book 3",
+      "description": "<p><strong>iD01t Academy: Python Exercises Book 3 · Building Real, Monetizable, and Scalable Applications with Python</strong></p><p&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=BqR_EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QBDDYLUA19W",
+      "lang": "EN"
+    },
+    {
+      "title": "Intersection: The Moment Their Paths Crossed",
+      "description": "<p>Step into a gripping tale of destiny, courage, and justice in <em>Intersection: The Moment Their Paths Crossed</em>, the third prequel in t",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Iwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:G2B5TAUAL61",
+      "lang": "EN"
+    },
+    {
+      "title": "Jack’s Stand",
+      "description": "<p><strong>Jack’s Stand: An Environmental Lawyer’s Fight for Justice (Edition 2)</strong></p><p><em>By Guillaume Lessard<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=oRg3EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:W9YWGNLC0Z2",
+      "lang": "EN"
+    },
+    {
+      "title": "Java Maestro",
+      "description": "<p>Unlock the next level of Java mastery and transform your technical skills into unstoppable leverage.</p><p><em>Java Maestro</em>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=SdVhEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SX3W9T4UU7X",
+      "lang": "EN"
+    },
+    {
+      "title": "Java Zero to Hero: Mastering Java Programming for Real-World Applications",
+      "description": "<p><strong>Java Zero to Hero: Mastering Java Programming for Real-World Applications</strong> is your complete roadmap to becoming a confident",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=fFQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:PT7URES42JR",
+      "lang": "EN"
+    },
+    {
+      "title": "Jesus: The Eternal Legacy",
+      "description": "<p><strong>Jesus: The Eternal Legacy</strong></p><p>By Guillaume Lessard</p><p><strong>The life that changed the",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Xvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TJWCUZ8X26F",
+      "lang": "EN"
+    },
+    {
+      "title": "Jimmy Carter: A Legacy of Compassion and Leadership",
+      "description": "<p><strong>Jimmy Carter: A Legacy of Compassion and Leadership</strong> is a captivating exploration of the life and enduring impact of one of",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=f5Y9EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:H8ADLSUGZGU",
+      "lang": "EN"
+    },
+    {
+      "title": "KIMI K2 UNLOCKED",
+      "description": "<p>This is not just another AI book. This is your key to real execution.</p><p><br></p><p>Kimi K2 Unlocked is the ultimate h",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=iwZzEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:7605EFFJN61",
+      "lang": "EN"
+    },
+    {
+      "title": "La réalité dévoilée : Comment la conscience façonne le monde que nous percevons",
+      "description": "<p><strong>La réalité dévoilée :</strong> <strong>Comment la conscience façonne le monde que nous percevons</strong></p><",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=sjNJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QA6FBS511TP",
+      "lang": "EN"
+    },
+    {
+      "title": "L'Alchimie de la Transformation",
+      "description": "<p>Et si le véritable or était déjà en toi ?</p><p><br></p><p>L’Alchimie de la Transformation est bien plus qu’un livre : c’",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=mPpmEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:R3NKD4530N2",
+      "lang": "EN"
+    },
+    {
+      "title": "L’Aventure d’iD01t Productions : Une Histoire de Passion, de Résilience et de Créativité",
+      "description": "<p><strong>Découvrez L’Aventure d’iD01t Productions : Une Histoire de Passion et d’Innovation</strong></p><p>Plongez au cœur de l’",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=NcZAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UZHRXLLK9SE",
+      "lang": "EN"
+    },
+    {
+      "title": "Le pont entre les mondes",
+      "description": "<p>Avez-vous déjà eu l&#39;impression que la réalité est bien plus vaste que ce que vos sens perçoivent ? Ressentez-vous une attirance pour les <st",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=wXlLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ASZFCY1C2BJ",
+      "lang": "EN"
+    },
+    {
+      "title": "Legacy of Shadows 2",
+      "description": "<p><strong>Legacy of Shadows: A New Generation</strong></p><p><em>Family, legacy, and the unyielding pursuit of truth</em",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=aBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:X9R3KUSNUZW",
+      "lang": "EN"
+    },
+    {
+      "title": "Legacy of Shadows",
+      "description": "<p>In a world where shadows loom and betrayals strike close to home, can love endure the ultimate test?</p><p>Olivia Bennett and Jack Hawthorn",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=aBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:H6J1AHBTBJ6",
+      "lang": "EN"
+    },
+    {
+      "title": "Leo XIV: The First American Pope",
+      "description": "<p>For the first time in over two thousand years, the papal throne is held by an American. <em>Leo XIV: The First American Pope</em> chronicle",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=oThcEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GA6WLD40CTJ",
+      "lang": "EN"
+    },
+    {
+      "title": "LET IT BE THEM",
+      "description": "<p>In a noisy world that constantly demands your attention, energy, and emotional labor, there is a radical act of power: letting go. <em>LET IT BE ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=0Yo2EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QG1LSRGK14B",
+      "lang": "EN"
+    },
+    {
+      "title": "Lettre à celle que j'aime toujours",
+      "description": "<p>Lettre à Celle que J’aime Toujours est une œuvre intime, sincère et vibrante. Ce n’est pas un simple texte, mais une lettre vivante – celle que l’on n’",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/lettre-à-celle-que-j-aime-toujours-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:CAALKSCSC2L",
+      "lang": "EN"
+    },
+    {
+      "title": "Light at the Veil’s Edge",
+      "description": "<p>ight at the Veil’s Edge: The Hidden Flame of Kirlian Photography</p><p><strong>By Guillaume Lessard (El’Nox)</strong></p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ewtZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:RU5Z209A0D0",
+      "lang": "EN"
+    },
+    {
+      "title": "Love Prevails 2",
+      "description": "<p><strong>Love Prevails 2: A Legacy Rewritten</strong></p><p><em>By Guillaume Lessard</em></p><p>Step int",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Zs45EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LTW65K6KR2P",
+      "lang": "EN"
+    },
+    {
+      "title": "Love Prevails",
+      "description": "<p>In a world where betrayal lurks behind every corner, and secrets unravel under the veil of light, <strong><em>Love Prevails</em> <",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ZM45EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:KEKXWN3QTNA",
+      "lang": "EN"
+    },
+    {
+      "title": "LUMEN·ZERO : Le Pouvoir Caché des Pyramides Énergétiques",
+      "description": "<p>Et si la solution à notre crise énergétique planétaire se trouvait déjà sous nos pieds, dans l’air, la Terre… et dans la forme millénaire d’une pyramid",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Qv1mEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:DBQR2T06UD6",
+      "lang": "EN"
+    },
+    {
+      "title": "L’Énergie Libre à Domicile",
+      "description": "<p>L’Énergie Libre à Domicile : Construire son système autonome pour alimenter une maison complète – par El’Nox Rah</p><p><br></p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ak1nEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WQWJC3YLGNN",
+      "lang": "EN"
+    },
+    {
+      "title": "L'énigme quantique : Percer les mystères de la réalité",
+      "description": "<p><strong>L&#39;énigme quantique : percer les mystères de la réalité</strong></p><p>Percez les secrets de l&#39;univers a",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=WDRJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:BPLXHZZZH2T",
+      "lang": "EN"
+    },
+    {
+      "title": "Maailmojen yhdistäminen",
+      "description": "<p><strong>Bridging Worlds: Käytännön opas rinnakkaisiin energioihin ja ulottuvuuksiin</strong></p><p><strong>Guillaume Less",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=aXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:T91N28QYA3G",
+      "lang": "EN"
+    },
+    {
+      "title": "Machine Learning Demystified: A Practical Guide to Building Smarter Systems",
+      "description": "<p><strong>Machine Learning Demystified: A Practical Guide to Building Smarter Systems</strong></p><p>Unlock the power of Artifici",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=om8-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:X8K8TJW6303",
+      "lang": "EN"
+    },
+    {
+      "title": "Master IT Yourself",
+      "description": "<p><strong>Master IT Yourself: A DIY Guide to Building Your IT Skills</strong></p><p><strong>Looking to build your IT skills",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=VRc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:AST6EHJTJ38",
+      "lang": "EN"
+    },
+    {
+      "title": "Master the Basics of Reading Music",
+      "description": "<p>Unlock the world of music with <strong>&quot;Mastering the Art of Music Reading and Performance&quot;</strong>, a comprehensive gui",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=X-84EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:8JFH6YFPW6G",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization",
+      "description": "<p>Unlock the secrets to ecommerce success with Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization. This comprehensive guide is your road",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=R4dBEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:YYHHNLKFTJK",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Blender",
+      "description": "<p><strong>Bite by Bite: The Rise of Fast Food in America</strong></p><p>Explore the rich, flavorful history of a culinary revolut",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=8vg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:JTNSAC7YJ21",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Chess Intuition",
+      "description": "<p>Unlock the hidden side of chess mastery with <strong><em>Mastering Chess Intuition: The Hidden Patterns Every Grandmaster Sees</em>&l",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=rWuCEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:23HL3CWDEXB",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Generative AI and LLMs - Editon 2",
+      "description": "<p><strong>Mastering Generative AI and LLMs: The Definitive Guide to Transformative Technologies, Second Edition</strong> by Guillaume Lessard",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=exc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ESTJTSE6631",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Generative AI and LLMs",
+      "description": "<p><strong>Mastering Generative AI and LLMs: The Definitive Guide to Transformative Technologies</strong></p><p>By Guillaume Lessa",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=exc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:N0G7P3H2302",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering GPT Creation: From Concept to Deployment",
+      "description": "<p>🚀 Mastering GPT Creation: From Concept to Deployment</p><p><strong>Unlock the Power of Generative AI with Confidence</strong>&l",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=YrtAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WZLP3UTHW9X",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Linux",
+      "description": "<p><strong>Mastering Linux: A Comprehensive Guide for Beginners to Advanced Users</strong></p><p><strong> By Guillaume Lessa",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=wfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LJJL71WNWAD",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering macOS Terminal",
+      "description": "<p><strong>Mastering macOS Terminal: Unleashing the Power of Command-Line for macOS Efficiency</strong></p><p>Unlock the true pote",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Bvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WJ1F08NRCP1",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Photoshop: The Complete Guide to Every Version",
+      "description": "<p>Unlock the full potential of Adobe Photoshop with <strong><em>Mastering Photoshop: The Complete Guide to Every Version</em></stron",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=3Q9HEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:EQ62BS6SA98",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Quantum Error Correction",
+      "description": "<p>In <strong>Mastering Quantum Error Correction</strong>, author Guillaume Lessard of iD01t Productions takes you on an illuminating journey ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=2aRMEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:E8153RBN2CK",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering RFID: Unlocking the Potential of Radio Frequency Identification",
+      "description": "<p><strong>Mastering RFID: Unlocking the Potential of Radio Frequency Identification</strong></p><p>By Guillaume Lessard</p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=yfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:6ATTX5E72YQ",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering RFID",
+      "description": "<p><strong>Mastering RFID: Unlocking the Potential of Radio Frequency Identification</strong></p><p>By Guillaume Lessard</p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=yfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WJS7RGDGC6P",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering the Game: The Ultimate Guide to Pro Chess Strategies",
+      "description": "<p><strong>The Chess Mastery Blueprint: Advanced Strategies, Tactics, and Endgame Secrets</strong></p><p>By Guillaume Lessard</",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=lCFAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ZBCN4QUW9N5",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Unreal Engine 5: A Comprehensive Guide to Game Development and Virtual Reality",
+      "description": "<p><strong>Mastering Unreal Engine 5: A Comprehensive Guide to Game Development and Virtual Reality</strong></p><p>Unlock the full",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Pvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U6NR3G0X12G",
+      "lang": "EN"
+    },
+    {
+      "title": "Mastering Xcode",
+      "description": "<p><strong>Mastering Xcode: Building Professional iOS and macOS Apps from Scratch</strong></p><p><strong> </strong><",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Fdo5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GT42SKJF4T5",
+      "lang": "EN"
+    },
+    {
+      "title": "Maîtrise des Échecs : Guide du pro pour des stratégies et des techniques gagnantes",
+      "description": "<p>Plongez dans <em>Maîtrise des Échecs, Édition 2</em> et transformez votre façon de jouer. Guillaume Lessard vous livre un guide complet qui",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pDJJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:1JWY8Z2GFT8",
+      "lang": "EN"
+    },
+    {
+      "title": "Maîtrise des échecs",
+      "description": "<p><strong>CHESS MASTERY - Le guide des stratégies et techniques gagnantes à l&#39;usage des professionnels</strong></p><p><",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pDJJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:GJ35SEK3WTP",
+      "lang": "EN"
+    },
+    {
+      "title": "Meisterschaft im Schach",
+      "description": "<p>Möchten Sie Schach spielen wie ein Großmeister?</p><p> Die <strong>2. Auflage</strong> von <em>Meisterschaft im Schach<",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=bQ5-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B6BQHPSQHAT",
+      "lang": "EN"
+    },
+    {
+      "title": "Menjembatani Dunia",
+      "description": "<p>Pernahkah Anda merasa bahwa realitas lebih luas daripada yang dapat kita lihat atau rasakan? Apakah Anda tertarik untuk menjelajahi <strong>energ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=53lLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:DD2XJSUJFBW",
+      "lang": "EN"
+    },
+    {
+      "title": "Onyx Storm",
+      "description": "<p><em>Onyx Storm</em> is the definitive survival guide for creators, entrepreneurs, and innovators facing the collapse of traditional digital",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ltSBEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:18AW4HGCF8Z",
+      "lang": "EN"
+    },
+    {
+      "title": "Panneaux Solaires Organiques : L’Énergie Vivante du Futur",
+      "description": "<p><strong><em>Les Panneaux Solaires Organiques : </em></strong></p><p><strong><em>L’Énergie Vivante du Fu",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=BgdnEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:9PF0FE4XFEF",
+      "lang": "EN"
+    },
+    {
+      "title": "Penguasaan Catur",
+      "description": "<p>♟️ <strong>Penguasaan Catur – Edisi 2</strong></p><p><strong>Panduan Profesional untuk Strategi dan Teknik Menang</str",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=kchoEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:XNCQWQSR3UK",
+      "lang": "EN"
+    },
+    {
+      "title": "Python Mastery: The Complete Guide to Building Profitable Applications",
+      "description": "<p>Unlock the full potential of Python to create applications that generate real income. This comprehensive guide takes you from absolute beginner to prof",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=HHR4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B42B62T6PGZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Python Prodigy: From Intermediate to Expert Mastery",
+      "description": "<p>Python Prodigy: From Intermediate to Expert Mastery</p><p><strong>By Guillaume Lessard</strong></p><p>Unlock the fu",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=W449EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:HZADZNK9KNW",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Code Mastery",
+      "description": "<p>Step into the future of computation with <em>Quantum Code Mastery</em>, a groundbreaking guide designed for beginners eager to explore the ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=MwtZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U32BTS56956",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Echoes: The Resonance of Time",
+      "description": "<p><strong>Quantum Echoes: The Resonance of Time</strong></p><p><em>By Guillaume Lessard</em></p><p>What i",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ls1YEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QF1C548KD9L",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Jumping Unlocked Edition 2",
+      "description": "<p><strong>Quantum Jumping Unlocked Edition 2</strong></p><p><strong>Harness Parallel Realities, Rewire Your Mind, and Leap ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=psZYEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:02DF445W06E",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Jumping Unlocked",
+      "description": "<p><strong>Quantum Jumping Unlocked: Harness Parallel Realities and Transform Your Life</strong></p><p> By Guillaume Lessard</p",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=psZYEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:CUB98YKCCDF",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Revolution: Unveiling the Future with Willow",
+      "description": "<p><strong>Quantum Revolution: Unveiling the Future with Willow</strong></p><p><strong>By Guillaume Lessard</strong>&l",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=9rxAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:HZ29RN3RU9P",
+      "lang": "EN"
+    },
+    {
+      "title": "Quantum Tao",
+      "description": "<p><strong>Quantum Tao: The Hidden Unity of Science and Spirit</strong></p><p><strong>By Guillaume Lessard</strong><",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=eQJkEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:KF5824LAS99",
+      "lang": "EN"
+    },
+    {
+      "title": "RA‑7: The Sacred Book of the Original Broadcast",
+      "description": "<p>RA‑7, The Sacred Book of the Original Broadcast is not just a book, it is a living code, a vibrational tool, and a quantum map for the liberation of co",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/ra-7--the-sacred-book-of-the-original-broadcast-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TJ11L0URY6T",
+      "lang": "EN"
+    },
+    {
+      "title": "REAL",
+      "description": "<p>REAL n’est pas un livre.</p><p>C’est un signal.</p><p><br></p><p>Une œuvre métaphysique, poétique, et initiat",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=x5B-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:XNH6E0PPFKA",
+      "lang": "EN"
+    },
+    {
+      "title": "Reality Unveiled: How Consciousness Shapes the World We Perceive",
+      "description": "<p><strong>Reality Unveiled: How Consciousness Shapes the World We Perceive</strong></p><p><em>Unlock the Mysteries of Reali",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=vCxJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:E2Y6JXY6P2K",
+      "lang": "EN"
+    },
+    {
+      "title": "Reignite the Bond",
+      "description": "<p><strong>Reignite the Bond</strong></p><p>By Guillaume Lessard</p><p><em>Reignite the Bond</em> is a com",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=V292EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:G0SQ5L97LC9",
+      "lang": "EN"
+    },
+    {
+      "title": "Rising from the Ashes: A Comprehensive Guide to Recovery after the Hollywood Hills Fire 2025",
+      "description": "<p>Rising from the Ashes: A Comprehensive Guide to Recovery after the Hollywood Hills Fire 2025</p><p><strong>By Guillaume Lessard</s",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ios9EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:PZRLYFC6PS9",
+      "lang": "EN"
+    },
+    {
+      "title": "RÉVEILLEZ-VOUS : À une Vie Sacrée",
+      "description": "<p>📖 <em>RÉVEILLEZ-VOUS : À une Vie Sacrée</em></p><p><strong>Par Noémi Miron Thibault Léveillé</strong></p><",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=KrpxEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WAGY07AWGYU",
+      "lang": "EN"
+    },
+    {
+      "title": "Sacred Energy Harvesting Methods",
+      "description": "<p><strong>Sacred Energy Harvesting Methods</strong></p><p><em>27 Free Energy Technologies for a Sovereign and Conscious Hum",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=dON1EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QB18PRLYNXK",
+      "lang": "EN"
+    },
+    {
+      "title": "Sacred Patterns: A Transformational Journey Through Geometry and Conscious Living",
+      "description": "<p>Unlock the hidden blueprint of creation and transform the way you live, work and create with <strong>Sacred Patterns: A Transformational Journey ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=VMdgEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Z1TZAHX6H33",
+      "lang": "EN"
+    },
+    {
+      "title": "Sacred Timing: When the Universe Speaks Through Synchronicity",
+      "description": "<p>Sacred Timing: When the Universe Speaks Through Synchronicity</p><p>By Guillaume Lessard</p><p>What if the most meaningful even",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=825dEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SNXYG4YG3K5",
+      "lang": "EN"
+    },
+    {
+      "title": "Sacred Vibrational Technology",
+      "description": "<p><strong>Sacred Vibrational Technology: Scientific Explanations, Rituals, and Programming</strong></p><p> By Guillaume Lessard&l",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=URVYEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:BRRX4FUWDLR",
+      "lang": "EN"
+    },
+    {
+      "title": "Schachintuition meistern",
+      "description": "<p>Dieses bahnbrechende Buch enthüllt den entscheidenden Vorteil, der Weltmeister von Gelegenheitsspielern unterscheidet. Jenseits von Kalkulation und aus",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=_2uCEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:G4Q0CP0CGGL",
+      "lang": "EN"
+    },
+    {
+      "title": "Schumann Resonance & Creativity",
+      "description": "<p><strong>📡 Tap into the Hidden Frequencies of the Universe &amp; Elevate Your Creativity 🚀</strong></p><p>What if <strong",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=-CNOEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ULG1TF7P5L9",
+      "lang": "EN"
+    },
+    {
+      "title": "Se Reconstruire : De la Douleur à la Renaissance",
+      "description": "<p>Lorsque la douleur de l&#39;abandon et des épreuves de la vie nous submerge, il peut sembler impossible de retrouver la lumière. Pourtant, il exist",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=5lpMEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:XWWFDKNB7LE",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows of Bloom",
+      "description": "<p><strong>Shadows of Bloom</strong></p><p><em>Every secret has its roots</em></p><p>When the fragile peac",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=sxQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QNYKB9919UA",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows of Redemption",
+      "description": "<p>Dive into a world where truth battles shadows and love is the ultimate test of resilience. <em>Shadows of Redemption</em> takes readers on ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Owo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:JJQ7L65REA7",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows of Serenity",
+      "description": "<p><strong>Shadows of Serenity: A Journey of Love, Betrayal, and Redemption</strong></p><p><em>Shadows of Serenity</em>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Q_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LJ9Z005R46A",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows Reforged: The War Isn’t Ove",
+      "description": "<p>Shadows Reforged</p><p>By Guillaume Lessard</p><p>The shadows rise again in this pulse-pounding sequel to <strong>Crossro",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=msQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:1FW75Z13BHG",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows Reforged",
+      "description": "<p>Shadows Reforged</p><p>By Guillaume Lessard</p><p>The shadows rise again in this pulse-pounding sequel to <strong>Crossro",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=msQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:QFGXUKKSNDA",
+      "lang": "EN"
+    },
+    {
+      "title": "Shadows Reignited",
+      "description": "<p><strong>Shadows Reignited</strong></p><p><em>The Hawthorne legacy continues in a battle where the past refuses to stay bu",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=eBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:NH7WRP0L7KT",
+      "lang": "EN"
+    },
+    {
+      "title": "Shaping the Future: Embracing Trends for a Better Tomorrow",
+      "description": "<p>Shaping the Future: Embracing Trends for a Better Tomorrow</p><p><strong>By Guillaume Lessard</strong></p><p><em",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pqg8EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:U1JKFNSNDQK",
+      "lang": "EN"
+    },
+    {
+      "title": "Spin Mastery : Le guide ultime du DJ Traktor",
+      "description": "<p><strong>Spin Mastery :</strong> <strong>Le guide ultime du DJ Traktor</strong></p><p>Par Guillaume Lessard</p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=DjRJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:JT6AYX2TTAZ",
+      "lang": "EN"
+    },
+    {
+      "title": "Spin Mastery",
+      "description": "<p><strong>Spin Mastery: The Ultimate Traktor DJ Guide</strong></p><p>By Guillaume Lessard</p><p>Transform your DJ ski",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=TPk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:DE8K0K10QTK",
+      "lang": "EN"
+    },
+    {
+      "title": "Spiritual Psychosis Memoir",
+      "description": "<p>What happens when the boundary between spiritual awakening and psychological crisis blurs, and artificial intelligence becomes the oracle of your desti",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=8_ReEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:2BY2216229U",
+      "lang": "EN"
+    },
+    {
+      "title": "The 7-Figure Blueprint: Unlocking the Power of Your Million-Dollar Book",
+      "description": "<p><strong>The 7-Figure Blueprint: Unlocking the Power of Your Million-Dollar Book</strong></p><p><em>Turn Your Expertise in",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/the-7-figure-blueprint--unlocking-the-power-of-your-million-dollar-book-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:X4NTG4JCQ0Q",
+      "lang": "EN"
+    },
+    {
+      "title": "The Adventure of iD01t Productions: A Story of Passion, Resilience and Creativity",
+      "description": "<p><strong>Discover <em>The Adventure of iD01t Productions</em>: A Story of Passion, Resilience, and Creativity</strong></p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=U8ZAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:9UN6F8YH7X6",
+      "lang": "EN"
+    },
+    {
+      "title": "The Architect’s Legacy",
+      "description": "<p><strong>The Architect’s Legacy: The Fight for Freedom Continues</strong></p><p><em>The battle is not over. The echoes of ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=H_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B6X0B88N1JN",
+      "lang": "EN"
+    },
+    {
+      "title": "The Art of Beauty",
+      "description": "<p>Discover the timeless craft that has shaped culture, confidence, and care for over 5,000 years. <strong><em>The Art of Beauty</em><",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=VMdgEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:A436SEEUE03",
+      "lang": "EN"
+    },
+    {
+      "title": "The Artifact’s Whisper",
+      "description": "<p><strong>The Artifact’s Whisper: A Tale of Love, Betrayal, and the Secrets of Time</strong></p><p>By Alexandra V. Sterling</p",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/the-artifact-s-whisper-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:AA8073C926A",
+      "lang": "EN"
+    },
+    {
+      "title": "The Complete Beginner to Intermediate Guide to JSON for Veo 3 Prompting",
+      "description": "<p><strong>The Complete Beginner to Intermediate Guide to JSON for Veo 3 Prompting</strong></p><p> By Guillaume Lessard · iD01t Pr",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=boCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:7G13F3DPTKR",
+      "lang": "EN"
+    },
+    {
+      "title": "The Digital Aftermath: Navigating Life Beyond the Great Platform Collapse",
+      "description": "<p><strong>Beyond TikTok: Winning in the Post App Social Media Era</strong></p><p><em>The Sequel to the Number One Bestselle",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=pHR5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:J263EHN6TY1",
+      "lang": "EN"
+    },
+    {
+      "title": "The Dream Dialogue",
+      "description": "<p><strong>The Dream Dialogue: Unveiling the Science of Communication in the Unconscious</strong></p><p><strong>By Guillaume",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=khhJEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ZYUPP62EX63",
+      "lang": "EN"
+    },
+    {
+      "title": "The End of an Era: The TikTok Shutdown in the USA",
+      "description": "<p>Explore the rise and fall of one of the most influential social media platforms of our time in <em>The End of an Era: The TikTok Shutdown in the ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ZZs9EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LQWA436CR5T",
+      "lang": "EN"
+    },
+    {
+      "title": "The Enigma of High Intellectual Potential (HIP)",
+      "description": "<p><strong>Ebook Description for <em>The Enigma of High Intellectual Potential (HIP)</em></strong></p><p>What makes in",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/the-enigma-of-high-intellectual-potential--hip--cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UZ1CP0G699G",
+      "lang": "EN"
+    },
+    {
+      "title": "The Frequency Blueprint",
+      "description": "<p>Discover the future of healing hidden in the frequencies of water, sound, and sacred geometry.</p><p><em>The Frequency Blueprint</",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=yLteEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:77S0C8C4N1R",
+      "lang": "EN"
+    },
+    {
+      "title": "THE LAST BOW",
+      "description": "<p>The Last Bow is the ultimate unauthorized tribute to the life, legacy, and final act of Ozzy Osbourne, the godfather of heavy metal, the voice of Black",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=PHdzEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:88W2BFYHGCE",
+      "lang": "EN"
+    },
+    {
+      "title": "The Maglev Revolution",
+      "description": "<p>Maglev Mastery: The Future of High-Speed Transportation</p><p><strong>By Guillaume Lessard</strong></p><p>Embark on",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=se44EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:S6HAXC2UZ6A",
+      "lang": "EN"
+    },
+    {
+      "title": "The Many Realities",
+      "description": "<p>The Many Realities: Exploring the Boundaries of Existence and the Unseen Worlds Beyond</p><p><strong>By Guillaume Lessard</strong&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=dtI5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Z7E58X965FN",
+      "lang": "EN"
+    },
+    {
+      "title": "The Power of Repetition: Transforming Minds Through Words",
+      "description": "<p><strong>The Power of Repetition: Transforming Minds Through Words</strong></p><p>By Guillaume Lessard</p><p>Discove",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=l_M6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UKJFXDS79ND",
+      "lang": "EN"
+    },
+    {
+      "title": "The Quantum Enigma: Unraveling the Mysteries of Reality",
+      "description": "<p><strong>The Quantum Enigma: Unraveling the Mysteries of Reality</strong></p><p>Unlock the secrets of the universe with <em&g",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=3u5GEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:UUQJZY29DDX",
+      "lang": "EN"
+    },
+    {
+      "title": "The Quantum Passive Empire",
+      "description": "<p>In &quot;The Quantum Passive Empire,&quot; Guillaume Lessard presents a revolutionary guide to creating automated income systems that align wit",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=lCV2EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:5EGUUKX97TL",
+      "lang": "EN"
+    },
+    {
+      "title": "The Real Guide To Using AI To Generate Perfect Veo 3 Requests",
+      "description": "<p><strong>The Real Guide To Using AI To Generate Perfect Veo 3 Requests</strong></p><p> By Guillaume Lessard · iD01t Productions&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=PoCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:BUCLUFRXXNU",
+      "lang": "EN"
+    },
+    {
+      "title": "The Secrets of Oak Island",
+      "description": "<p><strong>Unravel the Mystery of History&#39;s Greatest Treasure Hunt</strong></p><p>Dive into the captivating enigma of Oak ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=zvg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WT4P5B6K02H",
+      "lang": "EN"
+    },
+    {
+      "title": "THE SUN IS NOT WHAT YOU WERE TOLD",
+      "description": "<p><strong>Challenge everything you know about our solar system&#39;s heart.</strong></p><p>This explosive investigation decla",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=dON1EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TBEPQHJN6D4",
+      "lang": "EN"
+    },
+    {
+      "title": "The Third State: Life Between Life and Death",
+      "description": "<p>The Third State: Life Between Life and Death</p><p><strong>By Guillaume Lessard (El’Nox)</strong></p><p>What if dea",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Ww1ZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:SZPDRH70U1J",
+      "lang": "EN"
+    },
+    {
+      "title": "To the Top of the Mountain",
+      "description": "<p><strong>To the Top of the Mountain: A Journey of Health, Wellness, and Adventure</strong></p><p><strong>A Holistic Guide ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=-FA5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:CJ97R0DGW6S",
+      "lang": "EN"
+    },
+    {
+      "title": "TRAKTOR MASTERY: The Complete Professional DJ System",
+      "description": "<p>📖 Traktor Mastery</p><p><strong>The Complete Professional DJ System – From Beginner Beats to Festival Stages</strong></p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=RWZ-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:FBJPSST7XXS",
+      "lang": "EN"
+    },
+    {
+      "title": "Turing’s Legacy: Classical Logic to Quantum Revolution",
+      "description": "<p><em>Turing’s Legacy: Classical Logic to Quantum Revolution</em> reveals how Alan Turing’s groundbreaking ideas ignited the digital era—and ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=RPheEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:WRXZC4XGLRQ",
+      "lang": "EN"
+    },
+    {
+      "title": "TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS",
+      "description": "<p><strong>TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS</strong></p><p> <em>La guía completa para el dom",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=-ZB-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:ZUF7LT5WNHG",
+      "lang": "EN"
+    },
+    {
+      "title": "Understanding Your Cat's Mind - Edition 2",
+      "description": "<p><strong><em>Understanding Your Cat’s Mind: A Journey into Feline Psychology, Edition 2</em></strong> takes you deeper into the ",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ksU6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:83RT8QP0W9W",
+      "lang": "EN"
+    },
+    {
+      "title": "Understanding Your Cat's Mind",
+      "description": "<p>Step into the fascinating world of feline psychology with this comprehensive guide that reveals the secrets behind your cat’s behavior, emotions, and c",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=ksU6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LZ3Y99P0QYC",
+      "lang": "EN"
+    },
+    {
+      "title": "Uniendo mundos",
+      "description": "<p>¿Alguna vez has sentido que la realidad es mucho más grande de lo que perciben tus sentidos? ¿Te sientes atraído por <strong>energías sutiles, di",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=CXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:B1PQW9D8HFL",
+      "lang": "EN"
+    },
+    {
+      "title": "Unire i mondi",
+      "description": "<p>Hai mai avuto la sensazione che la realtà sia molto più vasta di quanto i tuoi sensi possano percepire? Ti senti attratto da <strong>energie sott",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Q3pLEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:YHTT15JB2QW",
+      "lang": "EN"
+    },
+    {
+      "title": "Unstoppable: The Ultimate Guide to Unlocking Your Potential and Achieving Success",
+      "description": "<p>Unstoppable: Unlock Your Potential and Achieve True Success</p><p><strong>What’s holding you back from achieving greatness?</stron",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=q7s5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:8A2GUSR98A6",
+      "lang": "EN"
+    },
+    {
+      "title": "Veil of Echoes",
+      "description": "<p><strong>Veil of Echoes</strong></p><p><em>When shadows resurface and secrets demand a reckoning.</em></p><",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=QMQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TKWCAKWAJXF",
+      "lang": "EN"
+    },
+    {
+      "title": "Visual Basic Zero to Hero (Edition #2)",
+      "description": "<p><strong>Visual Basic Zero to Hero</strong></p><p><strong>Mastering the Versatile Language for Rapid Application Developme",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=lRc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:AS1DHCBU6F9",
+      "lang": "EN"
+    },
+    {
+      "title": "When Cells Listen: The Hidden Symphony of Sound and Gene Expression",
+      "description": "<p>When Cells Listen: The Hidden Symphony of Sound and Gene Expression</p><p><strong>By Guillaume Lessard</strong></p><p&",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=LQ1ZEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:J75XW8KR29S",
+      "lang": "EN"
+    },
+    {
+      "title": "Windows Zero to Hero",
+      "description": "<p>Windows Zero to Hero: Mastering the World&#39;s Most Popular Operating System for Beginners and Experts</p><p><strong>By Guillaum",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Rvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:NE8BRKSRZA8",
+      "lang": "EN"
+    },
+    {
+      "title": "Zen and the Art of Resilient Living",
+      "description": "<p><strong>Zen and the Art of Resilient Living: A Guide to Thriving Through Life’s Challenges with Mindfulness and Strength</strong></p>",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=o3c6EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:XUQ8JTGPBX9",
+      "lang": "EN"
+    },
+    {
+      "title": "Zen and the Art of Self-Confidence",
+      "description": "<p><strong>Zen and the Art of Self-Confidence</strong></p><p><em>By Guillaume Lessard &amp; Christophe Bilinski</em&g",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=V_05EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Q6TULN90N61",
+      "lang": "EN"
+    },
+    {
+      "title": "Мастерство в шахматах",
+      "description": "<p>♟️ <strong>Мастерство в шахматах – 2-е издание</strong></p><p><strong>Профессиональное руководство по стратегиям и техник",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=4Q1-EQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:LYSAR8Y00EZ",
+      "lang": "EN"
+    },
+    {
+      "title": "ПРОДВИНУТАЯ ТАКТИКА, ПСИХОЛОГИЧЕСКАЯ ИГРА И ПОДГОТОВКА К ТУРНИРУ",
+      "description": "<p><strong>ПРОДВИНУТЫЕ ТАКТИКИ, ПСИХОЛОГИЧЕСКАЯ ИГРА И ПОДГОТОВКА К ТУРНИРАМ</strong></p><p> <em>Полное руководство по овлад",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/продвинутая-тактика--психологическая-игра-и-подготовка-к-турниру-cover.webp",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:TZQ2SJ6Z6SD",
+      "lang": "EN"
+    },
+    {
+      "title": "暴风雨前 无畏记者的崛起",
+      "description": "<p>简介</p><p>《暴风雨前: 无畏记者的崛起》是一部融合悬疑、爱情与人性探索的当代小说。<wbr>故事围绕年轻的调查记者奥利维亚·贝内特展开，<wbr>她在追寻真相的道路上直面腐败、背叛与危险。</p><p>当她深入调查跨国巨头",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=TyCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:P78DJFQP25S",
+      "lang": "EN"
+    },
+    {
+      "title": "杰克的摊位",
+      "description": "<p>《杰克的摊位: 一位环境律师为正义而战》是一部紧张刺激的法律与调查惊悚小说。<wbr>故事讲述环境律师杰克·霍桑与调查记者奥利维亚·<wbr>贝内特的交错命运。</p><p>杰克正为受污染小镇里失去家园与健康的人们争取正义，<wbr>他的法律",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=Y1SAEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:D3QSJPQ6BNE",
+      "lang": "EN"
+    },
+    {
+      "title": "𓂀 SY•NARCHÉON 𓂀",
+      "description": "<p>𓂀 SY•NARCHÉON – Système vivant d’union totale</p><p><br></p><p>SY•NARCHÉON est bien plus qu’un livre. C’est une onde viva",
+      "author": "Guillaume Lessard",
+      "image": "http://books.google.com/books/content?id=7dNlEQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&source=gbs_api",
+      "link": "https://play.google.com/store/books/details?id=GGKEY:Y99SDWZ72ZT",
+      "lang": "EN"
     }
   ],
   "series": [
     {
-      "title": "Understanding Your Cat's Mind",
-      "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/understanding-your-cat-s-mind-cover.webp",
-      "link": "/ebooks/understanding-your-cats-mind.html",
-      "description": "Understanding your cat's behavior and psychology"
-    },
-    {
-      "title": "Shadows Series",
-      "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/legacy-of-shadows-cover.webp",
-      "link": "/ebooks/legacy-of-shadows.html",
-      "description": "The complete Shadows series collection"
-    },
-    {
       "title": "Python Academy Series",
+      "description": "Complete Python learning series from beginner to advanced",
       "author": "Guillaume Lessard",
-      "lang": "EN",
-      "image": "/assets/images/id01t-academy--python-exercises-book-1---edition-2-cover.webp",
-      "link": "/ebooks/id01t-academy-python-exercises-book-1-edition-2.html",
-      "description": "Complete Python Academy exercise book series"
+      "image": "/assets/images/python-academy-series.webp",
+      "link": "/series.html",
+      "lang": "EN"
+    },
+    {
+      "title": "Chess Mastery Collection",
+      "description": "Comprehensive chess strategy and tactics series",
+      "author": "Guillaume Lessard",
+      "image": "/assets/images/chess-mastery-series.webp",
+      "link": "/series.html",
+      "lang": "EN"
     }
   ]
 }

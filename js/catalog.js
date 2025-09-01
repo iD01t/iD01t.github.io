@@ -1,47 +1,53 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    const catalogGrid = document.getElementById('catalog-grid');
+// iD01t Productions Catalog Integration
+// This file integrates with the catalog system in /assets/site.js
 
+document.addEventListener('DOMContentLoaded', async () => {
+    const catalogGrid = document.querySelector('.grid');
+    
     if (!catalogGrid) {
-        console.error('Catalog grid element not found.');
+        console.log('No catalog grid found - this page may not use the catalog system');
+        return;
+    }
+
+    // Check if this page has a catalog type specified
+    const catalogType = document.body.dataset.catalog;
+    
+    if (!catalogType) {
+        console.log('No catalog type specified - using default catalog');
         return;
     }
 
     try {
-        const catalog = await getFullCatalog();
-
-        if (catalog.length === 0) {
-            catalogGrid.innerHTML = '<p>No books found. This may be due to API rate limiting. Please try again later.</p>';
+        // Use the existing catalog system from site.js
+        const catalogRes = await fetch('/assets/catalog.json', {cache: 'no-store'});
+        
+        if (!catalogRes.ok) {
+            throw new Error(`Failed to fetch catalog: ${catalogRes.status}`);
+        }
+        
+        const catalogData = await catalogRes.json();
+        const items = catalogData[catalogType] || [];
+        
+        if (items.length === 0) {
+            catalogGrid.innerHTML = '<p>No items found in this category.</p>';
             return;
         }
 
-        // Clear the "Loading..." message
-        catalogGrid.innerHTML = '';
+        // Render the catalog items using the same format as site.js
+        catalogGrid.innerHTML = items.map(item => `
+            <article class="card">
+                <img alt="${item.title}" data-key="${item.title}" src="${item.image || ''}">
+                <div class="badge">${catalogType.slice(0, -1)}</div>
+                <h3 class="title"><a href="${item.link}">${item.title}</a></h3>
+                <div class="meta">${item.author || 'Unknown'} • ${item.lang || 'EN'}</div>
+                <a class="btn" href="${item.link}">Open</a>
+            </article>
+        `).join('');
 
-        catalog.forEach(book => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
-
-            // Link the entire card to the product page
-            const productLink = document.createElement('a');
-            productLink.href = `product.html?id=${book.id}`;
-
-            const coverImage = document.createElement('img');
-            coverImage.src = book.coverUrl || 'https://via.placeholder.com/128x192.png?text=No+Cover';
-            coverImage.alt = `Cover of ${book.title}`;
-
-            const title = document.createElement('h3');
-            title.textContent = book.title;
-
-            const authors = document.createElement('p');
-            authors.textContent = book.authors.join(', ');
-
-            productLink.appendChild(coverImage);
-            productLink.appendChild(title);
-            productCard.appendChild(productLink);
-            productCard.appendChild(authors);
-
-            catalogGrid.appendChild(productCard);
-        });
+        // Trigger image resolution from site.js
+        if (window.resolveImages) {
+            window.resolveImages();
+        }
 
     } catch (error) {
         console.error('Failed to load catalog:', error);
