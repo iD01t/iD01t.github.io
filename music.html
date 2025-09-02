@@ -19,6 +19,8 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CHX65WY0WZ');</script>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
+  <!-- YouTube subscribe button -->
+  <script async src="https://apis.google.com/js/platform.js"></script>
 
   <style>
     :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.05);--muted:rgba(255,255,255,.7);--accent:#0ea5e9}
@@ -69,7 +71,7 @@
   <section class="hero">
     <div class="wrap">
       <h1 id="artistTitle">DJ iD01t — Official Music Hub</h1>
-      <p id="artistDesc">Auto‑synced catalog. Filter by year and vibe. Play instantly.</p>
+      <p id="artistDesc">Auto-synced catalog. Filter by year and vibe. Play instantly.</p>
       <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap" id="ctaLinks"></div>
     </div>
   </section>
@@ -108,12 +110,13 @@
       </div>
     </section>
 
+    <!-- Featured section with artist embed + (optional) latest release -->
     <section class="card glass" style="padding:16px;margin-bottom:16px">
-      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:center">
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start">
         <div>
-          <h2 style="margin:0 0 6px">Featured Release</h2>
-          <p id="featured-desc" class="muted" style="margin:0 0 10px">Latest drop from Spotify.</p>
-          <div id="featured-embed" class="card" style="min-height:232px;overflow:hidden;border-radius:12px"></div>
+          <h2 style="margin:0 0 6px">Featured</h2>
+          <p id="featured-desc" class="muted" style="margin:0 0 10px">Artist player + latest drop.</p>
+          <div id="featured-embed" class="card" style="overflow:hidden;border-radius:12px"></div>
         </div>
         <div>
           <h3 style="margin:0 0 6px">Booking & Custom Music</h3>
@@ -135,7 +138,7 @@
   <section style="padding:36px 0;margin-top:24px;background:#0ea5e9;color:#fff;text-align:center">
     <h2 style="margin:0 0 8px">Follow DJ iD01t everywhere</h2>
     <p class="muted" style="margin:0 0 16px;color:#fff;opacity:.9">Consistent links, clean analytics, more plays.</p>
-    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap" id="followLinks"></div>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;align-items:center" id="followLinks"></div>
   </section>
 
   <footer>
@@ -148,6 +151,11 @@
     })();
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Constants you asked to add
+    const SPOTIFY_ARTIST_EMBED = 'https://open.spotify.com/embed/artist/0EihiI3hgiPfIiyb154dgB?utm_source=generator&theme=0';
+    const YT_CHANNEL_ID = 'UCi10eZdNVil8VqDya_e6K4Q';
+    const YT_URL = `https://www.youtube.com/channel/${YT_CHANNEL_ID}`;
 
     const els = {
       q: document.getElementById('q'),
@@ -167,14 +175,12 @@
       followLinks: document.getElementById('followLinks'),
     };
 
-    function esc(s){return String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]))}
-
-    function chip(text){return `<span class="chip">${esc(text)}</span>`}
+    const esc = s => String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+    const chip = t => `<span class="chip">${esc(t)}</span>`;
 
     function cardHTML(r){
       const tags = [r.album_group, r.album_type].filter(Boolean).map(chip).join(' ');
-      return `
-      <article class="card" style="background:var(--card)">
+      return `<article class="card" style="background:var(--card)">
         <img src="${esc(r.image||'/assets/img/placeholders/card-square-640.webp')}" alt="${esc(r.name)} cover"/>
         <div class="content">
           <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
@@ -186,7 +192,7 @@
             <a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">Spotify</a>
           </div>
         </div>
-      </article>`
+      </article>`;
     }
 
     function emitSchema(artist, items){
@@ -198,7 +204,7 @@
       if(!tag){tag=document.createElement('script');tag.id='ld-music';tag.type='application/ld+json';document.head.appendChild(tag);} 
       tag.textContent = JSON.stringify(ld);
 
-      const artistLD = { '@context':'https://schema.org', '@type':'MusicGroup', name:artist.name, sameAs:[ artist.url ] };
+      const artistLD = { '@context':'https://schema.org', '@type':'MusicGroup', name:artist.name, sameAs:[ artist.url, YT_URL ] };
       let tag2=document.getElementById('ld-artist');
       if(!tag2){tag2=document.createElement('script');tag2.id='ld-artist';tag2.type='application/ld+json';document.head.appendChild(tag2);} 
       tag2.textContent = JSON.stringify(artistLD);
@@ -212,16 +218,23 @@
     function renderHero(artist){
       els.artistTitle.textContent = `${artist.name} — Official Music Hub`;
       const btn = (href,label)=>`<a class="btn" href="${esc(href)}" target="_blank" rel="noopener">${label}</a>`;
-      els.ctaLinks.innerHTML = btn(artist.url,'Spotify');
-      els.followLinks.innerHTML = btn(artist.url,'Spotify')
-        + ' ' + btn('https://music.apple.com','Apple Music')
-        + ' ' + btn('https://youtube.com','YouTube');
+      els.ctaLinks.innerHTML = btn(artist.url,'Spotify') + ' ' + btn(YT_URL,'YouTube');
+      els.followLinks.innerHTML =
+        btn(artist.url,'Spotify') + ' ' +
+        btn('https://music.apple.com','Apple Music') + ' ' +
+        btn(YT_URL,'YouTube') +
+        // YouTube subscribe button (dark page)
+        `<div class="g-ytsubscribe" data-channelid="${YT_CHANNEL_ID}" data-layout="default" data-count="hidden"></div>`;
     }
 
     function renderFeatured(featured){
-      if (!featured) return;
-      els.featuredDesc.textContent = 'Latest album from Spotify';
-      els.featuredEmbed.innerHTML = `<iframe style="border-radius:12px" src="${esc(featured.embed)}" width="100%" height="232" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+      // Always show the artist embed (your request), then the latest release embed if available.
+      const artistIframe = `<iframe data-testid="embed-iframe" style="border-radius:12px" src="${esc(SPOTIFY_ARTIST_EMBED)}" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+      const releaseIframe = featured?.embed
+        ? `<div style="margin-top:10px"><iframe style="border-radius:12px" src="${esc(featured.embed)}" width="100%" height="232" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`
+        : '';
+      els.featuredDesc.textContent = 'Artist player + latest Spotify release';
+      els.featuredEmbed.innerHTML = artistIframe + releaseIframe;
     }
 
     function applyFilters(items){
@@ -264,14 +277,18 @@
         const data = await res.json();
         window.__artistGenres = data.artist?.genres || [];
         populateGenres(window.__artistGenres);
-        renderHero(data.artist||{ name:'DJ iD01t', url:'#' });
+        const artist = data.artist || { name:'DJ iD01t', url:'https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB' };
+        renderHero(artist);
         renderFeatured(data.featured);
-        emitSchema(data.artist||{name:'DJ iD01t'}, data.releases||[]);
+        emitSchema(artist, data.releases||[]);
         bind(data.releases||[]);
         renderGrid(applyFilters(data.releases||[]));
       } catch (e) {
         console.error('Failed to load music.json', e);
-        document.querySelector('#grid').innerHTML = '<div class="muted">Unable to load Spotify data. Please try again later.</div>';
+        // Still render the artist embed + YouTube even if JSON is missing
+        renderHero({ name:'DJ iD01t', url:'https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB' });
+        renderFeatured(null);
+        document.querySelector('#grid').innerHTML = '<div class="muted">Unable to load releases yet.</div>';
       }
     }
 
