@@ -1,77 +1,243 @@
-﻿<!doctype html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>iD01t Productions</title>
-    <meta name="description" content="Professional digital content, ebooks, audiobooks, and creative solutions from Guillaume Lessard">
-    <link rel="canonical" href="/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="iD01t Productions">
-    <meta property="og:description" content="Professional digital content, ebooks, audiobooks, and creative solutions">
-    <meta property="og:url" content="/">
-    <link rel="stylesheet" href="/assets/site.css">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-CHX65WY0WZ');
-    </script>
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-M39S87SN');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iD01t Productions — Ebooks, Audiobooks, Music, Games</title>
+  <meta name="description" content="Professional digital content by Guillaume Lessard (iD01t Productions): eBooks, audiobooks, music, apps & games.">
+  <link rel="canonical" href="/">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="iD01t Productions — Guillaume Lessard">
+  <meta property="og:description" content="Official hub for eBooks, audiobooks, music, apps & games.">
+  <meta property="og:url" content="/">
+  <meta property="og:image" content="/assets/img/placeholders/card-square-640.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="iD01t Productions">
+  <meta name="twitter:description" content="eBooks, audiobooks, music, apps & games by Guillaume Lessard.">
+  <meta name="twitter:image" content="/assets/img/placeholders/card-square-640.webp">
+
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
+
+  <!-- Page styles tuned for dark theme -->
+  <style>
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78)}
+    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
+    .nav a[aria-current="page"], .nav a:hover{opacity:1}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
+    .hero p{opacity:.9;margin:0}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-block;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
+    .btn:hover{filter:brightness(1.07)}
+    .pill{font-size:.8rem;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.05)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card)}
+    .card .content{padding:16px}
+    .two-col{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
+    .muted{opacity:.82}
+    footer{border-top:1px solid var(--border);padding:24px 0;margin-top:32px;opacity:.8;text-align:center}
+    iframe.spotify{width:100%;height:352px;border:0;border-radius:12px}
+    .badge-row{display:flex;gap:8px;flex-wrap:wrap}
+  </style>
+
+  <!-- Organization JSON-LD -->
+  <script type="application/ld+json" id="ld-org">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "iD01t Productions",
+    "url": "https://id01t.store/",
+    "logo": "https://id01t.store/assets/logo-512.png",
+    "sameAs": [
+      "https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB",
+      "https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q",
+      "https://github.com/id01t"
+    ]
+  }
+  </script>
 </head>
 <body data-active="Home">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h1 class="page-title">iD01t Productions</h1>
-            <p style="font-size: 1.2em; color: var(--muted); margin-bottom: 2rem;">
-                Professional digital content, ebooks, audiobooks, and creative solutions
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 3rem 0;">
-                <div class="card" style="text-align: center; padding: 2rem;">
-                    <h3 style="margin-bottom: 1rem;">📚 Ebooks</h3>
-                    <p style="color: var(--muted); margin-bottom: 1.5rem;">Professional guides and creative works</p>
-                    <a href="/ebooks.html" class="btn">Browse Ebooks</a>
-                </div>
-                
-                <div class="card" style="text-align: center; padding: 2rem;">
-                    <h3 style="margin-bottom: 1rem;">🎧 Audiobooks</h3>
-                    <p style="color: var(--muted); margin-bottom: 1.5rem;">Listen to our content on the go</p>
-                    <a href="/audiobooks.html" class="btn">Browse Audiobooks</a>
-                </div>
-                
-                <div class="card" style="text-align: center; padding: 2rem;">
-                    <h3 style="margin-bottom: 1rem;">📚 Series</h3>
-                    <p style="color: var(--muted); margin-bottom: 1.5rem;">Complete learning collections</p>
-                    <a href="/series.html" class="btn">View Series</a>
-                </div>
-            </div>
-            
-            <div style="margin-top: 3rem; padding: 2rem; background: var(--card); border-radius: 14px; border: 1px solid #1e2547;">
-                <h2 style="margin-bottom: 1rem;">About Guillaume Lessard</h2>
-                <p style="color: var(--muted); line-height: 1.6;">
-                    Professional content creator specializing in technology, creativity, and personal development. 
-                    Our mission is to provide high-quality digital content that empowers and inspires.
-                </p>
-            </div>
-        </div>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Shared header (used by other pages via #site-header clone) -->
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/store.html">Store</a>
+        <a href="/ebooks.html">eBooks</a>
+        <a href="/audiobooks.html">Audiobooks</a>
+        <a href="/series.html">Series</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html">Music</a>
+        <a href="/services.html">Services</a>
+      </nav>
     </div>
-    
-    <script src="/assets/site.js" defer></script>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>iD01t Productions</h1>
+      <p>Professional digital content by <strong>Guillaume Lessard</strong> — eBooks, audiobooks, music, apps & games.</p>
+      <div class="cta">
+        <a class="btn" href="/ebooks.html">Browse eBooks</a>
+        <a class="btn" href="/audiobooks.html">Audiobooks</a>
+        <a class="btn" href="/music.html">Music</a>
+        <a class="btn" href="/games.html">Games</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIMARY SECTIONS -->
+  <main class="wrap" style="margin-top:18px">
+    <section class="grid" aria-label="Primary Cards">
+      <article class="card">
+        <div class="content">
+          <h3 style="margin:0 0 6px">📚 eBooks</h3>
+          <p class="muted">Guides, ideas, and systems. All links go to Google Books for trust & SEO.</p>
+          <div class="badge-row"><span class="pill">Tech</span><span class="pill">Creativity</span><span class="pill">Mindset</span></div>
+          <div style="margin-top:10px"><a class="btn" href="/ebooks.html">Browse eBooks</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3 style="margin:0 0 6px">🎧 Audiobooks</h3>
+          <p class="muted">Listen on the go. Live from Google Books API.</p>
+          <div class="badge-row"><span class="pill">Narrated</span><span class="pill">Multi-lang</span></div>
+          <div style="margin-top:10px"><a class="btn" href="/audiobooks.html">Browse Audiobooks</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3 style="margin:0 0 6px">🎵 Music</h3>
+          <p class="muted">DJ iD01t — albums, EPs & singles. Auto-synced from Spotify.</p>
+          <div class="badge-row"><span class="pill">Electronic</span><span class="pill">Cinematic</span></div>
+          <div style="margin-top:10px"><a class="btn" href="/music.html">Listen</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3 style="margin:0 0 6px">🎮 Games</h3>
+          <p class="muted">Prototypes & tools on itch.io with live catalog sync.</p>
+          <div class="badge-row"><span class="pill">Windows</span><span class="pill">Web</span></div>
+          <div style="margin-top:10px"><a class="btn" href="/games.html">Explore Games</a></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- FEATURED: Spotify artist embed + Live Latest tiles -->
+    <section class="two-col" style="margin-top:18px">
+      <article class="card" style="padding:16px">
+        <h2 style="margin:0 0 8px">Featured — DJ iD01t</h2>
+        <p class="muted" style="margin:0 0 12px">Stream directly from Spotify.</p>
+        <iframe
+          class="spotify"
+          src="https://open.spotify.com/embed/artist/0EihiI3hgiPfIiyb154dgB?utm_source=generator&theme=0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+        <div style="margin-top:10px"><a class="btn" href="/music.html">Full Discography</a></div>
+      </article>
+
+      <article class="card" style="padding:16px">
+        <h2 style="margin:0 0 8px">Latest from the Catalog</h2>
+        <div id="latest" class="grid" style="grid-template-columns:1fr;gap:12px">
+          <!-- Filled by JS: Latest eBook + Latest Release -->
+        </div>
+      </article>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="card" style="padding:18px;margin-top:18px">
+      <h2 style="margin:0 0 8px">About Guillaume Lessard</h2>
+      <p class="muted" style="margin:0">
+        Canadian developer, author, and music producer behind iD01t Productions. Building automation-first,
+        ROI-focused content across books, audio, apps, and tools to empower creators.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> iD01t Productions</div>
+  </footer>
+
+  <!-- Minimal homepage logic -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Render a compact card
+    const esc = s => String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+    const card = (img,title,meta,href,cta) => `
+      <div class="card" style="display:grid;grid-template-columns:96px 1fr;gap:12px;overflow:hidden">
+        <img src="${esc(img)}" alt="${esc(title)} cover" style="width:96px;height:96px;object-fit:cover;background:#111">
+        <div class="content" style="padding:12px">
+          <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+            <strong>${esc(title)}</strong>
+            <span class="muted" style="font-size:.9rem">${esc(meta||'')}</span>
+          </div>
+          <div style="margin-top:8px"><a class="btn" href="${esc(href)}">${esc(cta||'View')}</a></div>
+        </div>
+      </div>`;
+
+    async function latestEbook(){
+      try{
+        const q = encodeURIComponent('inauthor:"Guillaume Lessard" OR inpublisher:"iD01t Productions"');
+        const url = `https://www.googleapis.com/books/v1/volumes?q=${q}&maxResults=12`;
+        const r = await fetch(url); if(!r.ok) throw 0;
+        const data = await r.json(); const items = (data.items||[]);
+        // pick most recent by publishedDate (YYYY or YYYY-MM-DD)
+        const parseY = s => { if(!s) return 0; const m=(s+'').match(/^\\d{4}/); return m?+m[0]:0; };
+        items.sort((a,b)=>parseY((b.volumeInfo||{}).publishedDate) - parseY((a.volumeInfo||{}).publishedDate));
+        const v = (items[0]||{}).volumeInfo||{};
+        const img = ((v.imageLinks||{}).thumbnail || (v.imageLinks||{}).smallThumbnail || '/assets/placeholder-cover.svg').replace('http://','https://');
+        const link = (v.infoLink || v.canonicalVolumeLink || '#').replace('http://','https://');
+        const year = (v.publishedDate||'').slice(0,4);
+        return card(img, v.title||'New eBook', year, link, 'View on Google Books');
+      }catch{ return ''; }
+    }
+
+    async function latestMusic(){
+      try{
+        const r = await fetch('/assets/data/music.json', {cache:'no-store'}); if(!r.ok) throw 0;
+        const d = await r.json(); const rel = (d.releases||[]).slice().sort((a,b)=>(b.year||0)-(a.year||0))[0];
+        if(!rel) return '';
+        const img = rel.image || '/assets/img/placeholders/card-square-640.webp';
+        return card(img, rel.name, rel.year, rel.url, 'Play on Spotify');
+      }catch{ return ''; }
+    }
+
+    (async function renderLatest(){
+      const container = document.getElementById('latest');
+      const [ebook, music] = await Promise.all([latestEbook(), latestMusic()]);
+      container.innerHTML = (ebook||'') + (music||'') || '<div class="muted">Fresh drops will appear here.</div>';
+    })();
+  </script>
 </body>
 </html>
-
