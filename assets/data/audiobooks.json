@@ -1,0 +1,12 @@
+[
+  {
+    "title":"The Quantum Enigma (Audiobook)",
+    "year":2025,
+    "language":"en",
+    "hours":7.5,
+    "narrators":["Guillaume Lessard"],
+    "genre":"Nonfiction",
+    "cover":"/assets/covers/quantum-enigma-audio.jpg",
+    "googlePlay":"https://play.google.com/store/books/details?id=XXXX"
+  }
+]
