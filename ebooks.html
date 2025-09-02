@@ -1,39 +1,283 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>eBooks Catalog • iD01t Productions</title>
-<meta content="Browse our professional ebook collection covering technology, creativity, and personal development" name="description"/>
-<link href="/ebooks.html" rel="canonical"/>
-<meta content="website" property="og:type"/>
-<meta content="eBooks Catalog • iD01t Productions" property="og:title"/>
-<meta content="Browse our professional ebook collection covering technology, creativity, and personal development" property="og:description"/>
-<meta content="/ebooks.html" property="og:url"/>
-<link href="/assets/site.css" rel="stylesheet"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-CHX65WY0WZ');
-    </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-M39S87SN');</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eBooks Catalog • iD01t Productions</title>
+  <meta name="description" content="Browse our professional ebook collection covering technology, creativity, and personal development" />
+  <link rel="canonical" href="/ebooks.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="eBooks Catalog • iD01t Productions" />
+  <meta property="og:description" content="Browse our professional ebook collection covering technology, creativity, and personal development" />
+  <meta property="og:url" content="/ebooks.html" />
+  <link rel="stylesheet" href="/assets/site.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-M39S87SN');</script>
+
+  <style>
+    :root { --card-bg: rgba(255,255,255,.06); --border: rgba(255,255,255,.12); }
+    @media (prefers-color-scheme: dark) {
+      body { color: #eaeaf0; background: #0b0d10; }
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 32px 20px; }
+    .page-title { font-size: clamp(24px, 3vw, 36px); margin-bottom: 8px; }
+    .subtitle { opacity: .8; margin-bottom: 24px; }
+    .toolbar { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin: 12px 0 20px; }
+    .toolbar input, .toolbar select { padding:10px 12px; border:1px solid var(--border); border-radius:10px; background: var(--card-bg); color: inherit; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .card { display:flex; flex-direction:column; border:1px solid var(--border); border-radius:16px; overflow:hidden; background: var(--card-bg); backdrop-filter: blur(6px); }
+    .cover { aspect-ratio: 3/4; width:100%; object-fit:cover; background:#111; }
+    .content { padding: 14px; display:flex; flex-direction:column; gap:10px; }
+    .title { font-weight: 700; line-height:1.25; }
+    .meta { font-size: .9rem; opacity: .85; }
+    .badges { display:flex; gap:8px; flex-wrap:wrap; }
+    .badge { font-size:.75rem; padding:4px 8px; border-radius:999px; border:1px solid var(--border); background: rgba(255,255,255,.04); }
+    .buttons { display:flex; gap:8px; margin-top:auto; flex-wrap:wrap; }
+    .btn { flex:1 1 auto; text-align:center; padding:10px 12px; border-radius:10px; border:1px solid var(--border); text-decoration:none; color:inherit; background: rgba(255,255,255,.03); }
+    .btn:hover { filter: brightness(1.05); }
+    .empty { opacity:.7; text-align:center; padding:40px 10px; border:1px dashed var(--border); border-radius:16px; }
+    .footer { opacity:.7; margin-top:24px; font-size:.9rem; }
+  </style>
 </head>
 <body data-active="eBooks" data-catalog="ebooks">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" width="0"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 32px 20px;">
-<div>
-<h1 class="page-title">eBooks Catalog</h1>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="container">
+    <h1 class="page-title">eBooks Catalog</h1>
+    <p class="subtitle">Professional guides, creative works, and educational content from Guillaume Lessard</p>
+
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="Search title, keyword, or ISBN" aria-label="Search books" />
+      <select id="lang" aria-label="Language filter">
+        <option value="">All languages</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+      <select id="sort" aria-label="Sort order">
+        <option value="date_desc">Newest</option>
+        <option value="date_asc">Oldest</option>
+        <option value="title_asc">Title A–Z</option>
+        <option value="title_desc">Title Z–A</option>
+      </select>
+    </div>
+
+    <section class="grid" id="grid" aria-live="polite"></section>
+    <div id="empty" class="empty" hidden>Nothing found. Try another search or clear filters.</div>
+    <div class="footer">Links are pulled directly from the Google Books API when available. Buttons fall back to the book's canonical info and preview pages.</div>
+  </div>
+
+  <script>
+    /**
+     * Google Books dynamic loader
+     * - Auto-discovers titles by author and/or publisher
+     * - Ensures all links use the correct Google Books URLs
+     * - Supports optional API key. Leave empty to use public endpoint
+     */
+    const CONFIG = {
+      AUTHOR: 'Guillaume Lessard',
+      PUBLISHER: 'iD01t Productions',
+      MAX_RESULTS: 40,
+      API_KEY: '', // Optional. If set, appended as &key=...
+      LANGUAGE_WHITELIST: ['en','fr','de'],
+      // Manual ISBN or query overrides (guaranteed spotlight)
+      HIGHLIGHTS: [
+        // Example: { q: 'isbn:9781234567890' },
+        // Example: { q: 'intitle:"Python Zero to Hero" inauthor:"Guillaume Lessard"' },
+      ]
+    };
+
+    const grid = document.getElementById('grid');
+    const empty = document.getElementById('empty');
+    const qInput = document.getElementById('q');
+    const langSel = document.getElementById('lang');
+    const sortSel = document.getElementById('sort');
+
+    const api = {
+      base: 'https://www.googleapis.com/books/v1/volumes',
+      async search(query, startIndex = 0, maxResults = 40) {
+        const params = new URLSearchParams({ q: query, startIndex, maxResults });
+        if (CONFIG.API_KEY) params.set('key', CONFIG.API_KEY);
+        const url = `${this.base}?${params.toString()}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Google Books API error ${res.status}`);
+        return res.json();
+      }
+    };
+
+    function normalizeItem(item) {
+      const v = item.volumeInfo || {};
+      const s = item.saleInfo || {};
+      const access = item.accessInfo || {};
+      const img = v.imageLinks || {};
+      const ids = (v.industryIdentifiers || []).map(x => `${x.type}:${x.identifier}`);
+      const lang = (v.language || '').toLowerCase();
+      return {
+        id: item.id,
+        title: v.title || 'Untitled',
+        subtitle: v.subtitle || '',
+        authors: v.authors || [],
+        publisher: v.publisher || '',
+        publishedDate: v.publishedDate || '',
+        categories: v.categories || [],
+        description: v.description || '',
+        pageCount: v.pageCount || 0,
+        language: lang,
+        identifiers: ids,
+        thumbnail: img.thumbnail?.replace('http://','https://') || img.smallThumbnail?.replace('http://','https://') || '',
+        infoLink: (v.infoLink || '').replace('http://','https://'),
+        previewLink: (v.previewLink || '').replace('http://','https://'),
+        canonicalLink: (v.canonicalVolumeLink || '').replace('http://','https://'),
+        buyLink: (s.buyLink || '').replace('http://','https://'),
+        isEbook: !!s.isEbook,
+        retailPrice: s.retailPrice?.amount && s.retailPrice?.currencyCode ? `${s.retailPrice.amount} ${s.retailPrice.currencyCode}` : null,
+        country: s.country || '',
+        embeddable: !!access.embeddable,
+      };
+    }
+
+    function sortItems(items, mode) {
+      const byDate = (a,b) => new Date(b.publishedDate) - new Date(a.publishedDate);
+      const byDateAsc = (a,b) => new Date(a.publishedDate) - new Date(b.publishedDate);
+      const byTitle = (a,b) => a.title.localeCompare(b.title);
+      if (mode === 'date_asc') return items.sort(byDateAsc);
+      if (mode === 'title_asc') return items.sort(byTitle);
+      if (mode === 'title_desc') return items.sort((a,b)=>byTitle(b,a));
+      return items.sort(byDate);
+    }
+
+    function cardHTML(b) {
+      const authors = b.authors?.join(', ');
+      const cats = b.categories?.slice(0,2) || [];
+      const badges = [];
+      if (b.language) badges.push(b.language.toUpperCase());
+      if (b.publisher) badges.push(b.publisher);
+      if (b.isEbook) badges.push('eBook');
+      return `
+        <article class="card" data-id="${b.id}">
+          <img class="cover" alt="${escapeHTML(b.title)} cover" loading="lazy" src="${b.thumbnail || '/assets/placeholder-cover.svg'}" />
+          <div class="content">
+            <div class="title">${escapeHTML(b.title)}</div>
+            ${b.subtitle ? `<div class="meta">${escapeHTML(b.subtitle)}</div>` : ''}
+            <div class="meta">${authors ? escapeHTML(authors) : ''}${b.publishedDate ? ` • ${escapeHTML(b.publishedDate)}` : ''}</div>
+            ${cats.length ? `<div class="badges">${cats.map(c=>`<span class="badge">${escapeHTML(c)}</span>`).join('')}</div>`: ''}
+            ${badges.length ? `<div class="badges">${badges.map(c=>`<span class="badge">${escapeHTML(c)}</span>`).join('')}</div>`: ''}
+            <div class="buttons">
+              ${linkBtn(b.infoLink, 'Google Books')}
+              ${linkBtn(b.previewLink, 'Preview')}
+              ${b.buyLink ? linkBtn(b.buyLink, 'Buy') : ''}
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function linkBtn(url, label){
+      if (!url) return '';
+      return `<a class="btn" href="${url}" target="_blank" rel="noopener nofollow">${label}</a>`;
+    }
+
+    function escapeHTML(s){
+      return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    }
+
+    function render(items){
+      grid.innerHTML = items.map(cardHTML).join('');
+      empty.hidden = items.length > 0;
+      emitSchema(items);
+    }
+
+    function filterAndSort(items){
+      const q = qInput.value.trim().toLowerCase();
+      const lang = langSel.value;
+      const sortMode = sortSel.value;
+      let out = items.filter(b => {
+        const hay = [b.title, b.subtitle, ...(b.authors||[]), ...(b.identifiers||[])].join(' ').toLowerCase();
+        const langOk = !lang || b.language === lang;
+        return (!q || hay.includes(q)) && langOk;
+      });
+      return sortItems(out, sortMode);
+    }
+
+    function bindControls(state){
+      [qInput, langSel, sortSel].forEach(el => el.addEventListener('input', ()=>render(filterAndSort(state.items))));
+    }
+
+    async function loadAll() {
+      const queries = [
+        `inauthor:"${CONFIG.AUTHOR}"`,
+        `inpublisher:"${CONFIG.PUBLISHER}"`,
+        ...CONFIG.HIGHLIGHTS.map(h => h.q)
+      ];
+
+      const collected = new Map();
+      for (const q of queries) {
+        if (!q) continue;
+        try {
+          const data = await api.search(q, 0, CONFIG.MAX_RESULTS);
+          (data.items || []).forEach(raw => {
+            const n = normalizeItem(raw);
+            if (CONFIG.LANGUAGE_WHITELIST.length && !CONFIG.LANGUAGE_WHITELIST.includes(n.language)) return;
+            collected.set(n.id, n);
+          });
+        } catch (e) {
+          console.warn('Query failed', q, e);
+        }
+      }
+
+      const items = sortItems(Array.from(collected.values()), 'date_desc');
+      return { items };
+    }
+
+    function emitSchema(items){
+      // Structured data (ItemList with Book nodes)
+      const ld = {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'iD01t Productions eBooks',
+        itemListElement: items.slice(0, 50).map((b, i) => ({
+          '@type': 'ListItem', position: i+1, item: {
+            '@type': 'Book',
+            name: b.title,
+            author: (b.authors||[]).map(a=>({ '@type': 'Person', name: a })),
+            inLanguage: b.language,
+            publisher: b.publisher ? { '@type':'Organization', name: b.publisher } : undefined,
+            datePublished: b.publishedDate || undefined,
+            image: b.thumbnail || undefined,
+            url: b.canonicalLink || b.infoLink || undefined
+          }
+        }))
+      };
+      let tag = document.getElementById('ld-books');
+      if (!tag) { tag = document.createElement('script'); tag.type='application/ld+json'; tag.id='ld-books'; document.head.appendChild(tag); }
+      tag.textContent = JSON.stringify(ld);
+    }
+
+    (async function init(){
+      try {
+        const state = await loadAll();
+        bindControls(state);
+        render(filterAndSort(state.items));
+      } catch(err) {
+        console.error(err);
+        grid.innerHTML = '';
+        empty.hidden = false;
+        empty.textContent = 'Unable to load Google Books data right now. Please try again later.';
+      }
+    })();
+  </script>
+</body>
+</html>
 <p>
                 Professional guides, creative works, and educational content from Guillaume Lessard
             </p>
