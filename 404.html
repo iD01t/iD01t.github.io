@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>404 • Page Not Found • iD01t Productions</title>
-<meta content="The page you're looking for couldn't be found" name="description"/>
-<link href="/404.html" rel="canonical"/>
-<link href="/assets/site.css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 • Page Not Found • iD01t Productions</title>
+    <meta name="description" content="The page you're looking for couldn't be found">
+    <link rel="canonical" href="/404.html">
+    <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body data-active="404">
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 32px 20px;">
-<div>
-<h1 class="page-title">404 • Page Not Found</h1>
-<p>
+    <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <h1 class="page-title">404 • Page Not Found</h1>
+            <p style="font-size: 1.1em; color: var(--muted); margin-bottom: 2rem;">
                 We couldn't find that page. Taking you home in a moment...
             </p>
-<a class="btn" href="/">Go Home Now</a>
-</div>
-</div>
-<script>
+            <a class="btn" href="/">Go Home Now</a>
+        </div>
+    </div>
+    
+    <script>
         // Smart redirect for common URL mistakes
         const p = location.pathname.toLowerCase();
         const map = {
@@ -37,5 +37,5 @@
             setTimeout(() => location.href = "/", 2000);
         }
     </script>
-<script defer="" src="/assets/site.js"></script></body>
+</body>
 </html>
