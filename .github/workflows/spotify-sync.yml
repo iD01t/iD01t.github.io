@@ -1,0 +1,39 @@
+name: Sync Spotify catalog
+on:
+  schedule:
+    - cron: '0 */12 * * *'   # every 12 hours
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Fetch Spotify catalog
+        run: node scripts/spotify_fetch.js
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          # Choose ONE of the following:
+          SPOTIFY_ARTIST_ID: ${{ secrets.SPOTIFY_ARTIST_ID }}
+          # SPOTIFY_ARTIST_URL: https://open.spotify.com/artist/xxxxxxxxxxxxxxxxxxxx
+          # ARTIST_QUERY: DJ iD01t
+      - name: Commit & push updated JSON
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/data/music.json
+            git commit -m "chore: update music.json from Spotify"
+            git push
+          else
+            echo "No changes in music.json"
+          fi

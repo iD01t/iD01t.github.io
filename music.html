@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Music • iD01t Productions</title>
+<<<<<<< HEAD
   <meta name="description" content="Stream DJ iD01t / Guillaume Lessard — albums, EPs, and singles. Filter by year and vibe. Play instantly on Spotify, Apple Music, and YouTube." />
   <link rel="canonical" href="/music.html" />
   <meta property="og:type" content="website" />
@@ -15,10 +16,25 @@
   <link rel="apple-touch-icon" href="/assets/logo-512.png" />
   
   <!-- GA / GTM -->
+=======
+  <meta name="description" content="Stream DJ iD01t — albums, EPs, singles. Auto-synced from Spotify. Filter by year and vibe." />
+  <link rel="canonical" href="/music.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Music • iD01t Productions" />
+  <meta property="og:description" content="Official hub for DJ iD01t. Auto-synced from Spotify." />
+  <meta property="og:url" content="/music.html" />
+  <meta property="og:image" content="/assets/img/placeholders/card-square-640.webp" />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/logo-512.png" />
+  <link rel="stylesheet" href="/assets/site.css" />
+
+  <!-- GA/GTM -->
+>>>>>>> 72565ef (feat(music): add Spotify auto-sync pack + dark music.html)
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CHX65WY0WZ');</script>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
 
+<<<<<<< HEAD
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -271,14 +287,271 @@
           '@type':'ListItem', position:i+1,
           item:{ '@type':'MusicAlbum', name:r.title, byArtist:{'@type':'MusicGroup','name':CONFIG.artistName}, datePublished: r.year?String(r.year):undefined, image:r.cover||undefined, url:r.spotify||r.apple||r.youtube||undefined }
         }))
+=======
+  <style>
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.05);--muted:rgba(255,255,255,.7);--accent:#0ea5e9}
+    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    .glass{background:var(--card);backdrop-filter:blur(10px)}
+    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden}
+    .btn{display:inline-block;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
+    .btn:hover{filter:brightness(1.07)}
+    .chip{font-size:.8rem;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
+    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
+    .nav a[aria-current="page"], .nav a:hover{opacity:1}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px}
+    .hero p{opacity:.85;margin:0}
+    .toolbar{display:grid;grid-template-columns:1fr 160px 160px 160px 160px;gap:10px;align-items:end;margin:18px 0}
+    .toolbar label{font-size:.85rem;color:var(--muted);display:block;margin-bottom:6px}
+    .toolbar input,.toolbar select{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:inherit}
+    .toolbar .wide{grid-column:1/-1;display:flex;gap:10px;align-items:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .tile img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#111}
+    .tile .content{padding:14px;display:flex;flex-direction:column;gap:10px}
+    .muted{opacity:.8}
+    footer{border-top:1px solid var(--border);padding:24px 0;margin-top:32px;opacity:.8;text-align:center}
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Shared header (pulls from index.html if present) -->
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/store.html">Store</a>
+        <a href="/ebooks.html">eBooks</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html" aria-current="page"><strong>Music</strong></a>
+        <a href="/services.html">Services</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 id="artistTitle">DJ iD01t — Official Music Hub</h1>
+      <p id="artistDesc">Auto‑synced catalog. Filter by year and vibe. Play instantly.</p>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap" id="ctaLinks"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="toolbar">
+      <div>
+        <label for="q">Search</label>
+        <input id="q" type="search" placeholder="Title, keyword" />
+      </div>
+      <div>
+        <label for="genre">Genre</label>
+        <select id="genre"></select>
+      </div>
+      <div>
+        <label for="from">From</label>
+        <input id="from" type="number" inputmode="numeric" placeholder="2018" />
+      </div>
+      <div>
+        <label for="to">To</label>
+        <input id="to" type="number" inputmode="numeric" placeholder="2025" />
+      </div>
+      <div>
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="date_desc">Newest</option>
+          <option value="date_asc">Oldest</option>
+          <option value="title_asc">Title A–Z</option>
+          <option value="title_desc">Title Z–A</option>
+        </select>
+      </div>
+      <div class="wide">
+        <label class="muted"><input id="albumsOnly" type="checkbox" /> Albums only</label>
+        <label class="muted"><input id="singlesOnly" type="checkbox" /> Singles only</label>
+        <button id="clear" class="btn" type="button">Clear filters</button>
+      </div>
+    </section>
+
+    <section class="card glass" style="padding:16px;margin-bottom:16px">
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:center">
+        <div>
+          <h2 style="margin:0 0 6px">Featured Release</h2>
+          <p id="featured-desc" class="muted" style="margin:0 0 10px">Latest drop from Spotify.</p>
+          <div id="featured-embed" class="card" style="min-height:232px;overflow:hidden;border-radius:12px"></div>
+        </div>
+        <div>
+          <h3 style="margin:0 0 6px">Booking & Custom Music</h3>
+          <p class="muted" style="margin:0 0 10px">Need an original soundtrack or a live set? Get custom cues, trailers, and full scores.</p>
+          <a href="/contact.html" class="btn">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
+        <h2 style="margin:0">Albums, EPs & Singles</h2>
+        <span id="count" class="muted" style="font-size:.9rem"></span>
+      </div>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+
+  <section style="padding:36px 0;margin-top:24px;background:#0ea5e9;color:#fff;text-align:center">
+    <h2 style="margin:0 0 8px">Follow DJ iD01t everywhere</h2>
+    <p class="muted" style="margin:0 0 16px;color:#fff;opacity:.9">Consistent links, clean analytics, more plays.</p>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap" id="followLinks"></div>
+  </section>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> iD01t Productions</div>
+  </footer>
+
+  <script>
+    (async function loadSharedHeader(){
+      try{const res=await fetch('/index.html'); if(!res.ok) return; const html=await res.text(); const doc=new DOMParser().parseFromString(html,'text/html'); const shared=doc.querySelector('#site-header'); if(shared){document.getElementById('site-header').outerHTML=shared.outerHTML;}}catch{}
+    })();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const els = {
+      q: document.getElementById('q'),
+      genre: document.getElementById('genre'),
+      from: document.getElementById('from'),
+      to: document.getElementById('to'),
+      sort: document.getElementById('sort'),
+      albumsOnly: document.getElementById('albumsOnly'),
+      singlesOnly: document.getElementById('singlesOnly'),
+      clear: document.getElementById('clear'),
+      artistTitle: document.getElementById('artistTitle'),
+      featuredDesc: document.getElementById('featured-desc'),
+      featuredEmbed: document.getElementById('featured-embed'),
+      grid: document.getElementById('grid'),
+      count: document.getElementById('count'),
+      ctaLinks: document.getElementById('ctaLinks'),
+      followLinks: document.getElementById('followLinks'),
+    };
+
+    function esc(s){return String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]))}
+
+    function chip(text){return `<span class="chip">${esc(text)}</span>`}
+
+    function cardHTML(r){
+      const tags = [r.album_group, r.album_type].filter(Boolean).map(chip).join(' ');
+      return `
+      <article class="card" style="background:var(--card)">
+        <img src="${esc(r.image||'/assets/img/placeholders/card-square-640.webp')}" alt="${esc(r.name)} cover"/>
+        <div class="content">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+            <h3 style="margin:0">${esc(r.name)}</h3>
+            <span class="muted" style="font-size:.9rem">${esc(r.year||'')}</span>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">Spotify</a>
+          </div>
+        </div>
+      </article>`
+    }
+
+    function emitSchema(artist, items){
+      const ld = {
+        '@context':'https://schema.org', '@type':'ItemList', name:`${artist.name} Discography`,
+        itemListElement: items.slice(0,60).map((r,i)=>({ '@type':'ListItem', position:i+1, item:{ '@type':'MusicAlbum', name:r.name, byArtist:{'@type':'MusicGroup','name':artist.name}, datePublished:r.year?String(r.year):undefined, image:r.image||undefined, url:r.url||undefined } }))
+>>>>>>> 72565ef (feat(music): add Spotify auto-sync pack + dark music.html)
       };
       let tag=document.getElementById('ld-music');
       if(!tag){tag=document.createElement('script');tag.id='ld-music';tag.type='application/ld+json';document.head.appendChild(tag);} 
       tag.textContent = JSON.stringify(ld);
+<<<<<<< HEAD
     }
 
     // Init
     apply();
+=======
+
+      const artistLD = { '@context':'https://schema.org', '@type':'MusicGroup', name:artist.name, sameAs:[ artist.url ] };
+      let tag2=document.getElementById('ld-artist');
+      if(!tag2){tag2=document.createElement('script');tag2.id='ld-artist';tag2.type='application/ld+json';document.head.appendChild(tag2);} 
+      tag2.textContent = JSON.stringify(artistLD);
+    }
+
+    function populateGenres(genres){
+      const g = Array.from(new Set(genres||[])).sort();
+      els.genre.innerHTML = '<option value="">All</option>'+ g.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');
+    }
+
+    function renderHero(artist){
+      els.artistTitle.textContent = `${artist.name} — Official Music Hub`;
+      const btn = (href,label)=>`<a class="btn" href="${esc(href)}" target="_blank" rel="noopener">${label}</a>`;
+      els.ctaLinks.innerHTML = btn(artist.url,'Spotify');
+      els.followLinks.innerHTML = btn(artist.url,'Spotify')
+        + ' ' + btn('https://music.apple.com','Apple Music')
+        + ' ' + btn('https://youtube.com','YouTube');
+    }
+
+    function renderFeatured(featured){
+      if (!featured) return;
+      els.featuredDesc.textContent = 'Latest album from Spotify';
+      els.featuredEmbed.innerHTML = `<iframe style="border-radius:12px" src="${esc(featured.embed)}" width="100%" height="232" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+    }
+
+    function applyFilters(items){
+      const text=(els.q.value||'').toLowerCase();
+      const g=els.genre.value; const f=parseInt(els.from.value||''); const t=parseInt(els.to.value||'');
+      const albumsOnly = els.albumsOnly.checked; const singlesOnly = els.singlesOnly.checked;
+      let list = items.filter(r=>{
+        if(text && !r.name.toLowerCase().includes(text)) return false;
+        if(!isNaN(f) && (r.year||0) < f) return false;
+        if(!isNaN(t) && (r.year||0) > t) return false;
+        if(albumsOnly && r.album_type !== 'album') return false;
+        if(singlesOnly && r.album_type !== 'single') return false;
+        if(g && !(window.__artistGenres||[]).includes(g)) return false; // artist genre filter
+        return true;
+      });
+      const s = els.sort.value; const byTitle=(a,b)=>a.name.localeCompare(b.name);
+      if(s==='date_asc') list.sort((a,b)=>(a.year||0)-(b.year||0));
+      else if(s==='title_asc') list.sort(byTitle);
+      else if(s==='title_desc') list.sort((a,b)=>byTitle(b,a));
+      else list.sort((a,b)=>(b.year||0)-(a.year||0));
+      return list;
+    }
+
+    function renderGrid(items){
+      els.grid.innerHTML = items.map(cardHTML).join('') || '<div class="muted">No results. Adjust filters.</div>';
+      els.count.textContent = `${items.length} release${items.length!==1?'s':''}`;
+    }
+
+    function bind(items){
+      const again = ()=>{ renderGrid(applyFilters(items)); };
+      ['input','change'].forEach(evt=>{
+        [els.q,els.genre,els.from,els.to,els.sort,els.albumsOnly,els.singlesOnly].forEach(el=>el.addEventListener(evt, again));
+      });
+      els.clear.addEventListener('click', ()=>{ els.q.value=''; els.genre.value=''; els.from.value=''; els.to.value=''; els.sort.value='date_desc'; els.albumsOnly.checked=false; els.singlesOnly.checked=false; again(); });
+    }
+
+    async function init(){
+      try {
+        const res = await fetch('/assets/data/music.json', { cache:'no-store' });
+        const data = await res.json();
+        window.__artistGenres = data.artist?.genres || [];
+        populateGenres(window.__artistGenres);
+        renderHero(data.artist||{ name:'DJ iD01t', url:'#' });
+        renderFeatured(data.featured);
+        emitSchema(data.artist||{name:'DJ iD01t'}, data.releases||[]);
+        bind(data.releases||[]);
+        renderGrid(applyFilters(data.releases||[]));
+      } catch (e) {
+        console.error('Failed to load music.json', e);
+        document.querySelector('#grid').innerHTML = '<div class="muted">Unable to load Spotify data. Please try again later.</div>';
+      }
+    }
+
+    init();
+>>>>>>> 72565ef (feat(music): add Spotify auto-sync pack + dark music.html)
   </script>
 </body>
 </html>
