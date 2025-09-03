@@ -1,50 +1,247 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eBooks Catalog • iD01t Productions</title>
-    <meta name="description" content="Browse our professional ebook collection covering technology, creativity, and personal development">
-    <link rel="canonical" href="/ebooks.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="eBooks Catalog • iD01t Productions">
-    <meta property="og:description" content="Browse our professional ebook collection covering technology, creativity, and personal development">
-    <meta property="og:url" content="/ebooks.html">
-    <link rel="stylesheet" href="/assets/site.css">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-CHX65WY0WZ');
-    </script>
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-M39S87SN');</script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iD01t Productions — eBooks Catalog</title>
+  <meta name="description" content="Browse and buy eBooks by Guillaume Lessard and iD01t Productions. Full catalog with search, filters, and direct store links."/>
+  <link rel="canonical" href="/ebooks.html"/>
+
+  <!-- Social -->
+  <meta property="og:title" content="iD01t Productions — eBooks Catalog"/>
+  <meta property="og:description" content="Complete eBook catalog with search, filters, and direct links."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://id01t.github.io/ebooks.html"/>
+  <meta property="og:image" content="/assets/img/brand/ebooks_og.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="iD01t Productions — eBooks Catalog"/>
+  <meta name="twitter:description" content="Discover all titles by Guillaume Lessard and iD01t Productions."/>
+  <meta name="twitter:image" content="/assets/img/brand/ebooks_og.jpg"/>
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/assets/logo-512.png"/>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .book-card img { transition: transform .3s ease }
+    .book-card:hover img { transform: scale(1.02) }
+    .skeleton { background: linear-gradient(90deg, rgba(0,0,0,.06), rgba(0,0,0,.12), rgba(0,0,0,.06)); background-size: 200% 100%; animation: shimmer 1.2s infinite }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+  </style>
 </head>
-<body data-active="eBooks" data-catalog="ebooks">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h1 class="page-title">eBooks Catalog</h1>
-            <p style="font-size: 1.1em; color: var(--muted); max-width: 600px; margin: 0 auto;">
-                Professional guides, creative works, and educational content from Guillaume Lessard
-            </p>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2"><img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t"/><span class="font-bold text-xl">iD01t</span></a>
+      <div class="hidden md:flex items-center gap-4 text-sm">
+        <a class="hover:opacity-100 opacity-80" href="/store.html">Store</a>
+        <a class="hover:opacity-100 opacity-80" href="/ebooks.html">eBooks</a>
+        <a class="hover:opacity-100 opacity-80" href="/apps.html">Apps</a>
+        <a class="hover:opacity-100 opacity-80" href="/games.html">Games</a>
+        <a class="opacity-100 font-semibold" href="/music.html">Music</a>
+        <a class="hover:opacity-100 opacity-80" href="/services.html">Services</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 dark:from-gray-800 dark:via-gray-900 dark:to-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="inline-block bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200 text-xs font-semibold px-3 py-1 rounded-full mb-3">Complete Catalog</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">eBooks by Guillaume Lessard</h1>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Clear, practical, and ROI‑focused books across programming, AI, tools, and personal mastery.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="/store.html" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white">Visit the Store</a>
+          <a href="/contact.html" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Request bulk or licensing</a>
         </div>
-        
-        <section class="grid"></section>
+      </div>
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5">
+          <img src="/assets/img/brand/ebooks_og.jpg" alt="iD01t eBooks" class="w-full h-auto object-cover">
+        </div>
+      </div>
     </div>
-    
-    <script src="/assets/site.js" defer></script>
+  </section>
+
+  <!-- Controls -->
+  <section class="py-6 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-4">
+      <input id="search" type="search" placeholder="Search titles, tags, year..." class="w-full md:flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900" />
+      <select id="filterLang" class="px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
+        <option value="">All languages</option>
+        <option value="EN">English</option>
+        <option value="FR">Français</option>
+      </select>
+      <select id="filterTag" class="px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
+        <option value="">All topics</option>
+        <option>Programming</option><option>AI</option><option>Tools</option><option>Productivity</option><option>Operating Systems</option>
+      </select>
+      <select id="sortBy" class="px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
+        <option value="newest">Newest first</option>
+        <option value="alpha">A → Z</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="py-10 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- skeleton placeholders -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div>
+      </div>
+      <div id="empty" class="hidden text-center text-gray-500 dark:text-gray-400 mt-8">No results.</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-10 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-2xl font-bold mb-2">Want custom editions or bulk licenses?</h3>
+      <p class="opacity-90 mb-4">We create tailored versions for teams, schools, and platforms.</p>
+      <a href="/contact.html" class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20">Contact iD01t Productions</a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="/assets/img/brand/logo.png" alt="iD01t Logo" class="h-6 w-6"/>
+        <span class="font-semibold">iD01t Productions</span>
+      </div>
+      <div>© <span id="year"></span></div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD (minimal; enriched at runtime) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"iD01t eBooks Catalog",
+    "itemListElement":[]
+  }
+  </script>
+
+  <!-- Catalog loader -->
+  <script>
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  const q = (id) => document.getElementById(id);
+
+  // Inline defaults (used if no JSON is present)
+  const DEFAULTS = [{'title': 'Python Zero to Hero', 'subtitle': 'Beginner to Intermediate with 10 Projects', 'cover': '/assets/images/covers/python-zero-to-hero.jpg', 'year': 2024, 'lang': 'EN', 'tags': ['Programming', 'Python', 'Education'], 'links': {'google': 'https://books.google.com/', 'kindle': '', 'apple': ''}}, {'title': 'Unstoppable', 'subtitle': 'Unlock Your Potential and Achieve Success', 'cover': '/assets/images/covers/unstoppable.jpg', 'year': 2024, 'lang': 'EN', 'tags': ['Self Improvement', 'Productivity'], 'links': {'google': 'https://books.google.com/', 'kindle': '', 'apple': ''}}, {'title': 'C# Zero to Hero', 'subtitle': 'Language Foundations, Scripts, and Exercises', 'cover': '/assets/images/covers/csharp-zero-to-hero.jpg', 'year': 2024, 'lang': 'EN', 'tags': ['Programming', 'C#', 'Education'], 'links': {'google': 'https://books.google.com/'}}, {'title': 'Java Zero to Hero', 'subtitle': 'From Basics to a Working App', 'cover': '/assets/images/covers/java-zero-to-hero.jpg', 'year': 2024, 'lang': 'EN', 'tags': ['Programming', 'Java', 'Education'], 'links': {'google': 'https://books.google.com/'}}, {'title': 'Visual Studio Essentials', 'subtitle': 'Practical Guide with Examples', 'cover': '/assets/images/covers/visual-studio-essentials.jpg', 'year': 2024, 'lang': 'EN', 'tags': ['Programming', 'Tools'], 'links': {'google': 'https://books.google.com/'}}, {'title': 'Visual Basic Quickstart', 'subtitle': 'Concepts, Examples, and Applications', 'cover': '/assets/images/covers/visual-basic-quickstart.jpg', 'year': 2024, 'lang': 'EN', 'tags': ['Programming', 'Visual Basic'], 'links': {'google': 'https://books.google.com/'}}, {'title': 'macOS Terminal Mastery', 'subtitle': 'A Practical Guide for Power Users', 'cover': '/assets/images/covers/macos-terminal-mastery.jpg', 'year': 2024, 'lang': 'EN', 'tags': ['macOS', 'Terminal', 'Productivity'], 'links': {'google': 'https://books.google.com/'}}, {'title': 'DOS Fundamentals', 'subtitle': 'Hands‑On Tutorials and Real Applications', 'cover': '/assets/images/covers/dos-fundamentals.jpg', 'year': 2024, 'lang': 'EN', 'tags': ['Operating Systems', 'History'], 'links': {'google': 'https://books.google.com/'}}, {'title': 'Generative AI & LLMs', 'subtitle': 'Extended Guide with Practical Projects', 'cover': '/assets/images/covers/generative-ai-llms.jpg', 'year': 2025, 'lang': 'EN', 'tags': ['AI', 'LLM', 'Engineering'], 'links': {'google': 'https://books.google.com/'}}];
+
+  // Render one card
+  function cardHTML(b) {
+    const cover = b.cover || '/assets/img/brand/ebooks_og.jpg';
+    const tags = (b.tags||[]).map(t=>`<span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 dark:bg-gray-800">${t}</span>`).join(' ');
+    const year = b.year ? `<span class="text-xs text-gray-500 dark:text-gray-400"> • ${b.year}</span>` : '';
+    const lang = b.lang ? `<span class="text-xs bg-gray-100 dark:bg-gray-800 rounded px-2 py-0.5">${b.lang}</span>` : '';
+    const L = b.links || {}
+    const btn = (href, label) => href ? `<a href="${href}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">${label}</a>` : '';
+    return `
+    <article class="book-card rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow">
+      <img src="${cover}" alt="${b.title} cover" class="w-full aspect-[3/4] object-cover"/>
+      <div class="p-4 space-y-3">
+        <h3 class="text-lg font-semibold">${b.title}</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">${b.subtitle||''}</p>
+        <div class="flex items-center gap-2">${lang}${year}</div>
+        <div class="flex gap-1 flex-wrap">${tags}</div>
+        <div class="flex gap-2 flex-wrap mt-2">
+          ${btn(L.google,'Google Books')} ${btn(L.kindle,'Kindle')} ${btn(L.apple,'Apple Books')} ${btn(L.gumroad,'Gumroad')} ${btn(L.kofi,'Ko‑fi')}
+        </div>
+      </div>
+    </article>`;
+  }
+
+  function render(list) {
+    if (!list.length) { empty.classList.remove('hidden'); grid.innerHTML=''; return; }
+    empty.classList.add('hidden');
+    grid.innerHTML = list.map(cardHTML).join('');
+  }
+
+  // Search/filter/sort
+  function applyFilters(src) {
+    const text = q('search').value.toLowerCase().trim();
+    const lang = q('filterLang').value;
+    const tag = q('filterTag').value;
+    const sortBy = q('sortBy').value;
+    let out = src.filter(b => {
+      const inText = !text || [b.title,b.subtitle,(b.tags||[]).join(' '),String(b.year||'')].join(' ').toLowerCase().includes(text);
+      const inLang = !lang || b.lang === lang;
+      const inTag = !tag || (b.tags||[]).includes(tag);
+      return inText && inLang && inTag;
+    });
+    if (sortBy === 'alpha') out.sort((a,b)=> a.title.localeCompare(b.title));
+    else out.sort((a,b)=> (b.year||0)-(a.year||0));
+    return out;
+  }
+
+  let CATALOG = [];
+
+  function refresh() { render(applyFilters(CATALOG)); }
+  ['search','filterLang','filterTag','sortBy'].forEach(id => q(id).addEventListener('input', refresh));
+
+  // Load JSON from site if present
+  async function loadLocalJSON() {
+    try {
+      const res = await fetch('/assets/data/ebooks.json', {cache: 'no-store'});
+      if (res.ok) return await res.json();
+    } catch(e) { /* ignore */ }
+    return [];
+  }
+
+  // Load from Google Books to complete the catalog
+  async function loadGoogleBooks() {
+    const authors = ['Guillaume Lessard','iD01t Productions'];
+    let books = [];
+    for (const a of authors) {
+      try {
+        const url = 'https://www.googleapis.com/books/v1/volumes?q=inauthor:' + encodeURIComponent('"'+a+'"') + '&maxResults=40';
+        const res = await fetch(url);
+        if (!res.ok) continue;
+        const data = await res.json();
+        const items = (data.items||[]).map(v => ({ 
+          title: v.volumeInfo?.title || '',
+          subtitle: v.volumeInfo?.subtitle || '',
+          cover: v.volumeInfo?.imageLinks?.thumbnail || v.volumeInfo?.imageLinks?.smallThumbnail || '',
+          year: (v.volumeInfo?.publishedDate||'').slice(0,4),
+          lang: (v.volumeInfo?.language||'').toUpperCase(),
+          tags: v.volumeInfo?.categories || [],
+          links: { google: v.volumeInfo?.infoLink || v.selfLink }
+        }));
+        books = books.concat(items);
+      } catch(e) { /* ignore */ }
+    }
+    return books;
+  }
+
+  (async function init() {
+    const local = await loadLocalJSON();
+    const google = await loadGoogleBooks();
+    // Merge: prefer local entries by title; then add defaults; then add google found
+    const map = new Map();
+    function addList(list) {
+      for (const b of list) {
+        const key = (b.title||'').toLowerCase().trim();
+        if (!key) continue;
+        if (!map.has(key)) map.set(key, b);
+      }
+    }
+    addList(local);
+    addList(DEFAULTS);
+    addList(google);
+    CATALOG = Array.from(map.values());
+    refresh();
+  })();
+  </script>
 </body>
 </html>
