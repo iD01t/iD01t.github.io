@@ -1,298 +1,262 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Music • iD01t Productions</title>
-  <meta name="description" content="Stream DJ iD01t — albums, EPs, singles. Auto-synced from Spotify. Filter by year and vibe." />
-  <link rel="canonical" href="/music.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Music • iD01t Productions" />
-  <meta property="og:description" content="Official hub for DJ iD01t. Auto-synced from Spotify." />
-  <meta property="og:url" content="/music.html" />
-  <meta property="og:image" content="/assets/img/placeholders/card-square-640.webp" />
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/logo-512.png" />
-  <link rel="stylesheet" href="/assets/site.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DJ iD01t — Official Music Hub</title>
+  <meta name="description" content="Stream DJ iD01t. Latest albums and singles with instant links to Spotify, Apple Music, Deezer, and YouTube."/>
+  <link rel="canonical" href="/music.html"/>
 
-  <!-- GA/GTM -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CHX65WY0WZ');</script>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
-  <!-- YouTube subscribe button -->
-  <script async src="https://apis.google.com/js/platform.js"></script>
+  <!-- Social -->
+  <meta property="og:title" content="DJ iD01t — Official Music Hub"/>
+  <meta property="og:description" content="Stream the catalog across Spotify, Apple Music, Deezer, and YouTube."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://id01t.github.io/music.html"/>
+  <meta property="og:image" content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/astist.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="DJ iD01t — Official Music Hub"/>
+  <meta name="twitter:description" content="Latest releases, direct streaming links, and videos."/>
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/astist.jpg"/>
 
-  <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.05);--muted:rgba(255,255,255,.7);--accent:#0ea5e9}
-    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-    .glass{background:var(--card);backdrop-filter:blur(10px)}
-    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden}
-    .btn{display:inline-block;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
-    .btn:hover{filter:brightness(1.07)}
-    .chip{font-size:.8rem;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
-    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
-    .nav a[aria-current="page"], .nav a:hover{opacity:1}
-    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
-    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px}
-    .hero p{opacity:.85;margin:0}
-    .toolbar{display:grid;grid-template-columns:1fr 160px 160px 160px 160px;gap:10px;align-items:end;margin:18px 0}
-    .toolbar label{font-size:.85rem;color:var(--muted);display:block;margin-bottom:6px}
-    .toolbar input,.toolbar select{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:inherit}
-    .toolbar .wide{grid-column:1/-1;display:flex;gap:10px;align-items:center}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-    .tile img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#111}
-    .tile .content{padding:14px;display:flex;flex-direction:column;gap:10px}
-    .muted{opacity:.8}
-    footer{border-top:1px solid var(--border);padding:24px 0;margin-top:32px;opacity:.8;text-align:center}
-  </style>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/assets/logo-512.png"/>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}</style>
 </head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <!-- Shared header (pulls from index.html if present) -->
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/store.html">Store</a>
-        <a href="/ebooks.html">eBooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html">Games</a>
-        <a href="/music.html" aria-current="page"><strong>Music</strong></a>
-        <a href="/services.html">Services</a>
-      </nav>
-    </div>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2"><img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t"/><span class="font-bold text-xl">iD01t</span></a>
+      <div class="hidden md:flex items-center gap-4 text-sm">
+        <a class="hover:opacity-100 opacity-80" href="/store.html">Store</a>
+        <a class="hover:opacity-100 opacity-80" href="/ebooks.html">eBooks</a>
+        <a class="hover:opacity-100 opacity-80" href="/apps.html">Apps</a>
+        <a class="hover:opacity-100 opacity-80" href="/games.html">Games</a>
+        <a class="opacity-100 font-semibold" href="/music.html">Music</a>
+        <a class="hover:opacity-100 opacity-80" href="/services.html">Services</a>
+      </div>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1 id="artistTitle">DJ iD01t — Official Music Hub</h1>
-      <p id="artistDesc">Auto-synced catalog. Filter by year and vibe. Play instantly.</p>
-      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap" id="ctaLinks"></div>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-fuchsia-50 dark:from-gray-800 dark:via-gray-900 dark:to-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-semibold px-3 py-1 rounded-full mb-3">Official Hub</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">DJ iD01t</h1>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Stream the catalog everywhere. Follow the journey and book custom music for games, apps, and trailers.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Spotify</a>
+          <a href="https://music.apple.com/us/artist/dj-id01t/1803964475" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Apple Music</a>
+          <a href="https://www.deezer.com/en/artist/312085201" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Deezer</a>
+          <a href="https://www.youtube.com/@djid01t" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">YouTube</a>
+          <a href="/contact.html" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white">Book a soundtrack</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5">
+          <img src="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/astist.jpg" alt="DJ iD01t" class="w-full h-auto object-cover">
+        </div>
+      </div>
     </div>
   </section>
 
-  <main class="wrap">
-    <section class="toolbar">
+  <!-- Featured embeds -->
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div>
-        <label for="q">Search</label>
-        <input id="q" type="search" placeholder="Title, keyword" />
-      </div>
-      <div>
-        <label for="genre">Genre</label>
-        <select id="genre"></select>
-      </div>
-      <div>
-        <label for="from">From</label>
-        <input id="from" type="number" inputmode="numeric" placeholder="2018" />
-      </div>
-      <div>
-        <label for="to">To</label>
-        <input id="to" type="number" inputmode="numeric" placeholder="2025" />
-      </div>
-      <div>
-        <label for="sort">Sort</label>
-        <select id="sort">
-          <option value="date_desc">Newest</option>
-          <option value="date_asc">Oldest</option>
-          <option value="title_asc">Title A–Z</option>
-          <option value="title_desc">Title Z–A</option>
-        </select>
-      </div>
-      <div class="wide">
-        <label class="muted"><input id="albumsOnly" type="checkbox" /> Albums only</label>
-        <label class="muted"><input id="singlesOnly" type="checkbox" /> Singles only</label>
-        <button id="clear" class="btn" type="button">Clear filters</button>
-      </div>
-    </section>
-
-    <!-- Featured section with artist embed + (optional) latest release -->
-    <section class="card glass" style="padding:16px;margin-bottom:16px">
-      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start">
-        <div>
-          <h2 style="margin:0 0 6px">Featured</h2>
-          <p id="featured-desc" class="muted" style="margin:0 0 10px">Artist player + latest drop.</p>
-          <div id="featured-embed" class="card" style="overflow:hidden;border-radius:12px"></div>
-        </div>
-        <div>
-          <h3 style="margin:0 0 6px">Booking & Custom Music</h3>
-          <p class="muted" style="margin:0 0 10px">Need an original soundtrack or a live set? Get custom cues, trailers, and full scores.</p>
-          <a href="/contact.html" class="btn">Get in touch</a>
+        <h2 class="text-xl font-semibold mb-3">Spotify Artist</h2>
+        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0EihiI3hgiPfIiyb154dgB?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
-    </section>
+      <div>
+        <h2 class="text-xl font-semibold mb-3">Latest Videos</h2>
+        <div class="space-y-4">
+          
+<div class="aspect-video rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/q9ux1Cu3YjE?si=asfclHbQkCFbwUfR" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-    <section>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
-        <h2 style="margin:0">Albums, EPs & Singles</h2>
-        <span id="count" class="muted" style="font-size:.9rem"></span>
+<div class="aspect-video rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/turpmY0liDU?si=YTNDYAQAxZQderCi" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="aspect-video rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2UHnGsKBjHQ?si=abhtxMJtydlGlg3Q" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+          <div class="g-ytsubscribe" data-channelid="UCi10eZdNVil8VqDya_e6K4Q" data-layout="default" data-count="default"></div>
+        </div>
       </div>
-      <div id="grid" class="grid"></div>
-    </section>
-  </main>
-
-  <section style="padding:36px 0;margin-top:24px;background:#0ea5e9;color:#fff;text-align:center">
-    <h2 style="margin:0 0 8px">Follow DJ iD01t everywhere</h2>
-    <p class="muted" style="margin:0 0 16px;color:#fff;opacity:.9">Consistent links, clean analytics, more plays.</p>
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;align-items:center" id="followLinks"></div>
+    </div>
   </section>
 
-  <footer>
-    <div class="wrap">© <span id="year"></span> iD01t Productions</div>
+  <!-- Discography -->
+  <section class="py-8 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Albums & LPs</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+    <article class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/c3/9e/e7c39e94-e3c7-35c8-890f-403667e3bf6b/artwork.jpg/600x600bb.webp" alt="Final Transmission cover" class="w-full aspect-square object-cover"/>
+      <div class="p-4 space-y-3">
+        <h3 class="text-lg font-semibold">Final Transmission</h3>
+        <div class="flex gap-2 flex-wrap">
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://open.spotify.com/album/7acmUMIp3LjMq8geiNJVkc" target="_blank" rel="noopener">
+            <span>Spotify</span>
+          </a>
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://music.apple.com/us/album/final-transmission/1803988227" target="_blank" rel="noopener">
+            <span>Apple Music</span>
+          </a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5f/2e/ed/5f2eed58-696e-efe5-efb4-f311ecddd5c7/artwork.jpg/600x600bb.webp" alt="Signal Detected cover" class="w-full aspect-square object-cover"/>
+      <div class="p-4 space-y-3">
+        <h3 class="text-lg font-semibold">Signal Detected</h3>
+        <div class="flex gap-2 flex-wrap">
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://open.spotify.com/album/419JjtCXE5GGfUeT9PbOsG" target="_blank" rel="noopener">
+            <span>Spotify</span>
+          </a>
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://music.apple.com/us/album/signal-detected/1806770367" target="_blank" rel="noopener">
+            <span>Apple Music</span>
+          </a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/82/8a/43/828a4385-c2dc-3a00-8cb1-cdfcf7bb22d1/artwork.jpg/600x600bb.webp" alt="Sweat and Stardust cover" class="w-full aspect-square object-cover"/>
+      <div class="p-4 space-y-3">
+        <h3 class="text-lg font-semibold">Sweat and Stardust</h3>
+        <div class="flex gap-2 flex-wrap">
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://open.spotify.com/album/0tUOIdVIe63qCu4bUHOk0F" target="_blank" rel="noopener">
+            <span>Spotify</span>
+          </a>
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://music.apple.com/us/album/sweat-and-stardust/1811045859" target="_blank" rel="noopener">
+            <span>Apple Music</span>
+          </a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/24/fb/ac/24fbac96-12cd-6add-8438-75476c9b44c8/artwork.jpg/600x600bb.webp" alt="Echo Protocol cover" class="w-full aspect-square object-cover"/>
+      <div class="p-4 space-y-3">
+        <h3 class="text-lg font-semibold">Echo Protocol</h3>
+        <div class="flex gap-2 flex-wrap">
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://open.spotify.com/album/5dHZOFJAdfYdbWb51dXwcx" target="_blank" rel="noopener">
+            <span>Spotify</span>
+          </a>
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://music.apple.com/us/album/echo-protocol/1812513635" target="_blank" rel="noopener">
+            <span>Apple Music</span>
+          </a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/db/1d/6d/db1d6de7-2917-7046-da8f-2bce962f9ca9/artwork.jpg/600x600bb.webp" alt="No Master Needed cover" class="w-full aspect-square object-cover"/>
+      <div class="p-4 space-y-3">
+        <h3 class="text-lg font-semibold">No Master Needed</h3>
+        <div class="flex gap-2 flex-wrap">
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://open.spotify.com/album/5sZPcpDF66anoXPC7xZjGY" target="_blank" rel="noopener">
+            <span>Spotify</span>
+          </a>
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://music.apple.com/us/album/no-master-needed/1829338119" target="_blank" rel="noopener">
+            <span>Apple Music</span>
+          </a>
+        </div>
+      </div>
+    </article>
+    
+
+    <article class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/73/8c/be/738cbed2-71eb-e2c2-3d92-ead18fe63ab6/artwork.jpg/600x600bb.webp" alt="Anura Voidwalker DMT Chronicles: Hymns of the Amphibian Realms cover" class="w-full aspect-square object-cover"/>
+      <div class="p-4 space-y-3">
+        <h3 class="text-lg font-semibold">Anura Voidwalker DMT Chronicles: Hymns of the Amphibian Realms</h3>
+        <div class="flex gap-2 flex-wrap">
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://open.spotify.com/album/2uKqGuwXpsc4DAttb7KOOe" target="_blank" rel="noopener">
+            <span>Spotify</span>
+          </a>
+          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800" href="https://music.apple.com/us/album/anura-voidwalker-dmt-chronicles-hymns-of-the/1830946647" target="_blank" rel="noopener">
+            <span>Apple Music</span>
+          </a>
+        </div>
+      </div>
+    </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA strip -->
+  <section class="py-10 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-2xl font-bold mb-2">Follow DJ iD01t everywhere</h3>
+      <p class="opacity-90 mb-4">Consistent links. Clean analytics. More plays.</p>
+      <div class="flex gap-3 justify-center flex-wrap">
+        <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20">Spotify</a>
+        <a href="https://music.apple.com/us/artist/dj-id01t/1803964475" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20">Apple Music</a>
+        <a href="https://www.deezer.com/en/artist/312085201" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20">Deezer</a>
+        <a href="https://www.youtube.com/@djid01t" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="/assets/img/brand/logo.png" alt="iD01t Logo" class="h-6 w-6"/>
+        <span class="font-semibold">iD01t Productions</span>
+      </div>
+      <div>© <span id="year"></span></div>
+    </div>
   </footer>
 
-  <script>
-    (async function loadSharedHeader(){
-      try{const res=await fetch('/index.html'); if(!res.ok) return; const html=await res.text(); const doc=new DOMParser().parseFromString(html,'text/html'); const shared=doc.querySelector('#site-header'); if(shared){document.getElementById('site-header').outerHTML=shared.outerHTML;}}catch{}
-    })();
+  <!-- Scripts -->
+  <script async src="https://apis.google.com/js/platform.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Constants you asked to add
-    const SPOTIFY_ARTIST_EMBED = 'https://open.spotify.com/embed/artist/0EihiI3hgiPfIiyb154dgB?utm_source=generator&theme=0';
-    const YT_CHANNEL_ID = 'UCi10eZdNVil8VqDya_e6K4Q';
-    const YT_URL = `https://www.youtube.com/channel/${YT_CHANNEL_ID}`;
-
-    const els = {
-      q: document.getElementById('q'),
-      genre: document.getElementById('genre'),
-      from: document.getElementById('from'),
-      to: document.getElementById('to'),
-      sort: document.getElementById('sort'),
-      albumsOnly: document.getElementById('albumsOnly'),
-      singlesOnly: document.getElementById('singlesOnly'),
-      clear: document.getElementById('clear'),
-      artistTitle: document.getElementById('artistTitle'),
-      featuredDesc: document.getElementById('featured-desc'),
-      featuredEmbed: document.getElementById('featured-embed'),
-      grid: document.getElementById('grid'),
-      count: document.getElementById('count'),
-      ctaLinks: document.getElementById('ctaLinks'),
-      followLinks: document.getElementById('followLinks'),
-    };
-
-    const esc = s => String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
-    const chip = t => `<span class="chip">${esc(t)}</span>`;
-
-    function cardHTML(r){
-      const tags = [r.album_group, r.album_type].filter(Boolean).map(chip).join(' ');
-      return `<article class="card" style="background:var(--card)">
-        <img src="${esc(r.image||'/assets/img/placeholders/card-square-640.webp')}" alt="${esc(r.name)} cover"/>
-        <div class="content">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-            <h3 style="margin:0">${esc(r.name)}</h3>
-            <span class="muted" style="font-size:.9rem">${esc(r.year||'')}</span>
-          </div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">Spotify</a>
-          </div>
-        </div>
-      </article>`;
-    }
-
-    function emitSchema(artist, items){
-      const ld = {
-        '@context':'https://schema.org', '@type':'ItemList', name:`${artist.name} Discography`,
-        itemListElement: items.slice(0,60).map((r,i)=>({ '@type':'ListItem', position:i+1, item:{ '@type':'MusicAlbum', name:r.name, byArtist:{'@type':'MusicGroup','name':artist.name}, datePublished:r.year?String(r.year):undefined, image:r.image||undefined, url:r.url||undefined } }))
-      };
-      let tag=document.getElementById('ld-music');
-      if(!tag){tag=document.createElement('script');tag.id='ld-music';tag.type='application/ld+json';document.head.appendChild(tag);} 
-      tag.textContent = JSON.stringify(ld);
-
-      const artistLD = { '@context':'https://schema.org', '@type':'MusicGroup', name:artist.name, sameAs:[ artist.url, YT_URL ] };
-      let tag2=document.getElementById('ld-artist');
-      if(!tag2){tag2=document.createElement('script');tag2.id='ld-artist';tag2.type='application/ld+json';document.head.appendChild(tag2);} 
-      tag2.textContent = JSON.stringify(artistLD);
-    }
-
-    function populateGenres(genres){
-      const g = Array.from(new Set(genres||[])).sort();
-      els.genre.innerHTML = '<option value="">All</option>'+ g.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');
-    }
-
-    function renderHero(artist){
-      els.artistTitle.textContent = `${artist.name} — Official Music Hub`;
-      const btn = (href,label)=>`<a class="btn" href="${esc(href)}" target="_blank" rel="noopener">${label}</a>`;
-      els.ctaLinks.innerHTML = btn(artist.url,'Spotify') + ' ' + btn(YT_URL,'YouTube');
-      els.followLinks.innerHTML =
-        btn(artist.url,'Spotify') + ' ' +
-        btn('https://music.apple.com','Apple Music') + ' ' +
-        btn(YT_URL,'YouTube') +
-        // YouTube subscribe button (dark page)
-        `<div class="g-ytsubscribe" data-channelid="${YT_CHANNEL_ID}" data-layout="default" data-count="hidden"></div>`;
-    }
-
-    function renderFeatured(featured){
-      // Always show the artist embed (your request), then the latest release embed if available.
-      const artistIframe = `<iframe data-testid="embed-iframe" style="border-radius:12px" src="${esc(SPOTIFY_ARTIST_EMBED)}" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
-      const releaseIframe = featured?.embed
-        ? `<div style="margin-top:10px"><iframe style="border-radius:12px" src="${esc(featured.embed)}" width="100%" height="232" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`
-        : '';
-      els.featuredDesc.textContent = 'Artist player + latest Spotify release';
-      els.featuredEmbed.innerHTML = artistIframe + releaseIframe;
-    }
-
-    function applyFilters(items){
-      const text=(els.q.value||'').toLowerCase();
-      const g=els.genre.value; const f=parseInt(els.from.value||''); const t=parseInt(els.to.value||'');
-      const albumsOnly = els.albumsOnly.checked; const singlesOnly = els.singlesOnly.checked;
-      let list = items.filter(r=>{
-        if(text && !r.name.toLowerCase().includes(text)) return false;
-        if(!isNaN(f) && (r.year||0) < f) return false;
-        if(!isNaN(t) && (r.year||0) > t) return false;
-        if(albumsOnly && r.album_type !== 'album') return false;
-        if(singlesOnly && r.album_type !== 'single') return false;
-        if(g && !(window.__artistGenres||[]).includes(g)) return false; // artist genre filter
-        return true;
-      });
-      const s = els.sort.value; const byTitle=(a,b)=>a.name.localeCompare(b.name);
-      if(s==='date_asc') list.sort((a,b)=>(a.year||0)-(b.year||0));
-      else if(s==='title_asc') list.sort(byTitle);
-      else if(s==='title_desc') list.sort((a,b)=>byTitle(b,a));
-      else list.sort((a,b)=>(b.year||0)-(a.year||0));
-      return list;
-    }
-
-    function renderGrid(items){
-      els.grid.innerHTML = items.map(cardHTML).join('') || '<div class="muted">No results. Adjust filters.</div>';
-      els.count.textContent = `${items.length} release${items.length!==1?'s':''}`;
-    }
-
-    function bind(items){
-      const again = ()=>{ renderGrid(applyFilters(items)); };
-      ['input','change'].forEach(evt=>{
-        [els.q,els.genre,els.from,els.to,els.sort,els.albumsOnly,els.singlesOnly].forEach(el=>el.addEventListener(evt, again));
-      });
-      els.clear.addEventListener('click', ()=>{ els.q.value=''; els.genre.value=''; els.from.value=''; els.to.value=''; els.sort.value='date_desc'; els.albumsOnly.checked=false; els.singlesOnly.checked=false; again(); });
-    }
-
-    async function init(){
-      try {
-        const res = await fetch('/assets/data/music.json', { cache:'no-store' });
-        const data = await res.json();
-        window.__artistGenres = data.artist?.genres || [];
-        populateGenres(window.__artistGenres);
-        const artist = data.artist || { name:'DJ iD01t', url:'https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB' };
-        renderHero(artist);
-        renderFeatured(data.featured);
-        emitSchema(artist, data.releases||[]);
-        bind(data.releases||[]);
-        renderGrid(applyFilters(data.releases||[]));
-      } catch (e) {
-        console.error('Failed to load music.json', e);
-        // Still render the artist embed + YouTube even if JSON is missing
-        renderHero({ name:'DJ iD01t', url:'https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB' });
-        renderFeatured(null);
-        document.querySelector('#grid').innerHTML = '<div class="muted">Unable to load releases yet.</div>';
-      }
-    }
-
-    init();
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "DJ iD01t",
+    "image": "https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/astist.jpg",
+    "sameAs": ["https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB", "https://music.apple.com/us/artist/dj-id01t/1803964475", "https://www.deezer.com/en/artist/312085201", "https://www.youtube.com/@djid01t"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "DJ iD01t Discography",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"item":{"@type":"MusicAlbum","name":"Final Transmission","image":"https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/c3/9e/e7c39e94-e3c7-35c8-890f-403667e3bf6b/artwork.jpg/600x600bb.webp","url":"https://open.spotify.com/album/7acmUMIp3LjMq8geiNJVkc"}}, {"@type":"ListItem","position":2,"item":{"@type":"MusicAlbum","name":"Signal Detected","image":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5f/2e/ed/5f2eed58-696e-efe5-efb4-f311ecddd5c7/artwork.jpg/600x600bb.webp","url":"https://open.spotify.com/album/419JjtCXE5GGfUeT9PbOsG"}}, {"@type":"ListItem","position":3,"item":{"@type":"MusicAlbum","name":"Sweat and Stardust","image":"https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/82/8a/43/828a4385-c2dc-3a00-8cb1-cdfcf7bb22d1/artwork.jpg/600x600bb.webp","url":"https://open.spotify.com/album/0tUOIdVIe63qCu4bUHOk0F"}}, {"@type":"ListItem","position":4,"item":{"@type":"MusicAlbum","name":"Echo Protocol","image":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/24/fb/ac/24fbac96-12cd-6add-8438-75476c9b44c8/artwork.jpg/600x600bb.webp","url":"https://open.spotify.com/album/5dHZOFJAdfYdbWb51dXwcx"}}, {"@type":"ListItem","position":5,"item":{"@type":"MusicAlbum","name":"No Master Needed","image":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/db/1d/6d/db1d6de7-2917-7046-da8f-2bce962f9ca9/artwork.jpg/600x600bb.webp","url":"https://open.spotify.com/album/5sZPcpDF66anoXPC7xZjGY"}}, {"@type":"ListItem","position":6,"item":{"@type":"MusicAlbum","name":"Anura Voidwalker DMT Chronicles: Hymns of the Amphibian Realms","image":"https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/73/8c/be/738cbed2-71eb-e2c2-3d92-ead18fe63ab6/artwork.jpg/600x600bb.webp","url":"https://open.spotify.com/album/2uKqGuwXpsc4DAttb7KOOe"}}
+    ]
+  }
   </script>
 </body>
 </html>
