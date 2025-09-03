@@ -4,32 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Series • iD01t Productions</title>
-  <meta name="description" content="Explore book series by Guillaume Lessard. Live from Google Books API. Filter by language, year, and size." />
+  <meta name="description" content="Explore book series by Guillaume Lessard and iD01t Productions. Live from Google Books API. Filter by language, year, and size." />
   <link rel="canonical" href="/series.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Series • iD01t Productions" />
   <meta property="og:description" content="Official book series hub grouped from Google Books API results." />
   <meta property="og:url" content="/series.html" />
-  <meta property="og:image" content="/assets/img/placeholders/card-square-640.webp" />
+  <meta property="og:image" content="/assets/img/brand/ebooks_og.jpg" />
   <link rel="icon" href="/assets/favicon.ico" />
   <link rel="apple-touch-icon" href="/assets/logo-512.png" />
   <link rel="stylesheet" href="/assets/site.css" />
-
-  <!-- GA/GTM -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CHX65WY0WZ');</script>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.05);--muted:rgba(255,255,255,.75)}
-    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    :root{--border-light:rgba(0,0,0,.12);--card-light:rgba(0,0,0,.03);--muted-light:#6b7280;
+          --border-dark:rgba(255,255,255,.12);--card-dark:rgba(255,255,255,.06);--muted-dark:rgba(255,255,255,.72)}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
     .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
-    .nav a[aria-current="page"], .nav a:hover{opacity:1}
-    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%);color:#eaeaf0}
     .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px}
     .hero p{opacity:.85;margin:0}
     .toolbar{display:grid;grid-template-columns:1.2fr 160px 160px 160px 1fr;gap:10px;align-items:end;margin:18px 0}
@@ -45,45 +38,31 @@
     .btn{display:inline-block;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
     .btn:hover{filter:brightness(1.07)}
     footer{border-top:1px solid var(--border);padding:24px 0;margin-top:32px;opacity:.8;text-align:center}
+    /* Light/Dark tokens */
+    :root{--border:var(--border-light);--card:var(--card-light);--muted:var(--muted-light)}
+    @media (prefers-color-scheme: dark){:root{--border:var(--border-dark);--card:var(--card-dark);--muted:var(--muted-dark)}}
   </style>
 </head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <!-- Shared header (pulled from index.html) -->
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/store.html">Store</a>
-        <a href="/ebooks.html">eBooks</a>
-        <a href="/audiobooks.html">Audiobooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html">Games</a>
-        <a href="/music.html">Music</a>
-        <a href="/series.html" aria-current="page"><strong>Series</strong></a>
-        <a href="/services.html">Services</a>
-      </nav>
-    </div>
-  </header>
+<body data-active="Series">
+  <div id="header-slot"></div>
 
   <section class="hero">
     <div class="wrap">
       <h1>Book Series — iD01t Productions</h1>
-      <p>Grouped live from the Google Books API. Every title links to Google Books for credibility, SEO, and conversions.</p>
+      <p>Grouped live from the Google Books API. Each card links to Google Books results for instant credibility and discovery.</p>
     </div>
   </section>
 
-  <main class="wrap">
+  <main class="wrap" role="main">
     <!-- Filters -->
-    <section class="toolbar">
+    <section class="toolbar" aria-label="Filters">
       <div>
         <label for="q">Search series</label>
         <input id="q" type="search" placeholder="Series name or keyword" />
       </div>
       <div>
         <label for="language">Language</label>
-        <select id="language"></select>
+        <select id="language" aria-label="Language"></select>
       </div>
       <div>
         <label for="from">From (year)</label>
@@ -95,7 +74,7 @@
       </div>
       <div>
         <label for="sort">Sort</label>
-        <select id="sort">
+        <select id="sort" aria-label="Sort">
           <option value="size_desc">Most books</option>
           <option value="size_asc">Fewest books</option>
           <option value="date_desc">Newest first</option>
@@ -112,7 +91,7 @@
     </section>
 
     <!-- Grid -->
-    <section>
+    <section aria-label="Series list">
       <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
         <h2 style="margin:0">Series Catalog</h2>
         <span id="count" class="muted" style="font-size:.9rem"></span>
@@ -122,257 +101,236 @@
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">© <span id="year"></span> iD01t Productions</div>
-  </footer>
+  <div id="footer-slot"></div>
 
+  <!-- Inject header/footer from the ORIGINAL homepage -->
   <script>
-    // Load consistent header from index.html
-    (async function loadSharedHeader(){
-      try{const r=await fetch('/index.html'); if(!r.ok) return;
-        const h=await r.text(); const d=new DOMParser().parseFromString(h,'text/html');
-        const shared=d.querySelector('#site-header'); if(shared) document.getElementById('site-header').outerHTML=shared.outerHTML;
-      }catch{} })();
-    document.getElementById('year').textContent = new Date().getFullYear();
+  (async function injectLayout(){
+    try{
+      const res = await fetch('/index.html', {cache:'no-store'});
+      const text = await res.text();
+      const doc = new DOMParser().parseFromString(text, 'text/html');
+      const head = document.querySelector('head');
+      doc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !document.querySelector('link[rel="stylesheet"][href="'+href+'"]')) {
+          const l=document.createElement('link'); l.rel='stylesheet'; l.href=href; head.appendChild(l);
+        }
+      });
+      const header = doc.querySelector('header'); const footer = doc.querySelector('footer');
+      if (header) document.getElementById('header-slot').innerHTML = header.outerHTML;
+      if (footer) document.getElementById('footer-slot').innerHTML = footer.outerHTML;
+      // Active nav
+      const active = (document.body.dataset.active || '').toLowerCase();
+      document.querySelectorAll('header nav a, #site-header nav a').forEach(a=>{
+        a.removeAttribute('aria-current');
+        const label=a.textContent.trim().toLowerCase();
+        const href=a.getAttribute('href');
+        if ((active && label===active) || href==='/series.html') a.setAttribute('aria-current','page');
+      });
+      // Re-execute any scripts that were inside injected nodes
+      ['header-slot','footer-slot'].forEach(id=>{
+        const root=document.getElementById(id);
+        root && root.querySelectorAll('script').forEach(s=>{const ns=document.createElement('script'); ns.textContent=s.textContent; s.replaceWith(ns);});
+      });
+    }catch(e){ console.warn('Header/Footer injection failed', e); }
+  })();
+  </script>
 
-    // --- Config ---
-    const C = {
-      AUTHOR: 'Guillaume Lessard',
-      PUBLISHER: 'iD01t Productions',
-      PAGE_SIZE: 40,   // Google Books page size
-      MAX_TOTAL: 200,  // up to 5 pages
-      API_KEY: ''      // optional to increase quota
+  <!-- Series logic (Google Books API) -->
+  <script>
+    // Config
+    const CONF = {
+      AUTHORS: ['Guillaume Lessard','El\'Nox Rah','DJ iD01t'],
+      PUBLISHERS: ['iD01t Productions'],
+      MAX_PAGES: 5,     // 5 * 40 = up to 200 items per query
+      PAGE_SIZE: 40,
+      API_KEY: window.GBOOKS_API_KEY || '' // optional
     };
 
-    // --- Elements ---
-    const el=id=>document.getElementById(id);
-    const q=el('q'), language=el('language'), from=el('from'), to=el('to'), sort=el('sort'),
-          onlyComplete=el('onlyComplete'), clearBtn=el('clear'),
-          grid=el('grid'), empty=el('empty'), count=el('count'), tally=el('tally');
+    const el = id => document.getElementById(id);
+    const $q=el('q'), $lang=el('language'), $from=el('from'), $to=el('to'), $sort=el('sort'),
+          $complete=el('onlyComplete'), $clear=el('clear'),
+          $grid=el('grid'), $empty=el('empty'), $count=el('count'), $tally=el('tally');
 
-    const esc=s=>String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
-    const chip=t=>`<span class="chip">${esc(t)}</span>`;
+    const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",""":"&quot;"}[c]));
 
-    // --- Fetch all titles for author/publisher ---
-    async function fetchAllVolumes(){
-      const base = `inauthor:"${C.AUTHOR}" OR inpublisher:"${C.PUBLISHER}"`;
-      let startIndex=0, items=[];
-      while (startIndex < C.MAX_TOTAL){
-        const params = new URLSearchParams({ q: base, maxResults: C.PAGE_SIZE, startIndex, printType:'books' });
-        if (C.API_KEY) params.set('key', C.API_KEY);
-        const url = `https://www.googleapis.com/books/v1/volumes?${params.toString()}`;
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('Books API '+res.status);
-        const data = await res.json();
-        const page = data.items || [];
-        items.push(...page);
-        if (page.length < C.PAGE_SIZE) break;
-        startIndex += C.PAGE_SIZE;
+    // Build HD cover from volume id
+    const coverById = (id,z=3)=>`https://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=${z}&source=gbs_api`;
+
+    // Fetch helper with paging
+    async function fetchVolumes(query){
+      const key = CONF.API_KEY ? `&key=${encodeURIComponent(CONF.API_KEY)}` : '';
+      let all=[]; let start=0;
+      for (let i=0;i<CONF.MAX_PAGES;i++){
+        const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&printType=books&maxResults=${CONF.PAGE_SIZE}&startIndex=${start}${key}`;
+        const res = await fetch(url); if(!res.ok) break;
+        const data = await res.json(); const items=data.items||[];
+        if(!items.length) break;
+        all.push(...items); start += CONF.PAGE_SIZE;
+        if (start >= (data.totalItems||0)) break;
       }
-      return items;
+      return all;
     }
 
-    // --- Series extraction heuristics ---
-    const SERIES_PATTERNS = [
-      // “Title (Series Name Book 2)”
-      /(?:^|[\s(])(?:book\s*\d+|volume\s*\d+|vol\.\s*\d+)\s*(?:of|in)?\s*(?:the\s*)?([^)]+)\)/i,
-      // “Series Name: Book 3”
-      /^(.*?)(?:\s*[:-]\s*)(?:book|volume|vol\.)\s*\d+\b/i,
-      // “(Series Name #3)”
-      /\(([^)]+)\s*#\s*\d+\)/i
-    ];
+    function normalize(v){
+      const vi=v.volumeInfo||{}, si=v.saleInfo||{};
+      const title = vi.title||'Untitled';
+      const series = extractSeriesFromTitle(title, vi.subtitle||'', vi.description||'', vi.searchInfo?.textSnippet||'');
+      return {
+        id:v.id, title,
+        subtitle:vi.subtitle||'',
+        language:(vi.language||'').toUpperCase(),
+        year:(vi.publishedDate||'').slice(0,4),
+        categories:vi.categories||[],
+        cover: coverById(v.id,3),
+        cover2x: coverById(v.id,4),
+        info: (vi.infoLink||vi.canonicalVolumeLink||v.selfLink||'#').replace('http://','https://'),
+        buy: si.buyLink || vi.infoLink || '',
+        series // {name, num} | null
+      };
+    }
 
-    function extractSeries(volume){
-      // Prefer native series info if present
-      const any = volume.seriesInfo || volume.volumeSeries;
-      if (any && (any.series || any.seriesId || any.bookDisplayNumber)){
-        const name = (any.series && any.series[0]?.seriesId) ? any.series[0].seriesId : (any.series?.[0]?.series || any.series || any.title);
-        return { name: String(name||'').trim(), num: any.bookDisplayNumber || '' };
-      }
-      const title = `${volume.title||''} ${volume.subtitle?(' '+volume.subtitle):''}`;
-      const hintFields = [
-        title,
-        (volume.description||'').slice(0,300),
-        (volume.searchInfo?.textSnippet||'')
-      ].join(' • ');
-      for (const rx of SERIES_PATTERNS){
-        const m = hintFields.match(rx);
+    // Heuristics for extracting series name/number from title/subtitle/description
+    const RX = [
+      // "Title (Series Name Book 2)" or "(Series Name #2)"
+      /\(([^)]+?)\s*(?:book|livre|tome|volume|vol\.?|#)\s*\d+[^)]*\)/i,
+      // "Series Name: Book 3" as prefix
+      /^(.*?)\s*[:\-]\s*(?:book|livre|tome|volume|vol\.?|#)\s*\d+\b/i
+    ];
+    function extractSeriesFromTitle(title, subtitle, description, snippet){
+      const blob = [title, subtitle, description.slice(0,300), snippet].join(' • ');
+      for (const rx of RX){
+        const m = blob.match(rx);
         if (m && m[1]){
-          // Clean up tails like “Series Name Book …”
-          let name = String(m[1]).replace(/(?:book|volume|vol\.?)\s*\d+.*/i,'').replace(/series$/i,'').trim();
-          return { name, num: '' };
+          let name = m[1].replace(/series$/i,'').trim();
+          return {name, num:''};
         }
       }
       return null;
     }
 
-    function normalize(item){
-      const v=item.volumeInfo||{}, links=v.imageLinks||{};
-      const info=(v.infoLink||v.canonicalVolumeLink||'#').replace('http://','https://');
-      return {
-        id:item.id,
-        title:v.title||'Untitled',
-        authors:(v.authors||[]).join(', '),
-        year:(v.publishedDate||'').slice(0,4),
-        language:v.language||'',
-        categories:v.categories||[],
-        image:(links.thumbnail||links.smallThumbnail||'/assets/placeholder-cover.svg').replace('http://','https://'),
-        infoLink:info,
-        series: extractSeries(v) // {name, num} | null
-      };
-    }
-
-    function groupBySeries(vols){
+    function groupSeries(items){
       const map = new Map();
-      for (const b of vols){
-        const key = (b.series && b.series.name) ? b.series.name.trim() : null;
-        if (!key) continue;
-        if (!map.has(key)) map.set(key, []);
+      for (const b of items){
+        const key = b.series && b.series.name ? b.series.name.trim() : null;
+        if(!key) continue;
+        if(!map.has(key)) map.set(key, []);
         map.get(key).push(b);
       }
-      // Sort each series by year/title
-      const groups = [];
-      for (const [name, arr] of map.entries()){
-        arr.sort((a,b)=> (a.year||'0000').localeCompare(b.year||'0000') || a.title.localeCompare(b.title));
-        const years = arr.map(x=>parseInt(x.year||'')).filter(x=>!isNaN(x));
-        const minY = years.length? Math.min(...years) : '';
-        const maxY = years.length? Math.max(...years) : '';
+      const groups=[];
+      for (const [name, list] of map.entries()){
+        list.sort((a,b)=> (a.year||'0000').localeCompare(b.year||'0000') || a.title.localeCompare(b.title));
+        const years = list.map(x=>parseInt(x.year||'')).filter(x=>!isNaN(x));
         groups.push({
           name,
-          size: arr.length,
-          from: minY, to: maxY,
-          languageSet: Array.from(new Set(arr.map(x=>x.language))).filter(Boolean),
-          covers: arr.slice(0,3).map(x=>x.image),
-          items: arr
+          size:list.length,
+          from: years.length? Math.min(...years):'',
+          to: years.length? Math.max(...years):'',
+          languages: Array.from(new Set(list.map(x=>x.language))).filter(Boolean).sort(),
+          covers: list.slice(0,3).map(x=>x.cover),
+          items:list
         });
       }
-      // Sort groups default: by size desc
       groups.sort((a,b)=> b.size - a.size || a.name.localeCompare(b.name));
       return groups;
     }
 
-    function gridCardHTML(s){
-      const coverCells = (s.covers.length? s.covers : ['/assets/placeholder-cover.svg']).map(img=>`<img src="${esc(img)}" alt="${esc(s.name)} cover">`).join('');
+    function cardHTML(s){
       const years = s.from && s.to ? `${s.from}–${s.to}` : (s.from||s.to||'');
-      const langs = s.languageSet.join(', ');
-      const q = encodeURIComponent(`"${s.name}" inauthor:"${C.AUTHOR}"`);
-      const gbooksSearch = `https://www.google.com/search?q=${q}+site:books.google.com`;
+      const langs = s.languages.join(', ');
+      const q = encodeURIComponent(`\"${s.name}\" inpublisher:\"iD01t Productions\" OR inauthor:\"Guillaume Lessard\"`);
+      const gbooks = `https://www.google.com/search?q=${q}+site:books.google.com`;
+      const covers = (s.covers.length?s.covers:['/assets/img/brand/ebooks_og.jpg']).map(img=>`<img src="${esc(img)}" alt="${esc(s.name)} cover">`).join('');
       return `<article class="card">
-        <div class="series-cover">${coverCells}</div>
+        <div class="series-cover">${covers}</div>
         <div class="content">
           <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
             <h3 style="margin:0">${esc(s.name)}</h3>
             <span class="muted" style="font-size:.9rem">${esc(years)}</span>
           </div>
-          <div class="muted">${esc(s.size)} book${s.size!==1?'s':''}${langs?` • ${esc(langs)}`:''}</div>
+          <div class="muted">${s.size} book${s.size!==1?'s':''}${langs?` • ${esc(langs)}`:''}</div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="/series/${encodeURIComponent(s.name.toLowerCase().replace(/[^a-z0-9]+/g,'-')).replace(/-+/g,'-')}.html">Internal page</a>
-            <a class="btn" href="${gbooksSearch}" target="_blank" rel="noopener nofollow">Google Books results</a>
+            <a class="btn" href="${gbooks}" target="_blank" rel="noopener nofollow">Google Books</a>
           </div>
         </div>
       </article>`;
     }
 
-    function populateLanguages(groups){
-      const set = new Set();
-      groups.forEach(g => g.languageSet.forEach(l => set.add(l)));
-      const options = ['','...'].slice(0,0); // noop
-      const html = '<option value="">All</option>' + Array.from(set).sort().map(l=>`<option value="${esc(l)}">${esc(l)}</option>`).join('');
-      language.innerHTML = html;
+    function populateLangFilter(groups){
+      const set=new Set(); groups.forEach(g=>g.languages.forEach(l=>set.add(l)));
+      $lang.innerHTML = '<option value="">All</option>'+Array.from(set).sort().map(l=>`<option value="${l}">${l}</option>`).join('');
     }
 
     function applyFilters(groups){
-      const text=(q.value||'').toLowerCase();
-      const lang=language.value; const f=parseInt(from.value||''); const t=parseInt(to.value||''); const complete=onlyComplete.checked;
+      const text=($q.value||'').toLowerCase(), lang=$lang.value, f=parseInt($from.value||''), t=parseInt($to.value||''), comp=$complete.checked;
       let list = groups.filter(s=>{
         if(text && !s.name.toLowerCase().includes(text)) return false;
-        if(lang && !s.languageSet.includes(lang)) return false;
+        if(lang && !s.languages.includes(lang)) return false;
         if(!isNaN(f) && (s.to||0) < f) return false;
         if(!isNaN(t) && (s.from||0) > t) return false;
-        if(complete && s.items.some(x=>!x.year)) return false; // crude completeness
+        if(comp && s.items.some(x=>!x.year)) return false;
         return true;
       });
-      const srt = sort.value;
-      if (srt==='size_asc') list.sort((a,b)=> a.size - b.size || a.name.localeCompare(b.name));
-      else if (srt==='date_desc') list.sort((a,b)=> (b.to||0)-(a.to||0));
-      else if (srt==='date_asc') list.sort((a,b)=> (a.from||0)-(b.from||0));
-      else if (srt==='name_asc') list.sort((a,b)=> a.name.localeCompare(b.name));
-      else if (srt==='name_desc') list.sort((a,b)=> b.name.localeCompare(a.name));
+      const sort=$sort.value;
+      if (sort==='size_asc') list.sort((a,b)=> a.size - b.size || a.name.localeCompare(b.name));
+      else if (sort==='date_desc') list.sort((a,b)=> (b.to||0)-(a.to||0));
+      else if (sort==='date_asc') list.sort((a,b)=> (a.from||0)-(b.from||0));
+      else if (sort==='name_asc') list.sort((a,b)=> a.name.localeCompare(b.name));
+      else if (sort==='name_desc') list.sort((a,b)=> b.name.localeCompare(a.name));
       else list.sort((a,b)=> b.size - a.size || a.name.localeCompare(b.name));
       return list;
     }
 
-    function emitSchema(groups){
-      const ld = {
-        '@context':'https://schema.org',
-        '@type':'ItemList',
-        name:'Book Series by Guillaume Lessard',
-        itemListElement: groups.slice(0,60).map((s,i)=>({
-          '@type':'ListItem', position:i+1,
-          item:{
-            '@type':'BookSeries',
-            name:s.name,
-            numberOfBooks:s.size,
-            startDate:s.from?String(s.from):undefined,
-            endDate:s.to?String(s.to):undefined
-          }
-        }))
-      };
-      let tag=document.getElementById('ld-series');
-      if(!tag){tag=document.createElement('script');tag.id='ld-series';tag.type='application/ld+json';document.head.appendChild(tag);}
-      tag.textContent = JSON.stringify(ld);
-    }
-
-    function render(list, allCount){
-      if(!list.length){ grid.innerHTML=''; empty.hidden=false; count.textContent='0 series'; tally.textContent=`0 of ${allCount}`; emitSchema([]); return; }
-      empty.hidden=true;
-      grid.innerHTML = list.map(gridCardHTML).join('');
-      count.textContent = `${list.length} series`;
-      tally.textContent = `${list.length} of ${allCount} matched`;
-      emitSchema(list);
+    function render(list, total){
+      if(!list.length){ $grid.innerHTML=''; $empty.hidden=false; $count.textContent='0 series'; $tally.textContent=`0 of ${total}`; return; }
+      $empty.hidden=true;
+      $grid.innerHTML = list.map(cardHTML).join('');
+      $count.textContent = `${list.length} series`;
+      $tally.textContent = `${list.length} of ${total} matched`;
+      // JSON-LD
+      const ld = { '@context':'https://schema.org','@type':'ItemList', name:'Book Series', itemListElement:list.slice(0,60).map((s,i)=>({'@type':'ListItem',position:i+1,item:{'@type':'BookSeries',name:s.name,numberOfBooks:s.size}})) };
+      let tag=document.getElementById('ld-series'); if(!tag){tag=document.createElement('script');tag.id='ld-series';tag.type='application/ld+json';document.head.appendChild(tag);} tag.textContent=JSON.stringify(ld);
     }
 
     function bind(groups){
       const again=()=>render(applyFilters(groups), groups.length);
-      ['input','change'].forEach(evt=>[q,language,from,to,sort,onlyComplete].forEach(e=>e.addEventListener(evt,again)));
-      clearBtn.addEventListener('click',()=>{q.value='';language.value='';from.value='';to.value='';sort.value='size_desc';onlyComplete.checked=false;again();});
+      ['input','change'].forEach(evt=>[$q,$lang,$from,$to,$sort,$complete].forEach(e=>e.addEventListener(evt,again)));
+      $clear.addEventListener('click',()=>{$q.value='';$lang.value='';$from.value='';$to.value='';$sort.value='size_desc';$complete.checked=false;again();});
     }
 
-    async function init(){
+    (async function init(){
       try{
-        const raw = await fetchAllVolumes();
-        const vols = raw.map(normalize);
-        const groups = groupBySeries(vols);
-        populateLanguages(groups);
+        // Build union queries
+        const queries=[
+          ...CONF.AUTHORS.map(a=>`inauthor:"${a}"`),
+          ...CONF.PUBLISHERS.map(p=>`inpublisher:"${p}"`)
+        ];
+        const map=new Map();
+        for (const q of queries){
+          const vols = await fetchVolumes(q);
+          vols.forEach(v=>{
+            const n=normalize(v);
+            if(!n.title) return;
+            const key=(n.title+'|'+(n.year||'')).toLowerCase();
+            if(!map.has(key)) map.set(key,n);
+          });
+        }
+        const items = Array.from(map.values());
+        const groups = groupSeries(items);
+        populateLangFilter(groups);
         bind(groups);
         render(applyFilters(groups), groups.length);
-        // If nothing detected, fall back to simple “All Titles” grouping to avoid empty page
-        if (!groups.length){
-          grid.innerHTML = '<div class="muted">No explicit series detected from API. Consider adding a small <code>/assets/data/series.json</code> that maps series names to volume IDs, or ensure titles/subtitles include series hints like “(Series Name Book 1)”.</div>';
-          empty.hidden = true;
+        if(!groups.length){
+          $grid.innerHTML='<div class="muted">No series detected from Google metadata. Consider adding “(Series Name Book 1)” patterns to titles/subtitles for better grouping.</div>';
+          $empty.hidden=true;
         }
-      }catch(e){
-        console.warn('Books API failed; series page cannot populate automatically.', e);
-        grid.innerHTML = '<div class="muted">Could not load from Google Books API. Add a fallback JSON at <code>/assets/data/series.json</code>.</div>';
-        empty.hidden=false;
+      }catch(err){
+        console.warn('Series load failed', err);
+        $grid.innerHTML='<div class="muted">Could not load data from Google Books API. Try again later.</div>';
+        $empty.hidden=false;
       }
-    }
-
-    init();
+    })();
   </script>
-</body>
-</html>
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h1 class="page-title">Series</h1>
-            <p style="font-size: 1.1em; color: var(--muted); max-width: 600px; margin: 0 auto;">
-                Complete learning series and collections for comprehensive skill development
-            </p>
-        </div>
-        
-        <section class="grid"></section>
-    </div>
-    
-    <script src="/assets/site.js" defer></script>
 </body>
 </html>
