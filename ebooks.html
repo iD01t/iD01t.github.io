@@ -32,6 +32,9 @@
     .book-card:hover img { transform: scale(1.02) }
     .skeleton { background: linear-gradient(90deg, rgba(0,0,0,.06), rgba(0,0,0,.12), rgba(0,0,0,.06)); background-size: 200% 100%; animation: shimmer 1.2s infinite }
     @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+  
+    img{image-rendering:auto}
+    @media (min-resolution: 2dppx){.book-card img{filter:none}}
   </style>
   <!-- Optional: set your API key here; page works without a key for most cases -->
   <script>window.GBOOKS_API_KEY = window.GBOOKS_API_KEY || "";</script>
@@ -139,8 +142,30 @@
 
   const API = 'https://www.googleapis.com/books/v1/volumes';
 
+  
+  function coverUrlById(id, zoom) {
+    if (!id) return '';
+    const z = Math.max(1, Math.min(5, zoom||3));
+    return `https://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=${z}&source=gbs_api`;
+  }
+
   function imgBest(v) {
-    const L = v.volumeInfo?.imageLinks || {}
+    // Prefer constructing from the volume ID at higher zooms (HD)
+    const id = v.id || (v.selfLink ? v.selfLink.split('/').pop() : '');
+    const primary = id ? coverUrlById(id, 3) : '';
+    const retina = id ? coverUrlById(id, 4) : '';
+    // Fallback to API-provided links (force https + higher zoom where possible)
+    const L = (v.volumeInfo && v.volumeInfo.imageLinks) ? v.volumeInfo.imageLinks : {};
+    let fallback = L.extraLarge || L.large || L.medium || L.small || L.thumbnail || L.smallThumbnail || '';
+    if (fallback) {
+      fallback = fallback.replace(/^http:/, 'https:');
+      fallback = fallback.replace(/zoom=\d/, 'zoom=3');
+    }
+    const src = primary || fallback || '/assets/img/brand/ebooks_og.jpg';
+    const src2x = retina || (fallback ? fallback.replace(/zoom=3/, 'zoom=4') : '');
+    return { src, src2x };
+  }
+
     let src = L.large || L.medium || L.small || L.thumbnail || L.smallThumbnail || '';
     if (!src) return '/assets/img/brand/ebooks_og.jpg';
     src = src.replace(/^http:/, 'https:');
@@ -148,8 +173,26 @@
     return src;
   }
 
+  
   function bookFromVolume(v) {
     const vi = v.volumeInfo || {}
+    const si = v.saleInfo || {}
+    const img = imgBest(v);
+    return {
+      id: v.id,
+      title: vi.title || '',
+      subtitle: vi.subtitle || '',
+      cover: img.src,
+      cover2x: img.src2x,
+      year: (vi.publishedDate||'').slice(0,4),
+      lang: (vi.language||'').toUpperCase(),
+      tags: vi.categories || [],
+      authors: vi.authors || [],
+      link: vi.infoLink || vi.canonicalVolumeLink || v.selfLink || '',
+      buy: si.buyLink || vi.infoLink || '',
+    };
+  }
+
     const si = v.saleInfo || {}
     return {
       id: v.id,
@@ -165,14 +208,17 @@
     };
   }
 
+  
   function cardHTML(b) {
     const tags = (b.tags||[]).slice(0,4).map(t=>`<span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 dark:bg-gray-800">${t}</span>`).join(' ');
     const year = b.year ? `<span class="text-xs text-gray-500 dark:text-gray-400"> • ${b.year}</span>` : '';
     const lang = b.lang ? `<span class="text-xs bg-gray-100 dark:bg-gray-800 rounded px-2 py-0.5">${b.lang}</span>` : '';
-    const buyBtn = b.buy ? '<a href="' + b.buy + '" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Buy</a>' : '';
+    const srcset = b.cover2x ? `${b.cover} 1x, ${b.cover2x} 2x` : `${b.cover} 1x`;
     return `
     <article class="book-card rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow">
-      <img src="${b.cover}" alt="${b.title} cover" class="w-full aspect-[3/4] object-cover"/>
+      <img loading="lazy" decoding="async" src="${b.cover}" srcset="${srcset}"
+           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+           alt="${b.title} cover" class="w-full aspect-[3/4] object-cover"/>
       <div class="p-4 space-y-3">
         <h3 class="text-lg font-semibold">${b.title}</h3>
         <p class="text-sm text-gray-600 dark:text-gray-400">${b.subtitle||''}</p>
@@ -180,7 +226,12 @@
         <div class="flex gap-1 flex-wrap">${tags}</div>
         <div class="flex gap-2 flex-wrap mt-2">
           <a href="${b.link}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Google Books</a>
-          ${buyBtn}
+          ${ b.buy ? `<a href="${b.buy}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Buy</a>` : ''}
+        </div>
+      </div>
+    </article>`;
+  }
+
         </div>
       </div>
     </article>`;
