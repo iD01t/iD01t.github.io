@@ -4,165 +4,108 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nini’s Adventures: Kitties Mayhem! — Multiplayer Beta</title>
-  <meta name="description" content="Nini’s Adventures: Kitties Mayhem! • Chaotic online multiplayer with fast action, cat-themed arenas, and AWS-powered servers. Public PC beta opens September 24, 2025. Subscribe for access."/>
+  <meta name="description" content="Chaotic online multiplayer where cute kitties become fierce warriors across vibrant, destructible arenas. Public PC beta opens September 24, 2025."/>
 
-  <!-- Open Graph -->
+  <!-- Social -->
   <meta property="og:title" content="Nini’s Adventures: Kitties Mayhem! — Multiplayer Beta"/>
-  <meta property="og:description" content="Cute kitties. Fierce battles. Explosions, power ups, and mayhem in vibrant arenas. Public PC beta opens September 24, 2025."/>
+  <meta property="og:description" content="Explosions, power ups, and mayhem in vibrant arenas. Public PC beta opens September 24, 2025."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://id01t.github.io/games.html"/>
-  <meta property="og:image" content="https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png?raw=1"/>
-
-  <!-- Twitter Card -->
+  <meta property="og:image" content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Nini’s Adventures: Kitties Mayhem! — Multiplayer Beta"/>
-  <meta name="twitter:description" content="Fast, chaotic online battles with unique kitty abilities and destructible arenas. Beta opens September 24, 2025."/>
-  <meta name="twitter:image" content="https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png?raw=1"/>
+  <meta name="twitter:description" content="Fast, chaotic online battles with unique kitty abilities and destructible arenas."/>
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png"/>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
   <link rel="apple-touch-icon" href="/assets/logo-512.png"/>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',300:'#7dd3fc',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7',700:'#0369a1',800:'#075985',900:'#0c4a6e'
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Site styles -->
-  <link rel="stylesheet" href="/assets/site.css"/>
-  <link rel="stylesheet" href="/css/custom.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}</style>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-  <!-- Header (kept consistent with site) -->
-  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex-shrink-0">
-          <a href="/" class="flex items-center space-x-2">
-            <img src="/assets/img/brand/logo.png" alt="iD01t Logo" class="h-8 w-8"/>
-            <span class="text-xl font-bold">iD01t</span>
-          </a>
-        </div>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-4">
-            <a href="/" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-            <a href="/store.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Store</a>
-            <a href="/ebooks.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">eBooks</a>
-            <a href="/apps.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Apps</a>
-            <a href="/games.html" aria-current="page" class="text-gray-900 dark:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Games</a>
-            <a href="/music.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Music</a>
-            <a href="/services.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
-            <a href="/portfolio.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
-            <a href="/about.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-            <a href="/contact.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-          </div>
-        </div>
-        <div class="flex items-center space-x-4">
-          <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
-            <svg id="sun-icon" class="w-5 h-5 hidden" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414z" clip-rule="evenodd"/></svg>
-            <svg id="moon-icon" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-          </button>
-          <a href="#" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Login</a>
-          <button id="mobile-menu-button" aria-label="Open mobile menu" class="md:hidden p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
-        </div>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
-          <a href="/" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Home</a>
-          <a href="/store.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Store</a>
-          <a href="/ebooks.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">eBooks</a>
-          <a href="/apps.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Apps</a>
-          <a href="/games.html" aria-current="page" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-900 dark:text-white">Games</a>
-          <a href="/music.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Music</a>
-          <a href="/services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Services</a>
-          <a href="/portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Portfolio</a>
-          <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">About</a>
-          <a href="/contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Contact</a>
-        </div>
-      </div>
-    </nav>
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/store.html">Store</a>
+        <a href="/ebooks.html">eBooks</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html" aria-current="page"><strong>Music</strong></a>
+        <a href="/services.html">Services</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="relative overflow-hidden bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50 dark:from-gray-800 dark:via-gray-900 dark:to-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div>
-        <div class="inline-flex items-center space-x-2 mb-4">
-          <span class="bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200 text-xs font-semibold px-3 py-1 rounded-full">Multiplayer PC Beta</span>
-          <span class="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full">Opens Sep 24, 2025</span>
+        <div class="inline-flex items-center gap-2 mb-4">
+          <span class="inline-block bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200 text-xs font-semibold px-3 py-1 rounded-full">Multiplayer PC Beta</span>
+          <span class="inline-block bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full">Opens Sep 24, 2025</span>
         </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
-          Nini’s Adventures: Kitties Mayhem!
-        </h1>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Nini’s Adventures: Kitties Mayhem!</h1>
         <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">
-          Not just another online game. This is a full scale chaotic multiplayer experience where cute kitties transform into fierce warriors in vibrant and unpredictable arenas. Explosions, power ups, and mayhem await every time you log in.
+          Not just another online game. This is a full-scale chaotic multiplayer experience where cute kitties transform
+          into fierce warriors in vibrant and unpredictable arenas. Explosions, power ups, and mayhem await every time you log in.
         </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="#beta-signup" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium text-center">Get Beta Access</a>
-          <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem" target="_blank" rel="noopener" class="border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-8 py-3 rounded-lg font-medium text-center">View on itch.io</a>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#beta" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white">Get Beta Access</a>
+          <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">View on itch.io</a>
         </div>
       </div>
       <div class="relative">
-        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5">
-          <img src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png?raw=1" alt="Nini’s Adventures gameplay" class="w-full h-auto object-cover">
+        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-gray-900">
+          <img src="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png" alt="Nini’s Adventures gameplay" class="w-full h-auto object-cover"/>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why it hits -->
-  <section class="py-16 bg-white dark:bg-gray-900">
+  <!-- SALES COPY -->
+  <section class="py-12 bg-white dark:bg-gray-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">
-        Players enter high energy deathmatches that combine speed, strategy, and sheer chaos. Each kitty has unique abilities that can turn the tide of battle in seconds. The arenas are alive with color, filled with traps, destructible environments, and imaginative cat themed designs that make every match feel fresh. This is more than a shooter. It is a fast paced world where cuteness meets pure competitive firepower.
+        Players enter high-energy deathmatches that combine speed, strategy, and sheer chaos. Each kitty has unique abilities that can turn the tide in seconds.
+        Arenas are alive with color, filled with traps, destructible environments, and imaginative cat-themed designs that keep every match fresh.
+        This is more than a shooter — it’s a fast-paced world where cuteness meets competitive firepower.
       </p>
     </div>
   </section>
 
-  <!-- Key Features -->
+  <!-- FEATURES -->
   <section class="py-8 bg-gray-50 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Key Features</h2>
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Key Features</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
           <h3 class="font-semibold mb-2">Competitive online multiplayer</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">First public beta opens on <strong>September 24, 2025</strong>.</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">First public beta opens <strong>September 24, 2025</strong>.</p>
         </div>
-        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
-          <h3 class="font-semibold mb-2">Chaotic cat themed arenas</h3>
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
+          <h3 class="font-semibold mb-2">Chaotic cat-themed arenas</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400">Traps, obstacles, and surprises for maximum mayhem.</p>
         </div>
-        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
-          <h3 class="font-semibold mb-2">Fast responsive gameplay</h3>
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
+          <h3 class="font-semibold mb-2">Fast, responsive gameplay</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400">Built for quick reflexes and intense matches.</p>
         </div>
-        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
-          <h3 class="font-semibold mb-2">AWS powered servers</h3>
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
+          <h3 class="font-semibold mb-2">AWS-powered servers</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400">Stability, scalability, and smooth global play.</p>
         </div>
-        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
           <h3 class="font-semibold mb-2">Unique kitty abilities</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400">Special powers add variety and strategy.</p>
         </div>
-        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm">
           <h3 class="font-semibold mb-2">Destructible environments</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400">Bright, colorful arenas that react to the action.</p>
         </div>
@@ -170,9 +113,9 @@
     </div>
   </section>
 
-  <!-- Embeds -->
-  <section class="py-16 bg-white dark:bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10">
+  <!-- EMBEDS -->
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div class="space-y-6">
         <h3 class="text-xl font-semibold">Play on itch.io</h3>
         <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-2">
@@ -180,7 +123,7 @@
             <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem">Nini's Adventures: Kitties Mayhem! by iD01t Productions</a>
           </iframe>
         </div>
-        <img src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/20250901_0939_Nini's%20Ultimate%20App%20Logo_remix_01k42qz6dffe7r75b7dw5wcapj.png?raw=1" alt="Official logo" class="w-full max-w-sm rounded-xl shadow mx-auto"/>
+        <img src="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/images/20250901_0939_Nini's%20Ultimate%20App%20Logo_remix_01k42qz6dffe7r75b7dw5wcapj.png" alt="Official logo" class="w-full max-w-sm rounded-xl shadow mx-auto"/>
       </div>
       <div class="space-y-6">
         <h3 class="text-xl font-semibold">Watch gameplay</h3>
@@ -194,8 +137,8 @@
     </div>
   </section>
 
-  <!-- Beta info + signup -->
-  <section id="beta-signup" class="py-16 bg-gray-50 dark:bg-gray-800">
+  <!-- BETA INFO -->
+  <section id="beta" class="py-16 bg-gray-50 dark:bg-gray-800">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 shadow">
         <h3 class="text-2xl font-bold mb-4">Beta Information</h3>
@@ -206,61 +149,16 @@
           <li>Focus: online competitive battles to test servers, gameplay balance, and player feedback.</li>
         </ul>
         <div class="mt-6 flex flex-col sm:flex-row gap-4">
-          <a href="/contact.html#playtest" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium text-center">Subscribe for Beta Access</a>
-          <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem" target="_blank" rel="noopener" class="border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium text-center">Wishlist / Follow on itch.io</a>
+          <a href="/contact.html#playtest" class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-center">Subscribe for Beta Access</a>
+          <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-center">Wishlist / Follow on itch.io</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer (kept) -->
-  <footer class="bg-gray-900 text-gray-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="md:col-span-2">
-          <div class="flex items-center space-x-2 mb-4">
-            <img src="/assets/img/brand/logo.png" alt="iD01t Logo" class="h-8 w-8"/>
-            <span class="text-xl font-bold text-white">iD01t</span>
-          </div>
-          <p class="text-gray-400 mb-4 max-w-md">
-            Creating innovative digital experiences through apps, games, music, and creative services.
-          </p>
-          <div class="flex space-x-4">
-            <a class="text-gray-400 hover:text-white transition-colors" href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 4.624-5.479 4.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386C24 5.373 18.627 0 12 0z"/></svg>
-            </a>
-            <a class="text-gray-400 hover:text-white transition-colors" href="https://itch.io" target="_blank" rel="noopener" aria-label="itch.io">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-white font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a class="text-gray-400 hover:text-white transition-colors" href="/store.html">Store</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors" href="/portfolio.html">Portfolio</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors" href="/services.html">Services</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors" href="/about.html">About</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-white font-semibold mb-4">Legal</h3>
-          <ul class="space-y-2">
-            <li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/privacy.html">Privacy Policy</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/terms.html">Terms of Service</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/refunds.html">Refund Policy</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/cookies.html">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-        <p class="text-gray-400">© <span id="current-year">2025</span> id01t. All rights reserved.</p>
-      </div>
-    </div>
+  <footer>
+    <div class="wrap">© <span id="year"></span> iD01t Productions</div>
   </footer>
-
-  <!-- Utilities + site JS -->
-  <script type="module" src="/js/utilities.js"></script>
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -271,10 +169,8 @@
     "description": "Chaotic online multiplayer where cute kitties become fierce warriors across vibrant, destructible arenas.",
     "genre": "Action, Shooter, Multiplayer",
     "gamePlatform": "Windows",
-    "applicationCategory": "Game",
     "creator": {"@type": "Organization", "name": "iD01t Productions"},
-    "url": "https://id01t.github.io/games.html",
-    "image": "https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png?raw=1",
+    "image": "https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png",
     "trailer": [
       "https://www.youtube.com/watch?v=GsVqmOx4Rwc",
       "https://www.youtube.com/watch?v=bpmMQEh37ZA"
@@ -286,7 +182,5 @@
     }
   }
   </script>
-
-  <script defer src="/assets/site.js"></script>
 </body>
 </html>
