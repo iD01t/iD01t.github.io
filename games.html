@@ -1,808 +1,292 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Games • iD01t Productions</title>
-  <meta name="description" content="Official games hub for iD01t Productions. Live itch.io catalog with filters and embeddable widgets." />
-  <link rel="canonical" href="/games.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Games • iD01t Productions" />
-  <meta property="og:description" content="Explore games by iD01t Productions. Play now on itch.io or join playtests." />
-  <meta property="og:url" content="/games.html" />
-  <meta property="og:image" content="/assets/img/placeholders/hero-1600x900.webp" />
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/logo-512.png" />
-  <link rel="stylesheet" href="/assets/site.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nini’s Adventures: Kitties Mayhem! — Multiplayer Beta</title>
+  <meta name="description" content="Nini’s Adventures: Kitties Mayhem! • Chaotic online multiplayer with fast action, cat-themed arenas, and AWS-powered servers. Public PC beta opens September 24, 2025. Subscribe for access."/>
 
-  <!-- GA/GTM -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CHX65WY0WZ');</script>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nini’s Adventures: Kitties Mayhem! — Multiplayer Beta"/>
+  <meta property="og:description" content="Cute kitties. Fierce battles. Explosions, power ups, and mayhem in vibrant arenas. Public PC beta opens September 24, 2025."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://id01t.github.io/games.html"/>
+  <meta property="og:image" content="https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png?raw=1"/>
 
-  <style>
-    :root { --border: rgba(255,255,255,.12); --card: rgba(255,255,255,.05); --muted: rgba(255,255,255,.75); }
-    @media (prefers-color-scheme: dark){ body{ background:#0b0d10; color:#eaeaf0 } }
-    body{ font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0 }
-    .wrap{ max-width:1200px; margin:0 auto; padding:0 20px }
-    header.sticky{ position:sticky; top:0; z-index:50; background:rgba(11,13,16,.85); backdrop-filter:blur(8px); border-bottom:1px solid var(--border) }
-    .nav{ display:flex; align-items:center; justify-content:space-between; height:60px }
-    .nav a{ color:inherit; text-decoration:none; margin:0 8px; opacity:.9 }
-    .nav a[aria-current="page"], .nav a:hover{ opacity:1 }
-    .hero{ padding:56px 0; background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%) }
-    .hero h1{ font-size:clamp(28px,4vw,44px); margin:0 0 8px }
-    .hero p{ opacity:.85; margin:0 }
-    .toolbar{ display:grid; grid-template-columns:1.2fr 200px 200px 1fr; gap:10px; align-items:end; margin:18px 0 }
-    .toolbar label{ font-size:.85rem; color:var(--muted); display:block; margin-bottom:6px }
-    .toolbar input,.toolbar select{ padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:var(--card); color:inherit }
-    .btn{ display:inline-block; padding:10px 12px; border:1px solid var(--border); border-radius:12px; text-decoration:none; color:inherit; background:rgba(255,255,255,.03) }
-    .btn:hover{ filter:brightness(1.07) }
-    .chip{ font-size:.8rem; padding:4px 8px; border-radius:999px; border:1px solid var(--border); background:rgba(255,255,255,.06) }
-    .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px }
-    .card{ border:1px solid var(--border); border-radius:16px; overflow:hidden; background:var(--card) }
-    .tile img{ width:100%; aspect-ratio:16/9; object-fit:cover; background:#111 }
-    .tile .content{ padding:14px; display:flex; flex-direction:column; gap:10px }
-    .muted{ opacity:.8 }
-    footer{ border-top:1px solid var(--border); padding:24px 0; margin-top:32px; opacity:.8; text-align:center }
-    iframe.itch{ width:100%; max-width:552px; height:167px; border:0; }
-  </style>
-</head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Nini’s Adventures: Kitties Mayhem! — Multiplayer Beta"/>
+  <meta name="twitter:description" content="Fast, chaotic online battles with unique kitty abilities and destructible arenas. Beta opens September 24, 2025."/>
+  <meta name="twitter:image" content="https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png?raw=1"/>
 
-  <!-- Shared header (pulled from index.html for consistency) -->
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/store.html">Store</a>
-        <a href="/ebooks.html">eBooks</a>
-        <a href="/audiobooks.html">Audiobooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html" aria-current="page"><strong>Games</strong></a>
-        <a href="/music.html">Music</a>
-        <a href="/services.html">Services</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/assets/logo-512.png"/>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Games — iD01t Productions</h1>
-      <p>Live itch.io catalog with filters. Every CTA points to itch.io for trust, speed, and sales.</p>
-    </div>
-  </section>
-
-  <main class="wrap">
-    <!-- Filters -->
-    <section class="toolbar">
-      <div>
-        <label for="q">Search</label>
-        <input id="q" type="search" placeholder="Title, keyword" />
-      </div>
-      <div>
-        <label for="platform">Platform</label>
-        <select id="platform">
-          <option value="">All</option>
-          <option value="windows">Windows</option>
-          <option value="linux">Linux</option>
-          <option value="osx">macOS</option>
-          <option value="android">Android</option>
-          <option value="html5">Web (HTML5)</option>
-        </select>
-      </div>
-      <div>
-        <label for="price">Price</label>
-        <select id="price">
-          <option value="">All</option>
-          <option value="free">Free</option>
-          <option value="paid">Paid</option>
-        </select>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end">
-        <button id="clear" class="btn" type="button">Clear filters</button>
-        <span id="tally" class="muted"></span>
-      </div>
-    </section>
-
-    <!-- Featured embeds (your iframes) -->
-    <section class="card" style="padding:16px;margin-bottom:16px">
-      <h2 style="margin:0 0 10px">Featured on itch.io</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
-        <iframe class="itch" src="https://itch.io/embed/3833174"><a href="https://id01t.itch.io/bedtime-story-maker-windows-app">Bedtime Story Maker Windows App by iD01t Productions</a></iframe>
-        <iframe class="itch" src="https://itch.io/embed/3843458?bg_color=000000&amp;fg_color=ffffff&amp;link_color=0d1493"><a href="https://id01t.itch.io/py2win">Py2Win FREE by iD01t Productions</a></iframe>
-      </div>
-    </section>
-
-    <!-- Grid -->
-    <section>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
-        <h2 style="margin:0">Catalog</h2>
-        <span id="count" class="muted" style="font-size:.9rem"></span>
-      </div>
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <div id="empty" class="muted" hidden>No results. Try different filters.</div>
-    </section>
-  </main>
-
-  <footer><div class="wrap">© <span id="year"></span> iD01t Productions</div></footer>
-
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Match header with index.html
-    (async function loadSharedHeader(){
-      try{const r=await fetch('/index.html'); if(!r.ok) return;
-        const html=await r.text(); const doc=new DOMParser().parseFromString(html,'text/html');
-        const shared=doc.querySelector('#site-header'); if(shared){document.getElementById('site-header').outerHTML=shared.outerHTML;}
-      }catch{}
-    })();
-    document.getElementById('year').textContent=new Date().getFullYear();
-
-    // Elements
-    const el=id=>document.getElementById(id);
-    const q=el('q'), platform=el('platform'), price=el('price'), clearBtn=el('clear');
-    const grid=el('grid'), empty=el('empty'), count=el('count'), tally=el('tally');
-
-    const esc = s => String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
-    const chip = t => `<span class="chip">${esc(t)}</span>`;
-
-    function cardHTML(g){
-      const tags=[...(g.platforms||[]), g.price===0?'Free':'Paid'].filter(Boolean).map(chip).join(' ');
-      return `<article class="card tile">
-        <img src="${esc(g.cover||'/assets/img/placeholders/hero-1600x900.webp')}" alt="${esc(g.title)} cover">
-        <div class="content">
-          <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
-            <h3 style="margin:0">${esc(g.title)}</h3>
-            <span class="muted" style="font-size:.9rem">${esc((g.published_at||'').slice(0,10))}</span>
-          </div>
-          <div class="muted">${esc(g.short_text||'')}</div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="${esc(g.url)}" target="_blank" rel="noopener nofollow">View on itch.io</a>
-            ${g.demo_url ? `<a class="btn" href="${esc(g.demo_url)}" target="_blank" rel="noopener">Play demo</a>` : ''}
-          </div>
-        </div>
-      </article>`;
-    }
-
-    function populate(items){
-      const plats=new Set(); items.forEach(g=>(g.platforms||[]).forEach(p=>plats.add(p)));
-      const options=['',...Array.from(plats).sort()].map(p=>p?`<option value="${esc(p)}">${esc(p)}</option>`:'<option value="">All</option>').join('');
-      platform.innerHTML = options;
-    }
-
-    function applyFilters(items){
-      const text=(q.value||'').toLowerCase();
-      const plat=platform.value; const pr=price.value;
-      let list=items.filter(g=>{
-        if(text){const hay=[g.title,g.short_text,(g.tags||[]).join(' ')].join(' ').toLowerCase(); if(!hay.includes(text)) return false;}
-        if(plat && !(g.platforms||[]).includes(plat)) return false;
-        if(pr==='free' && (g.price||0)>0) return false;
-        if(pr==='paid' && (g.price||0)===0) return false;
-        return true;
-      });
-      // newest first
-      list.sort((a,b)=>new Date(b.published_at||b.updated_at||0)-new Date(a.published_at||a.updated_at||0));
-      return list;
-    }
-
-    function render(list, all){
-      if(!list.length){ grid.innerHTML=''; empty.hidden=false; count.textContent='0 games'; return; }
-      empty.hidden=true;
-      grid.innerHTML=list.map(cardHTML).join('');
-      count.textContent=`${list.length} game${list.length!==1?'s':''}`;
-      tally.textContent=`${all.length} total • ${all.filter(x=>(x.price||0)===0).length} free`;
-      emitSchema(list);
-    }
-
-    function emitSchema(list){
-      const ld={ '@context':'https://schema.org', '@type':'ItemList', name:'iD01t Productions Games',
-        itemListElement: list.slice(0,60).map((g,i)=>({
-          '@type':'ListItem', position:i+1,
-          item:{ '@type':'VideoGame', name:g.title, url:g.url, image:g.cover,
-                 applicationCategory:'Game', operatingSystem:(g.platforms||[]).join(', '),
-                 offers:{'@type':'Offer','price':String(g.price||0),'priceCurrency':g.currency||'USD'} }
-        }))
-      };
-      let tag=document.getElementById('ld-games'); if(!tag){tag=document.createElement('script');tag.id='ld-games';tag.type='application/ld+json';document.head.appendChild(tag);}
-      tag.textContent=JSON.stringify(ld);
-    }
-
-    async function init(){
-      try{
-        const r=await fetch('/assets/data/itch_games.json',{cache:'no-store'});
-        const data=await r.json();
-        const items = Array.isArray(data)?data:(data.games||[]);
-        populate(items);
-        const go=()=>render(applyFilters(items), items);
-        ['input','change'].forEach(evt=>[q,platform,price].forEach(x=>x.addEventListener(evt,go)));
-        document.getElementById('clear').addEventListener('click',()=>{q.value='';platform.value='';price.value='';go();});
-        go();
-      }catch(e){
-        console.error('No itch_games.json found. Add CI sync.',e);
-        document.getElementById('empty').hidden=false;
-        document.getElementById('grid').innerHTML='<div class="muted">Add <code>assets/data/itch_games.json</code> via the GitHub Action below.</div>';
-      }
-    }
-    init();
-  </script>
-</body>
-</html>
-    .toolbar input,.toolbar select{ padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:var(--card); color:inherit }
-    .btn{ display:inline-block; padding:10px 12px; border:1px solid var(--border); border-radius:12px; text-decoration:none; color:inherit; background:rgba(255,255,255,.03) }
-    .btn:hover{ filter:brightness(1.07) }
-    .chip{ font-size:.8rem; padding:4px 8px; border-radius:999px; border:1px solid var(--border); background:rgba(255,255,255,.06) }
-    .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px }
-    .card{ border:1px solid var(--border); border-radius:16px; overflow:hidden; background:var(--card) }
-    .tile img{ width:100%; aspect-ratio:16/9; object-fit:cover; background:#111 }
-    .tile .content{ padding:14px; display:flex; flex-direction:column; gap:10px }
-    .muted{ opacity:.8 }
-    footer{ border-top:1px solid var(--border); padding:24px 0; margin-top:32px; opacity:.8; text-align:center }
-    iframe.itch{ width:100%; max-width:552px; height:167px; border:0; }
-  </style>
-</head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <!-- Shared header (pulled from index.html for consistency) -->
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/store.html">Store</a>
-        <a href="/ebooks.html">eBooks</a>
-        <a href="/audiobooks.html">Audiobooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html" aria-current="page"><strong>Games</strong></a>
-        <a href="/music.html">Music</a>
-        <a href="/services.html">Services</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="wrap">
-      <h1>Games — iD01t Productions</h1>
-      <p>Live itch.io catalog with filters. Every CTA points to itch.io for trust, speed, and sales.</p>
-    </div>
-  </section>
-
-  <main class="wrap">
-    <!-- Filters -->
-    <section class="toolbar">
-      <div>
-        <label for="q">Search</label>
-        <input id="q" type="search" placeholder="Title, keyword" />
-      </div>
-      <div>
-        <label for="platform">Platform</label>
-        <select id="platform">
-          <option value="">All</option>
-          <option value="windows">Windows</option>
-          <option value="linux">Linux</option>
-          <option value="osx">macOS</option>
-          <option value="android">Android</option>
-          <option value="html5">Web (HTML5)</option>
-        </select>
-      </div>
-      <div>
-        <label for="price">Price</label>
-        <select id="price">
-          <option value="">All</option>
-          <option value="free">Free</option>
-          <option value="paid">Paid</option>
-        </select>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end">
-        <button id="clear" class="btn" type="button">Clear filters</button>
-        <span id="tally" class="muted"></span>
-      </div>
-    </section>
-
-    <!-- Featured embeds (your iframes) -->
-    <section class="card" style="padding:16px;margin-bottom:16px">
-      <h2 style="margin:0 0 10px">Featured on itch.io</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
-        <iframe class="itch" src="https://itch.io/embed/3833174"><a href="https://id01t.itch.io/bedtime-story-maker-windows-app">Bedtime Story Maker Windows App by iD01t Productions</a></iframe>
-        <iframe class="itch" src="https://itch.io/embed/3843458?bg_color=000000&amp;fg_color=ffffff&amp;link_color=0d1493"><a href="https://id01t.itch.io/py2win">Py2Win FREE by iD01t Productions</a></iframe>
-      </div>
-    </section>
-
-    <!-- Grid -->
-    <section>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
-        <h2 style="margin:0">Catalog</h2>
-        <span id="count" class="muted" style="font-size:.9rem"></span>
-      </div>
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <div id="empty" class="muted" hidden>No results. Try different filters.</div>
-    </section>
-  </main>
-
-  <footer><div class="wrap">© <span id="year"></span> iD01t Productions</div></footer>
-
-  <script>
-    // Match header with index.html
-    (async function loadSharedHeader(){
-      try{const r=await fetch('/index.html'); if(!r.ok) return;
-        const html=await r.text(); const doc=new DOMParser().parseFromString(html,'text/html');
-        const shared=doc.querySelector('#site-header'); if(shared){document.getElementById('site-header').outerHTML=shared.outerHTML;}
-      }catch{}
-    })();
-    document.getElementById('year').textContent=new Date().getFullYear();
-
-    // Elements
-    const el=id=>document.getElementById(id);
-    const q=el('q'), platform=el('platform'), price=el('price'), clearBtn=el('clear');
-    const grid=el('grid'), empty=el('empty'), count=el('count'), tally=el('tally');
-
-    const esc = s => String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
-    const chip = t => `<span class="chip">${esc(t)}</span>`;
-
-    function cardHTML(g){
-      const tags=[...(g.platforms||[]), g.price===0?'Free':'Paid'].filter(Boolean).map(chip).join(' ');
-      return `<article class="card tile">
-        <img src="${esc(g.cover||'/assets/img/placeholders/hero-1600x900.webp')}" alt="${esc(g.title)} cover">
-        <div class="content">
-          <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
-            <h3 style="margin:0">${esc(g.title)}</h3>
-            <span class="muted" style="font-size:.9rem">${esc((g.published_at||'').slice(0,10))}</span>
-          </div>
-          <div class="muted">${esc(g.short_text||'')}</div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="${esc(g.url)}" target="_blank" rel="noopener nofollow">View on itch.io</a>
-            ${g.demo_url ? `<a class="btn" href="${esc(g.demo_url)}" target="_blank" rel="noopener">Play demo</a>` : ''}
-          </div>
-        </div>
-      </article>`;
-    }
-
-    function populate(items){
-      const plats=new Set(); items.forEach(g=>(g.platforms||[]).forEach(p=>plats.add(p)));
-      const options=['',...Array.from(plats).sort()].map(p=>p?`<option value="${esc(p)}">${esc(p)}</option>`:'<option value="">All</option>').join('');
-      platform.innerHTML = options;
-    }
-
-    function applyFilters(items){
-      const text=(q.value||'').toLowerCase();
-      const plat=platform.value; const pr=price.value;
-      let list=items.filter(g=>{
-        if(text){const hay=[g.title,g.short_text,(g.tags||[]).join(' ')].join(' ').toLowerCase(); if(!hay.includes(text)) return false;}
-        if(plat && !(g.platforms||[]).includes(plat)) return false;
-        if(pr==='free' && (g.price||0)>0) return false;
-        if(pr==='paid' && (g.price||0)===0) return false;
-        return true;
-      });
-      // newest first
-      list.sort((a,b)=>new Date(b.published_at||b.updated_at||0)-new Date(a.published_at||a.updated_at||0));
-      return list;
-    }
-
-    function render(list, all){
-      if(!list.length){ grid.innerHTML=''; empty.hidden=false; count.textContent='0 games'; return; }
-      empty.hidden=true;
-      grid.innerHTML=list.map(cardHTML).join('');
-      count.textContent=`${list.length} game${list.length!==1?'s':''}`;
-      tally.textContent=`${all.length} total • ${all.filter(x=>(x.price||0)===0).length} free`;
-      emitSchema(list);
-    }
-
-    function emitSchema(list){
-      const ld={ '@context':'https://schema.org', '@type':'ItemList', name:'iD01t Productions Games',
-        itemListElement: list.slice(0,60).map((g,i)=>({
-          '@type':'ListItem', position:i+1,
-          item:{ '@type':'VideoGame', name:g.title, url:g.url, image:g.cover,
-                 applicationCategory:'Game', operatingSystem:(g.platforms||[]).join(', '),
-                 offers:{'@type':'Offer','price':String(g.price||0),'priceCurrency':g.currency||'USD'} }
-        }))
-      };
-      let tag=document.getElementById('ld-games'); if(!tag){tag=document.createElement('script');tag.id='ld-games';tag.type='application/ld+json';document.head.appendChild(tag);}
-      tag.textContent=JSON.stringify(ld);
-    }
-
-    async function init(){
-      try{
-        const r=await fetch('/assets/data/itch_games.json',{cache:'no-store'});
-        const data=await r.json();
-        const items = Array.isArray(data)?data:(data.games||[]);
-        populate(items);
-        const go=()=>render(applyFilters(items), items);
-        ['input','change'].forEach(evt=>[q,platform,price].forEach(x=>x.addEventListener(evt,go)));
-        document.getElementById('clear').addEventListener('click',()=>{q.value='';platform.value='';price.value='';go();});
-        go();
-      }catch(e){
-        console.error('No itch_games.json found. Add CI sync.',e);
-        document.getElementById('empty').hidden=false;
-        document.getElementById('grid').innerHTML='<div class="muted">Add <code>assets/data/itch_games.json</code> via the GitHub Action below.</div>';
-      }
-    }
-    init();
-  </script>
-</body>
-</html>
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',300:'#7dd3fc',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7',700:'#0369a1',800:'#075985',900:'#0c4a6e'
             }
+          }
         }
-    </script>
-<!-- Custom CSS -->
-<link href="/css/custom.css" rel="stylesheet"/>
-<!-- Preconnect to external domains -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Analytics Placeholders -->
-<!-- Replace with your GA4 ID -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
-<!-- Replace with your GTM ID -->
-<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
-<link href="/assets/site.css" rel="stylesheet"/></head>
+      }
+    }
+  </script>
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/assets/site.css"/>
+  <link rel="stylesheet" href="/css/custom.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
-<!-- Google Tag Manager (noscript) -->
-<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
-<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-16">
-<!-- Logo -->
-<div class="flex-shrink-0">
-<a class="flex items-center space-x-2" href="/">
-<img alt="iD01t Logo" class="h-8 w-8" src="/assets/img/brand/logo.png"/>
-<span class="text-xl font-bold text-gray-900 dark:text-white">iD01t</span>
-</a>
-</div>
-<!-- Desktop Navigation -->
-<div class="hidden md:block">
-<div class="ml-10 flex items-baseline space-x-4">
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/">Home</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/store.html">Store</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/ebooks.html">eBooks</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/apps.html">Apps</a>
-<a aria-current="page" class="text-gray-900 dark:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/games.html">Games</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/music.html">Music</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/services.html">Services</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/portfolio.html">Portfolio</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/about.html">About</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/contact.html">Contact</a>
-</div>
-</div>
-<!-- Right side buttons -->
-<div class="flex items-center space-x-4">
-<!-- Theme Toggle -->
-<button aria-label="Toggle dark mode" class="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors" id="theme-toggle">
-<svg class="w-5 h-5 hidden" fill="currentColor" id="sun-icon" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
-</svg>
-<svg class="w-5 h-5" fill="currentColor" id="moon-icon" viewbox="0 0 20 20">
-<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-</svg>
-</button>
-<!-- Login Button -->
-<a class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors" href="#">Login</a>
-<!-- Mobile menu button -->
-<button aria-label="Open mobile menu" class="md:hidden p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors" id="mobile-menu-button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-</div>
-</div>
-<!-- Mobile Navigation -->
-<div class="hidden md:hidden" id="mobile-menu">
-<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/">Home</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/store.html">Store</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/ebooks.html">eBooks</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/apps.html">Apps</a>
-<a aria-current="page" class="text-gray-900 dark:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/games.html">Games</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/music.html">Music</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/services.html">Services</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/portfolio.html">Portfolio</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/about.html">About</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/contact.html">Contact</a>
-</div>
-</div>
-</nav>
-</header>
-<!-- Breadcrumbs -->
-<nav class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-<div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-<a class="hover:text-gray-900 dark:hover:text-white transition-colors" href="/">Home</a>
-<span>/</span>
-<span class="text-gray-900 dark:text-white">Games</span>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900 py-20">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Game Development
-            </h1>
-<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Immerse yourself in our innovative game projects. From experimental gameplay mechanics 
-                to captivating storytelling experiences.
-            </p>
-</div>
-</section>
-<!-- Featured Game: Nini -->
-<section class="py-20 bg-white dark:bg-gray-900">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="bg-gradient-to-r from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 md:p-12">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<div>
-<div class="flex items-center space-x-3 mb-4">
-<span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-sm font-medium px-3 py-1 rounded-full">In Development</span>
-<span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">Playtest Available</span>
-</div>
-<h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                            Nini
-                        </h2>
-<p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                            A unique puzzle-platformer that challenges your perception of reality. 
-                            Navigate through shifting dimensions where the laws of physics are constantly changing.
-                        </p>
-<div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3">
-<svg class="w-6 h-6 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-</svg>
-<span class="text-gray-700 dark:text-gray-300">Dynamic physics manipulation and gravity switching</span>
-</div>
-<div class="flex items-start space-x-3">
-<svg class="w-6 h-6 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-</svg>
-<span class="text-gray-700 dark:text-gray-300">Procedurally generated levels with increasing complexity</span>
-</div>
-<div class="flex items-start space-x-3">
-<svg class="w-6 h-6 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-</svg>
-<span class="text-gray-700 dark:text-gray-300">Minimalist art style with atmospheric sound design</span>
-</div>
-</div>
-<div class="space-y-6 mb-8">
-<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Development Roadmap</h3>
-<div class="space-y-3">
-<div class="flex items-center space-x-3">
-<div class="w-3 h-3 bg-green-500 rounded-full"></div>
-<span class="text-gray-700 dark:text-gray-300">Core gameplay mechanics and physics engine</span>
-</div>
-<div class="flex items-center space-x-3">
-<div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-<span class="text-gray-700 dark:text-gray-300">Level design and progression system</span>
-</div>
-<div class="flex items-center space-x-3">
-<div class="w-3 h-3 bg-gray-400 rounded-full"></div>
-<span class="text-gray-700 dark:text-gray-300">Audio implementation and visual effects</span>
-</div>
-<div class="flex items-center space-x-3">
-<div class="w-3 h-3 bg-gray-400 rounded-full"></div>
-<span class="text-gray-700 dark:text-gray-300">Beta testing and community feedback</span>
-</div>
-</div>
-</div>
-<div class="flex flex-wrap gap-4">
-<a class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors" href="/contact.html#playtest">
-                                Join Playtest
-                            </a>
-<a class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition-colors" href="#">
-                                Watch Trailer
-                            </a>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-16-10 bg-gradient-to-br from-green-100 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-xl flex items-center justify-center shadow-lg">
-<div class="text-center">
-<svg class="w-32 h-32 text-green-500 mx-auto mb-4" fill="currentColor" viewbox="0 0 20 20">
-<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-</svg>
-<p class="text-green-600 dark:text-green-400 font-medium">Game Screenshot</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Game Gallery -->
-<section class="py-20 bg-gray-50 dark:bg-gray-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Game Gallery</h2>
-<p class="text-lg text-gray-600 dark:text-gray-400">Visual development progress and concept art</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Gallery Item 1 -->
-<div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-<div class="aspect-16-10 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center">
-<div class="text-center">
-<svg class="w-20 h-20 text-purple-500 mx-auto mb-4" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" fill-rule="evenodd"></path>
-</svg>
-<p class="text-purple-600 dark:text-purple-400 font-medium">Concept Art</p>
-</div>
-</div>
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Character Design</h3>
-<p class="text-gray-600 dark:text-gray-400 text-sm">
-                            Early concept sketches and character development for Nini
-                        </p>
-</div>
-</div>
-<!-- Gallery Item 2 -->
-<div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-<div class="aspect-16-10 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center">
-<div class="text-center">
-<svg class="w-20 h-20 text-blue-500 mx-auto mb-4" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" fill-rule="evenodd"></path>
-</svg>
-<p class="text-blue-600 dark:text-blue-400 font-medium">Level Design</p>
-</div>
-</div>
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Environment Concepts</h3>
-<p class="text-gray-600 dark:text-gray-400 text-sm">
-                            Level layouts and environmental storytelling elements
-                        </p>
-</div>
-</div>
-<!-- Gallery Item 3 -->
-<div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-<div class="aspect-16-10 bg-gradient-to-br from-green-100 to-emerald-100 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center">
-<div class="text-center">
-<svg class="w-20 h-20 text-green-500 mx-auto mb-4" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" fill-rule="evenodd"></path>
-</svg>
-<p class="text-green-600 dark:text-green-400 font-medium">UI/UX Design</p>
-</div>
-</div>
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Interface Mockups</h3>
-<p class="text-gray-600 dark:text-gray-400 text-sm">
-                            User interface design and user experience flow
-                        </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Other Games -->
-<section class="py-20 bg-white dark:bg-gray-900">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">More Games in Development</h2>
-<p class="text-lg text-gray-600 dark:text-gray-400">Exciting projects on the horizon</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Game 2 -->
-<div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
-<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Project Aurora</h3>
-<p class="text-gray-600 dark:text-gray-400 mb-6">
-                        A narrative-driven adventure game set in a mysterious space station. 
-                        Explore, solve puzzles, and uncover the truth behind the station's dark secrets.
-                    </p>
-<div class="flex items-center space-x-4">
-<span class="text-sm text-gray-500">Expected: 2025</span>
-<span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 text-sm font-medium px-3 py-1 rounded-full">Early Development</span>
-</div>
-</div>
-<!-- Game 3 -->
-<div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
-<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pixel Quest</h3>
-<p class="text-gray-600 dark:text-gray-400 mb-6">
-                        A retro-style RPG with modern gameplay mechanics. 
-                        Build your party, explore vast worlds, and engage in strategic turn-based combat.
-                    </p>
-<div class="flex items-center space-x-4">
-<span class="text-sm text-gray-500">Expected: 2026</span>
-<span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">Concept Phase</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-20 bg-primary-600">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl font-bold text-white mb-6">Join Our Gaming Community</h2>
-<p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-                Be among the first to play our games, provide feedback, and help shape the future of our projects.
-            </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors inline-block" href="/contact.html#playtest">
-                    Sign Up for Playtests
-                </a>
-<a class="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-medium transition-colors inline-block" href="/contact.html">
-                    Get in Touch
-                </a>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-300">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-<!-- Company Info -->
-<div class="col-span-1 md:col-span-2">
-<div class="flex items-center space-x-2 mb-4">
-<img alt="iD01t Logo" class="h-8 w-8" src="/assets/img/brand/logo.png"/>
-<span class="text-xl font-bold text-white">iD01t</span>
-</div>
-<p class="text-gray-400 mb-4 max-w-md">
-                        Creating innovative digital experiences through apps, games, music, and creative services.
-                    </p>
-<div class="flex space-x-4">
-<a class="text-gray-400 hover:text-white transition-colors" href="https://github.com" rel="noopener" target="_blank">
-<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 4.624-5.479 4.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
-</svg>
-</a>
-<a class="text-gray-400 hover:text-white transition-colors" href="https://itch.io" rel="noopener" target="_blank">
-<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path>
-</svg>
-</a>
-</div>
-</div>
-<!-- Quick Links -->
-<div>
-<h3 class="text-white font-semibold mb-4">Quick Links</h3>
-<ul class="space-y-2">
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/store.html">Store</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/portfolio.html">Portfolio</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/services.html">Services</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/about.html">About</a></li>
-</ul>
-</div>
-<!-- Legal -->
-<div>
-<h3 class="text-white font-semibold mb-4">Legal</h3>
-<ul class="space-y-2">
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/privacy.html">Privacy Policy</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/terms.html">Terms of Service</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/refunds.html">Refund Policy</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/cookies.html">Cookie Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-800 mt-8 pt-8 text-center">
-<p class="text-gray-400">© <span id="current-year">2024</span> id01t. All rights reserved.</p>
-</div>
-</div>
-</footer>
-<!-- JavaScript -->
-<script src="/js/utilities.js" type="module"></script>
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Games - id01t",
-        "description": "Explore our game development projects including Nini and other exciting titles. Join playtests and discover innovative gaming experiences.",
-        "url": "https://id01t.github.io/games.html",
-        "mainEntity": {
-            "@type": "VideoGame",
-            "name": "Nini",
-            "description": "A unique puzzle-platformer that challenges your perception of reality with shifting dimensions and changing physics",
-            "genre": "Puzzle, Platformer",
-            "gamePlatform": "PC",
-            "applicationCategory": "Game",
-            "offers": {
-                "@type": "Offer",
-                "availability": "https://schema.org/PreOrder"
-            }
-        }
+
+  <!-- Header (kept consistent with site) -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="/" class="flex items-center space-x-2">
+            <img src="/assets/img/brand/logo.png" alt="iD01t Logo" class="h-8 w-8"/>
+            <span class="text-xl font-bold">iD01t</span>
+          </a>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="/" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+            <a href="/store.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Store</a>
+            <a href="/ebooks.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">eBooks</a>
+            <a href="/apps.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Apps</a>
+            <a href="/games.html" aria-current="page" class="text-gray-900 dark:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Games</a>
+            <a href="/music.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Music</a>
+            <a href="/services.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+            <a href="/portfolio.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+            <a href="/about.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+            <a href="/contact.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+            <svg id="sun-icon" class="w-5 h-5 hidden" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414z" clip-rule="evenodd"/></svg>
+            <svg id="moon-icon" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+          </button>
+          <a href="#" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Login</a>
+          <button id="mobile-menu-button" aria-label="Open mobile menu" class="md:hidden p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
+          <a href="/" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Home</a>
+          <a href="/store.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Store</a>
+          <a href="/ebooks.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">eBooks</a>
+          <a href="/apps.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Apps</a>
+          <a href="/games.html" aria-current="page" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-900 dark:text-white">Games</a>
+          <a href="/music.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Music</a>
+          <a href="/services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Services</a>
+          <a href="/portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Portfolio</a>
+          <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">About</a>
+          <a href="/contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50 dark:from-gray-800 dark:via-gray-900 dark:to-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center space-x-2 mb-4">
+          <span class="bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200 text-xs font-semibold px-3 py-1 rounded-full">Multiplayer PC Beta</span>
+          <span class="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full">Opens Sep 24, 2025</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+          Nini’s Adventures: Kitties Mayhem!
+        </h1>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">
+          Not just another online game. This is a full scale chaotic multiplayer experience where cute kitties transform into fierce warriors in vibrant and unpredictable arenas. Explosions, power ups, and mayhem await every time you log in.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#beta-signup" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium text-center">Get Beta Access</a>
+          <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem" target="_blank" rel="noopener" class="border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-8 py-3 rounded-lg font-medium text-center">View on itch.io</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5">
+          <img src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png?raw=1" alt="Nini’s Adventures gameplay" class="w-full h-auto object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why it hits -->
+  <section class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">
+        Players enter high energy deathmatches that combine speed, strategy, and sheer chaos. Each kitty has unique abilities that can turn the tide of battle in seconds. The arenas are alive with color, filled with traps, destructible environments, and imaginative cat themed designs that make every match feel fresh. This is more than a shooter. It is a fast paced world where cuteness meets pure competitive firepower.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="py-8 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Key Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+          <h3 class="font-semibold mb-2">Competitive online multiplayer</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">First public beta opens on <strong>September 24, 2025</strong>.</p>
+        </div>
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+          <h3 class="font-semibold mb-2">Chaotic cat themed arenas</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Traps, obstacles, and surprises for maximum mayhem.</p>
+        </div>
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+          <h3 class="font-semibold mb-2">Fast responsive gameplay</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Built for quick reflexes and intense matches.</p>
+        </div>
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+          <h3 class="font-semibold mb-2">AWS powered servers</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Stability, scalability, and smooth global play.</p>
+        </div>
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+          <h3 class="font-semibold mb-2">Unique kitty abilities</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Special powers add variety and strategy.</p>
+        </div>
+        <div class="rounded-xl p-6 bg-white dark:bg-gray-900 shadow">
+          <h3 class="font-semibold mb-2">Destructible environments</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Bright, colorful arenas that react to the action.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Embeds -->
+  <section class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div class="space-y-6">
+        <h3 class="text-xl font-semibold">Play on itch.io</h3>
+        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-2">
+          <iframe frameborder="0" src="https://itch.io/embed/3845294?linkback=true&amp;border_width=4&amp;dark=true" width="100%" height="173">
+            <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem">Nini's Adventures: Kitties Mayhem! by iD01t Productions</a>
+          </iframe>
+        </div>
+        <img src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/20250901_0939_Nini's%20Ultimate%20App%20Logo_remix_01k42qz6dffe7r75b7dw5wcapj.png?raw=1" alt="Official logo" class="w-full max-w-sm rounded-xl shadow mx-auto"/>
+      </div>
+      <div class="space-y-6">
+        <h3 class="text-xl font-semibold">Watch gameplay</h3>
+        <div class="aspect-video w-full rounded-xl overflow-hidden shadow border border-gray-200 dark:border-gray-700">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GsVqmOx4Rwc?si=YWqbARP_0Hw5l_yB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="aspect-video w-full rounded-xl overflow-hidden shadow border border-gray-200 dark:border-gray-700">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bpmMQEh37ZA?si=ZoQHZxdARzKnaCTT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beta info + signup -->
+  <section id="beta-signup" class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 shadow">
+        <h3 class="text-2xl font-bold mb-4">Beta Information</h3>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+          <li>This is the very first PC beta release.</li>
+          <li>No single player mode.</li>
+          <li>No console or mobile support at this stage.</li>
+          <li>Focus: online competitive battles to test servers, gameplay balance, and player feedback.</li>
+        </ul>
+        <div class="mt-6 flex flex-col sm:flex-row gap-4">
+          <a href="/contact.html#playtest" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium text-center">Subscribe for Beta Access</a>
+          <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem" target="_blank" rel="noopener" class="border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium text-center">Wishlist / Follow on itch.io</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (kept) -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="/assets/img/brand/logo.png" alt="iD01t Logo" class="h-8 w-8"/>
+            <span class="text-xl font-bold text-white">iD01t</span>
+          </div>
+          <p class="text-gray-400 mb-4 max-w-md">
+            Creating innovative digital experiences through apps, games, music, and creative services.
+          </p>
+          <div class="flex space-x-4">
+            <a class="text-gray-400 hover:text-white transition-colors" href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 4.624-5.479 4.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386C24 5.373 18.627 0 12 0z"/></svg>
+            </a>
+            <a class="text-gray-400 hover:text-white transition-colors" href="https://itch.io" target="_blank" rel="noopener" aria-label="itch.io">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="/store.html">Store</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="/portfolio.html">Portfolio</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="/services.html">Services</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="/about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Legal</h3>
+          <ul class="space-y-2">
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/privacy.html">Privacy Policy</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/terms.html">Terms of Service</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/refunds.html">Refund Policy</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-gray-400">© <span id="current-year">2025</span> id01t. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Utilities + site JS -->
+  <script type="module" src="/js/utilities.js"></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Nini’s Adventures: Kitties Mayhem!",
+    "description": "Chaotic online multiplayer where cute kitties become fierce warriors across vibrant, destructible arenas.",
+    "genre": "Action, Shooter, Multiplayer",
+    "gamePlatform": "Windows",
+    "applicationCategory": "Game",
+    "creator": {"@type": "Organization", "name": "iD01t Productions"},
+    "url": "https://id01t.github.io/games.html",
+    "image": "https://github.com/iD01t/iD01t.github.io/blob/main/assets/images/resizecom_resizecom_nini-1024x576%20(2)%20(1).png?raw=1",
+    "trailer": [
+      "https://www.youtube.com/watch?v=GsVqmOx4Rwc",
+      "https://www.youtube.com/watch?v=bpmMQEh37ZA"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "availabilityStarts": "2025-09-24"
     }
-    </script>
-<script defer="" src="/assets/site.js"></script></body>
+  }
+  </script>
+
+  <script defer src="/assets/site.js"></script>
+</body>
 </html>
