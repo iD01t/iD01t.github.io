@@ -3,79 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Games • iD01t Productions</title>
-  <meta name="description" content="Official games hub for iD01t Productions. Live itch.io catalog with filters and embeddable widgets." />
-  <link rel="canonical" href="/games.html" />
+  <title>Apps • iD01t Productions</title>
+  <meta name="description" content="All iD01t Productions apps & tools — pulled from itch.io with smart filters and pro CTAs." />
+  <link rel="canonical" href="/apps.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Games • iD01t Productions" />
-  <meta property="og:description" content="Explore games by iD01t Productions. Play now on itch.io or join playtests." />
-  <meta property="og:url" content="/games.html" />
-  <meta property="og:image" content="/assets/img/placeholders/hero-1600x900.webp" />
+  <meta property="og:title" content="Apps • iD01t Productions" />
+  <meta property="og:description" content="Explore creative tools and utilities by iD01t Productions. Download on itch.io." />
+  <meta property="og:url" content="/apps.html" />
+  <meta property="og:image" content="/assets/img/brand/ebooks_og.jpg" />
   <link rel="icon" href="/assets/favicon.ico" />
   <link rel="apple-touch-icon" href="/assets/logo-512.png" />
-  <link rel="stylesheet" href="/assets/site.css" />
-
-  <!-- GA/GTM -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CHX65WY0WZ');</script>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
-    :root { --border: rgba(255,255,255,.12); --card: rgba(255,255,255,.05); --muted: rgba(255,255,255,.75); }
-    @media (prefers-color-scheme: dark){ body{ background:#0b0d10; color:#eaeaf0 } }
-    body{ font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0 }
-    .wrap{ max-width:1200px; margin:0 auto; padding:0 20px }
-    header.sticky{ position:sticky; top:0; z-index:50; background:rgba(11,13,16,.85); backdrop-filter:blur(8px); border-bottom:1px solid var(--border) }
-    .nav{ display:flex; align-items:center; justify-content:space-between; height:60px }
-    .nav a{ color:inherit; text-decoration:none; margin:0 8px; opacity:.9 }
-    .nav a[aria-current="page"], .nav a:hover{ opacity:1 }
-    .hero{ padding:56px 0; background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%) }
-    .hero h1{ font-size:clamp(28px,4vw,44px); margin:0 0 8px }
-    .hero p{ opacity:.85; margin:0 }
-    .toolbar{ display:grid; grid-template-columns:1.2fr 200px 200px 1fr; gap:10px; align-items:end; margin:18px 0 }
-    .toolbar label{ font-size:.85rem; color:var(--muted); display:block; margin-bottom:6px }
-    .toolbar input,.toolbar select{ padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:var(--card); color:inherit }
-    .btn{ display:inline-block; padding:10px 12px; border:1px solid var(--border); border-radius:12px; text-decoration:none; color:inherit; background:rgba(255,255,255,.03) }
-    .btn:hover{ filter:brightness(1.07) }
-    .chip{ font-size:.8rem; padding:4px 8px; border-radius:999px; border:1px solid var(--border); background:rgba(255,255,255,.06) }
-    .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px }
-    .card{ border:1px solid var(--border); border-radius:16px; overflow:hidden; background:var(--card) }
-    .tile img{ width:100%; aspect-ratio:16/9; object-fit:cover; background:#111 }
-    .tile .content{ padding:14px; display:flex; flex-direction:column; gap:10px }
-    .muted{ opacity:.8 }
-    footer{ border-top:1px solid var(--border); padding:24px 0; margin-top:32px; opacity:.8; text-align:center }
-    iframe.itch{ width:100%; max-width:552px; height:167px; border:0; }
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.75)}
+    @media (prefers-color-scheme: light){:root{--border:rgba(0,0,0,.12);--card:rgba(0,0,0,.03);--muted:#6b7280}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#0b0d10;color:#eaeaf0}
+    @media (prefers-color-scheme: light){body{background:#fff;color:#0f172a}}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px}
+    .hero p{opacity:.85;margin:0}
+    .toolbar{display:grid;grid-template-columns:1.2fr 200px 200px 200px 1fr;gap:10px;align-items:end;margin:18px 0}
+    .toolbar label{font-size:.85rem;color:var(--muted);display:block;margin-bottom:6px}
+    .toolbar input,.toolbar select{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:inherit}
+    .btn{display:inline-block;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
+    .btn:hover{filter:brightness(1.07)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card)}
+    .tile img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#111}
+    .tile .content{padding:14px;display:flex;flex-direction:column;gap:10px}
+    .chip{font-size:.8rem;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.06)}
+    .muted{opacity:.8}
+    .section{padding:16px;border:1px solid var(--border);border-radius:16px;margin-bottom:16px;background:var(--card)}
+    iframe.itch{width:100%;max-width:552px;height:167px;border:0}
+    footer{border-top:1px solid var(--border);padding:24px 0;margin-top:32px;opacity:.8;text-align:center}
   </style>
 </head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <!-- Shared header (pulled from index.html for consistency) -->
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/store.html">Store</a>
-        <a href="/ebooks.html">eBooks</a>
-        <a href="/audiobooks.html">Audiobooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html" aria-current="page"><strong>Games</strong></a>
-        <a href="/music.html">Music</a>
-        <a href="/services.html">Services</a>
-      </nav>
-    </div>
-  </header>
+<body data-active="Apps">
+  <div id="header-slot"></div>
 
   <section class="hero">
     <div class="wrap">
-      <h1>Games — iD01t Productions</h1>
-      <p>Live itch.io catalog with filters. Every CTA points to itch.io for trust, speed, and sales.</p>
+      <h1>Apps — iD01t Productions</h1>
+      <p>Creative tools & utilities by Guillaume Lessard / iD01t Productions. Download on itch.io.</p>
     </div>
   </section>
 
-  <main class="wrap">
+  <main class="wrap" role="main">
     <!-- Filters -->
-    <section class="toolbar">
+    <section class="toolbar" aria-label="Filters">
       <div>
         <label for="q">Search</label>
         <input id="q" type="search" placeholder="Title, keyword" />
@@ -99,442 +77,208 @@
           <option value="paid">Paid</option>
         </select>
       </div>
+      <div>
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="new">Newest</option>
+          <option value="az">A–Z</option>
+          <option value="price">Lowest price</option>
+        </select>
+      </div>
       <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end">
         <button id="clear" class="btn" type="button">Clear filters</button>
         <span id="tally" class="muted"></span>
       </div>
     </section>
 
-    <!-- Featured embeds (your iframes) -->
-    <section class="card" style="padding:16px;margin-bottom:16px">
+    <!-- Featured embeds -->
+    <section class="section" aria-label="Featured on itch.io">
       <h2 style="margin:0 0 10px">Featured on itch.io</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
-        <iframe class="itch" src="https://itch.io/embed/3833174"><a href="https://id01t.itch.io/bedtime-story-maker-windows-app">Bedtime Story Maker Windows App by iD01t Productions</a></iframe>
-        <iframe class="itch" src="https://itch.io/embed/3843458?bg_color=000000&amp;fg_color=ffffff&amp;link_color=0d1493"><a href="https://id01t.itch.io/py2win">Py2Win FREE by iD01t Productions</a></iframe>
+        <iframe class="itch" src="https://itch.io/embed/3833174?linkback=true&border_width=4&dark=true"><a href="https://id01t.itch.io/bedtime-story-maker-windows-app">Bedtime Story Maker Windows App by iD01t Productions</a></iframe>
+        <iframe class="itch" src="https://itch.io/embed/3843458?linkback=true&border_width=4&dark=true"><a href="https://id01t.itch.io/py2win">Py2Win FREE by iD01t Productions</a></iframe>
       </div>
     </section>
 
-    <!-- Grid -->
-    <section>
+    <!-- Catalog -->
+    <section aria-label="Apps catalog">
       <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
-        <h2 style="margin:0">Catalog</h2>
+        <h2 style="margin:0">All Apps & Tools</h2>
         <span id="count" class="muted" style="font-size:.9rem"></span>
       </div>
       <div id="grid" class="grid" aria-live="polite"></div>
-      <div id="empty" class="muted" hidden>No results. Try different filters.</div>
+      <div id="empty" class="muted" hidden>No apps found. Try different filters.</div>
+    </section>
+
+    <!-- Itch profile fallback -->
+    <section class="section" id="fallback" hidden>
+      <h3 style="margin:0 0 8px">Can’t load catalog? Browse on itch.io</h3>
+      <p class="muted" style="margin:0 0 12px">We couldn’t load the local mirror file. Use the official profile instead.</p>
+      <a class="btn" href="https://id01t.itch.io/" target="_blank" rel="noopener">Open id01t.itch.io</a>
     </section>
   </main>
 
-  <footer><div class="wrap">© <span id="year"></span> iD01t Productions</div></footer>
+  <div id="footer-slot"></div>
 
+  <!-- Inject header/footer from the ORIGINAL homepage -->
   <script>
-    // Match header with index.html
-    (async function loadSharedHeader(){
-      try{const r=await fetch('/index.html'); if(!r.ok) return;
-        const html=await r.text(); const doc=new DOMParser().parseFromString(html,'text/html');
-        const shared=doc.querySelector('#site-header'); if(shared){document.getElementById('site-header').outerHTML=shared.outerHTML;}
-      }catch{}
-    })();
-    document.getElementById('year').textContent=new Date().getFullYear();
+  (async function injectLayout(){
+    try{
+      const res = await fetch('/index.html', {cache:'no-store'});
+      const text = await res.text();
+      const doc = new DOMParser().parseFromString(text, 'text/html');
+      const head = document.querySelector('head');
+      doc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !document.querySelector('link[rel="stylesheet"][href="'+href+'"]')) {
+          const l=document.createElement('link'); l.rel='stylesheet'; l.href=href; head.appendChild(l);
+        }
+      });
+      const header = doc.querySelector('header'); const footer = doc.querySelector('footer');
+      if (header) document.getElementById('header-slot').innerHTML = header.outerHTML;
+      if (footer) document.getElementById('footer-slot').innerHTML = footer.outerHTML;
+      // Active nav
+      const active = (document.body.dataset.active || '').toLowerCase();
+      document.querySelectorAll('header nav a, #site-header nav a').forEach(a=>{
+        a.removeAttribute('aria-current');
+        const label=a.textContent.trim().toLowerCase();
+        const href=a.getAttribute('href');
+        if ((active && label===active) || href==='/apps.html') a.setAttribute('aria-current','page');
+      });
+      // Re-exec scripts in injected nodes
+      ['header-slot','footer-slot'].forEach(id=>{
+        const root=document.getElementById(id);
+        root && root.querySelectorAll('script').forEach(s=>{const ns=document.createElement('script'); ns.textContent=s.textContent; s.replaceWith(ns);});
+      });
+    }catch(e){ console.warn('Header/Footer injection failed', e); }
+  })();
+  </script>
 
-    // Elements
-    const el=id=>document.getElementById(id);
-    const q=el('q'), platform=el('platform'), price=el('price'), clearBtn=el('clear');
-    const grid=el('grid'), empty=el('empty'), count=el('count'), tally=el('tally');
+  <!-- Apps logic: load from itch mirror JSON and filter "tools/apps" -->
+  <script>
+    const el = id => document.getElementById(id);
+    const $q=el('q'), $plat=el('platform'), $price=el('price'), $sort=el('sort'), $clear=el('clear'),
+          $grid=el('grid'), $empty=el('empty'), $count=el('count'), $tally=el('tally'), $fallback=el('fallback');
 
-    const esc = s => String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+    const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","&gt;":"&gt;","\"":"&quot;"}[c]));
+
+    const mirrorFiles=[
+      '/assets/data/itch_apps.json',       // preferred: only apps/tools
+      '/assets/data/itch_catalog.json',    // alternative: full catalog (apps+games)
+      '/assets/data/itch_games.json'       // legacy: games file; we'll filter tools if included
+    ];
+
+    function isTool(item){
+      const t=(item.classification||'').toLowerCase(); // 'tool' or 'game' etc.
+      if (t.includes('tool')) return true;
+      const tags=(item.tags||[]).map(x=>String(x).toLowerCase());
+      return tags.some(x=>['tool','utility','app','application'].includes(x)) || (item.type||'').toLowerCase()==='tool';
+    }
+
+    async function loadMirror(){
+      for (const path of mirrorFiles){
+        try{
+          const r=await fetch(path,{cache:'no-store'});
+          if(!r.ok) continue;
+          const data=await r.json();
+          const items = Array.isArray(data) ? data : (data.items||data.games||data.tools||[]);
+          if(items && items.length) return items;
+        }catch(e){/*try next*/}
+      }
+      return null;
+    }
+
     const chip = t => `<span class="chip">${esc(t)}</span>`;
 
-    function cardHTML(g){
-      const tags=[...(g.platforms||[]), g.price===0?'Free':'Paid'].filter(Boolean).map(chip).join(' ');
+    function cardHTML(a){
+      const price = (a.price||0)===0 ? 'Free' : (a.price_formatted || `${a.price||''} ${a.currency||''}`).trim();
+      const tags = [
+        ...(a.platforms||[]),
+        price
+      ].filter(Boolean).map(chip).join(' ');
+      const date = (a.published_at||a.updated_at||'').slice(0,10);
+      const cover = a.cover || a.cover_url || '/assets/img/placeholders/hero-1600x900.webp';
+      const url = a.url || a.profile|| '#';
+      const demo = a.demo_url;
       return `<article class="card tile">
-        <img src="${esc(g.cover||'/assets/img/placeholders/hero-1600x900.webp')}" alt="${esc(g.title)} cover">
+        <img src="${esc(cover)}" alt="${esc(a.title)} cover">
         <div class="content">
           <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
-            <h3 style="margin:0">${esc(g.title)}</h3>
-            <span class="muted" style="font-size:.9rem">${esc((g.published_at||'').slice(0,10))}</span>
+            <h3 style="margin:0">${esc(a.title)}</h3>
+            <span class="muted" style="font-size:.9rem">${esc(date)}</span>
           </div>
-          <div class="muted">${esc(g.short_text||'')}</div>
+          <div class="muted">${esc(a.short_text||a.description||'')}</div>
           <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="${esc(g.url)}" target="_blank" rel="noopener nofollow">View on itch.io</a>
-            ${g.demo_url ? `<a class="btn" href="${esc(g.demo_url)}" target="_blank" rel="noopener">Play demo</a>` : ''}
+            <a class="btn" href="${esc(url)}" target="_blank" rel="noopener nofollow">View on itch.io</a>
+            ${demo ? `<a class="btn" href="${esc(demo)}" target="_blank" rel="noopener">Try demo</a>` : ''}
           </div>
         </div>
       </article>`;
     }
 
-    function populate(items){
-      const plats=new Set(); items.forEach(g=>(g.platforms||[]).forEach(p=>plats.add(p)));
-      const options=['',...Array.from(plats).sort()].map(p=>p?`<option value="${esc(p)}">${esc(p)}</option>`:'<option value="">All</option>').join('');
-      platform.innerHTML = options;
+    function populateFilters(items){
+      const plats=new Set();
+      items.forEach(x=>(x.platforms||[]).forEach(p=>plats.add(p)));
+      $plat.innerHTML = ['<option value=\"\">All</option>', ...Array.from(plats).sort().map(p=>`<option value=\"${p}\">${p}</option>`)].join('');
     }
 
-    function applyFilters(items){
-      const text=(q.value||'').toLowerCase();
-      const plat=platform.value; const pr=price.value;
-      let list=items.filter(g=>{
-        if(text){const hay=[g.title,g.short_text,(g.tags||[]).join(' ')].join(' ').toLowerCase(); if(!hay.includes(text)) return false;}
-        if(plat && !(g.platforms||[]).includes(plat)) return false;
-        if(pr==='free' && (g.price||0)>0) return false;
-        if(pr==='paid' && (g.price||0)===0) return false;
+    function apply(items){
+      const text=($q.value||'').toLowerCase();
+      const plat=$plat.value, pr=$price.value, sort=$sort.value;
+      let list = items.filter(isTool).filter(a=>{
+        if(text){
+          const hay=[a.title,a.short_text,(a.tags||[]).join(' ')].join(' ').toLowerCase();
+          if(!hay.includes(text)) return false;
+        }
+        if(plat && !(a.platforms||[]).includes(plat)) return false;
+        if(pr==='free' && (a.price||0)>0) return false;
+        if(pr==='paid' && (a.price||0)===0) return false;
         return true;
       });
-      // newest first
-      list.sort((a,b)=>new Date(b.published_at||b.updated_at||0)-new Date(a.published_at||a.updated_at||0));
+      if(sort==='az') list.sort((a,b)=>a.title.localeCompare(b.title));
+      else if(sort==='price') list.sort((a,b)=>(a.price||0)-(b.price||0) || a.title.localeCompare(b.title));
+      else list.sort((a,b)=>new Date(b.published_at||b.updated_at||0)-new Date(a.published_at||a.updated_at||0));
       return list;
     }
 
     function render(list, all){
-      if(!list.length){ grid.innerHTML=''; empty.hidden=false; count.textContent='0 games'; return; }
-      empty.hidden=true;
-      grid.innerHTML=list.map(cardHTML).join('');
-      count.textContent=`${list.length} game${list.length!==1?'s':''}`;
-      tally.textContent=`${all.length} total • ${all.filter(x=>(x.price||0)===0).length} free`;
+      if(!list.length){ $grid.innerHTML=''; $empty.hidden=false; $count.textContent='0 apps'; $tally.textContent=''; return; }
+      $empty.hidden=true;
+      $grid.innerHTML = list.map(cardHTML).join('');
+      $count.textContent = `${list.length} app${list.length!==1?'s':''}`;
+      const totalTools = all.filter(isTool).length;
+      const freeCount = all.filter(x=>isTool(x) && (x.price||0)===0).length;
+      $tally.textContent = `${totalTools} total • ${freeCount} free`;
       emitSchema(list);
     }
 
     function emitSchema(list){
-      const ld={ '@context':'https://schema.org', '@type':'ItemList', name:'iD01t Productions Games',
-        itemListElement: list.slice(0,60).map((g,i)=>({
-          '@type':'ListItem', position:i+1,
-          item:{ '@type':'VideoGame', name:g.title, url:g.url, image:g.cover,
-                 applicationCategory:'Game', operatingSystem:(g.platforms||[]).join(', '),
-                 offers:{'@type':'Offer','price':String(g.price||0),'priceCurrency':g.currency||'USD'} }
-        }))
-      };
-      let tag=document.getElementById('ld-games'); if(!tag){tag=document.createElement('script');tag.id='ld-games';tag.type='application/ld+json';document.head.appendChild(tag);}
-      tag.textContent=JSON.stringify(ld);
+      const ld = { '@context':'https://schema.org', '@type':'ItemList', name:'iD01t Productions Apps',
+        itemListElement: list.slice(0,60).map((a,i)=>({'@type':'ListItem','position':i+1,'item':{
+          '@type':'SoftwareApplication',
+          name:a.title, url:a.url, image:a.cover || a.cover_url,
+          applicationCategory:'DeveloperApplication',
+          operatingSystem:(a.platforms||[]).join(', ') || 'Windows, macOS, Linux',
+          offers:{'@type':'Offer','price':String(a.price||0),'priceCurrency':a.currency||'USD'}
+        }})) };
+      let tag=document.getElementById('ld-apps'); if(!tag){tag=document.createElement('script');tag.id='ld-apps';tag.type='application/ld+json';document.head.appendChild(tag);}
+      tag.textContent = JSON.stringify(ld);
     }
 
-    async function init(){
+    (async function init(){
       try{
-        const r=await fetch('/assets/data/itch_games.json',{cache:'no-store'});
-        const data=await r.json();
-        const items = Array.isArray(data)?data:(data.games||[]);
-        populate(items);
-        const go=()=>render(applyFilters(items), items);
-        ['input','change'].forEach(evt=>[q,platform,price].forEach(x=>x.addEventListener(evt,go)));
-        document.getElementById('clear').addEventListener('click',()=>{q.value='';platform.value='';price.value='';go();});
+        const items = await loadMirror();
+        if(!items){ $fallback.hidden=false; $empty.hidden=false; return; }
+        populateFilters(items);
+        const go=()=>render(apply(items), items);
+        ['input','change'].forEach(evt=>[$q,$plat,$price,$sort].forEach(e=>e.addEventListener(evt,go)));
+        $clear.addEventListener('click',()=>{$q.value='';$plat.value='';$price.value='';$sort.value='new';go();});
         go();
       }catch(e){
-        console.error('No itch_games.json found. Add CI sync.',e);
-        document.getElementById('empty').hidden=false;
-        document.getElementById('grid').innerHTML='<div class="muted">Add <code>assets/data/itch_games.json</code> via the GitHub Action below.</div>';
+        console.warn('Apps load failed', e); $fallback.hidden=false; $empty.hidden=false;
       }
-    }
-    init();
+    })();
   </script>
 </body>
-</html>
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-<!-- Custom CSS -->
-<link href="/css/custom.css" rel="stylesheet"/>
-<!-- Preconnect to external domains -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Analytics Placeholders -->
-<!-- Replace with your GA4 ID -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
-<!-- Replace with your GTM ID -->
-<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
-<link href="/assets/site.css" rel="stylesheet"/></head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
-<!-- Google Tag Manager (noscript) -->
-<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
-<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-16">
-<!-- Logo -->
-<div class="flex-shrink-0">
-<a class="flex items-center space-x-2" href="/">
-<img alt="iD01t Logo" class="h-8 w-8" src="/assets/img/brand/logo.png"/>
-<span class="text-xl font-bold text-gray-900 dark:text-white">iD01t</span>
-</a>
-</div>
-<!-- Desktop Navigation -->
-<div class="hidden md:block">
-<div class="ml-10 flex items-baseline space-x-4">
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/">Home</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/store.html">Store</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/ebooks.html">eBooks</a>
-<a aria-current="page" class="text-gray-900 dark:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/apps.html">Apps</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/games.html">Games</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/music.html">Music</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/services.html">Services</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/portfolio.html">Portfolio</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/about.html">About</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/contact.html">Contact</a>
-</div>
-</div>
-<!-- Right side buttons -->
-<div class="flex items-center space-x-4">
-<!-- Theme Toggle -->
-<button aria-label="Toggle dark mode" class="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors" id="theme-toggle">
-<svg class="w-5 h-5 hidden" fill="currentColor" id="sun-icon" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
-</svg>
-<svg class="w-5 h-5" fill="currentColor" id="moon-icon" viewbox="0 0 20 20">
-<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-</svg>
-</button>
-<!-- Login Button -->
-<a class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors" href="#">Login</a>
-<!-- Mobile menu button -->
-<button aria-label="Open mobile menu" class="md:hidden p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors" id="mobile-menu-button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-</div>
-</div>
-<!-- Mobile Navigation -->
-<div class="hidden md:hidden" id="mobile-menu">
-<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/">Home</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/store.html">Store</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/ebooks.html">eBooks</a>
-<a aria-current="page" class="text-gray-900 dark:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/apps.html">Apps</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/games.html">Games</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/music.html">Music</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/services.html">Services</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/portfolio.html">Portfolio</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/about.html">About</a>
-<a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" href="/contact.html">Contact</a>
-</div>
-</div>
-</nav>
-</header>
-<!-- Breadcrumbs -->
-<nav class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-<div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-<a class="hover:text-gray-900 dark:hover:text-white transition-colors" href="/">Home</a>
-<span>/</span>
-<span class="text-gray-900 dark:text-white">Apps</span>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 py-20">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Creative Apps
-            </h1>
-<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Discover innovative applications designed to enhance your creativity, productivity, and digital experience. 
-                From storytelling tools to development utilities.
-            </p>
-</div>
-</section>
-<!-- Featured App: Bedtime Story Maker -->
-<section class="py-20 bg-white dark:bg-gray-900">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 md:p-12">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<div>
-<div class="flex items-center space-x-3 mb-4">
-<span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-sm font-medium px-3 py-1 rounded-full">v2.1.0</span>
-<span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">Available Now</span>
-</div>
-<h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                            Bedtime Story Maker
-                        </h2>
-<p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                            Transform your ideas into enchanting bedtime stories with our AI-powered storytelling app. 
-                            Create personalized tales for children of all ages with beautiful illustrations and engaging narratives.
-                        </p>
-<div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3">
-<svg class="w-6 h-6 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-</svg>
-<span class="text-gray-700 dark:text-gray-300">AI-powered story generation with customizable themes</span>
-</div>
-<div class="flex items-start space-x-3">
-<svg class="w-6 h-6 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-</svg>
-<span class="text-gray-700 dark:text-gray-300">Beautiful illustrations and customizable characters</span>
-</div>
-<div class="flex items-start space-x-3">
-<svg class="w-6 h-6 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
-<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
-</svg>
-<span class="text-gray-700 dark:text-gray-300">Export to PDF and share with family and friends</span>
-</div>
-</div>
-<div class="flex flex-wrap gap-4">
-<a class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors" href="https://itch.io" rel="noopener" target="_blank">
-                                Get on Itch.io
-                            </a>
-<a class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition-colors" href="#">
-                                Learn More
-                            </a>
-</div>
-</div>
-<div class="relative">
-<img alt="Bedtime Story Maker App Screenshot" class="aspect-16-10 rounded-xl object-cover shadow-lg" decoding="async" loading="lazy" src="/assets/harvested/apps/img_3.png"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Other Apps Grid -->
-<section class="py-20 bg-gray-50 dark:bg-gray-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">More Apps Coming Soon</h2>
-<p class="text-lg text-gray-600 dark:text-gray-400">We're working on exciting new applications</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- App 2 -->
-<div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-<img alt="Code Flow App Preview" class="aspect-16-10 object-cover" decoding="async" loading="lazy" src="/assets/harvested/apps/img_1.png"/>
-<div class="p-6">
-<div class="flex items-center justify-between mb-4">
-<h3 class="text-xl font-bold text-gray-900 dark:text-white">Code Flow</h3>
-<span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 text-sm font-medium px-3 py-1 rounded-full">Coming Soon</span>
-</div>
-<p class="text-gray-600 dark:text-gray-400 mb-4">
-                            A visual programming environment for creating interactive experiences and games. 
-                            Perfect for beginners and experienced developers alike.
-                        </p>
-<div class="flex items-center space-x-4">
-<span class="text-sm text-gray-500">Expected: Q2 2024</span>
-<button class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium transition-colors">
-                                Notify Me
-                            </button>
-</div>
-</div>
-</div>
-<!-- App 3 -->
-<div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-<img alt="Pixel Forge App Preview" class="aspect-16-10 object-cover" decoding="async" loading="lazy" src="/assets/harvested/apps/img_4.png"/>
-<div class="p-6">
-<div class="flex items-center justify-between mb-4">
-<h3 class="text-xl font-bold text-gray-900 dark:text-white">Pixel Forge</h3>
-<span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 text-sm font-medium px-3 py-1 rounded-full">Coming Soon</span>
-</div>
-<p class="text-gray-600 dark:text-gray-400 mb-4">
-                            A powerful pixel art editor with animation tools and sprite management. 
-                            Create stunning 2D graphics for games and digital art projects.
-                        </p>
-<div class="flex items-center space-x-4">
-<span class="text-sm text-gray-500">Expected: Q3 2024</span>
-<button class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium transition-colors">
-                                Notify Me
-                            </button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-20 bg-primary-600">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl font-bold text-white mb-6">Need a Custom App?</h2>
-<p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-                Have an idea for a specialized application? We offer custom development services 
-                to bring your vision to life.
-            </p>
-<a class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors inline-block" href="/contact.html">
-                Get Started
-            </a>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-300">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-<!-- Company Info -->
-<div class="col-span-1 md:col-span-2">
-<div class="flex items-center space-x-2 mb-4">
-<img alt="iD01t Logo" class="h-8 w-8" src="/assets/img/brand/logo.png"/>
-<span class="text-xl font-bold text-white">iD01t</span>
-</div>
-<p class="text-gray-400 mb-4 max-w-md">
-                        Creating innovative digital experiences through apps, games, music, and creative services.
-                    </p>
-<div class="flex space-x-4">
-<a class="text-gray-400 hover:text-white transition-colors" href="https://github.com" rel="noopener" target="_blank">
-<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 4.624-5.479 4.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
-</svg>
-</a>
-<a class="text-gray-400 hover:text-white transition-colors" href="https://itch.io" rel="noopener" target="_blank">
-<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path>
-</svg>
-</a>
-</div>
-</div>
-<!-- Quick Links -->
-<div>
-<h3 class="text-white font-semibold mb-4">Quick Links</h3>
-<ul class="space-y-2">
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/store.html">Store</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/portfolio.html">Portfolio</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/services.html">Services</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/about.html">About</a></li>
-</ul>
-</div>
-<!-- Legal -->
-<div>
-<h3 class="text-white font-semibold mb-4">Legal</h3>
-<ul class="space-y-2">
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/privacy.html">Privacy Policy</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/terms.html">Terms of Service</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/refunds.html">Refund Policy</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="/legal/cookies.html">Cookie Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-800 mt-8 pt-8 text-center">
-<p class="text-gray-400">© <span id="current-year">2024</span> id01t. All rights reserved.</p>
-</div>
-</div>
-</footer>
-<!-- JavaScript -->
-<script src="/js/utilities.js" type="module"></script>
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Apps - id01t",
-        "description": "Discover our innovative apps including Bedtime Story Maker and more. Creative tools for storytellers, developers, and creators.",
-        "url": "https://id01t.github.io/apps.html",
-        "mainEntity": {
-            "@type": "SoftwareApplication",
-            "name": "Bedtime Story Maker",
-            "description": "AI-powered storytelling app for creating personalized bedtime stories",
-            "applicationCategory": "EntertainmentApplication",
-            "operatingSystem": "Windows, macOS, Linux",
-            "version": "2.1.0",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock"
-            }
-        }
-    }
-    </script>
-<script defer="" src="/assets/site.js"></script></body>
 </html>
