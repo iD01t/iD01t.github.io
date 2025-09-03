@@ -32,7 +32,9 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    
+<div id=\"header-slot\"></div>
+<!-- End Google Tag Manager (noscript) -->
     
     <div class="container">
         <div style="text-align: center; margin-bottom: 3rem;">
@@ -77,5 +79,64 @@
     </div>
     
     <script src="/assets/site.js" defer></script>
+
+<div id=\"footer-slot\"></div>
+
+<script>
+// Inject header/footer from /index.html so index is the single source of truth
+(async function injectLayout(){
+  try{
+    const res = await fetch('/index.html', {cache:'no-store'});
+    const text = await res.text();
+    const doc = new DOMParser().parseFromString(text, 'text/html');
+
+    // Copy any global stylesheets from index <head> if missing
+    const head = document.querySelector('head');
+    doc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !document.querySelector('link[rel="stylesheet"][href="' + href + '"]')) {
+        const l = document.createElement('link');
+        l.rel = 'stylesheet'; l.href = href;
+        head.appendChild(l);
+      }
+    });
+
+    // Inject header and footer HTML
+    const header = doc.querySelector('header');
+    const footer = doc.querySelector('footer');
+    if(header) document.getElementById('header-slot').innerHTML = header.outerHTML;
+    if(footer) document.getElementById('footer-slot').innerHTML = footer.outerHTML;
+
+    // Re-execute any scripts inside injected nodes (if index bundled logic there)
+    function runScripts(rootId){
+      const root = document.getElementById(rootId);
+      if(!root) return;
+      const scripts = root.querySelectorAll('script');
+      scripts.forEach(s => {
+        const ns = document.createElement('script');
+        Array.from(s.attributes).forEach(a=>ns.setAttribute(a.name,a.value));
+        ns.textContent = s.textContent;
+        s.replaceWith(ns);
+      });
+    }
+    runScripts('header-slot');
+    runScripts('footer-slot');
+
+    // Mark active nav based on current path
+    const path = location.pathname.replace(/\/index\.html$/,'/') || '/store.html';
+    const navLinks = document.querySelectorAll('header nav a, #site-header nav a');
+    navLinks.forEach(a => {
+      a.removeAttribute('aria-current');
+      const href = a.getAttribute('href');
+      if (href === path || href === '/store.html') {
+        a.setAttribute('aria-current','page');
+      }
+    });
+  }catch(e){
+    console.warn('Header/Footer injection failed', e);
+  }
+})();
+</script>
+
 </body>
 </html>
