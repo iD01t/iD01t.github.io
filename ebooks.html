@@ -39,21 +39,9 @@
   <!-- Optional: set your API key here; page works without a key for most cases -->
   <script>window.GBOOKS_API_KEY = window.GBOOKS_API_KEY || "";</script>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<body data-active="eBooks" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/store.html">Store</a>
-        <a href="/ebooks.html">eBooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html">Games</a>
-        <a href="/music.html" aria-current="page"><strong>Music</strong></a>
-        <a href="/services.html">Services</a>
-      </nav>
-    </div>
-  </header>
+  <div id="header-slot"></div>
 
   <!-- Hero -->
   <section class="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 dark:from-gray-800 dark:via-gray-900 dark:to-black">
@@ -112,9 +100,7 @@
     </div>
   </section>
 
-  <footer>
-    <div class="wrap">© <span id="year"></span> iD01t Productions</div>
-  </footer>
+  <div id="footer-slot"></div>
 
   <!-- JSON-LD (populated after load) -->
   <script id="ld-catalog" type="application/ld+json">
@@ -316,5 +302,65 @@
 
   loadCatalog();
   </script>
+
+<script>
+// Inject header/footer from /index.html so index is the single source of truth
+(async function injectLayout(){
+  try{
+    const res = await fetch('/index.html', {cache:'no-store'});
+    const text = await res.text();
+    const doc = new DOMParser().parseFromString(text, 'text/html');
+
+    // Copy any global stylesheets from index <head> if missing
+    const head = document.querySelector('head');
+    doc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !document.querySelector('link[rel="stylesheet"][href="' + href + '"]')) {
+        const l = document.createElement('link');
+        l.rel = 'stylesheet'; l.href = href;
+        head.appendChild(l);
+      }
+    });
+
+    // Inject header and footer HTML
+    const header = doc.querySelector('header');
+    const footer = doc.querySelector('footer');
+    if(header) document.getElementById('header-slot').innerHTML = header.outerHTML;
+    if(footer) document.getElementById('footer-slot').innerHTML = footer.outerHTML;
+
+    // Re-execute any scripts inside injected nodes (if index bundled logic there)
+    function runScripts(rootId){
+      const root = document.getElementById(rootId);
+      if(!root) return;
+      const scripts = root.querySelectorAll('script');
+      scripts.forEach(s => {
+        const ns = document.createElement('script');
+        Array.from(s.attributes).forEach(a=>ns.setAttribute(a.name,a.value));
+        ns.textContent = s.textContent;
+        s.replaceWith(ns);
+      });
+    }
+    runScripts('header-slot');
+    runScripts('footer-slot');
+
+    // Mark active nav based on current path or data-active
+    const active = (document.body.dataset.active || '').toLowerCase();
+    const navLinks = document.querySelectorAll('header nav a, #site-header nav a');
+    navLinks.forEach(a => {
+      a.removeAttribute('aria-current');
+      const label = a.textContent.trim().toLowerCase();
+      const href = a.getAttribute('href');
+      if ((active && label === active.toLowerCase()) ||
+          href === location.pathname ||
+          (active && href.toLowerCase().includes(active))) {
+        a.setAttribute('aria-current','page');
+      }
+    });
+  }catch(e){
+    console.warn('Header/Footer injection failed', e);
+  }
+})();
+</script>
+
 </body>
 </html>
