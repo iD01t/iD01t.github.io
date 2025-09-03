@@ -32,9 +32,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
-<div id=\"header-slot\"></div>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->
     
     <div class="container">
         <div style="text-align: center; margin-bottom: 3rem;">
@@ -80,63 +78,146 @@
     
     <script src="/assets/site.js" defer></script>
 
-<div id=\"footer-slot\"></div>
+<!-- ===== iD01t Store Hub ===== -->
+<section class="wrap" style="max-width:1200px;margin:40px auto">
+  <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+    <a class="card link" href="/games.html" style="padding:20px;border:1px solid var(--border);background:var(--card);border-radius:14px;text-decoration:none;color:inherit">
+      <h3 style="margin:0 0 8px 0">Games</h3>
+      <p style="margin:0;color:var(--muted)">Play Nini’s Adventures and more on itch.io</p>
+    </a>
+    <a class="card link" href="/ebooks.html" style="padding:20px;border:1px solid var(--border);background:var(--card);border-radius:14px;text-decoration:none;color:inherit">
+      <h3 style="margin:0 0 8px 0">eBooks</h3>
+      <p style="margin:0;color:var(--muted)">Programming, AI, tools, and mastery</p>
+    </a>
+    <a class="card link" href="/audiobooks.html" style="padding:20px;border:1px solid var(--border);background:var(--card);border-radius:14px;text-decoration:none;color:inherit">
+      <h3 style="margin:0 0 8px 0">Audiobooks</h3>
+      <p style="margin:0;color:var(--muted)">Listen on your favorite platforms</p>
+    </a>
+    <a class="card link" href="/music.html" style="padding:20px;border:1px solid var(--border);background:var(--card);border-radius:14px;text-decoration:none;color:inherit">
+      <h3 style="margin:0 0 8px 0">Music</h3>
+      <p style="margin:0;color:var(--muted)">DJ iD01t — albums & singles</p>
+    </a>
+  </div>
+</section>
+
+<section class="wrap" style="max-width:1200px;margin:20px auto">
+  <div class="card" style="display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;border:1px solid var(--border);background:var(--card);border-radius:16px;overflow:hidden">
+    <div class="media" style="padding:12px">
+      <iframe frameborder="0" src="https://itch.io/embed/3845294?linkback=true&amp;border_width=4&amp;dark=true" width="100%" height="173" style="width:100%;max-width:600px">
+        <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem">Nini's Adventures: Kitties Mayhem! by iD01t Productions</a>
+      </iframe>
+    </div>
+    <div style="padding:20px">
+      <h2 style="margin:0 0 8px 0">Featured: Nini’s Adventures — Kitties Mayhem!</h2>
+      <p style="margin:0 0 12px 0;color:var(--muted)">Chaotic online multiplayer. Public PC beta opens September 24, 2025.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="/games.html">Learn more</a>
+        <a class="btn outline" href="https://id01t.itch.io/" target="_blank" rel="noopener">All games on itch.io</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="max-width:1200px;margin:30px auto">
+  <h2 style="margin:0 0 12px 0">Books & Audio</h2>
+  <div id="books-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px"></div>
+  <div id="books-empty" style="display:none;color:var(--muted);margin-top:10px">No items found.</div>
+</section>
+
+<section class="wrap" style="max-width:1200px;margin:30px auto">
+  <h2 style="margin:0 0 12px 0">Music — Highlights</h2>
+  <div class="card" style="padding:16px;border:1px solid var(--border);background:var(--card);border-radius:12px">
+    <div style="display:grid;grid-template-columns:1fr 1fr; gap:12px">
+      <div class="aspect-video" style="position:relative;padding-top:56%">
+        <iframe style="position:absolute;inset:0;width:100%;height:100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-video" style="position:relative;padding-top:56%">
+        <iframe style="position:absolute;inset:0;width:100%;height:100%" src="https://www.youtube.com/embed/GsVqmOx4Rwc?si=YWqbARP_0Hw5l_yB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn" href="/music.html">All music</a>
+      <a class="btn outline" href="https://www.youtube.com/@id01t" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</section>
 
 <script>
-// Inject header/footer from /index.html so index is the single source of truth
-(async function injectLayout(){
-  try{
-    const res = await fetch('/index.html', {cache:'no-store'});
-    const text = await res.text();
-    const doc = new DOMParser().parseFromString(text, 'text/html');
+// Optional API keys (never commit real keys to public repos)
+window.GBOOKS_API_KEY = window.GBOOKS_API_KEY || "";
+window.ITCH_API_KEY = window.ITCH_API_KEY || "";
 
-    // Copy any global stylesheets from index <head> if missing
-    const head = document.querySelector('head');
-    doc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !document.querySelector('link[rel="stylesheet"][href="' + href + '"]')) {
-        const l = document.createElement('link');
-        l.rel = 'stylesheet'; l.href = href;
-        head.appendChild(l);
-      }
-    });
+// ===== Google Books loader (Books & Audiobooks) =====
+const API = 'https://www.googleapis.com/books/v1/volumes';
+function coverById(id, zoom=3){return `https://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=${zoom}&source=gbs_api`}
+function toBook(v){
+  const vi = v.volumeInfo||{}, si = v.saleInfo||{};
+  return {
+    id: v.id, title: vi.title||'', subtitle: vi.subtitle||'',
+    img: coverById(v.id,3), img2x: coverById(v.id,4),
+    year: (vi.publishedDate||'').slice(0,4), lang: (vi.language||'').toUpperCase(),
+    cats: vi.categories||[], link: vi.infoLink||v.selfLink||'', buy: si.buyLink||vi.infoLink||''
+  };
+}
+function card(b){
+  const srcset = b.img2x ? `${b.img} 1x, ${b.img2x} 2x` : b.img;
+  const cats = (b.cats||[]).slice(0,2).map(c=>`<span class="pill">${c}</span>`).join(' ');
+  return `<article class="book">
+    <img loading="lazy" decoding="async" src="${b.img}" srcset="${srcset}" alt="${b.title} cover">
+    <div class="meta"><h3>${b.title}</h3><p>${b.subtitle||''}</p></div>
+    <div class="row">
+      <div class="tiny">${b.lang||''}${b.year? ' • '+b.year:''}</div>
+      <div class="tiny">${cats}</div>
+    </div>
+    <div class="row">
+      <a class="btn sm" href="${b.link}" target="_blank" rel="noopener">Google Books</a>
+      ${b.buy? `<a class="btn sm outline" href="${b.buy}" target="_blank" rel="noopener">Buy</a>`:''}
+    </div>
+  </article>`;
+}
 
-    // Inject header and footer HTML
-    const header = doc.querySelector('header');
-    const footer = doc.querySelector('footer');
-    if(header) document.getElementById('header-slot').innerHTML = header.outerHTML;
-    if(footer) document.getElementById('footer-slot').innerHTML = footer.outerHTML;
-
-    // Re-execute any scripts inside injected nodes (if index bundled logic there)
-    function runScripts(rootId){
-      const root = document.getElementById(rootId);
-      if(!root) return;
-      const scripts = root.querySelectorAll('script');
-      scripts.forEach(s => {
-        const ns = document.createElement('script');
-        Array.from(s.attributes).forEach(a=>ns.setAttribute(a.name,a.value));
-        ns.textContent = s.textContent;
-        s.replaceWith(ns);
-      });
-    }
-    runScripts('header-slot');
-    runScripts('footer-slot');
-
-    // Mark active nav based on current path
-    const path = location.pathname.replace(/\/index\.html$/,'/') || '/store.html';
-    const navLinks = document.querySelectorAll('header nav a, #site-header nav a');
-    navLinks.forEach(a => {
-      a.removeAttribute('aria-current');
-      const href = a.getAttribute('href');
-      if (href === path || href === '/store.html') {
-        a.setAttribute('aria-current','page');
-      }
-    });
-  }catch(e){
-    console.warn('Header/Footer injection failed', e);
+async function fetchBooks(q){
+  const key = window.GBOOKS_API_KEY ? `&key=${encodeURIComponent(window.GBOOKS_API_KEY)}` : '';
+  const url = `${API}?q=${encodeURIComponent(q)}&printType=books&maxResults=40${key}`;
+  const res = await fetch(url); if(!res.ok) return [];
+  const data = await res.json();
+  return (data.items||[]).map(toBook);
+}
+(async function booksSection(){
+  const qs = [
+    'inauthor:"Guillaume Lessard"',
+    'inpublisher:"iD01t Productions"',
+    'subject:audiobooks inauthor:"Guillaume Lessard"'
+  ];
+  const map = new Map();
+  for(const q of qs){
+    const items = await fetchBooks(q);
+    items.forEach(b => { const k=(b.title+'|'+(b.year||'')).toLowerCase(); if(!map.has(k)) map.set(k,b); });
   }
+  const list = Array.from(map.values()).sort((a,b)=> (b.year||0)-(a.year||0)).slice(0,12);
+  const grid = document.getElementById('books-grid');
+  const empty = document.getElementById('books-empty');
+  if(!list.length){ empty.style.display='block'; return; }
+  grid.innerHTML = list.map(card).join('');
 })();
+
+// Minimal styles for book cards
+const style = document.createElement('style'); style.textContent = `
+:root{--border:rgba(0,0,0,.12);--card:rgba(0,0,0,.03);--muted:#6b7280}
+@media (prefers-color-scheme: dark){:root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.05);--muted:rgba(255,255,255,.7)}}
+.wrap .book{border:1px solid var(--border);background:var(--card);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:10px}
+.wrap .book img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.wrap .book .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.wrap .book .tiny{font-size:12px;color:var(--muted)}
+.pill{font-size:11px;padding:2px 6px;border:1px solid var(--border);border-radius:999px}
+.btn{display:inline-block;background:#0ea5e9;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none}
+.btn.outline{background:transparent;color:inherit;border:1px solid var(--border)}
+.btn.sm{padding:6px 10px;border-radius:8px}
+.card .btn{background:#0ea5e9}
+`;
+document.head.appendChild(style);
 </script>
+<!-- ===== End Store Hub ===== -->
 
 </body>
 </html>
