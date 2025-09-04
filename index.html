@@ -3,26 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iD01t Productions — Ebooks, Audiobooks, Music, Games</title>
-  <meta name="description" content="Professional digital content by Guillaume Lessard (iD01t Productions): eBooks, audiobooks, music, apps & games.">
-  <link rel="canonical" href="/">
+  <title>iD01t Productions: Tech eBooks, Audiobooks, Music & Games by Guillaume Lessard</title>
+  <meta name="description" content="Professional digital content by Guillaume Lessard (iD01t Productions): Tech eBooks, audiobooks, electronic music, apps & games. Creative tech solutions for modern creators.">
+  <meta name="keywords" content="iD01t Productions, Guillaume Lessard, tech ebooks, audiobooks, electronic music, games, apps, creative tech, programming, development, automation, SEO">
+  <link rel="canonical" href="https://id01t.github.io/">
   <meta name="robots" content="index,follow">
+  <meta name="author" content="Guillaume Lessard">
+  <meta name="theme-color" content="#5468ff">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="iD01t Productions — Guillaume Lessard">
-  <meta property="og:description" content="Official hub for eBooks, audiobooks, music, apps & games.">
-  <meta property="og:url" content="/">
-  <meta property="og:image" content="/assets/img/placeholders/card-square-640.webp">
+  <meta property="og:title" content="iD01t Productions: Tech eBooks, Audiobooks, Music & Games by Guillaume Lessard">
+  <meta property="og:description" content="Professional digital content by Guillaume Lessard (iD01t Productions): Tech eBooks, audiobooks, electronic music, apps & games. Creative tech solutions for modern creators.">
+  <meta property="og:url" content="https://id01t.github.io/">
+  <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/card-square-640.webp">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="640">
+  <meta property="og:site_name" content="iD01t Productions">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="iD01t Productions">
-  <meta name="twitter:description" content="eBooks, audiobooks, music, apps & games by Guillaume Lessard.">
-  <meta name="twitter:image" content="/assets/img/placeholders/card-square-640.webp">
+  <meta name="twitter:title" content="iD01t Productions: Tech eBooks, Audiobooks, Music & Games">
+  <meta name="twitter:description" content="Professional digital content by Guillaume Lessard: Tech eBooks, audiobooks, electronic music, apps & games. Creative tech solutions for modern creators.">
+  <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/card-square-640.webp">
+  <meta name="twitter:creator" content="@id01t">
 
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/assets/site.css">
 
   <!-- Google Analytics -->
@@ -97,7 +105,17 @@
         <a href="/games.html">Games</a>
         <a href="/music.html">Music</a>
         <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
       </nav>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
+          <input type="search" name="q" placeholder="Search..." 
+                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
+          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
+            🔍
+          </button>
+        </form>
+      </div>
     </div>
   </header>
 
@@ -111,6 +129,22 @@
         <a class="btn" href="/audiobooks.html">Audiobooks</a>
         <a class="btn" href="/music.html">Music</a>
         <a class="btn" href="/games.html">Games</a>
+      </div>
+      
+      <!-- Social Sharing -->
+      <div class="social-share" style="margin-top: 20px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://twitter.com/intent/tweet?text=Check%20out%20iD01t%20Productions%20-%20Tech%20eBooks,%20Audiobooks,%20Music%20%26%20Games%20by%20Guillaume%20Lessard&url=https://id01t.github.io" 
+           target="_blank" rel="noopener" class="btn" style="background: #1da1f2; color: white; text-decoration: none;">
+          Share on Twitter
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://id01t.github.io" 
+           target="_blank" rel="noopener" class="btn" style="background: #0077b5; color: white; text-decoration: none;">
+          Share on LinkedIn
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://id01t.github.io" 
+           target="_blank" rel="noopener" class="btn" style="background: #4267b2; color: white; text-decoration: none;">
+          Share on Facebook
+        </a>
       </div>
     </div>
   </section>
@@ -176,9 +210,36 @@
     <!-- ABOUT -->
     <section class="card" style="padding:18px;margin-top:18px">
       <h2 style="margin:0 0 8px">About Guillaume Lessard</h2>
-      <p class="muted" style="margin:0">
+      <p class="muted" style="margin:0 0 16px">
         Canadian developer, author, and music producer behind iD01t Productions. Building automation-first,
         ROI-focused content across books, audio, apps, and tools to empower creators.
+      </p>
+      <div class="badge-row" style="margin-bottom: 16px;">
+        <span class="pill">10+ Years Experience</span>
+        <span class="pill">100+ Digital Products</span>
+        <span class="pill">Automation Expert</span>
+      </div>
+      <div style="margin-top: 16px;">
+        <a class="btn" href="/about.html">Learn More</a>
+        <a class="btn" href="/contact.html" style="margin-left: 8px;">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SIGNUP -->
+    <section class="card" style="padding:18px;margin-top:18px;background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+      <h2 style="margin:0 0 8px; color: white;">Stay Updated</h2>
+      <p style="margin:0 0 16px; opacity: 0.9;">
+        Get the latest updates on new eBooks, audiobooks, music releases, and exclusive content.
+      </p>
+      <form style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+        <input type="email" placeholder="Enter your email" 
+               style="flex: 1; min-width: 200px; padding: 10px 12px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9);">
+        <button type="submit" class="btn" style="background: white; color: #667eea; border: none;">
+          Subscribe
+        </button>
+      </form>
+      <p style="margin: 8px 0 0; font-size: 0.8rem; opacity: 0.8;">
+        No spam. Unsubscribe anytime.
       </p>
     </section>
   </main>
@@ -186,6 +247,9 @@
   <footer>
     <div class="wrap">© <span id="year"></span> iD01t Productions</div>
   </footer>
+
+  <!-- Performance monitoring -->
+  <script src="/js/performance.js" defer></script>
 
   <!-- Minimal homepage logic -->
   <script>
