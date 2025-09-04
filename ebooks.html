@@ -164,20 +164,53 @@
   }
 
   function imgBest(v) {
-    // Prefer constructing from the volume ID at higher zooms (HD)
+    // Enhanced image handling with multiple fallbacks and HD optimization
     const id = v.id || (v.selfLink ? v.selfLink.split('/').pop() : '');
-    const primary = id ? coverUrlById(id, 4) : ''; // Higher zoom for better quality
-    const retina = id ? coverUrlById(id, 5) : ''; // Even higher for retina displays
-    // Fallback to API-provided links (force https + higher zoom where possible)
-    const L = (v.volumeInfo && v.volumeInfo.imageLinks) ? v.volumeInfo.imageLinks : {};
-    let fallback = L.extraLarge || L.large || L.medium || L.small || L.thumbnail || L.smallThumbnail || '';
-    if (fallback) {
-      fallback = fallback.replace(/^http:/, 'https:');
-      fallback = fallback.replace(/zoom=\d/, 'zoom=4'); // Higher default zoom
-    }
-    const src = primary || fallback || '/assets/harvested/ebooks/img_1.jpg';
-    const src2x = retina || (fallback ? fallback.replace(/zoom=4/, 'zoom=5') : '');
-    return { src, src2x };
+    
+    // Try multiple image sources in order of preference
+    const imageSources = [
+      // Ultra HD from Google Books API (zoom=5)
+      id ? coverUrlById(id, 5) : '',
+      // HD from Google Books API (zoom=4)  
+      id ? coverUrlById(id, 4) : '',
+      // Medium quality from Google Books API (zoom=3)
+      id ? coverUrlById(id, 3) : '',
+      // Enhanced API-provided links with higher zoom
+      (() => {
+        const L = (v.volumeInfo && v.volumeInfo.imageLinks) ? v.volumeInfo.imageLinks : {};
+        let fallback = L.extraLarge || L.large || L.medium || L.small || L.thumbnail || L.smallThumbnail || '';
+        if (fallback) {
+          fallback = fallback.replace(/^http:/, 'https:');
+          fallback = fallback.replace(/zoom=\d/, 'zoom=4'); // Higher default zoom
+        }
+        return fallback;
+      })(),
+      // Original API links as last resort
+      (() => {
+        const L = (v.volumeInfo && v.volumeInfo.imageLinks) ? v.volumeInfo.imageLinks : {};
+        return L.extraLarge || L.large || L.medium || L.small || L.thumbnail || L.smallThumbnail || '';
+      })(),
+      // Local HD fallbacks
+      '/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_002_Windows_Zero_to_Hero_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_003_To_the_Top_of_the_Mountain_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_004_Intersection_The_Moment_Their_Paths_Crossed_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_005_The_Architects_Legacy_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_006_AI_Today_Transforming_Lives_and_Industries_for_the_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_007_Shadows_of_Redemption_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_008_Quantum_Tao_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_009_Light_at_the_Veils_Edge_zoom5.jpg',
+      '/assets/harvested/ebooks/ebook_010_Legacy_of_Shadows_zoom5.jpg',
+      '/assets/harvested/ebooks/img_1.jpg'
+    ];
+    
+    const src = imageSources.find(url => url && url.length > 0);
+    const src2x = (id ? coverUrlById(id, 5) : '') || (src && src.includes('zoom=4') ? src.replace('zoom=4', 'zoom=5') : '') || src;
+    
+    return { 
+      src: src || '/assets/harvested/ebooks/img_1.jpg', 
+      src2x: src2x || src || '/assets/harvested/ebooks/img_1.jpg'
+    };
   }
 
   function bookFromVolume(v) {
@@ -213,7 +246,7 @@
         <img loading="lazy" decoding="async" src="${b.cover}" srcset="${srcset}"
              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
              alt="${b.title} cover" class="w-full aspect-[3/4] object-cover"
-             onerror="this.src='/assets/harvested/ebooks/img_1.jpg'; this.onerror=null;"/>
+             onerror="this.src='/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg'; this.onerror=null;"/>
         <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
           <a href="${landingPageUrl}" class="opacity-0 hover:opacity-100 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-opacity duration-300">
             View Details
@@ -260,30 +293,68 @@
 
   let CATALOG = [];
 
-  async function fetchAll(query) {
+  async function fetchAll(query, retries = 3) {
     const key = window.GBOOKS_API_KEY ? `&key=${encodeURIComponent(window.GBOOKS_API_KEY)}` : '';
     const maxResults = 40;
     let startIndex = 0, total = 0, out = [];
-    for (let page=0; page<6; page++) { // up to 240 items/query
+    
+    for (let page = 0; page < 6; page++) { // up to 240 items/query
       const url = `${API}?q=${encodeURIComponent(query)}&printType=books&maxResults=${maxResults}&startIndex=${startIndex}${key}`;
-      const res = await fetch(url);
-      if (!res.ok) break;
-      const data = await res.json();
-      total = data.totalItems || 0;
-      const items = (data.items||[]);
-      if (!items.length) break;
-      out.push(...items);
-      startIndex += maxResults;
-      if (startIndex >= total) break;
+      
+      let success = false;
+      for (let attempt = 0; attempt < retries && !success; attempt++) {
+        try {
+          const res = await fetch(url, {
+            headers: {
+              'Accept': 'application/json',
+              'User-Agent': 'iD01t-Productions/1.0'
+            }
+          });
+          
+          if (!res.ok) {
+            if (res.status === 429) { // Rate limited
+              await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+              continue;
+            }
+            throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+          }
+          
+          const data = await res.json();
+          total = data.totalItems || 0;
+          const items = (data.items || []);
+          
+          if (!items.length) {
+            success = true;
+            break;
+          }
+          
+          out.push(...items);
+          startIndex += maxResults;
+          success = true;
+          
+          if (startIndex >= total) break;
+        } catch (error) {
+          console.warn(`Attempt ${attempt + 1} failed for query "${query}":`, error.message);
+          if (attempt === retries - 1) throw error;
+          await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+        }
+      }
+      
+      if (!success) break;
     }
+    
     return out;
   }
 
   async function loadCatalog() {
     statusEl.textContent = 'Loading catalog from Google Books…';
     const maps = new Map();
+    let totalQueries = QUERIES.length;
+    let completedQueries = 0;
+    
     for (const q of QUERIES) {
       try {
+        statusEl.textContent = `Loading catalog from Google Books… (${completedQueries + 1}/${totalQueries})`;
         const vols = await fetchAll(q);
         vols.forEach(v => {
           const b = bookFromVolume(v);
@@ -291,23 +362,45 @@
           const key = (b.title + '|' + (b.year||'')).toLowerCase();
           if (!maps.has(key)) maps.set(key, b);
         });
-      } catch(e) { console.warn('Query failed', q, e); }
+        completedQueries++;
+      } catch(e) { 
+        console.warn('Query failed', q, e);
+        completedQueries++;
+      }
     }
+    
     CATALOG = Array.from(maps.values());
+    
     // Populate filters dynamically
     const langs = Array.from(new Set(CATALOG.map(b=>b.lang).filter(Boolean))).sort();
     const tags = Array.from(new Set(CATALOG.flatMap(b=>b.tags||[]))).sort();
     $('filterLang').innerHTML = '<option value="">All languages</option>' + langs.map(l=>`<option>${l}</option>`).join('');
     $('filterTag').innerHTML = '<option value="">All categories</option>' + tags.map(t=>`<option>${t}</option>`).join('');
+    
     // Render
     render(applyFilters(CATALOG));
     statusEl.textContent = `Loaded ${CATALOG.length} book(s) from Google Books`;
+    
     // Update JSON-LD
     const ld = document.getElementById('ld-catalog');
-    const items = CATALOG.slice(0, 100).map((b,i)=>({
-      "@type":"ListItem","position":i+1,"item":{"@type":"Book","name":b.title,"image":b.cover,"url":b.link}
-    }));
-    ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"ItemList","name":"iD01t eBooks Catalog","itemListElement":items});
+    if (ld) {
+      const items = CATALOG.slice(0, 100).map((b,i)=>({
+        "@type":"ListItem","position":i+1,"item":{"@type":"Book","name":b.title,"image":b.cover,"url":b.link}
+      }));
+      ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"ItemList","name":"iD01t eBooks Catalog","itemListElement":items});
+    }
+    
+    // Preload HD images for better user experience
+    preloadHDImages(CATALOG.slice(0, 20)); // Preload first 20 books
+  }
+  
+  function preloadHDImages(books) {
+    books.forEach(book => {
+      if (book.cover2x && book.cover2x !== book.cover) {
+        const img = new Image();
+        img.src = book.cover2x;
+      }
+    });
   }
 
   function refresh() { render(applyFilters(CATALOG)); }
@@ -449,7 +542,7 @@
   <main class="wrap" style="margin-top: 40px;">
     <div class="book-layout">
       <div class="book-cover">
-        <img src="${book.cover}" alt="${book.title} Cover" loading="eager" onerror="this.src='/assets/harvested/ebooks/img_1.jpg'">
+        <img src="${book.cover}" alt="${book.title} Cover" loading="eager" onerror="this.src='/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg'">
       </div>
       
       <div class="book-info">

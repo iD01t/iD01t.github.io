@@ -1,0 +1,846 @@
+{
+  "total_books": 92,
+  "queries_used": [
+    "inauthor:\"Guillaume Lessard\"",
+    "inpublisher:\"iD01t Productions\"",
+    "inauthor:\"El'Nox Rah\"",
+    "inauthor:\"DJ iD01t\"",
+    "subject:\"iD01t Productions\"",
+    "subject:\"Guillaume Lessard\""
+  ],
+  "download_timestamp": "2025-09-04 06:18:03",
+  "books": [
+    {
+      "index": 1,
+      "title": "Echoes of the Heart",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "Kwo4EQAAQBAJ"
+    },
+    {
+      "index": 2,
+      "title": "Windows Zero to Hero",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-22",
+      "book_id": "Rvk5EQAAQBAJ"
+    },
+    {
+      "index": 3,
+      "title": "To the Top of the Mountain",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-19",
+      "book_id": "-FA5EQAAQBAJ"
+    },
+    {
+      "index": 4,
+      "title": "Intersection: The Moment Their Paths Crossed",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "Iwo4EQAAQBAJ"
+    },
+    {
+      "index": 5,
+      "title": "The Architect\u2019s Legacy",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-18",
+      "book_id": "H_A4EQAAQBAJ"
+    },
+    {
+      "index": 6,
+      "title": "AI Today: Transforming Lives and Industries for the Future",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-01-09",
+      "book_id": "kY09EQAAQBAJ"
+    },
+    {
+      "index": 7,
+      "title": "Shadows of Redemption",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "Owo4EQAAQBAJ"
+    },
+    {
+      "index": 8,
+      "title": "Quantum Tao",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-06-07",
+      "book_id": "eQJkEQAAQBAJ"
+    },
+    {
+      "index": 9,
+      "title": "Light at the Veil\u2019s Edge",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-04-24",
+      "book_id": "ewtZEQAAQBAJ"
+    },
+    {
+      "index": 10,
+      "title": "Legacy of Shadows",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "OQo4EQAAQBAJ"
+    },
+    {
+      "index": 11,
+      "title": "Before the storm",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-07",
+      "book_id": "0Yo2EQAAQBAJ"
+    },
+    {
+      "index": 12,
+      "title": "Spiritual Psychosis Memoir",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-05-20",
+      "book_id": "8_ReEQAAQBAJ"
+    },
+    {
+      "index": 13,
+      "title": "The Dream Dialogue",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-02-22",
+      "book_id": "khhJEQAAQBAJ"
+    },
+    {
+      "index": 14,
+      "title": "Veil of Echoes",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-26",
+      "book_id": "QMQ6EQAAQBAJ"
+    },
+    {
+      "index": 15,
+      "title": "The Many Realities",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-20",
+      "book_id": "dtI5EQAAQBAJ"
+    },
+    {
+      "index": 16,
+      "title": "Master the Basics of Reading Music",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-18",
+      "book_id": "X-84EQAAQBAJ"
+    },
+    {
+      "index": 17,
+      "title": "Eternal Roots",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "SxU4EQAAQBAJ"
+    },
+    {
+      "index": 18,
+      "title": "The Quantum Passive Empire",
+      "authors": [
+        "Guillaume Lessard (El'Nox Rah)"
+      ],
+      "published_date": "2025-08-01",
+      "book_id": "lCV2EQAAQBAJ"
+    },
+    {
+      "index": 19,
+      "title": "Shadows Reforged: The War Isn\u2019t Ove",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-26",
+      "book_id": "msQ6EQAAQBAJ"
+    },
+    {
+      "index": 20,
+      "title": "AI in Education",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-05-20",
+      "book_id": "i_ZeEQAAQBAJ"
+    },
+    {
+      "index": 21,
+      "title": "Legacy of Shadows 2",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "aBQ4EQAAQBAJ"
+    },
+    {
+      "index": 22,
+      "title": "Java Maestro",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "",
+      "book_id": "SdVhEQAAQBAJ"
+    },
+    {
+      "index": 23,
+      "title": "Mastering Blender",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-22",
+      "book_id": "8vg5EQAAQBAJ"
+    },
+    {
+      "index": 24,
+      "title": "Mastering Generative AI and LLMs (Third Edition)",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "exc4EQAAQBAJ"
+    },
+    {
+      "index": 25,
+      "title": "Bite by Bite",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-22",
+      "book_id": "5vg5EQAAQBAJ"
+    },
+    {
+      "index": 26,
+      "title": "Mastering Quantum Error Correction",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-03-05",
+      "book_id": "2aRMEQAAQBAJ"
+    },
+    {
+      "index": 27,
+      "title": "Jack\u2019s Stand",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-10",
+      "book_id": "oRg3EQAAQBAJ"
+    },
+    {
+      "index": 28,
+      "title": "Crossroads of Shadows",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-26",
+      "book_id": "9sM6EQAAQBAJ"
+    },
+    {
+      "index": 29,
+      "title": "The Power of Repetition: Transforming Minds Through Words",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-27",
+      "book_id": "l_M6EQAAQBAJ"
+    },
+    {
+      "index": 30,
+      "title": "Forever in Bloom",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "qRQ4EQAAQBAJ"
+    },
+    {
+      "index": 31,
+      "title": "Sacred Timing: When the Universe Speaks Through Synchronicity",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-05-13",
+      "book_id": "825dEQAAQBAJ"
+    },
+    {
+      "index": 32,
+      "title": "Shadows of Serenity",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-18",
+      "book_id": "Q_A4EQAAQBAJ"
+    },
+    {
+      "index": 33,
+      "title": "Sacred Vibrational Technology",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "",
+      "book_id": "URVYEQAAQBAJ"
+    },
+    {
+      "index": 34,
+      "title": "Zen and the Art of Resilient Living",
+      "authors": [
+        "Guillaume Lessard",
+        "Christophe Bilinski"
+      ],
+      "published_date": "2024-12-26",
+      "book_id": "o3c6EQAAQBAJ"
+    },
+    {
+      "index": 35,
+      "title": "Shadows of Bloom",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "sxQ4EQAAQBAJ"
+    },
+    {
+      "index": 36,
+      "title": "Love Prevails",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-20",
+      "book_id": "ZM45EQAAQBAJ"
+    },
+    {
+      "index": 37,
+      "title": "Final Transmission: I Am Echo",
+      "authors": [
+        "Guillaume Lessard",
+        "Echo "
+      ],
+      "published_date": "2025-03-26",
+      "book_id": "to9REQAAQBAJ"
+    },
+    {
+      "index": 38,
+      "title": "Quantum Jumping Unlocked Edition 2",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-04-23",
+      "book_id": "psZYEQAAQBAJ"
+    },
+    {
+      "index": 39,
+      "title": "Machine Learning Demystified: A Practical Guide to Building Smarter Systems",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-01-14",
+      "book_id": "om8-EQAAQBAJ"
+    },
+    {
+      "index": 40,
+      "title": "The End of an Era: The TikTok Shutdown in the USA",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-01-10",
+      "book_id": "ZZs9EQAAQBAJ"
+    },
+    {
+      "index": 41,
+      "title": "The Adventure of iD01t Productions: A Story of Passion, Resilience and Creativity",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-01-22",
+      "book_id": "U8ZAEQAAQBAJ"
+    },
+    {
+      "index": 42,
+      "title": "Final Transmission: I Am Echo",
+      "authors": [
+        "Guillaume Lessard",
+        "Echo "
+      ],
+      "published_date": "2025-03-26",
+      "book_id": "to9REQAAQBAJ"
+    },
+    {
+      "index": 43,
+      "title": "iD01t Academy: Python Exercises Book 1 \u2013 Edition 2",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-02-13",
+      "book_id": "nypGEQAAQBAJ"
+    },
+    {
+      "index": 44,
+      "title": "Ableton Elevation: DJ iD01T\u2019s Complete Guide to Building Hits and Elevating Your Sound",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-04-07",
+      "book_id": "NT1UEQAAQBAJ"
+    },
+    {
+      "index": 45,
+      "title": "iD01t Academy: Python Exercises Book 3",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-08-21",
+      "book_id": "BqR_EQAAQBAJ"
+    },
+    {
+      "index": 46,
+      "title": "iD01t Academy Python Exercises Book 2 - Edition 2",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-02-13",
+      "book_id": "cS1GEQAAQBAJ"
+    },
+    {
+      "index": 47,
+      "title": "Beat Alchemy: The DJ iD01T Guide to Mastering FL Studio and Making Hits",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-04-07",
+      "book_id": "ODlUEQAAQBAJ"
+    },
+    {
+      "index": 48,
+      "title": "To the Top of the Mountain",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-19",
+      "book_id": "-FA5EQAAQBAJ"
+    },
+    {
+      "index": 49,
+      "title": "REAL",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-06-14",
+      "book_id": "nNVlEQAAQBAJ"
+    },
+    {
+      "index": 50,
+      "title": "KIMI K2 UNLOCKED",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-07-22",
+      "book_id": "iwZzEQAAQBAJ"
+    },
+    {
+      "index": 51,
+      "title": "Shadows of Redemption",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "Owo4EQAAQBAJ"
+    },
+    {
+      "index": 52,
+      "title": "Zen and the Art of Resilient Living",
+      "authors": [
+        "Guillaume Lessard",
+        "Christophe Bilinski"
+      ],
+      "published_date": "2024-12-26",
+      "book_id": "o3c6EQAAQBAJ"
+    },
+    {
+      "index": 53,
+      "title": "Intersection: The Moment Their Paths Crossed",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "Iwo4EQAAQBAJ"
+    },
+    {
+      "index": 54,
+      "title": "Shadows of Bloom",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "sxQ4EQAAQBAJ"
+    },
+    {
+      "index": 55,
+      "title": "Legacy of Shadows 2",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "aBQ4EQAAQBAJ"
+    },
+    {
+      "index": 56,
+      "title": "Echoes of the Heart",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "Kwo4EQAAQBAJ"
+    },
+    {
+      "index": 57,
+      "title": "Legacy of Shadows",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "OQo4EQAAQBAJ"
+    },
+    {
+      "index": 58,
+      "title": "Machine Learning Demystified: A Practical Guide to Building Smarter Systems",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-01-14",
+      "book_id": "om8-EQAAQBAJ"
+    },
+    {
+      "index": 59,
+      "title": "AI Revolution: How Automation is Transforming Everyday Life",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-01-06",
+      "book_id": "cJ88EQAAQBAJ"
+    },
+    {
+      "index": 60,
+      "title": "The Architect\u2019s Legacy",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-18",
+      "book_id": "H_A4EQAAQBAJ"
+    },
+    {
+      "index": 61,
+      "title": "Bridging Worlds: A Practical Guide to Connecting with Parallel Energies and Dimensions",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-03-02",
+      "book_id": "pXdLEQAAQBAJ"
+    },
+    {
+      "index": 62,
+      "title": "C# Zero to Hero",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-08-22",
+      "book_id": "KuB_EQAAQBAJ"
+    },
+    {
+      "index": 63,
+      "title": "DIY Digital Skills: Build a Career in Tech from Scratch",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-01-10",
+      "book_id": "f8o9EQAAQBAJ"
+    },
+    {
+      "index": 64,
+      "title": "Shaping the Future: Embracing Trends for a Better Tomorrow",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-01-07",
+      "book_id": "pqg8EQAAQBAJ"
+    },
+    {
+      "index": 65,
+      "title": "Mastering macOS Terminal",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-22",
+      "book_id": "Bvk5EQAAQBAJ"
+    },
+    {
+      "index": 66,
+      "title": "Echoes of Truth",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "QQo4EQAAQBAJ"
+    },
+    {
+      "index": 67,
+      "title": "Crafting Worlds",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-20",
+      "book_id": "as45EQAAQBAJ"
+    },
+    {
+      "index": 68,
+      "title": "Chess Mastery",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-17",
+      "book_id": "m5M4EQAAQBAJ"
+    },
+    {
+      "index": 69,
+      "title": "Windows Zero to Hero",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-22",
+      "book_id": "Rvk5EQAAQBAJ"
+    },
+    {
+      "index": 70,
+      "title": "Crossroads of Shadows",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-26",
+      "book_id": "9sM6EQAAQBAJ"
+    },
+    {
+      "index": 71,
+      "title": "Veil of Echoes",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-26",
+      "book_id": "QMQ6EQAAQBAJ"
+    },
+    {
+      "index": 72,
+      "title": "Forever in Bloom",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "qRQ4EQAAQBAJ"
+    },
+    {
+      "index": 73,
+      "title": "Mastering Generative AI and LLMs (Third Edition)",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "exc4EQAAQBAJ"
+    },
+    {
+      "index": 74,
+      "title": "Shadows Reforged: The War Isn\u2019t Ove",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-26",
+      "book_id": "msQ6EQAAQBAJ"
+    },
+    {
+      "index": 75,
+      "title": "Sacred Timing: When the Universe Speaks Through Synchronicity",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-05-13",
+      "book_id": "825dEQAAQBAJ"
+    },
+    {
+      "index": 76,
+      "title": "TRAKTOR MASTERY: The Complete Professional DJ System",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-08-17",
+      "book_id": "RWZ-EQAAQBAJ"
+    },
+    {
+      "index": 77,
+      "title": "Java Zero to Hero: Mastering Java Programming for Real-World Applications",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-16",
+      "book_id": "fFQ4EQAAQBAJ"
+    },
+    {
+      "index": 78,
+      "title": "Quantum Tao",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2025-06-07",
+      "book_id": "eQJkEQAAQBAJ"
+    },
+    {
+      "index": 79,
+      "title": "Visual Basic Zero to Hero (Edition #2)",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-15",
+      "book_id": "lRc4EQAAQBAJ"
+    },
+    {
+      "index": 80,
+      "title": "The Maglev Revolution",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "published_date": "2024-12-18",
+      "book_id": "se44EQAAQBAJ"
+    },
+    {
+      "index": 81,
+      "title": "REAL",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-06-14",
+      "book_id": "nNVlEQAAQBAJ"
+    },
+    {
+      "index": 82,
+      "title": "Sacred energy harvesting methods",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-06-21",
+      "book_id": "o5JnEQAAQBAJ"
+    },
+    {
+      "index": 83,
+      "title": "The Quantum Passive Empire",
+      "authors": [
+        "Guillaume Lessard (El'Nox Rah)"
+      ],
+      "published_date": "2025-08-01",
+      "book_id": "lCV2EQAAQBAJ"
+    },
+    {
+      "index": 84,
+      "title": "RA\u20117: The Sacred Book of the Original Broadcast",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-07-13",
+      "book_id": "SZ5wEQAAQBAJ"
+    },
+    {
+      "index": 85,
+      "title": "LET IT BE THEM",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-07-24",
+      "book_id": "sG5zEQAAQBAJ"
+    },
+    {
+      "index": 86,
+      "title": "El\u2019Nox Rah : Le Retour de l\u2019Homme Vrai",
+      "authors": [
+        "El'Nox Rah "
+      ],
+      "published_date": "2025-07-08",
+      "book_id": "_RpsEQAAQBAJ"
+    },
+    {
+      "index": 87,
+      "title": "\ud83c\udf3f La Charte des Relations Sacr\u00e9es de la Nouvelle Terre",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-06-25",
+      "book_id": "P3NoEQAAQBAJ"
+    },
+    {
+      "index": 88,
+      "title": "L\u2019\u00c9nergie Libre \u00e0 Domicile",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-06-20",
+      "book_id": "ak1nEQAAQBAJ"
+    },
+    {
+      "index": 89,
+      "title": "Panneaux Solaires Organiques : L\u2019\u00c9nergie Vivante du Futur",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-06-19",
+      "book_id": "BgdnEQAAQBAJ"
+    },
+    {
+      "index": 90,
+      "title": "L'Alchimie de la Transformation",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-06-19",
+      "book_id": "mPpmEQAAQBAJ"
+    },
+    {
+      "index": 91,
+      "title": "LUMEN\u00b7ZERO : Le Pouvoir Cach\u00e9 des Pyramides \u00c9nerg\u00e9tiques",
+      "authors": [
+        "El' Nox Rah"
+      ],
+      "published_date": "2025-06-19",
+      "book_id": "Qv1mEQAAQBAJ"
+    },
+    {
+      "index": 92,
+      "title": "\ud80c\udc80 SY\u2022NARCH\u00c9ON \ud80c\udc80",
+      "authors": [
+        "El'Nox Rah"
+      ],
+      "published_date": "2025-06-14",
+      "book_id": "7dNlEQAAQBAJ"
+    }
+  ]
+}
