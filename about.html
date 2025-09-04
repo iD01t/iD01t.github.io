@@ -1,82 +1,368 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>About • iD01t Productions</title>
-<meta content="Learn about iD01t Productions and Guillaume Lessard's journey in digital content creation" name="description"/>
-<link href="/about.html" rel="canonical"/>
-<meta content="website" property="og:type"/>
-<meta content="About • iD01t Productions" property="og:title"/>
-<meta content="Learn about iD01t Productions and Guillaume Lessard's journey in digital content creation" property="og:description"/>
-<meta content="/about.html" property="og:url"/>
-<link href="/assets/site.css" rel="stylesheet"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-CHX65WY0WZ');
-    </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-M39S87SN');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | iD01t Productions | Guillaume Lessard - Digital Content Creator</title>
+  <meta name="description" content="Learn about iD01t Productions and Guillaume Lessard's journey in digital content creation. Professional developer, author, and creative technologist from Montreal, Canada.">
+  <meta name="keywords" content="about iD01t Productions, Guillaume Lessard, digital content creator, Montreal developer, tech author, creative technologist">
+  <link rel="canonical" href="https://id01t.github.io/about.html">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Guillaume Lessard">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About | iD01t Productions | Guillaume Lessard - Digital Content Creator">
+  <meta property="og:description" content="Learn about iD01t Productions and Guillaume Lessard's journey in digital content creation. Professional developer, author, and creative technologist from Montreal, Canada.">
+  <meta property="og:url" content="https://id01t.github.io/about.html">
+  <meta property="og:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
+
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
+  </script>
+
+  <style>
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
+    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
+    .nav a[aria-current="page"], .nav a:hover{opacity:1}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
+    .hero p{opacity:.9;margin:0}
+    .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);transition:transform 0.2s;padding:24px}
+    .card:hover{transform:translateY(-2px)}
+    .card h3{margin:0 0 16px;font-size:20px}
+    .card p{color:var(--muted);line-height:1.6;margin:0 0 16px}
+    .card p:last-child{margin-bottom:0}
+    .btn{display:inline-block;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s}
+    .btn:hover{background:rgba(255,255,255,.1)}
+    .btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
+    .btn.primary:hover{background:var(--brand);opacity:0.9}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:40px 0}
+    .stat{text-align:center;padding:24px;background:var(--card);border:1px solid var(--border);border-radius:12px}
+    .stat-number{font-size:36px;font-weight:bold;color:var(--brand);margin-bottom:8px}
+    .stat-label{color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:0.5px}
+    .about-section{margin:60px 0}
+    .about-header{text-align:center;margin-bottom:40px}
+    .about-header h2{font-size:32px;margin-bottom:16px}
+    .about-header p{color:var(--muted);font-size:18px}
+    .profile{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:center;margin:40px 0}
+    .profile img{width:100%;max-width:300px;border-radius:16px;margin:0 auto;display:block}
+    .profile-content h3{font-size:24px;margin-bottom:16px}
+    .profile-content p{color:var(--muted);line-height:1.6;margin-bottom:16px}
+    .profile-content p:last-child{margin-bottom:0}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+    .skill{background:rgba(255,255,255,.1);padding:6px 12px;border-radius:16px;font-size:14px;color:var(--muted)}
+    @media (max-width: 768px) {
+      .profile{grid-template-columns:1fr;text-align:center}
+      .stats{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://id01t.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://id01t.github.io/about.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-active="About">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" width="0"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 32px 20px;">
-<div>
-<h1 class="page-title">About iD01t Productions</h1>
-<p>
-                Professional digital content creation and creative solutions
-            </p>
-</div>
-<div>
-<div class="card">
-<h2>Our Mission</h2>
-<p>
-                    iD01t Productions is dedicated to creating high-quality digital content that empowers, educates, and inspires. 
-                    We specialize in technology guides, creative works, and personal development content.
-                </p>
-<p>
-                    Our goal is to provide professional, accessible content that helps people achieve their goals and unlock their potential.
-                </p>
-</div>
-<div class="card">
-<h2>Guillaume Lessard</h2>
-<p>
-                    Founder and lead content creator at iD01t Productions, Guillaume specializes in technology, creativity, and personal development.
-                </p>
-<p>
-                    With a passion for digital innovation and creative expression, Guillaume creates content that bridges the gap between complex concepts and practical application.
-                </p>
-</div>
-<div class="card">
-<h2>What We Offer</h2>
-<div>
-<div>
-<h3>📚 Ebooks</h3>
-<p>Professional guides and creative works</p>
-</div>
-<div>
-<h3>🎧 Audiobooks</h3>
-<p>Listen and learn on the go</p>
-</div>
-<div>
-<h3>💻 Technology</h3>
-<p>Programming and digital skills</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script defer="" src="/assets/site.js"></script>
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/products.html">Products</a>
+        <a href="/ebooks.html">eBooks</a>
+        <a href="/audiobooks.html">Audiobooks</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html">Music</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
+          <input type="search" name="q" placeholder="Search..." 
+                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
+          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
+            🔍
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>About iD01t Productions</h1>
+      <p>Professional digital content creation and creative solutions by <strong>Guillaume Lessard</strong></p>
+    </div>
+  </section>
+
+  <main class="wrap" style="margin-top: 40px;">
+    <!-- Profile Section -->
+    <section class="about-section">
+      <div class="profile">
+        <div>
+          <img src="/assets/harvested/brand/og_brand.jpg" alt="Guillaume Lessard - iD01t Productions" loading="lazy">
+        </div>
+        <div class="profile-content">
+          <h3>Guillaume Lessard</h3>
+          <p><strong>Founder & Creative Director</strong></p>
+          <p>
+            Guillaume Lessard is a professional digital content creator, developer, and creative technologist based in Montreal, Quebec, Canada. 
+            With over 10 years of experience in technology and digital media, Guillaume founded iD01t Productions to create high-quality, 
+            educational, and entertaining digital content.
+          </p>
+          <p>
+            Specializing in AI applications, technical eBooks, electronic music production, and interactive games, Guillaume combines 
+            technical expertise with creative vision to deliver content that empowers, educates, and inspires.
+          </p>
+          <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">AI/ML</span>
+            <span class="skill">Web Development</span>
+            <span class="skill">Music Production</span>
+            <span class="skill">Game Development</span>
+            <span class="skill">Technical Writing</span>
+            <span class="skill">Automation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="about-section">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Digital Products</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">50K+</div>
+          <div class="stat-label">Downloads</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Programming Languages</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="about-section">
+      <div class="about-header">
+        <h2>Our Mission & Vision</h2>
+        <p>Building the future of digital content creation</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Our Mission</h3>
+          <p>
+            iD01t Productions is dedicated to creating high-quality digital content that empowers, educates, and inspires. 
+            We specialize in technology guides, creative works, and personal development content that helps people achieve their goals.
+          </p>
+          <p>
+            Our goal is to provide professional, accessible content that unlocks potential and drives innovation in the digital space.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Our Vision</h3>
+          <p>
+            To become the leading source of innovative digital content that bridges the gap between complex technology and practical application. 
+            We envision a world where technology is accessible, creative, and empowering for everyone.
+          </p>
+          <p>
+            Through our content, we aim to democratize knowledge and inspire the next generation of creators, developers, and innovators.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Our Values</h3>
+          <p>
+            <strong>Quality First:</strong> Every piece of content is crafted with attention to detail and professional standards.
+          </p>
+          <p>
+            <strong>Accessibility:</strong> Complex concepts are made understandable and actionable for all skill levels.
+          </p>
+          <p>
+            <strong>Innovation:</strong> We embrace new technologies and creative approaches to content creation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="about-section">
+      <div class="about-header">
+        <h2>What We Do</h2>
+        <p>Comprehensive digital content creation across multiple domains</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>AI Applications</h3>
+          <p>
+            Develop cutting-edge AI applications and automation tools that solve real-world problems. 
+            From machine learning models to intelligent automation systems.
+          </p>
+          <a href="/apps.html" class="btn primary">Explore Apps</a>
+        </div>
+
+        <div class="card">
+          <h3>Technical eBooks</h3>
+          <p>
+            Create comprehensive programming guides, tutorials, and technical documentation. 
+            Over 100+ titles covering Python, automation, AI, and more.
+          </p>
+          <a href="/ebooks.html" class="btn primary">Browse eBooks</a>
+        </div>
+
+        <div class="card">
+          <h3>Electronic Music</h3>
+          <p>
+            Produce original electronic music and soundtracks for games, apps, and media projects. 
+            Professional quality audio content for all platforms.
+          </p>
+          <a href="/music.html" class="btn primary">Listen to Music</a>
+        </div>
+
+        <div class="card">
+          <h3>Interactive Games</h3>
+          <p>
+            Design and develop engaging games and interactive experiences. 
+            From educational games to competitive multiplayer experiences.
+          </p>
+          <a href="/games.html" class="btn primary">Play Games</a>
+        </div>
+
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>
+            Build modern, responsive websites and web applications. 
+            Full-stack development with focus on performance and user experience.
+          </p>
+          <a href="/services.html" class="btn primary">View Services</a>
+        </div>
+
+        <div class="card">
+          <h3>Consulting</h3>
+          <p>
+            Provide technical consulting and project guidance. 
+            Help businesses implement automation, AI solutions, and digital strategies.
+          </p>
+          <a href="/contact.html" class="btn primary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 16px; margin: 60px 0; text-align: center; color: white;">
+      <h2 style="margin: 0 0 16px; font-size: 28px;">Ready to Work Together?</h2>
+      <p style="margin: 0 0 24px; opacity: 0.9; font-size: 18px;">
+        Let's discuss your project and create something amazing together.
+      </p>
+      <a href="/contact.html" class="btn" style="background: white; color: #667eea; border: none; padding: 12px 24px; font-size: 16px; font-weight: bold;">
+        Get in Touch
+      </a>
+    </section>
+  </main>
+
+  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
+    <div class="wrap">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+        <!-- Company Info -->
+        <div>
+          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
+          <p style="margin: 0 0 16px; color: var(--muted); line-height: 1.6;">
+            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
+            Building automation-first, ROI-focused solutions for modern creators.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://github.com/id01t" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">GitHub</a>
+            <a href="https://id01t.itch.io" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">itch.io</a>
+            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">Spotify</a>
+            <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">YouTube</a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: var(--muted); text-decoration: none;">eBooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: var(--muted); text-decoration: none;">Audiobooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: var(--muted); text-decoration: none;">Music</a></li>
+            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: var(--muted); text-decoration: none;">Games</a></li>
+            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: var(--muted); text-decoration: none;">Apps</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: var(--muted); text-decoration: none;">About</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: var(--muted); text-decoration: none;">Blog</a></li>
+            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: var(--muted); text-decoration: none;">Contact</a></li>
+            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: var(--muted); text-decoration: none;">Search</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: var(--muted); text-decoration: none;">Terms of Service</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: var(--muted); text-decoration: none;">Refund Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: var(--muted); text-decoration: none;">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="border-top: 1px solid var(--border); padding-top: 24px; text-align: center; color: var(--muted);">
+        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

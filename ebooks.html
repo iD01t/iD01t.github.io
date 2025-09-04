@@ -44,7 +44,30 @@
 </head>
 <body data-active="eBooks" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-  <div id="header-slot"></div>
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/products.html">Products</a>
+        <a href="/ebooks.html" style="text-decoration: underline;">eBooks</a>
+        <a href="/audiobooks.html">Audiobooks</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html">Music</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
+          <input type="search" name="q" placeholder="Search..." 
+                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
+          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
+            🔍
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
 
   <!-- Hero -->
   <section class="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 dark:from-gray-800 dark:via-gray-900 dark:to-black">
@@ -157,17 +180,9 @@
     return { src, src2x };
   }
 
-    let src = L.large || L.medium || L.small || L.thumbnail || L.smallThumbnail || '';
-    if (!src) return '/assets/img/brand/ebooks_og.jpg';
-    src = src.replace(/^http:/, 'https:');
-    if (src.includes('zoom=1')) src = src.replace('zoom=1','zoom=2');
-    return src;
-  }
-
-  
   function bookFromVolume(v) {
-    const vi = v.volumeInfo || {}
-    const si = v.saleInfo || {}
+    const vi = v.volumeInfo || {};
+    const si = v.saleInfo || {};
     const img = imgBest(v);
     return {
       id: v.id,
@@ -175,21 +190,6 @@
       subtitle: vi.subtitle || '',
       cover: img.src,
       cover2x: img.src2x,
-      year: (vi.publishedDate||'').slice(0,4),
-      lang: (vi.language||'').toUpperCase(),
-      tags: vi.categories || [],
-      authors: vi.authors || [],
-      link: vi.infoLink || vi.canonicalVolumeLink || v.selfLink || '',
-      buy: si.buyLink || vi.infoLink || '',
-    };
-  }
-
-    const si = v.saleInfo || {}
-    return {
-      id: v.id,
-      title: vi.title || '',
-      subtitle: vi.subtitle || '',
-      cover: imgBest(v),
       year: (vi.publishedDate||'').slice(0,4),
       lang: (vi.language||'').toUpperCase(),
       tags: vi.categories || [],
@@ -218,11 +218,6 @@
         <div class="flex gap-2 flex-wrap mt-2">
           <a href="${b.link}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Google Books</a>
           ${ b.buy ? `<a href="${b.buy}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Buy</a>` : ''}
-        </div>
-      </div>
-    </article>`;
-  }
-
         </div>
       </div>
     </article>`;
