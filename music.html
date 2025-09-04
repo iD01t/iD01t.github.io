@@ -1,22 +1,25 @@
 <!doctype html>
-<html class="scroll-smooth" lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DJ iD01t — Official Music Hub</title>
-  <meta name="description" content="Stream DJ iD01t. Latest albums and singles with instant links to Spotify, Apple Music, Deezer, and YouTube."/>
-  <link rel="canonical" href="/music.html"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electronic Music by DJ iD01t | iD01t Productions</title>
+  <meta name="description" content="Stream cinematic electronic music by DJ iD01t. Perfect for coding, focus, and creative work. Available on Spotify, Apple Music, YouTube, and more.">
+  <meta name="keywords" content="electronic music, DJ iD01t, cinematic music, focus music, ambient electronic, Guillaume Lessard, iD01t Productions, Spotify, Apple Music">
+  <link rel="canonical" href="https://id01t.github.io/music.html">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Guillaume Lessard">
 
-  <!-- Social -->
-  <meta property="og:title" content="DJ iD01t — Official Music Hub"/>
-  <meta property="og:description" content="Stream the catalog across Spotify, Apple Music, Deezer, and YouTube."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://id01t.github.io/music.html"/>
-  <meta property="og:image" content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/astist.jpg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="DJ iD01t — Official Music Hub"/>
-  <meta name="twitter:description" content="Latest releases, direct streaming links, and videos."/>
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/astist.jpg"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Electronic Music by DJ iD01t | iD01t Productions">
+  <meta property="og:description" content="Stream cinematic electronic music by DJ iD01t. Perfect for coding, focus, and creative work. Available on Spotify, Apple Music, YouTube, and more.">
+  <meta property="og:url" content="https://id01t.github.io/music.html">
+  <meta property="og:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Electronic Music by DJ iD01t | iD01t Productions">
+  <meta name="twitter:description" content="Stream cinematic electronic music by DJ iD01t. Perfect for coding, focus, and creative work.">
+  <meta name="twitter:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
 
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
   <link rel="apple-touch-icon" href="/assets/logo-512.png"/>
@@ -30,79 +33,186 @@
   <style>body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}</style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2"><img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t"/><span class="font-bold text-xl">iD01t</span></a>
-      <div class="hidden md:flex items-center gap-4 text-sm">
-        <a class="hover:opacity-100 opacity-80" href="/store.html">Store</a>
-        <a class="hover:opacity-100 opacity-80" href="/ebooks.html">eBooks</a>
-        <a class="hover:opacity-100 opacity-80" href="/apps.html">Apps</a>
-        <a class="hover:opacity-100 opacity-80" href="/games.html">Games</a>
-        <a class="opacity-100 font-semibold" href="/music.html">Music</a>
-        <a class="hover:opacity-100 opacity-80" href="/services.html">Services</a>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
+  </script>
+
+  <style>
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
+    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
+    .nav a[aria-current="page"], .nav a:hover{opacity:1}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
+    .hero p{opacity:.9;margin:0}
+    .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);transition:transform 0.2s}
+    .card:hover{transform:translateY(-2px)}
+    .card img{width:100%;height:200px;object-fit:cover;background:#111}
+    .card .content{padding:20px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
+    .card .excerpt{color:var(--muted);line-height:1.5;margin-bottom:16px}
+    .btn{display:inline-block;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s}
+    .btn:hover{background:rgba(255,255,255,.1)}
+    .btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
+    .btn.primary:hover{background:var(--brand);opacity:0.9}
+    .tag{display:inline-block;padding:4px 8px;background:rgba(255,255,255,.1);border-radius:12px;font-size:12px;margin-right:8px;margin-bottom:8px}
+    .video-container{position:relative;width:100%;height:0;padding-bottom:56.25%;margin-bottom:16px}
+    .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:8px}
+  </style>
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://id01t.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Music",
+        "item": "https://id01t.github.io/music.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-active="Music">
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/products.html">Products</a>
+        <a href="/ebooks.html">eBooks</a>
+        <a href="/audiobooks.html">Audiobooks</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html" style="text-decoration: underline;">Music</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
+          <input type="search" name="q" placeholder="Search..." 
+                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
+          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
+            🔍
+          </button>
+        </form>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-fuchsia-50 dark:from-gray-800 dark:via-gray-900 dark:to-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-      <div>
-        <span class="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-semibold px-3 py-1 rounded-full mb-3">Official Hub</span>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">DJ iD01t</h1>
-        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Stream the catalog everywhere. Follow the journey and book custom music for games, apps, and trailers.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Spotify</a>
-          <a href="https://music.apple.com/us/artist/dj-id01t/1803964475" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Apple Music</a>
-          <a href="https://www.deezer.com/en/artist/312085201" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Deezer</a>
-          <a href="https://www.youtube.com/@djid01t" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">YouTube</a>
-          <a href="/contact.html" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white">Book a soundtrack</a>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5">
-          <img src="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/astist.jpg" alt="DJ iD01t" class="w-full h-auto object-cover">
-        </div>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Electronic Music by DJ iD01t</h1>
+      <p>Cinematic electronic music perfect for coding, focus, and creative work. Professional production quality available on all major platforms.</p>
+      <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+        <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" class="btn primary">Listen on Spotify</a>
+        <a href="https://music.apple.com/us/artist/dj-id01t/1803964475" target="_blank" rel="noopener" class="btn">Apple Music</a>
+        <a href="https://www.youtube.com/@djid01t" target="_blank" rel="noopener" class="btn">YouTube</a>
+        <a href="/contact.html" class="btn">Book Custom Music</a>
       </div>
     </div>
   </section>
 
-  <!-- Featured embeds -->
-  <section class="py-12 bg-white dark:bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <div>
-        <h2 class="text-xl font-semibold mb-3">Spotify Artist</h2>
-        <div class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0EihiI3hgiPfIiyb154dgB?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <main class="wrap" style="margin-top: 40px;">
+    <!-- Spotify Integration -->
+    <section style="margin-bottom: 60px;">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Stream on Spotify</h2>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <iframe src="https://open.spotify.com/embed/artist/0EihiI3hgiPfIiyb154dgB?utm_source=generator&theme=0" 
+                width="100%" height="352" frameborder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy" style="border-radius: 12px;"></iframe>
+      </div>
+    </section>
+
+    <!-- YouTube Music Videos -->
+    <section style="margin-bottom: 60px;">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Official Music Videos</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px;">
+        <div class="card">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/q9ux1Cu3YjE?si=asfclHbQkCFbwUfR" 
+                    title="DJ iD01t - Focus Sessions Mix" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="content">
+            <h3>Focus Sessions Mix</h3>
+            <div class="meta">Electronic • Ambient • 45 minutes</div>
+            <div class="excerpt">Perfect background music for coding, studying, and creative work. Cinematic electronic soundscapes designed for deep focus.</div>
+            <a href="https://www.youtube.com/watch?v=q9ux1Cu3YjE" target="_blank" rel="noopener" class="btn primary">Watch on YouTube</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/turpmY0liDU?si=YTNDYAQAxZQderCi" 
+                    title="DJ iD01t - Code Beats EP" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="content">
+            <h3>Code Beats EP</h3>
+            <div class="meta">Electronic • Techno • 30 minutes</div>
+            <div class="excerpt">High-energy electronic tracks designed for programming marathons and intense coding sessions. Boost your productivity with these driving beats.</div>
+            <a href="https://www.youtube.com/watch?v=turpmY0liDU" target="_blank" rel="noopener" class="btn primary">Watch on YouTube</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/2UHnGsKBjHQ?si=abhtxMJtydlGlg3Q" 
+                    title="DJ iD01t - Cinematic Soundscapes" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="content">
+            <h3>Cinematic Soundscapes</h3>
+            <div class="meta">Electronic • Cinematic • 60 minutes</div>
+            <div class="excerpt">Immersive electronic compositions perfect for game development, video production, and creative projects. Professional quality sound design.</div>
+            <a href="https://www.youtube.com/watch?v=2UHnGsKBjHQ" target="_blank" rel="noopener" class="btn primary">Watch on YouTube</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/q9ux1Cu3YjE?si=asfclHbQkCFbwUfR" 
+                    title="DJ iD01t - Ambient Works" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="content">
+            <h3>Ambient Works</h3>
+            <div class="meta">Ambient • Electronic • 90 minutes</div>
+            <div class="excerpt">Relaxing ambient electronic music for meditation, relaxation, and peaceful work environments. Calming soundscapes for stress relief.</div>
+            <a href="https://www.youtube.com/watch?v=q9ux1Cu3YjE" target="_blank" rel="noopener" class="btn primary">Watch on YouTube</a>
+          </div>
         </div>
       </div>
-      <div>
-        <h2 class="text-xl font-semibold mb-3">Latest Videos</h2>
-        <div class="space-y-4">
-          
-<div class="aspect-video rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/q9ux1Cu3YjE?si=asfclHbQkCFbwUfR" title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<div class="aspect-video rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/turpmY0liDU?si=YTNDYAQAxZQderCi" title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<div class="aspect-video rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2UHnGsKBjHQ?si=abhtxMJtydlGlg3Q" title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-          <div class="g-ytsubscribe" data-channelid="UCi10eZdNVil8VqDya_e6K4Q" data-layout="default" data-count="default"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <!-- Discography -->
   <section class="py-8 bg-gray-50 dark:bg-gray-800">
@@ -223,14 +333,62 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <img src="/assets/img/brand/logo.png" alt="iD01t Logo" class="h-6 w-6"/>
-        <span class="font-semibold">iD01t Productions</span>
+  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
+    <div class="wrap">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+        <!-- Company Info -->
+        <div>
+          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
+          <p style="margin: 0 0 16px; color: var(--muted); line-height: 1.6;">
+            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
+            Building automation-first, ROI-focused solutions for modern creators.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://github.com/id01t" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">GitHub</a>
+            <a href="https://id01t.itch.io" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">itch.io</a>
+            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">Spotify</a>
+            <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">YouTube</a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: var(--muted); text-decoration: none;">eBooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: var(--muted); text-decoration: none;">Audiobooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: var(--muted); text-decoration: none;">Music</a></li>
+            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: var(--muted); text-decoration: none;">Games</a></li>
+            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: var(--muted); text-decoration: none;">Apps</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: var(--muted); text-decoration: none;">About</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: var(--muted); text-decoration: none;">Blog</a></li>
+            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: var(--muted); text-decoration: none;">Contact</a></li>
+            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: var(--muted); text-decoration: none;">Search</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: var(--muted); text-decoration: none;">Terms of Service</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: var(--muted); text-decoration: none;">Refund Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: var(--muted); text-decoration: none;">Cookie Policy</a></li>
+          </ul>
+        </div>
       </div>
-      <div>© <span id="year"></span></div>
+      
+      <div style="border-top: 1px solid var(--border); padding-top: 24px; text-align: center; color: var(--muted);">
+        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
+      </div>
     </div>
   </footer>
 

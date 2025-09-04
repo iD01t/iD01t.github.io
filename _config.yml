@@ -1,0 +1,71 @@
+# Jekyll configuration for GitHub Pages
+title: "iD01t Productions — AI Apps, eBooks, and Music That Ship"
+description: "Build, learn, and create with pro-grade AI apps, practical eBooks, and cinematic music by iD01t Productions. 100+ digital products, 10+ years experience."
+url: "https://id01t.github.io"
+baseurl: ""
+
+# GitHub Pages settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Build settings
+exclude:
+  - README.md
+  - SETUP_GUIDE.md
+  - tools/
+  - scripts/
+  - bat.bat
+  - build_site_pack_v2.py
+  - images_inventory.json
+
+# Collections
+collections:
+  blog:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+author: "Guillaume Lessard"
+twitter:
+  username: "id01t"
+  card: "summary_large_image"
+  image: "/assets/harvested/brand/og_brand.jpg"
+
+# Social links
+social:
+  name: "iD01t Productions"
+  links:
+    - "https://github.com/id01t"
+    - "https://id01t.itch.io"
+    - "https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB"
+    - "https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q"
+
+# Analytics
+google_analytics: "G-CHX65WY0WZ"
+
+# Performance
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: [html, head, body]

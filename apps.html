@@ -1,284 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apps • iD01t Productions</title>
-  <meta name="description" content="All iD01t Productions apps & tools — pulled from itch.io with smart filters and pro CTAs." />
-  <link rel="canonical" href="/apps.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Apps • iD01t Productions" />
-  <meta property="og:description" content="Explore creative tools and utilities by iD01t Productions. Download on itch.io." />
-  <meta property="og:url" content="/apps.html" />
-  <meta property="og:image" content="/assets/img/brand/ebooks_og.jpg" />
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/logo-512.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Apps & Tools by Guillaume Lessard | iD01t Productions</title>
+  <meta name="description" content="Professional AI applications, automation tools, and productivity software by Guillaume Lessard. Download on itch.io for Windows, Mac, and Linux.">
+  <meta name="keywords" content="AI apps, automation tools, productivity software, Guillaume Lessard, iD01t Productions, Windows apps, Mac apps, Linux apps">
+  <link rel="canonical" href="https://id01t.github.io/apps.html">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Guillaume Lessard">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Apps & Tools by Guillaume Lessard | iD01t Productions">
+  <meta property="og:description" content="Professional AI applications, automation tools, and productivity software by Guillaume Lessard. Download on itch.io for Windows, Mac, and Linux.">
+  <meta property="og:url" content="https://id01t.github.io/apps.html">
+  <meta property="og:image" content="https://id01t.github.io/assets/harvested/apps/og_apps.jpg">
+
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
+  </script>
+
   <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.75)}
-    @media (prefers-color-scheme: light){:root{--border:rgba(0,0,0,.12);--card:rgba(0,0,0,.03);--muted:#6b7280}}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#0b0d10;color:#eaeaf0}
-    @media (prefers-color-scheme: light){body{background:#fff;color:#0f172a}}
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
+    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
     .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
+    .nav a[aria-current="page"], .nav a:hover{opacity:1}
     .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
-    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px}
-    .hero p{opacity:.85;margin:0}
-    .toolbar{display:grid;grid-template-columns:1.2fr 200px 200px 200px 1fr;gap:10px;align-items:end;margin:18px 0}
-    .toolbar label{font-size:.85rem;color:var(--muted);display:block;margin-bottom:6px}
-    .toolbar input,.toolbar select{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:inherit}
-    .btn{display:inline-block;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
-    .btn:hover{filter:brightness(1.07)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card)}
-    .tile img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#111}
-    .tile .content{padding:14px;display:flex;flex-direction:column;gap:10px}
-    .chip{font-size:.8rem;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.06)}
-    .muted{opacity:.8}
-    .section{padding:16px;border:1px solid var(--border);border-radius:16px;margin-bottom:16px;background:var(--card)}
-    iframe.itch{width:100%;max-width:552px;height:167px;border:0}
-    footer{border-top:1px solid var(--border);padding:24px 0;margin-top:32px;opacity:.8;text-align:center}
+    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
+    .hero p{opacity:.9;margin:0}
+    .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);transition:transform 0.2s}
+    .card:hover{transform:translateY(-2px)}
+    .card img{width:100%;height:200px;object-fit:cover;background:#111}
+    .card .content{padding:20px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
+    .card .excerpt{color:var(--muted);line-height:1.5;margin-bottom:16px}
+    .btn{display:inline-block;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s}
+    .btn:hover{background:rgba(255,255,255,.1)}
+    .btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
+    .btn.primary:hover{background:var(--brand);opacity:0.9}
+    .tag{display:inline-block;padding:4px 8px;background:rgba(255,255,255,.1);border-radius:12px;font-size:12px;margin-right:8px;margin-bottom:8px}
+    .price{font-weight:bold;color:var(--brand);font-size:18px}
+    .platform{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+    .search-container{display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap}
+    .search-input{flex:1;min-width:200px;padding:12px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:inherit}
+    .filter-select{padding:12px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:inherit}
+    .app-detail{display:grid;grid-template-columns:300px 1fr;gap:32px;margin:40px 0}
+    .app-screenshot{width:100%;height:400px;object-fit:cover;border-radius:12px}
+    .app-info h2{font-size:32px;margin-bottom:16px}
+    .app-meta{color:var(--muted);margin-bottom:16px}
+    .app-description{line-height:1.6;margin-bottom:24px}
+    .app-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+    .app-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:40px 0}
+    .feature-card{border:1px solid var(--border);border-radius:12px;padding:24px;background:var(--card)}
+    .feature-card h3{margin:0 0 12px;font-size:18px}
+    .feature-card p{color:var(--muted);line-height:1.5}
+    @media (max-width: 768px) {
+      .app-detail{grid-template-columns:1fr;text-align:center}
+      .search-container{flex-direction:column}
+    }
   </style>
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://id01t.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Apps",
+        "item": "https://id01t.github.io/apps.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-active="Apps">
-  <div id="header-slot"></div>
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/products.html">Products</a>
+        <a href="/ebooks.html">eBooks</a>
+        <a href="/audiobooks.html">Audiobooks</a>
+        <a href="/apps.html" style="text-decoration: underline;">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html">Music</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
+          <input type="search" name="q" placeholder="Search..." 
+                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
+          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
+            🔍
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
 
   <section class="hero">
     <div class="wrap">
-      <h1>Apps — iD01t Productions</h1>
-      <p>Creative tools & utilities by Guillaume Lessard / iD01t Productions. Download on itch.io.</p>
+      <h1>AI Apps & Tools by Guillaume Lessard</h1>
+      <p>Professional AI applications, automation tools, and productivity software. Download on itch.io for Windows, Mac, and Linux.</p>
     </div>
   </section>
 
-  <main class="wrap" role="main">
-    <!-- Filters -->
-    <section class="toolbar" aria-label="Filters">
-      <div>
-        <label for="q">Search</label>
-        <input id="q" type="search" placeholder="Title, keyword" />
-      </div>
-      <div>
-        <label for="platform">Platform</label>
-        <select id="platform">
-          <option value="">All</option>
-          <option value="windows">Windows</option>
-          <option value="linux">Linux</option>
-          <option value="osx">macOS</option>
-          <option value="android">Android</option>
-          <option value="html5">Web (HTML5)</option>
-        </select>
-      </div>
-      <div>
-        <label for="price">Price</label>
-        <select id="price">
-          <option value="">All</option>
-          <option value="free">Free</option>
-          <option value="paid">Paid</option>
-        </select>
-      </div>
-      <div>
-        <label for="sort">Sort</label>
-        <select id="sort">
-          <option value="new">Newest</option>
-          <option value="az">A–Z</option>
-          <option value="price">Lowest price</option>
-        </select>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end">
-        <button id="clear" class="btn" type="button">Clear filters</button>
-        <span id="tally" class="muted"></span>
+  <main class="wrap" style="margin-top: 40px;">
+    <!-- Search and Filters -->
+    <div class="search-container">
+      <input type="search" id="searchInput" class="search-input" placeholder="Search apps by name, description, or features..." />
+      <select id="categoryFilter" class="filter-select">
+        <option value="">All Categories</option>
+        <option value="AI">AI & Machine Learning</option>
+        <option value="Automation">Automation</option>
+        <option value="Productivity">Productivity</option>
+        <option value="Development">Development Tools</option>
+        <option value="Data">Data Processing</option>
+        <option value="Web">Web Tools</option>
+      </select>
+      <select id="platformFilter" class="filter-select">
+        <option value="">All Platforms</option>
+        <option value="Windows">Windows</option>
+        <option value="macOS">macOS</option>
+        <option value="Linux">Linux</option>
+        <option value="Web">Web</option>
+      </select>
+      <select id="priceFilter" class="filter-select">
+        <option value="">All Prices</option>
+        <option value="free">Free</option>
+        <option value="paid">Paid</option>
+      </select>
+    </div>
+
+    <!-- Featured Apps Section -->
+    <section style="margin-bottom: 60px;">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Featured Apps</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="/assets/harvested/apps/img_1.png" alt="AI Automation Suite" loading="lazy">
+          <div class="content">
+            <h3>AI Automation Suite</h3>
+            <div class="meta">Automation • AI • Productivity</div>
+            <div class="excerpt">Complete toolkit for automating repetitive tasks with AI. Includes templates, scripts, and documentation for seamless workflow automation.</div>
+            <div class="app-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Productivity</span>
+              <span class="tag">Windows</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$19.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/ai-automation-suite.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/apps/img_2.svg" alt="ML Development Framework" loading="lazy">
+          <div class="content">
+            <h3>ML Development Framework</h3>
+            <div class="meta">Machine Learning • Python • Framework</div>
+            <div class="excerpt">Rapid prototyping framework for machine learning projects. Pre-built models, utilities, and comprehensive documentation included.</div>
+            <div class="app-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Python</span>
+              <span class="tag">Framework</span>
+              <span class="tag">Cross-platform</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$29.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/ml-development-framework.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/apps/img_3.png" alt="Data Processing Pro" loading="lazy">
+          <div class="content">
+            <h3>Data Processing Pro</h3>
+            <div class="meta">Data Science • Processing • Analytics</div>
+            <div class="excerpt">Advanced data processing and analysis tool with visualization capabilities, export options, and real-time processing features.</div>
+            <div class="app-tags">
+              <span class="tag">Data Science</span>
+              <span class="tag">Analytics</span>
+              <span class="tag">Visualization</span>
+              <span class="tag">Cross-platform</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$24.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/data-processing-pro.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/apps/img_1.png" alt="Web Scraper Pro" loading="lazy">
+          <div class="content">
+            <h3>Web Scraper Pro</h3>
+            <div class="meta">Web Scraping • Automation • Data Collection</div>
+            <div class="excerpt">Professional web scraping tool with AI-powered extraction, proxy support, and data export capabilities for research and automation.</div>
+            <div class="app-tags">
+              <span class="tag">Web Scraping</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Data Collection</span>
+              <span class="tag">Windows</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$14.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/web-scraper-pro.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/apps/img_2.svg" alt="Code Generator AI" loading="lazy">
+          <div class="content">
+            <h3>Code Generator AI</h3>
+            <div class="meta">AI • Code Generation • Development</div>
+            <div class="excerpt">AI-powered code generation tool that creates boilerplate code, functions, and complete applications based on natural language descriptions.</div>
+            <div class="app-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Code Generation</span>
+              <span class="tag">Development</span>
+              <span class="tag">Cross-platform</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$39.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/code-generator-ai.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/apps/img_3.png" alt="Task Scheduler Pro" loading="lazy">
+          <div class="content">
+            <h3>Task Scheduler Pro</h3>
+            <div class="meta">Productivity • Scheduling • Automation</div>
+            <div class="excerpt">Advanced task scheduling and automation tool with calendar integration, reminders, and workflow management for maximum productivity.</div>
+            <div class="app-tags">
+              <span class="tag">Productivity</span>
+              <span class="tag">Scheduling</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Cross-platform</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$12.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/task-scheduler-pro.html" class="btn primary">View Details</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Featured embeds -->
-    <section class="section" aria-label="Featured on itch.io">
-      <h2 style="margin:0 0 10px">Featured on itch.io</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
-        <iframe class="itch" src="https://itch.io/embed/3833174?linkback=true&border_width=4&dark=true"><a href="https://id01t.itch.io/bedtime-story-maker-windows-app">Bedtime Story Maker Windows App by iD01t Productions</a></iframe>
-        <iframe class="itch" src="https://itch.io/embed/3843458?linkback=true&border_width=4&dark=true"><a href="https://id01t.itch.io/py2win">Py2Win FREE by iD01t Productions</a></iframe>
+    <!-- Categories Section -->
+    <section style="margin-top: 80px;">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Browse by Category</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <article class="card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🤖</div>
+          <h3>AI & Machine Learning</h3>
+          <p class="excerpt">Intelligent applications powered by artificial intelligence and machine learning algorithms.</p>
+          <a href="#ai" class="btn primary">Browse AI Apps</a>
+        </article>
+
+        <article class="card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 48px; margin-bottom: 16px;">⚡</div>
+          <h3>Automation Tools</h3>
+          <p class="excerpt">Streamline workflows and automate repetitive tasks with powerful automation solutions.</p>
+          <a href="#automation" class="btn primary">Browse Automation</a>
+        </article>
+
+        <article class="card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 48px; margin-bottom: 16px;">📊</div>
+          <h3>Data Processing</h3>
+          <p class="excerpt">Process, analyze, and visualize data with professional-grade tools and frameworks.</p>
+          <a href="#data" class="btn primary">Browse Data Tools</a>
+        </article>
+
+        <article class="card" style="text-align: center; padding: 32px;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🛠️</div>
+          <h3>Development Tools</h3>
+          <p class="excerpt">Essential tools for developers, from code generators to debugging utilities.</p>
+          <a href="#development" class="btn primary">Browse Dev Tools</a>
+        </article>
       </div>
     </section>
 
-    <!-- Catalog -->
-    <section aria-label="Apps catalog">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
-        <h2 style="margin:0">All Apps & Tools</h2>
-        <span id="count" class="muted" style="font-size:.9rem"></span>
+    <!-- Itch.io Integration -->
+    <section style="margin-top: 80px; padding: 40px; background: var(--card); border-radius: 16px; border: 1px solid var(--border);">
+      <h2 style="text-align: center; margin-bottom: 32px; font-size: 28px;">Download on itch.io</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <iframe src="https://itch.io/embed/3833174?linkback=true&border_width=4&dark=true" 
+                style="width: 100%; height: 167px; border: 0; border-radius: 8px;">
+          <a href="https://id01t.itch.io/bedtime-story-maker-windows-app">Bedtime Story Maker Windows App by iD01t Productions</a>
+        </iframe>
+        <iframe src="https://itch.io/embed/3843458?linkback=true&border_width=4&dark=true" 
+                style="width: 100%; height: 167px; border: 0; border-radius: 8px;">
+          <a href="https://id01t.itch.io/py2win">Py2Win FREE by iD01t Productions</a>
+        </iframe>
       </div>
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <div id="empty" class="muted" hidden>No apps found. Try different filters.</div>
-    </section>
-
-    <!-- Itch profile fallback -->
-    <section class="section" id="fallback" hidden>
-      <h3 style="margin:0 0 8px">Can’t load catalog? Browse on itch.io</h3>
-      <p class="muted" style="margin:0 0 12px">We couldn’t load the local mirror file. Use the official profile instead.</p>
-      <a class="btn" href="https://id01t.itch.io/" target="_blank" rel="noopener">Open id01t.itch.io</a>
+      <div style="text-align: center; margin-top: 24px;">
+        <a href="https://id01t.itch.io/" target="_blank" rel="noopener" class="btn primary">View All Apps on itch.io</a>
+      </div>
     </section>
   </main>
 
-  <div id="footer-slot"></div>
+  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
+    <div class="wrap">
+      <div style="text-align: center; color: var(--muted);">
+        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Inject header/footer from the ORIGINAL homepage -->
   <script>
-  (async function injectLayout(){
-    try{
-      const res = await fetch('/index.html', {cache:'no-store'});
-      const text = await res.text();
-      const doc = new DOMParser().parseFromString(text, 'text/html');
-      const head = document.querySelector('head');
-      doc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && !document.querySelector('link[rel="stylesheet"][href="'+href+'"]')) {
-          const l=document.createElement('link'); l.rel='stylesheet'; l.href=href; head.appendChild(l);
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // App filtering functionality
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const platformFilter = document.getElementById('platformFilter');
+    const priceFilter = document.getElementById('priceFilter');
+
+    function handleFilter() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const category = categoryFilter.value.toLowerCase();
+      const platform = platformFilter.value.toLowerCase();
+      const price = priceFilter.value;
+
+      const cards = document.querySelectorAll('.card');
+      
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const meta = card.querySelector('.meta').textContent.toLowerCase();
+        const excerpt = card.querySelector('.excerpt').textContent.toLowerCase();
+        const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase()).join(' ');
+        const priceText = card.querySelector('.price').textContent;
+
+        const matchesSearch = !searchTerm || 
+          title.includes(searchTerm) || 
+          meta.includes(searchTerm) || 
+          excerpt.includes(searchTerm) || 
+          tags.includes(searchTerm);
+
+        const matchesCategory = !category || 
+          meta.includes(category) || 
+          tags.includes(category);
+
+        const matchesPlatform = !platform || 
+          meta.includes(platform) || 
+          tags.includes(platform);
+
+        const matchesPrice = !price || 
+          (price === 'free' && priceText === 'Free') ||
+          (price === 'paid' && priceText !== 'Free');
+
+        if (matchesSearch && matchesCategory && matchesPlatform && matchesPrice) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
         }
       });
-      const header = doc.querySelector('header'); const footer = doc.querySelector('footer');
-      if (header) document.getElementById('header-slot').innerHTML = header.outerHTML;
-      if (footer) document.getElementById('footer-slot').innerHTML = footer.outerHTML;
-      // Active nav
-      const active = (document.body.dataset.active || '').toLowerCase();
-      document.querySelectorAll('header nav a, #site-header nav a').forEach(a=>{
-        a.removeAttribute('aria-current');
-        const label=a.textContent.trim().toLowerCase();
-        const href=a.getAttribute('href');
-        if ((active && label===active) || href==='/apps.html') a.setAttribute('aria-current','page');
-      });
-      // Re-exec scripts in injected nodes
-      ['header-slot','footer-slot'].forEach(id=>{
-        const root=document.getElementById(id);
-        root && root.querySelectorAll('script').forEach(s=>{const ns=document.createElement('script'); ns.textContent=s.textContent; s.replaceWith(ns);});
-      });
-    }catch(e){ console.warn('Header/Footer injection failed', e); }
-  })();
-  </script>
-
-  <!-- Apps logic: load from itch mirror JSON and filter "tools/apps" -->
-  <script>
-    const el = id => document.getElementById(id);
-    const $q=el('q'), $plat=el('platform'), $price=el('price'), $sort=el('sort'), $clear=el('clear'),
-          $grid=el('grid'), $empty=el('empty'), $count=el('count'), $tally=el('tally'), $fallback=el('fallback');
-
-    const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","&gt;":"&gt;","\"":"&quot;"}[c]));
-
-    const mirrorFiles=[
-      '/assets/data/itch_apps.json',       // preferred: only apps/tools
-      '/assets/data/itch_catalog.json',    // alternative: full catalog (apps+games)
-      '/assets/data/itch_games.json'       // legacy: games file; we'll filter tools if included
-    ];
-
-    function isTool(item){
-      const t=(item.classification||'').toLowerCase(); // 'tool' or 'game' etc.
-      if (t.includes('tool')) return true;
-      const tags=(item.tags||[]).map(x=>String(x).toLowerCase());
-      return tags.some(x=>['tool','utility','app','application'].includes(x)) || (item.type||'').toLowerCase()==='tool';
     }
 
-    async function loadMirror(){
-      for (const path of mirrorFiles){
-        try{
-          const r=await fetch(path,{cache:'no-store'});
-          if(!r.ok) continue;
-          const data=await r.json();
-          const items = Array.isArray(data) ? data : (data.items||data.games||data.tools||[]);
-          if(items && items.length) return items;
-        }catch(e){/*try next*/}
-      }
-      return null;
-    }
-
-    const chip = t => `<span class="chip">${esc(t)}</span>`;
-
-    function cardHTML(a){
-      const price = (a.price||0)===0 ? 'Free' : (a.price_formatted || `${a.price||''} ${a.currency||''}`).trim();
-      const tags = [
-        ...(a.platforms||[]),
-        price
-      ].filter(Boolean).map(chip).join(' ');
-      const date = (a.published_at||a.updated_at||'').slice(0,10);
-      const cover = a.cover || a.cover_url || '/assets/img/placeholders/hero-1600x900.webp';
-      const url = a.url || a.profile|| '#';
-      const demo = a.demo_url;
-      return `<article class="card tile">
-        <img src="${esc(cover)}" alt="${esc(a.title)} cover">
-        <div class="content">
-          <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
-            <h3 style="margin:0">${esc(a.title)}</h3>
-            <span class="muted" style="font-size:.9rem">${esc(date)}</span>
-          </div>
-          <div class="muted">${esc(a.short_text||a.description||'')}</div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="${esc(url)}" target="_blank" rel="noopener nofollow">View on itch.io</a>
-            ${demo ? `<a class="btn" href="${esc(demo)}" target="_blank" rel="noopener">Try demo</a>` : ''}
-          </div>
-        </div>
-      </article>`;
-    }
-
-    function populateFilters(items){
-      const plats=new Set();
-      items.forEach(x=>(x.platforms||[]).forEach(p=>plats.add(p)));
-      $plat.innerHTML = ['<option value=\"\">All</option>', ...Array.from(plats).sort().map(p=>`<option value=\"${p}\">${p}</option>`)].join('');
-    }
-
-    function apply(items){
-      const text=($q.value||'').toLowerCase();
-      const plat=$plat.value, pr=$price.value, sort=$sort.value;
-      let list = items.filter(isTool).filter(a=>{
-        if(text){
-          const hay=[a.title,a.short_text,(a.tags||[]).join(' ')].join(' ').toLowerCase();
-          if(!hay.includes(text)) return false;
-        }
-        if(plat && !(a.platforms||[]).includes(plat)) return false;
-        if(pr==='free' && (a.price||0)>0) return false;
-        if(pr==='paid' && (a.price||0)===0) return false;
-        return true;
-      });
-      if(sort==='az') list.sort((a,b)=>a.title.localeCompare(b.title));
-      else if(sort==='price') list.sort((a,b)=>(a.price||0)-(b.price||0) || a.title.localeCompare(b.title));
-      else list.sort((a,b)=>new Date(b.published_at||b.updated_at||0)-new Date(a.published_at||a.updated_at||0));
-      return list;
-    }
-
-    function render(list, all){
-      if(!list.length){ $grid.innerHTML=''; $empty.hidden=false; $count.textContent='0 apps'; $tally.textContent=''; return; }
-      $empty.hidden=true;
-      $grid.innerHTML = list.map(cardHTML).join('');
-      $count.textContent = `${list.length} app${list.length!==1?'s':''}`;
-      const totalTools = all.filter(isTool).length;
-      const freeCount = all.filter(x=>isTool(x) && (x.price||0)===0).length;
-      $tally.textContent = `${totalTools} total • ${freeCount} free`;
-      emitSchema(list);
-    }
-
-    function emitSchema(list){
-      const ld = { '@context':'https://schema.org', '@type':'ItemList', name:'iD01t Productions Apps',
-        itemListElement: list.slice(0,60).map((a,i)=>({'@type':'ListItem','position':i+1,'item':{
-          '@type':'SoftwareApplication',
-          name:a.title, url:a.url, image:a.cover || a.cover_url,
-          applicationCategory:'DeveloperApplication',
-          operatingSystem:(a.platforms||[]).join(', ') || 'Windows, macOS, Linux',
-          offers:{'@type':'Offer','price':String(a.price||0),'priceCurrency':a.currency||'USD'}
-        }})) };
-      let tag=document.getElementById('ld-apps'); if(!tag){tag=document.createElement('script');tag.id='ld-apps';tag.type='application/ld+json';document.head.appendChild(tag);}
-      tag.textContent = JSON.stringify(ld);
-    }
-
-    (async function init(){
-      try{
-        const items = await loadMirror();
-        if(!items){ $fallback.hidden=false; $empty.hidden=false; return; }
-        populateFilters(items);
-        const go=()=>render(apply(items), items);
-        ['input','change'].forEach(evt=>[$q,$plat,$price,$sort].forEach(e=>e.addEventListener(evt,go)));
-        $clear.addEventListener('click',()=>{$q.value='';$plat.value='';$price.value='';$sort.value='new';go();});
-        go();
-      }catch(e){
-        console.warn('Apps load failed', e); $fallback.hidden=false; $empty.hidden=false;
-      }
-    })();
+    // Event listeners
+    searchInput.addEventListener('input', handleFilter);
+    categoryFilter.addEventListener('change', handleFilter);
+    platformFilter.addEventListener('change', handleFilter);
+    priceFilter.addEventListener('change', handleFilter);
   </script>
 </body>
 </html>

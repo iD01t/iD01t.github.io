@@ -1,291 +1,385 @@
-<!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Contact · iD01t Productions</title>
-<meta content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." name="description"/>
-<link href="/favicon.ico" rel="icon"/>
-<!-- Open Graph -->
-<meta content="Contact · iD01t Productions" property="og:title"/>
-<meta content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://id01t.github.io/contact.html" property="og:url"/>
-<meta content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" property="og:image"/>
-<!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Contact · iD01t Productions" name="twitter:title"/>
-<meta content="Get in touch with iD01t Productions. We're here to help with your projects, questions, and collaboration opportunities." name="twitter:description"/>
-<meta content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" name="twitter:image"/>
-<!-- Schema.org ContactPage -->
-<script type="application/ld+json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | iD01t Productions | Get in Touch with Guillaume Lessard</title>
+  <meta name="description" content="Contact iD01t Productions for custom projects, support, or collaborations. Reach Guillaume Lessard at admin@id01t.store or itechinfomtl@gmail.com.">
+  <meta name="keywords" content="contact, Guillaume Lessard, iD01t Productions, custom projects, support, collaboration, admin@id01t.store">
+  <link rel="canonical" href="https://id01t.github.io/contact.html">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Guillaume Lessard">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us | iD01t Productions | Get in Touch with Guillaume Lessard">
+  <meta property="og:description" content="Contact iD01t Productions for custom projects, support, or collaborations. Reach Guillaume Lessard at admin@id01t.store or itechinfomtl@gmail.com.">
+  <meta property="og:url" content="https://id01t.github.io/contact.html">
+  <meta property="og:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
+
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
+  </script>
+
+  <style>
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
+    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
+    .nav a[aria-current="page"], .nav a:hover{opacity:1}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
+    .hero p{opacity:.9;margin:0}
+    .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);transition:transform 0.2s}
+    .card:hover{transform:translateY(-2px)}
+    .card .content{padding:20px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
+    .card .excerpt{color:var(--muted);line-height:1.5;margin-bottom:16px}
+    .btn{display:inline-block;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s}
+    .btn:hover{background:rgba(255,255,255,.1)}
+    .btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
+    .btn.primary:hover{background:var(--brand);opacity:0.9}
+    .form-group{margin-bottom:20px}
+    .form-group label{display:block;margin-bottom:8px;font-weight:500}
+    .form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:inherit;font-size:16px}
+    .form-group textarea{min-height:120px;resize:vertical}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--brand)}
+    .contact-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:40px 0}
+    .contact-card{border:1px solid var(--border);border-radius:16px;padding:24px;background:var(--card);text-align:center}
+    .contact-card h3{margin:0 0 16px;font-size:20px}
+    .contact-card p{color:var(--muted);margin-bottom:16px}
+    .contact-card a{color:var(--brand);text-decoration:none;font-weight:500}
+    .contact-card a:hover{text-decoration:underline}
+    .success-message{background:#10b981;color:white;padding:16px;border-radius:8px;margin-bottom:20px;display:none}
+    .error-message{background:#ef4444;color:white;padding:16px;border-radius:8px;margin-bottom:20px;display:none}
+  </style>
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://id01t.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://id01t.github.io/contact.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ContactPage JSON-LD -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact iD01t Productions",
-    "description": "Get in touch with iD01t Productions for projects and collaboration",
-    "url": "https://id01t.github.io/contact.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://id01t.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Contact",
-          "item": "https://id01t.github.io/contact.html"
-        }
-      ]
+    "description": "Get in touch with Guillaume Lessard for custom projects, support, or collaborations.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "iD01t Productions",
+      "email": "admin@id01t.store",
+      "alternateName": "iD01t Productions",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Montreal",
+        "addressRegion": "Quebec",
+        "addressCountry": "Canada"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Guillaume Lessard",
+        "email": "itechinfomtl@gmail.com"
+      }
     }
   }
   </script>
-<!-- Tailwind CSS CDN (no build step) -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-    // Tailwind config
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#f5f6ff',
-              100: '#e6e9ff',
-              200: '#c9ccff',
-              300: '#a2a8ff',
-              400: '#7a82ff',
-              500: '#545cff',
-              600: '#3a3fe6',
-              700: '#2c30b4',
-              800: '#202383',
-              900: '#16185c'
-            }
-          }
-        }
-      }
-    };
-  </script>
-<!-- Custom CSS -->
-<link href="/css/custom.css" rel="stylesheet"/>
-<!-- Dark mode on first paint -->
-<script>
-    (function() {
-      const storage = localStorage.getItem('theme');
-      const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (storage === 'dark' || (!storage && preferDark)) {
-        document.documentElement.classList.add('dark');
-      }
-    })();
-  </script>
-<link href="/assets/site.css" rel="stylesheet"/></head>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-<!-- Header / Navigation -->
-<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<a class="flex items-center gap-2" href="/">
-<img alt="iD01t Productions" class="h-8 w-8" src="/assets/img/brand/logo.png"/>
-<span class="font-semibold tracking-tight">iD01t Productions</span>
-</a>
-<nav class="hidden md:flex items-center gap-6">
-<a class="link-underline" href="/store.html">Store</a>
-<a class="link-underline" href="/ebooks.html">eBooks</a>
-<a class="link-underline" href="/apps.html">Apps</a>
-<a class="link-underline" href="/games.html">Games</a>
-<a class="link-underline" href="/music.html">Music</a>
-<a class="link-underline" href="/services.html">Services</a>
-<a class="link-underline" href="/portfolio.html">Portfolio</a>
-<a class="link-underline" href="/about.html">About</a>
-<a aria-current="page" class="link-underline text-brand-600 dark:text-brand-400" href="/contact.html">Contact</a>
-</nav>
-<div class="flex items-center gap-3">
-<button class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm" id="themeToggle">Theme</button>
-<a class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2" href="#login">Login</a>
-<button aria-label="Open menu" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" id="mobileMenuBtn">
-<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
-</button>
-</div>
-</div>
-</div>
-<!-- Mobile menu -->
-<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" id="mobileMenu">
-<div class="px-4 py-3 flex flex-col gap-2">
-<a class="py-2" href="/store.html">Store</a>
-<a class="py-2" href="/ebooks.html">eBooks</a>
-<a class="py-2" href="/apps.html">Apps</a>
-<a class="py-2" href="/games.html">Games</a>
-<a class="py-2" href="/music.html">Music</a>
-<a class="py-2" href="/services.html">Services</a>
-<a class="py-2" href="/portfolio.html">Portfolio</a>
-<a class="py-2" href="/about.html">About</a>
-<a aria-current="page" class="py-2 text-brand-600 dark:text-brand-400" href="/contact.html">Contact</a>
-</div>
-</div>
-</header>
-<!-- Breadcrumb -->
-<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm">
-<ol class="flex items-center gap-2">
-<li><a class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300" href="/">Home</a></li>
-<li class="text-slate-400">/</li>
-<li class="text-slate-700 dark:text-slate-300">Contact</li>
-</ol>
-</nav>
-<!-- Hero -->
-<section class="relative overflow-hidden">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-<div class="text-center">
-<h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Contact</h1>
-<p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Get in touch with us. We're here to help with your projects, questions, and collaboration opportunities.</p>
-</div>
-</div>
-</section>
-<!-- Contact Form and Info -->
-<section class="py-16 border-t border-slate-200 dark:border-slate-800">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-2 gap-16">
-<!-- Contact Form -->
-<div>
-<h2 class="text-2xl font-semibold mb-6">Send us a message</h2>
-<form class="space-y-6" data-netlify="true" data-success="success" method="POST" name="contact">
-<input name="form-name" type="hidden" value="contact"/>
-<!-- Honeypot field for spam protection -->
-<div class="hidden">
-<input name="bot-field" type="text"/>
-</div>
-<div class="grid sm:grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="name">Name *</label>
-<input class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent" id="name" name="name" placeholder="Your full name" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="email">Email *</label>
-<input class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent" id="email" name="email" placeholder="your.email@example.com" required="" type="email"/>
-</div>
-</div>
-<div>
-<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="subject">Subject</label>
-<select class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent" id="subject" name="subject">
-<option value="">Select a subject</option>
-<option value="project-inquiry">Project Inquiry</option>
-<option value="collaboration">Collaboration</option>
-<option value="support">Support</option>
-<option value="general">General Question</option>
-<option value="feedback">Feedback</option>
-</select>
-</div>
-<div>
-<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="message">Message *</label>
-<textarea class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 form-input focus:ring-2 focus:ring-brand-500 focus:border-transparent" id="message" name="message" placeholder="Tell us about your project or question..." required="" rows="6"></textarea>
-</div>
-<div class="flex items-start gap-3">
-<input class="mt-1 h-4 w-4 text-brand-600 focus:ring-brand-500 border-slate-300 rounded" id="privacy" name="privacy" required="" type="checkbox"/>
-<label class="text-sm text-slate-600 dark:text-slate-300" for="privacy">
-                I agree to the <a class="text-brand-600 hover:text-brand-700 underline" href="/legal/privacy.html">Privacy Policy</a> and accept that my data will be processed to handle my request.
-              </label>
-</div>
-<button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-brand-500" type="submit">
+</head>
+<body data-active="Contact">
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/products.html">Products</a>
+        <a href="/ebooks.html">eBooks</a>
+        <a href="/audiobooks.html">Audiobooks</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html">Music</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
+          <input type="search" name="q" placeholder="Search..." 
+                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
+          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
+            🔍
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Get in Touch</h1>
+      <p>Ready to start a project, need support, or want to collaborate? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <main class="wrap" style="margin-top: 40px;">
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>📧 General Inquiries</h3>
+        <p>For general questions, partnerships, and business inquiries</p>
+        <a href="mailto:admin@id01t.store">admin@id01t.store</a>
+      </div>
+      
+      <div class="contact-card">
+        <h3>💻 Technical Support</h3>
+        <p>For technical support, bug reports, and development questions</p>
+        <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a>
+      </div>
+      
+      <div class="contact-card">
+        <h3>🎵 Music & Media</h3>
+        <p>For music licensing, custom soundtracks, and media inquiries</p>
+        <a href="mailto:admin@id01t.store">admin@id01t.store</a>
+      </div>
+      
+      <div class="contact-card">
+        <h3>📚 Content & Publishing</h3>
+        <p>For eBook collaborations, content partnerships, and publishing</p>
+        <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <section style="margin: 60px 0;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Send us a Message</h2>
+        
+        <div id="successMessage" class="success-message">
+          Thank you for your message! We'll get back to you within 24 hours.
+        </div>
+        
+        <div id="errorMessage" class="error-message">
+          Sorry, there was an error sending your message. Please try again or contact us directly.
+        </div>
+
+        <form id="contactForm" action="https://formspree.io/f/xpwgkqkp" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="technical">Technical Support</option>
+              <option value="music">Music & Media</option>
+              <option value="content">Content & Publishing</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project, question, or how we can help..." required></textarea>
+          </div>
+          
+          <div style="text-align: center;">
+            <button type="submit" class="btn primary" style="padding: 12px 32px; font-size: 16px;">
               Send Message
             </button>
-</form>
-</div>
-<!-- Contact Information -->
-<div>
-<div class="mb-6">
-<img alt="iD01t Productions" class="h-16 w-auto mb-4" decoding="async" loading="lazy" src="/assets/harvested/brand/og_brand.png"/>
-</div>
-<h2 class="text-2xl font-semibold mb-6">Get in touch</h2>
-<div class="space-y-6">
-<div>
-<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Email</h3>
-<p class="text-slate-600 dark:text-slate-300">hello@id01t.com</p>
-<p class="text-sm text-slate-500 mt-1">We typically respond within 24 hours</p>
-</div>
-<div>
-<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Support</h3>
-<p class="text-slate-600 dark:text-slate-300">support@id01t.com</p>
-<p class="text-sm text-slate-500 mt-1">For technical support and product questions</p>
-</div>
-<div>
-<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Address</h3>
-<p class="text-slate-600 dark:text-slate-300">
-                iD01t Productions<br/>
-                Montreal, Quebec<br/>
-                Canada
-              </p>
-</div>
-<div>
-<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-2">Business Hours</h3>
-<p class="text-slate-600 dark:text-slate-300">
-                Monday - Friday: 9:00 AM - 6:00 PM EST<br/>
-                Saturday: 10:00 AM - 4:00 PM EST<br/>
-                Sunday: Closed
-              </p>
-</div>
-<div class="pt-6 border-t border-slate-200 dark:border-slate-700">
-<h3 class="font-medium text-slate-900 dark:text-slate-100 mb-3">Follow us</h3>
-<div class="flex gap-4">
-<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300" href="https://github.com/id01t" rel="noopener" target="_blank">
-<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-</a>
-<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300" href="https://id01t.itch.io" rel="noopener" target="_blank">
-<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 3a7 7 0 0 0-7 7v4h2v-4a5 5 0 0 1 10 0v4h2v-4a7 7 0 0 0-7-7z"></path></svg>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Success Message -->
-<div class="fixed inset-0 z-50 hidden" id="success">
-<div class="absolute inset-0 bg-black/50 modal-backdrop"></div>
-<div class="relative min-h-screen flex items-center justify-center p-4">
-<div class="bg-white dark:bg-slate-900 rounded-2xl max-w-md w-full p-8 text-center">
-<div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-6">
-<svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</div>
-<h2 class="text-2xl font-semibold mb-4">Message Sent!</h2>
-<p class="text-slate-600 dark:text-slate-300 mb-6">Thank you for reaching out. We'll get back to you within 24 hours.</p>
-<button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-200" onclick="document.getElementById('success').classList.add('hidden')">
-          Close
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Response Time & FAQ -->
+    <section style="margin: 60px 0;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">What to Expect</h2>
+        
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+          <div class="card">
+            <div class="content">
+              <h3>⚡ Response Time</h3>
+              <p class="excerpt">We typically respond to all inquiries within 24 hours during business days. For urgent technical issues, please mention "URGENT" in your subject line.</p>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="content">
+              <h3>🔧 Technical Support</h3>
+              <p class="excerpt">For technical issues, please include your operating system, software version, and detailed error messages to help us assist you faster.</p>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="content">
+              <h3>💼 Custom Projects</h3>
+              <p class="excerpt">Interested in custom development? Please describe your project requirements, timeline, and budget range for a detailed proposal.</p>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="content">
+              <h3>🎵 Music Licensing</h3>
+              <p class="excerpt">For music licensing inquiries, please specify the intended use, duration, and distribution platform for accurate pricing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 16px; margin: 60px 0; text-align: center; color: white;">
+      <h2 style="margin: 0 0 16px; font-size: 28px;">Stay Updated</h2>
+      <p style="margin: 0 0 24px; opacity: 0.9; font-size: 18px;">
+        Get the latest updates on new products, exclusive offers, and behind-the-scenes content.
+      </p>
+      <form action="https://formspree.io/f/xpwgkqkp" method="POST" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; max-width: 500px; margin: 0 auto;">
+        <input type="email" name="email" placeholder="Enter your email" required
+               style="flex: 1; min-width: 250px; padding: 12px 16px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); color: #333; font-size: 16px;">
+        <input type="hidden" name="subject" value="Newsletter Signup">
+        <button type="submit" class="btn" style="background: white; color: #667eea; border: none; padding: 12px 24px; font-size: 16px; font-weight: bold;">
+          Subscribe
         </button>
-</div>
-</div>
-</div>
-<!-- Footer -->
-<footer class="py-10 border-t border-slate-200 dark:border-slate-800">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-<div>
-<p class="font-semibold">iD01t Productions</p>
-<p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
-</div>
-<nav class="flex flex-wrap gap-4 text-sm">
-<a class="link-underline" href="/legal/terms.html">Terms</a>
-<a class="link-underline" href="/legal/privacy.html">Privacy</a>
-<a class="link-underline" href="/legal/refunds.html">Refunds</a>
-<a class="link-underline" href="https://github.com/id01t" rel="noopener" target="_blank">GitHub</a>
-<a class="link-underline" href="https://id01t.itch.io" rel="noopener" target="_blank">itch.io</a>
-</nav>
-</div>
-</div>
-</footer>
-<!-- Shared JavaScript -->
-<script src="/js/utilities.js" type="module"></script>
-<!-- Analytics placeholder (replace with your GA4 id) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+      </form>
+      <p style="margin: 16px 0 0; font-size: 14px; opacity: 0.8;">
+        No spam. Unsubscribe anytime. Join 5,000+ developers and creators.
+      </p>
+    </section>
+  </main>
+
+  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
+    <div class="wrap">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+        <!-- Company Info -->
+        <div>
+          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
+          <p style="margin: 0 0 16px; color: var(--muted); line-height: 1.6;">
+            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
+            Building automation-first, ROI-focused solutions for modern creators.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://github.com/id01t" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">GitHub</a>
+            <a href="https://id01t.itch.io" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">itch.io</a>
+            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">Spotify</a>
+            <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">YouTube</a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: var(--muted); text-decoration: none;">eBooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: var(--muted); text-decoration: none;">Audiobooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: var(--muted); text-decoration: none;">Music</a></li>
+            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: var(--muted); text-decoration: none;">Games</a></li>
+            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: var(--muted); text-decoration: none;">Apps</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: var(--muted); text-decoration: none;">About</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: var(--muted); text-decoration: none;">Blog</a></li>
+            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: var(--muted); text-decoration: none;">Contact</a></li>
+            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: var(--muted); text-decoration: none;">Search</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: var(--muted); text-decoration: none;">Terms of Service</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: var(--muted); text-decoration: none;">Refund Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: var(--muted); text-decoration: none;">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="border-top: 1px solid var(--border); padding-top: 24px; text-align: center; color: var(--muted);">
+        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script> -->
-<script defer="" src="/assets/site.js"></script></body>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const successMessage = document.getElementById('successMessage');
+      const errorMessage = document.getElementById('errorMessage');
+      
+      // Hide previous messages
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+      
+      fetch('https://formspree.io/f/xpwgkqkp', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          successMessage.style.display = 'block';
+          this.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        errorMessage.style.display = 'block';
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
 </html>

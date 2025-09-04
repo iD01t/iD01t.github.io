@@ -1,7 +1,7 @@
 {
-  "name": "iD01t Productions - Tech eBooks, Audiobooks, Music & Games",
+  "name": "iD01t Productions — AI Apps, eBooks, and Music That Ship",
   "short_name": "iD01t Productions",
-  "description": "Professional digital content by Guillaume Lessard: Tech eBooks, audiobooks, electronic music, apps & games. Creative tech solutions for modern creators.",
+  "description": "Build, learn, and create with pro-grade AI apps, practical eBooks, and cinematic music by iD01t Productions. 100+ digital products, 10+ years experience.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0b0d10",
@@ -11,22 +11,33 @@
     {
       "src": "/assets/img/brand/favicon-32.png",
       "sizes": "32x32",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/assets/img/brand/favicon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "/assets/logo-512.png",
+      "src": "/assets/img/brand/logo.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "categories": ["productivity", "education", "entertainment", "music", "books"],
+  "categories": ["productivity", "education", "entertainment", "music", "books", "developer"],
   "lang": "en",
   "dir": "ltr",
   "scope": "/",
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/assets/harvested/brand/og_brand.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
 }

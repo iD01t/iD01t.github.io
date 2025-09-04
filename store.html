@@ -1,223 +1,550 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Store • iD01t Productions</title>
-    <meta name="description" content="Browse and purchase our professional digital content, ebooks, audiobooks, and creative solutions">
-    <link rel="canonical" href="/store.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Store • iD01t Productions">
-    <meta property="og:description" content="Browse and purchase our professional digital content, ebooks, audiobooks, and creative solutions">
-    <meta property="og:url" content="/store.html">
-    <link rel="stylesheet" href="/assets/site.css">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-CHX65WY0WZ');
-    </script>
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-M39S87SN');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Store | iD01t Productions | Digital Products by Guillaume Lessard</title>
+  <meta name="description" content="Shop digital products by Guillaume Lessard. AI apps, tech eBooks, electronic music, games, and more. Professional quality digital content for developers and creators.">
+  <meta name="keywords" content="digital store, AI apps, tech ebooks, electronic music, Guillaume Lessard, iD01t Productions, digital products, software, games">
+  <link rel="canonical" href="https://id01t.github.io/store.html">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Guillaume Lessard">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Store | iD01t Productions | Digital Products by Guillaume Lessard">
+  <meta property="og:description" content="Shop digital products by Guillaume Lessard. AI apps, tech eBooks, electronic music, games, and more. Professional quality digital content for developers and creators.">
+  <meta property="og:url" content="https://id01t.github.io/store.html">
+  <meta property="og:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
+
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
+  </script>
+
+  <style>
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
+    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
+    .nav a[aria-current="page"], .nav a:hover{opacity:1}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
+    .hero p{opacity:.9;margin:0}
+    .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);transition:transform 0.2s}
+    .card:hover{transform:translateY(-2px)}
+    .card img{width:100%;height:200px;object-fit:cover;background:#111}
+    .card .content{padding:20px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
+    .card .excerpt{color:var(--muted);line-height:1.5;margin-bottom:16px}
+    .btn{display:inline-block;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s}
+    .btn:hover{background:rgba(255,255,255,.1)}
+    .btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
+    .btn.primary:hover{background:var(--brand);opacity:0.9}
+    .tag{display:inline-block;padding:4px 8px;background:rgba(255,255,255,.1);border-radius:12px;font-size:12px;margin-right:8px;margin-bottom:8px}
+    .price{font-weight:bold;color:var(--brand);font-size:18px}
+    .platform{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+    .search-container{display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap}
+    .search-input{flex:1;min-width:200px;padding:12px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:inherit}
+    .filter-select{padding:12px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:inherit}
+    .category-section{margin:60px 0}
+    .category-header{text-align:center;margin-bottom:40px}
+    .category-header h2{font-size:32px;margin-bottom:16px}
+    .category-header p{color:var(--muted);font-size:18px}
+    .featured-banner{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);padding:40px;border-radius:16px;margin:40px 0;text-align:center;color:white}
+    .featured-banner h2{margin:0 0 16px;font-size:28px}
+    .featured-banner p{margin:0 0 24px;opacity:0.9;font-size:18px}
+    .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin:40px 0}
+    .stat{text-align:center}
+    .stat-number{font-size:32px;font-weight:bold;color:var(--brand);margin-bottom:8px}
+    .stat-label{color:var(--muted);font-size:14px}
+  </style>
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://id01t.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Store",
+        "item": "https://id01t.github.io/store.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-active="Store">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h1 class="page-title">Store</h1>
-            <p style="font-size: 1.1em; color: var(--muted); max-width: 600px; margin: 0 auto;">
-                Browse and purchase our professional digital content and creative solutions
-            </p>
+  <header id="site-header" class="sticky">
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
+      <nav>
+        <a href="/products.html">Products</a>
+        <a href="/ebooks.html">eBooks</a>
+        <a href="/audiobooks.html">Audiobooks</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/games.html">Games</a>
+        <a href="/music.html">Music</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
+          <input type="search" name="q" placeholder="Search..." 
+                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
+          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
+            🔍
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Digital Store by iD01t Productions</h1>
+      <p>Professional digital content by <strong>Guillaume Lessard</strong> — AI apps, tech eBooks, electronic music, games, and more. Quality products for developers and creators.</p>
+    </div>
+  </section>
+
+  <main class="wrap" style="margin-top: 40px;">
+    <!-- Store Stats -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Digital Products</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Downloads</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4.8★</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+    </div>
+
+    <!-- Search and Filters -->
+    <div class="search-container">
+      <input type="search" id="searchInput" class="search-input" placeholder="Search products by name, category, or description..." />
+      <select id="categoryFilter" class="filter-select">
+        <option value="">All Categories</option>
+        <option value="apps">AI Apps & Tools</option>
+        <option value="ebooks">Tech eBooks</option>
+        <option value="music">Electronic Music</option>
+        <option value="games">Games & Interactive</option>
+        <option value="templates">Templates & Resources</option>
+      </select>
+      <select id="priceFilter" class="filter-select">
+        <option value="">All Prices</option>
+        <option value="free">Free</option>
+        <option value="under-10">Under $10</option>
+        <option value="10-25">$10 - $25</option>
+        <option value="25-50">$25 - $50</option>
+        <option value="over-50">Over $50</option>
+      </select>
+      <select id="platformFilter" class="filter-select">
+        <option value="">All Platforms</option>
+        <option value="windows">Windows</option>
+        <option value="mac">macOS</option>
+        <option value="linux">Linux</option>
+        <option value="web">Web</option>
+        <option value="mobile">Mobile</option>
+      </select>
+    </div>
+
+    <!-- Featured Products -->
+    <section class="featured-banner">
+      <h2>Featured Products</h2>
+      <p>Discover our most popular and highly-rated digital products</p>
+      <a href="#featured" class="btn" style="background: white; color: #667eea; border: none;">View Featured</a>
+    </section>
+
+    <!-- AI Apps & Tools Section -->
+    <section class="category-section" id="apps">
+      <div class="category-header">
+        <h2>🤖 AI Apps & Tools</h2>
+        <p>Professional AI applications and automation tools for developers and creators</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <img src="/assets/harvested/apps/img_1.png" alt="AI Automation Suite" loading="lazy">
+          <div class="content">
+            <h3>AI Automation Suite</h3>
+            <div class="meta">Automation • AI • Productivity • Windows</div>
+            <div class="excerpt">Complete toolkit for automating repetitive tasks with AI. Includes templates, scripts, and documentation for seamless workflow automation.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">AI</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Productivity</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$19.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/ai-automation-suite.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/apps/img_2.svg" alt="ML Development Framework" loading="lazy">
+          <div class="content">
+            <h3>ML Development Framework</h3>
+            <div class="meta">Machine Learning • Python • Framework • Cross-platform</div>
+            <div class="excerpt">Rapid prototyping framework for machine learning projects. Pre-built models, utilities, and comprehensive documentation included.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Python</span>
+              <span class="tag">Framework</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$29.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/ml-development-framework.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/apps/img_3.png" alt="Data Processing Pro" loading="lazy">
+          <div class="content">
+            <h3>Data Processing Pro</h3>
+            <div class="meta">Data Science • Processing • Analytics • Cross-platform</div>
+            <div class="excerpt">Advanced data processing and analysis tool with visualization capabilities, export options, and real-time processing features.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">Data Science</span>
+              <span class="tag">Analytics</span>
+              <span class="tag">Visualization</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$24.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="/apps/data-processing-pro.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tech eBooks Section -->
+    <section class="category-section" id="ebooks">
+      <div class="category-header">
+        <h2>📚 Tech eBooks</h2>
+        <p>Comprehensive guides and tutorials for programming, automation, and digital skills</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <img src="/assets/harvested/ebooks/img_10.jpg" alt="Python Mastery Guide" loading="lazy">
+          <div class="content">
+            <h3>Python Mastery: From Zero to Hero</h3>
+            <div class="meta">Programming • Python • Complete Guide • 350 pages</div>
+            <div class="excerpt">Master Python programming from basics to advanced concepts. Includes practical projects, best practices, and real-world applications.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">Python</span>
+              <span class="tag">Programming</span>
+              <span class="tag">Tutorial</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$9.99</span>
+              <span class="platform">Google Books</span>
+            </div>
+            <a href="/ebooks/python-mastery-zero-to-hero.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/ebooks/img_11.jpg" alt="AI Development Guide" loading="lazy">
+          <div class="content">
+            <h3>AI Development Fundamentals</h3>
+            <div class="meta">AI • Machine Learning • Development • 280 pages</div>
+            <div class="excerpt">Complete guide to building AI applications. From theory to implementation with real-world projects and industry best practices.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">AI</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Development</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$14.99</span>
+              <span class="platform">Google Books</span>
+            </div>
+            <a href="/ebooks/ai-development-fundamentals.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/ebooks/img_12.jpg" alt="Automation Handbook" loading="lazy">
+          <div class="content">
+            <h3>Automation Handbook</h3>
+            <div class="meta">Automation • Productivity • Scripts • 200 pages</div>
+            <div class="excerpt">Master the art of automation with practical scripts, tools, and techniques for developers and IT professionals.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">Automation</span>
+              <span class="tag">Productivity</span>
+              <span class="tag">Scripts</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$12.99</span>
+              <span class="platform">Google Books</span>
+            </div>
+            <a href="/ebooks/automation-handbook.html" class="btn primary">View Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Electronic Music Section -->
+    <section class="category-section" id="music">
+      <div class="category-header">
+        <h2>🎵 Electronic Music</h2>
+        <p>Cinematic electronic music perfect for coding, focus, and creative work</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <img src="/assets/harvested/brand/og_brand.jpg" alt="Focus Sessions Album" loading="lazy">
+          <div class="content">
+            <h3>Focus Sessions</h3>
+            <div class="meta">Electronic • Ambient • Focus • 45 minutes</div>
+            <div class="excerpt">Perfect background music for coding, studying, and creative work. Cinematic electronic soundscapes designed for deep focus.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">Electronic</span>
+              <span class="tag">Ambient</span>
+              <span class="tag">Focus</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">Free Stream</span>
+              <span class="platform">Spotify</span>
+            </div>
+            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" class="btn primary">Listen Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/brand/og_brand.jpg" alt="Code Beats EP" loading="lazy">
+          <div class="content">
+            <h3>Code Beats EP</h3>
+            <div class="meta">Electronic • Techno • Coding • 30 minutes</div>
+            <div class="excerpt">High-energy electronic tracks designed for programming marathons and intense coding sessions. Boost your productivity with these driving beats.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">Electronic</span>
+              <span class="tag">Techno</span>
+              <span class="tag">Coding</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">Free Stream</span>
+              <span class="platform">Spotify</span>
+            </div>
+            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" class="btn primary">Listen Now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Games & Interactive Section -->
+    <section class="category-section" id="games">
+      <div class="category-header">
+        <h2>🎮 Games & Interactive</h2>
+        <p>Interactive games and productivity tools designed for developers and creative professionals</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <img src="/assets/harvested/games/nini_hero.webp" alt="Nini Hero Game" loading="lazy">
+          <div class="content">
+            <h3>Nini Hero</h3>
+            <div class="meta">Adventure • Puzzle • Indie • Windows/Web</div>
+            <div class="excerpt">Charming adventure game with puzzle elements. Perfect for relaxation and creative inspiration during breaks.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">Adventure</span>
+              <span class="tag">Puzzle</span>
+              <span class="tag">Indie</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$4.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="https://id01t.itch.io/" target="_blank" rel="noopener" class="btn primary">Play Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/harvested/games/nini_hero.webp" alt="Dev Tools Simulator" loading="lazy">
+          <div class="content">
+            <h3>Dev Tools Simulator</h3>
+            <div class="meta">Simulation • Education • Tools • Cross-platform</div>
+            <div class="excerpt">Learn programming concepts through interactive simulation. Gamified approach to technical education and skill development.</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="tag">Simulation</span>
+              <span class="tag">Education</span>
+              <span class="tag">Tools</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span class="price">$7.99</span>
+              <span class="platform">itch.io</span>
+            </div>
+            <a href="https://id01t.itch.io/" target="_blank" rel="noopener" class="btn primary">Play Now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="featured-banner">
+      <h2>Stay Updated</h2>
+      <p>Get notified about new products, updates, and exclusive offers</p>
+      <form action="https://formspree.io/f/xpwgkqkp" method="POST" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; max-width: 500px; margin: 0 auto;">
+        <input type="email" name="email" placeholder="Enter your email" required
+               style="flex: 1; min-width: 250px; padding: 12px 16px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); color: #333; font-size: 16px;">
+        <button type="submit" class="btn" style="background: white; color: #667eea; border: none; padding: 12px 24px; font-size: 16px; font-weight: bold;">
+          Subscribe
+        </button>
+      </form>
+      <p style="margin: 16px 0 0; font-size: 14px; opacity: 0.8;">
+        No spam. Unsubscribe anytime. Join 5,000+ developers and creators.
+      </p>
+    </section>
+  </main>
+
+  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
+    <div class="wrap">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+        <!-- Company Info -->
+        <div>
+          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
+          <p style="margin: 0 0 16px; color: var(--muted); line-height: 1.6;">
+            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
+            Building automation-first, ROI-focused solutions for modern creators.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://github.com/id01t" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">GitHub</a>
+            <a href="https://id01t.itch.io" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">itch.io</a>
+            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">Spotify</a>
+            <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">YouTube</a>
+          </div>
         </div>
         
-        <div style="max-width: 800px; margin: 0 auto;">
-            <div class="card" style="padding: 2rem; margin-bottom: 2rem;">
-                <h2 style="margin-bottom: 1rem;">Digital Content Store</h2>
-                <p style="color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem;">
-                    Welcome to the iD01t Productions store. Here you'll find our complete collection of professional digital content, 
-                    including ebooks, audiobooks, and creative solutions.
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-                    <a href="/ebooks.html" class="btn" style="text-align: center;">Browse Ebooks</a>
-                    <a href="/audiobooks.html" class="btn" style="text-align: center;">Browse Audiobooks</a>
-                    <a href="/series.html" class="btn" style="text-align: center;">View Series</a>
-                </div>
-            </div>
-            
-            <div class="card" style="padding: 2rem;">
-                <h2 style="margin-bottom: 1rem;">Featured Collections</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                    <div style="text-align: center; padding: 1rem;">
-                        <h3 style="margin-bottom: 0.5rem;">🚀 Technology Guides</h3>
-                        <p style="color: var(--muted); font-size: 0.9em;">Programming, AI, and digital skills</p>
-                    </div>
-                    <div style="text-align: center; padding: 1rem;">
-                        <h3 style="margin-bottom: 0.5rem;">🎨 Creative Works</h3>
-                        <p style="color: var(--muted); font-size: 0.9em;">Fiction, poetry, and artistic content</p>
-                    </div>
-                    <div style="text-align: center; padding: 1rem;">
-                        <h3 style="margin-bottom: 0.5rem;">🧠 Personal Development</h3>
-                        <p style="color: var(--muted); font-size: 0.9em;">Mindfulness, growth, and transformation</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: var(--muted); text-decoration: none;">eBooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: var(--muted); text-decoration: none;">Audiobooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: var(--muted); text-decoration: none;">Music</a></li>
+            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: var(--muted); text-decoration: none;">Games</a></li>
+            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: var(--muted); text-decoration: none;">Apps</a></li>
+          </ul>
         </div>
-    </div>
-    
-    <script src="/assets/site.js" defer></script>
-
-<!-- ===== iD01t Store Hub ===== -->
-<section class="wrap" style="max-width:1200px;margin:40px auto">
-  <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
-    <a class="card link" href="/games.html" style="padding:20px;border:1px solid var(--border);background:var(--card);border-radius:14px;text-decoration:none;color:inherit">
-      <h3 style="margin:0 0 8px 0">Games</h3>
-      <p style="margin:0;color:var(--muted)">Play Nini’s Adventures and more on itch.io</p>
-    </a>
-    <a class="card link" href="/ebooks.html" style="padding:20px;border:1px solid var(--border);background:var(--card);border-radius:14px;text-decoration:none;color:inherit">
-      <h3 style="margin:0 0 8px 0">eBooks</h3>
-      <p style="margin:0;color:var(--muted)">Programming, AI, tools, and mastery</p>
-    </a>
-    <a class="card link" href="/audiobooks.html" style="padding:20px;border:1px solid var(--border);background:var(--card);border-radius:14px;text-decoration:none;color:inherit">
-      <h3 style="margin:0 0 8px 0">Audiobooks</h3>
-      <p style="margin:0;color:var(--muted)">Listen on your favorite platforms</p>
-    </a>
-    <a class="card link" href="/music.html" style="padding:20px;border:1px solid var(--border);background:var(--card);border-radius:14px;text-decoration:none;color:inherit">
-      <h3 style="margin:0 0 8px 0">Music</h3>
-      <p style="margin:0;color:var(--muted)">DJ iD01t — albums & singles</p>
-    </a>
-  </div>
-</section>
-
-<section class="wrap" style="max-width:1200px;margin:20px auto">
-  <div class="card" style="display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;border:1px solid var(--border);background:var(--card);border-radius:16px;overflow:hidden">
-    <div class="media" style="padding:12px">
-      <iframe frameborder="0" src="https://itch.io/embed/3845294?linkback=true&amp;border_width=4&amp;dark=true" width="100%" height="173" style="width:100%;max-width:600px">
-        <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem">Nini's Adventures: Kitties Mayhem! by iD01t Productions</a>
-      </iframe>
-    </div>
-    <div style="padding:20px">
-      <h2 style="margin:0 0 8px 0">Featured: Nini’s Adventures — Kitties Mayhem!</h2>
-      <p style="margin:0 0 12px 0;color:var(--muted)">Chaotic online multiplayer. Public PC beta opens September 24, 2025.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn" href="/games.html">Learn more</a>
-        <a class="btn outline" href="https://id01t.itch.io/" target="_blank" rel="noopener">All games on itch.io</a>
+        
+        <!-- Company -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: var(--muted); text-decoration: none;">About</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: var(--muted); text-decoration: none;">Blog</a></li>
+            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: var(--muted); text-decoration: none;">Contact</a></li>
+            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: var(--muted); text-decoration: none;">Search</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: var(--muted); text-decoration: none;">Terms of Service</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: var(--muted); text-decoration: none;">Refund Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: var(--muted); text-decoration: none;">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="border-top: 1px solid var(--border); padding-top: 24px; text-align: center; color: var(--muted);">
+        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section class="wrap" style="max-width:1200px;margin:30px auto">
-  <h2 style="margin:0 0 12px 0">Books & Audio</h2>
-  <div id="books-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px"></div>
-  <div id="books-empty" style="display:none;color:var(--muted);margin-top:10px">No items found.</div>
-</section>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<section class="wrap" style="max-width:1200px;margin:30px auto">
-  <h2 style="margin:0 0 12px 0">Music — Highlights</h2>
-  <div class="card" style="padding:16px;border:1px solid var(--border);background:var(--card);border-radius:12px">
-    <div style="display:grid;grid-template-columns:1fr 1fr; gap:12px">
-      <div class="aspect-video" style="position:relative;padding-top:56%">
-        <iframe style="position:absolute;inset:0;width:100%;height:100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="aspect-video" style="position:relative;padding-top:56%">
-        <iframe style="position:absolute;inset:0;width:100%;height:100%" src="https://www.youtube.com/embed/GsVqmOx4Rwc?si=YWqbARP_0Hw5l_yB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-      <a class="btn" href="/music.html">All music</a>
-      <a class="btn outline" href="https://www.youtube.com/@id01t" target="_blank" rel="noopener">YouTube</a>
-    </div>
-  </div>
-</section>
+    // Store filtering functionality
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const priceFilter = document.getElementById('priceFilter');
+    const platformFilter = document.getElementById('platformFilter');
 
-<script>
-// Optional API keys (never commit real keys to public repos)
-window.GBOOKS_API_KEY = window.GBOOKS_API_KEY || "";
-window.ITCH_API_KEY = window.ITCH_API_KEY || "";
+    function handleFilter() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const category = categoryFilter.value.toLowerCase();
+      const price = priceFilter.value;
+      const platform = platformFilter.value.toLowerCase();
 
-// ===== Google Books loader (Books & Audiobooks) =====
-const API = 'https://www.googleapis.com/books/v1/volumes';
-function coverById(id, zoom=3){return `https://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=${zoom}&source=gbs_api`}
-function toBook(v){
-  const vi = v.volumeInfo||{}, si = v.saleInfo||{};
-  return {
-    id: v.id, title: vi.title||'', subtitle: vi.subtitle||'',
-    img: coverById(v.id,3), img2x: coverById(v.id,4),
-    year: (vi.publishedDate||'').slice(0,4), lang: (vi.language||'').toUpperCase(),
-    cats: vi.categories||[], link: vi.infoLink||v.selfLink||'', buy: si.buyLink||vi.infoLink||''
-  };
-}
-function card(b){
-  const srcset = b.img2x ? `${b.img} 1x, ${b.img2x} 2x` : b.img;
-  const cats = (b.cats||[]).slice(0,2).map(c=>`<span class="pill">${c}</span>`).join(' ');
-  return `<article class="book">
-    <img loading="lazy" decoding="async" src="${b.img}" srcset="${srcset}" alt="${b.title} cover">
-    <div class="meta"><h3>${b.title}</h3><p>${b.subtitle||''}</p></div>
-    <div class="row">
-      <div class="tiny">${b.lang||''}${b.year? ' • '+b.year:''}</div>
-      <div class="tiny">${cats}</div>
-    </div>
-    <div class="row">
-      <a class="btn sm" href="${b.link}" target="_blank" rel="noopener">Google Books</a>
-      ${b.buy? `<a class="btn sm outline" href="${b.buy}" target="_blank" rel="noopener">Buy</a>`:''}
-    </div>
-  </article>`;
-}
+      const cards = document.querySelectorAll('.card');
+      
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const meta = card.querySelector('.meta').textContent.toLowerCase();
+        const excerpt = card.querySelector('.excerpt').textContent.toLowerCase();
+        const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase()).join(' ');
+        const priceText = card.querySelector('.price').textContent;
 
-async function fetchBooks(q){
-  const key = window.GBOOKS_API_KEY ? `&key=${encodeURIComponent(window.GBOOKS_API_KEY)}` : '';
-  const url = `${API}?q=${encodeURIComponent(q)}&printType=books&maxResults=40${key}`;
-  const res = await fetch(url); if(!res.ok) return [];
-  const data = await res.json();
-  return (data.items||[]).map(toBook);
-}
-(async function booksSection(){
-  const qs = [
-    'inauthor:"Guillaume Lessard"',
-    'inpublisher:"iD01t Productions"',
-    'subject:audiobooks inauthor:"Guillaume Lessard"'
-  ];
-  const map = new Map();
-  for(const q of qs){
-    const items = await fetchBooks(q);
-    items.forEach(b => { const k=(b.title+'|'+(b.year||'')).toLowerCase(); if(!map.has(k)) map.set(k,b); });
-  }
-  const list = Array.from(map.values()).sort((a,b)=> (b.year||0)-(a.year||0)).slice(0,12);
-  const grid = document.getElementById('books-grid');
-  const empty = document.getElementById('books-empty');
-  if(!list.length){ empty.style.display='block'; return; }
-  grid.innerHTML = list.map(card).join('');
-})();
+        const matchesSearch = !searchTerm || 
+          title.includes(searchTerm) || 
+          meta.includes(searchTerm) || 
+          excerpt.includes(searchTerm) || 
+          tags.includes(searchTerm);
 
-// Minimal styles for book cards
-const style = document.createElement('style'); style.textContent = `
-:root{--border:rgba(0,0,0,.12);--card:rgba(0,0,0,.03);--muted:#6b7280}
-@media (prefers-color-scheme: dark){:root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.05);--muted:rgba(255,255,255,.7)}}
-.wrap .book{border:1px solid var(--border);background:var(--card);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:10px}
-.wrap .book img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
-.wrap .book .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.wrap .book .tiny{font-size:12px;color:var(--muted)}
-.pill{font-size:11px;padding:2px 6px;border:1px solid var(--border);border-radius:999px}
-.btn{display:inline-block;background:#0ea5e9;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none}
-.btn.outline{background:transparent;color:inherit;border:1px solid var(--border)}
-.btn.sm{padding:6px 10px;border-radius:8px}
-.card .btn{background:#0ea5e9}
-`;
-document.head.appendChild(style);
-</script>
-<!-- ===== End Store Hub ===== -->
+        const matchesCategory = !category || 
+          meta.includes(category) || 
+          tags.includes(category);
 
+        const matchesPlatform = !platform || 
+          meta.includes(platform) || 
+          tags.includes(platform);
+
+        const matchesPrice = !price || 
+          (price === 'free' && priceText === 'Free Stream') ||
+          (price === 'under-10' && priceText.includes('$') && parseFloat(priceText.replace('$', '')) < 10) ||
+          (price === '10-25' && priceText.includes('$') && parseFloat(priceText.replace('$', '')) >= 10 && parseFloat(priceText.replace('$', '')) <= 25) ||
+          (price === '25-50' && priceText.includes('$') && parseFloat(priceText.replace('$', '')) > 25 && parseFloat(priceText.replace('$', '')) <= 50) ||
+          (price === 'over-50' && priceText.includes('$') && parseFloat(priceText.replace('$', '')) > 50);
+
+        if (matchesSearch && matchesCategory && matchesPlatform && matchesPrice) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Event listeners
+    searchInput.addEventListener('input', handleFilter);
+    categoryFilter.addEventListener('change', handleFilter);
+    priceFilter.addEventListener('change', handleFilter);
+    platformFilter.addEventListener('change', handleFilter);
+  </script>
 </body>
 </html>
