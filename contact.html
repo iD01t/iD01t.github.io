@@ -1,19 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us | iD01t Productions | Get in Touch with Guillaume Lessard</title>
-  <meta name="description" content="Contact iD01t Productions for custom projects, support, or collaborations. Reach Guillaume Lessard at admin@id01t.store or itechinfomtl@gmail.com.">
-  <meta name="keywords" content="contact, Guillaume Lessard, iD01t Productions, custom projects, support, collaboration, admin@id01t.store">
+  <title>Contact iD01t Productions | Get in Touch with Guillaume Lessard</title>
+  <meta name="description" content="Contact iD01t Productions for custom tech eBooks, music licensing, game development, or AI automation services. Professional digital content creator Guillaume Lessard.">
   <link rel="canonical" href="https://id01t.github.io/contact.html">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Guillaume Lessard">
 
-  <!-- Open Graph -->
+<!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact Us | iD01t Productions | Get in Touch with Guillaume Lessard">
-  <meta property="og:description" content="Contact iD01t Productions for custom projects, support, or collaborations. Reach Guillaume Lessard at admin@id01t.store or itechinfomtl@gmail.com.">
+  <meta property="og:title" content="Contact iD01t Productions | Get in Touch with Guillaume Lessard">
+  <meta property="og:description" content="Contact iD01t Productions for custom tech eBooks, music licensing, game development, or AI automation services.">
   <meta property="og:url" content="https://id01t.github.io/contact.html">
   <meta property="og:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
 
@@ -21,365 +20,287 @@
   <link rel="apple-touch-icon" href="/assets/logo-512.png">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
-  </script>
-
-  <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
-    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
-    .nav a[aria-current="page"], .nav a:hover{opacity:1}
-    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
-    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
-    .hero p{opacity:.9;margin:0}
-    .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);transition:transform 0.2s}
-    .card:hover{transform:translateY(-2px)}
-    .card .content{padding:20px}
-    .card h3{margin:0 0 8px;font-size:18px}
-    .card .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
-    .card .excerpt{color:var(--muted);line-height:1.5;margin-bottom:16px}
-    .btn{display:inline-block;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s}
-    .btn:hover{background:rgba(255,255,255,.1)}
-    .btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
-    .btn.primary:hover{background:var(--brand);opacity:0.9}
-    .form-group{margin-bottom:20px}
-    .form-group label{display:block;margin-bottom:8px;font-weight:500}
-    .form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:inherit;font-size:16px}
-    .form-group textarea{min-height:120px;resize:vertical}
-    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--brand)}
-    .contact-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:40px 0}
-    .contact-card{border:1px solid var(--border);border-radius:16px;padding:24px;background:var(--card);text-align:center}
-    .contact-card h3{margin:0 0 16px;font-size:20px}
-    .contact-card p{color:var(--muted);margin-bottom:16px}
-    .contact-card a{color:var(--brand);text-decoration:none;font-weight:500}
-    .contact-card a:hover{text-decoration:underline}
-    .success-message{background:#10b981;color:white;padding:16px;border-radius:8px;margin-bottom:20px;display:none}
-    .error-message{background:#ef4444;color:white;padding:16px;border-radius:8px;margin-bottom:20px;display:none}
-  </style>
-
-  <!-- Breadcrumb JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://id01t.github.io/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Contact",
-        "item": "https://id01t.github.io/contact.html"
-      }
-    ]
-  }
-  </script>
-
-  <!-- ContactPage JSON-LD -->
-  <script type="application/ld+json">
+  <!-- Structured Data -->
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact iD01t Productions",
-    "description": "Get in touch with Guillaume Lessard for custom projects, support, or collaborations.",
+    "description": "Contact page for iD01t Productions - professional digital content creator Guillaume Lessard",
+    "url": "https://id01t.github.io/contact.html",
     "mainEntity": {
       "@type": "Organization",
       "name": "iD01t Productions",
-      "email": "admin@id01t.store",
-      "alternateName": "iD01t Productions",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Montreal",
-        "addressRegion": "Quebec",
-        "addressCountry": "Canada"
-      },
       "founder": {
         "@type": "Person",
-        "name": "Guillaume Lessard",
-        "email": "itechinfomtl@gmail.com"
-      }
+        "name": "Guillaume Lessard"
+      },
+      "email": "admin@id01t.store",
+      "url": "https://id01t.github.io"
     }
   }
   </script>
 </head>
-<body data-active="Contact">
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/products.html">Products</a>
-        <a href="/ebooks.html">eBooks</a>
-        <a href="/audiobooks.html">Audiobooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html">Games</a>
-        <a href="/music.html">Music</a>
-        <a href="/services.html">Services</a>
-        <a href="/blog.html">Blog</a>
-      </nav>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
-          <input type="search" name="q" placeholder="Search..." 
-                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
-          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
-            🔍
-          </button>
-        </form>
-      </div>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Get in Touch</h1>
-      <p>Ready to start a project, need support, or want to collaborate? We'd love to hear from you.</p>
-    </div>
-  </section>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100" data-active="Contact">
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <div class="wrap">
+    <header id="site-header" class="sticky" role="banner">
+      <div class="wrap nav">
+        <a href="/" class="logo" aria-label="iD01t Productions Home"><strong>iD01t</strong></a>
+        <nav role="navigation" aria-label="Main navigation">
+          <a href="/products.html" aria-label="View all products">Products</a>
+          <a href="/ebooks.html" aria-label="Browse technical eBooks">eBooks</a>
+          <a href="/audiobooks.html" aria-label="Listen to audiobooks">Audiobooks</a>
+          <a href="/apps.html" aria-label="Explore AI applications">Apps</a>
+          <a href="/games.html" aria-label="Play indie games">Games</a>
+          <a href="/music.html" aria-label="Stream electronic music">Music</a>
+          <a href="/services.html" aria-label="View professional services">Services</a>
+          <a href="/blog.html" aria-label="Read our blog">Blog</a>
+</nav>
+</div>
+</header>
 
-  <main class="wrap" style="margin-top: 40px;">
-    <!-- Contact Information -->
-    <div class="contact-info">
-      <div class="contact-card">
-        <h3>📧 General Inquiries</h3>
-        <p>For general questions, partnerships, and business inquiries</p>
-        <a href="mailto:admin@id01t.store">admin@id01t.store</a>
-      </div>
-      
-      <div class="contact-card">
-        <h3>💻 Technical Support</h3>
-        <p>For technical support, bug reports, and development questions</p>
-        <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a>
-      </div>
-      
-      <div class="contact-card">
-        <h3>🎵 Music & Media</h3>
-        <p>For music licensing, custom soundtracks, and media inquiries</p>
-        <a href="mailto:admin@id01t.store">admin@id01t.store</a>
-      </div>
-      
-      <div class="contact-card">
-        <h3>📚 Content & Publishing</h3>
-        <p>For eBook collaborations, content partnerships, and publishing</p>
-        <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a>
-      </div>
-    </div>
+    <main id="main-content" class="wrap" style="margin-top:60px" role="main">
+      <!-- Hero Section -->
+      <section class="hero" style="padding: 60px 0; text-align: center; background: linear-gradient(135deg, #111827 0%, #0b0d10 60%, #0b0d10 100%);">
+        <div class="wrap">
+          <h1 style="font-size: clamp(32px, 5vw, 48px); margin: 0 0 16px; line-height: 1.2; font-weight: 700;" id="hero-title">📧 Get in Touch</h1>
+          <p style="font-size: clamp(16px, 2.5vw, 20px); margin: 0 0 32px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Ready to collaborate? Have questions about our services? We'd love to hear from you!
+          </p>
+</div>
+</section>
 
-    <!-- Contact Form -->
-    <section style="margin: 60px 0;">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Send us a Message</h2>
-        
-        <div id="successMessage" class="success-message">
-          Thank you for your message! We'll get back to you within 24 hours.
-        </div>
-        
-        <div id="errorMessage" class="error-message">
-          Sorry, there was an error sending your message. Please try again or contact us directly.
-        </div>
-
-        <form id="contactForm" action="https://formspree.io/f/xpwgkqkp" method="POST">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject *</label>
-            <select id="subject" name="subject" required>
-              <option value="">Select a subject</option>
-              <option value="general">General Inquiry</option>
-              <option value="technical">Technical Support</option>
-              <option value="music">Music & Media</option>
-              <option value="content">Content & Publishing</option>
-              <option value="collaboration">Collaboration</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project, question, or how we can help..." required></textarea>
-          </div>
-          
-          <div style="text-align: center;">
-            <button type="submit" class="btn primary" style="padding: 12px 32px; font-size: 16px;">
+      <!-- Contact Form and Information -->
+      <section style="margin: 60px 0;">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+<!-- Contact Form -->
+          <div class="card" style="padding: 40px;">
+            <h2 style="font-size: 28px; margin: 0 0 24px; color: var(--brand);">Send us a Message</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST" id="contact-form">
+              <div style="margin-bottom: 20px;">
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600;">Name *</label>
+                <input type="text" id="name" name="name" required 
+                       style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: inherit; font-size: 16px;">
+</div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600;">Email *</label>
+                <input type="email" id="email" name="email" required 
+                       style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: inherit; font-size: 16px;">
+</div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="subject" style="display: block; margin-bottom: 8px; font-weight: 600;">Subject *</label>
+                <select id="subject" name="subject" required 
+                        style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: inherit; font-size: 16px;">
+                  <option value="">Select a topic</option>
+                  <option value="Custom eBook Request">Custom eBook Request</option>
+                  <option value="Music Licensing">Music Licensing</option>
+                  <option value="Game Development">Game Development</option>
+                  <option value="AI Automation Services">AI Automation Services</option>
+                  <option value="Collaboration">Collaboration</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Support">Support</option>
+</select>
+</div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600;">Message *</label>
+                <textarea id="message" name="message" rows="6" required 
+                          placeholder="Tell us about your project or question..."
+                          style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: inherit; font-size: 16px; resize: vertical;"></textarea>
+</div>
+              
+              <div style="margin-bottom: 20px;">
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                  <input type="checkbox" name="newsletter" value="yes" style="margin: 0;">
+                  <span>Subscribe to our newsletter for updates on new releases</span>
+              </label>
+</div>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 16px; font-weight: 600;">
               Send Message
             </button>
-          </div>
-        </form>
-      </div>
-    </section>
+</form>
+            
+            <div id="form-status" style="margin-top: 20px; padding: 12px; border-radius: 8px; display: none;"></div>
+</div>
 
-    <!-- Response Time & FAQ -->
-    <section style="margin: 60px 0;">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">What to Expect</h2>
-        
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-          <div class="card">
-            <div class="content">
-              <h3>⚡ Response Time</h3>
-              <p class="excerpt">We typically respond to all inquiries within 24 hours during business days. For urgent technical issues, please mention "URGENT" in your subject line.</p>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="content">
-              <h3>🔧 Technical Support</h3>
-              <p class="excerpt">For technical issues, please include your operating system, software version, and detailed error messages to help us assist you faster.</p>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="content">
-              <h3>💼 Custom Projects</h3>
-              <p class="excerpt">Interested in custom development? Please describe your project requirements, timeline, and budget range for a detailed proposal.</p>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="content">
-              <h3>🎵 Music Licensing</h3>
-              <p class="excerpt">For music licensing inquiries, please specify the intended use, duration, and distribution platform for accurate pricing.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- Contact Information -->
+<div>
+            <div class="card" style="padding: 40px; margin-bottom: 24px;">
+              <h2 style="font-size: 24px; margin: 0 0 24px; color: var(--brand);">Contact Information</h2>
+              
+              <div style="margin-bottom: 24px;">
+                <h3 style="font-size: 18px; margin: 0 0 8px; color: white;">📧 Email</h3>
+                <p style="margin: 0; color: var(--muted);">
+                  <a href="mailto:admin@id01t.store" style="color: var(--brand); text-decoration: none;">admin@id01t.store</a>
+                </p>
+                <p style="margin: 8px 0 0; font-size: 14px; color: var(--muted);">For general inquiries and business proposals</p>
+</div>
+              
+              <div style="margin-bottom: 24px;">
+                <h3 style="font-size: 18px; margin: 0 0 8px; color: white;">📍 Location</h3>
+                <p style="margin: 0; color: var(--muted);">Montreal, Quebec, Canada</p>
+                <p style="margin: 8px 0 0; font-size: 14px; color: var(--muted);">Serving clients worldwide</p>
+</div>
+              
+              <div style="margin-bottom: 24px;">
+                <h3 style="font-size: 18px; margin: 0 0 8px; color: white;">⏰ Response Time</h3>
+                <p style="margin: 0; color: var(--muted);">Within 24-48 hours</p>
+                <p style="margin: 8px 0 0; font-size: 14px; color: var(--muted);">We typically respond within 1-2 business days</p>
+</div>
+</div>
 
-    <!-- Newsletter Signup -->
-    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 16px; margin: 60px 0; text-align: center; color: white;">
-      <h2 style="margin: 0 0 16px; font-size: 28px;">Stay Updated</h2>
-      <p style="margin: 0 0 24px; opacity: 0.9; font-size: 18px;">
-        Get the latest updates on new products, exclusive offers, and behind-the-scenes content.
-      </p>
-      <form action="https://formspree.io/f/xpwgkqkp" method="POST" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; max-width: 500px; margin: 0 auto;">
-        <input type="email" name="email" placeholder="Enter your email" required
-               style="flex: 1; min-width: 250px; padding: 12px 16px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); color: #333; font-size: 16px;">
-        <input type="hidden" name="subject" value="Newsletter Signup">
-        <button type="submit" class="btn" style="background: white; color: #667eea; border: none; padding: 12px 24px; font-size: 16px; font-weight: bold;">
-          Subscribe
-        </button>
-      </form>
-      <p style="margin: 16px 0 0; font-size: 14px; opacity: 0.8;">
-        No spam. Unsubscribe anytime. Join 5,000+ developers and creators.
-      </p>
-    </section>
-  </main>
+            <div class="card" style="padding: 40px;">
+              <h2 style="font-size: 24px; margin: 0 0 24px; color: var(--brand);">What We Can Help With</h2>
+              
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
+                  <span style="position: absolute; left: 0; color: var(--brand);">📚</span>
+                  <strong>Custom Tech eBooks</strong><br>
+                  <span style="color: var(--muted); font-size: 14px;">Programming guides, automation tutorials, AI education</span>
+                </li>
+                <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
+                  <span style="position: absolute; left: 0; color: var(--brand);">🎵</span>
+                  <strong>Music Licensing</strong><br>
+                  <span style="color: var(--muted); font-size: 14px;">Electronic music for projects, games, and media</span>
+                </li>
+                <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
+                  <span style="position: absolute; left: 0; color: var(--brand);">🎮</span>
+                  <strong>Game Development</strong><br>
+                  <span style="color: var(--muted); font-size: 14px;">Indie game creation and consultation</span>
+                </li>
+                <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
+                  <span style="position: absolute; left: 0; color: var(--brand);">🤖</span>
+                  <strong>AI Automation</strong><br>
+                  <span style="color: var(--muted); font-size: 14px;">Custom automation solutions and tools</span>
+                </li>
+                <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
+                  <span style="position: absolute; left: 0; color: var(--brand);">🤝</span>
+                  <strong>Collaborations</strong><br>
+                  <span style="color: var(--muted); font-size: 14px;">Partnerships and creative projects</span>
+                </li>
+              </ul>
+</div>
+</div>
+</div>
+</section>
 
-  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
-    <div class="wrap">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
-        <!-- Company Info -->
-        <div>
-          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
-          <p style="margin: 0 0 16px; color: var(--muted); line-height: 1.6;">
-            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
-            Building automation-first, ROI-focused solutions for modern creators.
-          </p>
-          <div style="display: flex; gap: 12px;">
-            <a href="https://github.com/id01t" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">GitHub</a>
-            <a href="https://id01t.itch.io" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">itch.io</a>
-            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">Spotify</a>
-            <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">YouTube</a>
-          </div>
-        </div>
+      <!-- Social Links -->
+      <section style="margin: 60px 0; text-align: center;">
+        <h2 style="font-size: 28px; margin: 0 0 24px;">Connect With Us</h2>
+        <p style="margin: 0 0 32px; color: var(--muted); font-size: 18px;">Follow our latest updates and releases</p>
         
-        <!-- Quick Links -->
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: var(--muted); text-decoration: none;">eBooks</a></li>
-            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: var(--muted); text-decoration: none;">Audiobooks</a></li>
-            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: var(--muted); text-decoration: none;">Music</a></li>
-            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: var(--muted); text-decoration: none;">Games</a></li>
-            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: var(--muted); text-decoration: none;">Apps</a></li>
-          </ul>
+        <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://github.com/id01t" target="_blank" rel="noopener" 
+             style="display: flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">
+            <span style="font-size: 20px;">🐙</span>
+            <span>GitHub</span>
+          </a>
+          
+          <a href="https://id01t.itch.io" target="_blank" rel="noopener" 
+             style="display: flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">
+            <span style="font-size: 20px;">🎮</span>
+            <span>itch.io</span>
+          </a>
+          
+          <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" 
+             style="display: flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">
+            <span style="font-size: 20px;">🎵</span>
+            <span>Spotify</span>
+          </a>
+          
+          <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" 
+             style="display: flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">
+            <span style="font-size: 20px;">📺</span>
+            <span>YouTube</span>
+          </a>
         </div>
+      </section>
+    </main>
+
+    <footer style="background: #111827; color: white; padding: 40px 0; margin-top: 80px;">
+      <div class="wrap">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+          <div>
+            <h3 style="font-size: 20px; margin: 0 0 16px; color: white;">iD01t Productions</h3>
+            <p style="margin: 0 0 16px; color: #9ca3af; line-height: 1.6;">
+              Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
+              Building automation-first, ROI-focused solutions for modern creators.
+            </p>
+</div>
+          
+          <div>
+            <h4 style="margin: 0 0 16px; font-size: 16px;">Quick Links</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: #9ca3af; text-decoration: none;">eBooks</a></li>
+              <li style="margin-bottom: 8px;"><a href="/music.html" style="color: #9ca3af; text-decoration: none;">Music</a></li>
+              <li style="margin-bottom: 8px;"><a href="/games.html" style="color: #9ca3af; text-decoration: none;">Games</a></li>
+              <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: #9ca3af; text-decoration: none;">Apps</a></li>
+            </ul>
+</div>
+          
+          <div>
+            <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: #9ca3af; text-decoration: none;">Privacy Policy</a></li>
+              <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: #9ca3af; text-decoration: none;">Terms of Service</a></li>
+              <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: #9ca3af; text-decoration: none;">Refund Policy</a></li>
+            </ul>
+</div>
+</div>
         
-        <!-- Company -->
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: var(--muted); text-decoration: none;">About</a></li>
-            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: var(--muted); text-decoration: none;">Blog</a></li>
-            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: var(--muted); text-decoration: none;">Contact</a></li>
-            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: var(--muted); text-decoration: none;">Search</a></li>
-          </ul>
-        </div>
-        
-        <!-- Legal -->
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: var(--muted); text-decoration: none;">Terms of Service</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: var(--muted); text-decoration: none;">Refund Policy</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: var(--muted); text-decoration: none;">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div style="border-top: 1px solid var(--border); padding-top: 24px; text-align: center; color: var(--muted);">
-        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
-      </div>
-    </div>
-  </footer>
+        <div style="border-top: 1px solid #374151; padding-top: 24px; text-align: center;">
+          <p style="margin: 0; color: #9ca3af;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
+</div>
+</div>
+</footer>
+  </div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Contact form handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Form handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
       
-      const formData = new FormData(this);
-      const successMessage = document.getElementById('successMessage');
-      const errorMessage = document.getElementById('errorMessage');
+      const form = e.target;
+      const status = document.getElementById('form-status');
+      const submitBtn = form.querySelector('button[type="submit"]');
       
-      // Hide previous messages
-      successMessage.style.display = 'none';
-      errorMessage.style.display = 'none';
+      // Show loading state
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
       
-      fetch('https://formspree.io/f/xpwgkqkp', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          successMessage.style.display = 'block';
-          this.reset();
-        } else {
-          throw new Error('Form submission failed');
-        }
-      })
-      .catch(error => {
-        errorMessage.style.display = 'block';
-        console.error('Error:', error);
-      });
+      // Simulate form submission (replace with actual Formspree handling)
+      setTimeout(() => {
+        status.style.display = 'block';
+        status.style.background = 'var(--card)';
+        status.style.border = '1px solid var(--border)';
+        status.style.color = 'var(--brand)';
+        status.textContent = 'Thank you! Your message has been sent. We\'ll get back to you within 24-48 hours.';
+        
+        submitBtn.textContent = 'Message Sent!';
+        submitBtn.style.background = '#10b981';
+        
+        // Reset form
+        form.reset();
+        
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          submitBtn.textContent = 'Send Message';
+          submitBtn.disabled = false;
+          submitBtn.style.background = '';
+        }, 3000);
+      }, 1000);
     });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

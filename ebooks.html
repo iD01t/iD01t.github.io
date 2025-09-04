@@ -1,716 +1,492 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tech eBooks by Guillaume Lessard | iD01t Productions</title>
-  <meta name="description" content="Master programming, automation, and digital skills with comprehensive tech eBooks by Guillaume Lessard. 100+ titles covering Python, AI, automation, and more.">
-  <meta name="keywords" content="tech ebooks, programming books, Python tutorials, automation guides, Guillaume Lessard, iD01t Productions, programming education">
+  <title>Tech eBooks by Guillaume Lessard | iD01t Productions - Programming, Automation & Digital Skills</title>
+  <meta name="description" content="Explore comprehensive tech eBooks by Guillaume Lessard. Master programming, automation, and digital skills with our collection of programming guides, AI tutorials, and tech education resources.">
+  <meta name="keywords" content="tech eBooks, programming guides, Guillaume Lessard, iD01t Productions, automation tutorials, digital skills, AI education, programming books, tech learning">
   <link rel="canonical" href="https://id01t.github.io/ebooks.html">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Guillaume Lessard">
 
-  <!-- Social -->
-  <meta property="og:title" content="iD01t Productions — eBooks Catalog"/>
-  <meta property="og:description" content="Complete Google Books-powered catalog with search and filters."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://id01t.github.io/ebooks.html"/>
-  <meta property="og:image" content="/assets/img/brand/ebooks_og.jpg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="iD01t Productions — eBooks Catalog"/>
-  <meta name="twitter:description" content="Discover all titles by Guillaume Lessard and iD01t Productions."/>
-  <meta name="twitter:image" content="/assets/img/brand/ebooks_og.jpg"/>
-
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
-  <link rel="apple-touch-icon" href="/assets/logo-512.png"/>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    body {font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    .book-card img { transition: transform .3s ease }
-    .book-card:hover img { transform: scale(1.02) }
-    .skeleton { background: linear-gradient(90deg, rgba(0,0,0,.06), rgba(0,0,0,.12), rgba(0,0,0,.06)); background-size: 200% 100%; animation: shimmer 1.2s infinite }
-    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-  
-    img{image-rendering:auto}
-    @media (min-resolution: 2dppx){.book-card img{filter:none}}
-  </style>
-  <!-- Optional: set your API key here; page works without a key for most cases -->
-  <script>window.GBOOKS_API_KEY = window.GBOOKS_API_KEY || "";</script>
-</head>
-<body data-active="eBooks" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/products.html">Products</a>
-        <a href="/ebooks.html" style="text-decoration: underline;">eBooks</a>
-        <a href="/audiobooks.html">Audiobooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html">Games</a>
-        <a href="/music.html">Music</a>
-        <a href="/services.html">Services</a>
-        <a href="/blog.html">Blog</a>
-      </nav>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
-          <input type="search" name="q" placeholder="Search..." 
-                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
-          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
-            🔍
-          </button>
-        </form>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 dark:from-gray-800 dark:via-gray-900 dark:to-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-      <div>
-        <span class="inline-block bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200 text-xs font-semibold px-3 py-1 rounded-full mb-3">Google Books Live Catalog</span>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">eBooks by Guillaume Lessard</h1>
-        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Pulled directly from Google Books. Clean, fast, always up to date.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="/store.html" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white">Visit the Store</a>
-          <a href="/contact.html" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Request bulk or licensing</a>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5">
-          <img src="/assets/img/brand/ebooks_og.jpg" alt="iD01t eBooks" class="w-full h-auto object-cover">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Controls -->
-  <section class="py-6 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-4">
-      <input id="search" type="search" placeholder="Search titles, tags, year..." class="w-full md:flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900" />
-      <select id="filterLang" class="px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
-        <option value="">All languages</option>
-      </select>
-      <select id="filterTag" class="px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
-        <option value="">All categories</option>
-      </select>
-      <select id="sortBy" class="px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
-        <option value="newest">Newest first</option>
-        <option value="alpha">A → Z</option>
-      </select>
-    </div>
-  </section>
-
-  <!-- Grid -->
-  <section class="py-10 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div id="status" class="text-sm text-gray-500 dark:text-gray-400 mb-4">Loading catalog from Google Books…</div>
-      <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div><div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow p-4"><div class="skeleton h-48 w-full rounded-lg mb-4"></div><div class="skeleton h-5 w-3/4 rounded mb-2"></div><div class="skeleton h-4 w-1/2 rounded"></div></div>
-      </div>
-      <div id="empty" class="hidden text-center text-gray-500 dark:text-gray-400 mt-8">No results.</div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-10 bg-blue-600 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h3 class="text-2xl font-bold mb-2">Want custom editions or bulk licenses?</h3>
-      <p class="opacity-90 mb-4">We create tailored versions for teams, schools, and platforms.</p>
-      <a href="/contact.html" class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20">Contact iD01t Productions</a>
-    </div>
-  </section>
-
-  <div id="footer-slot"></div>
-
-  <!-- JSON-LD (populated after load) -->
-  <script id="ld-catalog" type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"iD01t eBooks Catalog",
-    "itemListElement":[]
-  }
-  </script>
-
-  <!-- Google Books-only loader -->
-  <script>
-  const grid = document.getElementById('grid');
-  const empty = document.getElementById('empty');
-  const statusEl = document.getElementById('status');
-  const $ = (id) => document.getElementById(id);
-
-  const QUERIES = [
-    'inauthor:"Guillaume Lessard"',
-    'inpublisher:"iD01t Productions"',
-    'inauthor:"El\'Nox Rah"',
-    'inauthor:"DJ iD01t"',
-    'subject:"iD01t Productions"',
-    'subject:"Guillaume Lessard"'
-  ];
-
-  const API = 'https://www.googleapis.com/books/v1/volumes';
-
-  
-  function coverUrlById(id, zoom) {
-    if (!id) return '';
-    const z = Math.max(1, Math.min(5, zoom||3));
-    return `https://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=${z}&source=gbs_api`;
-  }
-
-  function imgBest(v) {
-    // Enhanced image handling with multiple fallbacks and HD optimization
-    const id = v.id || (v.selfLink ? v.selfLink.split('/').pop() : '');
-    
-    // Try multiple image sources in order of preference
-    const imageSources = [
-      // Ultra HD from Google Books API (zoom=5)
-      id ? coverUrlById(id, 5) : '',
-      // HD from Google Books API (zoom=4)  
-      id ? coverUrlById(id, 4) : '',
-      // Medium quality from Google Books API (zoom=3)
-      id ? coverUrlById(id, 3) : '',
-      // Enhanced API-provided links with higher zoom
-      (() => {
-        const L = (v.volumeInfo && v.volumeInfo.imageLinks) ? v.volumeInfo.imageLinks : {};
-        let fallback = L.extraLarge || L.large || L.medium || L.small || L.thumbnail || L.smallThumbnail || '';
-        if (fallback) {
-          fallback = fallback.replace(/^http:/, 'https:');
-          fallback = fallback.replace(/zoom=\d/, 'zoom=4'); // Higher default zoom
-        }
-        return fallback;
-      })(),
-      // Original API links as last resort
-      (() => {
-        const L = (v.volumeInfo && v.volumeInfo.imageLinks) ? v.volumeInfo.imageLinks : {};
-        return L.extraLarge || L.large || L.medium || L.small || L.thumbnail || L.smallThumbnail || '';
-      })(),
-      // Local HD fallbacks
-      '/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_002_Windows_Zero_to_Hero_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_003_To_the_Top_of_the_Mountain_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_004_Intersection_The_Moment_Their_Paths_Crossed_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_005_The_Architects_Legacy_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_006_AI_Today_Transforming_Lives_and_Industries_for_the_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_007_Shadows_of_Redemption_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_008_Quantum_Tao_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_009_Light_at_the_Veils_Edge_zoom5.jpg',
-      '/assets/harvested/ebooks/ebook_010_Legacy_of_Shadows_zoom5.jpg',
-      '/assets/harvested/ebooks/img_1.jpg'
-    ];
-    
-    const src = imageSources.find(url => url && url.length > 0);
-    const src2x = (id ? coverUrlById(id, 5) : '') || (src && src.includes('zoom=4') ? src.replace('zoom=4', 'zoom=5') : '') || src;
-    
-    return { 
-      src: src || '/assets/harvested/ebooks/img_1.jpg', 
-      src2x: src2x || src || '/assets/harvested/ebooks/img_1.jpg'
-    };
-  }
-
-  function bookFromVolume(v) {
-    const vi = v.volumeInfo || {};
-    const si = v.saleInfo || {};
-    const img = imgBest(v);
-    return {
-      id: v.id,
-      title: vi.title || '',
-      subtitle: vi.subtitle || '',
-      cover: img.src,
-      cover2x: img.src2x,
-      year: (vi.publishedDate||'').slice(0,4),
-      lang: (vi.language||'').toUpperCase(),
-      tags: vi.categories || [],
-      authors: vi.authors || [],
-      link: vi.infoLink || vi.canonicalVolumeLink || v.selfLink || '',
-      buy: si.buyLink || vi.infoLink || '',
-    };
-  }
-
-  
-  function cardHTML(b) {
-    const tags = (b.tags||[]).slice(0,4).map(t=>`<span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 dark:bg-gray-800">${t}</span>`).join(' ');
-    const year = b.year ? `<span class="text-xs text-gray-500 dark:text-gray-400"> • ${b.year}</span>` : '';
-    const lang = b.lang ? `<span class="text-xs bg-gray-100 dark:bg-gray-800 rounded px-2 py-0.5">${b.lang}</span>` : '';
-    const srcset = b.cover2x ? `${b.cover} 1x, ${b.cover2x} 2x` : `${b.cover} 1x`;
-    const landingPageUrl = `/ebooks/${b.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}.html`;
-    
-    return `
-    <article class="book-card rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow hover:shadow-lg transition-shadow duration-300">
-      <div class="relative">
-        <img loading="lazy" decoding="async" src="${b.cover}" srcset="${srcset}"
-             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-             alt="${b.title} cover" class="w-full aspect-[3/4] object-cover"
-             onerror="this.src='/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg'; this.onerror=null;"/>
-        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-          <a href="${landingPageUrl}" class="opacity-0 hover:opacity-100 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-opacity duration-300">
-            View Details
-          </a>
-        </div>
-      </div>
-      <div class="p-4 space-y-3">
-        <h3 class="text-lg font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          <a href="${landingPageUrl}" class="block">${b.title}</a>
-        </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400">${b.subtitle||''}</p>
-        <div class="flex items-center gap-2">${lang}${year}</div>
-        <div class="flex gap-1 flex-wrap">${tags}</div>
-        <div class="flex gap-2 flex-wrap mt-2">
-          <a href="${landingPageUrl}" class="px-3 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors">View Details</a>
-          <a href="${b.link}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Google Books</a>
-          ${ b.buy ? `<a href="${b.buy}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Buy</a>` : ''}
-        </div>
-      </div>
-    </article>`;
-  }
-
-  function render(list) {
-    if (!list.length) { empty.classList.remove('hidden'); grid.innerHTML=''; return; }
-    empty.classList.add('hidden');
-    grid.innerHTML = list.map(cardHTML).join('');
-  }
-
-  function applyFilters(src) {
-    const text = $('search').value.toLowerCase().trim();
-    const lang = $('filterLang').value;
-    const tag = $('filterTag').value;
-    const sortBy = $('sortBy').value;
-    let out = src.filter(b => {
-      const inText = !text || [b.title,b.subtitle,(b.tags||[]).join(' '),String(b.year||'')].join(' ').toLowerCase().includes(text);
-      const inLang = !lang || b.lang === lang;
-      const inTag = !tag || (b.tags||[]).includes(tag);
-      return inText && inLang && inTag;
-    });
-    if (sortBy === 'alpha') out.sort((a,b)=> a.title.localeCompare(b.title));
-    else out.sort((a,b)=> (b.year||0)-(a.year||0));
-    return out;
-  }
-
-  let CATALOG = [];
-
-  async function fetchAll(query, retries = 3) {
-    const key = window.GBOOKS_API_KEY ? `&key=${encodeURIComponent(window.GBOOKS_API_KEY)}` : '';
-    const maxResults = 40;
-    let startIndex = 0, total = 0, out = [];
-    
-    for (let page = 0; page < 6; page++) { // up to 240 items/query
-      const url = `${API}?q=${encodeURIComponent(query)}&printType=books&maxResults=${maxResults}&startIndex=${startIndex}${key}`;
-      
-      let success = false;
-      for (let attempt = 0; attempt < retries && !success; attempt++) {
-        try {
-          const res = await fetch(url, {
-            headers: {
-              'Accept': 'application/json',
-              'User-Agent': 'iD01t-Productions/1.0'
-            }
-          });
-          
-          if (!res.ok) {
-            if (res.status === 429) { // Rate limited
-              await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
-              continue;
-            }
-            throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-          }
-          
-          const data = await res.json();
-          total = data.totalItems || 0;
-          const items = (data.items || []);
-          
-          if (!items.length) {
-            success = true;
-            break;
-          }
-          
-          out.push(...items);
-          startIndex += maxResults;
-          success = true;
-          
-          if (startIndex >= total) break;
-        } catch (error) {
-          console.warn(`Attempt ${attempt + 1} failed for query "${query}":`, error.message);
-          if (attempt === retries - 1) throw error;
-          await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
-        }
-      }
-      
-      if (!success) break;
-    }
-    
-    return out;
-  }
-
-  async function loadCatalog() {
-    statusEl.textContent = 'Loading catalog from Google Books…';
-    const maps = new Map();
-    let totalQueries = QUERIES.length;
-    let completedQueries = 0;
-    
-    for (const q of QUERIES) {
-      try {
-        statusEl.textContent = `Loading catalog from Google Books… (${completedQueries + 1}/${totalQueries})`;
-        const vols = await fetchAll(q);
-        vols.forEach(v => {
-          const b = bookFromVolume(v);
-          if (!b.title) return;
-          const key = (b.title + '|' + (b.year||'')).toLowerCase();
-          if (!maps.has(key)) maps.set(key, b);
-        });
-        completedQueries++;
-      } catch(e) { 
-        console.warn('Query failed', q, e);
-        completedQueries++;
-      }
-    }
-    
-    CATALOG = Array.from(maps.values());
-    
-    // Populate filters dynamically
-    const langs = Array.from(new Set(CATALOG.map(b=>b.lang).filter(Boolean))).sort();
-    const tags = Array.from(new Set(CATALOG.flatMap(b=>b.tags||[]))).sort();
-    $('filterLang').innerHTML = '<option value="">All languages</option>' + langs.map(l=>`<option>${l}</option>`).join('');
-    $('filterTag').innerHTML = '<option value="">All categories</option>' + tags.map(t=>`<option>${t}</option>`).join('');
-    
-    // Render
-    render(applyFilters(CATALOG));
-    statusEl.textContent = `Loaded ${CATALOG.length} book(s) from Google Books`;
-    
-    // Update JSON-LD
-    const ld = document.getElementById('ld-catalog');
-    if (ld) {
-      const items = CATALOG.slice(0, 100).map((b,i)=>({
-        "@type":"ListItem","position":i+1,"item":{"@type":"Book","name":b.title,"image":b.cover,"url":b.link}
-      }));
-      ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"ItemList","name":"iD01t eBooks Catalog","itemListElement":items});
-    }
-    
-    // Preload HD images for better user experience
-    preloadHDImages(CATALOG.slice(0, 20)); // Preload first 20 books
-  }
-  
-  function preloadHDImages(books) {
-    books.forEach(book => {
-      if (book.cover2x && book.cover2x !== book.cover) {
-        const img = new Image();
-        img.src = book.cover2x;
-      }
-    });
-  }
-
-  function refresh() { render(applyFilters(CATALOG)); }
-  ['search','filterLang','filterTag','sortBy'].forEach(id => $(id).addEventListener('input', refresh));
-
-  // Function to create individual ebook landing pages
-  function createLandingPage(book) {
-    const slug = book.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-    const landingPageUrl = `/ebooks/${slug}.html`;
-    
-    // Check if landing page already exists
-    fetch(landingPageUrl)
-      .then(response => {
-        if (!response.ok) {
-          // Create the landing page
-          generateLandingPageHTML(book, slug);
-        }
-      })
-      .catch(error => {
-        console.log('Landing page check failed, will create:', error);
-        generateLandingPageHTML(book, slug);
-      });
-  }
-
-  function generateLandingPageHTML(book, slug) {
-    const landingPageHTML = `<!doctype html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${book.title} | iD01t Productions | Guillaume Lessard</title>
-  <meta name="description" content="${book.subtitle || book.title} by Guillaume Lessard. Learn programming, automation, and digital skills with this comprehensive guide.">
-  <meta name="keywords" content="${book.tags.join(', ')}, Guillaume Lessard, iD01t Productions, tech education">
-  <link rel="canonical" href="https://id01t.github.io/ebooks/${slug}.html">
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="Guillaume Lessard">
-
   <!-- Open Graph -->
-  <meta property="og:type" content="book">
-  <meta property="og:title" content="${book.title} | iD01t Productions">
-  <meta property="og:description" content="${book.subtitle || book.title} by Guillaume Lessard. Learn programming, automation, and digital skills with this comprehensive guide.">
-  <meta property="og:url" content="https://id01t.github.io/ebooks/${slug}.html">
-  <meta property="og:image" content="${book.cover}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tech eBooks by Guillaume Lessard | iD01t Productions">
+  <meta property="og:description" content="Master programming, automation, and digital skills with comprehensive tech eBooks by Guillaume Lessard. Professional programming guides and AI tutorials.">
+  <meta property="og:url" content="https://id01t.github.io/ebooks.html">
+  <meta property="og:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tech eBooks by Guillaume Lessard | iD01t Productions">
+  <meta name="twitter:description" content="Master programming, automation, and digital skills with comprehensive tech eBooks.">
+  <meta name="twitter:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
 
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/logo-512.png">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
-  </script>
-
-  <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
-    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
-    .nav a[aria-current="page"], .nav a:hover{opacity:1}
-    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
-    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
-    .hero p{opacity:.9;margin:0}
-    .book-layout{display:grid;grid-template-columns:1fr 2fr;gap:40px;margin:40px 0;align-items:start}
-    .book-cover{text-align:center}
-    .book-cover img{max-width:300px;width:100%;border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,0.3)}
-    .book-info h1{font-size:32px;margin-bottom:16px}
-    .book-meta{color:var(--muted);margin-bottom:20px}
-    .book-description{line-height:1.6;margin-bottom:24px}
-    .book-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
-    .btn{display:inline-block;padding:12px 24px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s;font-weight:500}
-    .btn:hover{background:rgba(255,255,255,.1)}
-    .btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
-    .btn.primary:hover{background:var(--brand);opacity:0.9}
-    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:40px 0}
-    .feature{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center}
-    .feature h3{margin:0 0 12px;font-size:18px}
-    .feature p{color:var(--muted);margin:0;line-height:1.5}
-    @media (max-width: 768px) {
-      .book-layout{grid-template-columns:1fr;text-align:center}
-    }
-  </style>
-
-  <!-- Book JSON-LD -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "${book.title}",
+    "@type": "CollectionPage",
+    "name": "Tech eBooks Collection",
+    "description": "Comprehensive collection of tech eBooks by Guillaume Lessard covering programming, automation, and digital skills",
+    "url": "https://id01t.github.io/ebooks.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": []
+    },
     "author": {
       "@type": "Person",
-      "name": "Guillaume Lessard"
+      "name": "Guillaume Lessard",
+      "url": "https://id01t.github.io"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "iD01t Productions"
-    },
-    "description": "${book.subtitle || book.title} by Guillaume Lessard.",
-    "image": "${book.cover}",
-    "url": "https://id01t.github.io/ebooks/${slug}.html",
-    "datePublished": "${book.year}",
-    "inLanguage": "${book.lang.toLowerCase()}",
-    "bookFormat": "EBook"
+      "name": "iD01t Productions",
+      "url": "https://id01t.github.io"
+    }
   }
   </script>
 </head>
-<body data-active="eBooks">
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/products.html">Products</a>
-        <a href="/ebooks.html" style="text-decoration: underline;">eBooks</a>
-        <a href="/audiobooks.html">Audiobooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html">Games</a>
-        <a href="/music.html">Music</a>
-        <a href="/services.html">Services</a>
-        <a href="/blog.html">Blog</a>
-      </nav>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
-          <input type="search" name="q" placeholder="Search..." 
-                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
-          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
-            🔍
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100" data-active="eBooks">
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/gtm.js?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="wrap">
+    <header id="site-header" class="sticky" role="banner">
+      <div class="wrap nav">
+        <a href="/" class="logo" aria-label="iD01t Productions Home"><strong>iD01t</strong></a>
+        <nav role="navigation" aria-label="Main navigation">
+          <a href="/products.html" aria-label="View all products">Products</a>
+          <a href="/ebooks.html" aria-label="Browse technical eBooks" aria-current="page">eBooks</a>
+          <a href="/audiobooks.html" aria-label="Listen to audiobooks">Audiobooks</a>
+          <a href="/apps.html" aria-label="Explore AI applications">Apps</a>
+          <a href="/games.html" aria-label="Play indie games">Games</a>
+          <a href="/music.html" aria-label="Stream electronic music">Music</a>
+          <a href="/services.html" aria-label="View professional services">Services</a>
+          <a href="/blog.html" aria-label="Read our blog">Blog</a>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <!-- Social Sharing Buttons -->
+          <div class="social-share" style="display: flex; gap: 8px; margin-right: 12px;">
+            <a href="https://twitter.com/intent/tweet?text=Check%20out%20iD01t%20Productions%20Tech%20eBooks%20-%20Programming%20Guides%20by%20Guillaume%20Lessard&url=https://id01t.github.io/ebooks.html&hashtags=TechBooks,Programming,IndieDev" 
+               target="_blank" rel="noopener" 
+               style="color: var(--muted); text-decoration: none; font-size: 18px;" 
+               aria-label="Share on Twitter">
+              🐦
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://id01t.github.io/ebooks.html" 
+               target="_blank" rel="noopener" 
+               style="color: var(--muted); text-decoration: none; font-size: 18px;" 
+               aria-label="Share on LinkedIn">
+              💼
+            </a>
+            <a href="https://www.reddit.com/submit?url=https://id01t.github.io/ebooks.html&title=iD01t%20Productions%20Tech%20eBooks%20-%20Programming%20Guides" 
+               target="_blank" rel="noopener" 
+               style="color: var(--muted); text-decoration: none; font-size: 18px;" 
+               aria-label="Share on Reddit">
+              🔴
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="wrap" style="margin-top:60px" role="main">
+      <!-- Hero Section -->
+      <section class="hero" style="padding: 60px 0; text-align: center; background: linear-gradient(135deg, #111827 0%, #0b0d10 60%, #0b0d10 100%);">
+        <div class="wrap">
+          <h1 style="font-size: clamp(32px, 5vw, 48px); margin: 0 0 16px; line-height: 1.2; font-weight: 700;" id="hero-title">📚 Tech eBooks Collection</h1>
+          <p style="font-size: clamp(16px, 2.5vw, 20px); margin: 0 0 32px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Master programming, automation, and digital skills with comprehensive guides by Guillaume Lessard
+          </p>
+          <div class="cta-buttons" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px;" role="group" aria-label="Call to action buttons">
+            <a href="#ebooks-grid" class="btn btn-primary" aria-label="Browse all eBooks">Browse Collection</a>
+            <a href="/contact.html" class="btn btn-secondary" aria-label="Contact for custom eBooks">Request Custom Guide</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filters and Search -->
+      <section style="margin: 40px 0; padding: 20px; background: var(--card); border-radius: 12px; border: 1px solid var(--border);">
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: center;">
+          <div>
+            <label for="search-input" style="display: block; margin-bottom: 8px; font-weight: 600;">Search eBooks:</label>
+            <input type="text" id="search-input" placeholder="Search by title, author, or topic..." 
+                   style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); color: inherit; min-width: 250px;">
+          </div>
+          <div>
+            <label for="filter-lang" style="display: block; margin-bottom: 8px; font-weight: 600;">Language:</label>
+            <select id="filter-lang" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); color: inherit;">
+              <option value="">All languages</option>
+            </select>
+          </div>
+          <div>
+            <label for="filter-tag" style="display: block; margin-bottom: 8px; font-weight: 600;">Category:</label>
+            <select id="filter-tag" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); color: inherit;">
+              <option value="">All categories</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Status and Loading -->
+      <div id="status" style="text-align: center; margin: 20px 0; padding: 12px; background: var(--card); border-radius: 8px; border: 1px solid var(--border);">
+        Loading eBooks from Google Books...
+      </div>
+
+      <!-- eBooks Grid -->
+      <section id="ebooks-grid" class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin: 40px 0;">
+        <!-- eBooks will be dynamically loaded here -->
+      </section>
+
+      <!-- Newsletter Signup -->
+      <section style="margin: 60px 0; padding: 40px; background: linear-gradient(135deg, var(--brand), #4c51bf); border-radius: 16px; text-align: center; color: white;">
+        <h2 style="font-size: 28px; margin: 0 0 16px;">Stay Updated with New Releases</h2>
+        <p style="font-size: 16px; margin: 0 0 24px; opacity: 0.9;">Get notified when new tech eBooks and guides are published</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; max-width: 400px; margin: 0 auto;">
+          <input type="email" name="email" placeholder="Enter your email" required 
+                 style="flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 16px; min-width: 200px;">
+          <button type="submit" class="btn" style="background: white; color: var(--brand); border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+            Subscribe
           </button>
         </form>
-      </div>
-    </div>
-  </header>
+      </section>
+    </main>
 
-  <main class="wrap" style="margin-top: 40px;">
-    <div class="book-layout">
-      <div class="book-cover">
-        <img src="${book.cover}" alt="${book.title} Cover" loading="eager" onerror="this.src='/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg'">
-      </div>
-      
-      <div class="book-info">
-        <h1>${book.title}</h1>
-        <div class="book-meta">
-          <p><strong>Author:</strong> Guillaume Lessard</p>
-          <p><strong>Publisher:</strong> iD01t Productions</p>
-          <p><strong>Published:</strong> ${book.year || '2024'}</p>
-          <p><strong>Language:</strong> ${book.lang}</p>
-          <p><strong>Categories:</strong> ${book.tags.join(', ')}</p>
+    <footer style="background: #111827; color: white; padding: 40px 0; margin-top: 80px;">
+      <div class="wrap">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+          <div>
+            <h3 style="font-size: 20px; margin: 0 0 16px; color: white;">iD01t Productions</h3>
+            <p style="margin: 0 0 16px; color: #9ca3af; line-height: 1.6;">
+              Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
+              Building automation-first, ROI-focused solutions for modern creators.
+            </p>
+            <div style="display: flex; gap: 12px;">
+              <a href="https://github.com/id01t" target="_blank" rel="noopener" style="color: #9ca3af; text-decoration: none; font-size: 20px;">GitHub</a>
+              <a href="https://id01t.itch.io" target="_blank" rel="noopener" style="color: #9ca3af; text-decoration: none; font-size: 20px;">Visit itch.io Store</a>
+              <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="color: #9ca3af; text-decoration: none; font-size: 20px;">Spotify</a>
+              <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" style="color: #9ca3af; text-decoration: none; font-size: 20px;">YouTube</a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: #9ca3af; text-decoration: none;">eBooks</a></li>
+              <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: #9ca3af; text-decoration: none;">Audiobooks</a></li>
+              <li style="margin-bottom: 8px;"><a href="/music.html" style="color: #9ca3af; text-decoration: none;">Music</a></li>
+              <li style="margin-bottom: 8px;"><a href="/games.html" style="color: #9ca3af; text-decoration: none;">Games</a></li>
+              <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: #9ca3af; text-decoration: none;">Apps</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 8px;"><a href="/about.html" style="color: #9ca3af; text-decoration: none;">About</a></li>
+              <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: #9ca3af; text-decoration: none;">Blog</a></li>
+              <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: #9ca3af; text-decoration: none;">Contact</a></li>
+              <li style="margin-bottom: 8px;"><a href="/search.html" style="color: #9ca3af; text-decoration: none;">Search</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: #9ca3af; text-decoration: none;">Privacy Policy</a></li>
+              <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: #9ca3af; text-decoration: none;">Terms of Service</a></li>
+              <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: #9ca3af; text-decoration: none;">Refund Policy</a></li>
+              <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: #9ca3af; text-decoration: none;">Cookie Policy</a></li>
+            </ul>
+          </div>
         </div>
         
-        <div class="book-description">
-          <p>${book.subtitle || 'A comprehensive guide by Guillaume Lessard covering essential programming concepts, automation techniques, and digital skills.'}</p>
-          <p>Perfect for developers, students, and professionals who want to master modern development practices and advance their technical skills.</p>
-        </div>
-        
-        <div class="book-actions">
-          <a href="${book.link}" target="_blank" rel="noopener" class="btn primary">
-            Read on Google Books
-          </a>
-          ${book.buy ? `<a href="${book.buy}" target="_blank" rel="noopener" class="btn">Buy Now</a>` : ''}
-          <a href="/ebooks.html" class="btn">
-            ← Back to eBooks
-          </a>
+        <div style="border-top: 1px solid #374151; padding-top: 24px; text-align: center;">
+          <p style="margin: 0; color: #9ca3af;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
         </div>
       </div>
-    </div>
+    </footer>
+  </div>
 
-    <!-- Features -->
-    <section class="features">
-      <div class="feature">
-        <h3>📚 Comprehensive Content</h3>
-        <p>Detailed explanations, examples, and exercises covering all essential topics in this field.</p>
-      </div>
-      <div class="feature">
-        <h3>💻 Practical Examples</h3>
-        <p>Real-world code examples and projects that you can immediately apply to your work.</p>
-      </div>
-      <div class="feature">
-        <h3>🚀 Industry Best Practices</h3>
-        <p>Learn modern development practices and industry standards used by professional developers.</p>
-      </div>
-      <div class="feature">
-        <h3>🔄 Regular Updates</h3>
-        <p>Content is regularly updated to reflect the latest technologies and best practices.</p>
-      </div>
-    </section>
-  </main>
+  <script>
+    // Google Books API Configuration
+    const API = 'https://www.googleapis.com/books/v1/volumes';
+    const QUERIES = [
+      'Guillaume Lessard programming',
+      'Guillaume Lessard automation',
+      'Guillaume Lessard AI',
+      'Guillaume Lessard tech',
+      'iD01t Productions',
+      'programming guides automation',
+      'tech education digital skills'
+    ];
 
-  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
-    <div class="wrap">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
-        <div>
-          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
-          <p style="margin: 0 0 16px; color: var(--muted); line-height: 1.6;">
-            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music.
-          </p>
-        </div>
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: var(--muted); text-decoration: none;">eBooks</a></li>
-            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: var(--muted); text-decoration: none;">Audiobooks</a></li>
-            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: var(--muted); text-decoration: none;">Music</a></li>
-            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: var(--muted); text-decoration: none;">Games</a></li>
-            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: var(--muted); text-decoration: none;">Apps</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: var(--muted); text-decoration: none;">About</a></li>
-            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: var(--muted); text-decoration: none;">Blog</a></li>
-            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: var(--muted); text-decoration: none;">Contact</a></li>
-            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: var(--muted); text-decoration: none;">Search</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: var(--muted); text-decoration: none;">Terms of Service</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: var(--muted); text-decoration: none;">Refund Policy</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: var(--muted); text-decoration: none;">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
+    let CATALOG = [];
+    const statusEl = document.getElementById('status');
+    const gridEl = document.getElementById('ebooks-grid');
+
+    // Utility functions
+    function $(id) { return document.getElementById(id); }
+    function esc(s) { return (s||'').replace(/[<>&"']/g, m => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[m])); }
+
+    // Google Books API functions
+    function coverUrlById(id, zoom = 3) {
+      if (!id) return '';
+      const z = Math.max(1, Math.min(5, zoom||3));
+      return `https://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=${z}&source=gbs_api`;
+    }
+
+    function imgBest(v) {
+      const id = v.id || (v.selfLink ? v.selfLink.split('/').pop() : '');
+      const imageSources = [
+        id ? coverUrlById(id, 5) : '', // Ultra HD from Google Books API
+        id ? coverUrlById(id, 4) : '', // HD from Google Books API
+        id ? coverUrlById(id, 3) : '', // Medium quality from Google Books API
+        // API-provided links (force HTTPS and higher zoom)
+        v.volumeInfo?.imageLinks?.thumbnail ? v.volumeInfo.imageLinks.thumbnail.replace('http://', 'https://').replace('zoom=1', 'zoom=4') : '',
+        v.volumeInfo?.imageLinks?.smallThumbnail ? v.volumeInfo.imageLinks.smallThumbnail.replace('http://', 'https://').replace('zoom=1', 'zoom=4') : '',
+        // Local HD fallbacks
+        '/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg',
+        '/assets/harvested/ebooks/ebook_002_Windows_Zero_to_Hero_zoom5.jpg',
+        '/assets/harvested/ebooks/ebook_003_AI_Today_Transforming_Lives_zoom5.jpg',
+        '/assets/harvested/ebooks/ebook_004_Mastering_Generative_AI_zoom5.jpg',
+        '/assets/harvested/ebooks/ebook_005_Machine_Learning_Demystified_zoom5.jpg',
+        '/assets/harvested/ebooks/img_1.jpg'
+      ];
       
-      <div style="border-top: 1px solid var(--border); padding-top: 24px; text-align: center; color: var(--muted);">
-        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
-      </div>
-    </div>
-  </footer>
+      const src = imageSources.find(url => url && url.length > 0);
+      const src2x = (id ? coverUrlById(id, 5) : '') || (src && src.includes('zoom=4') ? src.replace('zoom=4', 'zoom=5') : '') || src;
+      
+      return {
+        src: src || '/assets/harvested/ebooks/img_1.jpg',
+        src2x: src2x || src || '/assets/harvested/ebooks/img_1.jpg'
+      };
+    }
+
+    function bookFromVolume(v) {
+      const info = v.volumeInfo || {};
+      const images = imgBest(v);
+      const tags = (info.categories || []).concat(info.subjects || []).slice(0, 4);
+      
+      return {
+        id: v.id,
+        title: info.title || '',
+        subtitle: info.subtitle || '',
+        authors: info.authors || ['Guillaume Lessard'],
+        year: info.publishedDate ? new Date(info.publishedDate).getFullYear() : null,
+        lang: info.language || 'en',
+        description: info.description || '',
+        tags: tags,
+        cover: images.src,
+        cover2x: images.src2x,
+        link: info.canonicalVolumeLink || v.selfLink || '',
+        buy: info.saleInfo?.buyLink || null,
+        isbn: info.industryIdentifiers?.find(id => id.type === 'ISBN_13')?.identifier || ''
+      };
+    }
+
+    async function fetchAll(query, retries = 3) {
+      const key = window.GBOOKS_API_KEY ? `&key=${encodeURIComponent(window.GBOOKS_API_KEY)}` : '';
+      const maxResults = 40;
+      let startIndex = 0, total = 0, out = [];
+      
+      for (let page = 0; page < 6; page++) { // up to 240 items/query
+        const url = `${API}?q=${encodeURIComponent(query)}&printType=books&maxResults=${maxResults}&startIndex=${startIndex}${key}`;
+        
+        let success = false;
+        for (let attempt = 0; attempt < retries && !success; attempt++) {
+          try {
+            const res = await fetch(url, {
+              headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'iD01t-Productions/1.0'
+              }
+            });
+            
+            if (!res.ok) {
+              if (res.status === 429) { // Rate limited
+                await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+                continue;
+              }
+              throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+            }
+            
+            const data = await res.json();
+            total = data.totalItems || 0;
+            const items = (data.items || []);
+            if (!items.length) { success = true; break; }
+            
+            out.push(...items);
+            startIndex += maxResults;
+            success = true;
+            
+            if (startIndex >= total) break;
+          } catch (error) {
+            console.warn(`Attempt ${attempt + 1} failed for query "${query}":`, error.message);
+            if (attempt === retries - 1) throw error;
+            await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+          }
+        }
+        if (!success) break;
+      }
+      
+      return out;
+    }
+
+    function cardHTML(b) {
+      const tags = (b.tags||[]).slice(0,4).map(t=>`<span class="px-2 py-0.5 rounded-full text-xs bg-gray-100 dark:bg-gray-800">${t}</span>`).join(' ');
+      const year = b.year ? `<span class="text-xs text-gray-500 dark:text-gray-400"> • ${b.year}</span>` : '';
+      const lang = b.lang ? `<span class="text-xs bg-gray-100 dark:bg-gray-800 rounded px-2 py-0.5">${b.lang}</span>` : '';
+      const srcset = b.cover2x ? `${b.cover} 1x, ${b.cover2x} 2x` : `${b.cover} 1x`;
+      const landingPageUrl = `/ebooks/${b.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}.html`;
+      
+      return `
+      <article class="book-card rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/5 shadow hover:shadow-lg transition-shadow duration-300">
+        <div class="relative">
+          <img src="${b.cover}" 
+               srcset="${srcset}"
+               alt="${esc(b.title)} cover by Guillaume Lessard" 
+               class="w-full h-48 object-cover"
+               loading="lazy"
+               onerror="this.src='/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg'">
+          <div class="absolute top-2 right-2 flex gap-1">
+            ${lang}
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-lg mb-2 line-clamp-2">${esc(b.title)}</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">By ${esc(b.authors.join(', '))}${year}</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mb-3 line-clamp-3">${esc(b.description || b.subtitle || '')}</p>
+          <div class="flex flex-wrap gap-1 mb-3">
+            ${tags}
+          </div>
+          <div class="flex gap-2">
+            <a href="${landingPageUrl}" class="px-3 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors">View Details</a>
+            <a href="${b.link}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Google Books</a>
+            ${ b.buy ? `<a href="${b.buy}" target="_blank" rel="noopener" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">Buy</a>` : ''}
+          </div>
+        </div>
+      </article>`;
+    }
+
+    function applyFilters(books) {
+      const search = $('search-input').value.toLowerCase();
+      const lang = $('filter-lang').value;
+      const tag = $('filter-tag').value;
+      
+      return books.filter(b => {
+        const matchesSearch = !search || 
+          b.title.toLowerCase().includes(search) ||
+          b.authors.some(a => a.toLowerCase().includes(search)) ||
+          b.description.toLowerCase().includes(search) ||
+          b.tags.some(t => t.toLowerCase().includes(search));
+        
+        const matchesLang = !lang || b.lang === lang;
+        const matchesTag = !tag || b.tags.includes(tag);
+        
+        return matchesSearch && matchesLang && matchesTag;
+      });
+    }
+
+    function render(books) {
+      if (books.length === 0) {
+        gridEl.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-gray-500">No eBooks found matching your criteria.</p></div>';
+        return;
+      }
+      
+      gridEl.innerHTML = books.map(cardHTML).join('');
+    }
+
+    async function loadCatalog() {
+      statusEl.textContent = 'Loading catalog from Google Books…';
+      const maps = new Map();
+      let totalQueries = QUERIES.length;
+      let completedQueries = 0;
+      
+      for (const q of QUERIES) {
+        try {
+          statusEl.textContent = `Loading catalog from Google Books… (${completedQueries + 1}/${totalQueries})`;
+          const vols = await fetchAll(q);
+          vols.forEach(v => {
+            const b = bookFromVolume(v);
+            if (!b.title) return;
+            const key = (b.title + '|' + (b.year||'')).toLowerCase();
+            if (!maps.has(key)) maps.set(key, b);
+          });
+          completedQueries++;
+        } catch(e) {
+          console.warn('Query failed', q, e);
+          completedQueries++;
+        }
+      }
+      
+      CATALOG = Array.from(maps.values());
+      
+      // Populate filters
+      const langs = Array.from(new Set(CATALOG.map(b=>b.lang).filter(Boolean))).sort();
+      const tags = Array.from(new Set(CATALOG.flatMap(b=>b.tags||[]))).sort();
+      $('filterLang').innerHTML = '<option value="">All languages</option>' + langs.map(l=>`<option>${l}</option>`).join('');
+      $('filterTag').innerHTML = '<option value="">All categories</option>' + tags.map(t=>`<option>${t}</option>`).join('');
+      
+      // Render
+      render(applyFilters(CATALOG));
+      statusEl.textContent = `Loaded ${CATALOG.length} book(s) from Google Books`;
+      
+      // Update JSON-LD
+      const jsonLd = document.querySelector('script[type="application/ld+json"]');
+      if (jsonLd) {
+        const data = JSON.parse(jsonLd.textContent);
+        data.mainEntity.itemListElement = CATALOG.slice(0, 10).map((book, index) => ({
+          "@type": "Book",
+          "position": index + 1,
+          "name": book.title,
+          "author": {
+            "@type": "Person",
+            "name": book.authors[0] || "Guillaume Lessard"
+          },
+          "description": book.description,
+          "image": book.cover,
+          "url": `/ebooks/${book.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}.html`
+        }));
+        jsonLd.textContent = JSON.stringify(data);
+      }
+      
+      // Preload HD images for better user experience
+      preloadHDImages(CATALOG.slice(0, 20));
+    }
+
+    function preloadHDImages(books) {
+      books.forEach(book => {
+        if (book.cover2x && book.cover2x !== book.cover) {
+          const img = new Image();
+          img.src = book.cover2x;
+        }
+      });
+    }
+
+    // Event listeners
+    $('search-input').addEventListener('input', () => render(applyFilters(CATALOG)));
+    $('filter-lang').addEventListener('change', () => render(applyFilters(CATALOG)));
+    $('filter-tag').addEventListener('change', () => render(applyFilters(CATALOG)));
+
+    // Initialize
+    loadCatalog();
+  </script>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-</body>
-</html>`;
-
-    // In a real implementation, you would save this to a file
-    // For now, we'll just log it or store it in localStorage for demo purposes
-    console.log('Generated landing page for:', book.title);
-    localStorage.setItem(`ebook_${slug}`, landingPageHTML);
-  }
-
-  loadCatalog();
-  </script>
-
-<script>
-// Inject header/footer from /index.html so index is the single source of truth
-(async function injectLayout(){
-  try{
-    const res = await fetch('/index.html', {cache:'no-store'});
-    const text = await res.text();
-    const doc = new DOMParser().parseFromString(text, 'text/html');
-
-    // Copy any global stylesheets from index <head> if missing
-    const head = document.querySelector('head');
-    doc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !document.querySelector('link[rel="stylesheet"][href="' + href + '"]')) {
-        const l = document.createElement('link');
-        l.rel = 'stylesheet'; l.href = href;
-        head.appendChild(l);
-      }
-    });
-
-    // Inject header and footer HTML
-    const header = doc.querySelector('header');
-    const footer = doc.querySelector('footer');
-    if(header) document.getElementById('header-slot').innerHTML = header.outerHTML;
-    if(footer) document.getElementById('footer-slot').innerHTML = footer.outerHTML;
-
-    // Re-execute any scripts inside injected nodes (if index bundled logic there)
-    function runScripts(rootId){
-      const root = document.getElementById(rootId);
-      if(!root) return;
-      const scripts = root.querySelectorAll('script');
-      scripts.forEach(s => {
-        const ns = document.createElement('script');
-        Array.from(s.attributes).forEach(a=>ns.setAttribute(a.name,a.value));
-        ns.textContent = s.textContent;
-        s.replaceWith(ns);
-      });
-    }
-    runScripts('header-slot');
-    runScripts('footer-slot');
-
-    // Mark active nav based on current path or data-active
-    const active = (document.body.dataset.active || '').toLowerCase();
-    const navLinks = document.querySelectorAll('header nav a, #site-header nav a');
-    navLinks.forEach(a => {
-      a.removeAttribute('aria-current');
-      const label = a.textContent.trim().toLowerCase();
-      const href = a.getAttribute('href');
-      if ((active && label === active.toLowerCase()) ||
-          href === location.pathname ||
-          (active && href.toLowerCase().includes(active))) {
-        a.setAttribute('aria-current','page');
-      }
-    });
-  }catch(e){
-    console.warn('Header/Footer injection failed', e);
-  }
-})();
-</script>
-
 </body>
 </html>
