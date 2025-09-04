@@ -1,3 +1,19 @@
 User-agent: *
 Allow: /
-Sitemap: https://iD01t.github.io/sitemap.xml
+
+# Sitemap
+Sitemap: https://id01t.github.io/sitemap.xml
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow all product and content pages
+Allow: /ebooks/
+Allow: /apps/
+Allow: /legal/
+
+# Crawl delay (be respectful)
+Crawl-delay: 1

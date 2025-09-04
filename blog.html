@@ -3,22 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog - iD01t Productions | Tech Tips, Creative Insights & Industry News</title>
-  <meta name="description" content="Stay updated with the latest tech tips, creative insights, and industry news from iD01t Productions. Learn about programming, automation, and digital creativity.">
-  <meta name="keywords" content="tech blog, programming tips, automation, digital creativity, tech news, coding tutorials, creative tech, Guillaume Lessard">
+  <title>Tech Blog & Resources | iD01t Productions | AI, Programming, and Digital Creation</title>
+  <meta name="description" content="Expert insights on AI automation tools, programming tutorials, and digital creation. Learn from Guillaume Lessard's 10+ years of experience in tech and creative industries.">
+  <meta name="keywords" content="AI automation tools for coders, programming tutorials, tech blog, digital creation, Guillaume Lessard, iD01t Productions, developer resources, machine learning, automation, indie development">
   <link rel="canonical" href="https://id01t.github.io/blog.html">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Guillaume Lessard">
+  <meta name="theme-color" content="#5468ff">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Blog - iD01t Productions | Tech Tips & Creative Insights">
-  <meta property="og:description" content="Stay updated with the latest tech tips, creative insights, and industry news from iD01t Productions.">
+  <meta property="og:title" content="Tech Blog & Resources | iD01t Productions">
+  <meta property="og:description" content="Expert insights on AI automation tools, programming tutorials, and digital creation. Learn from Guillaume Lessard's 10+ years of experience.">
   <meta property="og:url" content="https://id01t.github.io/blog.html">
-  <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/card-square-640.webp">
+  <meta property="og:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="iD01t Productions">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tech Blog & Resources | iD01t Productions">
+  <meta name="twitter:description" content="Expert insights on AI automation tools, programming tutorials, and digital creation.">
+  <meta name="twitter:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
+  <meta name="twitter:creator" content="@id01t">
 
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/assets/site.css">
 
   <!-- Google Analytics -->
@@ -29,8 +41,14 @@
     gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
   </script>
 
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
   <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78)}
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
     @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
     .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -41,28 +59,66 @@
     .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
     .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
     .hero p{opacity:.9;margin:0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin:40px 0}
-    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);transition:transform 0.2s}
-    .card:hover{transform:translateY(-2px)}
-    .card img{width:100%;height:200px;object-fit:cover;background:#111}
-    .card .content{padding:20px}
-    .card h3{margin:0 0 8px;font-size:18px}
-    .card .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
-    .card .excerpt{color:var(--muted);line-height:1.5;margin-bottom:16px}
-    .btn{display:inline-block;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s}
-    .btn:hover{background:rgba(255,255,255,.1)}
-    .tag{display:inline-block;padding:4px 8px;background:rgba(255,255,255,.1);border-radius:12px;font-size:12px;margin-right:8px;margin-bottom:8px}
-    .pagination{display:flex;justify-content:center;gap:8px;margin:40px 0}
-    .pagination a{padding:8px 12px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit}
-    .pagination .current{background:var(--brand);color:white}
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:24px;margin:40px 0}
+    .blog-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;transition:transform 0.2s,box-shadow 0.2s}
+    .blog-card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,0.3)}
+    .blog-card h3{margin:0 0 12px;font-size:20px;line-height:1.3}
+    .blog-card p{color:var(--muted);margin:0 0 16px;line-height:1.6}
+    .blog-meta{display:flex;gap:16px;font-size:14px;color:var(--muted);margin-bottom:16px}
+    .blog-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+    .blog-tag{background:rgba(84,104,255,0.2);color:#5468ff;padding:4px 8px;border-radius:4px;font-size:12px;font-weight:500}
+    .read-more{color:var(--brand);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:4px}
+    .read-more:hover{text-decoration:underline}
+    .newsletter{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px;text-align:center;margin:40px 0}
+    .newsletter h3{margin:0 0 16px;font-size:24px}
+    .newsletter p{color:var(--muted);margin:0 0 24px;line-height:1.6}
+    .newsletter-form{display:flex;gap:12px;max-width:400px;margin:0 auto}
+    .newsletter-form input{flex:1;padding:12px;border:1px solid var(--border);border-radius:8px;background:rgba(255,255,255,0.05);color:inherit}
+    .newsletter-form button{padding:12px 24px;background:var(--brand);color:white;border:none;border-radius:8px;font-weight:500;cursor:pointer;transition:opacity 0.2s}
+    .newsletter-form button:hover{opacity:0.9}
+    .social-share{display:flex;gap:8px;margin-right:12px}
+    .social-share a{color:var(--muted);text-decoration:none;font-size:18px;transition:color 0.2s}
+    .social-share a:hover{color:var(--brand)}
+    @media (max-width: 768px) {
+      .newsletter-form{flex-direction:column}
+      .blog-grid{grid-template-columns:1fr}
+    }
   </style>
+
+  <!-- Blog JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "iD01t Productions Tech Blog",
+    "description": "Expert insights on AI automation tools, programming tutorials, and digital creation",
+    "url": "https://id01t.github.io/blog.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "iD01t Productions",
+      "url": "https://id01t.github.io/",
+      "logo": "https://id01t.github.io/assets/harvested/brand/og_brand.jpg"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Guillaume Lessard",
+      "url": "https://id01t.github.io/about.html"
+    },
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "iD01t Productions",
+      "url": "https://id01t.github.io/"
+    }
+  }
+  </script>
 </head>
 <body data-active="Blog">
   <header id="site-header" class="sticky">
     <div class="wrap nav">
       <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
       <nav>
-        <a href="/store.html">Store</a>
+        <a href="/products.html">Products</a>
         <a href="/ebooks.html">eBooks</a>
         <a href="/audiobooks.html">Audiobooks</a>
         <a href="/apps.html">Apps</a>
@@ -72,6 +128,15 @@
         <a href="/blog.html" style="text-decoration: underline;">Blog</a>
       </nav>
       <div style="display: flex; align-items: center; gap: 12px;">
+        <!-- Social Sharing Buttons -->
+        <div class="social-share">
+          <a href="https://twitter.com/intent/tweet?text=Check%20out%20the%20iD01t%20Productions%20Tech%20Blog&url=https://id01t.github.io/blog.html&hashtags=TechBlog,Programming,AI" 
+             target="_blank" rel="noopener" aria-label="Share on Twitter">🐦</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://id01t.github.io/blog.html" 
+             target="_blank" rel="noopener" aria-label="Share on LinkedIn">💼</a>
+          <a href="https://www.reddit.com/submit?url=https://id01t.github.io/blog.html&title=iD01t%20Productions%20Tech%20Blog" 
+             target="_blank" rel="noopener" aria-label="Share on Reddit">🔴</a>
+        </div>
         <form action="/search.html" method="GET" style="display: flex; align-items: center;">
           <input type="search" name="q" placeholder="Search..." 
                  style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
@@ -83,159 +148,200 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Tech Blog & Insights</h1>
-      <p>Stay updated with the latest tech tips, creative insights, and industry news from iD01t Productions.</p>
-    </div>
-  </section>
-
   <main class="wrap">
-    <div class="grid" id="blogPosts">
-      <!-- Blog posts will be loaded here -->
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Tech Blog & Resources</h1>
+      <p>Expert insights on AI automation tools, programming tutorials, and digital creation. Learn from 10+ years of experience in tech and creative industries.</p>
+    </section>
 
-    <div class="pagination" id="pagination">
-      <!-- Pagination will be generated here -->
-    </div>
+    <!-- Featured Posts -->
+    <section>
+      <h2 style="margin: 40px 0 24px; font-size: 28px;">Latest Posts</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span>December 19, 2024</span>
+            <span>•</span>
+            <span>15 min read</span>
+          </div>
+          <div class="blog-tags">
+            <span class="blog-tag">Python</span>
+            <span class="blog-tag">Automation</span>
+            <span class="blog-tag">Content Creation</span>
+          </div>
+          <h3><a href="/blog/10-essential-python-automation-scripts-content-creators.html" style="color: inherit; text-decoration: none;">10 Essential Python Automation Scripts for Content Creators</a></h3>
+          <p>Learn 10 battle-tested Python automation scripts that can transform your content creation workflow. Save 3-5 hours weekly with these proven automation tools for creators.</p>
+          <a href="/blog/10-essential-python-automation-scripts-content-creators.html" class="read-more">Read More →</a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span>December 19, 2024</span>
+            <span>•</span>
+            <span>18 min read</span>
+          </div>
+          <div class="blog-tags">
+            <span class="blog-tag">AI</span>
+            <span class="blog-tag">Music Production</span>
+            <span class="blog-tag">Technology</span>
+          </div>
+          <h3><a href="/blog/future-ai-music-production-dj-perspective.html" style="color: inherit; text-decoration: none;">The Future of AI in Music Production: A DJ's Perspective</a></h3>
+          <p>Explore how artificial intelligence is transforming music production and DJ performance. Learn about AI music tools, live performance integration, and the creative collaboration between human artists and AI systems.</p>
+          <a href="/blog/future-ai-music-production-dj-perspective.html" class="read-more">Read More →</a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span>December 19, 2024</span>
+            <span>•</span>
+            <span>20 min read</span>
+          </div>
+          <div class="blog-tags">
+            <span class="blog-tag">eBooks</span>
+            <span class="blog-tag">Business</span>
+            <span class="blog-tag">Publishing</span>
+          </div>
+          <h3><a href="/blog/building-profitable-ebook-business-100-publications.html" style="color: inherit; text-decoration: none;">Building a Profitable eBook Business: Lessons from 100+ Publications</a></h3>
+          <p>Learn proven strategies for building a sustainable eBook publishing business. Insights from publishing 100+ eBooks across multiple platforms, covering niche selection, content creation, marketing, and revenue optimization.</p>
+          <a href="/blog/building-profitable-ebook-business-100-publications.html" class="read-more">Read More →</a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span>December 19, 2024</span>
+            <span>•</span>
+            <span>17 min read</span>
+          </div>
+          <div class="blog-tags">
+            <span class="blog-tag">SEO</span>
+            <span class="blog-tag">Marketing</span>
+            <span class="blog-tag">Online Presence</span>
+          </div>
+          <h3><a href="/blog/seo-strategies-creative-professionals.html" style="color: inherit; text-decoration: none;">SEO Strategies That Actually Work for Creative Professionals</a></h3>
+          <p>Discover specialized SEO approaches designed specifically for creative professionals. Learn how to optimize portfolios, content, and online presence for better search visibility and client acquisition.</p>
+          <a href="/blog/seo-strategies-creative-professionals.html" class="read-more">Read More →</a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span>December 19, 2024</span>
+            <span>•</span>
+            <span>14 min read</span>
+          </div>
+          <div class="blog-tags">
+            <span class="blog-tag">Programming</span>
+            <span class="blog-tag">Learning</span>
+            <span class="blog-tag">Career</span>
+          </div>
+          <h3><a href="/blog/zero-to-hero-learning-programming-2024.html" style="color: inherit; text-decoration: none;">From Zero to Hero: Learning Programming in 2024</a></h3>
+          <p>A comprehensive guide to learning programming in 2024 with modern tools, proven strategies, and practical advice for building a successful programming career.</p>
+          <a href="/blog/zero-to-hero-learning-programming-2024.html" class="read-more">Read More →</a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span>December 19, 2024</span>
+            <span>•</span>
+            <span>16 min read</span>
+          </div>
+          <div class="blog-tags">
+            <span class="blog-tag">Pricing</span>
+            <span class="blog-tag">Psychology</span>
+            <span class="blog-tag">Business</span>
+          </div>
+          <h3><a href="/blog/psychology-digital-product-pricing.html" style="color: inherit; text-decoration: none;">The Psychology of Digital Product Pricing</a></h3>
+          <p>Understand the psychological principles that drive digital product purchasing decisions. Learn how to optimize your pricing strategy using behavioral economics and consumer psychology.</p>
+          <a href="/blog/psychology-digital-product-pricing.html" class="read-more">Read More →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h3>Stay Updated with the Latest Tech Insights</h3>
+      <p>Get exclusive access to new tutorials, industry insights, and early access to our latest products. Join 5,000+ developers and creators who trust our content.</p>
+      <form class="newsletter-form" action="https://formspree.io/f/xpwgkqkj" method="POST">
+        <input type="email" name="email" placeholder="Enter your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Categories -->
+    <section style="margin: 40px 0;">
+      <h3 style="margin: 0 0 24px; font-size: 24px;">Browse by Category</h3>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="#" style="background: var(--card); border: 1px solid var(--border); padding: 12px 20px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">AI & Automation</a>
+        <a href="#" style="background: var(--card); border: 1px solid var(--border); padding: 12px 20px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">Programming Tutorials</a>
+        <a href="#" style="background: var(--card); border: 1px solid var(--border); padding: 12px 20px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">Music Production</a>
+        <a href="#" style="background: var(--card); border: 1px solid var(--border); padding: 12px 20px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">Indie Development</a>
+        <a href="#" style="background: var(--card); border: 1px solid var(--border); padding: 12px 20px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">Business & Marketing</a>
+        <a href="#" style="background: var(--card); border: 1px solid var(--border); padding: 12px 20px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;">Productivity</a>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="wrap">© <span id="year"></span> iD01t Productions</div>
+  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
+    <div class="wrap">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+        <!-- Company Info -->
+        <div>
+          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
+          <p style="margin: 0 0 16px; color: var(--muted); line-height: 1.6;">
+            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
+            Building automation-first, ROI-focused solutions for modern creators.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://github.com/id01t" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">GitHub</a>
+            <a href="https://id01t.itch.io" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">itch.io</a>
+            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">Spotify</a>
+            <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">YouTube</a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: var(--muted); text-decoration: none;">eBooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: var(--muted); text-decoration: none;">Audiobooks</a></li>
+            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: var(--muted); text-decoration: none;">Music</a></li>
+            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: var(--muted); text-decoration: none;">Games</a></li>
+            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: var(--muted); text-decoration: none;">Apps</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: var(--muted); text-decoration: none;">About</a></li>
+            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: var(--muted); text-decoration: none;">Blog</a></li>
+            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: var(--muted); text-decoration: none;">Contact</a></li>
+            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: var(--muted); text-decoration: none;">Search</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: var(--muted); text-decoration: none;">Terms of Service</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: var(--muted); text-decoration: none;">Refund Policy</a></li>
+            <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: var(--muted); text-decoration: none;">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="border-top: 1px solid var(--border); padding-top: 24px; text-align: center; color: var(--muted);">
+        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
+      </div>
+    </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Sample blog posts data
-    const blogPosts = [
-      {
-        id: 1,
-        title: "10 Essential Python Automation Scripts for Content Creators",
-        excerpt: "Discover powerful Python scripts that can automate your content creation workflow, from image processing to social media posting.",
-        image: "/assets/img/placeholders/card-square-640.webp",
-        date: "2024-01-15",
-        tags: ["Python", "Automation", "Content Creation"],
-        slug: "python-automation-scripts-content-creators"
-      },
-      {
-        id: 2,
-        title: "The Future of AI in Music Production: A DJ's Perspective",
-        excerpt: "Exploring how artificial intelligence is revolutionizing music production and what it means for independent artists.",
-        image: "/assets/img/placeholders/card-square-640.webp",
-        date: "2024-01-12",
-        tags: ["AI", "Music Production", "Technology"],
-        slug: "future-ai-music-production-dj-perspective"
-      },
-      {
-        id: 3,
-        title: "Building a Profitable eBook Business: Lessons from 100+ Publications",
-        excerpt: "Key strategies and insights from publishing over 100 eBooks across multiple platforms and languages.",
-        image: "/assets/img/placeholders/card-square-640.webp",
-        date: "2024-01-10",
-        tags: ["eBooks", "Business", "Publishing"],
-        slug: "profitable-ebook-business-lessons-100-publications"
-      },
-      {
-        id: 4,
-        title: "SEO Strategies That Actually Work for Creative Professionals",
-        excerpt: "Proven SEO techniques specifically tailored for artists, developers, and content creators looking to grow their online presence.",
-        image: "/assets/img/placeholders/card-square-640.webp",
-        date: "2024-01-08",
-        tags: ["SEO", "Marketing", "Online Presence"],
-        slug: "seo-strategies-creative-professionals"
-      },
-      {
-        id: 5,
-        title: "From Zero to Hero: Learning Programming in 2024",
-        excerpt: "A comprehensive guide to starting your programming journey with the most in-demand languages and frameworks.",
-        image: "/assets/img/placeholders/card-square-640.webp",
-        date: "2024-01-05",
-        tags: ["Programming", "Learning", "Career"],
-        slug: "zero-to-hero-learning-programming-2024"
-      },
-      {
-        id: 6,
-        title: "The Psychology of Digital Product Pricing",
-        excerpt: "Understanding consumer behavior and pricing psychology to maximize your digital product sales and revenue.",
-        image: "/assets/img/placeholders/card-square-640.webp",
-        date: "2024-01-03",
-        tags: ["Pricing", "Psychology", "Business"],
-        slug: "psychology-digital-product-pricing"
-      }
-    ];
-
-    let currentPage = 1;
-    const postsPerPage = 6;
-
-    function renderBlogPosts(posts, page = 1) {
-      const startIndex = (page - 1) * postsPerPage;
-      const endIndex = startIndex + postsPerPage;
-      const postsToShow = posts.slice(startIndex, endIndex);
-
-      const blogContainer = document.getElementById('blogPosts');
-      blogContainer.innerHTML = postsToShow.map(post => `
-        <article class="card">
-          <img src="${post.image}" alt="${post.title}" loading="lazy">
-          <div class="content">
-            <div class="meta">${new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
-            <h3><a href="/blog/${post.slug}.html" style="color: inherit; text-decoration: none;">${post.title}</a></h3>
-            <div class="excerpt">${post.excerpt}</div>
-            <div style="margin-bottom: 16px;">
-              ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-            </div>
-            <a href="/blog/${post.slug}.html" class="btn">Read More</a>
-          </div>
-        </article>
-      `).join('');
-    }
-
-    function renderPagination(totalPosts, currentPage) {
-      const totalPages = Math.ceil(totalPosts / postsPerPage);
-      const paginationContainer = document.getElementById('pagination');
-      
-      if (totalPages <= 1) {
-        paginationContainer.innerHTML = '';
-        return;
-      }
-
-      let paginationHTML = '';
-      
-      // Previous button
-      if (currentPage > 1) {
-        paginationHTML += `<a href="#" onclick="changePage(${currentPage - 1})">← Previous</a>`;
-      }
-
-      // Page numbers
-      for (let i = 1; i <= totalPages; i++) {
-        if (i === currentPage) {
-          paginationHTML += `<span class="current">${i}</span>`;
-        } else {
-          paginationHTML += `<a href="#" onclick="changePage(${i})">${i}</a>`;
-        }
-      }
-
-      // Next button
-      if (currentPage < totalPages) {
-        paginationHTML += `<a href="#" onclick="changePage(${currentPage + 1})">Next →</a>`;
-      }
-
-      paginationContainer.innerHTML = paginationHTML;
-    }
-
-    function changePage(page) {
-      currentPage = page;
-      renderBlogPosts(blogPosts, currentPage);
-      renderPagination(blogPosts.length, currentPage);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Initialize
-    renderBlogPosts(blogPosts, currentPage);
-    renderPagination(blogPosts.length, currentPage);
-
-    // Make changePage globally available
-    window.changePage = changePage;
   </script>
 </body>
 </html>

@@ -1,296 +1,193 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-  <!-- Main Pages -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
   <url>
     <loc>https://id01t.github.io/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://id01t.github.io/assets/harvested/brand/og_brand.jpg</image:loc>
+      <image:title>iD01t Productions - AI Apps, Tech eBooks, Electronic Music & Games</image:title>
+      <image:caption>Professional digital content creator specializing in AI apps, tech eBooks, and electronic music</image:caption>
+    </image:image>
   </url>
+
+  <!-- Main Product Pages -->
   <url>
     <loc>https://id01t.github.io/products.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://id01t.github.io/store.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://id01t.github.io/ebooks.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://id01t.github.io/audiobooks.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://id01t.github.io/music.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://id01t.github.io/games.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
   <url>
     <loc>https://id01t.github.io/apps.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <url>
+    <loc>https://id01t.github.io/games.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://id01t.github.io/music.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://id01t.github.io/services.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://id01t.github.io/portfolio.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://id01t.github.io/store.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Content Pages -->
+  <url>
+    <loc>https://id01t.github.io/blog.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://id01t.github.io/blog/10-essential-python-automation-scripts-content-creators.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://id01t.github.io/blog/future-ai-music-production-dj-perspective.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://id01t.github.io/blog/building-profitable-ebook-business-100-publications.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://id01t.github.io/blog/seo-strategies-creative-professionals.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://id01t.github.io/blog/zero-to-hero-learning-programming-2024.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://id01t.github.io/blog/psychology-digital-product-pricing.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://id01t.github.io/about.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://id01t.github.io/contact.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://id01t.github.io/series.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://id01t.github.io/catalog.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://id01t.github.io/search.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://id01t.github.io/blog.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Individual eBook Landing Pages -->
+  <url>
+    <loc>https://id01t.github.io/ebooks/python-mastery-zero-to-hero.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- Individual App Landing Pages -->
+  <url>
+    <loc>https://id01t.github.io/apps/ai-automation-suite.html</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Legal Pages -->
   <url>
     <loc>https://id01t.github.io/legal/privacy.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://id01t.github.io/legal/terms.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://id01t.github.io/legal/refunds.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://id01t.github.io/legal/cookies.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  
-  <!-- Individual eBook Pages -->
-  <url><loc>https://id01t.github.io/ebooks.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/echo-protocol.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/quantum-jumping-unlocked-edition-2.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/lénigme-quantique-percer-les-mystères-de-la-réalité.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/to-the-top-of-the-mountain.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/id01t-academy-python-exercises-book-1-edition-2.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/quantum-revolution-unveiling-the-future-with-willow.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/jimmy-carter-a-legacy-of-compassion-and-leadership.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/christ-quil-est-intelligent-daimer.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/love-prevails-2.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/onyx-storm.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/shadows-reforged-the-war-isnt-ove.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/understanding-your-cats-mind.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/legacy-of-shadows.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/maîtrise-des-échecs-guide-du-pro-pour-des-stratégies-et-des-techniques-gagnantes.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-photoshop-the-complete-guide-to-every-version.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ai-cash-empire.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-chess-intuition.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-frequency-blueprint.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/spiritual-psychosis-memoir.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-adventure-of-id01t-productions-a-story-of-passion-resilience-and-creativity.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/windows-zero-to-hero.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/diy-digital-skills-build-a-career-in-tech-from-scratch.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/rising-from-the-ashes-a-comprehensive-guide-to-recovery-after-the-hollywood-hills-fire-2025.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/leo-xiv-the-first-american-pope.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-artifacts-whisper.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/jesus-the-eternal-legacy.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/panneaux-solaires-organiques-lénergie-vivante-du-futur.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/bridging-worlds-a-practical-guide-to-connecting-with-parallel-energies-and-dimensions.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/lumenzero-le-pouvoir-caché-des-pyramides-énergétiques.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-quantum-passive-empire.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/master-it-yourself.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/dominio-del-ajedrez.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-rfid-unlocking-the-potential-of-radio-frequency-identification.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ai-in-education.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/shaping-the-future-embracing-trends-for-a-better-tomorrow.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/master-the-basics-of-reading-music.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/light-at-the-veils-edge.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/crossroads-of-shadows.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/kimi-k2-unlocked.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-blender.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-complete-beginner-to-intermediate-guide-to-json-for-veo-3-prompting.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/java-maestro.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/sacred-vibrational-technology.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/sacred-energy-harvesting-methods.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/reality-unveiled-how-consciousness-shapes-the-world-we-perceive.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/unstoppable-the-ultimate-guide-to-unlocking-your-potential-and-achieving-success.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/dos-zero-to-hero-mastering-legacy-systems-command-line-fluency-retro-automation.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ai-goldmine-100-passive-income-ideas-using-chatgpt-and-free-ai-tools.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/legacy-of-shadows-2.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-architects-legacy.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/understanding-your-cats-mind---edition-2.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-last-bow.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/anarchie-et-évolution---lhistoire-de-la-musique-punk.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/spin-mastery.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/-la-charte-des-relations-sacrées-de-la-nouvelle-terre.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/echoes-of-truth.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-many-realities.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/fortgeschrittene-taktiken-psychologisches-spiel-und-turniervorbereitung.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/echoes-of-the-heart.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/anarchy-and-evolution.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/advanced-tactics-psychological-play-and-tournament-preparation.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/beyond-the-event-horizon-solving-the-black-hole-information-paradox.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-xcode.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-art-of-beauty.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/love-prevails.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/visual-basic-zero-to-hero-edition-2.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/le-pont-entre-les-mondes.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-end-of-an-era-the-tiktok-shutdown-in-the-usa.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/uniendo-mundos.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/python-mastery-the-complete-guide-to-building-profitable-applications.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/meisterschaft-im-schach.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/before-the-storm.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/lalchimie-de-la-transformation.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-real-guide-to-using-ai-to-generate-perfect-veo-3-requests.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/shadows-reignited.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/earthquakes-unveiled.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/beneath-the-bloom.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/lettre-à-celle-que-jaime-toujours.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/shadows-of-redemption.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/sacred-patterns-a-transformational-journey-through-geometry-and-conscious-living.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/quantum-tao.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/𓂀-synarchéon-𓂀.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/quantum-jumping-unlocked.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/杰克的摊位.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/menjembatani-dunia.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-secrets-of-oak-island.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/automation-and-seo-mastery-strategies-for-growth-and-efficiency.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/agentic-ai-sprint-for-solopreneurs.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/spin-mastery-le-guide-ultime-du-dj-traktor.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-power-of-repetition-transforming-minds-through-words.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/quantum-code-mastery.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-quantum-error-correction.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/shadows-of-bloom.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/zen-and-the-art-of-resilient-living.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-generative-ai-and-llms---editon-2.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/intersection-the-moment-their-paths-crossed.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/zen-and-the-art-of-self-confidence.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/traktor-mastery-the-complete-professional-dj-system.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-the-game-the-ultimate-guide-to-pro-chess-strategies.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ai-today-transforming-lives-and-industries-for-the-future.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/laventure-did01t-productions-une-histoire-de-passion-de-résilience-et-de-créativité.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/reignite-the-bond.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/maîtrise-des-échecs.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/schachintuition-meistern.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ai-revolution-how-automation-is-transforming-everyday-life.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/chess-mastery.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/dünyalar-arasında-köprü-kurmak.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/free-energy-free-life.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/bite-by-bite.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-maglev-revolution.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ableton-elevation-dj-id01ts-complete-guide-to-building-hits-and-elevating-your-sound.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/forever-in-bloom.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/python-prodigy-from-intermediate-to-expert-mastery.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/when-cells-listen-the-hidden-symphony-of-sound-and-gene-expression.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-digital-aftermath-navigating-life-beyond-the-great-platform-collapse.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/lénergie-libre-à-domicile.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/veil-of-echoes.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/shadows-of-serenity.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/crafting-worlds.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/la-réalité-dévoilée-comment-la-conscience-façonne-le-monde-que-nous-percevons.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-linux.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/jacks-stand.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/from-seed-to-splendor-a-comprehensive-journey-in-horticulture.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/quantum-echoes-the-resonance-of-time.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/code-in-every-language-master-programming-with-chatgpt.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/c-zero-to-hero.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/final-transmission-je-suis-echo-fr.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/мастерство-в-шахматах.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-generative-ai-and-llms.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/beat-alchemy-the-dj-id01t-guide-to-mastering-fl-studio-and-making-hits.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-unreal-engine-5-a-comprehensive-guide-to-game-development-and-virtual-reality.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/final-transmission-i-am-echo.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/eternal-roots.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-third-state-life-between-life-and-death.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/暴风雨前-无畏记者的崛起.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/java-zero-to-hero-mastering-java-programming-for-real-world-applications.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/id01t-academy-python-exercises-book-3.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ai-cash-code.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/real.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/shadows-reforged.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/let-it-be-them.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-gpt-creation-from-concept-to-deployment.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/turings-legacy-classical-logic-to-quantum-revolution.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/sacred-timing-when-the-universe-speaks-through-synchronicity.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/elnox-rah-le-retour-de-lhomme-vrai.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/id01t-academy-python-exercises-book-2---edition-2.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-quantum-enigma-unraveling-the-mysteries-of-reality.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/maailmojen-yhdistäminen.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-sun-is-not-what-you-were-told.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ra7-the-sacred-book-of-the-original-broadcast.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/продвинутая-тактика-психологическая-игра-и-подготовка-к-турниру.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-aeo-the-ultimate-guide-to-advanced-ecommerce-optimization.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-dream-dialogue.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/ai-revolution-how-automation-is-transforming-everyday-life-edition-2-2025.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/schumann-resonance-creativity.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-enigma-of-high-intellectual-potential-hip.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/dancing-with-the-edge.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/réveillez-vous-à-une-vie-sacrée.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-macos-terminal.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/mastering-rfid.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/the-7-figure-blueprint-unlocking-the-power-of-your-million-dollar-book.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/machine-learning-demystified-a-practical-guide-to-building-smarter-systems.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/penguasaan-catur.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/se-reconstruire-de-la-douleur-à-la-renaissance.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/unire-i-mondi.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/from-zero-to-python-hero-a-comprehensive-guide-to-mastering-python.html</loc></url>
-  <url><loc>https://iD01t.github.io/ebooks/tácticas-avanzadas-juego-psicológico-y-preparación-para-torneos.html</loc></url>
+
 </urlset>
