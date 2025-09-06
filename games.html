@@ -8,6 +8,9 @@
   <link rel="icon" href="/favicon.ico"/>
   <meta name="theme-color" content="#16185c"/>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper for carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -20,6 +23,11 @@
     };
   </script>
   <link rel="stylesheet" href="/css/custom.css">
+  <style>
+    .link-underline { position: relative; }
+    .link-underline::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: currentColor; transform:scaleX(0); transform-origin:left; transition: transform .2s; }
+    .link-underline:hover::after { transform:scaleX(1); }
+  </style>
   <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
@@ -81,9 +89,18 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-8 items-start">
       <!-- Left column: Media -->
       <div class="lg:col-span-2 space-y-4">
+        <!-- Screenshot Carousel -->
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-3">
-          <img src="/assets/harvested/games/nini_hero.webp" class="rounded-xl aspect-video object-cover" alt="Nini’s Adventures artwork">
+          <div class="swiper mySwiper rounded-xl">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://img.itch.zone/aW1nLzIyOTk4NzEyLnBuZw%3D%3D/original/SbMphI.png" alt="Nini screenshot" class="w-full h-auto object-cover rounded-xl"/></div><div class="swiper-slide"><img src="https://img.itch.zone/aW1hZ2UvMzg0NTI5NC8yMjkzNTYxNC5qcGVn/347x500/1la0er.jpeg" alt="Nini screenshot" class="w-full h-auto object-cover rounded-xl"/></div><div class="swiper-slide"><img src="https://img.itch.zone/aW1hZ2UvMzg0NTI5NC8yMjk5ODcyOC5wbmc%3D/347x500/Jh6%2BUU.png" alt="Nini screenshot" class="w-full h-auto object-cover rounded-xl"/></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
+
         <!-- Videos -->
         <div class="grid md:grid-cols-2 gap-4">
           <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
@@ -121,7 +138,7 @@
             <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Cats</span>
           </div>
           <div class="mt-5 flex flex-wrap gap-3">
-            <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2">View on itch.io</a>
+            <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem?utm_source=id01t_site&utm_medium=button&utm_campaign=games_page" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2">View on itch.io</a>
             <a href="#beta" class="rounded-full border border-brand-600 text-brand-700 dark:text-brand-300 hover:bg-brand-50 dark:hover:bg-brand-900/30 px-5 py-2">Request Beta Access</a>
           </div>
           <p class="text-xs text-slate-500 mt-3">Updated Sept 1, 2025 • English • Server-based networked multiplayer</p>
@@ -183,7 +200,7 @@
     </div>
   </footer>
 
-  <!-- Scripts (unchanged) -->
+  <!-- Scripts -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const themeToggle = document.getElementById('themeToggle');
@@ -201,6 +218,15 @@
         mobileMenu.classList.toggle('hidden');
       });
     }
+    // Init Swiper
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 12,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      autoplay: { delay: 4500, disableOnInteraction: false },
+    });
   </script>
 </body>
 </html>
