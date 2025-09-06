@@ -322,18 +322,27 @@
       // Handle Google Books images with CORS issues
       let imageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || '/assets/img/placeholders/card-portrait-384x576.webp';
       
-      // For Google Books images, use a more reliable approach
+      // For Google Books images, use a CORS proxy or fallback to placeholder
       if (imageUrl.includes('books.google.com')) {
-        // Try to get a higher resolution image and use a different approach
+        // Use a CORS proxy service for Google Books images
         const bookId = item.id;
         if (bookId) {
-          // Use Google Books cover API with proper parameters
-          imageUrl = `https://books.google.com/books/publisher/content/images/frontcover/${bookId}?fife=w400-h600&source=gbs_api`;
+          // Try multiple approaches for getting the image
+          const originalUrl = imageLinks.thumbnail || imageLinks.smallThumbnail;
+          if (originalUrl) {
+            // Use a CORS proxy
+            imageUrl = `https://images.weserv.nl/?url=${encodeURIComponent(originalUrl)}&w=400&h=600&fit=cover`;
+          } else {
+            // Fallback to placeholder
+            imageUrl = '/assets/img/placeholders/card-portrait-384x576.webp';
+          }
+        } else {
+          imageUrl = '/assets/img/placeholders/card-portrait-384x576.webp';
         }
       }
       
       imageUrl = imageUrl.replace('http://', 'https://');
-      
+
       return {
         id: item.id,
         title: volumeInfo.title || 'Untitled',
