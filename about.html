@@ -5,35 +5,76 @@
 <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}}}}};</script>
 <link rel="stylesheet" href="/css/custom.css"><script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
 </head><body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16">
-<a href="/" class="flex items-center gap-2" aria-label="Accueil"><img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions"><span class="font-semibold tracking-tight">iD01t Productions</span></a>
-<nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
-<a href="/store.html" class="link-underline">Store</a>
-<a href="/ebooks.html" class="link-underline">eBooks</a>
-<a href="/apps.html" class="link-underline">Apps</a>
-<a href="/games.html" class="link-underline">Games</a>
-<a href="/music.html" class="link-underline">Music</a>
-<a href="/services.html" class="link-underline">Services</a>
-<a href="/portfolio.html" class="link-underline">Portfolio</a>
-<a href="/about.html" class="link-underline text-brand-600 dark:text-brand-400">About</a>
-<a href="/contact.html" class="link-underline">Contact</a>
-</nav>
-<div class="flex items-center gap-3"><button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-<a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-<button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></div></div>
-<div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true"><div class="px-4 py-3 flex flex-col gap-2">
-<a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/services.html" class="py-2">Services</a><a href="/portfolio.html" class="py-2">Portfolio</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
-</div></div></header>
+
+  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2" aria-label="Home">
+          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+          <span class="font-semibold tracking-tight">iD01t Productions</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+          <a href="/store.html" class="link-underline">Store</a> <a href="/ebooks.html" class="link-underline">eBooks</a> <a href="/audiobooks.html" class="link-underline">Audiobooks</a> <a href="/apps.html" class="link-underline">Apps</a> <a href="/games.html" class="link-underline">Games</a> <a href="/music.html" class="link-underline">Music</a> <a href="/blog.html" class="link-underline">Blog</a> <a href="/about.html" class="link-underline text-brand-600 dark:text-brand-400">About</a> <a href="/contact.html" class="link-underline">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/audiobooks.html" class="py-2">Audiobooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/blog.html" class="py-2">Blog</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+    
 <section class="relative overflow-hidden"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6"><div class="text-center"><h1 class="text-4xl sm:text-5xl font-bold tracking-tight">About</h1></div></div></section>
 <main class="py-8 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
 <div class="grid md:grid-cols-2 gap-10 items-center">
-  <div><img src="/assets/img/placeholders/about.webp" alt="About iD01t Productions" class="rounded-2xl aspect-square object-cover ring-1 ring-slate-200 dark:ring-slate-800"></div>
-  <div><p class="text-slate-600 dark:text-slate-300">We are a Canadian creative and tech studio. We build with care, ship with speed, and focus on value and clean results for users.</p>
-  <ul class="list-disc pl-5 mt-4 space-y-1 text-sm text-slate-600 dark:text-slate-300"><li>Apps, eBooks, games, music</li><li>Automation-first, ROI-driven</li><li>Clean UX, strong publishing pipelines</li></ul></div>
+  <div>
+    <img src="/assets/img/placeholders/about.webp" alt="About iD01t Productions" class="rounded-2xl aspect-square object-cover ring-1 ring-slate-200 dark:ring-slate-800">
+  </div>
+  <div class="prose prose-slate dark:prose-invert max-w-none">
+    <p class="text-lg">iD01t Productions is a Canadian creative and technology studio founded by Guillaume Lessard. It unites software engineering, artificial intelligence, music, and publishing into a single ecosystem designed to empower creators worldwide.</p>
+    <p class="mt-4">From desktop apps that simplify workflows to technical eBooks that train the next generation of developers, from independent games that blend humor and intensity to music projects that inspire audiences across platforms, iD01t Productions thrives at the intersection of technology and creativity.</p>
+    <p class="mt-4">Our philosophy is simple: automation first, clarity always, and freedom for creators. We focus on building products that save time, maximize return on investment, and provide tangible value. Every release, whether an app, a book, or an album, is shipped with professional quality and a commitment to innovation.</p>
+    <p class="mt-4">Key activities include:</p>
+    <ul class="list-disc pl-5 mt-2 space-y-1">
+      <li>Development of Windows apps and utilities for creators and businesses</li>
+      <li>Publication of eBooks on programming, AI, design, and personal growth</li>
+      <li>Production of independent video games with multiplayer and cross‑platform reach</li>
+      <li>Release of original electronic music under the alias DJ iD01t</li>
+      <li>Integration of AWS and advanced AI into every project for scalability</li>
+    </ul>
+    <p class="mt-4">The studio also manages long‑form creative projects, including a 50‑book love story saga, multiple educational series for developers, and game universes that expand into literature and music. Everything produced carries the brand values of innovation, independence, and excellence.</p>
+    <p class="mt-4">Based in Montreal, iD01t Productions operates globally with a digital‑first approach, reaching readers, players, and listeners across Amazon, Apple, Google, Spotify, Deezer, itch.io, and beyond. Our vision is to inspire bold thinking, build communities, and design tools that empower creators to take control of their craft.</p>
+  </div>
 </div>
 </div></main>
-<footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
+
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <p class="font-semibold">iD01t Productions</p>
+          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+        </div>
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a href="/legal/terms.html" class="link-underline">Terms</a>
+          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
+          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
+          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   const themeToggle = document.getElementById('themeToggle');
