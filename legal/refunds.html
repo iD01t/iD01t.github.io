@@ -1,198 +1,274 @@
+&lt;!doctype html&gt;
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="en">
 <head>
-
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Refund Policy · iD01t Productions</title>
-  <meta name="description" content="When refunds are available and how to request one."/>
-  <link rel="icon" href="/favicon.ico"/>
-  <meta name="theme-color" content="#16185c"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}
-          }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refund Policy - id01t</title>
+<meta content="Our refund policy explains the terms and conditions for requesting refunds on our products and services." name="description"/>
+<!-- Open Graph -->
+<meta content="Refund Policy - id01t" property="og:title"/>
+<meta content="Our refund policy explains the terms and conditions for requesting refunds on our products and services." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.github.io/legal/refunds.html" property="og:url"/>
+<meta content="https://id01t.github.io/assets/og-cover.jpg" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Refund Policy - id01t" name="twitter:title"/>
+<meta content="Our refund policy explains the terms and conditions for requesting refunds on our products and services." name="twitter:description"/>
+<meta content="https://id01t.github.io/assets/og-cover.jpg" name="twitter:image"/>
+<!-- Favicon -->
+<link href="/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/assets/logo-512.png" rel="apple-touch-icon"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
         }
-      }
-    };
-  </script>
-  <link rel="stylesheet" href="/css/custom.css">
-  <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
+    </script>
+<!-- Custom CSS -->
+<link href="/css/custom.css" rel="stylesheet"/>
+<!-- Preconnect to external domains -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Analytics Placeholders -->
+<!-- Replace with your GA4 ID -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+<!-- Replace with your GTM ID -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+<link href="/assets/site.css" rel="stylesheet"/></head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+<!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- Header -->
 
-</head>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-
-  <!-- Header (from games.updated.html) -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="flex items-center gap-2" aria-label="Accueil">
-          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
-          <span class="font-semibold tracking-tight">iD01t Productions</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
-          <a href="/store.html" class="link-underline">Store</a>
-          <a href="/ebooks.html" class="link-underline">eBooks</a>
-          <a href="/apps.html" class="link-underline">Apps</a>
-          <a href="/games.html" class="link-underline">Games</a>
-          <a href="/music.html" class="link-underline">Music</a>
-          <a href="/services.html" class="link-underline">Services</a>
-          <a href="/portfolio.html" class="link-underline">Portfolio</a>
-          <a href="/about.html" class="link-underline">About</a>
-          <a href="/contact.html" class="link-underline">Contact</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          </button>
-        </div>
+<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2" aria-label="Home">
+        <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+        <span class="font-semibold tracking-tight">iD01t Productions</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+        <a href="/store.html" class="link-underline">Store</a> <a href="/ebooks.html" class="link-underline">eBooks</a> <a href="/audiobooks.html" class="link-underline">Audiobooks</a> <a href="/apps.html" class="link-underline">Apps</a> <a href="/games.html" class="link-underline">Games</a> <a href="/music.html" class="link-underline">Music</a> <a href="/blog.html" class="link-underline">Blog</a> <a href="/about.html" class="link-underline">About</a> <a href="/contact.html" class="link-underline">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
       </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/store.html" class="py-2">Store</a>
-        <a href="/ebooks.html" class="py-2">eBooks</a>
-        <a href="/apps.html" class="py-2">Apps</a>
-        <a href="/games.html" class="py-2">Games</a>
-        <a href="/music.html" class="py-2">Music</a>
-        <a href="/services.html" class="py-2">Services</a>
-        <a href="/portfolio.html" class="py-2">Portfolio</a>
-        <a href="/about.html" class="py-2">About</a>
-        <a href="/contact.html" class="py-2">Contact</a>
-      </div>
-    </div>
-  </header>
-
-<section class="relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6">
-    <div class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Refund Policy</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Clear steps for digital goods, services, and store purchases.</p>
-      <p class="mt-1 text-xs text-slate-500">Last updated: September 06, 2025</p>
     </div>
   </div>
-</section>
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/audiobooks.html" class="py-2">Audiobooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/blog.html" class="py-2">Blog</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
+    </div>
+  </div>
+</header>
 
-<main class="py-8 border-t border-slate-200 dark:border-slate-800">
-  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-    <div class="bg-slate-50 dark:bg-slate-900/40 rounded-2xl p-6 mb-10">
-      <h2 class="text-xl font-semibold mb-3">Table of Contents</h2>
-      <nav class="grid sm:grid-cols-2 gap-2">
-        <a href="#overview" class="block text-brand-700 dark:text-brand-300 hover:underline">1. Overview</a>
-<a href="#eligibility" class="block text-brand-700 dark:text-brand-300 hover:underline">2. Refund Eligibility</a>
-<a href="#digital" class="block text-brand-700 dark:text-brand-300 hover:underline">3. Digital Products</a>
-<a href="#services" class="block text-brand-700 dark:text-brand-300 hover:underline">4. Services</a>
-<a href="#process" class="block text-brand-700 dark:text-brand-300 hover:underline">5. How to Request a Refund</a>
-<a href="#chargebacks" class="block text-brand-700 dark:text-brand-300 hover:underline">6. Chargebacks</a>
-<a href="#exceptions" class="block text-brand-700 dark:text-brand-300 hover:underline">7. Exceptions</a>
-<a href="#law" class="block text-brand-700 dark:text-brand-300 hover:underline">8. Your Rights under Law</a>
-<a href="#contact" class="block text-brand-700 dark:text-brand-300 hover:underline">9. Contact</a>
+<!-- Breadcrumbs -->
+<nav class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+<div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+<a class="hover:text-gray-900 dark:hover:text-white transition-colors" href="/">Home</a>
+<span>/</span>
+<a class="text-gray-900 dark:text-white" href="/legal/refunds.html">Refund Policy</a>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<!-- Header -->
+<div class="text-center mb-12">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Refund Policy</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400">Last updated: January 2024</p>
+</div>
+<!-- Table of Contents -->
+<div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-12">
+<h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Table of Contents</h2>
+<nav class="space-y-2">
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#overview">1. Overview</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#eligibility">2. Refund Eligibility</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#digital-products">3. Digital Products</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#services">4. Services</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#process">5. Refund Process</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#exceptions">6. Exceptions</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#contact">7. Contact Us</a>
+</nav>
+</div>
+<!-- Content Sections -->
+<div class="prose prose-lg dark:prose-invert max-w-none">
+<section class="mb-12" id="overview">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Overview</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    At id01t, we strive to provide high-quality products and services that meet your expectations. We understand that sometimes a product or service may not meet your needs, and we want to ensure you have a clear understanding of our refund policy.
+                </p>
+<p class="text-gray-600 dark:text-gray-300">
+                    This policy outlines the terms and conditions for requesting refunds on our products and services.
+                </p>
+</section>
+<section class="mb-12" id="eligibility">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Refund Eligibility</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Refunds are available under the following conditions:
+                </p>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+<li>Technical issues that prevent proper use of the product</li>
+<li>Product not as described or advertised</li>
+<li>Duplicate purchases or billing errors</li>
+<li>Service cancellation within the specified timeframe</li>
+<li>Defective or non-functional digital products</li>
+</ul>
+</section>
+<section class="mb-12" id="digital-products">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Digital Products</h2>
+<h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Software and Apps</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Digital software and applications are eligible for refunds within 14 days of purchase if:
+                </p>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+<li>The software is defective or non-functional</li>
+<li>Technical issues prevent installation or use</li>
+<li>The product does not match the description</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">eBooks and Digital Content</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    eBooks and digital content may be refunded within 7 days of purchase if:
+                </p>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+<li>The file is corrupted or unreadable</li>
+<li>The content is significantly different from what was advertised</li>
+<li>Technical issues prevent access to the content</li>
+</ul>
+</section>
+<section class="mb-12" id="services">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Services</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    For our professional services, refunds are handled on a case-by-case basis:
+                </p>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+<li><strong>Web Development:</strong> Refunds available if work has not commenced</li>
+<li><strong>Consulting:</strong> Partial refunds for incomplete sessions</li>
+<li><strong>Custom Development:</strong> Refunds based on project completion status</li>
+</ul>
+</section>
+<section class="mb-12" id="process">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Refund Process</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    To request a refund, please follow these steps:
+                </p>
+<ol class="list-decimal list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+<li>Contact our support team within the refund timeframe</li>
+<li>Provide your order number and reason for the refund</li>
+<li>Include any relevant details about the issue</li>
+<li>Our team will review your request within 2-3 business days</li>
+<li>If approved, refunds are processed within 5-10 business days</li>
+</ol>
+</section>
+<section class="mb-12" id="exceptions">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">6. Exceptions</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Refunds may not be available in the following cases:
+                </p>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+<li>Products used extensively or modified</li>
+<li>Services already completed and delivered</li>
+<li>Free or promotional products</li>
+<li>Violation of our terms of service</li>
+<li>Requests made outside the refund timeframe</li>
+</ul>
+</section>
+<section class="mb-12" id="contact">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">7. Contact Us</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    If you have questions about our refund policy or need to request a refund, please contact us:
+                </p>
+<div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+<p class="text-gray-600 dark:text-gray-300 mb-2">
+<strong>Email:</strong> <a class="text-primary-600 dark:text-primary-400 hover:underline" href="mailto:support@id01t.com">support@id01t.com</a>
+</p>
+<p class="text-gray-600 dark:text-gray-300 mb-2">
+<strong>Contact Form:</strong> <a class="text-primary-600 dark:text-primary-400 hover:underline" href="/contact.html">Contact Us</a>
+</p>
+<p class="text-gray-600 dark:text-gray-300">
+<strong>Response Time:</strong> 2-3 business days
+                    </p>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+
+<footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <p class="font-semibold">iD01t Productions</p>
+        <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+      </div>
+      <nav class="flex flex-wrap gap-4 text-sm">
+        <a href="/legal/terms.html" class="link-underline">Terms</a>
+        <a href="/legal/privacy.html" class="link-underline">Privacy</a>
+        <a href="/legal/refunds.html" class="link-underline">Refunds</a>
+        <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
       </nav>
     </div>
-
-    <article class="prose prose-slate dark:prose-invert max-w-none">
-      
-<section id="overview">
-  <h2>1. Overview</h2>
-  <p>We aim for your full satisfaction with our digital products, games, and services. This Refund Policy explains when refunds are available and how to request one.</p>
-  <p><strong>Last updated:</strong> September 06, 2025</p>
-</section>
-<section id="eligibility">
-  <h2>2. Refund Eligibility</h2>
-  <ul>
-    <li>Proof of purchase is required (order number, receipt, or store confirmation).</li>
-    <li>Requests must be submitted within 14 days of purchase unless local law provides longer.</li>
-  </ul>
-</section>
-<section id="digital">
-  <h2>3. Digital Products</h2>
-  <p>For eBooks, downloads, license keys, and other instant digital goods purchased directly from us:</p>
-  <ul>
-    <li>Refunds are generally not available once the digital content has been accessed or downloaded.</li>
-    <li>If the file is defective or not as described, we will either replace it or refund you.</li>
-    <li>For purchases made on third-party stores (e.g., itch.io, Amazon, Google), their refund policies apply.</li>
-  </ul>
-</section>
-<section id="services">
-  <h2>4. Services</h2>
-  <p>For consulting or custom work, refunds are tied to milestone delivery. Deposits may be non‑refundable once work has started, except where required by law.</p>
-</section>
-<section id="process">
-  <h2>5. How to Request a Refund</h2>
-  <ol>
-    <li>Use the <a href="/contact.html">contact page</a> with the subject “Refund Request”.</li>
-    <li>Include your order details and describe the issue.</li>
-    <li>We will confirm eligibility and, if approved, issue a refund to the original payment method.</li>
-  </ol>
-</section>
-<section id="chargebacks">
-  <h2>6. Chargebacks</h2>
-  <p>If you dispute a charge with your bank before contacting us, resolution may be delayed. We recommend contacting us first for the fastest outcome.</p>
-</section>
-<section id="exceptions">
-  <h2>7. Exceptions</h2>
-  <ul>
-    <li>Abuse of refund policy, repeated refunds, or suspected fraud.</li>
-    <li>Bundles where only part of the content is returned.</li>
-    <li>Limited-time or beta access keys after activation.</li>
-  </ul>
-</section>
-<section id="law">
-  <h2>8. Your Rights under Law</h2>
-  <p>Residents of certain jurisdictions may have statutory rights (e.g., EU consumer rights for digital content) which apply in addition to this policy.</p>
-</section>
-<section id="contact">
-  <h2>9. Contact</h2>
-  <p>Start a request via the <a href="/contact.html">contact page</a>.</p>
-</section>
-
-    </article>
   </div>
-</main>
+</footer>
 
-
-  <!-- Footer (from games.updated.html) -->
-  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <p class="font-semibold">iD01t Productions</p>
-          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
-        </div>
-        <nav class="flex flex-wrap gap-4 text-sm">
-          <a href="/legal/terms.html" class="link-underline">Terms</a>
-          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
-          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
-          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', function() {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeToggle.setAttribute('aria-pressed', String(isDark));
-      });
+<!-- JavaScript -->
+<script src="/js/utilities.js" type="module"></script>
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Refund Policy - id01t",
+        "description": "Our refund policy explains the terms and conditions for requesting refunds on our products and services.",
+        "url": "https://id01t.github.io/legal/refunds.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://id01t.github.io/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Refund Policy",
+                    "item": "https://id01t.github.io/legal/refunds.html"
+                }
+            ]
+        }
     }
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-  </script>
-
-</body>
+    </script>
+<script defer="" src="/assets/site.js"></script></body>
 </html>
