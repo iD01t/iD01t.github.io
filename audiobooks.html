@@ -246,7 +246,7 @@
       }catch(err){
         try{
           // JSON fallback
-          const r=await fetchWithTimeout('/assets/data/audiobooks.json', {}, 8000);
+          if (window.AUDIOBOOK_FALLBACK){ const fb=window.AUDIOBOOK_FALLBACK; const arr=(Array.isArray(fb)?fb:(fb.items||[])); const all=arr.map(a=>({id:a.id||a.title, title:a.title, authors:(a.authors||a.narrators||[]).join(', '), year:a.year, language:a.language, categories:[a.genre].filter(Boolean), infoLink:(a.googleBooks||a.googlePlay||a.url||'#'), image:a.cover, audio:true, localUrl:a.url })); populateLanguages(all); bind(all); render(applyFilters(all), all); return; } const r=await fetchWithTimeout('/assets/data/audiobooks.json', {}, 8000);
           const fb=await r.json();
           const arr=(Array.isArray(fb)?fb:(fb.items||[]));
           const all=arr.map(a=>({
