@@ -1,828 +1,160 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iD01t Productions: AI Apps, Tech eBooks, Electronic Music & Games by Guillaume Lessard | Digital Tools for Developers</title>
-  <meta name="description" content="Explore AI apps, tech eBooks, and electronic music from iD01t Productions – empowering developers with automation tools starting at $9.99. 100+ digital products, 10+ years experience.">
-  <meta name="keywords" content="AI automation tools for coders, tech eBooks on machine learning, electronic music for coding, programming tutorials, automation tools, Guillaume Lessard, iD01t Productions, digital products, developer tools, AI apps for developers, tech education, programming books, indie game development, electronic music production">
-  <link rel="canonical" href="https://id01t.github.io/">
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="Guillaume Lessard">
-  <meta name="theme-color" content="#5468ff">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="iD01t Productions — AI Apps, eBooks, and Music That Ship">
-  <meta property="og:description" content="Build, learn, and create with pro-grade AI apps, practical eBooks, and cinematic music by iD01t Productions. 100+ digital products, 10+ years experience.">
-  <meta property="og:url" content="https://id01t.github.io/">
-  <meta property="og:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="iD01t Productions">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="iD01t Productions — AI Apps, eBooks, and Music That Ship">
-  <meta name="twitter:description" content="Build, learn, and create with pro-grade AI apps, practical eBooks, and cinematic music by iD01t Productions.">
-  <meta name="twitter:image" content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg">
-  <meta name="twitter:creator" content="@id01t">
-
-  <link rel="icon" href="/assets/favicon.ico">
-  <link rel="apple-touch-icon" href="/assets/logo-512.png">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="/assets/site.css">
-  
-  <!-- Critical CSS - Inline for performance -->
-  <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.85);--brand:#5468ff;--text-primary:#eaeaf0;--text-secondary:#b8bcc8}
-    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;line-height:1.6}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9;transition:opacity 0.2s}
-    .nav a[aria-current="page"], .nav a:hover{opacity:1}
-    .hero{padding:80px 0;text-align:center;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
-    .hero h1{font-size:clamp(32px,5vw,56px);margin:0 0 16px;line-height:1.2;font-weight:700}
-    .hero p{font-size:clamp(16px,2.5vw,20px);margin:0 0 32px;opacity:.9;max-width:600px;margin-left:auto;margin-right:auto}
-    .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
-    .btn{display:inline-block;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.2s;border:2px solid transparent}
-    .btn-primary{background:var(--brand);color:white;border-color:var(--brand)}
-    .btn-primary:hover{background:transparent;color:var(--brand);border-color:var(--brand)}
-    .btn-secondary{background:transparent;color:var(--brand);border-color:var(--brand)}
-    .btn-secondary:hover{background:var(--brand);color:white}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;transition:transform 0.2s,box-shadow 0.2s}
-    .card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,0.15)}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    a:focus,button:focus,input:focus{outline:2px solid var(--brand);outline-offset:2px}
-    .skip-link{position:absolute;top:-40px;left:6px;background:var(--brand);color:white;padding:8px;text-decoration:none;border-radius:4px;z-index:1000}
-    .skip-link:focus{top:6px}
-    img{max-width:100%;height:auto}
-    @media (max-width: 768px) {
-      .hero{padding:60px 0}
-      .cta-buttons{flex-direction:column;align-items:center}
-      .btn{width:100%;max-width:300px;text-align:center}
-    }
-  </style>
-
-  <!-- Google Analytics - Deferred for performance -->
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script defer>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
-  </script>
-
-  <!-- Google Tag Manager - Deferred for performance -->
-  <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
-  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
-
-  <!-- Additional SEO Meta Tags -->
-  <meta name="google-site-verification" content="your-google-verification-code">
-  <meta name="msvalidate.01" content="your-bing-verification-code">
-  <meta name="p:domain_verify" content="your-pinterest-verification-code">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="iD01t Productions">
-  <meta name="application-name" content="iD01t Productions">
-  <meta name="msapplication-TileColor" content="#5468ff">
-  <meta name="msapplication-config" content="/browserconfig.xml">
-
-  <!-- Preconnect to external domains for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://www.google-analytics.com">
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://books.google.com">
-  <link rel="preconnect" href="https://open.spotify.com">
-  <link rel="preconnect" href="https://id01t.itch.io">
-
-  <!-- DNS Prefetch for performance -->
-  <link rel="dns-prefetch" href="//github.com">
-  <link rel="dns-prefetch" href="//youtube.com">
-  <link rel="dns-prefetch" href="//apple.com">
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="/assets/harvested/brand/hero_ai_automation.jpg" as="image" type="image/jpeg">
-  <link rel="preload" href="/assets/harvested/brand/og_brand.jpg" as="image" type="image/jpeg">
-  
-  <!-- Prefetch next likely pages -->
-  <link rel="prefetch" href="/ebooks.html">
-  <link rel="prefetch" href="/apps.html">
-  <link rel="prefetch" href="/music.html">
-
-  <!-- Page styles tuned for dark theme -->
-  <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78)}
-    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
-    .nav a[aria-current="page"], .nav a:hover{opacity:1}
-    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
-    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
-    .hero p{opacity:.9;margin:0}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .btn{display:inline-block;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
-    .btn:hover{filter:brightness(1.07)}
-    .pill{font-size:.8rem;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.05)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card)}
-    .card .content{padding:16px}
-    .two-col{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
-    .muted{opacity:.82}
-    footer{border-top:1px solid var(--border);padding:24px 0;margin-top:32px;opacity:.8;text-align:center}
-    iframe.spotify{width:100%;height:352px;border:0;border-radius:12px}
-    .badge-row{display:flex;gap:8px;flex-wrap:wrap}
-  </style>
-
-  <!-- Organization JSON-LD -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iD01t Productions: AI Apps, eBooks, Music & Tools</title>
+  <meta name="description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://id01t.github.io/" />
+  <meta name="theme-color" content="#16185c" />
+  <meta property="og:title" content="iD01t Productions: AI Apps, eBooks, Music & Tools" />
+  <meta property="og:description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://id01t.github.io/" />
+  <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="iD01t Productions: AI Apps, eBooks, Music & Tools" />
+  <meta name="twitter:description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
+  <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "iD01t Productions",
-    "url": "https://id01t.github.io/",
-    "logo": "https://id01t.github.io/assets/harvested/brand/og_brand.jpg",
-    "description": "Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. Empowering developers with automation tools and creative content.",
-    "foundingDate": "2014",
-    "founder": {
-      "@type": "Person",
-      "name": "Guillaume Lessard",
-      "jobTitle": "Digital Content Creator",
-      "description": "Professional digital content creator, developer, and creative technologist",
-      "url": "https://id01t.github.io/about.html",
-      "sameAs": [
-        "https://github.com/id01t",
-        "https://id01t.itch.io/",
-        "https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB"
-      ]
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Montreal",
-      "addressRegion": "Quebec",
-      "addressCountry": "Canada"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-514-000-0000",
-      "contactType": "customer service",
-      "email": "admin@id01t.store",
-      "availableLanguage": ["English", "French"]
-    },
-    "sameAs": [
-      "https://id01t.itch.io/",
-      "https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB",
-      "https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q",
-      "https://github.com/id01t"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Digital Products",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "SoftwareApplication",
-            "name": "AI Apps",
-            "description": "AI automation tools and applications for developers"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Book",
-            "name": "Tech eBooks",
-            "description": "Programming and technology eBooks"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MusicAlbum",
-            "name": "Electronic Music",
-            "description": "Electronic music tracks and albums"
-          }
-        }
-      ]
-    }
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"iD01t Productions","url":"https://id01t.github.io/","logo":"https://id01t.github.io/logo.svg","founder":{"@type":"Person","name":"Guillaume Lessard"},"sameAs":["https://github.com/id01t","https://id01t.itch.io","https://play.google.com/store/books/author?id=Guillaume_Lessard","https://books.apple.com/us/author/guillaume-lessard/id1750250586"]}
   </script>
-  
-  <!-- WebSite JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "iD01t Productions",
-    "url": "https://id01t.github.io/",
-    "description": "Build, learn, and create with pro-grade AI apps, practical eBooks, and cinematic music",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://id01t.github.io/search.html?q={query}",
-      "query-input": "required name=query"
-    }
-  }
+  {"@context":"https://schema.org","@type":"VideoGame","name":"Nini’s Adventures: Kitties Mayhem!","gamePlatform":"PC","applicationCategory":"Game","author":{"@type":"Organization","name":"iD01t Productions"},"datePublished":"2025-09-24","url":"https://id01t.github.io/#nini-beta","inLanguage":"en","description":"Explosive online multiplayer shooter. Public PC beta on September 24, 2025. No single-player. AWS-powered servers."}
   </script>
-  
-  <!-- FAQPage JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I get updates on new products?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You receive free updates via your purchase platform (Google Books, itch.io, Spotify) and our newsletter. We also announce major releases on our social media channels."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer refunds?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we offer refunds within 14 days for standard products per our refund policy. Digital products are generally non-refundable after download, but we work with customers on a case-by-case basis."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What platforms do you support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our apps work on Windows, Mac, and Linux. eBooks are available on Google Books, Kindle, and other major platforms. Music streams on Spotify, YouTube, and Apple Music."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you provide technical support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we provide email support for all our products. Response time is typically within 24 hours. Check our contact page for support options."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are your products suitable for beginners?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely! Our content ranges from beginner-friendly tutorials to advanced techniques. Each product clearly indicates the skill level required, and we provide learning paths for different experience levels."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use your music in my projects?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our music is available for personal use and some commercial projects. Please check the specific licensing terms for each track. Contact us for commercial licensing inquiries."
-        }
-      }
-    ]
-  }
+  {"@context":"https://schema.org","@type":"MusicGroup","name":"DJ iD01t","url":"https://id01t.github.io/#music","album":[
+    {"@type":"MusicAlbum","name":"Last Transmission","datePublished":"2025-03-10"},
+    {"@type":"MusicAlbum","name":"Signal Detected","datePublished":"2025-04-15"},
+    {"@type":"MusicAlbum","name":"Sweat and Stardust","datePublished":"2025-05-10"},
+    {"@type":"MusicAlbum","name":"Echo Protocol","datePublished":"2025-05-20"},
+    {"@type":"MusicAlbum","name":"No Master Needed","datePublished":"2025-07-01"},
+    {"@type":"MusicAlbum","name":"Anura Voidwalker DMT Chronicles","datePublished":"2025-08-10"}]}
   </script>
-</head>
-<body data-active="Home">
-  <!-- Skip to main content link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  <!-- GTM (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <!-- Shared header (used by other pages via #site-header clone) -->
-      <header id="site-header" class="sticky" role="banner">
-      <div class="wrap nav">
-        <a href="/" class="logo" aria-label="iD01t Productions Home"><strong>iD01t</strong></a>
-        <nav role="navigation" aria-label="Main navigation">
-          <a href="/products.html" aria-label="View all products">Products</a>
-          <a href="/ebooks.html" aria-label="Browse technical eBooks">eBooks</a>
-          <a href="/audiobooks.html" aria-label="Listen to audiobooks">Audiobooks</a>
-          <a href="/apps.html" aria-label="Explore AI applications">Apps</a>
-          <a href="/games.html" aria-label="Play indie games">Games</a>
-          <a href="/music.html" aria-label="Stream electronic music">Music</a>
-          <a href="/services.html" aria-label="View professional services">Services</a>
-          <a href="/blog.html" aria-label="Read our blog">Blog</a>
-        </nav>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <!-- Social Sharing Buttons -->
-        <div class="social-share" style="display: flex; gap: 8px; margin-right: 12px;">
-          <a href="https://twitter.com/intent/tweet?text=Check%20out%20iD01t%20Productions%20-%20AI%20Apps%2C%20Tech%20eBooks%2C%20and%20Electronic%20Music%20by%20Guillaume%20Lessard&url=https://id01t.github.io&hashtags=AI,Programming,IndieDev" 
-             target="_blank" rel="noopener" 
-             style="color: var(--muted); text-decoration: none; font-size: 18px;" 
-             aria-label="Share on Twitter">
-            🐦
-          </a>
-          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://id01t.github.io" 
-             target="_blank" rel="noopener" 
-             style="color: var(--muted); text-decoration: none; font-size: 18px;" 
-             aria-label="Share on LinkedIn">
-            💼
-          </a>
-          <a href="https://www.reddit.com/submit?url=https://id01t.github.io&title=iD01t%20Productions%20-%20AI%20Apps%2C%20Tech%20eBooks%2C%20Electronic%20Music" 
-             target="_blank" rel="noopener" 
-             style="color: var(--muted); text-decoration: none; font-size: 18px;" 
-             aria-label="Share on Reddit">
-            🔴
-          </a>
-        </div>
-        <form action="/search.html" method="GET" style="display: flex; align-items: center;" role="search" aria-label="Site search">
-          <label for="search-input" class="sr-only">Search the site</label>
-          <input type="search" name="q" id="search-input" placeholder="Search..." 
-                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;"
-                 aria-label="Search the site">
-          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;"
-                  aria-label="Submit search">
-            <span aria-hidden="true">🔍</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="hero" role="banner" aria-labelledby="hero-title">
-    <div class="wrap">
-      <h1 id="hero-title">Build and ship AI-powered apps, books, and music with iD01t Productions</h1>
-      <p>Professional digital content by <strong>Guillaume Lessard</strong> — 100+ products, 10+ years experience, trusted by developers worldwide.</p>
-      <div class="cta" role="group" aria-label="Call to action buttons">
-        <a class="btn" href="#products" style="background: var(--brand); color: white; border-color: var(--brand);" aria-label="Explore our product catalog">Explore Products</a>
-        <a class="btn" href="#newsletter" style="background: transparent; border: 2px solid var(--brand); color: var(--brand);" aria-label="Join our newsletter for updates">Join the Insider List</a>
-      </div>
-      
-      <!-- Trust Indicators -->
-      <div class="trust-indicators" style="margin-top: 40px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; opacity: 0.8;" role="group" aria-label="Trust indicators and statistics">
-        <div style="text-align: center;" role="img" aria-label="100 plus digital products">
-          <div style="font-size: 24px; font-weight: bold; color: var(--brand);" aria-hidden="true">100+</div>
-          <div style="font-size: 14px;">Digital Products</div>
-        </div>
-        <div style="text-align: center;" role="img" aria-label="10 plus years experience">
-          <div style="font-size: 24px; font-weight: bold; color: var(--brand);" aria-hidden="true">10+</div>
-          <div style="font-size: 14px;">Years Experience</div>
-        </div>
-        <div style="text-align: center;" role="img" aria-label="50 thousand plus downloads">
-          <div style="font-size: 24px; font-weight: bold; color: var(--brand);" aria-hidden="true">50K+</div>
-          <div style="font-size: 14px;">Downloads</div>
-        </div>
-      </div>
-      
-      <!-- Hero Image -->
-      <div style="margin-top: 40px; text-align: center;">
-        <picture>
-          <source srcset="/assets/harvested/brand/hero_ai_automation.webp" type="image/webp">
-          <img src="/assets/harvested/brand/hero_ai_automation.jpg" 
-               alt="AI automation and digital tools visualization" 
-               style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);"
-               loading="eager" width="800" height="400">
-        </picture>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS SECTION -->
-  <main id="main-content" class="wrap" style="margin-top:60px" role="main">
-    <section id="products" class="products-section">
-      <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Our Products</h2>
-      
-      <!-- Featured Products Grid -->
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        <!-- AI Apps Card -->
-        <article class="card" style="position: relative; overflow: hidden;">
-          <picture>
-            <source srcset="/assets/harvested/apps/img_1.webp" type="image/webp">
-            <img src="/assets/harvested/apps/img_1.png" alt="AI Apps by iD01t Productions" style="width: 100%; height: 200px; object-fit: cover; background: #111;" loading="lazy" width="300" height="200">
-          </picture>
-          <div class="content">
-            <h3 style="margin:0 0 8px">🤖 AI Apps</h3>
-            <p class="muted" style="margin-bottom: 12px;">Build intelligent applications with our AI-powered tools and frameworks. From automation to machine learning.</p>
-            <div class="badge-row" style="margin-bottom: 16px;">
-              <span class="pill">Automation</span>
-              <span class="pill">Machine Learning</span>
-              <span class="pill">Productivity</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-              <span style="font-weight: bold; color: var(--brand);">From $9.99</span>
-              <span style="font-size: 14px; color: var(--muted);">itch.io</span>
-            </div>
-            <a class="btn" href="https://id01t.itch.io/" target="_blank" rel="noopener" style="width: 100%; text-align: center; background: var(--brand); color: white; border-color: var(--brand);">View on itch.io</a>
-          </div>
-        </article>
-
-        <!-- Tech eBooks Card -->
-        <article class="card" style="position: relative; overflow: hidden;">
-          <picture>
-            <source srcset="/assets/harvested/ebooks/img_10.webp" type="image/webp">
-            <img src="/assets/harvested/ebooks/img_10.jpg" alt="Tech eBooks by Guillaume Lessard" style="width: 100%; height: 200px; object-fit: cover; background: #111;" loading="lazy" width="300" height="200">
-          </picture>
-          <div class="content">
-            <h3 style="margin:0 0 8px">📚 Tech eBooks</h3>
-            <p class="muted" style="margin-bottom: 12px;">Master programming, automation, and digital skills with our comprehensive guides and tutorials.</p>
-            <div class="badge-row" style="margin-bottom: 16px;">
-              <span class="pill">Programming</span>
-              <span class="pill">Automation</span>
-              <span class="pill">Tutorials</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-              <span style="font-weight: bold; color: var(--brand);">From $2.99</span>
-              <span style="font-size: 14px; color: var(--muted);">Google Books</span>
-            </div>
-            <a class="btn" href="/ebooks.html" style="width: 100%; text-align: center; background: var(--brand); color: white; border-color: var(--brand);">Browse eBooks</a>
-          </div>
-        </article>
-
-        <!-- Electronic Music Card -->
-        <article class="card" style="position: relative; overflow: hidden;">
-          <img src="/assets/harvested/brand/og_brand.jpg" alt="Electronic Music by DJ iD01t" style="width: 100%; height: 200px; object-fit: cover; background: #111;">
-          <div class="content">
-            <h3 style="margin:0 0 8px">🎵 Electronic Music</h3>
-            <p class="muted" style="margin-bottom: 12px;">Cinematic electronic music perfect for coding, focus, and creative work. Professional production quality.</p>
-            <div class="badge-row" style="margin-bottom: 16px;">
-              <span class="pill">Electronic</span>
-              <span class="pill">Cinematic</span>
-              <span class="pill">Focus Music</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-              <span style="font-weight: bold; color: var(--brand);">Free Stream</span>
-              <span style="font-size: 14px; color: var(--muted);">Spotify</span>
-            </div>
-            <a class="btn" href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="width: 100%; text-align: center; background: var(--brand); color: white; border-color: var(--brand);">Listen on Spotify</a>
-          </div>
-        </article>
-
-        <!-- Games & Tools Card -->
-        <article class="card" style="position: relative; overflow: hidden;">
-          <img src="/assets/harvested/games/nini_hero.webp" alt="Games and Tools by iD01t Productions" style="width: 100%; height: 200px; object-fit: cover; background: #111;">
-          <div class="content">
-            <h3 style="margin:0 0 8px">🎮 Games & Tools</h3>
-            <p class="muted" style="margin-bottom: 12px;">Interactive games and productivity tools designed for developers and creative professionals.</p>
-            <div class="badge-row" style="margin-bottom: 16px;">
-              <span class="pill">Windows</span>
-              <span class="pill">Web</span>
-              <span class="pill">Tools</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-              <span style="font-weight: bold; color: var(--brand);">From $4.99</span>
-              <span style="font-size: 14px; color: var(--muted);">itch.io</span>
-            </div>
-            <a class="btn" href="https://id01t.itch.io/" target="_blank" rel="noopener" style="width: 100%; text-align: center; background: var(--brand); color: white; border-color: var(--brand);">Explore Games</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SOCIAL PROOF & TESTIMONIALS -->
-    <section id="testimonials" style="margin-top: 80px;">
-      <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">What Our Users Say</h2>
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        <article class="card" style="padding: 24px;">
-          <div style="display: flex; align-items: center; margin-bottom: 16px;">
-            <img src="/assets/harvested/testimonials/profile_1.jpg" alt="John Smith profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-right: 12px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="width: 40px; height: 40px; background: var(--brand); border-radius: 50%; display: none; align-items: center; justify-content: center; margin-right: 12px; color: white; font-weight: bold;">JS</div>
-            <div>
-              <div style="font-weight: bold;">John Smith</div>
-              <div style="font-size: 14px; color: var(--muted);">Software Developer</div>
-            </div>
-          </div>
-          <p style="font-style: italic; margin-bottom: 16px;">"The Python automation guides saved me hours of work. Guillaume's approach to teaching complex concepts is unmatched."</p>
-          <div style="color: #ffd700;">★★★★★</div>
-        </article>
-
-        <article class="card" style="padding: 24px;">
-          <div style="display: flex; align-items: center; margin-bottom: 16px;">
-            <img src="/assets/harvested/testimonials/profile_2.jpg" alt="Alex Martinez profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-right: 12px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="width: 40px; height: 40px; background: var(--brand); border-radius: 50%; display: none; align-items: center; justify-content: center; margin-right: 12px; color: white; font-weight: bold;">AM</div>
-            <div>
-              <div style="font-weight: bold;">Alex Martinez</div>
-              <div style="font-size: 14px; color: var(--muted);">Product Manager</div>
-            </div>
-          </div>
-          <p style="font-style: italic; margin-bottom: 16px;">"The AI apps are incredibly well-designed. Perfect for rapid prototyping and production use."</p>
-          <div style="color: #ffd700;">★★★★★</div>
-        </article>
-
-        <article class="card" style="padding: 24px;">
-          <div style="display: flex; align-items: center; margin-bottom: 16px;">
-            <img src="/assets/harvested/testimonials/profile_3.jpg" alt="Sarah Chen profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-right: 12px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="width: 40px; height: 40px; background: var(--brand); border-radius: 50%; display: none; align-items: center; justify-content: center; margin-right: 12px; color: white; font-weight: bold;">SC</div>
-            <div>
-              <div style="font-weight: bold;">Sarah Chen</div>
-              <div style="font-size: 14px; color: var(--muted);">Creative Director</div>
-            </div>
-          </div>
-          <p style="font-style: italic; margin-bottom: 16px;">"The electronic music is perfect for focus sessions. High-quality production that enhances productivity."</p>
-          <div style="color: #ffd700;">★★★★★</div>
-        </article>
-      </div>
-    </section>
-
-    <!-- FEATURED: Spotify artist embed + Live Latest tiles -->
-    <section class="two-col" style="margin-top: 80px;">
-      <article class="card" style="padding:16px">
-        <h2 style="margin:0 0 8px">Featured — DJ iD01t</h2>
-        <p class="muted" style="margin:0 0 12px">Stream directly from Spotify.</p>
-        <iframe
-          class="spotify"
-          src="https://open.spotify.com/embed/artist/0EihiI3hgiPfIiyb154dgB?utm_source=generator&theme=0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          title="Spotify Player - DJ iD01t Music"
-          aria-label="Spotify music player for DJ iD01t"></iframe>
-        <div style="margin-top:10px"><a class="btn" href="/music.html">Full Discography</a></div>
-      </article>
-
-      <article class="card" style="padding:16px">
-        <h2 style="margin:0 0 8px">Latest from the Catalog</h2>
-        <div id="latest" class="grid" style="grid-template-columns:1fr;gap:12px">
-          <!-- Filled by JS: Latest eBook + Latest Release -->
-        </div>
-      </article>
-    </section>
-
-    <!-- VISUAL SHOWCASE -->
-    <section style="margin-top: 80px; text-align: center;">
-      <h2 style="margin-bottom: 40px; font-size: 32px;">Visual Showcase</h2>
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        <div class="card" style="padding: 0; overflow: hidden;">
-          <img src="/assets/harvested/showcase/ai_automation_dashboard.jpg" 
-               alt="AI automation dashboard interface" 
-               style="width: 100%; height: 200px; object-fit: cover;"
-               loading="lazy">
-          <div style="padding: 20px;">
-            <h3 style="margin: 0 0 8px;">AI Automation Tools</h3>
-            <p class="muted" style="margin: 0;">Professional-grade automation interfaces for developers</p>
-          </div>
-        </div>
-        
-        <div class="card" style="padding: 0; overflow: hidden;">
-          <img src="/assets/harvested/showcase/ebook_covers_collage.jpg" 
-               alt="Collection of tech eBook covers" 
-               style="width: 100%; height: 200px; object-fit: cover;"
-               loading="lazy">
-          <div style="padding: 20px;">
-            <h3 style="margin: 0 0 8px;">Tech eBooks Library</h3>
-            <p class="muted" style="margin: 0;">Comprehensive programming and automation guides</p>
-          </div>
-        </div>
-        
-        <div class="card" style="padding: 0; overflow: hidden;">
-          <img src="/assets/harvested/showcase/electronic_music_studio.jpg" 
-               alt="Electronic music production studio setup" 
-               style="width: 100%; height: 200px; object-fit: cover;"
-               loading="lazy">
-          <div style="padding: 20px;">
-            <h3 style="margin: 0 0 8px;">Electronic Music</h3>
-            <p class="muted" style="margin: 0;">Cinematic tracks for focus and productivity</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="card" style="padding:18px;margin-top:18px">
-      <h2 style="margin:0 0 8px">About Guillaume Lessard</h2>
-      <p class="muted" style="margin:0 0 16px">
-        Canadian developer, author, and music producer behind iD01t Productions. Building automation-first,
-        ROI-focused content across books, audio, apps, and tools to empower creators.
-      </p>
-      <div class="badge-row" style="margin-bottom: 16px;">
-        <span class="pill">10+ Years Experience</span>
-        <span class="pill">100+ Digital Products</span>
-        <span class="pill">Automation Expert</span>
-      </div>
-      <div style="margin-top: 16px;">
-        <a class="btn" href="/about.html">Learn More</a>
-        <a class="btn" href="/contact.html" style="margin-left: 8px;">Get in Touch</a>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" style="margin-top: 80px;">
-      <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Frequently Asked Questions</h2>
-      <div class="grid" style="grid-template-columns: 1fr; gap: 16px; max-width: 800px; margin: 0 auto;">
-        <article class="card" style="padding: 24px;">
-          <h3 style="margin: 0 0 12px; font-size: 18px;">How do I get updates on new products?</h3>
-          <p class="muted">You receive free updates via your purchase platform (Google Books, itch.io, Spotify) and our newsletter. We also announce major releases on our social media channels.</p>
-        </article>
-        
-        <article class="card" style="padding: 24px;">
-          <h3 style="margin: 0 0 12px; font-size: 18px;">Do you offer refunds?</h3>
-          <p class="muted">Yes, we offer refunds within 14 days for standard products per our refund policy. Digital products are generally non-refundable after download, but we work with customers on a case-by-case basis.</p>
-        </article>
-        
-        <article class="card" style="padding: 24px;">
-          <h3 style="margin: 0 0 12px; font-size: 18px;">What platforms do you support?</h3>
-          <p class="muted">Our apps work on Windows, Mac, and Linux. eBooks are available on Google Books, Kindle, and other major platforms. Music streams on Spotify, YouTube, and Apple Music.</p>
-        </article>
-        
-        <article class="card" style="padding: 24px;">
-          <h3 style="margin: 0 0 12px; font-size: 18px;">Do you provide technical support?</h3>
-          <p class="muted">Yes, we provide email support for all our products. Response time is typically within 24 hours. Check our contact page for support options.</p>
-        </article>
-        
-        <article class="card" style="padding: 24px;">
-          <h3 style="margin: 0 0 12px; font-size: 18px;">Are your products suitable for beginners?</h3>
-          <p class="muted">Absolutely! Our content ranges from beginner-friendly tutorials to advanced techniques. Each product clearly indicates the skill level required, and we provide learning paths for different experience levels.</p>
-        </article>
-        
-        <article class="card" style="padding: 24px;">
-          <h3 style="margin: 0 0 12px; font-size: 18px;">Can I use your music in my projects?</h3>
-          <p class="muted">Our music is available for personal use and some commercial projects. Please check the specific licensing terms for each track. Contact us for commercial licensing inquiries.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- NEWSLETTER SIGNUP -->
-    <section id="newsletter" class="card" style="padding:32px;margin-top:80px;background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-        <h2 style="margin:0 0 16px; color: white; font-size: 28px;">Join the Insider List</h2>
-        <p style="margin:0 0 24px; opacity: 0.9; font-size: 18px;">
-          Get exclusive access to new releases, early bird discounts, and free mini apps + 3 pro prompts.
-        </p>
-        <form style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: center;">
-          <input type="email" placeholder="Enter your email" 
-                 style="flex: 1; min-width: 250px; padding: 12px 16px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); font-size: 16px;">
-          <button type="submit" class="btn" style="background: white; color: #667eea; border: none; padding: 12px 24px; font-size: 16px; font-weight: bold;">
-            Get Free Access
-          </button>
-        </form>
-        <p style="margin: 16px 0 0; font-size: 14px; opacity: 0.8;">
-          No spam. Unsubscribe anytime. Join 5,000+ developers and creators.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer style="background: var(--card); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
-    <div class="wrap">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
-        <!-- Company Info -->
-        <div>
-          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
-          <p style="margin: 0 0 16px; color: var(--muted); line-height: 1.6;">
-            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. 
-            Building automation-first, ROI-focused solutions for modern creators.
-          </p>
-          <div style="display: flex; gap: 12px;">
-            <a href="https://github.com/id01t" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">GitHub</a>
-            <a href="https://id01t.itch.io" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">Visit itch.io Store</a>
-            <a href="https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">Spotify</a>
-            <a href="https://www.youtube.com/channel/UCi10eZdNVil8VqDya_e6K4Q" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: none; font-size: 20px;">YouTube</a>
-          </div>
-        </div>
-        
-        <!-- Quick Links -->
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: var(--muted); text-decoration: none;">eBooks</a></li>
-            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: var(--muted); text-decoration: none;">Audiobooks</a></li>
-            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: var(--muted); text-decoration: none;">Music</a></li>
-            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: var(--muted); text-decoration: none;">Games</a></li>
-            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: var(--muted); text-decoration: none;">Apps</a></li>
-          </ul>
-        </div>
-        
-        <!-- Company -->
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: var(--muted); text-decoration: none;">About</a></li>
-            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: var(--muted); text-decoration: none;">Blog</a></li>
-            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: var(--muted); text-decoration: none;">Contact</a></li>
-            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: var(--muted); text-decoration: none;">Search</a></li>
-          </ul>
-        </div>
-        
-        <!-- Legal -->
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Legal</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/legal/privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/terms.html" style="color: var(--muted); text-decoration: none;">Terms of Service</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/refunds.html" style="color: var(--muted); text-decoration: none;">Refund Policy</a></li>
-            <li style="margin-bottom: 8px;"><a href="/legal/cookies.html" style="color: var(--muted); text-decoration: none;">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div style="border-top: 1px solid var(--border); padding-top: 24px; text-align: center; color: var(--muted);">
-        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Performance monitoring -->
-  <script src="/js/performance.js" defer></script>
-
-  <!-- Minimal homepage logic -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Render a compact card
-    const esc = s => String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
-    const card = (img,title,meta,href,cta) => `
-      <div class="card" style="display:grid;grid-template-columns:96px 1fr;gap:12px;overflow:hidden">
-        <img src="${esc(img)}" alt="${esc(title)} cover" style="width:96px;height:96px;object-fit:cover;background:#111">
-        <div class="content" style="padding:12px">
-          <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
-            <strong>${esc(title)}</strong>
-            <span class="muted" style="font-size:.9rem">${esc(meta||'')}</span>
-          </div>
-          <div style="margin-top:8px"><a class="btn" href="${esc(href)}">${esc(cta||'View')}</a></div>
-        </div>
-      </div>`;
-
-    async function latestEbook(){
-      try{
-        const q = encodeURIComponent('inauthor:"Guillaume Lessard" OR inpublisher:"iD01t Productions"');
-        const url = `https://www.googleapis.com/books/v1/volumes?q=${q}&maxResults=12`;
-        const r = await fetch(url); if(!r.ok) throw 0;
-        const data = await r.json(); const items = (data.items||[]);
-        // pick most recent by publishedDate (YYYY or YYYY-MM-DD)
-        const parseY = s => { if(!s) return 0; const m=(s+'').match(/^\\d{4}/); return m?+m[0]:0; };
-        items.sort((a,b)=>parseY((b.volumeInfo||{}).publishedDate) - parseY((a.volumeInfo||{}).publishedDate));
-        const v = (items[0]||{}).volumeInfo||{};
-        const img = ((v.imageLinks||{}).thumbnail || (v.imageLinks||{}).smallThumbnail || '/assets/placeholder-cover.svg').replace('http://','https://');
-        const link = (v.infoLink || v.canonicalVolumeLink || '#').replace('http://','https://');
-        const year = (v.publishedDate||'').slice(0,4);
-        return card(img, v.title||'New eBook', year, link, 'View on Google Books');
-      }catch{ return ''; }
-    }
-
-    async function latestMusic(){
-      try{
-        const r = await fetch('/assets/data/music.json', {cache:'no-store'}); if(!r.ok) throw 0;
-        const d = await r.json(); const rel = (d.releases||[]).slice().sort((a,b)=>(b.year||0)-(a.year||0))[0];
-        if(!rel) return '';
-        const img = rel.image || '/assets/img/placeholders/card-square-640.webp';
-        return card(img, rel.name, rel.year, rel.url, 'Play on Spotify');
-      }catch{ return ''; }
-    }
-
-    (async function renderLatest(){
-      const container = document.getElementById('latest');
-      const [ebook, music] = await Promise.all([latestEbook(), latestMusic()]);
-      container.innerHTML = (ebook||'') + (music||'') || '<div class="muted">Fresh drops will appear here.</div>';
-    })();
-
-    // Performance optimizations - Deferred execution
-    function optimizePerformance() {
-      // Use requestIdleCallback for non-critical optimizations
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-          // Lazy loading for images
-          const lazyImages = document.querySelectorAll('img[data-src]');
-          if (lazyImages.length > 0) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  const img = entry.target;
-                  img.src = img.dataset.src;
-                  img.classList.remove('lazy');
-                  img.classList.add('loaded');
-                  imageObserver.unobserve(img);
-                }
-              });
-            });
-            
-            lazyImages.forEach(img => {
-              imageObserver.observe(img);
-            });
-          }
-
-          // Optimize external links
-          const externalLinks = document.querySelectorAll('a[href^="http"]');
-          externalLinks.forEach(link => {
-            if (!link.rel.includes('noopener')) {
-              link.rel = 'noopener noreferrer';
-              link.target = '_blank';
-            }
-          });
-        });
-      } else {
-        // Fallback for browsers without requestIdleCallback
-        setTimeout(() => {
-          const externalLinks = document.querySelectorAll('a[href^="http"]');
-          externalLinks.forEach(link => {
-            if (!link.rel.includes('noopener')) {
-              link.rel = 'noopener noreferrer';
-              link.target = '_blank';
-            }
-          });
-        }, 100);
-      }
-    }
-
-    // Initialize performance optimizations after page load
-    window.addEventListener('load', optimizePerformance);
+    tailwind.config={theme:{extend:{colors:{brand:{50:"#f5f6ff",100:"#e6e9ff",200:"#c9ccff",300:"#a2a8ff",400:"#7a82ff",500:"#545cff",600:"#3a3fe6",700:"#2c30b4",800:"#202383",900:"#16185c"}}}}};
   </script>
-</body>
-</html>
+  <link rel="stylesheet" href="/css/custom.css">
+  <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#home" class="flex items-center gap-2" aria-label="Aller à l'accueil">
+        <img src="/assets/img/brand/logo.png" alt="Logo iD01t Productions" class="h-8 w-8">
+        <span class="font-semibold tracking-tight">iD01t Productions</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
+        <a href="/store.html" class="link-underline">Store</a><a href="/ebooks.html" class="link-underline">eBooks</a>
+        <a href="/apps.html" class="link-underline">Apps</a><a href="/games.html" class="link-underline">Games</a>
+        <a href="/music.html" class="link-underline">Music</a><a href="/services.html" class="link-underline">Services</a>
+        <a href="/portfolio.html" class="link-underline">Portfolio</a><a href="/about.html" class="link-underline">About</a>
+        <a href="/contact.html" class="link-underline">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+        <a href="#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/apps.html" class="py-2">Apps</a>
+      <a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/services.html" class="py-2">Services</a>
+      <a href="/portfolio.html" class="py-2">Portfolio</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="relative overflow-hidden">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+    <div class="grid md:grid-cols-2 items-center gap-10">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Premium apps, eBooks, games, music</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">We build tools and stories for creators with clarity, speed, and measurable value. Designed for growth, automation, and a clean user journey.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/store.html" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Visit Store</a>
+          <a href="#nini-beta" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3">Join Nini’s Beta</a>
+          <a href="/portfolio.html" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3">See Work</a>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="/assets/img/placeholders/hero-1600x900.webp" alt="iD01t Productions showcase image" class="aspect-[16/10] rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-slate-800">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nini-beta" class="py-16 border-t border-slate-200 dark:border-slate-800">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-semibold">Nini’s Adventures: Kitties Mayhem! — Public PC Beta</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Explosive online multiplayer shooter. Public beta on <strong>September 24, 2025</strong>. No single-player. PC only for first beta. AWS-powered servers. Limited seats.</p>
+        <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300">
+          <li>High-energy deathmatches with unique feline abilities</li>
+          <li>Colorful destructible arenas built for mayhem</li>
+          <li>Scalable servers and anti-cheat pipeline</li>
+        </ul>
+      </div>
+      <div>
+        <img src="/assets/harvested/games/nini_hero.webp" alt="Nini’s Adventures: Kitties Mayhem artwork" class="rounded-2xl aspect-[16/10] object-cover ring-1 ring-slate-200 dark:ring-slate-800">
+        <form class="mt-6 grid sm:grid-cols-2 gap-3" name="nini-beta" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="nini-beta" />
+          <input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="email" type="email" placeholder="Email for beta access" required>
+          <button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Request Access</button>
+          <p class="text-xs text-slate-500 sm:col-span-2">No payment. Email only. We will contact selected testers by email.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="store" class="py-16 border-t border-slate-200 dark:border-slate-800">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between">
+      <h2 class="text-2xl font-semibold">Store</h2>
+      <a href="/store.html" class="text-sm link-underline">View all</a>
+    </div>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
+        <img src="/assets/harvested/apps/img_3.png" alt="Bedtime Story Maker for Windows" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900">
+        <h3 class="mt-4 font-semibold">Bedtime Story Maker · Windows</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Create full stories in seconds, bilingual, friendly UI, frequent updates.</p>
+        <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$9.99 CAD</span><a href="https://id01t.itch.io/" target="_blank" rel="noopener" class="text-sm link-underline">Buy</a></div>
+      </article>
+      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
+        <img src="/assets/harvested/ebooks/img_30.jpg" alt="Veo3 JSON Guide eBook" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900">
+        <h3 class="mt-4 font-semibold">Veo3 JSON Guide · eBook</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Learn smart JSON skills for cinematic results with real templates.</p>
+        <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$7.99 CAD</span><a href="https://books.google.com/books?id=MJFJEQAAQBAJ" target="_blank" rel="noopener" class="text-sm link-underline">Buy</a></div>
+      </article>
+      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
+        <img src="/assets/harvested/apps/img_4.png" alt="Sprite Forge Pro toolkit" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900">
+        <h3 class="mt-4 font-semibold">Sprite Forge Pro · Toolkit</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Modern sprite and texture creation, polished workflow, clear exports.</p>
+        <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$19.00 CAD</span><a href="#" class="text-sm link-underline">Buy</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="py-16" id="ebooks"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex items-end justify-between"><h2 class="text-2xl font-semibold">eBooks</h2><a href="/ebooks.html" class="text-sm link-underline">Explore catalog</a></div><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Guides for developers and creators with clean steps, examples, and real assets. Simple learning, fast results.</p></div></section>
+<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="apps"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Apps</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Desktop and mobile tools with friendly design, simple setup, and useful features.</p></div></section>
+<section class="py-16" id="games"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Games</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Action and fun, fast pace and clear goals. Playtests open soon.</p></div></section>
+<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="music"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Music</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Albums and sound design with energy and story. Find tracks on main platforms.</p></div></section>
+<section class="py-16" id="services"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Services</h2><div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"><div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6"><h3 class="font-semibold">Web & Apps</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Design, build, deploy, with clear docs and handover.</p></div><div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6"><h3 class="font-semibold">Brand & Media</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Logos, covers, banners, videos, with clean style and story.</p></div><div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6"><h3 class="font-semibold">Automation</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Pipelines and scripts for content, sales, and support.</p></div></div></div></section>
+<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="portfolio"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Portfolio</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Selected work across tools and media, with short case studies and results.</p><div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"><div class="aspect-video rounded-xl bg-slate-100 dark:bg-slate-900"></div><div class="aspect-video rounded-xl bg-slate-100 dark:bg-slate-900"></div><div class="aspect-video rounded-xl bg-slate-100 dark:bg-slate-900"></div></div></div></section>
+<section class="py-16" id="about"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">About</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">We are a Canadian creative and tech studio. We build with care, we ship with speed, and we focus on value and clean results for users.</p></div></section>
+<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="newsletter"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Newsletter</h2><p class="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">Get release notes, beta invites, and discounts. One concise email per month.</p><form class="mt-6 grid sm:grid-cols-2 gap-4 max-w-3xl" name="newsletter" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="newsletter" /><input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="email" type="email" placeholder="Email" required><button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Subscribe</button><p class="mt-2 text-xs text-slate-500 sm:col-span-2">By subscribing you accept our privacy policy. Unsubscribe anytime.</p></form></div></section>
+<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="contact"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Contact</h2><form class="mt-6 grid sm:grid-cols-2 gap-4 max-w-3xl" name="contact" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="contact" /><input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" name="name" placeholder="Name" required><input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" name="email" type="email" placeholder="Email" required><textarea class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="message" rows="5" placeholder="Message" required></textarea><button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Send</button></form><p class="mt-4 text-sm text-slate-500">By sending a message you accept our privacy policy.</p></div></section>
+
+<footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();const t=document.getElementById('themeToggle');if(t){t.addEventListener('click',()=>{const d=document.documentElement.classList.toggle('dark');localStorage.setItem('theme',d?'dark':'light');t.setAttribute('aria-pressed',String(d));});}const mb=document.getElementById('mobileMenuBtn'),mm=document.getElementById('mobileMenu');if(mb&&mm){mb.addEventListener('click',()=>{mm.classList.toggle('hidden');});}</script>
+</body></html>
