@@ -16,157 +16,75 @@
   <meta name="twitter:description" content="Narrated titles and audio editions."/>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:{50:"#f5f6ff",100:"#e6e9ff",200:"#c9ccff",300:"#a2a8ff",400:"#7a82ff",500:"#545cff",600:"#3a3fe6",700:"#2c30b4",800:"#202383",900:"#16185c"}}}}};</script>
-  <link rel="stylesheet" href="/css/custom.css">
-  <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
-
-</head>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   
-<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2" aria-label="Home">
-        <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
-        <span class="font-semibold tracking-tight">iD01t Productions</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
-        <a href="/store.html" class="link-underline">Store</a> <a href="/ebooks.html" class="link-underline">eBooks</a> <a href="/audiobooks.html" class="link-underline">Audiobooks</a> <a href="/apps.html" class="link-underline">Apps</a> <a href="/games.html" class="link-underline">Games</a> <a href="/music.html" class="link-underline">Music</a> <a href="/blog.html" class="link-underline">Blog</a> <a href="/about.html" class="link-underline">About</a> <a href="/contact.html" class="link-underline">Contact</a>
-      </nav>
-      <div class="flex items-center gap-3">
-        <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
-    <div class="px-4 py-3 flex flex-col gap-2">
-      <a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/audiobooks.html" class="py-2">Audiobooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/blog.html" class="py-2">Blog</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
-    </div>
-  </div>
-  <!-- Put near the end of <body> on audiobooks.html -->
-<script src="/assets/data/audiobooks.js"></script>
-<!-- or load the pure JSON as your existing fallback expects -->
-<!-- /assets/data/audiobooks.json -->
-
-</header>
-
-
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Audiobooks</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Narrated editions and spoken word, auto populated from Google Books.</p>
-      <p class="mt-1 text-xs text-slate-500">Updated September 06, 2025</p>
-    </div>
-  </section>
-
-  <!-- Controls -->
-  <section class="pb-4 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid gap-3 md:grid-cols-12 items-end">
-        <div class="md:col-span-6">
-          <input id="q" type="search" placeholder="Search title, author, keywords" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
-        </div>
-        <div class="md:col-span-2">
-          <select id="language" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
-            <option value="">All languages</option>
-          </select>
-        </div>
-        <div class="md:col-span-2">
-          <input id="from" type="number" inputmode="numeric" placeholder="From year" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
-        </div>
-        <div class="md:col-span-2">
-          <input id="to" type="number" inputmode="numeric" placeholder="To year" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
-        </div>
-        <div class="md:col-span-12 flex gap-2">
-          <select id="sort" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
-            <option value="date_desc">Newest</option>
-            <option value="date_asc">Oldest</option>
-            <option value="title_asc">Title A–Z</option>
-            <option value="title_desc">Title Z–A</option>
-          </select>
-          <button id="reset" class="text-sm px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700">Reset</button>
-          <span id="tally" class="text-sm text-slate-500 ml-auto"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Grid -->
-  <section class="py-8 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between">
-        <h2 class="text-xl font-semibold">Catalog</h2>
-        <span id="count" class="text-sm text-slate-500"></span>
-      </div>
-      <div id="grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4"></div>
-      <div id="empty" class="text-slate-500 mt-4 hidden">No results. Try different filters.</div>
-    </div>
-  </section>
-
-  
-<footer class="py-10 border-t border-slate-200 dark:border-slate-800">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-      <div>
-        <p class="font-semibold">iD01t Productions</p>
-        <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
-      </div>
-      <nav class="flex flex-wrap gap-4 text-sm">
-        <a href="/legal/terms.html" class="link-underline">Terms</a>
-        <a href="/legal/privacy.html" class="link-underline">Privacy</a>
-        <a href="/legal/refunds.html" class="link-underline">Refunds</a>
-        <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
-      </nav>
-    </div>
-  </div>
-</footer>
-
-
   <script>
-    // Shared shell behavior from ebooks header/footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', function() {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeToggle.setAttribute('aria-pressed', String(isDark));
-      });
-    }
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-      });
+    // Shell helpers
+    (function(){
+      var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+      var themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+          var isDark = document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          themeToggle.setAttribute('aria-pressed', String(isDark));
+        });
+      }
+      var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      var mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    })();
+
+    // ---------- Audiobooks Catalog (Google Books + Local landing pages) ----------
+    const C = {
+      AUTHOR: 'Guillaume Lessard',
+      PUBLISHER: 'iD01t Productions',
+      PAGE_SIZE: 40,      // Google Books max per page
+      MAX_TOTAL: 200,     // up to 5 pages
+      API_KEY: ''         // optional to increase quota
+    };
+
+    // Elements
+    const el = id => document.getElementById(id);
+    const q=el('q'), language=el('language'), from=el('from'), to=el('to'), sort=el('sort');
+    const resetBtn=el('reset'), grid=el('grid'), empty=el('empty'), count=el('count'), tally=el('tally');
+
+    // Utils
+    const escapeHtml = s => String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+    const sleep = ms => new Promise(r=>setTimeout(r, ms));
+
+    async function fetchWithTimeout(url, opts={}, timeout=9000){
+      const ctrl = new AbortController();
+      const id = setTimeout(()=>ctrl.abort(), timeout);
+      try{
+        const res = await fetch(url, { ...opts, signal: ctrl.signal, cache: 'no-store' });
+        return res;
+      } finally {
+        clearTimeout(id);
+      }
     }
 
-    
     // Try to resolve a local landing page under /audiobooks/
     async function resolveLocalLanding(a){
-      // Helper to test a path exists without downloading the full document
       async function exists(url){
         try{
-          // Try HEAD first; some static hosts may not allow it, then try GET with no-store
-          let res = await fetch(url, {method:'HEAD', cache:'no-store'});
+          let res = await fetchWithTimeout(url, {method:'HEAD'}, 4000);
           if (res.ok) return true;
-          res = await fetch(url, {method:'GET', cache:'no-store'});
+          res = await fetchWithTimeout(url, {method:'GET'}, 6000);
           return res.ok;
         }catch(e){ return false; }
       }
       const safe = s => (s||'')
         .toLowerCase()
         .normalize('NFKD')
-        .replace(/[\u0300-\u036f]/g,'')          // remove accents
+        .replace(/[\u0300-\u036f]/g,'')
         .replace(/&/g,' and ')
-        .replace(/[^a-z0-9]+/g,'-')              // non-alnum to hyphen
-        .replace(/^-+|-+$/g,'');                 // trim hyphens
+        .replace(/[^a-z0-9]+/g,'-')
+        .replace(/^-+|-+$/g,'');
 
       const titleSlug = safe(a.title);
       const authorSlug = safe((a.authors||'').split(',')[0]);
@@ -177,7 +95,6 @@
         `/audiobooks/${authorSlug}/${titleSlug}.html`,
       ];
 
-      // Optional manual map for edge cases (fill later if needed)
       const MAP = (window.AUDIOBOOK_MAP || {});
       if (MAP[a.id]) {
         const m = MAP[a.id];
@@ -189,21 +106,7 @@
       return null;
     }
 
-    // --- Google Books API method aligned with ebooks.html approach ---
-    const C = {
-      AUTHOR: 'Guillaume Lessard',
-      PUBLISHER: 'iD01t Productions',
-      PAGE_SIZE: 40,      // max page size
-      MAX_TOTAL: 200,     // up to 5 pages
-      API_KEY: ''         // optional for higher quota
-    };
-
-    const el = id => document.getElementById(id);
-    const q=el('q'), language=el('language'), from=el('from'), to=el('to'), sort=el('sort');
-    const resetBtn=el('reset'), grid=el('grid'), empty=el('empty'), count=el('count'), tally=el('tally');
-
-    const escapeHtml = s => String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","~":"~","\"":"&quot;"}[c])||c).replace(/~/g,'~'); // safe
-
+    // Google Books fetch with retries
     async function fetchAll(){
       const base = `inauthor:"${C.AUTHOR}" OR inpublisher:"${C.PUBLISHER}"`;
       let start = 0, items = [];
@@ -214,13 +117,13 @@
         let data = null, ok=false;
         for (let attempt=0; attempt<3 && !ok; attempt++){
           try{
-            const res = await fetch(url, {cache:'no-store'});
+            const res = await fetchWithTimeout(url, {}, 9000);
             if(!res.ok) throw new Error('HTTP '+res.status);
             data = await res.json(); ok=true;
-          }catch(e){ await new Promise(r=>setTimeout(r, 350*(attempt+1))); }
+          }catch(e){ await sleep(350*(attempt+1)); }
         }
         if(!ok) throw new Error('Books API unavailable');
-        const page = data.items || [];
+        const page = (data && data.items) ? data.items : [];
         items.push(...page);
         if (page.length < C.PAGE_SIZE) break;
         start += C.PAGE_SIZE;
@@ -228,18 +131,18 @@
       return items;
     }
 
-    function isAudio(v){
-      const t = ((v.title||'')+' '+(v.subtitle||'')).toLowerCase();
-      const c = (v.categories||[]).join(' ').toLowerCase();
-      const s = (v.searchInfo?.textSnippet||'').toLowerCase();
+    function isAudio(vinfo){
+      const t = ((vinfo.title||'')+' '+(vinfo.subtitle||'')).toLowerCase();
+      const c = (vinfo.categories||[]).join(' ').toLowerCase();
+      const s = (vinfo.searchInfo?.textSnippet||'').toLowerCase();
       const hints = ['audiobook','audio book','spoken word','narrated','unabridged','abridged'];
       return hints.some(h=>t.includes(h)||c.includes(h)||s.includes(h));
     }
 
-    function normalize(it){
-      const v = it.volumeInfo || {}, links=v.imageLinks||{};
+    function normalize(item){
+      const v = item.volumeInfo || {}, links=v.imageLinks||{};
       return {
-        id: it.id,
+        id: item.id,
         title: v.title || 'Untitled',
         authors: (v.authors||[]).join(', '),
         year: (v.publishedDate||'').slice(0,4),
@@ -256,40 +159,24 @@
       language.innerHTML = '<option value="">All languages</option>' + langs.map(l=>`<option value="${l}">${l}</option>`).join('');
     }
 
-    
     function card(a){
       const cats = [a.language, ...(a.categories||[]).slice(0,1), a.audio?'Audiobook':'Book'].filter(Boolean);
-      // Placeholder link; will be replaced if a local page exists
       const localHref = a.localUrl || a.infoLink;
       return `
       <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 flex flex-col card">
-        <img src="${a.image}" alt="${a.title} cover" class="w-full aspect-[3/4] object-cover">
+        <img src="${a.image}" alt="${escapeHtml(a.title)} cover" class="w-full aspect-[3/4] object-cover">
         <div class="p-4 flex-1 flex flex-col">
-          <h3 class="font-semibold leading-snug">${a.title}</h3>
-          <p class="text-xs text-slate-500 mt-1">${a.authors||''}</p>
+          <h3 class="font-semibold leading-snug">${escapeHtml(a.title)}</h3>
+          <p class="text-xs text-slate-500 mt-1">${escapeHtml(a.authors||'')}</p>
           <div class="mt-2 flex flex-wrap gap-2">
-            ${cats.map(t=>`<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${t}</span>`).join('')}
+            ${cats.map(t=>`<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${escapeHtml(t)}</span>`).join('')}
           </div>
           <div class="mt-auto pt-4 flex items-center justify-between gap-2">
             <span class="text-sm text-slate-500">${a.year||''}</span>
             <div class="flex items-center gap-2">
-              <a href="${localHref}" target="_self" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Details</a>
+              <a href="${localHref}" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Details</a>
               <a href="${a.infoLink}" target="_blank" rel="noopener nofollow" class="text-sm underline">Google Books</a>
             </div>
-          </div>
-        </div>
-      </article>`;
-    }
-    " alt="${a.title} cover" class="w-full aspect-[3/4] object-cover">
-        <div class="p-4 flex-1 flex flex-col">
-          <h3 class="font-semibold leading-snug">${a.title}</h3>
-          <p class="text-xs text-slate-500 mt-1">${a.authors||''}</p>
-          <div class="mt-2 flex flex-wrap gap-2">
-            ${cats.map(t=>`<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${t}</span>`).join('')}
-          </div>
-          <div class="mt-auto pt-4 flex items-center justify-between">
-            <span class="text-sm text-slate-500">${a.year||''}</span>
-            <a href="${a.infoLink}" target="_blank" rel="noopener nofollow" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Google Books</a>
           </div>
         </div>
       </article>`;
@@ -312,8 +199,19 @@
       if (s==='date_asc') list.sort((a,b)=>(a.year||0)-(b.year||0));
       else if (s==='title_asc') list.sort(byTitle);
       else if (s==='title_desc') list.sort((a,b)=>byTitle(b,a));
-      else list.sort((a,b)=>(b.year||0)-(a.year||0));
+      else list.sort((a,b)=>(b.year||0)-(a.year||0)); // newest
       return list;
+    }
+
+    function emitSchema(items){
+      const ld={ '@context':'https://schema.org','@type':'ItemList', name:'Audiobooks',
+        itemListElement: items.slice(0,60).map((a,i)=>({ '@type':'ListItem', position:i+1,
+          item:{ '@type':'Audiobook', name:a.title, inLanguage:a.language, datePublished:a.year?String(a.year):undefined, image:a.image, url:a.localUrl||a.infoLink }
+        }))
+      };
+      let tag=document.getElementById('ld-ab');
+      if(!tag){ tag=document.createElement('script'); tag.id='ld-ab'; tag.type='application/ld+json'; document.head.appendChild(tag); }
+      tag.textContent = JSON.stringify(ld);
     }
 
     function render(list, all){
@@ -326,45 +224,32 @@
       emitSchema(list);
     }
 
-    function emitSchema(items){
-      const ld={ '@context':'https://schema.org','@type':'ItemList', name:'Audiobooks',
-        itemListElement: items.slice(0,60).map((a,i)=>({ '@type':'ListItem', position:i+1,
-          item:{ '@type':'Audiobook', name:a.title, inLanguage:a.language, datePublished:a.year?String(a.year):undefined, image:a.image, url:a.infoLink }
-        }))
-      };
-      let tag=document.getElementById('ld-ab');
-      if(!tag){ tag=document.createElement('script'); tag.id='ld-ab'; tag.type='application/ld+json'; document.head.appendChild(tag); }
-      tag.textContent = JSON.stringify(ld);
-    }
-
     function bind(all){
       const again=()=>render(applyFilters(all), all);
       ['input','change'].forEach(evt=>[q,language,from,to,sort].forEach(e=>e.addEventListener(evt,again)));
       resetBtn.addEventListener('click',()=>{q.value='';language.value='';from.value='';to.value='';sort.value='date_desc';again();});
     }
 
-    
     async function init(){
       try{
         const raw = await fetchAll();
         let all = raw.map(normalize);
-        // Resolve local landing pages in parallel with throttling
-        const limiter = (list, batch=6) => list.reduce((p, fn, i) => p.then(async r=>{ 
-          if (i % batch === 0) await new Promise(res=>setTimeout(res, 50));
-          r.push(await fn()); return r; 
-        }), Promise.resolve([]));
-        await limiter(all.map((x)=>async ()=>{
-          x.localUrl = await resolveLocalLanding(x);
-          return x;
-        }));
+        // Resolve local landing pages with small batches
+        const batch = 6;
+        for (let i=0; i<all.length; i+=batch){
+          await Promise.all(all.slice(i,i+batch).map(async x=>{ x.localUrl = await resolveLocalLanding(x); }));
+          await sleep(40);
+        }
         populateLanguages(all);
         bind(all);
         render(applyFilters(all), all);
       }catch(err){
         try{
-          const r=await fetch('/assets/data/audiobooks.json',{cache:'no-store'});
+          // JSON fallback
+          const r=await fetchWithTimeout('/assets/data/audiobooks.json', {}, 8000);
           const fb=await r.json();
-          const all=(Array.isArray(fb)?fb:(fb.items||[])).map(a=>({
+          const arr=(Array.isArray(fb)?fb:(fb.items||[]));
+          const all=arr.map(a=>({
             id:a.id||a.title, title:a.title, authors:(a.authors||a.narrators||[]).join(', '),
             year:a.year, language:a.language, categories:[a.genre].filter(Boolean),
             infoLink:(a.googleBooks||a.googlePlay||a.url||'#'), image:a.cover, audio:true, localUrl:a.url
@@ -375,23 +260,9 @@
         }
       }
     }
-    catch(err){
-        // Fallback: try a local JSON if provided
-        try{
-          const r=await fetch('/assets/data/audiobooks.json',{cache:'no-store'});
-          const fb=await r.json();
-          const all=(Array.isArray(fb)?fb:(fb.items||[])).map(a=>({
-            id:a.id||a.title, title:a.title, authors:(a.authors||a.narrators||[]).join(', '),
-            year:a.year, language:a.language, categories:[a.genre].filter(Boolean),
-            infoLink:(a.googleBooks||a.googlePlay||a.url||'#'), image:a.cover, audio:true
-          }));
-          populateLanguages(all); bind(all); render(applyFilters(all), all);
-        }catch(e2){
-          grid.innerHTML = '<div class="text-slate-500">Could not load audiobooks from API or fallback JSON.</div>'; empty.classList.remove('hidden');
-        }
-      }
-    }
+
     init();
   </script>
+
 </body>
 </html>
