@@ -18,6 +18,35 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={theme:{extend:{colors:{brand:{50:"#f5f6ff",100:"#e6e9ff",200:"#c9ccff",300:"#a2a8ff",400:"#7a82ff",500:"#545cff",600:"#3a3fe6",700:"#2c30b4",800:"#202383",900:"#16185c"}}}}};</script>
   <link rel="stylesheet" href="/css/custom.css">
+  <style>
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .link-underline {
+      position: relative;
+      text-decoration: none;
+    }
+    .link-underline::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #3a3fe6;
+      transition: width 0.3s ease;
+    }
+    .link-underline:hover::after {
+      width: 100%;
+    }
+    .dark .link-underline::after {
+      background-color: #7a82ff;
+    }
+  </style>
   <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
 
   <link rel="preconnect" href="https://www.googleapis.com">
@@ -54,75 +83,210 @@
 </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Audiobooks</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Narrated editions and spoken word, auto populated from Google Books.</p>
-      <p class="mt-1 text-xs text-slate-500">Updated September 06, 2025</p>
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-50 to-white dark:from-slate-900 dark:to-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent">
+          Audiobooks
+        </h1>
+        <p class="mt-6 text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+          Immerse yourself in narrated editions and spoken word content
+        </p>
+        <p class="mt-4 text-lg text-slate-500 dark:text-slate-400">
+          Auto-populated from Google Books API • Live catalog updates
+        </p>
+        <div class="mt-8 inline-flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-slate-800/80 rounded-full border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
+          <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Last updated: September 06, 2025</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Controls -->
-  <section class="pb-4 border-t border-slate-200 dark:border-slate-800">
+  <section class="py-8 bg-slate-50/50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid gap-3 md:grid-cols-12 items-end">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Search & Filter</h2>
+        <p class="text-slate-600 dark:text-slate-400">Find your perfect audiobook with our advanced search tools</p>
+      </div>
+      
+      <div class="grid gap-4 md:grid-cols-12 items-end">
         <div class="md:col-span-6">
-          <input id="q" type="search" placeholder="Search title, author, keywords" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
+          <label for="q" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Search</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+            <input id="q" type="search" placeholder="Search title, author, keywords..." 
+                   class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200" />
+          </div>
         </div>
+        
         <div class="md:col-span-2">
-          <select id="language" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
+          <label for="language" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Language</label>
+          <select id="language" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200">
             <option value="">All languages</option>
           </select>
         </div>
+        
         <div class="md:col-span-2">
-          <input id="from" type="number" inputmode="numeric" placeholder="From year" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
+          <label for="from" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">From Year</label>
+          <input id="from" type="number" inputmode="numeric" placeholder="2020" 
+                 class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200" />
         </div>
+        
         <div class="md:col-span-2">
-          <input id="to" type="number" inputmode="numeric" placeholder="To year" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
+          <label for="to" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">To Year</label>
+          <input id="to" type="number" inputmode="numeric" placeholder="2025" 
+                 class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200" />
         </div>
-        <div class="md:col-span-12 flex gap-2">
-          <select id="sort" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
-            <option value="date_desc">Newest</option>
-            <option value="date_asc">Oldest</option>
+        
+        <div class="md:col-span-12 flex flex-wrap items-center gap-3 pt-4">
+          <div class="flex items-center gap-2">
+            <label for="sort" class="text-sm font-medium text-slate-700 dark:text-slate-300">Sort by:</label>
+            <select id="sort" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200">
+              <option value="date_desc">Newest First</option>
+              <option value="date_asc">Oldest First</option>
             <option value="title_asc">Title A—Z</option>
             <option value="title_desc">Title Z—A</option>
           </select>
-          <button id="reset" class="text-sm px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700">Reset</button>
-          <button id="refresh" class="text-sm px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-brand-50 dark:bg-brand-900/20">🔄 Refresh</button>
-          <span id="tally" class="text-sm text-slate-500 ml-auto"></span>
+          </div>
+          
+          <button id="reset" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all duration-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Reset
+          </button>
+          
+          <button id="refresh" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Refresh
+          </button>
+          
+          <div id="tally" class="ml-auto text-sm text-slate-500 dark:text-slate-400 font-medium"></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Grid -->
-  <section class="py-8 border-t border-slate-200 dark:border-slate-800">
+  <section class="py-12 bg-white dark:bg-slate-950">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between">
-        <h2 class="text-xl font-semibold">Catalog</h2>
-        <span id="count" class="text-sm text-slate-500"></span>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100">Audiobook Catalog</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">Discover our curated collection of narrated content</p>
+        </div>
+        <div id="count" class="text-lg font-semibold text-brand-600 dark:text-brand-400"></div>
       </div>
-      <div id="loading" class="text-center text-slate-500 mt-8">🎧 Loading iD01t Productions audiobooks…</div>
-      <div id="grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4 hidden"></div>
-<noscript><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-slate-500 py-4">Enable JavaScript to view the audiobooks catalog.</div></noscript>
-      <div id="empty" class="text-slate-500 mt-4 hidden">No results. Try different filters.</div>
+      
+      <div id="loading" class="text-center py-16">
+        <div class="inline-flex flex-col items-center gap-4">
+          <div class="w-12 h-12 border-4 border-brand-200 dark:border-brand-800 border-t-brand-600 dark:border-t-brand-400 rounded-full animate-spin"></div>
+          <p class="text-lg text-slate-600 dark:text-slate-400 font-medium">Loading audiobooks...</p>
+          <p class="text-sm text-slate-500 dark:text-slate-500">Fetching from Google Books API</p>
+        </div>
+      </div>
+      
+      <div id="grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8 hidden"></div>
+      
+      <noscript>
+        <div class="text-center py-16 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+          <div class="max-w-md mx-auto">
+            <div class="w-16 h-16 mx-auto mb-4 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">JavaScript Required</h3>
+            <p class="text-slate-600 dark:text-slate-400">Please enable JavaScript to view the audiobooks catalog.</p>
+          </div>
+        </div>
+      </noscript>
+      
+      <div id="empty" class="text-center py-16 hidden">
+        <div class="max-w-md mx-auto">
+          <div class="w-16 h-16 mx-auto mb-4 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.709M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">No Results Found</h3>
+          <p class="text-slate-600 dark:text-slate-400 mb-4">Try adjusting your search criteria or filters.</p>
+          <button id="reset" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Reset Filters
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
-<footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+<footer class="py-16 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-      <div>
-        <p class="font-semibold">iD01t Productions</p>
-        <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/assets/img/brand/logo.png" class="h-10 w-10" alt="iD01t Productions">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">iD01t Productions</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Creative Digital Content</p>
+          </div>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
+          Discover our curated collection of audiobooks, ebooks, and digital content. 
+          Immerse yourself in narrated stories and educational content.
+        </p>
       </div>
-      <nav class="flex flex-wrap gap-4 text-sm">
-        <a href="/legal/terms.html" class="link-underline">Terms</a>
-        <a href="/legal/privacy.html" class="link-underline">Privacy</a>
-        <a href="/legal/refunds.html" class="link-underline">Refunds</a>
-        <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
-      </nav>
+      
+      <div>
+        <h4 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">Quick Links</h4>
+        <nav class="flex flex-col gap-3">
+          <a href="/store.html" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Store</a>
+          <a href="/ebooks.html" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">eBooks</a>
+          <a href="/audiobooks.html" class="text-brand-600 dark:text-brand-400 font-medium">Audiobooks</a>
+          <a href="/blog.html" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Blog</a>
+          <a href="/about.html" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="pt-8 border-t border-slate-200 dark:border-slate-800">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <p class="text-sm text-slate-500 dark:text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+          <div class="flex items-center gap-4">
+            <a href="/legal/terms.html" class="text-sm text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Terms</a>
+            <a href="/legal/privacy.html" class="text-sm text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Privacy</a>
+            <a href="/legal/refunds.html" class="text-sm text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Refunds</a>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <a href="https://github.com/id01t" target="_blank" rel="noopener" 
+             class="inline-flex items-center gap-2 px-3 py-2 text-sm text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://id01t.itch.io" target="_blank" rel="noopener" 
+             class="inline-flex items-center gap-2 px-3 py-2 text-sm text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+            itch.io
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
@@ -342,7 +506,7 @@
       }
       
       imageUrl = imageUrl.replace('http://', 'https://');
-
+      
       return {
         id: item.id,
         title: volumeInfo.title || 'Untitled',
@@ -372,29 +536,53 @@
       const linkRel = book.localUrl ? 'noopener' : 'noopener nofollow';
 
       return `
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 flex flex-col hover:shadow-lg transition-shadow">
-          <div class="relative">
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 flex flex-col hover:shadow-xl hover:shadow-brand-500/10 dark:hover:shadow-brand-400/10 transition-all duration-300 hover:-translate-y-1">
+          <div class="relative overflow-hidden">
             <img src="${book.image}" 
                  alt="${escapeHtml(book.title)} cover" 
-                 class="w-full aspect-[3/4] object-cover" 
+                 class="w-full aspect-[3/4] object-cover transition-transform duration-300 group-hover:scale-105" 
                  loading="lazy"
-                 onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'">
-            ${book.isAudiobook ? '<div class="absolute top-2 right-2 bg-brand-600 text-white text-xs px-2 py-1 rounded-full">🎧 Audio</div>' : ''}
+                 onerror="this.onerror=null;this.src='/assets/img/placeholders/card-portrait-384x576.webp'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            ${book.isAudiobook ? '<div class="absolute top-3 right-3 bg-brand-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm">🎧 Audio</div>' : ''}
+            <div class="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-lg p-2">
+                <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">${escapeHtml(book.description || '')}</p>
+              </div>
+            </div>
           </div>
-          <div class="p-4 flex-1 flex flex-col">
-            <h3 class="font-semibold leading-snug mb-1">${escapeHtml(book.title)}</h3>
-            <p class="text-xs text-slate-500 mb-2">${escapeHtml(book.authors || '')}</p>
-            <div class="mt-2 mb-4 flex flex-wrap gap-2">
-              ${categories.map(cat =>
-                `<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${escapeHtml(cat)}</span>`
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 leading-tight mb-2 line-clamp-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                ${escapeHtml(book.title)}
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-medium">${escapeHtml(book.authors || '')}</p>
+            </div>
+            
+            <div class="mb-4 flex flex-wrap gap-2">
+              ${categories.map(cat => 
+                `<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${escapeHtml(cat)}</span>`
               ).join('')}
             </div>
-            <div class="mt-auto pt-4 flex items-center justify-between gap-2">
-              <span class="text-sm text-slate-500">${book.year || ''}</span>
+            
+            <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+              <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  <span class="text-sm font-medium text-slate-500 dark:text-slate-400">${book.year || 'N/A'}</span>
+                </div>
               <div class="flex items-center gap-2">
-                <a href="${linkUrl}" target="${linkTarget}" rel="${linkRel}"
-                   class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm transition-colors">${linkText}</a>
-                ${book.localUrl ? `<a href="${book.infoLink}" target="_blank" rel="noopener nofollow" class="text-sm underline hover:text-brand-600">Google Books</a>` : ''}
+                <a href="${linkUrl}" target="${linkTarget}" rel="${linkRel}" 
+                     class="inline-flex items-center gap-2 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+                    ${linkText}
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                  </a>
+                  ${book.localUrl ? `<a href="${book.infoLink}" target="_blank" rel="noopener nofollow" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-400 transition-colors underline">Google Books</a>` : ''}
+                </div>
               </div>
             </div>
           </div>
