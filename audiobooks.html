@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="/css/custom.css">
   <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
 
-  <link rel="preconnect" href="https://www.googleapis.com">
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   
@@ -49,6 +48,7 @@
     </div>
   </div>
 </header>
+
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
@@ -81,8 +81,8 @@
           <select id="sort" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
             <option value="date_desc">Newest</option>
             <option value="date_asc">Oldest</option>
-            <option value="title_asc">Title A—Z</option>
-            <option value="title_desc">Title Z—A</option>
+            <option value="title_asc">Title A–Z</option>
+            <option value="title_desc">Title Z–A</option>
           </select>
           <button id="reset" class="text-sm px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700">Reset</button>
           <span id="tally" class="text-sm text-slate-500 ml-auto"></span>
@@ -98,13 +98,12 @@
         <h2 class="text-xl font-semibold">Catalog</h2>
         <span id="count" class="text-sm text-slate-500"></span>
       </div>
-      <div id="loading" class="text-center text-slate-500 mt-8">🎧 Loading iD01t Productions audiobooks…</div>
-      <div id="grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4 hidden"></div>
-<noscript><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-slate-500 py-4">Enable JavaScript to view the audiobooks catalog.</div></noscript>
+      <div id="grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4"></div>
       <div id="empty" class="text-slate-500 mt-4 hidden">No results. Try different filters.</div>
     </div>
   </section>
 
+  
 <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -123,10 +122,10 @@
   </div>
 </footer>
 
+
   <script>
-    // Theme and mobile menu functionality
+    // Shared shell behavior from ebooks header/footer
     document.getElementById('year').textContent = new Date().getFullYear();
-    
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
       themeToggle.addEventListener('click', function() {
@@ -135,7 +134,6 @@
         themeToggle.setAttribute('aria-pressed', String(isDark));
       });
     }
-    
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (mobileMenuBtn && mobileMenu) {
@@ -144,478 +142,250 @@
       });
     }
 
-    // Networking helpers
-    function sleep(ms){ return new Promise(r=>setTimeout(r, ms)); }
-    async function fetchWithTimeout(url, opts={}, timeout=9000){
-      const ctrl = new AbortController();
-      const id = setTimeout(()=>ctrl.abort(), timeout);
-      try{
-        const res = await fetch(url, { ...opts, signal: ctrl.signal, cache: 'no-store' });
-        return res;
-      } finally { clearTimeout(id); }
-    }
-
-    // Local landing page resolver
-    async function resolveLocalLanding(book) {
-      async function exists(url) {
-        try {
-          const res = await fetchWithTimeout(url, { method: 'HEAD' }, 4000);
+    
+    // Try to resolve a local landing page under /audiobooks/
+    async function resolveLocalLanding(a){
+      // Helper to test a path exists without downloading the full document
+      async function exists(url){
+        try{
+          // Try HEAD first; some static hosts may not allow it, then try GET with no-store
+          let res = await fetch(url, {method:'HEAD', cache:'no-store'});
+          if (res.ok) return true;
+          res = await fetch(url, {method:'GET', cache:'no-store'});
           return res.ok;
-        } catch (e) {
-          try {
-            const res = await fetchWithTimeout(url, { method: 'GET' }, 6000);
-            return res.ok;
-          } catch (e2) {
-            return false;
-          }
-        }
+        }catch(e){ return false; }
       }
-
-      const safe = s => (s || '')
+      const safe = s => (s||'')
         .toLowerCase()
         .normalize('NFKD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/&/g, ' and ')
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '');
+        .replace(/[\u0300-\u036f]/g,'')          // remove accents
+        .replace(/&/g,' and ')
+        .replace(/[^a-z0-9]+/g,'-')              // non-alnum to hyphen
+        .replace(/^-+|-+$/g,'');                 // trim hyphens
 
-      const titleSlug = safe(book.title);
-      const authorSlug = safe((book.authors || '').split(',')[0]);
-      
-      const candidates = [
+      const titleSlug = safe(a.title);
+      const authorSlug = safe((a.authors||'').split(',')[0]);
+      const combos = [
         `/audiobooks/${titleSlug}.html`,
         `/audiobooks/${titleSlug}/index.html`,
         `/audiobooks/${authorSlug}-${titleSlug}.html`,
         `/audiobooks/${authorSlug}/${titleSlug}.html`,
       ];
 
-      // Check manual mapping first
-      const MAP = window.AUDIOBOOK_MAP || {};
-      if (MAP[book.id]) {
-        const mapped = MAP[book.id];
-        if (await exists(mapped)) return mapped;
+      // Optional manual map for edge cases (fill later if needed)
+      const MAP = (window.AUDIOBOOK_MAP || {});
+      if (MAP[a.id]) {
+        const m = MAP[a.id];
+        if (await exists(m)) return m;
       }
-
-      // Check generated paths
-      for (const path of candidates) {
-        if (await exists(path)) return path;
+      for (const p of combos){
+        if (await exists(p)) return p;
       }
-
       return null;
     }
 
-    
-    // Fallback loaders
-    async function loadWindowFallback(){
-      try{
-        if (window.AUDIOBOOK_FALLBACK && Array.isArray(window.AUDIOBOOK_FALLBACK.items)){
-          const fb = window.AUDIOBOOK_FALLBACK.items;
-          return fb.map(a => ({
-            id: a.id || a.title,
-            title: a.title,
-            authors: (a.authors || a.narrators || []).join(', '),
-            year: a.year,
-            language: a.language,
-            categories: [a.genre].filter(Boolean),
-            description: a.description || '',
-            image: a.cover || '/assets/img/placeholders/card-portrait-384x576.webp',
-            infoLink: a.googleBooks || a.googlePlay || a.url || '#',
-            isAudiobook: true,
-            localUrl: a.url || null
-          }));
-        }
-      }catch(e){}
-      return null;
-    }
-    async function loadJsonFallback(){
-      try{
-        const res = await fetchWithTimeout('/assets/data/audiobooks.json', {}, 8000);
-        if (!res.ok) throw new Error('fallback json http '+res.status);
-        const data = await res.json();
-        const arr = Array.isArray(data) ? data : (data.items || []);
-        return arr.map(a => ({
-          id: a.id || a.title,
-          title: a.title,
-          authors: (a.authors || a.narrators || []).join(', '),
-          year: a.year,
-          language: a.language,
-          categories: [a.genre].filter(Boolean),
-          description: a.description || '',
-          image: a.cover || '/assets/img/placeholders/card-portrait-384x576.webp',
-          infoLink: a.googleBooks || a.googlePlay || a.url || '#',
-          isAudiobook: true,
-          localUrl: a.url || null
-        }));
-      }catch(e){ return null; }
-    }
-
-    // Google Books API Configuration
-    const CONFIG = {
+    // --- Google Books API method aligned with ebooks.html approach ---
+    const C = {
       AUTHOR: 'Guillaume Lessard',
       PUBLISHER: 'iD01t Productions',
-      PAGE_SIZE: 40,
-      MAX_TOTAL: 200,
-      API_KEY: "AIzaSyBpG4uswyDjQXfZbIOfW7hwg2Il0RaUYYs" // Add your API key here for higher quota
+      PAGE_SIZE: 40,      // max page size
+      MAX_TOTAL: 200,     // up to 5 pages
+      API_KEY: ''         // optional for higher quota
     };
 
-    // DOM elements
-    const elements = {
-      q: document.getElementById('q'),
-      language: document.getElementById('language'),
-      from: document.getElementById('from'),
-      to: document.getElementById('to'),
-      sort: document.getElementById('sort'),
-      reset: document.getElementById('reset'),
-      grid: document.getElementById('grid'),
-      empty: document.getElementById('empty'),
-      count: document.getElementById('count'),
-      tally: document.getElementById('tally'),
-      loading: document.getElementById('loading')
-    };
+    const el = id => document.getElementById(id);
+    const q=el('q'), language=el('language'), from=el('from'), to=el('to'), sort=el('sort');
+    const resetBtn=el('reset'), grid=el('grid'), empty=el('empty'), count=el('count'), tally=el('tally');
 
-    // Utility functions
-    function escapeHtml(str) {
-      const div = document.createElement('div');
-      div.textContent = str;
-      return div.innerHTML;
-    }
+    const escapeHtml = s => String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","~":"~","\"":"&quot;"}[c])||c).replace(/~/g,'~'); // safe
 
-    // Fetch all books from Google Books API
-    async function fetchAllBooks() {
-      const baseQuery = `inauthor:"${CONFIG.AUTHOR}" OR inpublisher:"${CONFIG.PUBLISHER}"`;
-      let startIndex = 0;
-      let allItems = [];
-
-      while (startIndex < CONFIG.MAX_TOTAL) {
-        const params = new URLSearchParams({
-          q: baseQuery,
-          maxResults: CONFIG.PAGE_SIZE,
-          startIndex: startIndex,
-          printType: 'books',
-          projection: 'full'
-        });
-
-        if (CONFIG.API_KEY) {
-          params.set('key', CONFIG.API_KEY);
-        }
-
+    async function fetchAll(){
+      const base = `inauthor:"${C.AUTHOR}" OR inpublisher:"${C.PUBLISHER}"`;
+      let start = 0, items = [];
+      while (start < C.MAX_TOTAL){
+        const params = new URLSearchParams({ q: base, maxResults: C.PAGE_SIZE, startIndex: start, printType: 'books', projection: 'full' });
+        if (C.API_KEY) params.set('key', C.API_KEY);
         const url = `https://www.googleapis.com/books/v1/volumes?${params.toString()}`;
-        
-        let data = null;
-        let success = false;
-
-        // Retry logic
-        for (let attempt = 0; attempt < 3 && !success; attempt++) {
-          try {
-            const response = await fetchWithTimeout(url, {}, 9000);
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
-            data = await response.json();
-            success = true;
-          } catch (error) {
-            console.warn(`Attempt ${attempt + 1} failed:`, error);
-            await sleep(350 * (attempt + 1));
-          }
+        let data = null, ok=false;
+        for (let attempt=0; attempt<3 && !ok; attempt++){
+          try{
+            const res = await fetch(url, {cache:'no-store'});
+            if(!res.ok) throw new Error('HTTP '+res.status);
+            data = await res.json(); ok=true;
+          }catch(e){ await new Promise(r=>setTimeout(r, 350*(attempt+1))); }
         }
-
-        if (!success) {
-          throw new Error('Google Books API unavailable after retries');
-        }
-
-        const pageItems = data.items || [];
-        allItems.push(...pageItems);
-
-        // If we got fewer results than requested, we've reached the end
-        if (pageItems.length < CONFIG.PAGE_SIZE) break;
-        
-        startIndex += CONFIG.PAGE_SIZE;
+        if(!ok) throw new Error('Books API unavailable');
+        const page = data.items || [];
+        items.push(...page);
+        if (page.length < C.PAGE_SIZE) break;
+        start += C.PAGE_SIZE;
       }
-
-      return allItems;
+      return items;
     }
 
-    // Check if a book is an audiobook
-    function isAudiobook(volumeInfo) {
-      const title = `${volumeInfo.title || ''} ${volumeInfo.subtitle || ''}`.toLowerCase();
-      const categories = (volumeInfo.categories || []).join(' ').toLowerCase();
-      const description = (volumeInfo.description || '').toLowerCase();
-      
-      const audioKeywords = [
-        'audiobook', 'audio book', 'spoken word', 'narrated',
-        'unabridged', 'abridged', 'narrator', 'voice'
-      ];
-
-      return audioKeywords.some(keyword => 
-        title.includes(keyword) || 
-        categories.includes(keyword) || 
-        description.includes(keyword)
-      );
+    function isAudio(v){
+      const t = ((v.title||'')+' '+(v.subtitle||'')).toLowerCase();
+      const c = (v.categories||[]).join(' ').toLowerCase();
+      const s = (v.searchInfo?.textSnippet||'').toLowerCase();
+      const hints = ['audiobook','audio book','spoken word','narrated','unabridged','abridged'];
+      return hints.some(h=>t.includes(h)||c.includes(h)||s.includes(h));
     }
 
-    // Normalize book data
-    function normalizeBook(item) {
-      const volumeInfo = item.volumeInfo || {};
-      const imageLinks = volumeInfo.imageLinks || {};
-      
+    function normalize(it){
+      const v = it.volumeInfo || {}, links=v.imageLinks||{};
       return {
-        id: item.id,
-        title: volumeInfo.title || 'Untitled',
-        authors: (volumeInfo.authors || []).join(', '),
-        year: parseInt((volumeInfo.publishedDate || '').slice(0, 4)) || null,
-        language: volumeInfo.language || '',
-        categories: volumeInfo.categories || [],
-        description: volumeInfo.description || '',
-        image: (imageLinks.thumbnail || imageLinks.smallThumbnail || '/assets/img/placeholders/card-portrait-384x576.webp')
-          .replace('http://', 'https://'),
-        infoLink: (volumeInfo.infoLink || volumeInfo.canonicalVolumeLink || '#')
-          .replace('http://', 'https://'),
-        isAudiobook: isAudiobook(volumeInfo),
-        localUrl: null // Will be populated later
+        id: it.id,
+        title: v.title || 'Untitled',
+        authors: (v.authors||[]).join(', '),
+        year: (v.publishedDate||'').slice(0,4),
+        language: v.language || '',
+        categories: v.categories || [],
+        image: (links.thumbnail||links.smallThumbnail||'/assets/placeholder-cover.svg').replace('http://','https://'),
+        infoLink: (v.infoLink || v.canonicalVolumeLink || '#').replace('http://','https://'),
+        audio: isAudio(v)
       };
     }
 
-    // Populate language filter options
-    function populateLanguages(books) {
-      const languages = [...new Set(books.map(book => book.language).filter(Boolean))].sort();
-      elements.language.innerHTML = '<option value="">All languages</option>' +
-        languages.map(lang => `<option value="${lang}">${lang}</option>`).join('');
+    function populateLanguages(items){
+      const langs = Array.from(new Set(items.map(x=>x.language).filter(Boolean))).sort();
+      language.innerHTML = '<option value="">All languages</option>' + langs.map(l=>`<option value="${l}">${l}</option>`).join('');
     }
 
-    // Create book card HTML
-    function createCard(book) {
-      const categories = [
-        book.language,
-        ...(book.categories || []).slice(0, 1),
-        book.isAudiobook ? 'Audiobook' : 'Book'
-      ].filter(Boolean);
-
-      const linkUrl = book.localUrl || book.infoLink;
-      const linkText = book.localUrl ? 'Details' : 'Google Books';
-      const linkTarget = book.localUrl ? '_self' : '_blank';
-      const linkRel = book.localUrl ? 'noopener' : 'noopener nofollow';
-
+    
+    function card(a){
+      const cats = [a.language, ...(a.categories||[]).slice(0,1), a.audio?'Audiobook':'Book'].filter(Boolean);
+      // Placeholder link; will be replaced if a local page exists
+      const localHref = a.localUrl || a.infoLink;
       return `
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 flex flex-col">
-          <img src="${book.image}" alt="${escapeHtml(book.title)} cover" class="w-full aspect-[3/4] object-cover" loading="lazy">
-          <div class="p-4 flex-1 flex flex-col">
-            <h3 class="font-semibold leading-snug mb-1">${escapeHtml(book.title)}</h3>
-            <p class="text-xs text-slate-500 mb-2">${escapeHtml(book.authors || '')}</p>
-            <div class="mt-2 mb-4 flex flex-wrap gap-2">
-              ${categories.map(cat => 
-                `<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${escapeHtml(cat)}</span>`
-              ).join('')}
-            </div>
-            <div class="mt-auto pt-4 flex items-center justify-between gap-2">
-              <span class="text-sm text-slate-500">${book.year || ''}</span>
-              <div class="flex items-center gap-2">
-                <a href="${linkUrl}" target="${linkTarget}" rel="${linkRel}" 
-                   class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">${linkText}</a>
-                ${book.localUrl ? `<a href="${book.infoLink}" target="_blank" rel="noopener nofollow" class="text-sm underline">Google Books</a>` : ''}
-              </div>
+      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 flex flex-col card">
+        <img src="${a.image}" alt="${a.title} cover" class="w-full aspect-[3/4] object-cover">
+        <div class="p-4 flex-1 flex flex-col">
+          <h3 class="font-semibold leading-snug">${a.title}</h3>
+          <p class="text-xs text-slate-500 mt-1">${a.authors||''}</p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            ${cats.map(t=>`<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${t}</span>`).join('')}
+          </div>
+          <div class="mt-auto pt-4 flex items-center justify-between gap-2">
+            <span class="text-sm text-slate-500">${a.year||''}</span>
+            <div class="flex items-center gap-2">
+              <a href="${localHref}" target="_self" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Details</a>
+              <a href="${a.infoLink}" target="_blank" rel="noopener nofollow" class="text-sm underline">Google Books</a>
             </div>
           </div>
-        </article>
-      `;
+        </div>
+      </article>`;
+    }
+    " alt="${a.title} cover" class="w-full aspect-[3/4] object-cover">
+        <div class="p-4 flex-1 flex flex-col">
+          <h3 class="font-semibold leading-snug">${a.title}</h3>
+          <p class="text-xs text-slate-500 mt-1">${a.authors||''}</p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            ${cats.map(t=>`<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${t}</span>`).join('')}
+          </div>
+          <div class="mt-auto pt-4 flex items-center justify-between">
+            <span class="text-sm text-slate-500">${a.year||''}</span>
+            <a href="${a.infoLink}" target="_blank" rel="noopener nofollow" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Google Books</a>
+          </div>
+        </div>
+      </article>`;
     }
 
-    // Apply filters to book list
-    function applyFilters(books) {
-      const searchText = (elements.q.value || '').toLowerCase().trim();
-      const selectedLanguage = elements.language.value;
-      const fromYear = parseInt(elements.from.value) || null;
-      const toYear = parseInt(elements.to.value) || null;
-
-      let filtered = books.filter(book => {
-        // Search filter
-        if (searchText) {
-          const searchableText = [
-            book.title,
-            book.authors,
-            book.description,
-            (book.categories || []).join(' ')
-          ].join(' ').toLowerCase();
-          
-          if (!searchableText.includes(searchText)) return false;
+    function applyFilters(items){
+      const text=(q.value||'').toLowerCase();
+      const lang=language.value; const f=parseInt(from.value||''); const t=parseInt(to.value||'');
+      let list = items.filter(x=>{
+        if(text){
+          const hay=[x.title,x.authors,(x.categories||[]).join(' ')].join(' ').toLowerCase();
+          if(!hay.includes(text)) return false;
         }
-
-        // Language filter
-        if (selectedLanguage && book.language !== selectedLanguage) return false;
-
-        // Year filters
-        if (fromYear && (!book.year || book.year < fromYear)) return false;
-        if (toYear && (!book.year || book.year > toYear)) return false;
-
-        // Only show audiobooks
-        return book.isAudiobook;
+        if(lang && x.language!==lang) return false;
+        if(!isNaN(f) && (x.year||0) < f) return false;
+        if(!isNaN(t) && (x.year||0) > t) return false;
+        return x.audio; // audiobooks only
       });
-
-      // Sort results
-      const sortBy = elements.sort.value;
-      filtered.sort((a, b) => {
-        switch (sortBy) {
-          case 'date_asc':
-            return (a.year || 0) - (b.year || 0);
-          case 'title_asc':
-            return a.title.localeCompare(b.title);
-          case 'title_desc':
-            return b.title.localeCompare(a.title);
-          default: // 'date_desc'
-            return (b.year || 0) - (a.year || 0);
-        }
-      });
-
-      return filtered;
+      const s=sort.value, byTitle=(a,b)=>a.title.localeCompare(b.title);
+      if (s==='date_asc') list.sort((a,b)=>(a.year||0)-(b.year||0));
+      else if (s==='title_asc') list.sort(byTitle);
+      else if (s==='title_desc') list.sort((a,b)=>byTitle(b,a));
+      else list.sort((a,b)=>(b.year||0)-(a.year||0));
+      return list;
     }
 
-    // Render books to the grid
-    function renderBooks(filtered, allBooks) {
-      elements.loading.classList.add('hidden');
-      
-      if (!filtered.length) {
-        elements.grid.classList.add('hidden');
-        elements.empty.classList.remove('hidden');
-        elements.count.textContent = '0 audiobooks';
-        return;
-      }
-
-      elements.empty.classList.add('hidden');
-      elements.grid.classList.remove('hidden');
-      elements.grid.innerHTML = filtered.map(createCard).join('');
-      
-      const audiobookCount = allBooks.filter(book => book.isAudiobook).length;
-      elements.count.textContent = `${filtered.length} audiobook${filtered.length !== 1 ? 's' : ''}`;
-      elements.tally.textContent = `${allBooks.length} titles • ${audiobookCount} audiobooks`;
-      
-      generateSchema(filtered);
+    function render(list, all){
+      if (!list.length){ grid.innerHTML=''; empty.classList.remove('hidden'); count.textContent='0 audiobooks'; return; }
+      empty.classList.add('hidden');
+      grid.innerHTML = list.map(card).join('');
+      count.textContent = `${list.length} audiobook${list.length!==1?'s':''}`;
+      const audioCount = all.filter(x=>x.audio).length;
+      tally.textContent = `${all.length} titles • ${audioCount} audiobooks`;
+      emitSchema(list);
     }
 
-    // Generate JSON-LD schema
-    function generateSchema(books) {
-      const schema = {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        name: 'Audiobooks',
-        itemListElement: books.slice(0, 60).map((book, index) => ({
-          '@type': 'ListItem',
-          position: index + 1,
-          item: {
-            '@type': 'Audiobook',
-            name: book.title,
-            inLanguage: book.language,
-            datePublished: book.year ? String(book.year) : undefined,
-            image: book.image,
-            url: book.localUrl || book.infoLink
-          }
+    function emitSchema(items){
+      const ld={ '@context':'https://schema.org','@type':'ItemList', name:'Audiobooks',
+        itemListElement: items.slice(0,60).map((a,i)=>({ '@type':'ListItem', position:i+1,
+          item:{ '@type':'Audiobook', name:a.title, inLanguage:a.language, datePublished:a.year?String(a.year):undefined, image:a.image, url:a.infoLink }
         }))
       };
-
-      let scriptTag = document.getElementById('ld-audiobooks');
-      if (!scriptTag) {
-        scriptTag = document.createElement('script');
-        scriptTag.id = 'ld-audiobooks';
-        scriptTag.type = 'application/ld+json';
-        document.head.appendChild(scriptTag);
-      }
-      scriptTag.textContent = JSON.stringify(schema);
+      let tag=document.getElementById('ld-ab');
+      if(!tag){ tag=document.createElement('script'); tag.id='ld-ab'; tag.type='application/ld+json'; document.head.appendChild(tag); }
+      tag.textContent = JSON.stringify(ld);
     }
 
-    // Setup event listeners
-    function setupEventListeners(allBooks) {
-      const updateResults = () => renderBooks(applyFilters(allBooks), allBooks);
-      
-      ['input', 'change'].forEach(eventType => {
-        [elements.q, elements.language, elements.from, elements.to, elements.sort]
-          .forEach(element => element.addEventListener(eventType, updateResults));
-      });
-
-      elements.reset.addEventListener('click', () => {
-        elements.q.value = '';
-        elements.language.value = '';
-        elements.from.value = '';
-        elements.to.value = '';
-        elements.sort.value = 'date_desc';
-        updateResults();
-      });
+    function bind(all){
+      const again=()=>render(applyFilters(all), all);
+      ['input','change'].forEach(evt=>[q,language,from,to,sort].forEach(e=>e.addEventListener(evt,again)));
+      resetBtn.addEventListener('click',()=>{q.value='';language.value='';from.value='';to.value='';sort.value='date_desc';again();});
     }
 
-    // Throttle function for API calls
-    function throttle(promises, batchSize = 6, delay = 50) {
-      return promises.reduce(async (previousBatch, currentPromise, index) => {
-        const results = await previousBatch;
-        
-        if (index % batchSize === 0 && index > 0) {
-          await new Promise(resolve => setTimeout(resolve, delay));
-        }
-        
-        const result = await currentPromise();
-        results.push(result);
-        return results;
-      }, Promise.resolve([]));
-    }
-
-    // Load fallback data
-    async function loadFallback() {
-      try {
-        const response = await fetch('/assets/data/audiobooks.json', { cache: 'no-store' });
-        if (!response.ok) throw new Error('Fallback fetch failed');
-        
-        const fallbackData = await response.json();
-        const items = Array.isArray(fallbackData) ? fallbackData : (fallbackData.items || []);
-        
-        return items.map(item => ({
-          id: item.id || item.title,
-          title: item.title,
-          authors: (item.authors || item.narrators || []).join(', '),
-          year: item.year,
-          language: item.language,
-          categories: [item.genre].filter(Boolean),
-          description: item.description || '',
-          image: item.cover || '/assets/img/placeholders/card-portrait-384x576.webp',
-          infoLink: item.googleBooks || item.googlePlay || item.url || '#',
-          isAudiobook: true,
-          localUrl: item.url
-        }));
-      } catch (error) {
-        console.error('Fallback loading failed:', error);
-        return [];
-      }
-    }
-
-    // Main initialization function
     
-    async function init() {
-      try {
-        console.log('🎧 Fetching from Google Books…');
-        const rawBooks = await fetchAllBooks();
-        let allBooks = rawBooks.map(normalizeBook);
-        const audiobooks = allBooks.filter(b => b.isAudiobook);
-
-        // Resolve local URLs with throttle
-        if (audiobooks.length) {
-          const tasks = audiobooks.map(b => async () => { b.localUrl = await resolveLocalLanding(b); return b; });
-          for (let i=0; i<tasks.length; i+=6){ await Promise.all(tasks.slice(i,i+6).map(fn=>fn())); await sleep(60); }
-        }
-
-        populateLanguages(audiobooks);
-        setupEventListeners(audiobooks);
-        renderBooks(applyFilters(audiobooks), audiobooks);
-      } catch (err) {
-        console.warn('API failed, trying window fallback', err);
-        let fb = await loadWindowFallback();
-        if (!fb) {
-          console.warn('Window fallback missing, trying JSON fallback');
-          fb = await loadJsonFallback();
-        }
-        if (fb && fb.length) {
-          populateLanguages(fb);
-          setupEventListeners(fb);
-          renderBooks(applyFilters(fb), fb);
-        } else {
-          document.getElementById('loading').textContent = '⚠️ Could not load audiobooks. Please try again later.';
-          document.getElementById('empty').classList.remove('hidden');
+    async function init(){
+      try{
+        const raw = await fetchAll();
+        let all = raw.map(normalize);
+        // Resolve local landing pages in parallel with throttling
+        const limiter = (list, batch=6) => list.reduce((p, fn, i) => p.then(async r=>{ 
+          if (i % batch === 0) await new Promise(res=>setTimeout(res, 50));
+          r.push(await fn()); return r; 
+        }), Promise.resolve([]));
+        await limiter(all.map((x)=>async ()=>{
+          x.localUrl = await resolveLocalLanding(x);
+          return x;
+        }));
+        populateLanguages(all);
+        bind(all);
+        render(applyFilters(all), all);
+      }catch(err){
+        try{
+          const r=await fetch('/assets/data/audiobooks.json',{cache:'no-store'});
+          const fb=await r.json();
+          const all=(Array.isArray(fb)?fb:(fb.items||[])).map(a=>({
+            id:a.id||a.title, title:a.title, authors:(a.authors||a.narrators||[]).join(', '),
+            year:a.year, language:a.language, categories:[a.genre].filter(Boolean),
+            infoLink:(a.googleBooks||a.googlePlay||a.url||'#'), image:a.cover, audio:true, localUrl:a.url
+          }));
+          populateLanguages(all); bind(all); render(applyFilters(all), all);
+        }catch(e2){
+          grid.innerHTML = '<div class="text-slate-500">Could not load audiobooks from API or fallback JSON.</div>'; empty.classList.remove('hidden');
         }
       }
     }
-    // Start the application
+    catch(err){
+        // Fallback: try a local JSON if provided
+        try{
+          const r=await fetch('/assets/data/audiobooks.json',{cache:'no-store'});
+          const fb=await r.json();
+          const all=(Array.isArray(fb)?fb:(fb.items||[])).map(a=>({
+            id:a.id||a.title, title:a.title, authors:(a.authors||a.narrators||[]).join(', '),
+            year:a.year, language:a.language, categories:[a.genre].filter(Boolean),
+            infoLink:(a.googleBooks||a.googlePlay||a.url||'#'), image:a.cover, audio:true
+          }));
+          populateLanguages(all); bind(all); render(applyFilters(all), all);
+        }catch(e2){
+          grid.innerHTML = '<div class="text-slate-500">Could not load audiobooks from API or fallback JSON.</div>'; empty.classList.remove('hidden');
+        }
+      }
+    }
     init();
   </script>
 </body>
