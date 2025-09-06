@@ -525,43 +525,67 @@
     // Main initialization function
     async function init() {
       try {
-        console.log('Fetching books from Google Books API...');
+        console.log('🎧 Starting comprehensive audiobook search for iD01t Productions...');
         const rawBooks = await fetchAllBooks();
-        console.log(`Found ${rawBooks.length} total books from API`);
+        console.log(`📚 Found ${rawBooks.length} total books from Google Books API`);
         
         let allBooks = rawBooks.map(normalizeBook);
         
-        // Resolve local URLs for books (with throttling)
-        console.log('Resolving local landing pages...');
-        const localUrlPromises = allBooks.map(book => async () => {
-          book.localUrl = await resolveLocalLanding(book);
-          return book;
-        });
+        // Filter to only audiobooks
+        const audiobooks = allBooks.filter(book => book.isAudiobook);
+        console.log(`🎵 Filtered to ${audiobooks.length} confirmed audiobooks`);
         
-        await throttle(localUrlPromises);
+        // Log some sample titles for verification
+        if (audiobooks.length > 0) {
+          console.log('📖 Sample audiobook titles found:');
+          audiobooks.slice(0, 5).forEach(book => {
+            console.log(`  - "${book.title}" by ${book.authors} (${book.year || 'Unknown year'})`);
+          });
+        }
         
-        const audiobookCount = allBooks.filter(book => book.isAudiobook).length;
-        console.log(`Found ${audiobookCount} audiobooks out of ${allBooks.length} total books`);
+        // Resolve local URLs for audiobooks (with throttling)
+        if (audiobooks.length > 0) {
+          console.log('🔗 Resolving local landing pages...');
+          const localUrlPromises = audiobooks.map(book => async () => {
+            book.localUrl = await resolveLocalLanding(book);
+            return book;
+          });
+          
+          await throttle(localUrlPromises, 5, 100); // More conservative throttling
+        }
         
-        populateLanguages(allBooks);
-        setupEventListeners(allBooks);
-        renderBooks(applyFilters(allBooks), allBooks);
+        console.log(`✅ Final audiobook catalog: ${audiobooks.length} titles`);
+        
+        populateLanguages(audiobooks);
+        setupEventListeners(audiobooks);
+        renderBooks(applyFilters(audiobooks), audiobooks);
+        
+        // If we found very few results, also show what was filtered out for debugging
+        if (audiobooks.length < 5) {
+          console.log('⚠️ Low audiobook count. Checking filtered items:');
+          const nonAudiobooks = allBooks.filter(book => !book.isAudiobook);
+          console.log(`📚 ${nonAudiobooks.length} items filtered out as non-audiobooks:`);
+          nonAudiobooks.slice(0, 10).forEach(book => {
+            console.log(`  - "${book.title}" by ${book.authors}`);
+            console.log(`    Reason: No clear audiobook indicators found`);
+          });
+        }
         
       } catch (error) {
-        console.error('Google Books API failed:', error);
-        console.log('Attempting to load fallback data...');
+        console.error('❌ Google Books API failed:', error);
+        console.log('🔄 Attempting to load fallback data...');
         
         try {
           const fallbackBooks = await loadFallback();
-          console.log(`Loaded ${fallbackBooks.length} books from fallback`);
+          console.log(`📋 Loaded ${fallbackBooks.length} books from fallback JSON`);
           
           populateLanguages(fallbackBooks);
           setupEventListeners(fallbackBooks);
           renderBooks(applyFilters(fallbackBooks), fallbackBooks);
           
         } catch (fallbackError) {
-          console.error('Fallback loading failed:', fallbackError);
-          elements.loading.textContent = 'Could not load audiobooks from API or fallback data.';
+          console.error('💥 Fallback loading also failed:', fallbackError);
+          elements.loading.textContent = '⚠️ Could not load audiobooks. Please try again later.';
           elements.empty.classList.remove('hidden');
         }
       }
