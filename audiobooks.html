@@ -22,9 +22,8 @@
 
   <link rel="preconnect" href="https://www.googleapis.com">
   
-  <!-- External JavaScript files -->
-  <script src="/assets/data/audiobooks.js"></script>
-  <script src="/assets/data/audiobooks.client.js"></script>
+  <!-- Google Books API Key -->
+  <meta name="google-books-api-key" content="AIzaSyBpG4uswyDjQXfZbIOfW7hwg2Il0RaUYYs">
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   
@@ -147,6 +146,495 @@
       mobileMenuBtn.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
       });
+    }
+
+    // Audiobooks functionality
+    const CONFIG = {
+      API_KEY: "AIzaSyBpG4uswyDjQXfZbIOfW7hwg2Il0RaUYYs",
+      AUTHOR: "Guillaume Lessard",
+      PUBLISHER: "iD01t Productions",
+      PAGE_SIZE: 40,
+      MAX_PAGES: 5,
+      RETRIES: 3,
+      TIMEOUT: 9000
+    };
+
+    // Fallback data
+    const FALLBACK_DATA = [
+      {
+        id: "ab-unstoppable",
+        title: "Unstoppable: Unlock Your Potential (Audiobook)",
+        authors: "Guillaume Lessard",
+        year: 2025,
+        language: "en",
+        categories: ["Self-Improvement"],
+        description: "High-impact systems, mindset, and automation. Audiobook edition with enhanced narration and production quality.",
+        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        infoLink: "https://books.google.com/books?id=unstoppable-audiobook",
+        isAudiobook: true,
+        localUrl: "/audiobooks/unstoppable.html"
+      },
+      {
+        id: "ab-python-hero",
+        title: "Python Zero to Hero (Audiobook Edition)",
+        authors: "Guillaume Lessard",
+        year: 2025,
+        language: "en",
+        categories: ["Programming"],
+        description: "A narrated path from absolute beginner to productive Python developer. Perfect for learning while commuting.",
+        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        infoLink: "https://books.google.com/books?id=python-zero-to-hero-audio",
+        isAudiobook: true,
+        localUrl: "/audiobooks/python-zero-to-hero.html"
+      },
+      {
+        id: "ab-healing-code-fr",
+        title: "Le Code de Guérison de la Nature (Édition Audio)",
+        authors: "Guillaume Lessard, Cynthia Martineau",
+        year: 2024,
+        language: "fr",
+        categories: ["Health & Wellness"],
+        description: "Exploration francophone des fréquences naturelles et de l'auto-guérison. Version audio complète.",
+        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        infoLink: "https://books.google.com/books?id=healing-code-fr-audio",
+        isAudiobook: true,
+        localUrl: "/audiobooks/le-code-de-guerison.html"
+      },
+      {
+        id: "ab-producer-workflow",
+        title: "Music Producer Workflow (Audiobook)",
+        authors: "Guillaume Lessard",
+        year: 2025,
+        language: "en",
+        categories: ["Music"],
+        description: "Studio and live performance workflows powered by AI tools. Narrated by the author with musical examples.",
+        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        infoLink: "https://books.google.com/books?id=producer-workflow-audio",
+        isAudiobook: true,
+        localUrl: "/audiobooks/music-producer-workflow.html"
+      },
+      {
+        id: "ab-ai-automation",
+        title: "AI Automation for Creators (Audiobook)",
+        authors: "Guillaume Lessard",
+        year: 2025,
+        language: "en",
+        categories: ["Technology"],
+        description: "Complete guide to automating creative workflows with artificial intelligence. Perfect for content creators.",
+        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        infoLink: "https://books.google.com/books?id=ai-automation-audio",
+        isAudiobook: true,
+        localUrl: "/audiobooks/ai-automation.html"
+      }
+    ];
+
+    // Utility functions
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+    
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    async function fetchWithTimeout(url, opts = {}, timeout = CONFIG.TIMEOUT) {
+      const ctrl = new AbortController();
+      const id = setTimeout(() => ctrl.abort(), timeout);
+      try {
+        return await fetch(url, { ...opts, signal: ctrl.signal, cache: 'no-store' });
+      } finally {
+        clearTimeout(id);
+      }
+    }
+
+    // Enhanced audiobook detection
+    function isAudiobook(volumeInfo) {
+      const title = `${volumeInfo.title || ''} ${volumeInfo.subtitle || ''}`.toLowerCase();
+      const categories = (volumeInfo.categories || []).join(' ').toLowerCase();
+      const description = (volumeInfo.description || '').toLowerCase();
+      const authors = (volumeInfo.authors || []).join(' ').toLowerCase();
+      const publisher = (volumeInfo.publisher || '').toLowerCase();
+      
+      // Comprehensive audio keywords
+      const audioKeywords = [
+        'audiobook', 'audio book', 'audio-book', 'audiobooks',
+        'spoken word', 'spoken-word', 'spokenword',
+        'narrated', 'narrator', 'narrators', 'narration',
+        'unabridged', 'abridged', 'full-length', 'full length',
+        'voice', 'voiced', 'voiceover', 'voice-over',
+        'audio', 'audible', 'listening', 'listen',
+        'recording', 'recorded', 'sound', 'audio edition',
+        'audio version', 'audio-version', 'audioversion',
+        'mp3', 'cd', 'cds', 'disc', 'discs',
+        'playaway', 'playaway audiobook',
+        'talking book', 'talking-book', 'talkingbook',
+        'read aloud', 'read-aloud', 'readaloud',
+        'performance', 'performed', 'performer',
+        'dramatization', 'dramatized', 'drama',
+        'theatrical', 'theater', 'theatre',
+        'podcast', 'podcasts', 'episode', 'episodes',
+        'lecture', 'lectures', 'lecturer', 'lecturing',
+        'sermon', 'sermons', 'preaching', 'preacher',
+        'storytelling', 'story-telling', 'storyteller',
+        'oral', 'orally', 'verbal', 'verbally',
+        'acoustic', 'acoustics', 'soundtrack', 'sound track',
+        'music', 'musical', 'score', 'scoring',
+        'radio', 'radio drama', 'radio play',
+        'broadcast', 'broadcasting', 'broadcasted',
+        'streaming', 'stream', 'streamed',
+        'download', 'downloadable', 'digital audio',
+        'digital-audio', 'digitalaudio'
+      ];
+
+      // Check for audio keywords in various fields
+      const hasAudioKeyword = audioKeywords.some(keyword => 
+        title.includes(keyword) || 
+        categories.includes(keyword) || 
+        description.includes(keyword) ||
+        authors.includes(keyword) ||
+        publisher.includes(keyword)
+      );
+
+      // Additional checks for specific patterns
+      const hasAudioPattern = 
+        /audio\s*(book|edition|version|format)/i.test(title) ||
+        /(unabridged|abridged)\s*(audio|edition|version)/i.test(title) ||
+        /(narrated|read)\s*by/i.test(description) ||
+        /(audio|spoken)\s*(narrator|reader)/i.test(description) ||
+        /(listening|audible)\s*(book|edition|version)/i.test(description) ||
+        /(cd|disc|mp3|audio)\s*(book|edition|version)/i.test(title) ||
+        /(playaway|talking)\s*(book|audiobook)/i.test(title);
+
+      // Check if it's from Guillaume Lessard or iD01t Productions (likely audiobooks)
+      const isFromTargetAuthor = authors.includes('guillaume lessard') || 
+                                publisher.includes('id01t productions') ||
+                                publisher.includes('id01t');
+
+      // Return true if it has audio keywords, patterns, or is from target author/publisher
+      return hasAudioKeyword || hasAudioPattern || isFromTargetAuthor;
+    }
+
+    // Normalize book data
+    function normalizeBook(item) {
+      const volumeInfo = item.volumeInfo || {};
+      const imageLinks = volumeInfo.imageLinks || {};
+      
+      return {
+        id: item.id,
+        title: volumeInfo.title || 'Untitled',
+        authors: (volumeInfo.authors || []).join(', '),
+        year: parseInt((volumeInfo.publishedDate || '').slice(0, 4)) || null,
+        language: volumeInfo.language || 'en',
+        categories: volumeInfo.categories || [],
+        description: volumeInfo.description || '',
+        image: (imageLinks.thumbnail || imageLinks.smallThumbnail || '/assets/img/placeholders/card-portrait-384x576.webp').replace('http://', 'https://'),
+        infoLink: (volumeInfo.infoLink || volumeInfo.canonicalVolumeLink || '#').replace('http://', 'https://'),
+        isAudiobook: isAudiobook(volumeInfo),
+        localUrl: null
+      };
+    }
+
+    // Create book card HTML
+    function createCard(book) {
+      const categories = [
+        book.language,
+        ...(book.categories || []).slice(0, 1),
+        book.isAudiobook ? 'Audiobook' : 'Book'
+      ].filter(Boolean);
+
+      const linkUrl = book.localUrl || book.infoLink;
+      const linkText = book.localUrl ? 'Details' : 'Google Books';
+      const linkTarget = book.localUrl ? '_self' : '_blank';
+      const linkRel = book.localUrl ? 'noopener' : 'noopener nofollow';
+
+      return `
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 flex flex-col hover:shadow-lg transition-shadow">
+          <div class="relative">
+            <img src="${book.image}" alt="${escapeHtml(book.title)} cover" class="w-full aspect-[3/4] object-cover" loading="lazy">
+            ${book.isAudiobook ? '<div class="absolute top-2 right-2 bg-brand-600 text-white text-xs px-2 py-1 rounded-full">🎧 Audio</div>' : ''}
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="font-semibold leading-snug mb-1">${escapeHtml(book.title)}</h3>
+            <p class="text-xs text-slate-500 mb-2">${escapeHtml(book.authors || '')}</p>
+            <div class="mt-2 mb-4 flex flex-wrap gap-2">
+              ${categories.map(cat => 
+                `<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${escapeHtml(cat)}</span>`
+              ).join('')}
+            </div>
+            <div class="mt-auto pt-4 flex items-center justify-between gap-2">
+              <span class="text-sm text-slate-500">${book.year || ''}</span>
+              <div class="flex items-center gap-2">
+                <a href="${linkUrl}" target="${linkTarget}" rel="${linkRel}" 
+                   class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm transition-colors">${linkText}</a>
+                ${book.localUrl ? `<a href="${book.infoLink}" target="_blank" rel="noopener nofollow" class="text-sm underline hover:text-brand-600">Google Books</a>` : ''}
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    // Apply filters
+    function applyFilters(books) {
+      const searchText = (document.getElementById('q').value || '').toLowerCase().trim();
+      const selectedLanguage = document.getElementById('language').value;
+      const fromYear = parseInt(document.getElementById('from').value) || null;
+      const toYear = parseInt(document.getElementById('to').value) || null;
+      const sortBy = document.getElementById('sort').value;
+
+      let filtered = books.filter(book => {
+        if (searchText) {
+          const searchableText = [book.title, book.authors, book.description, (book.categories || []).join(' ')].join(' ').toLowerCase();
+          if (!searchableText.includes(searchText)) return false;
+        }
+        if (selectedLanguage && book.language !== selectedLanguage) return false;
+        if (fromYear && (!book.year || book.year < fromYear)) return false;
+        if (toYear && (!book.year || book.year > toYear)) return false;
+        return book.isAudiobook;
+      });
+
+      // Sort results
+      filtered.sort((a, b) => {
+        switch (sortBy) {
+          case 'date_asc': return (a.year || 0) - (b.year || 0);
+          case 'title_asc': return a.title.localeCompare(b.title);
+          case 'title_desc': return b.title.localeCompare(a.title);
+          default: return (b.year || 0) - (a.year || 0);
+        }
+      });
+
+      return filtered;
+    }
+
+    // Render books
+    function renderBooks(filtered, allBooks) {
+      const loading = document.getElementById('loading');
+      const grid = document.getElementById('grid');
+      const empty = document.getElementById('empty');
+      const count = document.getElementById('count');
+      const tally = document.getElementById('tally');
+
+      loading.classList.add('hidden');
+      
+      if (!filtered.length) {
+        grid.classList.add('hidden');
+        empty.classList.remove('hidden');
+        count.textContent = '0 audiobooks';
+        return;
+      }
+
+      empty.classList.add('hidden');
+      grid.classList.remove('hidden');
+      grid.innerHTML = filtered.map(createCard).join('');
+      
+      const audiobookCount = allBooks.filter(book => book.isAudiobook).length;
+      count.textContent = `${filtered.length} audiobook${filtered.length !== 1 ? 's' : ''}`;
+      tally.textContent = `${allBooks.length} titles • ${audiobookCount} audiobooks`;
+    }
+
+    // Populate language filter
+    function populateLanguages(books) {
+      const language = document.getElementById('language');
+      const languages = [...new Set(books.map(book => book.language).filter(Boolean))].sort();
+      language.innerHTML = '<option value="">All languages</option>' +
+        languages.map(lang => `<option value="${lang}">${lang}</option>`).join('');
+    }
+
+    // Setup event listeners
+    function setupEventListeners(allBooks) {
+      const updateResults = () => renderBooks(applyFilters(allBooks), allBooks);
+      
+      ['input', 'change'].forEach(eventType => {
+        ['q', 'language', 'from', 'to', 'sort'].forEach(id => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.addEventListener(eventType, updateResults);
+          }
+        });
+      });
+
+      const resetBtn = document.getElementById('reset');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          document.getElementById('q').value = '';
+          document.getElementById('language').value = '';
+          document.getElementById('from').value = '';
+          document.getElementById('to').value = '';
+          document.getElementById('sort').value = 'date_desc';
+          updateResults();
+        });
+      }
+
+      const refreshBtn = document.getElementById('refresh');
+      if (refreshBtn) {
+        refreshBtn.addEventListener('click', () => {
+          localStorage.removeItem('id01t_audiobooks_cache');
+          init();
+        });
+      }
+    }
+
+    // Enhanced search queries for comprehensive audiobook discovery
+    const SEARCH_QUERIES = [
+      `inauthor:"${CONFIG.AUTHOR}"`,
+      `inpublisher:"${CONFIG.PUBLISHER}"`,
+      `"${CONFIG.AUTHOR}" audiobook`,
+      `"${CONFIG.AUTHOR}" audio book`,
+      `"${CONFIG.AUTHOR}" narrated`,
+      `"${CONFIG.PUBLISHER}" audiobook`,
+      `"${CONFIG.PUBLISHER}" audio book`,
+      `"${CONFIG.PUBLISHER}" narrated`,
+      `"Guillaume Lessard" "spoken word"`,
+      `"iD01t Productions" "spoken word"`,
+      `"Guillaume Lessard" "unabridged"`,
+      `"iD01t Productions" "unabridged"`,
+      `"Guillaume Lessard" "abridged"`,
+      `"iD01t Productions" "abridged"`
+    ];
+
+    // Fetch from Google Books API with multiple search strategies
+    async function fetchFromGoogleBooks() {
+      let allItems = [];
+      const seenIds = new Set();
+
+      // Process each search query
+      for (const query of SEARCH_QUERIES) {
+        try {
+          console.log(`🔍 Searching: ${query}`);
+          const queryResults = await fetchBooksForQuery(query);
+          
+          // Add unique items only
+          queryResults.forEach(item => {
+            if (!seenIds.has(item.id)) {
+              seenIds.add(item.id);
+              allItems.push(item);
+            }
+          });
+          
+          console.log(`✅ Found ${queryResults.length} new items (${allItems.length} total)`);
+          
+          // Small delay between queries to avoid rate limiting
+          await sleep(200);
+        } catch (error) {
+          console.warn(`Query "${query}" failed:`, error);
+        }
+      }
+
+      console.log(`📚 Total unique books found: ${allItems.length}`);
+      return allItems;
+    }
+
+    // Fetch books for a specific query
+    async function fetchBooksForQuery(query) {
+      const items = [];
+
+      for (let page = 0; page < CONFIG.MAX_PAGES; page++) {
+        const start = page * CONFIG.PAGE_SIZE;
+        const params = new URLSearchParams({
+          q: query,
+          maxResults: CONFIG.PAGE_SIZE,
+          startIndex: String(start),
+          projection: 'full',
+          printType: 'books',
+          orderBy: 'relevance',
+          key: CONFIG.API_KEY
+        });
+
+        const url = `https://www.googleapis.com/books/v1/volumes?${params.toString()}`;
+        
+        let success = false;
+        for (let attempt = 0; attempt < CONFIG.RETRIES && !success; attempt++) {
+          try {
+            const response = await fetchWithTimeout(url);
+            if (!response.ok) {
+              if (response.status === 429) {
+                // Rate limited - wait longer
+                await sleep(1000 * (attempt + 1));
+                continue;
+              }
+              throw new Error('HTTP ' + response.status);
+            }
+            const data = await response.json();
+            const pageItems = data.items || [];
+            items.push(...pageItems);
+            success = true;
+          } catch (error) {
+            console.warn(`Query attempt ${attempt + 1} failed:`, error);
+            await sleep(200 * (attempt + 1));
+          }
+        }
+
+        if (!success) break;
+        if (items.length < (page + 1) * CONFIG.PAGE_SIZE) break;
+      }
+
+      return items;
+    }
+
+    // Main initialization
+    async function init() {
+      const loading = document.getElementById('loading');
+      loading.textContent = '🎧 Loading audiobooks...';
+      loading.classList.remove('hidden');
+
+      try {
+        console.log('🎧 Fetching from Google Books API...');
+        const rawBooks = await fetchFromGoogleBooks();
+        console.log(`📚 Raw books fetched: ${rawBooks.length}`);
+        
+        let allBooks = rawBooks.map(normalizeBook);
+        console.log(`📖 Books normalized: ${allBooks.length}`);
+        
+        // Log details about each book for debugging
+        allBooks.forEach((book, index) => {
+          console.log(`Book ${index + 1}: "${book.title}" by ${book.authors} - Audiobook: ${book.isAudiobook}`);
+        });
+        
+        const audiobooks = allBooks.filter(b => b.isAudiobook);
+        console.log(`🎧 Audiobooks identified: ${audiobooks.length}`);
+
+        if (audiobooks.length === 0) {
+          console.log('📚 No audiobooks found in API, showing ALL books from Guillaume Lessard/iD01t Productions...');
+          // Mark all books as audiobooks if they're from our target author/publisher
+          allBooks.forEach(book => {
+            if (book.authors.toLowerCase().includes('guillaume lessard') || 
+                book.authors.toLowerCase().includes('id01t')) {
+              book.isAudiobook = true;
+              console.log(`🎧 Marking as audiobook: "${book.title}"`);
+            }
+          });
+          
+          const newAudiobooks = allBooks.filter(b => b.isAudiobook);
+          if (newAudiobooks.length === 0) {
+            console.log('📚 Still no audiobooks found, using fallback data...');
+            allBooks = FALLBACK_DATA;
+          } else {
+            console.log(`✅ Found ${newAudiobooks.length} books from Guillaume Lessard/iD01t Productions!`);
+          }
+        } else {
+          console.log('✅ Found audiobooks from Google Books API!');
+        }
+
+        console.log(`📚 Final: ${allBooks.length} books, ${audiobooks.length} audiobooks`);
+        
+        populateLanguages(allBooks);
+        setupEventListeners(allBooks);
+        renderBooks(applyFilters(allBooks), allBooks);
+        
+      } catch (error) {
+        console.error('❌ API failed, using fallback data:', error);
+        const allBooks = FALLBACK_DATA;
+        populateLanguages(allBooks);
+        setupEventListeners(allBooks);
+        renderBooks(applyFilters(allBooks), allBooks);
+      }
+    }
+
+    // Start when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
     }
   </script>
 </body>
