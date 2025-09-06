@@ -17,19 +17,19 @@ INDEX_HTML = r"""<!DOCTYPE html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>iD01t Productions · Apps, eBooks, Games, Music · Official Site</title>
-  <meta name="description" content="iD01t Productions: premium apps, eBooks, games, and music. Built for speed, automation, and ROI. Beta Nini’s Adventures: Kitties Mayhem on September 24, 2025." />
+  <title>iD01t Productions: AI Apps, eBooks, Music & Tools</title>
+  <meta name="description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
   <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://id01t.github.io/" />
   <meta name="theme-color" content="#16185c" />
-  <meta property="og:title" content="iD01t Productions" />
-  <meta property="og:description" content="Apps, eBooks, games, music, and services. Growth-focused. Beta Nini’s Adventures on September 24, 2025." />
+  <meta property="og:title" content="iD01t Productions: AI Apps, eBooks, Music & Tools" />
+  <meta property="og:description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://id01t.github.io/" />
   <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="iD01t Productions" />
-  <meta name="twitter:description" content="Apps, eBooks, games, music, services. Built for speed, clarity, and growth." />
+  <meta name="twitter:title" content="iD01t Productions: AI Apps, eBooks, Music & Tools" />
+  <meta name="twitter:description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
   <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"iD01t Productions","url":"https://id01t.github.io/","logo":"https://id01t.github.io/logo.svg","founder":{"@type":"Person","name":"Guillaume Lessard"},"sameAs":["https://github.com/id01t","https://id01t.itch.io","https://play.google.com/store/books/author?id=Guillaume_Lessard","https://books.apple.com/us/author/guillaume-lessard/id1750250586"]}
@@ -210,7 +210,24 @@ EBOOKS_HTML = r"""<!DOCTYPE html><html lang="fr" class="scroll-smooth"><head>
 </div></div></section>
 <section class="py-8 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div id="ebookGrid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div><div id="pagination" class="flex items-center justify-center gap-2 mt-10"></div></div></section>
 <footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();const t=document.getElementById('themeToggle');if(t){t.addEventListener('click',()=>{const d=document.documentElement.classList.toggle('dark');localStorage.setItem('theme',d?'dark':'light');t.setAttribute('aria-pressed',String(d));});}const mb=document.getElementById('mobileMenuBtn'),mm=document.getElementById('mobileMenu');if(mb&&mm){mb.addEventListener('click',()=>mm.classList.toggle('hidden'));}</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {{
+    themeToggle.addEventListener('click', function() {{
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+    }});
+  }}
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenuBtn && mobileMenu) {{
+    mobileMenuBtn.addEventListener('click', function() {{
+      mobileMenu.classList.toggle('hidden');
+    }});
+  }}
+</script>
 <script src="/js/ebooks.js" defer></script></body></html>
 """
 
@@ -365,7 +382,24 @@ def write_secondary_pages():
 <section class="relative overflow-hidden"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6"><div class="text-center"><h1 class="text-4xl sm:text-5xl font-bold tracking-tight">{heading}</h1></div></div></section>
 <main class="py-8 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{body}</div></main>
 <footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();const t=document.getElementById('themeToggle');if(t){t.addEventListener('click',()=>{const d=document.documentElement.classList.toggle('dark');localStorage.setItem('theme',d?'dark':'light');t.setAttribute('aria-pressed',String(d));});}const mb=document.getElementById('mobileMenuBtn'),mm=document.getElementById('mobileMenu');if(mb&&mm){mb.addEventListener('click',()=>mm.classList.toggle('hidden'));}</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {{
+    themeToggle.addEventListener('click', function() {{
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+    }});
+  }}
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenuBtn && mobileMenu) {{
+    mobileMenuBtn.addEventListener('click', function() {{
+      mobileMenu.classList.toggle('hidden');
+    }});
+  }}
+</script>
 </body></html>"""
     return page
 
