@@ -1,12 +1,97 @@
-[
-  {
-    "title":"The Quantum Enigma (Audiobook)",
-    "year":2025,
-    "language":"en",
-    "hours":7.5,
-    "narrators":["Guillaume Lessard"],
-    "genre":"Nonfiction",
-    "cover":"/assets/covers/quantum-enigma-audio.jpg",
-    "googlePlay":"https://play.google.com/store/books/details?id=XXXX"
-  }
-]
+{
+  "schema": "https://id01t.store/schemas/audiobooks-fallback.v1.json",
+  "generatedAt": "2025-09-06T17:55:32.238443Z",
+  "publisher": "iD01t Productions",
+  "items": [
+    {
+      "id": "ab-001",
+      "title": "AI Automation Playbook Audiobook",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "narrators": [
+        "Guillaume Lessard"
+      ],
+      "year": 2024,
+      "language": "en",
+      "genre": "Technology",
+      "description": "A practical guide to automation for creators and indie teams.",
+      "googleBooks": "https://books.google.com/",
+      "googlePlay": "",
+      "url": "/audiobooks/ai-automation-playbook-audiobook.html",
+      "cover": "https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/ebooks.png"
+    },
+    {
+      "id": "ab-002",
+      "title": "Creator Systems Audiobook",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "narrators": [
+        "Guest Narrator"
+      ],
+      "year": 2024,
+      "language": "en",
+      "genre": "Business",
+      "description": "Systems that help creators ship faster and scale.",
+      "googleBooks": "https://books.google.com/",
+      "googlePlay": "",
+      "url": "/audiobooks/creator-systems-audiobook.html",
+      "cover": "https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/ebooks.png"
+    },
+    {
+      "id": "ab-003",
+      "title": "Indie Dev Foundations Audiobook",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "narrators": [
+        "Studio Voice"
+      ],
+      "year": 2023,
+      "language": "en",
+      "genre": "Software",
+      "description": "Fundamentals for independent developers across platforms.",
+      "googleBooks": "https://books.google.com/",
+      "googlePlay": "",
+      "url": "/audiobooks/indie-dev-foundations-audiobook.html",
+      "cover": "https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/ebooks.png"
+    },
+    {
+      "id": "ab-004",
+      "title": "Music Producer Workflow Audiobook",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "narrators": [
+        "DJ iD01t"
+      ],
+      "year": 2025,
+      "language": "en",
+      "genre": "Music",
+      "description": "Studio and live performance workflows powered by AI tools.",
+      "googleBooks": "https://books.google.com/",
+      "googlePlay": "",
+      "url": "/audiobooks/music-producer-workflow-audiobook.html",
+      "cover": "https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/ebooks.png"
+    },
+    {
+      "id": "ab-005",
+      "title": "Modern App Monetization Audiobook",
+      "authors": [
+        "Guillaume Lessard"
+      ],
+      "narrators": [
+        "Professional Narrator"
+      ],
+      "year": 2025,
+      "language": "en",
+      "genre": "Entrepreneurship",
+      "description": "Monetization patterns for apps, ebooks, and tools.",
+      "googleBooks": "https://books.google.com/",
+      "googlePlay": "",
+      "url": "/audiobooks/modern-app-monetization-audiobook.html",
+      "cover": "https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/ebooks.png"
+    }
+  ]
+}
