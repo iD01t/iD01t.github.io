@@ -1,6 +1,9 @@
+# iD01t Productions — Jekyll config (updated)
+# Previous content preserved below for reference (if present).
+# --- BEGIN PREVIOUS ---
 # Jekyll configuration for GitHub Pages
 title: "iD01t Productions — AI Apps, eBooks, and Music That Ship"
-description: "Build, learn, and create with pro-grade AI apps, practical eBooks, and cinematic music by iD01t Productions. 100+ digital products, 10+ years experience."
+description: "Build, learn, and create with pro-grade AI apps, practical eBooks, and cinematic music by iD01t Productions. 200+ digital products, 20+ years experience."
 url: "https://id01t.github.io"
 baseurl: ""
 
@@ -69,3 +72,66 @@ compress_html:
   comments: all
   endings: all
   startings: [html, head, body]
+# --- END PREVIOUS ---
+
+# --- ACTIVE CONFIG ---
+title: "iD01t Productions"
+description: "Apps, eBooks, Audiobooks, Games, and Music for creators. Automation first. Clean design. High ROI."
+url: "https://id01t.store"   # Primary domain (CNAME). If you switch back to github.io, set to https://id01t.github.io
+baseurl: ""                   # Keep empty for root site
+lang: "en"
+timezone: "America/Montreal"
+
+# SEO-friendly URLs for pages and posts
+permalink: /:title/
+
+# GitHub Pages–supported plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Feed (blog)
+feed:
+  path: atom.xml
+  # Note: Your blog posts are HTML pages, not _posts/*.md. The feed will include pages with
+  # 'feed: true' in front matter. Add this to each article's front matter if you want them listed.
+
+# Global defaults (applies to all pages unless overridden)
+defaults:
+  -
+    scope: {{ path: "" }}
+    values:
+      layout: null           # Use your raw HTML files without Jekyll layouts
+      sitemap: true
+      seo:
+        type: "WebSite"
+        name: "iD01t Productions"
+        description: "Apps, eBooks, Audiobooks, Games, and Music for creators."
+        image: "/assets/img/placeholders/hero-1600x900.webp"
+
+# Exclude build-time artifacts and dev files
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - "**/*.psd"
+  - "**/*.ai"
+
+# Include special folders
+include:
+  - .well-known
+
+# Sitemap options (kept minimal; plugin handles generation)
+sitemap:
+  filename: "sitemap.xml"
+  exclude: []
+
+# Markdown engine (unused for pure-HTML, provided for completeness)
+markdown: kramdown
+kramdown:
+  input: GFM
