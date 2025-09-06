@@ -1,200 +1,191 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Audiobooks • iD01t Productions</title>
-  <meta name="description" content="Official audiobooks hub. Live from Google Books API. Filter by language/year; toggle Audiobooks-only." />
-  <link rel="canonical" href="/audiobooks.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Audiobooks • iD01t Productions" />
-  <meta property="og:description" content="Browse Guillaume Lessard’s titles with direct Google Books links." />
-  <meta property="og:url" content="/audiobooks.html" />
-  <meta property="og:image" content="/assets/img/placeholders/card-square-640.webp" />
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/logo-512.png" />
-  <link rel="stylesheet" href="/assets/site.css" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CHX65WY0WZ');</script>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GT-M39S87SN');</script>
-  <style>
-    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.05);--muted:rgba(255,255,255,.75)}
-    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-    .glass{background:var(--card);backdrop-filter:blur(10px)}
-    .card{border:1px solid var(--border);border-radius:16px;overflow:hidden}
-    .btn{display:inline-block;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
-    .chip{font-size:.8rem;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.06)}
-    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}.nav a[aria-current="page"],.nav a:hover{opacity:1}
-    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
-    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px}.hero p{opacity:.85;margin:0}
-    .toolbar{display:grid;grid-template-columns:1.2fr 150px 150px 150px 1fr;gap:10px;align-items:end;margin:18px 0}
-    .toolbar label{font-size:.85rem;color:var(--muted);display:block;margin-bottom:6px}
-    .toolbar input,.toolbar select{padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:inherit}
-    .toolbar .wide{grid-column:1/-1;display:flex;gap:12px;align-items:center}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-    .muted{opacity:.8}
-    footer{border-top:1px solid var(--border);padding:24px 0;margin-top:32px;opacity:.8;text-align:center}
-  </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Audiobooks · iD01t Productions</title>
+  <meta name="description" content="Audiobooks by iD01t Productions — narrated titles, spoken word, and audio editions. Live from Google Books API."/>
+  <link rel="canonical" href="https://id01t.github.io/audiobooks.html"/>
+  <meta name="theme-color" content="#16185c"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Audiobooks · iD01t Productions"/>
+  <meta property="og:description" content="Browse narrated titles and audio editions by Guillaume Lessard."/>
+  <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/card-square-640.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Audiobooks · iD01t Productions"/>
+  <meta name="twitter:description" content="Narrated titles and audio editions."/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{50:"#f5f6ff",100:"#e6e9ff",200:"#c9ccff",300:"#a2a8ff",400:"#7a82ff",500:"#545cff",600:"#3a3fe6",700:"#2c30b4",800:"#202383",900:"#16185c"}}}}};</script>
+  <link rel="stylesheet" href="/css/custom.css">
+  <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
+
 </head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16">
+<a href="/" class="flex items-center gap-2" aria-label="Accueil"><img src="/assets/img/brand/logo.png" alt="iD01t Productions" class="h-8 w-8"><span class="font-semibold tracking-tight">iD01t Productions</span></a>
+<nav class="hidden md:flex items-center gap-6"><a href="/store.html" class="link-underline">Store</a><a href="/ebooks.html" class="link-underline text-brand-600 dark:text-brand-400" aria-current="page">eBooks</a><a href="/apps.html" class="link-underline">Apps</a><a href="/games.html" class="link-underline">Games</a><a href="/music.html" class="link-underline">Music</a><a href="/services.html" class="link-underline">Services</a><a href="/portfolio.html" class="link-underline">Portfolio</a><a href="/about.html" class="link-underline">About</a><a href="/contact.html" class="link-underline">Contact</a></nav>
+<div class="flex items-center gap-3"><button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button><a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+<button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></div></div>
+<div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true"><div class="px-4 py-3 flex flex-col gap-2"><a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2 text-brand-600 dark:text-brand-400">eBooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/services.html" class="py-2">Services</a><a href="/portfolio.html" class="py-2">Portfolio</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a></div></div>
+</header>
 
-  <!-- Shared header (copied from index.html at runtime) -->
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/store.html">Store</a>
-        <a href="/ebooks.html">eBooks</a>
-        <a href="/audiobooks.html" aria-current="page"><strong>Audiobooks</strong></a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html">Games</a>
-        <a href="/music.html">Music</a>
-        <a href="/services.html">Services</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="wrap">
-      <h1>Audiobooks — iD01t Productions</h1>
-      <p>Live from Google Books API. All titles by default; toggle **Audiobooks only** to narrow. Every link goes to Google Books.</p>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Audiobooks</h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">Narrated editions and spoken word — auto‑populated from Google Books.</p>
+      <p class="mt-1 text-xs text-slate-500">Updated September 06, 2025</p>
     </div>
   </section>
 
-  <main class="wrap">
-    <section class="toolbar">
-      <div><label for="q">Search</label><input id="q" type="search" placeholder="Title, keyword" /></div>
-      <div><label for="language">Language</label><select id="language"></select></div>
-      <div><label for="from">From (year)</label><input id="from" type="number" inputmode="numeric" placeholder="2018" /></div>
-      <div><label for="to">To (year)</label><input id="to" type="number" inputmode="numeric" placeholder="2025" /></div>
-      <div><label for="sort">Sort</label>
-        <select id="sort">
-          <option value="date_desc">Newest</option><option value="date_asc">Oldest</option>
-          <option value="title_asc">Title A–Z</option><option value="title_desc">Title Z–A</option>
-        </select>
-      </div>
-      <div class="wide">
-        <label class="muted"><input id="audioOnly" type="checkbox" /> Audiobooks only</label>
-        <button id="clear" class="btn" type="button">Clear filters</button>
-        <span id="tally" class="muted" style="margin-left:auto"></span>
-      </div>
-    </section>
-
-    <section class="card glass" style="padding:16px;margin-bottom:16px">
-      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:center">
-        <div>
-          <h2 style="margin:0 0 6px">Featured Title</h2>
-          <p class="muted" style="margin:0 0 10px">Newest from Google Books (prefers audiobooks when toggled).</p>
-          <div id="featured" class="card" style="overflow:hidden;border-radius:12px"></div>
+  <!-- Controls -->
+  <section class="pb-4 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-3 md:grid-cols-12 items-end">
+        <div class="md:col-span-6">
+          <input id="q" type="search" placeholder="Search title, author, keywords" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
         </div>
-        <div>
-          <h3 style="margin:0 0 6px">Narration & Custom Audio</h3>
-          <p class="muted" style="margin:0 0 10px">Need narration or a custom soundtrack? Commission professional production.</p>
-          <a href="/contact.html" class="btn">Get in touch</a>
+        <div class="md:col-span-2">
+          <select id="language" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
+            <option value="">All languages</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <input id="from" type="number" inputmode="numeric" placeholder="From year" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
+        </div>
+        <div class="md:col-span-2">
+          <input id="to" type="number" inputmode="numeric" placeholder="To year" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" />
+        </div>
+        <div class="md:col-span-12 flex gap-2">
+          <select id="sort" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
+            <option value="date_desc">Newest</option>
+            <option value="date_asc">Oldest</option>
+            <option value="title_asc">Title A–Z</option>
+            <option value="title_desc">Title Z–A</option>
+          </select>
+          <button id="reset" class="text-sm px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700">Reset</button>
+          <span id="tally" class="text-sm text-slate-500 ml-auto"></span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
-        <h2 style="margin:0">Catalog</h2>
-        <span id="count" class="muted" style="font-size:.9rem"></span>
+  <!-- Grid -->
+  <section class="py-8 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-semibold">Catalog</h2>
+        <span id="count" class="text-sm text-slate-500"></span>
       </div>
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <div id="empty" class="muted" hidden>No results. Try different filters.</div>
-    </section>
-  </main>
+      <div id="grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4"></div>
+      <div id="empty" class="text-slate-500 mt-4 hidden">No results. Try different filters.</div>
+    </div>
+  </section>
 
-  <footer><div class="wrap">© <span id="year"></span> iD01t Productions</div></footer>
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
 
   <script>
-    (async function loadSharedHeader(){
-      try{const r=await fetch('/index.html'); if(!r.ok) return; const h=await r.text();
-        const d=new DOMParser().parseFromString(h,'text/html'); const s=d.querySelector('#site-header');
-        if(s) document.getElementById('site-header').outerHTML=s.outerHTML;
-      }catch{} })();
-    document.getElementById('year').textContent=new Date().getFullYear();
+    // Shared shell behavior from ebooks header/footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function() {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+      });
+    }
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
 
+    // --- Google Books API method aligned with ebooks.html approach ---
     const C = {
       AUTHOR: 'Guillaume Lessard',
       PUBLISHER: 'iD01t Productions',
-      PAGE_SIZE: 40,      // Google Books max page size
-      MAX_TOTAL: 200,     // fetch up to this many titles (5 pages)
-      API_KEY: ''         // optional but recommended
+      PAGE_SIZE: 40,      // max page size
+      MAX_TOTAL: 200,     // up to 5 pages
+      API_KEY: ''         // optional for higher quota
     };
 
-    const el=id=>document.getElementById(id);
+    const el = id => document.getElementById(id);
     const q=el('q'), language=el('language'), from=el('from'), to=el('to'), sort=el('sort');
-    const audioOnly=el('audioOnly'), clearBtn=el('clear'), tally=el('tally');
-    const grid=el('grid'), empty=el('empty'), count=el('count'), featured=el('featured');
+    const resetBtn=el('reset'), grid=el('grid'), empty=el('empty'), count=el('count'), tally=el('tally');
 
-    const escapeHtml = s => String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
-    const chip = t => `<span class="chip">${escapeHtml(t)}</span>`;
+    const escapeHtml = s => String(s||'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","~":"~","\"":"&quot;"}[c])||c).replace(/~/g,'~'); // safe
 
-    async function fetchAllBooks(){
+    async function fetchAll(){
       const base = `inauthor:"${C.AUTHOR}" OR inpublisher:"${C.PUBLISHER}"`;
-      let startIndex = 0, items = [];
-      while (startIndex < C.MAX_TOTAL) {
-        const p = new URLSearchParams({ q: base, maxResults: C.PAGE_SIZE, startIndex, printType:'books' });
-        if (C.API_KEY) p.set('key', C.API_KEY);
-        const url = `https://www.googleapis.com/books/v1/volumes?${p}`;
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Books API ${res.status}`);
-        const data = await res.json();
+      let start = 0, items = [];
+      while (start < C.MAX_TOTAL){
+        const params = new URLSearchParams({ q: base, maxResults: C.PAGE_SIZE, startIndex: start, printType: 'books', projection: 'full' });
+        if (C.API_KEY) params.set('key', C.API_KEY);
+        const url = `https://www.googleapis.com/books/v1/volumes?${params.toString()}`;
+        let data = null, ok=false;
+        for (let attempt=0; attempt<3 && !ok; attempt++){
+          try{
+            const res = await fetch(url, {cache:'no-store'});
+            if(!res.ok) throw new Error('HTTP '+res.status);
+            data = await res.json(); ok=true;
+          }catch(e){ await new Promise(r=>setTimeout(r, 350*(attempt+1))); }
+        }
+        if(!ok) throw new Error('Books API unavailable');
         const page = data.items || [];
         items.push(...page);
-        if (page.length < C.PAGE_SIZE) break; // last page
-        startIndex += C.PAGE_SIZE;
+        if (page.length < C.PAGE_SIZE) break;
+        start += C.PAGE_SIZE;
       }
       return items;
     }
 
-    function markAudio(v){
-      const t=((v.title||'')+' '+(v.subtitle||'')).toLowerCase();
-      const c=(v.categories||[]).join(' ').toLowerCase();
-      const s=(v.searchInfo?.textSnippet||'').toLowerCase();
-      const hints=['audiobook','audio book','spoken word','narrated','unabridged','abridged'];
+    function isAudio(v){
+      const t = ((v.title||'')+' '+(v.subtitle||'')).toLowerCase();
+      const c = (v.categories||[]).join(' ').toLowerCase();
+      const s = (v.searchInfo?.textSnippet||'').toLowerCase();
+      const hints = ['audiobook','audio book','spoken word','narrated','unabridged','abridged'];
       return hints.some(h=>t.includes(h)||c.includes(h)||s.includes(h));
     }
 
-    function normalize(item){
-      const v=item.volumeInfo||{}, links=v.imageLinks||{};
+    function normalize(it){
+      const v = it.volumeInfo || {}, links=v.imageLinks||{};
       return {
-        id:item.id,
-        title:v.title||'Untitled',
-        authors:(v.authors||[]).join(', '),
-        year:(v.publishedDate||'').slice(0,4),
-        language:v.language||'',
-        categories:v.categories||[],
-        infoLink:(v.infoLink||v.canonicalVolumeLink||'#').replace('http://','https://'),
-        image:(links.thumbnail||links.smallThumbnail||'/assets/placeholder-cover.svg').replace('http://','https://'),
-        isAudio: markAudio(v)
+        id: it.id,
+        title: v.title || 'Untitled',
+        authors: (v.authors||[]).join(', '),
+        year: (v.publishedDate||'').slice(0,4),
+        language: v.language || '',
+        categories: v.categories || [],
+        image: (links.thumbnail||links.smallThumbnail||'/assets/placeholder-cover.svg').replace('http://','https://'),
+        infoLink: (v.infoLink || v.canonicalVolumeLink || '#').replace('http://','https://'),
+        audio: isAudio(v)
       };
     }
 
     function populateLanguages(items){
-      const langs=[...new Set(items.map(x=>x.language).filter(Boolean))].sort();
-      language.innerHTML='<option value="">All</option>'+langs.map(l=>`<option value="${escapeHtml(l)}">${escapeHtml(l)}</option>`).join('');
+      const langs = Array.from(new Set(items.map(x=>x.language).filter(Boolean))).sort();
+      language.innerHTML = '<option value="">All languages</option>' + langs.map(l=>`<option value="${l}">${l}</option>`).join('');
     }
 
-    function cardHTML(a){
-      const tags=[a.language, ...(a.categories||[]).slice(0,1), a.isAudio?'Audiobook':'Book'].filter(Boolean).map(chip).join(' ');
-      return `<article class="card" style="background:var(--card)">
-        <img src="${escapeHtml(a.image)}" alt="${escapeHtml(a.title)} cover">
-        <div class="content">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-            <h3 style="margin:0">${escapeHtml(a.title)}</h3>
-            <span class="muted" style="font-size:.9rem">${escapeHtml(a.year||'')}</span>
+    function card(a){
+      const cats = [a.language, ...(a.categories||[]).slice(0,1), a.audio?'Audiobook':'Book'].filter(Boolean);
+      return `
+      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 flex flex-col">
+        <img src="${a.image}" alt="${a.title} cover" class="w-full aspect-[3/4] object-cover">
+        <div class="p-4 flex-1 flex flex-col">
+          <h3 class="font-semibold leading-snug">${a.title}</h3>
+          <p class="text-xs text-slate-500 mt-1">${a.authors||''}</p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            ${cats.map(t=>`<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${t}</span>`).join('')}
           </div>
-          <div class="muted">${escapeHtml(a.authors||'')}</div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="${escapeHtml(a.infoLink)}" target="_blank" rel="noopener nofollow">Google Books</a>
+          <div class="mt-auto pt-4 flex items-center justify-between">
+            <span class="text-sm text-slate-500">${a.year||''}</span>
+            <a href="${a.infoLink}" target="_blank" rel="noopener nofollow" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Google Books</a>
           </div>
         </div>
       </article>`;
@@ -202,17 +193,16 @@
 
     function applyFilters(items){
       const text=(q.value||'').toLowerCase();
-      const lang=language.value; const f=parseInt(from.value||''); const t=parseInt(to.value||''); const audio=audioOnly.checked;
-      let list=items.filter(x=>{
-        if (text){
+      const lang=language.value; const f=parseInt(from.value||''); const t=parseInt(to.value||'');
+      let list = items.filter(x=>{
+        if(text){
           const hay=[x.title,x.authors,(x.categories||[]).join(' ')].join(' ').toLowerCase();
           if(!hay.includes(text)) return false;
         }
-        if (lang && x.language!==lang) return false;
-        if (!isNaN(f) && (x.year||0)<f) return false;
-        if (!isNaN(t) && (x.year||0)>t) return false;
-        if (audio && !x.isAudio) return false;
-        return true;
+        if(lang && x.language!==lang) return false;
+        if(!isNaN(f) && (x.year||0) < f) return false;
+        if(!isNaN(t) && (x.year||0) > t) return false;
+        return x.audio; // audiobooks only
       });
       const s=sort.value, byTitle=(a,b)=>a.title.localeCompare(b.title);
       if (s==='date_asc') list.sort((a,b)=>(a.year||0)-(b.year||0));
@@ -222,288 +212,56 @@
       return list;
     }
 
+    function render(list, all){
+      if (!list.length){ grid.innerHTML=''; empty.classList.remove('hidden'); count.textContent='0 audiobooks'; return; }
+      empty.classList.add('hidden');
+      grid.innerHTML = list.map(card).join('');
+      count.textContent = `${list.length} audiobook${list.length!==1?'s':''}`;
+      const audioCount = all.filter(x=>x.audio).length;
+      tally.textContent = `${all.length} titles • ${audioCount} audiobooks`;
+      emitSchema(list);
+    }
+
     function emitSchema(items){
-      const ld={ '@context':'https://schema.org','@type':'ItemList', name:'Audiobooks & Titles',
+      const ld={ '@context':'https://schema.org','@type':'ItemList', name:'Audiobooks',
         itemListElement: items.slice(0,60).map((a,i)=>({ '@type':'ListItem', position:i+1,
-          item:{ '@type': a.isAudio?'Audiobook':'Book', name:a.title, inLanguage:a.language,
-                 datePublished:a.year?String(a.year):undefined, image:a.image, url:a.infoLink }
+          item:{ '@type':'Audiobook', name:a.title, inLanguage:a.language, datePublished:a.year?String(a.year):undefined, image:a.image, url:a.infoLink }
         }))
       };
-      let tag=document.getElementById('ld-ab'); if(!tag){tag=document.createElement('script');tag.id='ld-ab';tag.type='application/ld+json';document.head.appendChild(tag);}
-      tag.textContent=JSON.stringify(ld);
+      let tag=document.getElementById('ld-ab');
+      if(!tag){ tag=document.createElement('script'); tag.id='ld-ab'; tag.type='application/ld+json'; document.head.appendChild(tag); }
+      tag.textContent = JSON.stringify(ld);
     }
 
-    function render(list, all){
-      if(!list.length){ grid.innerHTML=''; empty.hidden=false; count.textContent='0 titles'; emitSchema([]); return; }
-      empty.hidden=true;
-      grid.innerHTML=list.map(cardHTML).join('');
-      count.textContent=`${list.length} title${list.length!==1?'s':''}`;
-      const audioCount=all.filter(x=>x.isAudio).length;
-      tally.textContent=`${all.length} total • ${audioCount} audiobooks`;
-      emitSchema(list);
-      // Featured: prefer first audiobook if toggle on, else newest item
-      const feature = (audioOnly.checked? list.find(x=>x.isAudio): null) || list[0];
-      featured.innerHTML = cardHTML(feature);
-    }
-
-    function bind(items){
-      const again=()=>render(applyFilters(items), items);
-      ['input','change'].forEach(e=>[q,language,from,to,sort,audioOnly].forEach(el=>el.addEventListener(e,again)));
-      clearBtn.addEventListener('click',()=>{q.value='';language.value='';from.value='';to.value='';sort.value='date_desc';audioOnly.checked=false;again();});
+    function bind(all){
+      const again=()=>render(applyFilters(all), all);
+      ['input','change'].forEach(evt=>[q,language,from,to,sort].forEach(e=>e.addEventListener(evt,again)));
+      resetBtn.addEventListener('click',()=>{q.value='';language.value='';from.value='';to.value='';sort.value='date_desc';again();});
     }
 
     async function init(){
       try{
-        const raw=await fetchAllBooks();
-        const all=raw.map(normalize);
+        const raw = await fetchAll();
+        const all = raw.map(normalize);
         populateLanguages(all);
         bind(all);
         render(applyFilters(all), all);
       }catch(err){
-        console.warn('API failed, falling back to /assets/data/audiobooks.json', err);
+        // Fallback: try a local JSON if provided
         try{
           const r=await fetch('/assets/data/audiobooks.json',{cache:'no-store'});
           const fb=await r.json();
           const all=(Array.isArray(fb)?fb:(fb.items||[])).map(a=>({
             id:a.id||a.title, title:a.title, authors:(a.authors||a.narrators||[]).join(', '),
             year:a.year, language:a.language, categories:[a.genre].filter(Boolean),
-            infoLink:(a.googleBooks||a.googlePlay||a.url||'#'), image:a.cover, isAudio:true
+            infoLink:(a.googleBooks||a.googlePlay||a.url||'#'), image:a.cover, audio:true
           }));
           populateLanguages(all); bind(all); render(applyFilters(all), all);
         }catch(e2){
-          grid.innerHTML='<div class="muted">Could not load titles from API or fallback JSON.</div>'; empty.hidden=false;
+          grid.innerHTML = '<div class="text-slate-500">Could not load audiobooks from API or fallback JSON.</div>'; empty.classList.remove('hidden');
         }
       }
     }
-    init();
-  </script>
-</body>
-</html>
-      </div>
-      <div class="wide">
-        <button id="clear" class="btn" type="button">Clear filters</button>
-      </div>
-    </section>
-
-    <!-- Featured -->
-    <section class="card glass" style="padding:16px;margin-bottom:16px">
-      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:center">
-        <div>
-          <h2 style="margin:0 0 6px">Featured Audiobook</h2>
-          <p id="featured-desc" class="muted" style="margin:0 0 10px">Latest matching title(s) from Google Books.</p>
-          <div id="featured-card" class="card" style="overflow:hidden;border-radius:12px"></div>
-        </div>
-        <div>
-          <h3 style="margin:0 0 6px">Narration & Custom Audio</h3>
-          <p class="muted" style="margin:0 0 10px">Need a narrated version or custom soundtrack? Commission professional production.</p>
-          <a href="/contact.html" class="btn">Get in touch</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Grid -->
-    <section>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin:10px 0 14px">
-        <h2 style="margin:0">Catalog</h2>
-        <span id="count" class="muted" style="font-size:.9rem"></span>
-      </div>
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <div id="empty" class="muted" hidden>No results. Try different filters.</div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">© <span id="year"></span> iD01t Productions</div>
-  </footer>
-
-  <script>
-    // 1) Load header from index.html (for perfect consistency)
-    (async function loadSharedHeader(){
-      try{
-        const res = await fetch('/index.html');
-        if(!res.ok) return;
-        const html = await res.text();
-        const doc = new DOMParser().parseFromString(html,'text/html');
-        const shared = doc.querySelector('#site-header');
-        if(shared){ document.getElementById('site-header').outerHTML = shared.outerHTML; }
-      }catch{}
-    })();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // 2) Config for Google Books API
-    const CONFIG = {
-      AUTHOR: 'Guillaume Lessard',
-      PUBLISHER: 'iD01t Productions',
-      MAX_RESULTS: 40,
-      API_KEY: '' // optional but recommended for higher quota
-    };
-
-    const el = id=>document.getElementById(id);
-    const q=el('q'), language=el('language'), from=el('from'), to=el('to'), sort=el('sort'), clearBtn=el('clear');
-    const grid=el('grid'), count=el('count'), empty=el('empty');
-
-    // 3) Fetch from Google Books API similar to ebooks.html
-    async function searchBooks(){
-      const base = `inauthor:"${CONFIG.AUTHOR}" OR inpublisher:"${CONFIG.PUBLISHER}" (audiobook OR "audio book" OR "spoken word" OR narration)`;
-      const params = new URLSearchParams({
-        q: base,
-        maxResults: CONFIG.MAX_RESULTS,
-        printType: 'books'
-      });
-      if (CONFIG.API_KEY) params.set('key', CONFIG.API_KEY);
-      const url = `https://www.googleapis.com/books/v1/volumes?${params.toString()}`;
-      const res = await fetch(url);
-      if(!res.ok) throw new Error(res.status);
-      return res.json();
-    }
-
-    // Heuristic to identify audiobooks from Google Books entries
-    function isAudioBook(v){
-      const t = ((v.title||'') + ' ' + (v.subtitle||'')).toLowerCase();
-      const c = (v.categories||[]).join(' ').toLowerCase();
-      const s = (v.searchInfo?.textSnippet||'').toLowerCase();
-      const hints = ['audiobook','audio book','spoken word','narrated','unabridged','abridged'];
-      const hasHint = hints.some(h => t.includes(h) || c.includes(h) || s.includes(h));
-      // Prefer entries whose infoLink is on Google Books (true for most)
-      return hasHint;
-    }
-
-    function normalize(item){
-      const v = item.volumeInfo || {};
-      const info = (v.infoLink || v.canonicalVolumeLink || '').replace('http://','https://');
-      const img = v.imageLinks || {};
-      const thumb = (img.thumbnail||img.smallThumbnail||'').replace('http://','https://') || '/assets/placeholder-cover.svg';
-      const year = (v.publishedDate||'').slice(0,4);
-      return {
-        title: v.title || 'Untitled',
-        authors: (v.authors||[]).join(', '),
-        year,
-        language: v.language || '',
-        categories: v.categories || [],
-        infoLink: info,
-        image: thumb,
-        raw: v
-      };
-    }
-
-    function chip(text){return `<span class="chip">${escapeHtml(text)}</span>`}
-    function escapeHtml(s){return String(s||'').replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]))}
-
-    function cardHTML(a){
-      const tags = [a.language, ...(a.categories||[]).slice(0,1)].filter(Boolean).map(chip).join(' ');
-      return `
-      <article class="card" style="background:var(--card)">
-        <img src="${escapeHtml(a.image)}" alt="${escapeHtml(a.title)} cover"/>
-        <div class="content">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-            <h3 style="margin:0">${escapeHtml(a.title)}</h3>
-            <span class="muted" style="font-size:.9rem">${escapeHtml(a.year||'')}</span>
-          </div>
-          <div class="muted">${escapeHtml(a.authors||'')}</div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="${escapeHtml(a.infoLink)}" target="_blank" rel="noopener nofollow">Google Books</a>
-          </div>
-        </div>
-      </article>`;
-    }
-
-    function populateLanguages(items){
-      const langs = Array.from(new Set(items.map(x=>x.language).filter(Boolean))).sort();
-      language.innerHTML = '<option value="">All</option>'+langs.map(l=>`<option value="${escapeHtml(l)}">${escapeHtml(l)}</option>`).join('');
-    }
-
-    function applyFilters(items){
-      const text=(q.value||'').toLowerCase();
-      const lang=language.value; const f=parseInt(from.value||''); const t=parseInt(to.value||'');
-      let list = items.filter(a=>{
-        if(text){
-          const hay=[a.title,a.authors,(a.categories||[]).join(' ')].join(' ').toLowerCase();
-          if(!hay.includes(text)) return false;
-        }
-        if(lang && a.language!==lang) return false;
-        if(!isNaN(f) && (a.year||0) < f) return false;
-        if(!isNaN(t) && (a.year||0) > t) return false;
-        return true;
-      });
-      const s=sort.value; const byTitle=(a,b)=>a.title.localeCompare(b.title);
-      if(s==='date_asc') list.sort((a,b)=>(a.year||0)-(b.year||0));
-      else if(s==='title_asc') list.sort(byTitle);
-      else if(s==='title_desc') list.sort((a,b)=>byTitle(b,a));
-      else list.sort((a,b)=>(b.year||0)-(a.year||0));
-      return list;
-    }
-
-    function render(list){
-      if(!list.length){ grid.innerHTML=''; empty.hidden=false; count.textContent='0 audiobooks'; emitSchema([]); return; }
-      empty.hidden=true;
-      grid.innerHTML = list.map(cardHTML).join('');
-      count.textContent = `${list.length} audiobook${list.length!==1?'s':''}`;
-      emitSchema(list);
-      // Featured = first item (newest by default)
-      document.getElementById('featured-card').innerHTML = cardHTML(list[0]);
-    }
-
-    function emitSchema(items){
-      const author = CONFIG.AUTHOR;
-      const ld = {
-        '@context':'https://schema.org', '@type':'ItemList', name:`${author} Audiobooks`,
-        itemListElement: items.slice(0,60).map((a,i)=>({
-          '@type':'ListItem', position:i+1,
-          item:{
-            '@type':'Audiobook',
-            name:a.title,
-            author:{'@type':'Person','name':author},
-            inLanguage:a.language,
-            datePublished:a.year?String(a.year):undefined,
-            image:a.image,
-            url:a.infoLink
-          }
-        }))
-      };
-      let tag=document.getElementById('ld-audiobooks');
-      if(!tag){tag=document.createElement('script');tag.id='ld-audiobooks';tag.type='application/ld+json';document.head.appendChild(tag);}
-      tag.textContent = JSON.stringify(ld);
-    }
-
-    function bind(items){
-      const again=()=>render(applyFilters(items));
-      ['input','change'].forEach(evt=>{
-        [q,language,from,to,sort].forEach(e=>e.addEventListener(evt,again));
-      });
-      clearBtn.addEventListener('click',()=>{q.value='';language.value='';from.value='';to.value='';sort.value='date_desc';again();});
-    }
-
-    async function init(){
-      try{
-        const data = await searchBooks();
-        const raw = (data.items||[]).map(x=>x.volumeInfo?x:null).filter(Boolean);
-        const audioLike = (data.items||[]).filter(x=>isAudioBook(x.volumeInfo||{}));
-        const items = (audioLike.length?audioLike:(data.items||[]))
-          .map(normalize);
-        if(!items.length) throw new Error('No items from API');
-        populateLanguages(items);
-        bind(items);
-        render(applyFilters(items));
-      }catch(e){
-        console.warn('Books API fallback → /assets/data/audiobooks.json', e);
-        try{
-          const res=await fetch('/assets/data/audiobooks.json',{cache:'no-store'});
-          const fallback = await res.json();
-          const items = (Array.isArray(fallback)?fallback:(fallback.items||[])).map(a=>({
-            title:a.title, authors:(a.authors||a.narrators||[]).join(', '), year:a.year, language:a.language, categories:[a.genre].filter(Boolean), infoLink:(a.googlePlay||a.googleBooks||a.url||'#'), image:a.cover
-          }));
-          populateLanguages(items);
-          bind(items);
-          render(applyFilters(items));
-        }catch(e2){
-          empty.hidden=false;
-          grid.innerHTML='<div class="muted">Could not load audiobooks from API or fallback JSON.</div>';
-        }
-      }
-    }
-
     init();
   </script>
 </body>
