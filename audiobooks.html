@@ -318,6 +318,21 @@
     function normalizeBook(item) {
       const volumeInfo = item.volumeInfo || {};
       const imageLinks = volumeInfo.imageLinks || {};
+
+      // Handle Google Books images with CORS issues
+      let imageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || '/assets/img/placeholders/card-portrait-384x576.webp';
+      
+      // For Google Books images, use a more reliable approach
+      if (imageUrl.includes('books.google.com')) {
+        // Try to get a higher resolution image and use a different approach
+        const bookId = item.id;
+        if (bookId) {
+          // Use Google Books cover API with proper parameters
+          imageUrl = `https://books.google.com/books/publisher/content/images/frontcover/${bookId}?fife=w400-h600&source=gbs_api`;
+        }
+      }
+      
+      imageUrl = imageUrl.replace('http://', 'https://');
       
       return {
         id: item.id,
@@ -327,7 +342,7 @@
         language: volumeInfo.language || 'en',
         categories: volumeInfo.categories || [],
         description: volumeInfo.description || '',
-        image: (imageLinks.thumbnail || imageLinks.smallThumbnail || '/assets/img/placeholders/card-portrait-384x576.webp').replace('http://', 'https://'),
+        image: imageUrl,
         infoLink: (volumeInfo.infoLink || volumeInfo.canonicalVolumeLink || '#').replace('http://', 'https://'),
         isAudiobook: isAudiobook(volumeInfo),
         localUrl: null
@@ -350,21 +365,25 @@
       return `
         <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 flex flex-col hover:shadow-lg transition-shadow">
           <div class="relative">
-            <img src="${book.image}" alt="${escapeHtml(book.title)} cover" class="w-full aspect-[3/4] object-cover" loading="lazy">
+            <img src="${book.image}" 
+                 alt="${escapeHtml(book.title)} cover" 
+                 class="w-full aspect-[3/4] object-cover" 
+                 loading="lazy"
+                 onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'">
             ${book.isAudiobook ? '<div class="absolute top-2 right-2 bg-brand-600 text-white text-xs px-2 py-1 rounded-full">🎧 Audio</div>' : ''}
           </div>
           <div class="p-4 flex-1 flex flex-col">
             <h3 class="font-semibold leading-snug mb-1">${escapeHtml(book.title)}</h3>
             <p class="text-xs text-slate-500 mb-2">${escapeHtml(book.authors || '')}</p>
             <div class="mt-2 mb-4 flex flex-wrap gap-2">
-              ${categories.map(cat => 
+              ${categories.map(cat =>
                 `<span class="text-xs rounded-full border border-slate-300 dark:border-slate-700 px-2 py-0.5">${escapeHtml(cat)}</span>`
               ).join('')}
             </div>
             <div class="mt-auto pt-4 flex items-center justify-between gap-2">
               <span class="text-sm text-slate-500">${book.year || ''}</span>
               <div class="flex items-center gap-2">
-                <a href="${linkUrl}" target="${linkTarget}" rel="${linkRel}" 
+                <a href="${linkUrl}" target="${linkTarget}" rel="${linkRel}"
                    class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm transition-colors">${linkText}</a>
                 ${book.localUrl ? `<a href="${book.infoLink}" target="_blank" rel="noopener nofollow" class="text-sm underline hover:text-brand-600">Google Books</a>` : ''}
               </div>
@@ -461,9 +480,9 @@
           document.getElementById('from').value = '';
           document.getElementById('to').value = '';
           document.getElementById('sort').value = 'date_desc';
-          updateResults();
-        });
-      }
+        updateResults();
+      });
+    }
 
       const refreshBtn = document.getElementById('refresh');
       if (refreshBtn) {
@@ -558,7 +577,7 @@
             const pageItems = data.items || [];
             items.push(...pageItems);
             success = true;
-          } catch (error) {
+      } catch (error) {
             console.warn(`Query attempt ${attempt + 1} failed:`, error);
             await sleep(200 * (attempt + 1));
           }
@@ -634,7 +653,7 @@
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
     } else {
-      init();
+    init();
     }
   </script>
 </body>
