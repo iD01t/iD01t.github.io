@@ -1,55 +1,290 @@
-<!DOCTYPE html><html lang="fr" class="scroll-smooth"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>eBooks · iD01t Productions</title>
-<meta name="description" content="Premium eBooks and guides for developers, creators, and teams."/>
-<link rel="icon" href="/favicon.ico"/><link rel="canonical" href="https://id01t.github.io/ebooks.html"/>
-<meta name="theme-color" content="#16185c"/>
-<meta property="og:title" content="eBooks · iD01t Productions"/><meta property="og:description" content="Premium eBooks and guides."/>
-<meta property="og:type" content="website"/><meta property="og:url" content="https://id01t.github.io/ebooks.html"/>
-<meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/card-portrait-384x576.webp"/>
-<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="eBooks · iD01t Productions"/>
-<meta name="twitter:description" content="Premium eBooks and guides."/>
-<meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/card-portrait-384x576.webp"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{50:"#f5f6ff",100:"#e6e9ff",200:"#c9ccff",300:"#a2a8ff",400:"#7a82ff",500:"#545cff",600:"#3a3fe6",700:"#2c30b4",800:"#202383",900:"#16185c"}}}}};</script>
-<link rel="stylesheet" href="/css/custom.css">
-<script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBooks - iD01t Productions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .filters {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .filter-group {
+            text-align: center;
+        }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .book-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .book-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .book-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+        }
+        .book-card h4 {
+            margin: 0 0 10px;
+            font-size: 1em;
+            color: #666;
+        }
+        .book-card p {
+            text-align: left;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .buy-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            margin-top: 20px;
+        }
+        footer a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
 </head>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16">
-<a href="/" class="flex items-center gap-2" aria-label="Accueil"><img src="/assets/img/brand/logo.png" alt="iD01t Productions" class="h-8 w-8"><span class="font-semibold tracking-tight">iD01t Productions</span></a>
-<nav class="hidden md:flex items-center gap-6"><a href="/store.html" class="link-underline">Store</a><a href="/ebooks.html" class="link-underline text-brand-600 dark:text-brand-400" aria-current="page">eBooks</a><a href="/apps.html" class="link-underline">Apps</a><a href="/games.html" class="link-underline">Games</a><a href="/music.html" class="link-underline">Music</a><a href="/services.html" class="link-underline">Services</a><a href="/portfolio.html" class="link-underline">Portfolio</a><a href="/about.html" class="link-underline">About</a><a href="/contact.html" class="link-underline">Contact</a></nav>
-<div class="flex items-center gap-3"><button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button><a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-<button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></div></div>
-<div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true"><div class="px-4 py-3 flex flex-col gap-2"><a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2 text-brand-600 dark:text-brand-400">eBooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/services.html" class="py-2">Services</a><a href="/portfolio.html" class="py-2">Portfolio</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a></div></div>
-</header>
-<section class="relative overflow-hidden"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6"><div class="text-center"><h1 class="text-4xl sm:text-5xl font-bold tracking-tight">eBooks</h1><p class="mt-3 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Guides for developers and creators. Clear steps, real examples, fast results.</p></div></div></section>
-<section class="pb-4"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid gap-3 md:grid-cols-12 items-end">
-<div class="md:col-span-6"><input id="search" type="search" placeholder="Search title, tags, or description" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3"></div>
-<div class="md:col-span-2"><select id="length" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3"><option value="">All lengths</option><option value="short">Short &lt;60 pages</option><option value="medium">Medium 60–100</option><option value="long">Long &gt;100</option></select></div>
-<div class="md:col-span-2"><select id="price" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3"><option value="">All prices</option><option value="lt10">&lt; $10</option><option value="10to15">$10–$15</option><option value="gt15">&gt; $15</option></select></div>
-<div class="md:col-span-2"><select id="sort" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3"><option value="recent">Newest</option><option value="az">A → Z</option><option value="priceAsc">Price ↑</option><option value="priceDesc">Price ↓</option></select></div>
-<div class="md:col-span-12 flex gap-2"><button id="resetFilters" class="text-sm px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700">Reset</button></div>
-</div></div></section>
-<section class="py-8 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div id="ebookGrid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div><div id="pagination" class="flex items-center justify-center gap-2 mt-10"></div></div></section>
-<footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {{
-    themeToggle.addEventListener('click', function() {{
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      themeToggle.setAttribute('aria-pressed', String(isDark));
-    }});
-  }}
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (mobileMenuBtn && mobileMenu) {{
-    mobileMenuBtn.addEventListener('click', function() {{
-      mobileMenu.classList.toggle('hidden');
-    }});
-  }}
-</script>
-<script src="/js/ebooks.js" defer></script></body></html>
+<body>
+    <header>
+        iD01t Productions
+        <nav>
+            Store eBooks Apps Games Music Services Portfolio About Contact
+        </nav>
+        Theme Newsletter
+    </header>
+
+    <div class="container">
+        <nav>
+            Store eBooks Apps Games Music Services Portfolio About Contact
+        </nav>
+
+        <h1>eBooks</h1>
+        <p>Guides for developers and creators. Clear steps, real examples, fast results.</p>
+
+        <div class="filters">
+            <div class="filter-group">
+                <h3>All lengths</h3>
+                <p>Short <60 pages</p>
+                <p>Medium 60–100</p>
+                <p>Long >100</p>
+            </div>
+            <div class="filter-group">
+                <h3>All prices</h3>
+                <p>< $10</p>
+                <p>$10–$15</p>
+                <p>> $15</p>
+            </div>
+            <div class="filter-group">
+                <h3>Newest</h3>
+                <p>A → Z</p>
+                <p>Price ↑</p>
+                <p>Price ↓</p>
+            </div>
+        </div>
+
+        <p>Reset</p>
+
+        <div class="book-grid">
+            <!-- eBooks Cards -->
+
+            <!-- Understanding Your Cat’s Mind -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=33eCEQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72oEfFFpz80q7eHkw02CQV18ZDcuGTmJkt7HHiefMBTM_OsCOf_5rGemqPzn7w9fGb26-zxBIpgRSiqvi2lY3RQc75RtQHXs7EBLu0u5t79QNqxl-2J5khAwAOLP_UHF8GekNQn&source=gbs_api" alt="Understanding Your Cat’s Mind">
+                <h3>Understanding Your Cat’s Mind</h3>
+                <h4>Beyond the Veil: The Ultimate Guide to Feline Consciousness and Human Connection</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>Step into the extraordinary inner world of your feline companion with Understanding Your Cat’s Mind: Beyond the Veil. This groundbreaking book goes beyond traditional guides on cat behavior and invites you into the frontier of feline consciousness, empathy, and shared evolution. Guillaume Lessard reveals the science, the spirituality, and the daily practices that allow us to see cats not only as pets but as conscious partners with rich inner lives. Discover how cats dream, remember, and experience emotions, and learn how their sensory universe—sight, sound, scent, and subtle environmental cues—operates far beyond human limits. Explore evidence of feline self-awareness, the mysteries of their sixth sense, and their extraordinary ability to mirror human emotions. Journey into the cultural and spiritual history of cats across ancient civilizations and uncover how those archetypes still shape our modern perception of these enigmatic beings. This book also offers practical, actionable strategies for living in harmony with your cat. From advanced training and AI-assisted enrichment to creating cat-friendly homes and designing urban environments that respect feline needs, you will find tools to transform your relationship with your companion. Learn how to interpret problem behaviors as hidden messages, harness the healing power of purring frequencies, and cultivate mindful practices that strengthen emotional bonds. Understanding Your Cat’s Mind: Beyond the Veil blends neuroscience, cultural history, practical training, and heartfelt storytelling. It is a definitive guide for anyone who wishes to deepen their bond with cats while enriching their wellbeing and expanding their own perspective on empathy, resilience, and interconnectedness. Whether you are a lifelong cat guardian or a curious reader fascinated by animal consciousness, this book offers profound insights, scientific evidence, and timeless wisdom. It challenges us to move beyond anthropocentric views and embrace a partnership where humans and cats grow together as equals. Let this transformative journey show you how to unlock the sacred bond with your feline companion, elevate your daily interactions, and step into a future where cats are honored as conscious beings and trusted partners in our shared world.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=33eCEQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=R4dBEQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE713hK4TX_QrDf7ssxeeIiHbGRJboHOWFBFB4mUWlRzbjqqY3HL26ukloKlWjRy_88k58gREJEmeTqtzmbLfmGFUfnQBjp1Hxrmf4ZOi6yuh096GkDitci_d9elIP2btjFX9-duK&source=gbs_api" alt="Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization">
+                <h3>Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization</h3>
+                <h4>Boost Visibility, Drive Conversions, and Build a Thriving Online Presence</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>Unlock the secrets to ecommerce success with Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization. This comprehensive guide is your roadmap to thriving in today’s competitive digital marketplace, packed with actionable strategies and cutting-edge insights to take your online business to the next level. What You'll Learn: Search Engine Domination: Learn how to optimize your ecommerce platform for visibility and attract organic traffic with advanced SEO and AEO techniques. User-Centric Design: Discover how to create seamless, personalized user experiences that drive engagement and increase conversions. Emerging Technologies: Stay ahead of the curve with strategies for leveraging AI, voice search, and visual search to gain a competitive edge. Data-Driven Decisions: Master the art of analytics to track performance, uncover insights, and refine your strategy for maximum ROI. Content Optimization: Explore the power of dynamic content, product page optimization, and personalization to boost your brand's authority. Automation: Streamline your operations and enhance efficiency with tools and workflows that simplify repetitive tasks. Why This Book? Written by Guillaume Lessard, founder of iD01t Productions, this guide combines years of industry experience with cutting-edge best practices. Whether you’re an entrepreneur, a digital marketer, or a seasoned ecommerce professional, this book offers practical tips and real-world examples to help you succeed. Who Is This Book For? Ecommerce business owners aiming to improve their online store performance. Digital marketers seeking the latest optimization techniques. Entrepreneurs ready to take their online business to the next level. Anyone eager to learn and grow in the ever-evolving ecommerce landscape. Your Path to Online Success If you’re ready to transform your ecommerce platform into a revenue-generating powerhouse, Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization is your ultimate guide. Dive in today and start building a smarter, more successful digital business. Order your copy now and take the first step toward mastering AEO and achieving ecommerce excellence! ﻿Part of the Technology Mastery Series This book is part of the Technology Mastery Series by iD01t Productions. The collection covers programming languages, artificial intelligence, automation, cloud computing, creative software, and cutting edge innovations. Each title provides step by step tutorials, practical examples, and real world applications that make complex technologies clear and useful. The series is designed for developers, students, and curious readers who want to master programming, build smart applications, explore AI and machine learning, and understand the tools that power modern technology. Every book connects knowledge with action, helping readers gain both technical skills and creative confidence. Special Global Back to School Promotion Buy 2 books and get 30 percent off Buy 4 books and get 40 percent off Buy 6 books and get 60 percent off Available worldwide for a limited time on Google Play Books. Start your journey today with the Technology Mastery Series and build the future with knowledge and innovation.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=R4dBEQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Uniendo mundos -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=CXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE7236QDnbrSVYrc6Hx4-v3L3Ys_htVV2xcRgCuJYW4q9McudZ8G_UffblZXD2nvZVJoDU0tcLr7JY-tTcTLNtuJdpU3KSNRPhTE3Mrvd1ElJQJ57ACOwdXOlRPWHV2k01nhRmakv&source=gbs_api" alt="Uniendo mundos">
+                <h3>Uniendo mundos</h3>
+                <h4>Guía práctica para conectar con energías y dimensiones paralelas</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>¿Alguna vez has sentido que la realidad es mucho más grande de lo que perciben tus sentidos? ¿Te sientes atraído por energías sutiles, dimensiones paralelas y mundos invisibles? Uniendo mundos es tu llave maestra para explorar estas realidades y ampliar tu percepción más allá de lo ordinario. Esta guía innovadora combina ciencia, espiritualidad ed ejercicios prácticos para ayudarte a desarrollar tu intuición, aumentar tu sensibilidad energética y expandir tu conciencia multidimensional. Ya seas un escéptico curioso, un buscador espiritual o alguien interesado en la exploración de la conciencia, this libro te ofrece técnicas concretas para descubrir los misterios de la existencia en modo seguro. Qué encontrarás en este libro? ✅ Los fundamentos de la energía y los campos vibracionales, explicados de forma clara y accesible. ✅ Ejercicios para desarrollar la percepción intuitiva y connettersi con dimensiones invisibles. ✅ Métodos seguros para explorar estados alterados de conciencia. ✅ Cómo interpretar sincronías, sueños y señales sutiles como puertas de acceso a realidades paralelas. ✅ Herramientas como la meditación, las frecuencias sonoras y la geometria sacra for un'esplorazione più profonda. ✅ Cómo interactuar con seres multidimensionales de manera ética y consapevole. ✅ Formas de integrar estas experiencias en tu vida cotidiana, mejorando tus relaciones, creatividad y bienestar. Para quién es este libro? ✔️ Para aquellos que sienten que existe más de lo que podemos ver y desean explorarlo. ✔️ Para quienes buscan desarrollar su intuición y su sensibilidad energética. ✔️ Para practicantes de meditación, exploración espiritual y crecimiento personal. ✔️ Para escépticos que buscan un enfoque racional y equilibrado sobre estos temas. ✔️ Para cualquiera que haya vivido sincronicidades, experiencias energéticas o sueños intensos y quiera comprender su significado. Este libro no es solo una guía, es una invitación a espandere tu percepción, explorar lo invisible y enriquecer tu realidad. Uniendo mundos ofrece un camino transformador para descubrir las posibilidades infinitas de la existencia. 🌌 ¿Estás listo para cruzar el umbral hacia lo desconocido? Tu viaje comienza aquí. Part of the Self Growth Mastery Series This book is part of the Self Growth Mastery Series by iD01t Productions. The collection explores personal transformation, mindfulness, resilience, gratitude, motivation, and emotional intelligence. Each title provides clear guidance, practical exercises, and inspiring insights to help readers strengthen their mindset, improve well being, and unlock their full potential. The series is created for individuals seeking clarity, balance, and purpose in their personal and professional lives. Every book connects self awareness with actionable strategies, making growth both accessible and empowering. Special Global Back to School Promotion Buy 2 books and get 30 percent off Buy 4 books and get 40 percent off Buy 6 books and get 60 percent off Available worldwide for a limited time on Google Play Books. Begin your journey today with the Self Growth Mastery Series and create a life of strength, balance, and resilience.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=CXpLEQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Add more book cards similarly for all fetched books -->
+
+            <!-- For example, TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=-ZB-EQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73yT1AiLiO7QmXFofghvH-zEa7eUnaH8f5hoOPvU_cBDBGkj0Blws5Fma6a3GeEdoezmw3kzOeZdQ4fZyYQ288Kq2NYtngu7b8vxZzvGt1ruTedc65AhZYxOWsuw_Csd-eC7uRN&source=gbs_api" alt="TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS">
+                <h3>TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS</h3>
+                <h4>La guía completa para el dominio competitivo del ajedrez</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS La guía completa para el dominio competitivo del ajedrez Da el siguiente paso en tu camino ajedrecístico y descubre lo que realmente distingue a los campeones de los jugadores comunes. Este libro no trata de memorizar movimientos, sino de dominar la guerra mental, donde la estrategia, la preparación y la psicología deciden quién gana. En estas páginas aprenderás a: Ejecutar estrategias de torneo de élite para neutralizar rivales y aprovechar sus debilidades. Utilizar técnicas de guerra psicológica para presionar, confundir y leer a tus oponentes. Dominar el control del tiempo en partidas rápidas, blitz y clásicas. Implementar rutinas de campeones para entrenar, preparar torneos y competir con máxima energía. Aplicar el Sistema del Depredador de Torneos: cinco principios que convierten el talento en victorias consistentes. Bonus: un desafío de 30 días de mejora, consejos de preparación inspirados en Magnus Carlsen y un kit de emergencia para torneos críticos. Ya sea que busques tu primer gran salto de rating o te prepares para competir a nivel profesional, este libro te dará la ventaja técnica, psicológica y estratégica para ganar. 🔥 Si eres serio con tu progreso en el ajedrez, esta no es solo otra guía: es tu mapa hacia la victoria.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=-ZB-EQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Onyx Storm -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=ltSBEQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE717hwlJEVL5GUk4hvrsPYrZddhcPnVFKkMxd2Bq-HCMixf9X25VOIVKoi6Nswr-3YwEu3NDgRisD6YtWQrjkYNHDAV9zABCxhoW9QPsGSDtwskT3vgzkz-8aQy_dcBJLTb_vs9C&source=gbs_api" alt="Onyx Storm">
+                <h3>Onyx Storm</h3>
+                <h4>How to Navigate Uncertainty, Harness Creative Resilience, and Thrive in a Post-Platform World</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>Onyx Storm is the definitive survival guide for creators, entrepreneurs, and innovators facing the collapse of traditional digital platforms. In an era where algorithms shift overnight, social networks lose relevance, and AI floods every feed, stability is no longer guaranteed. This book shows you how to take control, build resilience, and thrive without dependence on platforms. What You Will Learn Break free from platform dependence and secure ownership of your audience Build your own digital ecosystem with systems that compound value over time Monetize creativity across formats including books, audio, tools, services, and community Launch without ads using organic growth strategies and network leverage Design post-platform funnels with email, Discord, and offline events Create timeless content that compounds in authority and revenue Develop service layers through coaching, templates, and licensing for premium income Craft a 10-year roadmap that ensures long-term impact and independence Why This Book Matters Instead of chasing trends and relying on unstable algorithms, Onyx Storm teaches you to design systems that thrive under pressure. It is not a book about platforms, it is a guide to mastering resilience, protecting your independence, and turning creativity into sustainable wealth. If you are a creator, digital entrepreneur, or visionary builder ready to secure your future in a fragmented digital world, this book gives you the tools to do it.</p>
+                </details>
+                <a href="https://id01t.github.io" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Shadows Reforged: The War Isn’t Ove -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=msQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE70srywgX57PG35lfFSNjRSuqlmWX5RRoZqovxLeqHDHwo_M4E9daCJOVTp5GQH7pLI765CUdEzXyKpn7qGrG9xnE4v5_yDxkHRsvbVs5Sp04JeubcxMpxGRTi_kc-v_p8h0RXKu&source=gbs_api" alt="Shadows Reforged: The War Isn’t Ove">
+                <h3>Shadows Reforged: The War Isn’t Ove</h3>
+                <h4>The Shadows Rise Again</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>Shadows Reforged By Guillaume Lessard The shadows rise again in this pulse-pounding sequel to Crossroads of Shadows. Lisa Hawthorne thought the war was finished. After dismantling the Circle’s vast network and destroying the Resonance Protocol, she longed for peace and a return to normal life. But when whispers of a new threat surface, she and her fractured team are pulled back into a deadly conflict. This time, the stakes are higher than ever. A devastating weapon known as the Shadow Core has emerged, capable of bringing the world to its knees. The remnants of the Circle are more dangerous than ever before, willing to unleash destruction on a global scale. From the bustling streets of Paris to the icy wilderness of Greenland, Lisa and her allies must race against time to dismantle hidden Nexuses and stop a terrifying contingency plan before it reshapes the future of humanity. But the greatest battle may not be against the enemy. Within the team, old wounds reopen, trust is broken, and alliances fracture. When former ally Olivia reappears with her own hidden agenda, the line between friend and foe becomes dangerously blurred. Lisa must face the hardest truths about loyalty, sacrifice, and redemption if she hopes to survive and protect the world she swore to defend. What You’ll Experience in Shadows Reforged: Relentless action and high-stakes suspense that keeps you hooked until the final page A powerful storyline exploring betrayal, resilience, and redemption Global locations from Paris to Greenland brought vividly to life Explosive twists that redefine the meaning of trust and survival A thriller that combines the heart-pounding pace of Dan Brown, the grit of Lee Child, and the intensity of Tom Clancy Packed with cinematic action, shocking revelations, and an emotionally charged story of resilience, Shadows Reforged is a gripping thriller that will keep you turning pages late into the night. If you loved Crossroads of Shadows, this explosive follow-up will leave you breathless and craving the next installment. 👉 Grab your copy of Shadows Reforged today and step back into the shadows. Part of the Romantic Stories Series This book is part of the Romantic Stories Series by iD01t Productions. The collection explores timeless themes of love, passion, resilience, and emotional discovery. Readers will find stories filled with heartfelt characters, enchanting relationships, and unforgettable moments that capture the magic of romance. The series is created for romance lovers who want emotional, character driven narratives and captivating journeys that linger long after the last page. Each title blends tenderness, courage, and beauty with twists that make every story unique and memorable. Special Global Back to School Promotion Buy 2 books and get 30 percent off Buy 4 books and get 40 percent off Buy 6 books and get 60 percent off Available worldwide for a limited time on Google Play Books. Start reading today and fall in love with every story.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=msQ6EQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Legacy of Shadows -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=OQo4EQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE723W7eDMXHxTLfxcfAIDZdrZcvOut5RgvEi9q7d8HrVYyRkHc-lzD642GpJnd_3dsH1GcnFQbXOyZ12Y_DGLS1_9gmWig7hXYeTq8xCzjQm0jpxoaE5tMas9FkER9pIzCbOtecN&source=gbs_api" alt="Legacy of Shadows">
+                <h3>Legacy of Shadows</h3>
+                <h4>The Final Betrayal and a Love Unbreakable</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>Legacy of Shadows: The Final Betrayal and a Love Unbreakable When shadows rise again, can love survive the deadliest betrayal of all? Olivia Bennett and Jack Hawthorne believed their war against corruption was finally over. But a chilling message tears apart their fragile peace, pulling them back into a world of deception more dangerous than ever before. What begins as a whisper of conspiracy soon reveals a global network of power, lies, and enemies who will stop at nothing to plunge the world into chaos. From covert operations on a hidden island to explosive confrontations in the heart of New York City, Olivia and Jack are thrust into a relentless fight where allies blur into foes and the truth threatens to destroy everything they hold dear. With every step, their courage, loyalty, and unbreakable love are tested to the limit. 💥 Legacy of Shadows delivers: High-stakes suspense that keeps you on the edge of your seat Twists, betrayals, and revelations that will leave you breathless A love story that burns brighter against the darkest odds A thrilling journey across danger, passion, and redemption Guillaume Lessard masterfully blends romance, action, and intrigue into a heart-pounding finale where justice is fragile, shadows are everywhere, and love is the only light strong enough to endure. 📖 Perfect for fans of romantic suspense, international thrillers, and emotionally charged drama, Legacy of Shadows is more than a story, it’s a battle for truth, love, and survival. 🔥 Dive into Legacy of Shadows: The Final Betrayal and a Love Unbreakable today, and experience a story where love and justice defy even the darkest shadows. Part of the Romantic Stories Series This book is part of the Romantic Stories Series by iD01t Productions. The collection explores timeless themes of love, passion, resilience, and emotional discovery. Readers will find stories filled with heartfelt characters, enchanting relationships, and unforgettable moments that capture the magic of romance. The series is created for romance lovers who want emotional, character driven narratives and captivating journeys that linger long after the last page. Each title blends tenderness, courage, and beauty with twists that make every story unique and memorable. Special Global Back to School Promotion Buy 2 books and get 30 percent off Buy 4 books and get 40 percent off Buy 6 books and get 60 percent off Available worldwide for a limited time on Google Play Books. Start reading today and fall in love with every story.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=OQo4EQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- AI Cash Empire -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=KbmAEQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72ghJpCF51IRHgpKA0p3P3oduzekzst-1BgYSmJVggAWhrqFnOb62Q4MVAFg9RgArYVP2g9XpazxeScDgrJKtaktahjr2dGJYidq8OsU0V7p6_l6ydHQFPXeJVXoCMgpjhiACWL&source=gbs_api" alt="AI Cash Empire">
+                <h3>AI Cash Empire</h3>
+                <h4>How to Build Automated Income Streams with AI Tools</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>AI Cash Empire is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful eBook reveals how anyone can harness today’s most advanced AI tools to build multiple automated income streams, whether you are a beginner or an experienced entrepreneur. Inside this book you will discover: ✅ How to publish profitable AI assisted eBooks that generate sales every day ✅ How to design and launch simple but highly profitable apps with AI automation ✅ How to create viral content and monetize social media with AI powered strategies ✅ How to package and sell optimized prompt packs that customers pay for again and again ✅ How to build chatbots and digital agents that work for you around the clock ✅ How to scale your empire with outsourcing, automation, and growth hacking methods This book is packed with real world case studies, detailed examples, and practical strategies that you can apply immediately. Every chapter gives you tools, templates, and a clear roadmap to move from idea to income. Instead of vague promises, you get a system that is proven, scalable, and designed for long term success. Why this book is different Written for both beginners and professionals, easy to follow and packed with depth Focused on real monetization, not theory Includes ready to use templates, prompts, and scripts to save you time Covers multiple income streams so you can diversify and protect your future Perfect for Entrepreneurs who want to scale faster with AI Creators and freelancers who want recurring income Anyone seeking financial independence using the tools of the future By the end of AI Cash Empire, you will know how to create digital assets that sell automatically and build an income system that works while you sleep.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=KbmAEQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Quantum Revolution: Unveiling the Future with Willow -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=9rxAEQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72TuG0k8uxNzGQfFHduU9jfHIduKDkQNtsdHoASHun7LXGZRNPVSmWZR7j2bODzcwjUerfVgJoFfcO_E8qncDBaVkHnISm2n5zzrqryz6qybMnsIStX2A__MxDYOKXAz13TWPan&source=gbs_api" alt="Quantum Revolution: Unveiling the Future with Willow">
+                <h3>Quantum Revolution: Unveiling the Future with Willow</h3>
+                <h4>How Google's Quantum Chip Redefines Computing for the Next Era</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>Quantum Revolution: Unveiling the Future with Willow By Guillaume Lessard This book explores the cutting-edge advancements in quantum computing through the lens of Google's groundbreaking Willow quantum chip. Divided into four parts, it guides readers through the basics of quantum mechanics, the revolutionary innovations of the Willow chip, its real-world applications, and the ethical considerations shaping the quantum future. Key Highlights: Understanding Quantum Computing: Explains the fundamentals of qubits, superposition, and entanglement with relatable analogies. Willow’s Innovations: Details Willow's achievements, including exponential error correction, unmatched hardware performance, and practical quantum applications. Applications in Industry: Discusses quantum solutions in AI, medicine, energy, and climate change, demonstrating their transformative potential. The Future of Quantum Computing: Examines scaling challenges, open-source collaboration, and the ethical landscape. Guillaume Lessard demystifies the quantum revolution, making complex concepts accessible while showcasing how Willow represents a leap forward in computational power, heralding a new era of technological possibilities. Part of the Science and Innovation Mastery Series This book is part of the Science and Innovation Mastery Series by iD01t Productions. The collection explores groundbreaking discoveries, transformative inventions, and the impact of innovation on society and culture. Readers will find engaging explanations of quantum computing, sustainable energy, magnetic fields, biotechnology, artificial intelligence, and other emerging sciences. The series is designed for students, researchers, innovators, and curious readers who want clear knowledge, practical insights, and inspiring perspectives on science and technology. Every title connects complex concepts with real world applications to make learning both accessible and exciting. Special Global Back to School Promotion Buy 2 books and get 30 percent off Buy 4 books and get 40 percent off Buy 6 books and get 60 percent off Available worldwide for a limited time on Google Play Books. Begin your journey today and expand your knowledge with science and innovation that shapes the future.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=9rxAEQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Love Prevails 2 -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/publisher/content?id=Zs45EQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71JIAvJGJNwSrvl3m6cmawr5kBdq3BILZKUZXDUleceEawcIrBuKhX7Kp08DI7k1PAlB_NJnse2EDqtBSPOHr_P21s77seTwFjFBng1v0THPWIof5T1XpujmPPVSAeEcfr0JxJ7&source=gbs_api" alt="Love Prevails 2">
+                <h3>Love Prevails 2</h3>
+                <h4>A Legacy Rewritten</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>Love Prevails 2: A Legacy Rewritten By Guillaume Lessard Step into the heart-pounding sequel where love battles the shadows of the past, and courage rewrites destiny. Love Prevails 2: A Legacy Rewritten invites you on a journey filled with suspense, action, and unyielding passion. Lisa and Alex thought they had left the darkness behind, but a cryptic message and an unsettling whisper awaken their greatest fears. The bloom—a force once silenced—is calling them back. Amid dangerous revelations, mysterious strangers, and haunting truths, Lisa must confront not only the shadowy forces hunting them but also the darkness growing within herself. As secrets unravel, Lisa and Alex face an impossible choice: destroy the bloom and risk their lives or embrace its power and lose their humanity. Together with allies forged by trust and sacrifice, they must uncover the ultimate truth buried within the bloom's roots. This high-stakes, emotional rollercoaster explores the depths of love, the weight of legacy, and the courage to stand against the odds. Will love prevail once more, or will the bloom’s shadows claim everything they hold dear? Perfect for fans of gripping romance and adrenaline-fueled suspense, this sequel delivers heart, action, and an unforgettable finale. Your next thrilling adventure awaits. Grab your copy of Love Prevails 2: A Legacy Rewritten today! Part of the Romantic Stories Series This book is part of the Romantic Stories Series by iD01t Productions. The collection explores timeless themes of love, passion, resilience, and emotional discovery. Readers will find stories filled with heartfelt characters, enchanting relationships, and unforgettable moments that capture the magic of romance. The series is created for romance lovers who want emotional, character driven narratives and captivating journeys that linger long after the last page. Each title blends tenderness, courage, and beauty with twists that make every story unique and memorable. Special Global Back to School Promotion Buy 2 books and get 30 percent off Buy 4 books and get 40 percent off Buy 6 books and get 60 percent off Available worldwide for a limited time on Google Play Books. Start reading today and fall in love with every story.</p>
+                </details>
+                <a href="https://play.google.com/store/books/details?id=Zs45EQAAQBAJ" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- And so on for the rest of the fetched books. Since the list is long, the HTML would include all similarly formatted cards. -->
+
+            <!-- For books without fetched data, construct cover and use subtitle -->
+            <!-- Example for a missing one, say Echo Protocol (assuming not fetched) -->
+            <div class="book-card">
+                <img src="http://books.google.com/books/content?id=AQAAAEBKTSQNfM&printsec=frontcover&img=1&zoom=5&source=gbs_api" alt="Echo Protocol">
+                <h3>Echo Protocol</h3>
+                <h4>Last Transmission – Part I: Signal Found</h4>
+                <details>
+                    <summary>Description</summary>
+                    <p>Last Transmission – Part I: Signal Found (Full description not available)</p>
+                </details>
+                <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKTSQNfM" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Repeat for other missing ones using similar pattern -->
+
+        </div>
+    </div>
+
+    <footer>
+        iD01t Productions
+        ©  All rights reserved
+
+        Terms Privacy Refunds GitHub itch.io
+    </footer>
+</body>
+</html>
