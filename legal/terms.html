@@ -1,213 +1,287 @@
+&lt;!doctype html&gt;
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="en">
 <head>
-
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Terms of Service · iD01t Productions</title>
-  <meta name="description" content="Rules for using our websites, apps, games, and services."/>
-  <link rel="icon" href="/favicon.ico"/>
-  <meta name="theme-color" content="#16185c"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}
-          }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Terms of Service - id01t</title>
+<meta content="Our terms of service outline the rules and guidelines for using our website and services." name="description"/>
+<!-- Open Graph -->
+<meta content="Terms of Service - id01t" property="og:title"/>
+<meta content="Our terms of service outline the rules and guidelines for using our website and services." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.github.io/legal/terms.html" property="og:url"/>
+<meta content="https://id01t.github.io/assets/og-cover.jpg" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Terms of Service - id01t" name="twitter:title"/>
+<meta content="Our terms of service outline the rules and guidelines for using our website and services." name="twitter:description"/>
+<meta content="https://id01t.github.io/assets/og-cover.jpg" name="twitter:image"/>
+<!-- Favicon -->
+<link href="/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/assets/logo-512.png" rel="apple-touch-icon"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
         }
-      }
-    };
-  </script>
-  <link rel="stylesheet" href="/css/custom.css">
-  <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
+    </script>
+<!-- Custom CSS -->
+<link href="/css/custom.css" rel="stylesheet"/>
+<!-- Preconnect to external domains -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Analytics Placeholders -->
+<!-- Replace with your GA4 ID -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+<!-- Replace with your GTM ID -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+<link href="/assets/site.css" rel="stylesheet"/></head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+<!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- Header -->
 
-</head>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-
-  <!-- Header (from games.updated.html) -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="flex items-center gap-2" aria-label="Accueil">
-          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
-          <span class="font-semibold tracking-tight">iD01t Productions</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
-          <a href="/store.html" class="link-underline">Store</a>
-          <a href="/ebooks.html" class="link-underline">eBooks</a>
-          <a href="/apps.html" class="link-underline">Apps</a>
-          <a href="/games.html" class="link-underline">Games</a>
-          <a href="/music.html" class="link-underline">Music</a>
-          <a href="/services.html" class="link-underline">Services</a>
-          <a href="/portfolio.html" class="link-underline">Portfolio</a>
-          <a href="/about.html" class="link-underline">About</a>
-          <a href="/contact.html" class="link-underline">Contact</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          </button>
-        </div>
+<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2" aria-label="Home">
+        <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+        <span class="font-semibold tracking-tight">iD01t Productions</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+        <a href="/store.html" class="link-underline">Store</a> <a href="/ebooks.html" class="link-underline">eBooks</a> <a href="/audiobooks.html" class="link-underline">Audiobooks</a> <a href="/apps.html" class="link-underline">Apps</a> <a href="/games.html" class="link-underline">Games</a> <a href="/music.html" class="link-underline">Music</a> <a href="/blog.html" class="link-underline">Blog</a> <a href="/about.html" class="link-underline">About</a> <a href="/contact.html" class="link-underline">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
       </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/store.html" class="py-2">Store</a>
-        <a href="/ebooks.html" class="py-2">eBooks</a>
-        <a href="/apps.html" class="py-2">Apps</a>
-        <a href="/games.html" class="py-2">Games</a>
-        <a href="/music.html" class="py-2">Music</a>
-        <a href="/services.html" class="py-2">Services</a>
-        <a href="/portfolio.html" class="py-2">Portfolio</a>
-        <a href="/about.html" class="py-2">About</a>
-        <a href="/contact.html" class="py-2">Contact</a>
-      </div>
-    </div>
-  </header>
-
-<section class="relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6">
-    <div class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Terms of Service</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">The rules, rights, and responsibilities when you use our Services.</p>
-      <p class="mt-1 text-xs text-slate-500">Last updated: September 06, 2025</p>
     </div>
   </div>
-</section>
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/audiobooks.html" class="py-2">Audiobooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/blog.html" class="py-2">Blog</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
+    </div>
+  </div>
+</header>
 
-<main class="py-8 border-t border-slate-200 dark:border-slate-800">
-  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-    <div class="bg-slate-50 dark:bg-slate-900/40 rounded-2xl p-6 mb-10">
-      <h2 class="text-xl font-semibold mb-3">Table of Contents</h2>
-      <nav class="grid sm:grid-cols-2 gap-2">
-        <a href="#acceptance" class="block text-brand-700 dark:text-brand-300 hover:underline">1. Acceptance of Terms</a>
-<a href="#changes" class="block text-brand-700 dark:text-brand-300 hover:underline">2. Changes to the Services</a>
-<a href="#accounts" class="block text-brand-700 dark:text-brand-300 hover:underline">3. Accounts & Security</a>
-<a href="#purchases" class="block text-brand-700 dark:text-brand-300 hover:underline">4. Purchases & Licensing</a>
-<a href="#acceptable-use" class="block text-brand-700 dark:text-brand-300 hover:underline">5. Acceptable Use</a>
-<a href="#ip" class="block text-brand-700 dark:text-brand-300 hover:underline">6. Intellectual Property</a>
-<a href="#ugc" class="block text-brand-700 dark:text-brand-300 hover:underline">7. User Content</a>
-<a href="#third-party" class="block text-brand-700 dark:text-brand-300 hover:underline">8. Third-Party Links & Embeds</a>
-<a href="#warranties" class="block text-brand-700 dark:text-brand-300 hover:underline">9. Disclaimers</a>
-<a href="#liability" class="block text-brand-700 dark:text-brand-300 hover:underline">10. Limitation of Liability</a>
-<a href="#termination" class="block text-brand-700 dark:text-brand-300 hover:underline">11. Termination</a>
-<a href="#governing-law" class="block text-brand-700 dark:text-brand-300 hover:underline">12. Governing Law & Disputes</a>
-<a href="#contact" class="block text-brand-700 dark:text-brand-300 hover:underline">13. Contact</a>
+<!-- Breadcrumbs -->
+<nav class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+<div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+<a class="hover:text-gray-900 dark:hover:text-white transition-colors" href="/">Home</a>
+<span>/</span>
+<a class="text-gray-900 dark:text-white" href="/legal/terms.html">Terms of Service</a>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<!-- Header -->
+<div class="text-center mb-12">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Terms of Service</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400">Last updated: January 2024</p>
+</div>
+<!-- Table of Contents -->
+<div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-12">
+<h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Table of Contents</h2>
+<nav class="space-y-2">
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#acceptance">1. Acceptance of Terms</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#services">2. Description of Services</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#user-accounts">3. User Accounts</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#acceptable-use">4. Acceptable Use</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#intellectual-property">5. Intellectual Property</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#privacy">6. Privacy and Data Protection</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#disclaimers">7. Disclaimers and Limitations</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#termination">8. Termination</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#governing-law">9. Governing Law</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#changes">10. Changes to Terms</a>
+<a class="block text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors" href="#contact">11. Contact Information</a>
+</nav>
+</div>
+<!-- Content Sections -->
+<div class="prose prose-lg dark:prose-invert max-w-none">
+<section class="mb-12" id="acceptance">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    By accessing and using the id01t website and services, you accept and agree to be bound by the terms and provision of this agreement.
+                </p>
+<p class="text-gray-600 dark:text-gray-300">
+                    If you do not agree to abide by the above, please do not use this service.
+                </p>
+</section>
+<section class="mb-12" id="services">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Description of Services</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    id01t provides digital products and services including:
+                </p>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+<li>Software applications and games</li>
+<li>Digital content and eBooks</li>
+<li>Music and audio content</li>
+<li>Web development and design services</li>
+<li>Consulting and technical support</li>
+</ul>
+</section>
+<section class="mb-12" id="user-accounts">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. User Accounts</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    When you create an account with us, you must provide accurate and complete information. You are responsible for safeguarding your account credentials.
+                </p>
+<p class="text-gray-600 dark:text-gray-300">
+                    You agree to accept responsibility for all activities that occur under your account.
+                </p>
+</section>
+<section class="mb-12" id="acceptable-use">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Acceptable Use</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    You agree not to use our services to:
+                </p>
+<ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+<li>Violate any applicable laws or regulations</li>
+<li>Infringe upon intellectual property rights</li>
+<li>Transmit harmful or malicious code</li>
+<li>Attempt to gain unauthorized access to our systems</li>
+<li>Interfere with the proper functioning of our services</li>
+</ul>
+</section>
+<section class="mb-12" id="intellectual-property">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Intellectual Property</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    All content, features, and functionality on our website are owned by id01t and are protected by international copyright, trademark, and other intellectual property laws.
+                </p>
+<p class="text-gray-600 dark:text-gray-300">
+                    You may not reproduce, distribute, or create derivative works without our express written consent.
+                </p>
+</section>
+<section class="mb-12" id="privacy">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">6. Privacy and Data Protection</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Your privacy is important to us. Please review our <a class="text-primary-600 dark:text-primary-400 hover:underline" href="/legal/privacy.html">Privacy Policy</a>, which also governs your use of our services.
+                </p>
+</section>
+<section class="mb-12" id="disclaimers">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">7. Disclaimers and Limitations</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Our services are provided "as is" without warranties of any kind. We disclaim all warranties, express or implied.
+                </p>
+<p class="text-gray-600 dark:text-gray-300">
+                    In no event shall id01t be liable for any indirect, incidental, or consequential damages.
+                </p>
+</section>
+<section class="mb-12" id="termination">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">8. Termination</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    We may terminate or suspend your account and access to our services at any time, without prior notice, for conduct that we believe violates these Terms of Service.
+                </p>
+</section>
+<section class="mb-12" id="governing-law">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">9. Governing Law</h2>
+<p class="text-gray-600 dark:text-gray-300">
+                    These terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.
+                </p>
+</section>
+<section class="mb-12" id="changes">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">10. Changes to Terms</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    We reserve the right to modify these terms at any time. We will notify users of any material changes by posting the new terms on this page.
+                </p>
+<p class="text-gray-600 dark:text-gray-300">
+                    Your continued use of our services after changes constitutes acceptance of the new terms.
+                </p>
+</section>
+<section class="mb-12" id="contact">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">11. Contact Information</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-4">
+                    If you have any questions about these Terms of Service, please contact us:
+                </p>
+<div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+<p class="text-gray-600 dark:text-gray-300 mb-2">
+<strong>Email:</strong> <a class="text-primary-600 dark:text-primary-400 hover:underline" href="mailto:legal@id01t.com">legal@id01t.com</a>
+</p>
+<p class="text-gray-600 dark:text-gray-300 mb-2">
+<strong>Contact Form:</strong> <a class="text-primary-600 dark:text-primary-400 hover:underline" href="/contact.html">Contact Us</a>
+</p>
+<p class="text-gray-600 dark:text-gray-300">
+<strong>Address:</strong> [Your Business Address]
+                    </p>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+
+<footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <p class="font-semibold">iD01t Productions</p>
+        <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+      </div>
+      <nav class="flex flex-wrap gap-4 text-sm">
+        <a href="/legal/terms.html" class="link-underline">Terms</a>
+        <a href="/legal/privacy.html" class="link-underline">Privacy</a>
+        <a href="/legal/refunds.html" class="link-underline">Refunds</a>
+        <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
       </nav>
     </div>
-
-    <article class="prose prose-slate dark:prose-invert max-w-none">
-      
-<section id="acceptance">
-  <h2>1. Acceptance of Terms</h2>
-  <p>By accessing or using our websites, apps, games, or services, you agree to these Terms. If you do not agree, do not use the Services.</p>
-  <p><strong>Last updated:</strong> September 06, 2025</p>
-</section>
-<section id="changes">
-  <h2>2. Changes to the Services</h2>
-  <p>We may modify, suspend, or discontinue any part of the Services at any time. We will endeavor to notify users of material changes.</p>
-</section>
-<section id="accounts">
-  <h2>3. Accounts &amp; Security</h2>
-  <ul>
-    <li>You are responsible for maintaining the confidentiality of credentials and for all activities under your account.</li>
-    <li>Notify us promptly of any unauthorized use.</li>
-  </ul>
-</section>
-<section id="purchases">
-  <h2>4. Purchases &amp; Licensing</h2>
-  <ul>
-    <li>Digital goods are licensed, not sold. Licenses are personal, non‑transferable, and for permitted uses only.</li>
-    <li>Third‑party store terms (e.g., itch.io, Amazon, Google) may apply to purchases made there.</li>
-    <li>Refunds are governed by our <a href="/legal/refunds.html">Refund Policy</a>.</li>
-  </ul>
-</section>
-<section id="acceptable-use">
-  <h2>5. Acceptable Use</h2>
-  <ul>
-    <li>No unlawful, infringing, or harmful activities.</li>
-    <li>No reverse engineering, scraping, or circumvention of access controls.</li>
-    <li>No misuse of communications features (spam, harassment, or harmful content).</li>
-  </ul>
-</section>
-<section id="ip">
-  <h2>6. Intellectual Property</h2>
-  <p>All content, trademarks, logos, and code are owned by iD01t Productions or its licensors and protected by applicable laws. You may not use any brand assets without prior permission.</p>
-</section>
-<section id="ugc">
-  <h2>7. User Content</h2>
-  <p>If you submit content, you grant us a non‑exclusive, worldwide license to host, store, and display it for operating and improving the Services. You represent that you have all rights necessary to grant this license.</p>
-</section>
-<section id="third-party">
-  <h2>8. Third‑Party Links &amp; Embeds</h2>
-  <p>Our Services may include links or embeds (e.g., YouTube, itch.io). We are not responsible for their content, policies, or practices.</p>
-</section>
-<section id="warranties">
-  <h2>9. Disclaimers</h2>
-  <p>The Services are provided “as is” and “as available.” To the fullest extent permitted by law, we disclaim all warranties, express or implied.</p>
-</section>
-<section id="liability">
-  <h2>10. Limitation of Liability</h2>
-  <p>To the fullest extent permitted by law, iD01t Productions will not be liable for indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.</p>
-</section>
-<section id="termination">
-  <h2>11. Termination</h2>
-  <p>We may suspend or terminate access if we believe you have violated these Terms. You may stop using the Services at any time.</p>
-</section>
-<section id="governing-law">
-  <h2>12. Governing Law &amp; Disputes</h2>
-  <p>These Terms are governed by the laws of Quebec and the federal laws of Canada applicable therein. Venue for disputes is the courts of Montreal, Quebec, unless otherwise required by law.</p>
-</section>
-<section id="contact">
-  <h2>13. Contact</h2>
-  <p>Questions about these Terms? Reach us via the <a href="/contact.html">contact page</a>.</p>
-</section>
-
-    </article>
   </div>
-</main>
+</footer>
 
-
-  <!-- Footer (from games.updated.html) -->
-  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <p class="font-semibold">iD01t Productions</p>
-          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
-        </div>
-        <nav class="flex flex-wrap gap-4 text-sm">
-          <a href="/legal/terms.html" class="link-underline">Terms</a>
-          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
-          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
-          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', function() {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeToggle.setAttribute('aria-pressed', String(isDark));
-      });
+<!-- JavaScript -->
+<script src="/js/utilities.js" type="module"></script>
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms of Service - id01t",
+        "description": "Our terms of service outline the rules and guidelines for using our website and services.",
+        "url": "https://id01t.github.io/legal/terms.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://id01t.github.io/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Terms of Service",
+                    "item": "https://id01t.github.io/legal/terms.html"
+                }
+            ]
+        }
     }
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-  </script>
-
-</body>
+    </script>
+<script defer="" src="/assets/site.js"></script></body>
 </html>
