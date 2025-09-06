@@ -1,67 +1,206 @@
-<!DOCTYPE html><html lang="fr" class="scroll-smooth"><head><meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/><title>Games · iD01t Productions</title>
-<meta name="description" content="Games — iD01t Productions"/><link rel="icon" href="/favicon.ico"/>
-<meta name="theme-color" content="#16185c"/><script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}}}}};</script>
-<link rel="stylesheet" href="/css/custom.css"><script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
-</head><body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16">
-<a href="/" class="flex items-center gap-2" aria-label="Accueil"><img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions"><span class="font-semibold tracking-tight">iD01t Productions</span></a>
-<nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
-<a href="/store.html" class="link-underline">Store</a>
-<a href="/ebooks.html" class="link-underline">eBooks</a>
-<a href="/apps.html" class="link-underline">Apps</a>
-<a href="/games.html" class="link-underline text-brand-600 dark:text-brand-400">Games</a>
-<a href="/music.html" class="link-underline">Music</a>
-<a href="/services.html" class="link-underline">Services</a>
-<a href="/portfolio.html" class="link-underline">Portfolio</a>
-<a href="/about.html" class="link-underline">About</a>
-<a href="/contact.html" class="link-underline">Contact</a>
-</nav>
-<div class="flex items-center gap-3"><button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-<a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-<button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></div></div>
-<div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true"><div class="px-4 py-3 flex flex-col gap-2">
-<a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/services.html" class="py-2">Services</a><a href="/portfolio.html" class="py-2">Portfolio</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
-</div></div></header>
-<section class="relative overflow-hidden"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6"><div class="text-center"><h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Games</h1></div></div></section>
-<main class="py-8 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<p class="text-slate-600 dark:text-slate-300 mb-6">Fast-paced action built for online play.</p>
-<div class="grid md:grid-cols-2 gap-8 items-start">
-  <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-    <img src="/assets/harvested/games/nini_hero.webp" class="rounded-xl aspect-video object-cover mb-4" alt="Nini’s Adventures artwork">
-    <h3 class="font-semibold text-xl">Nini’s Adventures: Kitties Mayhem!</h3>
-    <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Explosive online multiplayer shooter. PC public beta on <strong>September 24, 2025</strong>. No single-player. AWS powered servers.</p>
-  </div>
-  <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-    <h4 class="font-semibold mb-3">Request Beta Access</h4>
-    <form name="nini-beta" method="POST" data-netlify="true" class="grid gap-3">
-      <input type="hidden" name="form-name" value="nini-beta" />
-      <input name="email" type="email" placeholder="Email" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
-      <button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Request Access</button>
-      <p class="text-xs text-slate-500">No payment. Email only.</p>
-    </form>
-  </div>
-</div>
-</div></main>
-<footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function() {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      themeToggle.setAttribute('aria-pressed', String(isDark));
-    });
-  }
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
-</script>
-</body></html>
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Games · iD01t Productions</title>
+  <meta name="description" content="Games — iD01t Productions"/>
+  <link rel="icon" href="/favicon.ico"/>
+  <meta name="theme-color" content="#16185c"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="/css/custom.css">
+  <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Header (unchanged) -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2" aria-label="Accueil">
+          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+          <span class="font-semibold tracking-tight">iD01t Productions</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
+          <a href="/store.html" class="link-underline">Store</a>
+          <a href="/ebooks.html" class="link-underline">eBooks</a>
+          <a href="/apps.html" class="link-underline">Apps</a>
+          <a href="/games.html" class="link-underline text-brand-600 dark:text-brand-400">Games</a>
+          <a href="/music.html" class="link-underline">Music</a>
+          <a href="/services.html" class="link-underline">Services</a>
+          <a href="/portfolio.html" class="link-underline">Portfolio</a>
+          <a href="/about.html" class="link-underline">About</a>
+          <a href="/contact.html" class="link-underline">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="/store.html" class="py-2">Store</a>
+        <a href="/ebooks.html" class="py-2">eBooks</a>
+        <a href="/apps.html" class="py-2">Apps</a>
+        <a href="/games.html" class="py-2">Games</a>
+        <a href="/music.html" class="py-2">Music</a>
+        <a href="/services.html" class="py-2">Services</a>
+        <a href="/portfolio.html" class="py-2">Portfolio</a>
+        <a href="/about.html" class="py-2">About</a>
+        <a href="/contact.html" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Games</h1>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Fast-paced action built for online play.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="py-8 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-8 items-start">
+      <!-- Left column: Media -->
+      <div class="lg:col-span-2 space-y-4">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-3">
+          <img src="/assets/harvested/games/nini_hero.webp" class="rounded-xl aspect-video object-cover" alt="Nini’s Adventures artwork">
+        </div>
+        <!-- Videos -->
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+            <div class="aspect-video">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/GsVqmOx4Rwc?si=_qq4xQ90_XYCxC3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+            <div class="aspect-video">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/bpmMQEh37ZA?si=lfCkSik5mMW1rwae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- itch.io embed -->
+        <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+          <iframe frameborder="0" src="https://itch.io/embed/3845294?linkback=true&amp;border_width=4&amp;dark=true" width="100%" height="173"></iframe>
+        </div>
+      </div>
+
+      <!-- Right column: Details -->
+      <aside class="space-y-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold text-2xl">Nini’s Adventures: Kitties Mayhem!</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">
+            Explosive online multiplayer shooter. PC public beta on <strong>September 24, 2025</strong>.
+            No single-player. AWS powered servers. Made with Unity and Blender.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs bg-brand-100 text-brand-800 dark:bg-brand-900/40 dark:text-brand-100">Shooter</span>
+            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Action</span>
+            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">3D</span>
+            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Arena</span>
+            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Fast-Paced</span>
+            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Multiplayer</span>
+            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Cats</span>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2">View on itch.io</a>
+            <a href="#beta" class="rounded-full border border-brand-600 text-brand-700 dark:text-brand-300 hover:bg-brand-50 dark:hover:bg-brand-900/30 px-5 py-2">Request Beta Access</a>
+          </div>
+          <p class="text-xs text-slate-500 mt-3">Updated Sept 1, 2025 • English • Server-based networked multiplayer</p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+          <h4 class="font-semibold mb-2">Key Features</h4>
+          <ul class="list-disc list-inside space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>Competitive online multiplayer with first public beta opening on <strong>September 24, 2025</strong>.</li>
+            <li>Chaotic cat-themed arenas with traps, obstacles, and surprises.</li>
+            <li>Fast, responsive gameplay designed for intense, short matches.</li>
+            <li>AWS-powered servers for stability, scalability, and smooth global play.</li>
+            <li>Unique kitty characters with special abilities and reactive, destructible environments.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+          <h4 class="font-semibold mb-2">Technical</h4>
+          <dl class="grid grid-cols-2 gap-y-1 text-sm">
+            <dt class="text-slate-500">Engine</dt><dd>Unity</dd>
+            <dt class="text-slate-500">Art</dt><dd>Blender</dd>
+            <dt class="text-slate-500">Inputs</dt><dd>Keyboard + Mouse</dd>
+            <dt class="text-slate-500">Mode</dt><dd>Online multiplayer only</dd>
+            <dt class="text-slate-500">Servers</dt><dd>AWS</dd>
+            <dt class="text-slate-500">Average session</dt><dd>A few minutes</dd>
+          </dl>
+        </div>
+
+        <!-- Beta form -->
+        <div id="beta" class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+          <h4 class="font-semibold mb-3">Request Beta Access</h4>
+          <form name="nini-beta" method="POST" data-netlify="true" class="grid gap-3">
+            <input type="hidden" name="form-name" value="nini-beta" />
+            <input name="email" type="email" placeholder="Email" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
+            <button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Request Access</button>
+            <p class="text-xs text-slate-500">No payment. Email only.</p>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer (unchanged) -->
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <p class="font-semibold">iD01t Productions</p>
+          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+        </div>
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a href="/legal/terms.html" class="link-underline">Terms</a>
+          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
+          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
+          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (unchanged) -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function() {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+      });
+    }
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
