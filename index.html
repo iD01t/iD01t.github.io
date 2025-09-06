@@ -1,160 +1,278 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>iD01t Productions: AI Apps, eBooks, Music & Tools</title>
-  <meta name="description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="canonical" href="https://id01t.github.io/" />
-  <meta name="theme-color" content="#16185c" />
-  <meta property="og:title" content="iD01t Productions: AI Apps, eBooks, Music & Tools" />
-  <meta property="og:description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://id01t.github.io/" />
-  <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="iD01t Productions: AI Apps, eBooks, Music & Tools" />
-  <meta name="twitter:description" content="Explore pro-grade AI apps, tech eBooks, and music by iD01t Productions. Get automation tools and digital products for developers and creators.">
-  <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp" />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"iD01t Productions","url":"https://id01t.github.io/","logo":"https://id01t.github.io/logo.svg","founder":{"@type":"Person","name":"Guillaume Lessard"},"sameAs":["https://github.com/id01t","https://id01t.itch.io","https://play.google.com/store/books/author?id=Guillaume_Lessard","https://books.apple.com/us/author/guillaume-lessard/id1750250586"]}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"VideoGame","name":"Nini’s Adventures: Kitties Mayhem!","gamePlatform":"PC","applicationCategory":"Game","author":{"@type":"Organization","name":"iD01t Productions"},"datePublished":"2025-09-24","url":"https://id01t.github.io/#nini-beta","inLanguage":"en","description":"Explosive online multiplayer shooter. Public PC beta on September 24, 2025. No single-player. AWS-powered servers."}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"MusicGroup","name":"DJ iD01t","url":"https://id01t.github.io/#music","album":[
-    {"@type":"MusicAlbum","name":"Last Transmission","datePublished":"2025-03-10"},
-    {"@type":"MusicAlbum","name":"Signal Detected","datePublished":"2025-04-15"},
-    {"@type":"MusicAlbum","name":"Sweat and Stardust","datePublished":"2025-05-10"},
-    {"@type":"MusicAlbum","name":"Echo Protocol","datePublished":"2025-05-20"},
-    {"@type":"MusicAlbum","name":"No Master Needed","datePublished":"2025-07-01"},
-    {"@type":"MusicAlbum","name":"Anura Voidwalker DMT Chronicles","datePublished":"2025-08-10"}]}
-  </script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>iD01t Productions — Apps, eBooks, Games & Music for Creators</title>
+  <meta name="description" content="Outils concrets pour développeurs et créateurs : apps Windows, eBooks tech, jeux, et musique par iD01t Productions. Axé ROI, automatisation et qualité pro."/>
+  <link rel="canonical" href="https://id01t.github.io/"/>
+  <meta name="theme-color" content="#16185c"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
+  <link rel="icon" href="/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/assets/logo-512.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="iD01t Productions — Apps, eBooks, Games & Music for Creators"/>
+  <meta property="og:description" content="Apps, eBooks, jeux et musique pour accélérer vos projets. Automatisation, design propre, et performances."/>
+  <meta property="og:url" content="https://id01t.github.io/"/>
+  <meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp"/>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="iD01t Productions — Apps, eBooks, Games & Music for Creators"/>
+  <meta name="twitter:description" content="Outils concrets pour développeurs et créateurs : apps, eBooks, jeux, musique."/>
+  <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp"/>
+
+  <!-- Preconnects for perf -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config={theme:{extend:{colors:{brand:{50:"#f5f6ff",100:"#e6e9ff",200:"#c9ccff",300:"#a2a8ff",400:"#7a82ff",500:"#545cff",600:"#3a3fe6",700:"#2c30b4",800:"#202383",900:"#16185c"}}}}};
+    tailwind.config = {theme:{extend:{colors:{brand:{50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}}}}};
   </script>
   <link rel="stylesheet" href="/css/custom.css">
+  <style>
+    .link-underline { position: relative; }
+    .link-underline::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: currentColor; transform:scaleX(0); transform-origin:left; transition: transform .2s; }
+    .link-underline:hover::after { transform:scaleX(1); }
+  </style>
   <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
+
+  <!-- Organization + WebSite + SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"iD01t Productions",
+    "url":"https://id01t.github.io/",
+    "logo":"https://id01t.github.io/assets/img/brand/logo.png",
+    "sameAs":[
+      "https://github.com/id01t",
+      "https://id01t.itch.io",
+      "https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB",
+      "https://music.apple.com/us/artist/dj-id01t/1803964475"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "url":"https://id01t.github.io/",
+    "name":"iD01t Productions",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://id01t.github.io/search.html?q={query}",
+      "query-input":"required name=query"
+    }
+  }
+  </script>
+
+  <!-- Key entity JSON-LD pulled from real pages -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"HTML2exe Pro",
+    "applicationCategory":"DeveloperApplication",
+    "operatingSystem":"Windows",
+    "publisher":{"@type":"Organization","name":"iD01t Productions"},
+    "url":"https://id01t.itch.io/html2exe"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"VideoGame",
+    "name":"Nini’s Adventures: Kitties Mayhem!",
+    "url":"https://id01t.github.io/games.html",
+    "gamePlatform":"PC",
+    "applicationCategory":"Game",
+    "author":{"@type":"Organization","name":"iD01t Productions"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MusicGroup",
+    "name":"DJ iD01t",
+    "url":"https://id01t.github.io/music.html"
+  }
+  </script>
+
+  <!-- FAQ schema to gain rich results -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Quels types d’apps proposez-vous ?","acceptedAnswer":{"@type":"Answer","text":"Des utilitaires Windows pro (packaging Python→EXE, créateur d’apps HTML→EXE, outils créatifs) avec design moderne et support."}},
+      {"@type":"Question","name":"Où trouver vos eBooks ?","acceptedAnswer":{"@type":"Answer","text":"Nos eBooks sont listés sur la page eBooks et disponibles via Google Play Books et Apple Books."}},
+      {"@type":"Question","name":"Quand commence la bêta de Nini’s Adventures ?","acceptedAnswer":{"@type":"Answer","text":"La bêta PC publique ouvre le 24 septembre 2025. Inscription sur la page d’accueil ou la page Games."}}
+    ]
+  }
+  </script>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="#home" class="flex items-center gap-2" aria-label="Aller à l'accueil">
-        <img src="/assets/img/brand/logo.png" alt="Logo iD01t Productions" class="h-8 w-8">
-        <span class="font-semibold tracking-tight">iD01t Productions</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
-        <a href="/store.html" class="link-underline">Store</a><a href="/ebooks.html" class="link-underline">eBooks</a>
-        <a href="/apps.html" class="link-underline">Apps</a><a href="/games.html" class="link-underline">Games</a>
-        <a href="/music.html" class="link-underline">Music</a><a href="/services.html" class="link-underline">Services</a>
-        <a href="/portfolio.html" class="link-underline">Portfolio</a><a href="/about.html" class="link-underline">About</a>
-        <a href="/contact.html" class="link-underline">Contact</a>
-      </nav>
-      <div class="flex items-center gap-3">
-        <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-        <a href="#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
-    <div class="px-4 py-3 flex flex-col gap-2">
-      <a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/apps.html" class="py-2">Apps</a>
-      <a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/services.html" class="py-2">Services</a>
-      <a href="/portfolio.html" class="py-2">Portfolio</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
-    </div>
-  </div>
-</header>
 
-<section id="home" class="relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-    <div class="grid md:grid-cols-2 items-center gap-10">
-      <div>
-        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Premium apps, eBooks, games, music</h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">We build tools and stories for creators with clarity, speed, and measurable value. Designed for growth, automation, and a clean user journey.</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="/store.html" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Visit Store</a>
-          <a href="#nini-beta" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3">Join Nini’s Beta</a>
-          <a href="/portfolio.html" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3">See Work</a>
+  <!-- Header (match site shell) -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2" aria-label="Accueil">
+          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+          <span class="font-semibold tracking-tight">iD01t Productions</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
+          <a href="/store.html" class="link-underline">Store</a>
+          <a href="/ebooks.html" class="link-underline">eBooks</a>
+          <a href="/apps.html" class="link-underline">Apps</a>
+          <a href="/games.html" class="link-underline">Games</a>
+          <a href="/music.html" class="link-underline">Music</a>
+          <a href="/services.html" class="link-underline">Services</a>
+          <a href="/portfolio.html" class="link-underline">Portfolio</a>
+          <a href="/about.html" class="link-underline">About</a>
+          <a href="/contact.html" class="link-underline">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+          <a href="#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Ouvrir le menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
         </div>
       </div>
-      <div class="relative">
-        <img src="/assets/img/placeholders/hero-1600x900.webp" alt="iD01t Productions showcase image" class="aspect-[16/10] rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-slate-800">
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="/store.html" class="py-2">Store</a>
+        <a href="/ebooks.html" class="py-2">eBooks</a>
+        <a href="/apps.html" class="py-2">Apps</a>
+        <a href="/games.html" class="py-2">Games</a>
+        <a href="/music.html" class="py-2">Music</a>
+        <a href="/services.html" class="py-2">Services</a>
+        <a href="/portfolio.html" class="py-2">Portfolio</a>
+        <a href="/about.html" class="py-2">About</a>
+        <a href="/contact.html" class="py-2">Contact</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="nini-beta" class="py-16 border-t border-slate-200 dark:border-slate-800">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-3xl font-semibold">Nini’s Adventures: Kitties Mayhem! — Public PC Beta</h2>
-        <p class="mt-3 text-slate-600 dark:text-slate-300">Explosive online multiplayer shooter. Public beta on <strong>September 24, 2025</strong>. No single-player. PC only for first beta. AWS-powered servers. Limited seats.</p>
-        <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300">
-          <li>High-energy deathmatches with unique feline abilities</li>
-          <li>Colorful destructible arenas built for mayhem</li>
-          <li>Scalable servers and anti-cheat pipeline</li>
-        </ul>
-      </div>
-      <div>
-        <img src="/assets/harvested/games/nini_hero.webp" alt="Nini’s Adventures: Kitties Mayhem artwork" class="rounded-2xl aspect-[16/10] object-cover ring-1 ring-slate-200 dark:ring-slate-800">
-        <form class="mt-6 grid sm:grid-cols-2 gap-3" name="nini-beta" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="nini-beta" />
-          <input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="email" type="email" placeholder="Email for beta access" required>
-          <button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Request Access</button>
-          <p class="text-xs text-slate-500 sm:col-span-2">No payment. Email only. We will contact selected testers by email.</p>
-        </form>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div class="grid md:grid-cols-2 items-center gap-10">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Apps & contenus qui accélèrent vos projets</h1>
+          <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Basé sur des produits réels : utilitaires Windows, eBooks techniques, jeux multijoueurs et musique originale. Axé sur la vitesse, l’automatisation et un design propre.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/apps.html" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Découvrir les Apps</a>
+            <a href="/ebooks.html" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3">Parcourir les eBooks</a>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">Mise à jour : September 06, 2025</p>
+        </div>
+        <div>
+          <img src="/assets/img/placeholders/hero-1600x900.webp" alt="Produits iD01t — aperçu" class="aspect-[16/10] rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-slate-800">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="store" class="py-16 border-t border-slate-200 dark:border-slate-800">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex items-end justify-between">
-      <h2 class="text-2xl font-semibold">Store</h2>
-      <a href="/store.html" class="text-sm link-underline">View all</a>
-    </div>
-    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
-        <img src="/assets/harvested/apps/img_3.png" alt="Bedtime Story Maker for Windows" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900">
-        <h3 class="mt-4 font-semibold">Bedtime Story Maker · Windows</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Create full stories in seconds, bilingual, friendly UI, frequent updates.</p>
-        <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$9.99 CAD</span><a href="https://id01t.itch.io/" target="_blank" rel="noopener" class="text-sm link-underline">Buy</a></div>
+  <!-- Trust / Highlights pulled from real pages -->
+  <section class="py-12 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
+      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <h3 class="font-semibold">HTML2exe Pro</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Transformez un dossier HTML/URL en application Windows .exe avec interface moderne (prévisualisation, icônes, sécurité).</p>
+        <a class="link-underline text-sm mt-3 inline-block" href="/apps.html#html2exe">Voir l’app</a>
       </article>
-      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
-        <img src="/assets/harvested/ebooks/img_30.jpg" alt="Veo3 JSON Guide eBook" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900">
-        <h3 class="mt-4 font-semibold">Veo3 JSON Guide · eBook</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Learn smart JSON skills for cinematic results with real templates.</p>
-        <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$7.99 CAD</span><a href="https://books.google.com/books?id=MJFJEQAAQBAJ" target="_blank" rel="noopener" class="text-sm link-underline">Buy</a></div>
+      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <h3 class="font-semibold">Nini’s Adventures: Kitties Mayhem!</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Shooter en ligne énergique. Bêta publique PC le 24 septembre 2025.</p>
+        <a class="link-underline text-sm mt-3 inline-block" href="/games.html">Voir le jeu</a>
       </article>
-      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg transition">
-        <img src="/assets/harvested/apps/img_4.png" alt="Sprite Forge Pro toolkit" class="aspect-video rounded-xl object-cover bg-slate-100 dark:bg-slate-900">
-        <h3 class="mt-4 font-semibold">Sprite Forge Pro · Toolkit</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Modern sprite and texture creation, polished workflow, clear exports.</p>
-        <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$19.00 CAD</span><a href="#" class="text-sm link-underline">Buy</a></div>
+      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <h3 class="font-semibold">eBooks pour développeurs</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Guides concrets sur l’automatisation, l’IA, et la création digitale. Catalogue alimenté par Google Books.</p>
+        <a class="link-underline text-sm mt-3 inline-block" href="/ebooks.html">Voir les titres</a>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="py-16" id="ebooks"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex items-end justify-between"><h2 class="text-2xl font-semibold">eBooks</h2><a href="/ebooks.html" class="text-sm link-underline">Explore catalog</a></div><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Guides for developers and creators with clean steps, examples, and real assets. Simple learning, fast results.</p></div></section>
-<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="apps"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Apps</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Desktop and mobile tools with friendly design, simple setup, and useful features.</p></div></section>
-<section class="py-16" id="games"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Games</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Action and fun, fast pace and clear goals. Playtests open soon.</p></div></section>
-<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="music"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Music</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Albums and sound design with energy and story. Find tracks on main platforms.</p></div></section>
-<section class="py-16" id="services"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Services</h2><div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"><div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6"><h3 class="font-semibold">Web & Apps</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Design, build, deploy, with clear docs and handover.</p></div><div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6"><h3 class="font-semibold">Brand & Media</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Logos, covers, banners, videos, with clean style and story.</p></div><div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6"><h3 class="font-semibold">Automation</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Pipelines and scripts for content, sales, and support.</p></div></div></div></section>
-<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="portfolio"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Portfolio</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">Selected work across tools and media, with short case studies and results.</p><div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"><div class="aspect-video rounded-xl bg-slate-100 dark:bg-slate-900"></div><div class="aspect-video rounded-xl bg-slate-100 dark:bg-slate-900"></div><div class="aspect-video rounded-xl bg-slate-100 dark:bg-slate-900"></div></div></div></section>
-<section class="py-16" id="about"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">About</h2><p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl">We are a Canadian creative and tech studio. We build with care, we ship with speed, and we focus on value and clean results for users.</p></div></section>
-<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="newsletter"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Newsletter</h2><p class="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">Get release notes, beta invites, and discounts. One concise email per month.</p><form class="mt-6 grid sm:grid-cols-2 gap-4 max-w-3xl" name="newsletter" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="newsletter" /><input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="email" type="email" placeholder="Email" required><button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Subscribe</button><p class="mt-2 text-xs text-slate-500 sm:col-span-2">By subscribing you accept our privacy policy. Unsubscribe anytime.</p></form></div></section>
-<section class="py-16 border-t border-slate-200 dark:border-slate-800" id="contact"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-2xl font-semibold">Contact</h2><form class="mt-6 grid sm:grid-cols-2 gap-4 max-w-3xl" name="contact" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="contact" /><input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" name="name" placeholder="Name" required><input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3" name="email" type="email" placeholder="Email" required><textarea class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="message" rows="5" placeholder="Message" required></textarea><button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Send</button></form><p class="mt-4 text-sm text-slate-500">By sending a message you accept our privacy policy.</p></div></section>
+  <!-- Blog teasers (internal links) -->
+  <section class="py-12 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between">
+        <h2 class="text-2xl font-semibold">Derniers articles</h2>
+        <a href="/blog.html" class="text-sm link-underline">Tout le blog</a>
+      </div>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold"><a class="link-underline" href="/blog/10-essential-python-automation-scripts-content-creators.html">10 scripts Python d’automatisation pour les créateurs</a></h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Gagnez 3–5 h/semaine avec des automatisations éprouvées pour la création de contenu.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold"><a class="link-underline" href="/blog/future-ai-music-production-dj-perspective.html">L’avenir de l’IA dans la production musicale : regard de DJ</a></h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Outils IA, set‑up live, et collaboration homme‑IA.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();const t=document.getElementById('themeToggle');if(t){t.addEventListener('click',()=>{const d=document.documentElement.classList.toggle('dark');localStorage.setItem('theme',d?'dark':'light');t.setAttribute('aria-pressed',String(d));});}const mb=document.getElementById('mobileMenuBtn'),mm=document.getElementById('mobileMenu');if(mb&&mm){mb.addEventListener('click',()=>{mm.classList.toggle('hidden');});}</script>
-</body></html>
+  <!-- Newsletter -->
+  <section id="newsletter" class="py-16 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-semibold">Recevoir les nouveautés</h2>
+      <p class="text-slate-600 dark:text-slate-300 mt-2">Promos, nouvelles sorties et accès bêta. Pas de spam.</p>
+      <form class="mt-6 grid sm:grid-cols-3 gap-3" name="newsletter" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="email" type="email" placeholder="Votre email" required>
+        <button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">S’inscrire</button>
+        <p class="text-xs text-slate-500 sm:col-span-3 mt-2">En vous inscrivant, vous acceptez nos <a href="/legal/terms.html" class="link-underline">Conditions</a> et notre <a href="/legal/privacy.html" class="link-underline">Politique de confidentialité</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <p class="font-semibold">iD01t Productions</p>
+          <p class="text-sm text-slate-500">© <span id="year"></span> Tous droits réservés</p>
+        </div>
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a href="/legal/terms.html" class="link-underline">Terms</a>
+          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
+          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
+          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Shared UI
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function(){
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+      });
+    }
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function(){
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
