@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/css/custom.css">
   <script>(function(){const s=localStorage.getItem('theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d))document.documentElement.classList.add('dark');})();</script>
 
+  <link rel="preconnect" href="https://www.googleapis.com">
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   
@@ -97,8 +98,9 @@
         <h2 class="text-xl font-semibold">Catalog</h2>
         <span id="count" class="text-sm text-slate-500"></span>
       </div>
-      <div id="loading" class="text-center text-slate-500 mt-8">Loading audiobooks...</div>
+      <div id="loading" class="text-center text-slate-500 mt-8">🎧 Loading iD01t Productions audiobooks…</div>
       <div id="grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4 hidden"></div>
+<noscript><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-slate-500 py-4">Enable JavaScript to view the audiobooks catalog.</div></noscript>
       <div id="empty" class="text-slate-500 mt-4 hidden">No results. Try different filters.</div>
     </div>
   </section>
@@ -142,15 +144,26 @@
       });
     }
 
+    // Networking helpers
+    function sleep(ms){ return new Promise(r=>setTimeout(r, ms)); }
+    async function fetchWithTimeout(url, opts={}, timeout=9000){
+      const ctrl = new AbortController();
+      const id = setTimeout(()=>ctrl.abort(), timeout);
+      try{
+        const res = await fetch(url, { ...opts, signal: ctrl.signal, cache: 'no-store' });
+        return res;
+      } finally { clearTimeout(id); }
+    }
+
     // Local landing page resolver
     async function resolveLocalLanding(book) {
       async function exists(url) {
         try {
-          const res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+          const res = await fetchWithTimeout(url, { method: 'HEAD' }, 4000);
           return res.ok;
         } catch (e) {
           try {
-            const res = await fetch(url, { method: 'GET', cache: 'no-store' });
+            const res = await fetchWithTimeout(url, { method: 'GET' }, 6000);
             return res.ok;
           } catch (e2) {
             return false;
@@ -191,13 +204,58 @@
       return null;
     }
 
+    
+    // Fallback loaders
+    async function loadWindowFallback(){
+      try{
+        if (window.AUDIOBOOK_FALLBACK && Array.isArray(window.AUDIOBOOK_FALLBACK.items)){
+          const fb = window.AUDIOBOOK_FALLBACK.items;
+          return fb.map(a => ({
+            id: a.id || a.title,
+            title: a.title,
+            authors: (a.authors || a.narrators || []).join(', '),
+            year: a.year,
+            language: a.language,
+            categories: [a.genre].filter(Boolean),
+            description: a.description || '',
+            image: a.cover || '/assets/img/placeholders/card-portrait-384x576.webp',
+            infoLink: a.googleBooks || a.googlePlay || a.url || '#',
+            isAudiobook: true,
+            localUrl: a.url || null
+          }));
+        }
+      }catch(e){}
+      return null;
+    }
+    async function loadJsonFallback(){
+      try{
+        const res = await fetchWithTimeout('/assets/data/audiobooks.json', {}, 8000);
+        if (!res.ok) throw new Error('fallback json http '+res.status);
+        const data = await res.json();
+        const arr = Array.isArray(data) ? data : (data.items || []);
+        return arr.map(a => ({
+          id: a.id || a.title,
+          title: a.title,
+          authors: (a.authors || a.narrators || []).join(', '),
+          year: a.year,
+          language: a.language,
+          categories: [a.genre].filter(Boolean),
+          description: a.description || '',
+          image: a.cover || '/assets/img/placeholders/card-portrait-384x576.webp',
+          infoLink: a.googleBooks || a.googlePlay || a.url || '#',
+          isAudiobook: true,
+          localUrl: a.url || null
+        }));
+      }catch(e){ return null; }
+    }
+
     // Google Books API Configuration
     const CONFIG = {
       AUTHOR: 'Guillaume Lessard',
       PUBLISHER: 'iD01t Productions',
       PAGE_SIZE: 40,
       MAX_TOTAL: 200,
-      API_KEY: '' // Add your API key here for higher quota
+      API_KEY: "AIzaSyBpG4uswyDjQXfZbIOfW7hwg2Il0RaUYYs" // Add your API key here for higher quota
     };
 
     // DOM elements
@@ -255,7 +313,7 @@
             success = true;
           } catch (error) {
             console.warn(`Attempt ${attempt + 1} failed:`, error);
-            await new Promise(resolve => setTimeout(resolve, 350 * (attempt + 1)));
+            await sleep(350 * (attempt + 1));
           }
         }
 
@@ -523,26 +581,41 @@
     }
 
     // Main initialization function
+    
     async function init() {
       try {
-        console.log('🎧 Starting comprehensive audiobook search for iD01t Productions...');
+        console.log('🎧 Fetching from Google Books…');
         const rawBooks = await fetchAllBooks();
-        console.log(`📚 Found ${rawBooks.length} total books from Google Books API`);
-        
         let allBooks = rawBooks.map(normalizeBook);
-        
-        // Filter to only audiobooks
-        const audiobooks = allBooks.filter(book => book.isAudiobook);
-        console.log(`🎵 Filtered to ${audiobooks.length} confirmed audiobooks`);
-        
-        // Log some sample titles for verification
-        if (audiobooks.length > 0) {
-          console.log('📖 Sample audiobook titles found:');
-          audiobooks.slice(0, 5).forEach(book => {
-            console.log(`  - "${book.title}" by ${book.authors} (${book.year || 'Unknown year'})`);
-          });
+        const audiobooks = allBooks.filter(b => b.isAudiobook);
+
+        // Resolve local URLs with throttle
+        if (audiobooks.length) {
+          const tasks = audiobooks.map(b => async () => { b.localUrl = await resolveLocalLanding(b); return b; });
+          for (let i=0; i<tasks.length; i+=6){ await Promise.all(tasks.slice(i,i+6).map(fn=>fn())); await sleep(60); }
         }
-        
+
+        populateLanguages(audiobooks);
+        setupEventListeners(audiobooks);
+        renderBooks(applyFilters(audiobooks), audiobooks);
+      } catch (err) {
+        console.warn('API failed, trying window fallback', err);
+        let fb = await loadWindowFallback();
+        if (!fb) {
+          console.warn('Window fallback missing, trying JSON fallback');
+          fb = await loadJsonFallback();
+        }
+        if (fb && fb.length) {
+          populateLanguages(fb);
+          setupEventListeners(fb);
+          renderBooks(applyFilters(fb), fb);
+        } else {
+          document.getElementById('loading').textContent = '⚠️ Could not load audiobooks. Please try again later.';
+          document.getElementById('empty').classList.remove('hidden');
+        }
+      }
+    }
+    
         // Resolve local URLs for audiobooks (with throttling)
         if (audiobooks.length > 0) {
           console.log('🔗 Resolving local landing pages...');
