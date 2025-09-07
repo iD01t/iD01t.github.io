@@ -287,7 +287,7 @@
 
 
   <script>
-    // Theme functionality
+    // Theme functionality - run immediately
     function initTheme() {
       const savedTheme = localStorage.getItem('theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -302,38 +302,43 @@
       return isDark;
     }
     
-    // Initialize theme on page load
+    // Initialize theme immediately
     const currentTheme = initTheme();
     
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      // Set initial button state
-      themeToggle.setAttribute('aria-pressed', String(currentTheme));
-      themeToggle.textContent = currentTheme ? 'Light' : 'Dark';
+    // Wait for DOM to be ready for button setup
+    document.addEventListener('DOMContentLoaded', function() {
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('themeToggle');
       
-      themeToggle.addEventListener('click', function() {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeToggle.setAttribute('aria-pressed', String(isDark));
-        themeToggle.textContent = isDark ? 'Light' : 'Dark';
-      });
-    }
-    
-    // Mobile menu functionality
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-    
-    // Year update
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
+      if (themeToggle) {
+        // Set initial button state
+        themeToggle.setAttribute('aria-pressed', String(currentTheme));
+        themeToggle.textContent = currentTheme ? 'Light' : 'Dark';
+        
+        themeToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          themeToggle.setAttribute('aria-pressed', String(isDark));
+          themeToggle.textContent = isDark ? 'Light' : 'Dark';
+        });
+      }
+      
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Year update
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
   </script>
 </body>
 </html>
