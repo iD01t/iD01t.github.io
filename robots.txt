@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://id01t.github.io/sitemap.xml
+
+Sitemap: https://id01t.store/sitemap.xml

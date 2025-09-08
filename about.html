@@ -4,7 +4,52 @@
 <meta name="theme-color" content="#16185c"/><script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}}}}};</script>
 <link rel="stylesheet" href="/css/custom.css">
-</head><body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+</head>
+  <!-- Analytics & Pixels -->
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'META_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
+  /></noscript>
+
+  <!-- X Pixel -->
+  <script>
+    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+    twq('init','X_PIXEL_ID');
+    twq('track','PageView');
+  </script>
+
+  <!-- TikTok Pixel -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]. daarom="1.2.10",ttq._i[e].setAndDefer(ttq._i[e],"setEvtId",n),ttq.setAndDefer(ttq,"load",e);if(e)return document.getElementById(e);var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+      ttq.load('TIKTOK_PIXEL_ID');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
 
   <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +59,16 @@
           <span class="font-semibold tracking-tight">iD01t Productions</span>
         </a>
         <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
-          <a href="/store.html" class="link-underline">Store</a> <a href="/ebooks.html" class="link-underline">eBooks</a> <a href="/audiobooks.html" class="link-underline">Audiobooks</a> <a href="/apps.html" class="link-underline">Apps</a> <a href="/games.html" class="link-underline">Games</a> <a href="/music.html" class="link-underline">Music</a> <a href="/blog.html" class="link-underline">Blog</a> <a href="/about.html" class="link-underline text-brand-600 dark:text-brand-400">About</a> <a href="/contact.html" class="link-underline">Contact</a>
+          <a href="/index.html" class="link-underline">Home</a>
+          <a href="/store.html" class="link-underline">Store</a>
+          <a href="/apps.html" class="link-underline">Apps</a>
+          <a href="/ebooks.html" class="link-underline">eBooks</a>
+          <a href="/audiobooks.html" class="link-underline">Audiobooks</a>
+          <a href="/games.html" class="link-underline">Games</a>
+          <a href="/music.html" class="link-underline">Music</a>
+          <a href="/blog.html" class="link-underline">Blog</a>
+          <a href="/about.html" class="link-underline text-brand-600 dark:text-brand-400">About</a>
+          <a href="/contact.html" class="link-underline">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
           <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
@@ -27,7 +81,16 @@
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
       <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2">eBooks</a><a href="/audiobooks.html" class="py-2">Audiobooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/blog.html" class="py-2">Blog</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a>
+        <a href="/index.html" class="py-2">Home</a>
+        <a href="/store.html" class="py-2">Store</a>
+        <a href="/apps.html" class="py-2">Apps</a>
+        <a href="/ebooks.html" class="py-2">eBooks</a>
+        <a href="/audiobooks.html" class="py-2">Audiobooks</a>
+        <a href="/games.html" class="py-2">Games</a>
+        <a href="/music.html" class="py-2">Music</a>
+        <a href="/blog.html" class="py-2">Blog</a>
+        <a href="/about.html" class="py-2 text-brand-600 dark:text-brand-400">About</a>
+        <a href="/contact.html" class="py-2">Contact</a>
       </div>
     </div>
   </header>
