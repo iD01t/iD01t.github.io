@@ -14,15 +14,14 @@
   // Header + footer inject
   function header(active){
     const links = [
+      ["Home","/index.html"],
       ["Store","/store.html"],
+      ["Apps","/apps.html"],
       ["eBooks","/ebooks.html"],
       ["Audiobooks","/audiobooks.html"],
-      ["Series","/series.html"],
-      ["Apps","/apps.html"],
       ["Games","/games.html"],
       ["Music","/music.html"],
-      ["Services","/services.html"],
-      ["Portfolio","/portfolio.html"],
+      ["Blog","/blog.html"],
       ["About","/about.html"],
       ["Contact","/contact.html"]
     ];
