@@ -99,3 +99,45 @@
     });
   });
 })();
+
+// Minimal in-page product registry example; replace with your real dataset
+window.PRODUCTS = window.PRODUCTS || {
+  "html2exe-pro": {
+    title: "HTML2exe Pro",
+    subtitle: "Turn HTML into Windows .exe",
+    image: "/assets/apps/html2exe-pro/cover-1200.jpg",
+    bullets: [
+      "Local, offline builds",
+      "No telemetry, no accounts",
+      "Includes templates and CI tips"
+    ],
+    price: "19.00 CAD",
+    buy: "https://your-checkout-link"
+  }
+};
+
+function openProductModal(slug) {
+  const p = window.PRODUCTS[slug];
+  if (!p) return;
+  document.getElementById("pm-title").textContent = p.title;
+  document.getElementById("pm-sub").textContent = p.subtitle || "";
+  document.getElementById("pm-image").src = p.image || "";
+  const ul = document.getElementById("pm-bullets");
+  ul.innerHTML = "";
+  (p.bullets || []).forEach(b => {
+    const li = document.createElement("li");
+    li.textContent = b;
+    ul.appendChild(li);
+  });
+  const buy = document.getElementById("pm-buy");
+  buy.textContent = `Buy • ${p.price || "View"}`;
+  buy.href = p.buy || "#";
+  document.getElementById("product-modal").style.display = "block";
+  document.getElementById("product-modal").setAttribute("aria-hidden","false");
+}
+
+function closeProductModal() {
+  const m = document.getElementById("product-modal");
+  m.style.display = "none";
+  m.setAttribute("aria-hidden","true");
+}

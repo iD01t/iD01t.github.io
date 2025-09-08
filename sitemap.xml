@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://id01t.github.io/</loc></url>
-  <url><loc>https://id01t.github.io/index.html</loc></url>
-  <url><loc>https://id01t.github.io/store.html</loc></url>
-  <url><loc>https://id01t.github.io/ebooks.html</loc></url>
-  <url><loc>https://id01t.github.io/audiobooks.html</loc></url>
-  <url><loc>https://id01t.github.io/apps.html</loc></url>
-  <url><loc>https://id01t.github.io/games.html</loc></url>
-  <url><loc>https://id01t.github.io/music.html</loc></url>
-  <url><loc>https://id01t.github.io/blog.html</loc></url>
-  <url><loc>https://id01t.github.io/about.html</loc></url>
-  <url><loc>https://id01t.github.io/contact.html</loc></url>
-  <url><loc>https://id01t.github.io/legal/terms.html</loc></url>
-  <url><loc>https://id01t.github.io/legal/privacy.html</loc></url>
-  <url><loc>https://id01t.github.io/legal/refunds.html</loc></url>
+  <url><loc>https://id01t.store/</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/about.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/apps.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/audiobooks.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/blog.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/blog/html2exe-pro-launch.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/blog/kitties-mayhem-beta.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/contact.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/ebooks.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/ebooks/chess-mastery.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/ebooks/diy-digital-skills.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/ebooks/veo3-json-guide.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/games.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/music.html</loc><lastmod>2025-09-08</lastmod></url>
+  <url><loc>https://id01t.store/store.html</loc><lastmod>2025-09-08</lastmod></url>
 </urlset>
