@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head>
+     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+     <title id="title">Loading…</title>
+     <link rel="preload" href="/data/ebooks.json" as="fetch" crossorigin>
+     <script>
+       async function boot(){
+         const params=new URLSearchParams(location.search);const slug=params.get("slug");
+         if(!slug){document.body.innerHTML="<h1>Missing slug</h1>";return;}
+         const data=await fetch("/data/ebooks.json",{cache:"no-store"}).then(r=>r.json());
+         const e=data.find(x=>x.slug===slug); if(!e){document.body.innerHTML="<h1>Not found</h1>";return;}
+         // SEO updates
+         document.title = e.title + " — iD01t Productions";
+         const canonical = location.origin + "/ebooks/" + e.slug + ".html";
+         const s = (n,c)=>{let m=document.querySelector(`meta[name='${n}']`)||document.head.appendChild(Object.assign(document.createElement("meta"),{name:n}));m.setAttribute("content",c)}
+         s("description", e.subtitle||e.description?.slice(0,160)||"");
+         // Render
+         document.getElementById("app").innerHTML = `
+           <main class="wrap">
+             <header class="hero">
+               <img src="${e.cover}" alt="${e.title} cover" width="400" height="600" loading="eager">
+               <div><h1>${e.title}</h1><p>${e.subtitle||""}</p>
+               <p><strong>$${e.price} ${e.currency}</strong></p>
+               ${Object.entries(e.buyLinks||{}).map(([k,v])=>`<a class="btn" href="${v}" rel="nofollow">Buy on ${k}</a>`).join(" ")}
+               </div>
+             </header>
+             <section><h2>About</h2><p>${e.description||""}</p></section>
+             <section class="meta">
+               <ul>
+                 <li>ISBN: ${e.isbn||"—"}</li>
+                 <li>Pages: ${e.pages||"—"}</li>
+                 <li>Language: ${e.language||"—"}</li>
+                 <li>Categories: ${(e.categories||[]).join(", ")}</li>
+                 <li>Tags: ${(e.tags||[]).join(", ")}</li>
+                 <li>Published: ${e.published||"—"}</li>
+                 <li>Updated: ${e.updated||"—"}</li>
+               </ul>
+             </section>
+             <section><h3>More by the author</h3><div id="related"></div></section>
+           </main>`;
+         // Simple related
+         const rel=data.filter(x=>x.slug!==e.slug && (x.categories?.some(c=>e.categories?.includes(c)))).slice(0,6);
+         document.getElementById("related").innerHTML = rel.map(x=>`
+           <a class="card" href="/ebook.html?slug=${x.slug}">
+             <img src="${x.cover}" alt="${x.title}" width="160" height="240"><div>${x.title}</div>
+           </a>`).join("");
+       }
+       boot();
+     </script>
+     <style>
+       body{font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;margin:0;background:#0b0d10;color:#e6ecf1}
+       .wrap{max-width:1100px;margin:auto;padding:24px}
+       .hero{display:grid;grid-template-columns:400px 1fr;gap:24px;align-items:center}
+       .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:#0ea5e9;color:#fff;text-decoration:none}
+       .card{display:inline-block;margin:10px;padding:10px;border-radius:12px;background:#111826;text-decoration:none;color:#e6ecf1}
+       img{border-radius:12px}
+     </style>
+   </head><body><div id="app">Loading…</div></body></html>
