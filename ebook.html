@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><head>
+     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+     <title id="title">Loading…</title>
+     <link rel="preload" href="/data/ebooks.json" as="fetch" crossorigin>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+       tailwind.config = {
+         theme: {
+           extend: {
+             colors: {
+               brand: {50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}
+             }
+           }
+         }
+       };
+     </script>
+     <link rel="stylesheet" href="/css/custom.css">
+     <style>
+       .link-underline { position: relative; }
+       .link-underline::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: currentColor; transform:scaleX(0); transform-origin:left; transition: transform .2s; }
+       .link-underline:hover::after { transform:scaleX(1); }
+       body{font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;margin:0;background:#0b0d10;color:#e6ecf1}
+       .wrap{max-width:1100px;margin:auto;padding:24px}
+       .hero{display:grid;grid-template-columns:400px 1fr;gap:24px;align-items:center}
+       .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:#0ea5e9;color:#fff;text-decoration:none}
+       .card{display:inline-block;margin:10px;padding:10px;border-radius:12px;background:#111826;text-decoration:none;color:#e6ecf1}
+       img{border-radius:12px}
+     </style>
+   </head><body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+    <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2" aria-label="Home">
+          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+          <span class="font-semibold tracking-tight">iD01t Productions</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+          <a href="/index.html" class="link-underline">Home</a>
+          <a href="/store.html" class="link-underline">Store</a>
+          <a href="/apps.html" class="link-underline">Apps</a>
+          <a href="/ebooks.html" class="link-underline text-brand-600 dark:text-brand-400">eBooks</a>
+          <a href="/audiobooks.html" class="link-underline">Audiobooks</a>
+          <a href="/games.html" class="link-underline">Games</a>
+          <a href="/music.html" class="link-underline">Music</a>
+          <a href="/blog.html" class="link-underline">Blog</a>
+          <a href="/about.html" class="link-underline">About</a>
+          <a href="/contact.html" class="link-underline">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="/index.html" class="py-2">Home</a>
+        <a href="/store.html" class="py-2">Store</a>
+        <a href="/apps.html" class="py-2">Apps</a>
+        <a href="/ebooks.html" class="py-2 text-brand-600 dark:text-brand-400">eBooks</a>
+        <a href="/audiobooks.html" class="py-2">Audiobooks</a>
+        <a href="/games.html" class="py-2">Games</a>
+        <a href="/music.html" class="py-2">Music</a>
+        <a href="/blog.html" class="py-2">Blog</a>
+        <a href="/about.html" class="py-2">About</a>
+        <a href="/contact.html" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+    <div id="app">Loading…</div>
+    <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <p class="font-semibold">iD01t Productions</p>
+          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
+        </div>
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a href="/legal/terms.html" class="link-underline">Terms</a>
+          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
+          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
+          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Shared UI
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function(){
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+      });
+    }
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function(){
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+       async function boot(){
+         const params=new URLSearchParams(location.search);const slug=params.get("slug");
+         if(!slug){document.body.innerHTML="<h1>Missing slug</h1>";return;}
+         const data=await fetch("/data/ebooks.json",{cache:"no-store"}).then(r=>r.json());
+         const e=data.find(x=>x.slug===slug); if(!e){document.body.innerHTML="<h1>Not found</h1>";return;}
+         // SEO updates
+         document.title = e.title + " — iD01t Productions";
+         const canonical = location.origin + "/ebooks/" + e.slug + ".html";
+         const s = (n,c)=>{let m=document.querySelector(`meta[name='${n}']`)||document.head.appendChild(Object.assign(document.createElement("meta"),{name:n}));m.setAttribute("content",c)}
+         s("description", e.subtitle||e.description?.slice(0,160)||"");
+         // Render
+         document.getElementById("app").innerHTML = `
+           <main class="wrap">
+             <header class="hero">
+               <img src="${e.cover}" alt="${e.title} cover" width="400" height="600" loading="eager">
+               <div><h1>${e.title}</h1><p>${e.subtitle||""}</p>
+               <p><strong>$${e.price} ${e.currency}</strong></p>
+               ${Object.entries(e.buyLinks||{}).map(([k,v])=>`<a class="btn" href="${v}" rel="nofollow">Buy on ${k}</a>`).join(" ")}
+               </div>
+             </header>
+             <section><h2>About</h2><p>${e.description||""}</p></section>
+             <section class="meta">
+               <ul>
+                 <li>ISBN: ${e.isbn||"—"}</li>
+                 <li>Pages: ${e.pages||"—"}</li>
+                 <li>Language: ${e.language||"—"}</li>
+                 <li>Categories: ${(e.categories||[]).join(", ")}</li>
+                 <li>Tags: ${(e.tags||[]).join(", ")}</li>
+                 <li>Published: ${e.published||"—"}</li>
+                 <li>Updated: ${e.updated||"—"}</li>
+               </ul>
+             </section>
+             <section><h3>More by the author</h3><div id="related"></div></section>
+           </main>`;
+         // Simple related
+         const rel=data.filter(x=>x.slug!==e.slug && (x.categories?.some(c=>e.categories?.includes(c)))).slice(0,6);
+         document.getElementById("related").innerHTML = rel.map(x=>`
+           <a class="card" href="/ebook.html?slug=${x.slug}">
+             <img src="${x.cover}" alt="${x.title}" width="160" height="240"><div>${x.title}</div>
+           </a>`).join("");
+       }
+       boot();
+     </script>
+</body></html>
