@@ -25,11 +25,11 @@
     .link-underline::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: currentColor; transform:scaleX(0); transform-origin:left; transition: transform .2s; }
     .link-underline:hover::after { transform:scaleX(1); }
   </style>
-  
+
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   <!-- Header copied from games.html -->
-  
+
   <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
@@ -73,14 +73,13 @@
       </div>
     </div>
   </header>
-    
+
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">eBooks</h1>
       <p class="mt-3 text-slate-600 dark:text-slate-300">Guides for developers and creators. Clear steps, real examples, fast results.</p>
-      <p class="mt-1 text-xs text-slate-500">Catalog auto-populated from Google Books • Last updated: September 06, 2025</p>
     </div>
   </section>
 
@@ -98,8 +97,6 @@
           <select id="sort" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
             <option value="newest">Newest</option>
             <option value="title">Title A–Z</option>
-            <option value="priceAsc">Price ↑</option>
-            <option value="priceDesc">Price ↓</option>
           </select>
           <button id="resetBtn" class="rounded-full border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm">Reset</button>
         </div>
@@ -108,14 +105,11 @@
       <!-- Grid -->
       <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
 
-      <div id="loadMoreWrap" class="flex justify-center mt-8">
-        <button id="loadMore" class="hidden rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Load more</button>
-      </div>
     </div>
   </main>
 
   <!-- Footer copied from games.html -->
-  
+
   <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -155,180 +149,77 @@
       });
     }
 
-    // ---- Bulletproof Google Books API client ----
-    const CONFIG = {
-      publisher: "iD01t Productions",
-      author: "Guillaume Lessard",
-      langRestrict: "",
-      maxPerPage: 24,
-      apiKey: "", // optional: add key for higher quota
-      partnerBuyBase: "https://play.google.com/store/books/details",
-      utm: "utm_source=id01t_site&utm_medium=card&utm_campaign=ebooks_catalog"
-    };
-
-    const FALLBACK = [
-      {
-        id: "33eCEQAAQBAJ",
-        title: "Understanding Your Cat’s Mind",
-        subtitle: "Beyond the Veil",
-        authors: ["Guillaume Lessard"],
-        thumbnail: "https://books.google.com/books/publisher/content?id=33eCEQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&source=gbs_api",
-        description: "Explore feline consciousness and deepen your bond."
-      },
-      {
-        id: "R4dBEQAAQBAJ",
-        title: "Mastering AEO",
-        subtitle: "Advanced Ecommerce Optimization",
-        authors: ["Guillaume Lessard"],
-        thumbnail: "https://books.google.com/books/publisher/content?id=R4dBEQAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&source=gbs_api",
-        description: "Dominate organic discovery and conversions."
-      }
-    ];
-
     const grid = document.getElementById('grid');
     const qInput = document.getElementById('q');
     const sortSel = document.getElementById('sort');
-    const loadMoreBtn = document.getElementById('loadMore');
 
-    let state = { items: [], startIndex: 0, total: 0, query: "", loading: false };
+    let allEbooks = [];
 
-    function buildQuery() {
-      const parts = [];
-      if (CONFIG.publisher) parts.push(`inpublisher:"${CONFIG.publisher}"`);
-      if (CONFIG.author) parts.push(`inauthor:"${CONFIG.author}"`);
-      if (state.query) parts.push(state.query);
-      return parts.join(" + ");
-    }
+    function card(ebook) {
+      const { slug, title, subtitle, authors, cover, description, price, currency } = ebook;
+      const detailsUrl = `/ebook.html?slug=${slug}`;
+      const buyLink = ebook.buyLinks.GoogleBooks;
 
-    function apiURL(startIndex=0) {
-      const base = "https://www.googleapis.com/books/v1/volumes";
-      const params = new URLSearchParams({
-        q: buildQuery(),
-        maxResults: String(Math.min(CONFIG.maxPerPage, 40)),
-        startIndex: String(startIndex),
-        printType: "books",
-        projection: "full",
-        orderBy: sortSel.value === "newest" ? "newest" : undefined,
-        langRestrict: CONFIG.langRestrict || undefined,
-        key: CONFIG.apiKey || undefined
-      });
-      [...params.keys()].forEach(k => params.get(k) === "undefined" && params.delete(k));
-      return `${base}?${params.toString()}`;
-    }
-
-    function priceFromSaleInfo(saleInfo) {
-      try {
-        if (saleInfo && saleInfo.retailPrice) return saleInfo.retailPrice.amount;
-        if (saleInfo && saleInfo.listPrice) return saleInfo.listPrice.amount;
-      } catch(_){}
-      return null;
-    }
-
-    function buyURL(volume) {
-      const id = volume.id;
-      const base = `${CONFIG.partnerBuyBase}?id=${encodeURIComponent(id)}`;
-      return `${base}&${CONFIG.utm}`;
-    }
-
-    function card(v) {
-      const info = v.volumeInfo || {}, sale = v.saleInfo || {};
-      const title = info.title || "Untitled";
-      const subtitle = info.subtitle || "";
-      const authors = (info.authors || []).join(", ");
-      const img = (info.imageLinks && (info.imageLinks.thumbnail || info.imageLinks.smallThumbnail)) || "";
-      const desc = (info.description || "").replace(/<[^>]+>/g,"").slice(0, 650);
-      const price = priceFromSaleInfo(sale);
-      const link = buyURL(v);
       return `
       <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col bg-white dark:bg-slate-900">
-        <img src="${img}" alt="${title}" class="w-full aspect-[3/4] object-cover">
+        <img src="${cover}" alt="${title}" class="w-full aspect-[3/4] object-cover">
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-semibold leading-snug">${title}</h3>
           ${subtitle ? `<p class="text-sm text-slate-500">${subtitle}</p>` : ""}
-          <p class="text-xs text-slate-500 mt-1">${authors}</p>
-          <p class="text-sm text-slate-700 dark:text-slate-300 mt-3 line-clamp-6">${desc}</p>
+          <p class="text-xs text-slate-500 mt-1">${authors.join(", ")}</p>
+          <p class="text-sm text-slate-700 dark:text-slate-300 mt-3 line-clamp-6">${description}</p>
           <div class="mt-auto pt-4 flex items-center justify-between">
-            <span class="text-sm">${price !== null ? `$${price.toFixed ? price.toFixed(2) : price}` : ""}</span>
-            <a href="${link}" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Buy on Google Play</a>
+            <span class="text-sm">${price ? `$${price} ${currency}` : ""}</span>
+            <div class="flex gap-2">
+              <a href="${detailsUrl}" class="rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm">Details</a>
+              <a href="${buyLink}" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Buy on Google Play</a>
+            </div>
           </div>
         </div>
       </article>`;
     }
 
-    function cardFromFallback(fb) {
-      const link = `${CONFIG.partnerBuyBase}?id=${encodeURIComponent(fb.id)}&${CONFIG.utm}`;
-      return `
-      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col bg-white dark:bg-slate-900">
-        <img src="${fb.thumbnail}" alt="${fb.title}" class="w-full aspect-[3/4] object-cover">
-        <div class="p-4 flex-1 flex flex-col">
-          <h3 class="font-semibold leading-snug">${fb.title}</h3>
-          ${fb.subtitle ? `<p class="text-sm text-slate-500">${fb.subtitle}</p>` : ""}
-          <p class="text-xs text-slate-500 mt-1">${(fb.authors||[]).join(", ")}</p>
-          <p class="text-sm text-slate-700 dark:text-slate-300 mt-3 line-clamp-6">${fb.description||""}</p>
-          <div class="mt-auto pt-4 flex items-center justify-end">
-            <a href="${link}" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Buy on Google Play</a>
-          </div>
-        </div>
-      </article>`;
+    function render(ebooks) {
+      grid.innerHTML = ebooks.map(card).join("");
     }
 
-    function render() {
-      const html = state.items.map(card).join("");
-      grid.innerHTML = html || FALLBACK.map(cardFromFallback).join("");
-      const more = state.startIndex + CONFIG.maxPerPage < state.total;
-      loadMoreBtn.classList.toggle("hidden", !more);
+    async function load() {
+      const res = await fetch('/data/ebooks.json');
+      allEbooks = await res.json();
+      render(allEbooks);
     }
 
-    async function fetchPage(startIndex) {
-      const url = apiURL(startIndex);
-      for (let attempt = 0; attempt < 3; attempt++) {
-        try {
-          const res = await fetch(url, { cache: "no-store" });
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          const data = await res.json();
-          return data;
-        } catch (err) {
-          await new Promise(r => setTimeout(r, 400 * (attempt+1))); // backoff
+    function sortAndFilter() {
+        let filtered = [...allEbooks];
+        const query = qInput.value.toLowerCase();
+
+        if (query) {
+            filtered = filtered.filter(ebook =>
+                ebook.title.toLowerCase().includes(query) ||
+                ebook.description.toLowerCase().includes(query)
+            );
         }
-      }
-      throw new Error("Network/API unavailable");
+
+        const sortBy = sortSel.value;
+        if (sortBy === 'title') {
+            filtered.sort((a, b) => a.title.localeCompare(b.title));
+        } else if (sortBy === 'newest') {
+            // Ensure published date exists before sorting
+            filtered.sort((a, b) => (b.published && a.published) ? new Date(b.published) - new Date(a.published) : 0);
+        }
+
+        render(filtered);
     }
 
-    async function load(reset=false) {
-      if (state.loading) return;
-      state.loading = true;
-      try {
-        if (reset) { state.startIndex = 0; state.items = []; state.total = 0; }
-        const data = await fetchPage(state.startIndex);
-        state.total = data.totalItems || 0;
-        const items = (data.items || []).filter(v => (v.volumeInfo||{}).title);
-        state.items = state.items.concat(items);
-        render();
-        state.startIndex += CONFIG.maxPerPage;
-      } catch (e) {
-        render(); // will show fallback
-      } finally {
-        state.loading = false;
-      }
-    }
+    qInput.addEventListener('input', sortAndFilter);
+    sortSel.addEventListener('change', sortAndFilter);
+    document.getElementById('resetBtn').addEventListener('click', () => {
+        qInput.value = "";
+        sortSel.value = "newest";
+        render(allEbooks);
+    });
 
-    function sortClient() {
-      if (!['title','priceAsc','priceDesc'].includes(sortSel.value)) return;
-      const items = [...state.items];
-      if (sortSel.value === 'title') items.sort((a,b) => (a.volumeInfo?.title||'').localeCompare(b.volumeInfo?.title||''));
-      if (sortSel.value === 'priceAsc') items.sort((a,b) => (priceFromSaleInfo(a.saleInfo)||1e9) - (priceFromSaleInfo(b.saleInfo)||1e9));
-      if (sortSel.value === 'priceDesc') items.sort((a,b) => (priceFromSaleInfo(b.saleInfo)||-1) - (priceFromSaleInfo(a.saleInfo)||-1));
-      state.items = items;
-      render();
-    }
-
-    qInput.addEventListener('input', () => { state.query = qInput.value.trim(); load(true); });
-    sortSel.addEventListener('change', () => { if (sortSel.value === 'newest') load(true); else sortClient(); });
-    document.getElementById('resetBtn').addEventListener('click', () => { qInput.value = ""; state.query = ""; sortSel.value = "newest"; load(true); });
-    loadMoreBtn.addEventListener('click', () => load(false));
-
-    // First load
-    load(true);
+    document.addEventListener('DOMContentLoaded', load);
   </script>
 </body>
 </html>
