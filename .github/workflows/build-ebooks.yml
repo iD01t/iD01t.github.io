@@ -11,6 +11,15 @@ on:
       - ".github/workflows/build-ebooks.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +27,7 @@ jobs:
       - name: Checkout (full)
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0     # ensure all files and history
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -34,7 +43,6 @@ jobs:
           git status
           ls -lR
 
-      # Robust locator: finds ebooks.json anywhere in the repo
       - name: Locate ebooks.json
         id: locate
         shell: bash
@@ -56,11 +64,8 @@ jobs:
       - name: Stage site into docs/
         run: |
           mkdir -p docs/ebooks docs/data
-          # Copy generated pages
-          cp -r ebooks/*.html docs/ebooks/ || true
-          # Copy dynamic fallback if present
+          cp -r ebooks/*.html docs/ebooks/ 2>/dev/null || true
           if [ -f "ebook.html" ]; then cp ebook.html docs/; fi
-          # Publish catalog for client-side use
           cp "$EBOOKS_JSON" docs/data/ebooks.json
 
       - name: Upload artifact
@@ -71,13 +76,10 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
