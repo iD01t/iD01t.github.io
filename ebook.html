@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head>
      <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
      <title id="title">Loading…</title>
-     <link rel="preload" href="/data/ebooks.json" as="fetch" crossorigin>
+     <link rel="preload" href="/assets/catalog.json" as="fetch" crossorigin>
      <script src="https://cdn.tailwindcss.com"></script>
      <script>
        tailwind.config = {
@@ -106,45 +106,50 @@
         mobileMenu.classList.toggle('hidden');
       });
     }
+    function slugify(text) {
+      return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+    }
        async function boot(){
          const params=new URLSearchParams(location.search);const slug=params.get("slug");
          if(!slug){document.body.innerHTML="<h1>Missing slug</h1>";return;}
-         const data=await fetch("/data/ebooks.json",{cache:"no-store"}).then(r=>r.json());
-         const e=data.find(x=>x.slug===slug); if(!e){document.body.innerHTML="<h1>Not found</h1>";return;}
+         const data=await fetch("/assets/catalog.json",{cache:"no-store"}).then(r=>r.json());
+         const e=data.ebooks.find(x=>slugify(x.title)===slug); if(!e){document.body.innerHTML="<h1>Not found</h1>";return;}
          // SEO updates
          document.title = e.title + " — iD01t Productions";
-         const canonical = location.origin + "/ebooks/" + e.slug + ".html";
+         const canonical = location.origin + "/ebooks/" + slug + ".html";
          const s = (n,c)=>{let m=document.querySelector(`meta[name='${n}']`)||document.head.appendChild(Object.assign(document.createElement("meta"),{name:n}));m.setAttribute("content",c)}
-         s("description", e.subtitle||e.description?.slice(0,160)||"");
+         s("description", e.description?.slice(0,160)||"");
          // Render
          document.getElementById("app").innerHTML = `
            <main class="wrap">
              <header class="hero">
-               <img src="${e.cover}" alt="${e.title} cover" width="400" height="600" loading="eager">
-               <div><h1>${e.title}</h1><p>${e.subtitle||""}</p>
-               <p><strong>$${e.price} ${e.currency}</strong></p>
-               ${Object.entries(e.buyLinks||{}).map(([k,v])=>`<a class="btn" href="${v}" rel="nofollow">Buy on ${k}</a>`).join(" ")}
+               <img src="${e.image}" alt="${e.title} cover" width="400" height="600" loading="eager">
+               <div><h1>${e.title}</h1><p>${e.description||""}</p>
+               <p><strong>$${e.price_cad} CAD</strong></p>
+               <a class="btn" href="${e.url}" rel="nofollow">Buy on Google Books</a>
                </div>
              </header>
              <section><h2>About</h2><p>${e.description||""}</p></section>
              <section class="meta">
                <ul>
-                 <li>ISBN: ${e.isbn||"—"}</li>
                  <li>Pages: ${e.pages||"—"}</li>
-                 <li>Language: ${e.language||"—"}</li>
-                 <li>Categories: ${(e.categories||[]).join(", ")}</li>
+                 <li>Language: ${e.lang||"—"}</li>
                  <li>Tags: ${(e.tags||[]).join(", ")}</li>
-                 <li>Published: ${e.published||"—"}</li>
-                 <li>Updated: ${e.updated||"—"}</li>
+                 <li>Published: ${e.date||"—"}</li>
                </ul>
              </section>
              <section><h3>More by the author</h3><div id="related"></div></section>
            </main>`;
          // Simple related
-         const rel=data.filter(x=>x.slug!==e.slug && (x.categories?.some(c=>e.categories?.includes(c)))).slice(0,6);
+         const rel=data.ebooks.filter(x=>slugify(x.title)!==slug && (x.tags?.some(c=>e.tags?.includes(c)))).slice(0,6);
          document.getElementById("related").innerHTML = rel.map(x=>`
-           <a class="card" href="/ebook.html?slug=${x.slug}">
-             <img src="${x.cover}" alt="${x.title}" width="160" height="240"><div>${x.title}</div>
+           <a class="card" href="/ebook.html?slug=${slugify(x.title)}">
+             <img src="${x.image}" alt="${x.title}" width="160" height="240"><div>${x.title}</div>
            </a>`).join("");
        }
        boot();

@@ -165,7 +165,7 @@
     }
 
     function card(ebook) {
-      const { title, description, image, link, price_cad } = ebook;
+      const { title, description, image, url, price_cad } = ebook;
       const slug = slugify(title);
       const detailsUrl = `/ebook.html?slug=${slug}`;
 
@@ -179,7 +179,7 @@
             <span class="text-sm">${price_cad ? `$${price_cad} CAD` : ""}</span>
             <div class="flex gap-2">
               <a href="${detailsUrl}" class="rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2 text-sm">Details</a>
-              <a href="${link}" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Buy on Google Play</a>
+              <a href="${url}" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm">Buy on Google Play</a>
             </div>
           </div>
         </div>

@@ -1,0 +1,28 @@
+name: Build ebook pages
+on:
+  push:
+    paths: [ "data/ebooks.json", "templates/**", "scripts/**" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.x" }
+      - run: pip install jinja2
+      - run: python scripts/build_ebook_pages.py
+        env: { SITE_ORIGIN: "https://id01t.store" }
+      - name: Publish to docs/ for GitHub Pages
+        run: |
+          mkdir -p docs/ebooks
+          cp -r ebooks/*.html docs/ebooks/
+          cp ebook.html docs/ # keep dynamic fallback if you want
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: docs }
+  deploy:
+    needs: build
+    permissions: { pages: write, id-token: write }
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4

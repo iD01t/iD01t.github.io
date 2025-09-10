@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ e.title }} — iD01t Productions</title>
+<link rel="canonical" href="{{ site_origin }}/ebooks/{{ e.slug }}.html">
+<meta name="description" content="{{ e.subtitle or e.description[:160] if e.description else '' }}">
+<meta property="og:title" content="{{ e.title }}"><meta property="og:type" content="book">
+<meta property="og:image" content="{{ e.cover }}"><meta property="og:description" content="{{ e.subtitle or '' }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"{{ e.title }}",
+ "author":[{% for a in e.authors %}{"@type":"Person","name":"{{ a }}"}{% if not loop.last %},{% endif %}{% endfor %}],
+ "isbn":"{{ e.isbn or '' }}","inLanguage":"{{ e.language or 'en' }}",
+ "image":"{{ e.cover }}","datePublished":"{{ e.published or '' }}"}
+</script>
+<style>
+    body{font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;margin:0;background:#0b0d10;color:#e6ecf1}
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    .hero{display:grid;grid-template-columns:400px 1fr;gap:24px;align-items:center}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:#0ea5e9;color:#fff;text-decoration:none}
+    .card{display:inline-block;margin:10px;padding:10px;border-radius:12px;background:#111826;text-decoration:none;color:#e6ecf1}
+    img{border-radius:12px}
+</style>
+</head><body>
+<main class="wrap">
+  <header class="hero">
+    <img src="{{ e.cover }}" alt="{{ e.title }} cover" width="400" height="600" loading="eager">
+    <div><h1>{{ e.title }}</h1><p>{{ e.subtitle or '' }}</p>
+      <p><strong>${{ e.price }} {{ e.currency }}</strong></p>
+      {% for k,v in (e.buyLinks or {}).items() %}
+        <a class="btn" href="{{ v }}" rel="nofollow">Buy on {{ k }}</a>
+      {% endfor %}
+    </div>
+  </header>
+  <section><h2>About</h2><p>{{ e.description or '' }}</p></section>
+  <section class="meta"><ul>
+    <li>ISBN: {{ e.isbn or '—' }}</li><li>Pages: {{ e.pages or '—' }}</li>
+    <li>Language: {{ e.language or '—' }}</li>
+    <li>Categories: {{ (e.categories or [])|join(', ') }}</li>
+    <li>Tags: {{ (e.tags or [])|join(', ') }}</li>
+    <li>Published: {{ e.published or '—' }}</li>
+    <li>Updated: {{ e.updated or '—' }}</li>
+  </ul></section>
+</main>
+</body></html>
