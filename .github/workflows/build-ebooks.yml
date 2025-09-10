@@ -2,6 +2,7 @@ name: Build ebook pages
 
 on:
   push:
+    branches: [ main ]
     paths:
       - "data/**"
       - "templates/**"
@@ -14,8 +15,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout (full)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # ensure all files and history
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,24 +28,21 @@ jobs:
       - name: Install deps
         run: pip install jinja2
 
-      # Detect ebooks.json wherever it lives and export EBOOKS_JSON for the script
+      - name: List files for debugging
+        run: |
+          pwd
+          git status
+          ls -lR
+
+      # Robust locator: finds ebooks.json anywhere in the repo
       - name: Locate ebooks.json
+        id: locate
+        shell: bash
         run: |
           set -e
-          CANDIDATES=(
-            "data/ebooks.json"
-            "docs/data/ebooks.json"
-            "site/data/ebooks.json"
-            "content/data/ebooks.json"
-            "assets/ebooks.json"
-          )
-          FOUND=""
-          for p in "${CANDIDATES[@]}"; do
-            if [ -f "$p" ]; then FOUND="$p"; break; fi
-          done
+          FOUND="$(find . -type f -name 'ebooks.json' | head -n 1 || true)"
           if [ -z "$FOUND" ]; then
-            echo "ebooks.json not found in common locations. Tree for debugging:"
-            ls -R
+            echo "ebooks.json not found!"
             exit 1
           fi
           echo "Found catalog at: $FOUND"
@@ -55,14 +55,13 @@ jobs:
 
       - name: Stage site into docs/
         run: |
-          mkdir -p docs/ebooks
+          mkdir -p docs/ebooks docs/data
+          # Copy generated pages
           cp -r ebooks/*.html docs/ebooks/ || true
+          # Copy dynamic fallback if present
           if [ -f "ebook.html" ]; then cp ebook.html docs/; fi
-          # Optional: ship the JSON to docs for client-side use
-          if [ -n "${EBOOKS_JSON:-}" ]; then
-            mkdir -p docs/data
-            cp "$EBOOKS_JSON" docs/data/ebooks.json || true
-          fi
+          # Publish catalog for client-side use
+          cp "$EBOOKS_JSON" docs/data/ebooks.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
