@@ -3,9 +3,10 @@ name: Build ebook pages
 on:
   push:
     paths:
-      - "data/ebooks.json"
+      - "data/**"
       - "templates/**"
       - "scripts/**"
+      - "docs/**"
       - ".github/workflows/build-ebooks.yml"
   workflow_dispatch:
 
@@ -24,6 +25,29 @@ jobs:
       - name: Install deps
         run: pip install jinja2
 
+      # Detect ebooks.json wherever it lives and export EBOOKS_JSON for the script
+      - name: Locate ebooks.json
+        run: |
+          set -e
+          CANDIDATES=(
+            "data/ebooks.json"
+            "docs/data/ebooks.json"
+            "site/data/ebooks.json"
+            "content/data/ebooks.json"
+            "assets/ebooks.json"
+          )
+          FOUND=""
+          for p in "${CANDIDATES[@]}"; do
+            if [ -f "$p" ]; then FOUND="$p"; break; fi
+          done
+          if [ -z "$FOUND" ]; then
+            echo "ebooks.json not found in common locations. Tree for debugging:"
+            ls -R
+            exit 1
+          fi
+          echo "Found catalog at: $FOUND"
+          echo "EBOOKS_JSON=$FOUND" >> "$GITHUB_ENV"
+
       - name: Generate ebook pages
         run: python scripts/build_ebook_pages.py
         env:
@@ -33,8 +57,12 @@ jobs:
         run: |
           mkdir -p docs/ebooks
           cp -r ebooks/*.html docs/ebooks/ || true
-          # keep dynamic fallback if desired
           if [ -f "ebook.html" ]; then cp ebook.html docs/; fi
+          # Optional: ship the JSON to docs for client-side use
+          if [ -n "${EBOOKS_JSON:-}" ]; then
+            mkdir -p docs/data
+            cp "$EBOOKS_JSON" docs/data/ebooks.json || true
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
