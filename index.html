@@ -34,137 +34,10 @@
     tailwind.config = {theme:{extend:{colors:{brand:{50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}}}}};
   </script>
   <link rel="stylesheet" href="/css/custom.css">
-  <style>
-    .link-underline { position: relative; }
-    .link-underline::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: currentColor; transform:scaleX(0); transform-origin:left; transition: transform .2s; }
-    .link-underline:hover::after { transform:scaleX(1); }
-  </style>
-  
-
-  <!-- Organization + WebSite + SearchAction -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"iD01t Productions",
-    "url":"https://id01t.github.io/",
-    "logo":"https://id01t.github.io/assets/img/brand/logo.png",
-    "sameAs":[
-      "https://github.com/id01t",
-      "https://id01t.itch.io",
-      "https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB",
-      "https://music.apple.com/us/artist/dj-id01t/1803964475"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://id01t.github.io/",
-    "name":"iD01t Productions",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://id01t.github.io/search.html?q={query}",
-      "query-input":"required name=query"
-    }
-  }
-  </script>
-
-  <!-- Key entity JSON-LD pulled from real pages -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"SoftwareApplication",
-    "name":"HTML2exe Pro",
-    "applicationCategory":"DeveloperApplication",
-    "operatingSystem":"Windows",
-    "publisher":{"@type":"Organization","name":"iD01t Productions"},
-    "url":"https://id01t.itch.io/html2exe"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"VideoGame",
-    "name":"Nini’s Adventures: Kitties Mayhem!",
-    "url":"https://id01t.github.io/games.html",
-    "gamePlatform":"PC",
-    "applicationCategory":"Game",
-    "author":{"@type":"Organization","name":"iD01t Productions"}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"MusicGroup",
-    "name":"DJ iD01t",
-    "url":"https://id01t.github.io/music.html"
-  }
-  </script>
-
-  <!-- FAQ schema to gain rich results -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Quels types d’apps proposez-vous ?","acceptedAnswer":{"@type":"Answer","text":"Des utilitaires Windows pro (packaging Python→EXE, créateur d’apps HTML→EXE, outils créatifs) avec design moderne et support."}},
-      {"@type":"Question","name":"Où trouver vos eBooks ?","acceptedAnswer":{"@type":"Answer","text":"Nos eBooks sont listés sur la page eBooks et disponibles via Google Play Books et Apple Books."}},
-      {"@type":"Question","name":"Quand commence la bêta de Nini’s Adventures ?","acceptedAnswer":{"@type":"Answer","text":"La bêta PC publique ouvre le 24 septembre 2025. Inscription sur la page d’accueil ou la page Games."}}
-    ]
-  }
-  </script>
-
-  <!-- Analytics & Pixels -->
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'META_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
-  /></noscript>
-
-  <!-- X Pixel -->
-  <script>
-    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-    twq('init','X_PIXEL_ID');
-    twq('track','PageView');
-  </script>
-
-  <!-- TikTok Pixel -->
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]. daarom="1.2.10",ttq._i[e].setAndDefer(ttq._i[e],"setEvtId",n),ttq.setAndDefer(ttq,"load",e);if(e)return document.getElementById(e);var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-      ttq.load('TIKTOK_PIXEL_ID');
-      ttq.page();
-    }(window, document, 'ttq');
-  </script>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
 
-  <!-- Header (match site shell) -->
-  
+  <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
@@ -184,31 +57,9 @@
           <a href="/about.html" class="link-underline">About</a>
           <a href="/contact.html" class="link-underline">Contact</a>
         </nav>
-        <div class="flex items-center gap-3">
-          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/index.html" class="py-2">Home</a>
-        <a href="/store.html" class="py-2">Store</a>
-        <a href="/apps.html" class="py-2">Apps</a>
-        <a href="/ebooks.html" class="py-2">eBooks</a>
-        <a href="/audiobooks.html" class="py-2">Audiobooks</a>
-        <a href="/games.html" class="py-2">Games</a>
-        <a href="/music.html" class="py-2">Music</a>
-        <a href="/blog.html" class="py-2">Blog</a>
-        <a href="/about.html" class="py-2">About</a>
-        <a href="/contact.html" class="py-2">Contact</a>
       </div>
     </div>
   </header>
-    
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
@@ -217,14 +68,11 @@
         <div>
           <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Apps and content that accelerate your projects</h1>
           <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Built on real products: Windows utilities, technical eBooks, online multiplayer games, and original music. Focused on speed, automation, and clean design.</p>
-          
-<div class="mt-6 flex gap-4">
-  <a href="/apps.html" class="flex-1 text-center inline-flex items-center justify-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Discover Apps</a>
-  <a href="/ebooks.html" class="flex-1 text-center inline-flex items-center justify-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Browse eBooks</a>
-  <a href="/music.html" class="flex-1 text-center inline-flex items-center justify-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Listen to DJ iD01t</a>
-</div>
-
-          <p class="mt-3 text-xs text-slate-500">Updated September 06, 2025</p>
+          <div class="mt-6 flex gap-4">
+            <a href="/apps.html" class="flex-1 text-center inline-flex items-center justify-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Discover Apps</a>
+            <a href="/ebooks.html" class="flex-1 text-center inline-flex items-center justify-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Browse eBooks</a>
+            <a href="/music.html" class="flex-1 text-center inline-flex items-center justify-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Listen to DJ iD01t</a>
+          </div>
         </div>
         <div>
           <img src="/assets/img/placeholders/hero-1600x900.webp" alt="Produits iD01t : aperçu" class="aspect-[16/10] rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-slate-800">
@@ -233,103 +81,21 @@
     </div>
   </section>
 
-  
-  <!-- Welcome Announcement -->
-  <section class="py-8 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-6 items-center rounded-2xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900">
-        <img src="/assets/img/brand/giro.png" alt="Girom@in" class="w-full aspect-square object-cover rounded-xl ring-1 ring-slate-200 dark:ring-slate-800 md:col-span-1">
-        <div class="md:col-span-2">
-          <h2 class="text-2xl font-semibold">🚀✨ Welcome aboard Girom@in 🎉</h2>
-          <p class="mt-3 text-slate-700 dark:text-slate-300">The whole iD01t Productions team is proud to have you join as our new developer. You are diving right in with Nini’s Adventures: Kitties Mayhem and will also contribute to other exciting projects that will expand our creative universe.</p>
-          <p class="mt-3 text-slate-700 dark:text-slate-300">And as if that was not enough, today is also your birthday 🎂🔥</p>
-          <p class="mt-3 text-slate-700 dark:text-slate-300">A double celebration for a friend and a talented creator. Cheers to you, Girom@in. We are honored to have you with us 🙌💻🎮</p>
+  <!-- New App Release -->
+  <section class="py-12 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-6 items-center">
+      <img src="https://img.itch.zone/aW1nLzE5NTQ3OTM2LnBuZw==/original/abcd1234.png" alt="CryptoPulse Monitor" class="w-full aspect-[16/9] object-cover rounded-xl ring-1 ring-slate-200 dark:ring-slate-800">
+      <div>
+        <h2 class="text-2xl font-semibold">CryptoPulse Monitor Release</h2>
+        <p class="mt-3 text-slate-700 dark:text-slate-300">CryptoPulse Monitor is now available. This professional cryptocurrency tracker provides real time monitoring with alerts and clean design. Built for traders and creators who want clarity and speed in one pro app.</p>
+        <div class="mt-4">
+          <iframe frameborder="0" src="https://itch.io/embed/3870085?linkback=true&amp;border_width=3&amp;dark=true" width="556" height="171"><a href="https://id01t.itch.io/cryptopulse-monitor">CryptoPulse Monitor by iD01t Productions</a></iframe>
         </div>
       </div>
-    </div>
-  </section>
-
-<!-- Trust / Highlights pulled from real pages -->
-  <section class="py-12 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
-      <img src="/c43cedc5-98a1-4c85-8435-2482eafb8c67.png" alt="HTML2exe Pro" class="w-full aspect-[16/9] object-cover rounded-xl mb-3 ring-1 ring-slate-200 dark:ring-slate-800"><article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5"><h3 class="font-semibold">HTML2exe Pro</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Turn an HTML folder or URL into a Windows app with a modern interface, preview, icons, and safeguards.</p>
-        <a class="link-underline text-sm mt-3 inline-block" href="/apps.html#html2exe">View app</a>
-      </article>
-      <img src="/1a031cc5-3393-43fb-81b2-a5fded519458.png" alt="Nini’s Adventures: Kitties Mayhem!" class="w-full aspect-[16/9] object-cover rounded-xl mb-3 ring-1 ring-slate-200 dark:ring-slate-800"><article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5"><h3 class="font-semibold">Nini’s Adventures: Kitties Mayhem!</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Fast online shooter. Public PC beta on September 24, 2025.</p>
-        <a class="link-underline text-sm mt-3 inline-block" href="/games.html">View game</a>
-      </article>
-      <img src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/img/brand/ebooks.png?raw=true" alt="eBooks for developers" class="w-full aspect-[16/9] object-cover rounded-xl mb-3 ring-1 ring-slate-200 dark:ring-slate-800"><article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5"><h3 class="font-semibold">eBooks for developers</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Hands on guides about automation, AI, and digital creation. Catalog powered by Google Books.</p>
-        <a class="link-underline text-sm mt-3 inline-block" href="/ebooks.html">View titles</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- Blog teasers (internal links) -->
-  <section class="py-12 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between">
-        <h2 class="text-2xl font-semibold">Latest articles</h2>
-        <a href="/blog.html" class="text-sm link-underline">All posts</a>
-      </div>
-      <div class="mt-6 grid gap-6 sm:grid-cols-2">
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <h3 class="font-semibold"><a class="link-underline" href="/blog/10-essential-python-automation-scripts-content-creators.html">10 Python automation scripts for creators</a></h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Save 3 to 5 hours per week with proven automations for content creation.</p>
-        </article>
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <h3 class="font-semibold"><a class="link-underline" href="/blog/future-ai-music-production-dj-perspective.html">The future of AI in music production from a DJ perspective</a></h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">AI tools, live setup, and human AI collaboration.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <!-- Cross-site highlights to maximize internal linking -->
-  <section class="py-12 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
-      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-        <h3 class="font-semibold">Top App: HTML2exe Pro</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Turn any HTML or URL into a polished Windows app. Templates, icons, sandboxing.</p>
-        <a class="link-underline text-sm mt-3 inline-block" href="/apps.html">Explore Apps</a>
-      </article>
-      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-        <h3 class="font-semibold">Latest eBooks & Audiobooks</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Developer guides and narrated editions. Live catalogs powered by Google Books.</p>
-        <div class="flex gap-4 mt-3">
-          <a class="link-underline text-sm" href="/ebooks.html">eBooks</a>
-          <a class="link-underline text-sm" href="/audiobooks.html">Audiobooks</a>
-        </div>
-      </article>
-      <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-        <h3 class="font-semibold">Music & Blog</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Cinematic psytrance x bass and actionable articles on automation and creative tech.</p>
-        <div class="flex gap-4 mt-3">
-          <a class="link-underline text-sm" href="/music.html">Listen</a>
-          <a class="link-underline text-sm" href="/blog.html">Read</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-
-  <!-- Newsletter -->
-  <section id="newsletter" class="py-16 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-semibold">Get updates</h2>
-      <p class="text-slate-600 dark:text-slate-300 mt-2">Promotions, new releases, and beta access. No spam.</p>
-      <form class="mt-6 grid sm:grid-cols-3 gap-3" name="newsletter" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="newsletter" />
-        <input class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 sm:col-span-2" name="email" type="email" placeholder="Your email" required>
-        <button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3">Subscribe</button>
-        <p class="text-xs text-slate-500 sm:col-span-3 mt-2">By subscribing you agree to our <a href="/legal/terms.html" class="link-underline">Terms</a> et notre <a href="/legal/privacy.html" class="link-underline">Privacy Policy</a>.</p>
-      </form>
     </div>
   </section>
 
   <!-- Footer -->
-  
   <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -347,61 +113,5 @@
       </div>
     </div>
   </footer>
-
-
-  <script>
-    // Theme functionality - run immediately
-    function initTheme() {
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-      
-      if (isDark) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-      
-      return isDark;
-    }
-    
-    // Initialize theme immediately
-    const currentTheme = initTheme();
-    
-    // Wait for DOM to be ready for button setup
-    document.addEventListener('DOMContentLoaded', function() {
-      // Theme toggle functionality
-      const themeToggle = document.getElementById('themeToggle');
-      
-      if (themeToggle) {
-        // Set initial button state
-        themeToggle.setAttribute('aria-pressed', String(currentTheme));
-        themeToggle.textContent = currentTheme ? 'Light' : 'Dark';
-        
-        themeToggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          const isDark = document.documentElement.classList.toggle('dark');
-          localStorage.setItem('theme', isDark ? 'dark' : 'light');
-          themeToggle.setAttribute('aria-pressed', String(isDark));
-          themeToggle.textContent = isDark ? 'Light' : 'Dark';
-        });
-      }
-      
-      // Mobile menu functionality
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-        });
-      }
-      
-      // Year update
-      const yearElement = document.getElementById('year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
 </body>
 </html>
