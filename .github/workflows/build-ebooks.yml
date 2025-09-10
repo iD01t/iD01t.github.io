@@ -1,28 +1,56 @@
 name: Build ebook pages
+
 on:
   push:
-    paths: [ "data/ebooks.json", "templates/**", "scripts/**" ]
+    paths:
+      - "data/ebooks.json"
+      - "templates/**"
+      - "scripts/**"
+      - ".github/workflows/build-ebooks.yml"
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.x" }
-      - run: pip install jinja2
-      - run: python scripts/build_ebook_pages.py
-        env: { SITE_ORIGIN: "https://id01t.store" }
-      - name: Publish to docs/ for GitHub Pages
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install deps
+        run: pip install jinja2
+
+      - name: Generate ebook pages
+        run: python scripts/build_ebook_pages.py
+        env:
+          SITE_ORIGIN: "https://id01t.store"
+
+      - name: Stage site into docs/
         run: |
           mkdir -p docs/ebooks
-          cp -r ebooks/*.html docs/ebooks/
-          cp ebook.html docs/ # keep dynamic fallback if you want
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: docs }
+          cp -r ebooks/*.html docs/ebooks/ || true
+          # keep dynamic fallback if desired
+          if [ -f "ebook.html" ]; then cp ebook.html docs/; fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
   deploy:
     needs: build
-    permissions: { pages: write, id-token: write }
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
