@@ -1,363 +1,55 @@
-<!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>eBooks Catalog • iD01t Productions</title>
-  <meta name="description" content="Browse Guillaume Lessard’s official eBooks directly on Google Books. High SEO performance with structured data and canonical links." />
-  <link rel="canonical" href="/ebooks.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="eBooks Catalog • iD01t Productions" />
-  <meta property="og:description" content="Browse Guillaume Lessard’s official eBooks directly on Google Books" />
-  <meta property="og:url" content="/ebooks.html" />
-  <link rel="stylesheet" href="/assets/site.css" />
+<!DOCTYPE html><html lang="fr" class="scroll-smooth"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eBooks · iD01t Productions</title>
+<meta name="description" content="Premium eBooks and guides for developers, creators, and teams."/>
+<link rel="icon" href="/favicon.ico"/><link rel="canonical" href="https://id01t.github.io/ebooks.html"/>
+<meta name="theme-color" content="#16185c"/>
+<meta property="og:title" content="eBooks · iD01t Productions"/><meta property="og:description" content="Premium eBooks and guides."/>
+<meta property="og:type" content="website"/><meta property="og:url" content="https://id01t.github.io/ebooks.html"/>
+<meta property="og:image" content="https://id01t.github.io/assets/img/placeholders/card-portrait-384x576.webp"/>
+<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="eBooks · iD01t Productions"/>
+<meta name="twitter:description" content="Premium eBooks and guides."/>
+<meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/card-portrait-384x576.webp"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{50:"#f5f6ff",100:"#e6e9ff",200:"#c9ccff",300:"#a2a8ff",400:"#7a82ff",500:"#545cff",600:"#3a3fe6",700:"#2c30b4",800:"#202383",900:"#16185c"}}}}};</script>
+<link rel="stylesheet" href="/css/custom.css">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
-  </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
-  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GT-M39S87SN');</script>
-
-  <style>
-    :root { --card-bg: rgba(255,255,255,.06); --border: rgba(255,255,255,.12); --muted: rgba(255,255,255,.65); }
-    @media (prefers-color-scheme: dark) { body { color: #eaeaf0; background: #0b0d10; } }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 32px 20px; }
-    .page-title { font-size: clamp(24px, 3vw, 36px); margin-bottom: 6px; }
-    .subtitle { opacity: .8; margin: 0 0 18px; }
-
-    .toolbar { display:grid; grid-template-columns: 1fr 140px 180px 180px 140px 140px; gap:10px; align-items:end; margin:16px 0 18px; }
-    .toolbar .wide { grid-column: 1 / -1; display:flex; gap:10px; align-items:center; }
-    .toolbar input, .toolbar select { padding:10px 12px; border:1px solid var(--border); border-radius:10px; background: var(--card-bg); color: inherit; }
-    .toolbar label { font-size:.85rem; color: var(--muted); display:block; margin-bottom:6px; }
-    .toolbar .switch { display:flex; align-items:center; gap:8px; }
-
-    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
-    .card { display:flex; flex-direction:column; border:1px solid var(--border); border-radius:16px; overflow:hidden; background: var(--card-bg); backdrop-filter: blur(6px); }
-    .cover { aspect-ratio: 3/4; width:100%; object-fit:cover; background:#111; }
-    .content { padding: 14px; display:flex; flex-direction:column; gap:10px; }
-    .title { font-weight: 700; line-height:1.25; }
-    .meta { font-size: .9rem; opacity: .85; }
-    .badges { display:flex; gap:8px; flex-wrap:wrap; }
-    .badge { font-size:.72rem; padding:4px 8px; border-radius:999px; border:1px solid var(--border); background: rgba(255,255,255,.04); }
-    .btn { text-align:center; padding:10px 12px; border-radius:10px; border:1px solid var(--border); text-decoration:none; color:inherit; background: rgba(255,255,255,.03); margin-top:auto; }
-    .btn:hover { filter: brightness(1.05); }
-    .empty { opacity:.7; text-align:center; padding:40px 10px; border:1px dashed var(--border); border-radius:16px; }
-    .footer { opacity:.7; margin-top:24px; font-size:.9rem; }
-
-    .pager { display:flex; gap:8px; justify-content:center; align-items:center; margin:18px 0 0; }
-    .pager button { padding:8px 12px; border-radius:8px; border:1px solid var(--border); background: var(--card-bg); color:inherit; cursor:pointer; }
-    .pager .info { font-size:.9rem; opacity:.85; padding:0 8px; }
-  </style>
 </head>
-<body data-active="eBooks" data-catalog="ebooks">
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <div class="container">
-    <h1 class="page-title">eBooks Catalog</h1>
-    <p class="subtitle">Official Google Books listings by Guillaume Lessard. Every link points directly to Google Books for maximum SEO and credibility.</p>
-
-    <section class="toolbar" id="toolbar">
-      <div>
-        <label for="q">Search</label>
-        <input id="q" type="search" placeholder="Title, keyword, ISBN" />
-      </div>
-      <div>
-        <label for="lang">Language</label>
-        <select id="lang">
-          <option value="">All</option>
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-          <option value="de">Deutsch</option>
-        </select>
-      </div>
-      <div>
-        <label for="cat">Category</label>
-        <select id="cat"><!-- populated dynamically --></select>
-      </div>
-      <div>
-        <label for="sort">Sort</label>
-        <select id="sort">
-          <option value="date_desc">Newest</option>
-          <option value="date_asc">Oldest</option>
-          <option value="title_asc">Title A–Z</option>
-          <option value="title_desc">Title Z–A</option>
-          <option value="pages_desc">Pages High→Low</option>
-          <option value="pages_asc">Pages Low→High</option>
-        </select>
-      </div>
-      <div>
-        <label for="yearMin">Year from</label>
-        <input id="yearMin" type="number" inputmode="numeric" placeholder="min" />
-      </div>
-      <div>
-        <label for="yearMax">Year to</label>
-        <input id="yearMax" type="number" inputmode="numeric" placeholder="max" />
-      </div>
-      <div class="wide">
-        <label class="switch"><input type="checkbox" id="freePrev"> Free preview only</label>
-        <label class="switch"><input type="checkbox" id="ebooksOnly" checked> eBooks only</label>
-        <label class="switch"><input type="checkbox" id="imgOnly"> With cover image</label>
-        <button id="clear" type="button">Clear filters</button>
-      </div>
-    </section>
-
-    <section class="grid" id="grid" aria-live="polite"></section>
-    <div id="empty" class="empty" hidden>No results. Try other filters or reset.</div>
-    <div class="pager" id="pager" hidden>
-      <button id="prev">Prev</button>
-      <span class="info" id="pageInfo"></span>
-      <button id="next">Next</button>
-    </div>
-
-    <div class="footer">Powered by Google Books API. Canonical and structured data embedded for search optimization.</div>
-  </div>
-
-  <script>
-    const CONFIG = {
-      AUTHOR: 'Guillaume Lessard',
-      PUBLISHER: 'iD01t Productions',
-      MAX_RESULTS: 40,
-      API_KEY: '',
-      PAGE_SIZE: 24,
-      LANGUAGE_WHITELIST: ['en','fr','de']
-    };
-
-    const els = {
-      grid: document.getElementById('grid'),
-      empty: document.getElementById('empty'),
-      pager: document.getElementById('pager'),
-      prev: document.getElementById('prev'),
-      next: document.getElementById('next'),
-      pageInfo: document.getElementById('pageInfo'),
-      q: document.getElementById('q'),
-      lang: document.getElementById('lang'),
-      cat: document.getElementById('cat'),
-      sort: document.getElementById('sort'),
-      yearMin: document.getElementById('yearMin'),
-      yearMax: document.getElementById('yearMax'),
-      freePrev: document.getElementById('freePrev'),
-      ebooksOnly: document.getElementById('ebooksOnly'),
-      imgOnly: document.getElementById('imgOnly'),
-      clear: document.getElementById('clear')
-    };
-
-    const api = {
-      base: 'https://www.googleapis.com/books/v1/volumes',
-      async search(query, startIndex = 0, maxResults = CONFIG.MAX_RESULTS) {
-        const params = new URLSearchParams({ q: query, startIndex, maxResults });
-        if (CONFIG.API_KEY) params.set('key', CONFIG.API_KEY);
-        const url = `${this.base}?${params.toString()}`;
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Google Books API error ${res.status}`);
-        return res.json();
-      }
-    };
-
-    function normalizeItem(item){
-      const v = item.volumeInfo || {};
-      const s = item.saleInfo || {};
-      const a = item.accessInfo || {};
-      const img = v.imageLinks || {};
-      const lang = (v.language||'').toLowerCase();
-      const year = (v.publishedDate||'').match(/\d{4}/)?.[0] || '';
-      return {
-        id: item.id,
-        title: v.title || 'Untitled',
-        subtitle: v.subtitle || '',
-        authors: v.authors || [],
-        publisher: v.publisher || '',
-        publishedDate: v.publishedDate || '',
-        year,
-        categories: v.categories || [],
-        description: v.description || '',
-        pageCount: v.pageCount || 0,
-        language: lang,
-        thumbnail: img.thumbnail?.replace('http://','https://') || img.smallThumbnail?.replace('http://','https://') || '',
-        infoLink: (v.infoLink || '').replace('http://','https://'),
-        previewLink: (v.previewLink || '').replace('http://','https://'),
-        isEbook: !!s.isEbook,
-        viewability: a.viewability || '',
-        hasPreview: !!(a.viewability && /PARTIAL|ALL_PAGES/.test(a.viewability))
-      };
-    }
-
-    function cardHTML(b){
-      const authors = b.authors?.join(', ');
-      const cats = b.categories?.slice(0,2) || [];
-      return `
-        <article class="card" data-id="${b.id}">
-          <img class="cover" alt="${escapeHTML(b.title)} cover" loading="lazy" src="${b.thumbnail || '/assets/placeholder-cover.svg'}" />
-          <div class="content">
-            <div class="title">${escapeHTML(b.title)}</div>
-            <div class="meta">${authors ? escapeHTML(authors) : ''}${b.publishedDate ? ` • ${escapeHTML(b.publishedDate)}` : ''}${b.pageCount? ` • ${b.pageCount}p` : ''}</div>
-            ${cats.length ? `<div class="badges">${cats.map(c=>`<span class="badge">${escapeHTML(c)}</span>`).join('')}</div>`: ''}
-            <a class="btn" href="${b.infoLink}" target="_blank" rel="noopener nofollow">View on Google Books</a>
-          </div>
-        </article>`;
-    }
-
-    function escapeHTML(s){
-      return String(s).replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
-    }
-
-    function sortItems(items, mode){
-      const byDate = (a,b) => new Date(b.publishedDate) - new Date(a.publishedDate);
-      const byDateAsc = (a,b) => new Date(a.publishedDate) - new Date(b.publishedDate);
-      const byTitle = (a,b) => a.title.localeCompare(b.title);
-      const byPages = (a,b) => (b.pageCount||0) - (a.pageCount||0);
-      if (mode === 'date_asc') return items.sort(byDateAsc);
-      if (mode === 'title_asc') return items.sort(byTitle);
-      if (mode === 'title_desc') return items.sort((a,b)=>byTitle(b,a));
-      if (mode === 'pages_desc') return items.sort(byPages);
-      if (mode === 'pages_asc') return items.sort((a,b)=>byPages(b,a));
-      return items.sort(byDate);
-    }
-
-    const state = { items: [], filtered: [], page: 1 };
-
-    function applyFilters(){
-      const q = els.q.value.trim().toLowerCase();
-      const lang = els.lang.value;
-      const cat = els.cat.value;
-      const yMin = parseInt(els.yearMin.value||'');
-      const yMax = parseInt(els.yearMax.value||'');
-      const freePrev = els.freePrev.checked;
-      const ebooksOnly = els.ebooksOnly.checked;
-      const imgOnly = els.imgOnly.checked;
-      let out = state.items.filter(b=>{
-        const hay = [b.title, b.subtitle, ...(b.authors||[]), ...(b.categories||[])].join(' ').toLowerCase();
-        if (q && !hay.includes(q)) return false;
-        if (lang && b.language !== lang) return false;
-        if (cat && !(b.categories||[]).includes(cat)) return false;
-        if (!isNaN(yMin) && (!b.year || parseInt(b.year) < yMin)) return false;
-        if (!isNaN(yMax) && (!b.year || parseInt(b.year) > yMax)) return false;
-        if (freePrev && !b.hasPreview) return false;
-        if (ebooksOnly && !b.isEbook) return false;
-        if (imgOnly && !b.thumbnail) return false;
-        return true;
-      });
-      out = sortItems(out, els.sort.value);
-      state.filtered = out;
-      state.page = 1;
-      renderPage();
-      emitSchema(out);
-    }
-
-    function renderPage(){
-      const total = state.filtered.length;
-      els.empty.hidden = total > 0;
-      if (!total){ els.grid.innerHTML=''; els.pager.hidden = true; return; }
-      const start = (state.page-1)*CONFIG.PAGE_SIZE;
-      const pageItems = state.filtered.slice(start, start+CONFIG.PAGE_SIZE);
-      els.grid.innerHTML = pageItems.map(cardHTML).join('');
-      const totalPages = Math.ceil(total/CONFIG.PAGE_SIZE);
-      els.pager.hidden = totalPages <= 1; 
-      els.pageInfo.textContent = `Page ${state.page} / ${totalPages} • ${total} result(s)`;
-      els.prev.disabled = state.page <= 1;
-      els.next.disabled = state.page >= totalPages;
-    }
-
-    function populateCategories(items){
-      const set = new Set();
-      items.forEach(b => (b.categories||[]).forEach(c => set.add(c)));
-      const cats = Array.from(set).sort((a,b)=>a.localeCompare(b));
-      els.cat.innerHTML = `<option value="">All</option>` + cats.map(c=>`<option value="${escapeHTML(c)}">${escapeHTML(c)}</option>`).join('');
-    }
-
-    function bind(){
-      [els.q, els.lang, els.cat, els.sort, els.yearMin, els.yearMax, els.freePrev, els.ebooksOnly, els.imgOnly].forEach(el=>{
-        el.addEventListener('input', debounce(applyFilters, 120));
-        el.addEventListener('change', debounce(applyFilters, 120));
-      });
-      els.clear.addEventListener('click', ()=>{
-        els.q.value = '';
-        els.lang.value = '';
-        els.cat.value = '';
-        els.sort.value = 'date_desc';
-        els.yearMin.value = '';
-        els.yearMax.value = '';
-        els.freePrev.checked = false;
-        els.ebooksOnly.checked = true;
-        els.imgOnly.checked = false;
-        applyFilters();
-      });
-      els.prev.addEventListener('click', ()=>{ if(state.page>1){ state.page--; renderPage(); } });
-      els.next.addEventListener('click', ()=>{ state.page++; renderPage(); });
-    }
-
-    function debounce(fn, wait){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), wait); }; }
-
-    function emitSchema(items){
-      const ld = { '@context':'https://schema.org', '@type':'ItemList', name:'iD01t Productions eBooks', itemListElement: items.slice(0,50).map((b,i)=>({ '@type':'ListItem', position:i+1, item:{ '@type':'Book', name:b.title, author:(b.authors||[]).map(a=>({ '@type':'Person', name:a })), inLanguage:b.language, publisher: b.publisher?{ '@type':'Organization', name:b.publisher}:undefined, datePublished:b.publishedDate||undefined, image:b.thumbnail||undefined, url:b.infoLink||undefined } }))};
-      let tag=document.getElementById('ld-books');
-      if(!tag){ tag=document.createElement('script'); tag.type='application/ld+json'; tag.id='ld-books'; document.head.appendChild(tag);} tag.textContent=JSON.stringify(ld);
-    }
-
-    async function init(){
-      try {
-        const q = `inauthor:"${CONFIG.AUTHOR}" OR inpublisher:"${CONFIG.PUBLISHER}"`;
-        const data = await api.search(q, 0, CONFIG.MAX_RESULTS);
-        const items = (data.items||[]).map(normalizeItem).filter(b=>!CONFIG.LANGUAGE_WHITELIST.length || CONFIG.LANGUAGE_WHITELIST.includes(b.language));
-        state.items = items;
-        populateCategories(items);
-        bind();
-        applyFilters();
-      } catch(e){ console.error(e); els.empty.hidden=false; }
-    }
-
-    init();
-  </script>
-=======
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>eBooks Catalog • iD01t Productions</title>
-<meta content="Browse our professional ebook collection covering technology, creativity, and personal development" name="description"/>
-<link href="/ebooks.html" rel="canonical"/>
-<meta content="website" property="og:type"/>
-<meta content="eBooks Catalog • iD01t Productions" property="og:title"/>
-<meta content="Browse our professional ebook collection covering technology, creativity, and personal development" property="og:description"/>
-<meta content="/ebooks.html" property="og:url"/>
-<link href="/assets/site.css" rel="stylesheet"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16">
+<a href="/" class="flex items-center gap-2" aria-label="Accueil"><img src="/assets/img/brand/logo.png" alt="iD01t Productions" class="h-8 w-8"><span class="font-semibold tracking-tight">iD01t Productions</span></a>
+<nav class="hidden md:flex items-center gap-6"><a href="/store.html" class="link-underline">Store</a><a href="/ebooks.html" class="link-underline text-brand-600 dark:text-brand-400" aria-current="page">eBooks</a><a href="/apps.html" class="link-underline">Apps</a><a href="/games.html" class="link-underline">Games</a><a href="/music.html" class="link-underline">Music</a><a href="/services.html" class="link-underline">Services</a><a href="/portfolio.html" class="link-underline">Portfolio</a><a href="/about.html" class="link-underline">About</a><a href="/contact.html" class="link-underline">Contact</a></nav>
+<div class="flex items-center gap-3"><button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button><a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+<button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></div></div>
+<div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true"><div class="px-4 py-3 flex flex-col gap-2"><a href="/store.html" class="py-2">Store</a><a href="/ebooks.html" class="py-2 text-brand-600 dark:text-brand-400">eBooks</a><a href="/apps.html" class="py-2">Apps</a><a href="/games.html" class="py-2">Games</a><a href="/music.html" class="py-2">Music</a><a href="/services.html" class="py-2">Services</a><a href="/portfolio.html" class="py-2">Portfolio</a><a href="/about.html" class="py-2">About</a><a href="/contact.html" class="py-2">Contact</a></div></div>
+</header>
+<section class="relative overflow-hidden"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6"><div class="text-center"><h1 class="text-4xl sm:text-5xl font-bold tracking-tight">eBooks</h1><p class="mt-3 text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Guides for developers and creators. Clear steps, real examples, fast results.</p></div></div></section>
+<section class="pb-4"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid gap-3 md:grid-cols-12 items-end">
+<div class="md:col-span-6"><input id="search" type="search" placeholder="Search title, tags, or description" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3"></div>
+<div class="md:col-span-2"><select id="length" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3"><option value="">All lengths</option><option value="short">Short &lt;60 pages</option><option value="medium">Medium 60–100</option><option value="long">Long &gt;100</option></select></div>
+<div class="md:col-span-2"><select id="price" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3"><option value="">All prices</option><option value="lt10">&lt; $10</option><option value="10to15">$10–$15</option><option value="gt15">&gt; $15</option></select></div>
+<div class="md:col-span-2"><select id="sort" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3"><option value="recent">Newest</option><option value="az">A → Z</option><option value="priceAsc">Price ↑</option><option value="priceDesc">Price ↓</option></select></div>
+<div class="md:col-span-12 flex gap-2"><button id="resetFilters" class="text-sm px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700">Reset</button></div>
+</div></div></section>
+<section class="py-8 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div id="ebookGrid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div><div id="pagination" class="flex items-center justify-center gap-2 mt-10"></div></div></section>
+<footer class="py-10 border-t border-slate-200 dark:border-slate-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div><p class="font-semibold">iD01t Productions</p><p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p></div><nav class="flex flex-wrap gap-4 text-sm"><a href="/legal/terms.html" class="link-underline">Terms</a><a href="/legal/privacy.html" class="link-underline">Privacy</a><a href="/legal/refunds.html" class="link-underline">Refunds</a><a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a><a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a></nav></div></div></footer>
 <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-CHX65WY0WZ');
-    </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-M39S87SN');</script>
-</head>
-<body data-active="eBooks" data-catalog="ebooks">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GT-M39S87SN" width="0"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 32px 20px;">
-<div>
-<h1 class="page-title">eBooks Catalog</h1>
-<p>
-                Professional guides, creative works, and educational content from Guillaume Lessard
-            </p>
-</div>
-<section class="grid"></section>
-</div>
-<script defer="" src="/assets/site.js"></script>
->>>>>>> 72565ef (feat(music): add Spotify auto-sync pack + dark music.html)
-</body>
-</html>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {{
+    themeToggle.addEventListener('click', function() {{
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+    }});
+  }}
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenuBtn && mobileMenu) {{
+    mobileMenuBtn.addEventListener('click', function() {{
+      mobileMenu.classList.toggle('hidden');
+    }});
+  }}
+</script>
+<script src="/js/ebooks.js" defer></script></body></html>
