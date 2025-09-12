@@ -5,8 +5,19 @@
      <script>
        async function boot(){
          const params=new URLSearchParams(location.search);const slug=params.get("slug");
-         if(!slug){document.body.innerHTML="<h1>Missing slug</h1>";return;}
-         const data=await fetch("/data/ebooks.json",{cache:"no-store"}).then(r=>r.json());
+async function boot() {
+  const params = new URLSearchParams(location.search);
+  const slug = params.get("slug");
+  
+  if (!slug) {
+    document.body.innerHTML = `
+      <div class="error">
+        <h1>404 - Page Not Found</h1>
+        <p>Missing book identifier. Please check the URL and try again.</p>
+        <a href="/ebooks.html">Browse all books</a>
+      </div>`;
+    return;
+  }
          const e=data.find(x=>x.slug===slug); if(!e){document.body.innerHTML="<h1>Not found</h1>";return;}
          // SEO updates
          document.title = e.title + " — iD01t Productions";
