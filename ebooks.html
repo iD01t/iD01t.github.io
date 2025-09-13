@@ -25,16 +25,16 @@
     .link-underline::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: currentColor; transform:scaleX(0); transform-origin:left; transition: transform .2s; }
     .link-underline:hover::after { transform:scaleX(1); }
   </style>
-  
+
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   <!-- Header copied from games.html -->
-  
+
   <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="/" class="flex items-center gap-2" aria-label="Home">
-          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions Logo">
           <span class="font-semibold tracking-tight">iD01t Productions</span>
         </a>
         <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
@@ -55,7 +55,7 @@
       </div>
     </div>
   </header>
-    
+
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
@@ -97,7 +97,7 @@
   </main>
 
   <!-- Footer copied from games.html -->
-  
+
   <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -223,9 +223,9 @@
       const link = buyURL(v);
       return `
       <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col bg-white dark:bg-slate-900">
-        <img src="${img}" alt="${title}" class="w-full aspect-[3/4] object-cover">
+        <img src="${img}" alt="${title} cover" class="w-full aspect-[3/4] object-cover">
         <div class="p-4 flex-1 flex flex-col">
-          <h3 class="font-semibold leading-snug">${title}</h3>
+          <h2 class="font-semibold leading-snug">${title}</h2>
           ${subtitle ? `<p class="text-sm text-slate-500">${subtitle}</p>` : ""}
           <p class="text-xs text-slate-500 mt-1">${authors}</p>
           <p class="text-sm text-slate-700 dark:text-slate-300 mt-3 line-clamp-6">${desc}</p>
@@ -241,9 +241,9 @@
       const link = `${CONFIG.partnerBuyBase}?id=${encodeURIComponent(fb.id)}&${CONFIG.utm}`;
       return `
       <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col bg-white dark:bg-slate-900">
-        <img src="${fb.thumbnail}" alt="${fb.title}" class="w-full aspect-[3/4] object-cover">
+        <img src="${fb.thumbnail}" alt="${fb.title} cover" class="w-full aspect-[3/4] object-cover">
         <div class="p-4 flex-1 flex flex-col">
-          <h3 class="font-semibold leading-snug">${fb.title}</h3>
+          <h2 class="font-semibold leading-snug">${fb.title}</h2>
           ${fb.subtitle ? `<p class="text-sm text-slate-500">${fb.subtitle}</p>` : ""}
           <p class="text-xs text-slate-500 mt-1">${(fb.authors||[]).join(", ")}</p>
           <p class="text-sm text-slate-700 dark:text-slate-300 mt-3 line-clamp-6">${fb.description||""}</p>

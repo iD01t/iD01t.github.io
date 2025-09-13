@@ -28,10 +28,10 @@
       overflow: hidden;
     }
   </style>
-  
+
 
   <link rel="preconnect" href="https://www.googleapis.com">
-  
+
   <!-- Google Books API Key -->
   <meta name="google-books-api-key" content="AIzaSyB_YuwaxJeZuDMijJA6eS6WQ3x28k3SI14">
 </head>
@@ -80,12 +80,12 @@
     }(window, document, 'ttq');
   </script>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-  
+
 <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" class="flex items-center gap-2" aria-label="Home">
-        <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+        <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions Logo">
         <span class="font-semibold tracking-tight">iD01t Productions</span>
       </a>
       <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
@@ -146,38 +146,38 @@
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex flex-col lg:flex-row gap-6 items-end">
         <div class="flex-1">
-          <input id="q" type="search" placeholder="Search audiobooks..." 
+          <input id="q" type="search" placeholder="Search audiobooks..."
                  class="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
-        
+
         <div class="flex gap-4">
           <select id="language" class="px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="">All Languages</option>
           </select>
-          
-          <input id="from" type="number" placeholder="From" 
+
+          <input id="from" type="number" placeholder="From"
                  class="w-24 px-3 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          
-          <input id="to" type="number" placeholder="To" 
+
+          <input id="to" type="number" placeholder="To"
                  class="w-24 px-3 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          
+
           <select id="sort" class="px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="date_desc">Newest</option>
             <option value="date_asc">Oldest</option>
             <option value="title_asc">A-Z</option>
             <option value="title_desc">Z-A</option>
           </select>
-          
+
           <button id="reset" class="px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
             Reset
           </button>
-          
+
           <button id="refresh" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
             Refresh
           </button>
         </div>
       </div>
-      
+
       <div id="tally" class="mt-4 text-sm text-slate-500 dark:text-slate-400"></div>
     </div>
   </section>
@@ -189,20 +189,20 @@
         <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Audiobooks</h2>
         <div id="count" class="text-slate-500 dark:text-slate-400"></div>
       </div>
-      
+
       <div id="loading" class="text-center py-20">
         <div class="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
         <p class="text-slate-600 dark:text-slate-400">Loading audiobooks...</p>
       </div>
-      
+
       <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden"></div>
-      
+
       <noscript>
         <div class="text-center py-20">
           <p class="text-slate-600 dark:text-slate-400">Please enable JavaScript to view the audiobooks catalog.</p>
         </div>
       </noscript>
-      
+
       <div id="empty" class="text-center py-20 hidden">
         <p class="text-slate-600 dark:text-slate-400 mb-4">No audiobooks found.</p>
         <button id="reset" class="text-blue-600 hover:text-blue-700">Reset filters</button>
@@ -214,10 +214,10 @@
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
       <div class="flex items-center gap-2">
-        <img src="/assets/img/brand/logo.png" class="h-6 w-6" alt="iD01t Productions">
+        <img src="/assets/img/brand/logo.png" class="h-6 w-6" alt="iD01t Productions Logo">
         <span class="font-semibold text-slate-900 dark:text-white">iD01t Productions</span>
       </div>
-      
+
       <div class="flex items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
         <a href="/index.html" class="hover:text-slate-900 dark:hover:text-white">Home</a>
         <a href="/store.html" class="hover:text-slate-900 dark:hover:text-white">Store</a>
@@ -230,7 +230,7 @@
         <a href="/about.html" class="hover:text-slate-900 dark:hover:text-white">About</a>
         <a href="/contact.html" class="hover:text-slate-900 dark:hover:text-white">Contact</a>
       </div>
-      
+
       <div class="text-sm text-slate-500 dark:text-slate-500">
         © <span id="year"></span> All rights reserved
       </div>
@@ -241,32 +241,32 @@
   <script>
     // Theme and mobile menu functionality
     document.getElementById('year').textContent = new Date().getFullYear();
-    
+
     // Theme functionality
     function initTheme() {
       const savedTheme = localStorage.getItem('theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-      
+
       if (isDark) {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }
-      
+
       return isDark;
     }
-    
+
     // Initialize theme on page load
     const currentTheme = initTheme();
-    
+
     // Theme toggle functionality
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
       // Set initial button state
       themeToggle.setAttribute('aria-pressed', String(currentTheme));
       themeToggle.textContent = currentTheme ? 'Light' : 'Dark';
-      
+
       themeToggle.addEventListener('click', function() {
         const isDark = document.documentElement.classList.toggle('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
@@ -274,7 +274,7 @@
         themeToggle.textContent = isDark ? 'Light' : 'Dark';
       });
     }
-    
+
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (mobileMenuBtn && mobileMenu) {
@@ -365,7 +365,7 @@
 
     // Utility functions
     function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-    
+
     function escapeHtml(str) {
       const div = document.createElement('div');
       div.textContent = str;
@@ -389,7 +389,7 @@
       const description = (volumeInfo.description || '').toLowerCase();
       const authors = (volumeInfo.authors || []).join(' ').toLowerCase();
       const publisher = (volumeInfo.publisher || '').toLowerCase();
-      
+
       // Comprehensive audio keywords
       const audioKeywords = [
         'audiobook', 'audio book', 'audio-book', 'audiobooks',
@@ -422,16 +422,16 @@
       ];
 
       // Check for audio keywords in various fields
-      const hasAudioKeyword = audioKeywords.some(keyword => 
-        title.includes(keyword) || 
-        categories.includes(keyword) || 
+      const hasAudioKeyword = audioKeywords.some(keyword =>
+        title.includes(keyword) ||
+        categories.includes(keyword) ||
         description.includes(keyword) ||
         authors.includes(keyword) ||
         publisher.includes(keyword)
       );
 
       // Additional checks for specific patterns
-      const hasAudioPattern = 
+      const hasAudioPattern =
         /audio\s*(book|edition|version|format)/i.test(title) ||
         /(unabridged|abridged)\s*(audio|edition|version)/i.test(title) ||
         /(narrated|read)\s*by/i.test(description) ||
@@ -441,7 +441,7 @@
         /(playaway|talking)\s*(book|audiobook)/i.test(title);
 
       // Check if it's from Guillaume Lessard or iD01t Productions (likely audiobooks)
-      const isFromTargetAuthor = authors.includes('guillaume lessard') || 
+      const isFromTargetAuthor = authors.includes('guillaume lessard') ||
                                 publisher.includes('id01t productions') ||
                                 publisher.includes('id01t');
 
@@ -456,7 +456,7 @@
 
       // Handle Google Books images with CORS issues
       let imageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || '/assets/img/placeholders/card-portrait-384x576.webp';
-      
+
       // For Google Books images, use a CORS proxy or fallback to placeholder
       if (imageUrl.includes('books.google.com')) {
         // Use a CORS proxy service for Google Books images
@@ -475,9 +475,9 @@
           imageUrl = '/assets/img/placeholders/card-portrait-384x576.webp';
         }
       }
-      
+
       imageUrl = imageUrl.replace('http://', 'https://');
-      
+
       return {
         id: item.id,
         title: volumeInfo.title || 'Untitled',
@@ -502,18 +502,18 @@
       return `
         <div class="group">
           <div class="relative mb-4">
-            <img src="${book.image}" 
-                 alt="${escapeHtml(book.title)}" 
-                 class="w-full aspect-[3/4] object-cover rounded-lg" 
+            <img src="${book.image}"
+                 alt="${escapeHtml(book.title)} cover"
+                 class="w-full aspect-[3/4] object-cover rounded-lg"
                  loading="lazy"
                  onerror="this.onerror=null;this.src='/assets/img/placeholders/card-portrait-384x576.webp'">
             ${book.isAudiobook ? '<div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Audio</div>' : ''}
           </div>
-          
+
           <div class="space-y-2">
-            <h3 class="font-semibold text-slate-900 dark:text-white line-clamp-2">
+            <h2 class="font-semibold text-slate-900 dark:text-white line-clamp-2">
               ${escapeHtml(book.title)}
-            </h3>
+            </h2>
             <p class="text-sm text-slate-600 dark:text-slate-400">
               ${escapeHtml(book.authors || '')}
             </p>
@@ -570,7 +570,7 @@
       const tally = document.getElementById('tally');
 
       loading.classList.add('hidden');
-      
+
       if (!filtered.length) {
         grid.classList.add('hidden');
         empty.classList.remove('hidden');
@@ -581,7 +581,7 @@
       empty.classList.add('hidden');
       grid.classList.remove('hidden');
       grid.innerHTML = filtered.map(createCard).join('');
-      
+
       const audiobookCount = allBooks.filter(book => book.isAudiobook).length;
       count.textContent = `${filtered.length} audiobook${filtered.length !== 1 ? 's' : ''}`;
       tally.textContent = `${allBooks.length} titles • ${audiobookCount} audiobooks`;
@@ -598,7 +598,7 @@
     // Setup event listeners
     function setupEventListeners(allBooks) {
       const updateResults = () => renderBooks(applyFilters(allBooks), allBooks);
-      
+
       ['input', 'change'].forEach(eventType => {
         ['q', 'language', 'from', 'to', 'sort'].forEach(id => {
           const element = document.getElementById(id);
@@ -657,7 +657,7 @@
         try {
           console.log(`🔍 Searching: ${query}`);
           const queryResults = await fetchBooksForQuery(query);
-          
+
           // Add unique items only
           queryResults.forEach(item => {
             if (!seenIds.has(item.id)) {
@@ -665,9 +665,9 @@
               allItems.push(item);
             }
           });
-          
+
           console.log(`✅ Found ${queryResults.length} new items (${allItems.length} total)`);
-          
+
           // Small delay between queries to avoid rate limiting
           await sleep(200);
         } catch (error) {
@@ -696,7 +696,7 @@
         });
 
         const url = `https://www.googleapis.com/books/v1/volumes?${params.toString()}`;
-        
+
         let success = false;
         for (let attempt = 0; attempt < CONFIG.RETRIES && !success; attempt++) {
           try {
@@ -736,15 +736,15 @@
         console.log('🎧 Fetching from Google Books API...');
         const rawBooks = await fetchFromGoogleBooks();
         console.log(`📚 Raw books fetched: ${rawBooks.length}`);
-        
+
         let allBooks = rawBooks.map(normalizeBook);
         console.log(`📖 Books normalized: ${allBooks.length}`);
-        
+
         // Log details about each book for debugging
         allBooks.forEach((book, index) => {
           console.log(`Book ${index + 1}: "${book.title}" by ${book.authors} - Audiobook: ${book.isAudiobook}`);
         });
-        
+
         const audiobooks = allBooks.filter(b => b.isAudiobook);
         console.log(`🎧 Audiobooks identified: ${audiobooks.length}`);
 
@@ -752,13 +752,13 @@
           console.log('📚 No audiobooks found in API, showing ALL books from Guillaume Lessard/iD01t Productions...');
           // Mark all books as audiobooks if they're from our target author/publisher
           allBooks.forEach(book => {
-            if (book.authors.toLowerCase().includes('guillaume lessard') || 
+            if (book.authors.toLowerCase().includes('guillaume lessard') ||
                 book.authors.toLowerCase().includes('id01t')) {
               book.isAudiobook = true;
               console.log(`🎧 Marking as audiobook: "${book.title}"`);
             }
           });
-          
+
           const newAudiobooks = allBooks.filter(b => b.isAudiobook);
           if (newAudiobooks.length === 0) {
             console.log('📚 Still no audiobooks found, using fallback data...');
@@ -771,11 +771,11 @@
         }
 
         console.log(`📚 Final: ${allBooks.length} books, ${audiobooks.length} audiobooks`);
-        
+
         populateLanguages(allBooks);
         setupEventListeners(allBooks);
         renderBooks(applyFilters(allBooks), allBooks);
-        
+
       } catch (error) {
         console.error('❌ API failed, using fallback data:', error);
         const allBooks = FALLBACK_DATA;
