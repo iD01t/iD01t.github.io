@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>iCALLnow — Instant Video, Voice & SMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="iCALLnow is the fastest way to video call, phone call, and text — all in one sleek app." />
+  <meta property="og:title" content="iCALLnow — Instant Video, Voice & SMS" />
+  <meta property="og:description" content="Jump into a room, call, or text in seconds. Built for speed, clarity, and scale." />
+  <meta property="og:image" content="https://id01t.github.io/assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <style>
+    :root { --bg:#070b18; --ink:#eaf0ff; --muted:#aab6d0; --acc:#39ff14; --acc2:#2f7cff; --glass:rgba(255,255,255,.06); }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:radial-gradient(120% 160% at 20% 0%,#0e1834 0%,#070b18 60%);color:var(--ink)}
+    header{display:flex;align-items:center;gap:14px;padding:16px 20px;position:sticky;top:0;background:rgba(0,0,0,.45);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(12px);z-index:10}
+    header img{height:42px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+    header .spacer{flex:1}
+    .btn{border:0;padding:10px 14px;border-radius:12px;font-weight:800;cursor:pointer}
+    .btn-primary{background:linear-gradient(180deg,#6aff7a,var(--acc));color:#031106}
+    .btn-ghost{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.18)}
+    .hero{max-width:1100px;margin:40px auto;padding:0 16px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+    .hero h1{font-size:40px;line-height:1.1;margin:0 0 12px 0}
+    .hero p{color:var(--muted);font-size:18px;margin:0 0 18px 0}
+    .card{background:var(--glass);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px}
+    .features{max-width:1100px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feat{background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+    .feat h3{margin:0 0 8px 0}
+    .cta-bar{max-width:1100px;margin:28px auto;padding:18px 16px;display:flex;gap:12px;align-items:center;background:linear-gradient(90deg,rgba(57,255,20,.1),rgba(47,124,255,.1));border:1px solid rgba(255,255,255,.12);border-radius:16px}
+    footer{max-width:1100px;margin:36px auto;padding:16px;color:#9fb0cc;text-align:center}
+    @media (max-width: 980px){.hero{grid-template-columns:1fr}.features{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="iCALLnow logo" />
+    <strong>iCALLnow</strong>
+    <div class="spacer"></div>
+    <a href="icallnow.html" class="btn btn-primary">Open App</a>
+    <a href="#pricing" class="btn btn-ghost">Pricing</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Video. Voice. SMS. <br/>One lightning-fast app.</h1>
+      <p>Start a room, place a call, or send a text in seconds. iCALLnow is engineered for clarity, speed, and zero-friction collaboration.</p>
+      <div style="display:flex; gap:10px; margin-top:12px">
+        <a href="icallnow.html" class="btn btn-primary">Start Now</a>
+        <a href="#features" class="btn btn-ghost">See Features</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/logo.png" alt="Preview" style="width:100%; border-radius:12px; background:#000; aspect-ratio:16/10; object-fit:contain" />
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="feat">
+      <h3>Crystal Video</h3>
+      <p>Low-latency WebRTC with TURN/STUN fallback for tough networks.</p>
+    </div>
+    <div class="feat">
+      <h3>Voice & SMS</h3>
+      <p>Twilio-powered telephony with delivery status and webhook handling.</p>
+    </div>
+    <div class="feat">
+      <h3>Pro Controls</h3>
+      <p>Screen share, local recording, room chat, and quick re-join.</p>
+    </div>
+  </section>
+
+  <section id="pricing" class="cta-bar">
+    <div style="flex:1">
+      <strong>Simple pricing.</strong> Start free, scale as you grow.
+    </div>
+    <a href="icallnow.html" class="btn btn-primary">Launch iCALLnow</a>
+    <a href="mailto:contact@id01t.com" class="btn btn-ghost">Enterprise</a>
+  </section>
+
+  <footer>© 2025 iD01t Productions — All rights reserved.</footer>
+</body>
+</html>
