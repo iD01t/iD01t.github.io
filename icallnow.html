@@ -8,55 +8,76 @@
   <meta name="description" content="iCALLnow — instant video, voice, and SMS in one sleek app." />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <style>
-    :root { --bg:#0b1220; --ink:#e8eefc; --muted:#a9b6d0; --glass:rgba(255,255,255,.08); --card:rgba(255,255,255,.06); --acc:#39ff14; --acc2:#2f7cff; }
-    * { box-sizing: border-box }
-    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial; color:var(--ink);
-           background: radial-gradient(110% 140% at 10% 0%, #121c38 0%, #0b1220 60%); }
-    /* Large branding bar */
-    .brandbar { position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:16px;
-                padding:18px 20px; background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
-                border-bottom:1px solid rgba(255,255,255,.08); backdrop-filter: blur(12px); }
-    .brandbar .logo { height:48px; width:auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.45); }
-    .brandbar .title { font-size:22px; font-weight:900; letter-spacing:.2px; margin:0 }
-    .brandbar .cta { margin-left:auto; display:flex; gap:10px; }
-    .btn { border:0; padding:10px 14px; border-radius:12px; font-weight:800; cursor:pointer; transition:transform .08s, filter .12s; }
-    .btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
-    .btn-primary { background: linear-gradient(180deg, #6aff7a, var(--acc)); color:#09100c }
-    .btn-ghost { background: transparent; color: var(--ink); border:1px solid rgba(255,255,255,.15) }
-
-    .wrap { max-width:1200px; margin:20px auto; padding:0 16px; display:grid; grid-template-columns:360px 1fr; gap:16px; }
-    .card { background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px; backdrop-filter: blur(10px); box-shadow:0 18px 60px rgba(0,0,0,.35) }
-    .section-title { font-size:18px; font-weight:900; letter-spacing:.3px; margin-bottom:8px }
-    .row { display:flex; gap:8px; align-items:center }
-    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px }
-    .field, textarea { width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--glass); color:var(--ink) }
-    .muted { color: var(--muted); font-size:12px }
-    video { width:100%; background:#000; border-radius:12px }
-    .chat { height: 240px; overflow:auto; display:flex; flex-direction:column; gap:6px }
-    .msg { background: rgba(255,255,255,.06); padding:8px 10px; border-radius:10px; font-size:14px }
-    footer { max-width:1200px; margin:36px auto; color:#9fb0cc; text-align:center; padding:16px }
-    @media (max-width: 960px) { .wrap { grid-template-columns:1fr } .grid { grid-template-columns:1fr } .brandbar .title { font-size:18px } }
+    :root{
+      --bg:#0b1220;--ink:#e8eefc;--muted:#9fb0cc;--glass:rgba(255,255,255,.08);
+      --card:rgba(255,255,255,.06);--acc:#39ff14;--acc2:#2f7cff;--danger:#ff5a6b;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);
+      background:radial-gradient(110% 140% at 10% 0%,#121c38 0%,#0b1220 60%)}
+    .brandbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:16px;padding:18px 20px;
+      background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35));border-bottom:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(12px)}
+    .brandbar .logo{height:48px;width:auto;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+    .brandbar .title{font-size:22px;font-weight:900;letter-spacing:.2px;margin:0}
+    .brandbar .cta{margin-left:auto;display:flex;gap:10px;align-items:center}
+    .pill{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+    .ok{color:#0f0}.warn{color:#ffd154}.bad{color:#ff7a85}
+    .btn{border:0;padding:10px 14px;border-radius:12px;font-weight:800;cursor:pointer;transition:transform .08s,filter .12s}
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+    .btn-primary{background:linear-gradient(180deg,#6aff7a,var(--acc));color:#09100c}
+    .btn-ghost{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.15)}
+    .btn-danger{background:linear-gradient(180deg,#ff99a4,var(--danger));color:#1a0c0f}
+    .wrap{max-width:1280px;margin:20px auto;padding:0 16px;display:grid;grid-template-columns:380px 1fr;gap:16px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;backdrop-filter:blur(10px);box-shadow:0 18px 60px rgba(0,0,0,.35)}
+    .section-title{font-size:18px;font-weight:900;letter-spacing:.3px;margin:4px 0 8px}
+    .row{display:flex;gap:8px;align-items:center}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .field, textarea, select{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:var(--glass);color:var(--ink)}
+    .muted{color:var(--muted);font-size:12px}
+    video{width:100%;background:#000;border-radius:12px}
+    .chat{height:260px;overflow:auto;display:flex;flex-direction:column;gap:6px}
+    .msg{background:rgba(255,255,255,.06);padding:8px 10px;border-radius:10px;font-size:14px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:2px 6px;border-radius:6px}
+    footer{max-width:1280px;margin:36px auto;color:#9fb0cc;text-align:center;padding:16px}
+    @media(max-width:1040px){.wrap{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.brandbar .title{font-size:18px}}
   </style>
 </head>
 <body>
-  <!-- LARGE BRANDING BAR -->
   <header class="brandbar">
     <img src="assets/logo.png" alt="iCALLnow logo" class="logo" />
     <h1 class="title">iCALLnow — Video · Voice · SMS</h1>
     <div class="cta">
-      <a href="index.html" class="btn btn-ghost" title="Landing">Landing</a>
+      <span id="connState" class="pill">WS: init</span>
+      <span id="pcState" class="pill">PC: idle</span>
       <button id="quickStart" class="btn btn-primary">Quick Start</button>
+      <a href="index.html" class="btn btn-ghost" title="Landing">Landing</a>
     </div>
   </header>
 
   <main class="wrap">
-    <!-- LEFT PANEL -->
+    <!-- LEFT CONTROL PANE -->
     <aside class="card">
       <div class="section-title">Connect</div>
-      <input id="room" class="field" placeholder="Room ID (blank = auto)" />
+      <div class="row">
+        <input id="room" class="field" placeholder="Room ID (blank = auto)" />
+        <button id="copyLink" class="btn btn-ghost" title="Copy join URL">Copy</button>
+      </div>
       <div class="row" style="margin-top:8px">
         <button id="start" class="btn btn-primary">Start</button>
         <button id="leave" class="btn btn-ghost">Leave</button>
+        <button id="retry" class="btn btn-ghost">Retry</button>
+      </div>
+
+      <div class="section-title" style="margin-top:16px">Devices</div>
+      <div class="row">
+        <select id="camera" class="field"></select>
+        <select id="mic" class="field"></select>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <label class="pill"><input type="checkbox" id="hd"/> HD (1280x720)</label>
+        <label class="pill"><input type="checkbox" id="echoCancel" checked/> Echo cancel</label>
+        <label class="pill"><input type="checkbox" id="noiseSupp" checked/> Noise suppress</label>
       </div>
 
       <div class="section-title" style="margin-top:16px">Chat</div>
@@ -71,8 +92,8 @@
         <button id="video" class="btn btn-ghost">Video</button>
         <button id="share" class="btn btn-ghost">Share</button>
         <button id="rec" class="btn btn-ghost">Record</button>
+        <button id="snap" class="btn btn-ghost">Snapshot</button>
       </div>
-      <div class="muted" id="status" style="margin-top:8px">Idle</div>
 
       <div class="card" style="margin-top:16px">
         <div class="section-title">Phone & SMS</div>
@@ -84,134 +105,240 @@
         </div>
         <div class="muted" id="tStatus" style="margin-top:6px"></div>
       </div>
+
+      <div class="muted" id="status" style="margin-top:10px">Idle</div>
     </aside>
 
-    <!-- RIGHT PANEL -->
+    <!-- RIGHT STAGE -->
     <section class="card">
       <div class="section-title">Live Session</div>
       <div class="grid" style="margin-top:8px">
         <video id="local" autoplay playsinline muted></video>
         <video id="remote" autoplay playsinline></video>
       </div>
+      <canvas id="canvas" style="display:none"></canvas>
     </section>
   </main>
 
   <footer>© 2025 iD01t Productions — All rights reserved.</footer>
 
-  <script>
-    // --- Configure backend (ngrok/deployed FastAPI) ---
-    const BACKEND = "https://97fb8c099fc3.ngrok-free.app";
-    const WS = BACKEND.replace(/^https/, "wss") + "/ws";
+<script>
+const BACKEND = "https://97fb8c099fc3.ngrok-free.app";  // ⬅ update when your backend URL changes
+const WS_BASE = BACKEND.replace(/^https/, "wss") + "/ws";
 
-    const $ = (id) => document.getElementById(id);
-    function setStatus(t){ $("status").textContent = t; }
-    function addMsg(from, text){
-      const div=document.createElement('div'); div.className='msg'; div.textContent=`${from}: ${text}`;
-      $("chat").appendChild(div); $("chat").scrollTop = $("chat").scrollHeight;
+const $ = id => document.getElementById(id);
+const el = {
+  conn: $("connState"), pc: $("pcState"), status: $("status"),
+  local: $("local"), remote: $("remote"), canvas:$("canvas"),
+  camera:$("camera"), mic:$("mic"),
+  hd:$("hd"), echo:$("echoCancel"), noise:$("noiseSupp")
+};
+
+function set(elm, text, cls){ elm.textContent = text; if(cls){ elm.className = "pill " + cls; } }
+function log(t){ el.status.textContent = t; }
+function addMsg(from, text){
+  const d=document.createElement("div"); d.className="msg";
+  d.textContent=`${from}: ${text}`; const c=$("chat"); c.appendChild(d); c.scrollTop=c.scrollHeight;
+}
+
+let pc=null, ws=null, localStream=null, recorder=null, recorded=[], reconnectTimer=null;
+let roomId="", wsUrl="";
+
+function constraints(){
+  const hd = el.hd.checked;
+  const audio = { echoCancellation: el.echo.checked, noiseSuppression: el.noise.checked };
+  const video = hd ? { width:{ideal:1280}, height:{ideal:720} } : true;
+  const devs = { audio:{ deviceId: el.mic.value?{exact:el.mic.value}:undefined }, video:{ deviceId: el.camera.value?{exact:el.camera.value}:undefined } };
+  return { audio:{...audio,...devs.audio}, video: (video===true?{...devs.video}: {...video,...devs.video}) };
+}
+
+async function listDevices(){
+  try{
+    const devs = await navigator.mediaDevices.enumerateDevices();
+    const cams = devs.filter(d=>d.kind==="videoinput");
+    const mics = devs.filter(d=>d.kind==="audioinput");
+    el.camera.innerHTML = cams.map(d=>`<option value="${d.deviceId}">${d.label||"Camera"}</option>`).join("");
+    el.mic.innerHTML = mics.map(d=>`<option value="${d.deviceId}">${d.label||"Microphone"}</option>`).join("");
+  }catch(e){ console.warn("enumerateDevices",e); }
+}
+
+async function getIce(){ const r=await fetch(BACKEND+"/ice"); return r.json(); }
+
+function makeWs(){
+  ws = new WebSocket(wsUrl);
+  set(el.conn,"WS: connecting","warn");
+  ws.onopen=()=>{ set(el.conn,"WS: open","ok"); };
+  ws.onclose=()=>{ set(el.conn,"WS: closed","bad"); scheduleReconnect(); };
+  ws.onerror=()=>{ set(el.conn,"WS: error","bad"); };
+  ws.onmessage=async(ev)=>{
+    const msg = JSON.parse(ev.data);
+    if(msg.type==="offer"){
+      await pc.setRemoteDescription(msg.sdp);
+      const ans = await pc.createAnswer(); await pc.setLocalDescription(ans);
+      ws.send(JSON.stringify({ type:"answer", sdp:ans }));
+    }else if(msg.type==="answer"){
+      await pc.setRemoteDescription(msg.sdp); set(el.pc,"PC: connected","ok"); log("Connected");
+    }else if(msg.type==="candidate"){
+      try{ await pc.addIceCandidate(msg.candidate);}catch(e){console.warn(e)}
+    }else if(msg.type==="chat"){
+      addMsg(msg.from||"peer",msg.text);
+    }else if(msg.type==="ping"){
+      ws.send(JSON.stringify({type:"pong"}));
     }
+  };
+}
 
-    let pc=null, ws=null, localStream=null, recorder=null, recorded=[];
-    let roomId="";
+function scheduleReconnect(){
+  if(reconnectTimer){ return; }
+  reconnectTimer = setTimeout(()=>{ reconnectTimer=null; if(roomId) start(true); }, 1500);
+}
 
-    async function getIce(){ const r = await fetch(BACKEND + "/ice"); return r.json(); }
-    function wsUrl(){ return WS + "?room=" + encodeURIComponent(roomId); }
+async function start(isReconnect=false){
+  roomId = $("room").value || roomId || Math.random().toString(36).slice(2,10);
+  $("room").value = roomId;
+  wsUrl = WS_BASE + "?room=" + encodeURIComponent(roomId);
 
-    async function start(){
-      roomId = $("room").value || Math.random().toString(36).slice(2,10);
-      $("room").value = roomId;
+  // media
+  if(!isReconnect){
+    localStream = await navigator.mediaDevices.getUserMedia(constraints());
+    el.local.srcObject = localStream;
+    await listDevices();
+  }
 
-      setStatus("Accessing camera/mic…");
-      localStream = await navigator.mediaDevices.getUserMedia({ video:true, audio:true });
-      $("local").srcObject = localStream;
+  // peer connection
+  const ice = await getIce();
+  pc = new RTCPeerConnection({ iceServers: ice.iceServers || [], iceTransportPolicy:"all" });
+  set(el.pc,"PC: new","warn");
 
-      const ice = await getIce();
-      pc = new RTCPeerConnection({ iceServers: ice.iceServers || [] });
-      pc.ontrack = e => { $("remote").srcObject = e.streams[0]; };
-      pc.onicecandidate = e => { if (e.candidate) ws?.send(JSON.stringify({ type:"candidate", candidate:e.candidate })); };
-      localStream.getTracks().forEach(t => pc.addTrack(t, localStream));
+  pc.onicegatheringstatechange = ()=> set(el.pc, `PC: ${pc.iceGatheringState}`, pc.iceGatheringState==="complete"?"ok":"warn");
+  pc.onconnectionstatechange = ()=> {
+    const s=pc.connectionState; set(el.pc,`PC: ${s}`, s==="connected"?"ok":(s==="failed"?"bad":"warn"));
+    if(s==="failed"||s==="disconnected"){ scheduleReconnect(); }
+  };
+  pc.ontrack = e => { el.remote.srcObject = e.streams[0]; };
+  pc.onicecandidate = e => { if(e.candidate) ws?.send(JSON.stringify({type:"candidate",candidate:e.candidate})); };
+  localStream.getTracks().forEach(t=>pc.addTrack(t, localStream));
 
-      ws = new WebSocket(wsUrl());
-      ws.onopen = async () => {
-        setStatus("Connected. Creating offer…");
-        const offer = await pc.createOffer();
-        await pc.setLocalDescription(offer);
-        ws.send(JSON.stringify({ type:"offer", sdp:offer }));
-      };
-      ws.onmessage = async (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.type === "offer") {
-          await pc.setRemoteDescription(msg.sdp);
-          const ans = await pc.createAnswer();
-          await pc.setLocalDescription(ans);
-          ws.send(JSON.stringify({ type:"answer", sdp:ans }));
-        } else if (msg.type === "answer") {
-          await pc.setRemoteDescription(msg.sdp);
-          setStatus("Connected");
-        } else if (msg.type === "candidate") {
-          try { await pc.addIceCandidate(msg.candidate); } catch(e){ console.warn(e); }
-        } else if (msg.type === "chat") {
-          addMsg(msg.from || "peer", msg.text);
-        }
-      };
-      ws.onclose = () => setStatus("Disconnected");
+  // signaling
+  makeWs();
+  ws.onopen = async ()=>{
+    if(!isReconnect){
+      const offer = await pc.createOffer(); await pc.setLocalDescription(offer);
+      ws.send(JSON.stringify({type:"offer", sdp:offer}));
+      log("Offer sent…");
+    }else{
+      // renegotiate on reconnect
+      const offer = await pc.createOffer({iceRestart:true}); await pc.setLocalDescription(offer);
+      ws.send(JSON.stringify({type:"offer", sdp:offer}));
+      log("Re-offer sent…");
     }
-    function leave(){
-      ws?.close(); ws=null;
-      pc?.close(); pc=null;
-      if (localStream){ localStream.getTracks().forEach(t=>t.stop()); localStream=null; }
-      setStatus("Left");
-    }
-    function sendChat(){
-      const text = $("msg").value.trim(); if(!text) return;
-      ws?.send(JSON.stringify({ type:"chat", text })); addMsg("me", text); $("msg").value="";
-    }
-    function toggleMute(){ localStream?.getAudioTracks().forEach(t => t.enabled = !t.enabled); }
-    function toggleVideo(){ localStream?.getVideoTracks().forEach(t => t.enabled = !t.enabled); }
-    async function shareScreen(){
-      const scr = await navigator.mediaDevices.getDisplayMedia({ video:true });
-      const vtrack = scr.getVideoTracks()[0];
-      const sender = pc.getSenders().find(s => s.track && s.track.kind === "video");
-      if (sender) sender.replaceTrack(vtrack);
-      vtrack.onended = () => {
-        const orig = $("local").srcObject?.getVideoTracks()[0];
-        if (sender && orig) sender.replaceTrack(orig);
-      };
-    }
-    function record(){
-      if (recorder){
-        recorder.stop(); recorder=null;
-        const blob = new Blob(recorded, { type:"video/webm" });
-        const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-        a.download = `icallnow-${Date.now()}.webm`; a.click(); recorded=[]; return;
-      }
-      const src = $("remote").srcObject || $("local").srcObject;
-      recorder = new MediaRecorder(src, { mimeType: "video/webm" });
-      recorder.ondataavailable = e => recorded.push(e.data);
-      recorder.start();
-    }
+  };
+}
 
-    $("quickStart").onclick = () => { if(!$("room").value) $("room").value = ""; start(); };
-    $("start").onclick = start; $("leave").onclick = leave;
-    $("send").onclick = sendChat; $("mute").onclick = toggleMute;
-    $("video").onclick = toggleVideo; $("share").onclick = shareScreen; $("rec").onclick = record;
+function leave(){
+  try{ ws?.close(); }catch(_){}
+  try{ pc?.close(); }catch(_){}
+  if(localStream){ localStream.getTracks().forEach(t=>t.stop()); }
+  ws=pc=localStream=null; recorded=[]; recorder=null;
+  set(el.conn,"WS: idle",""); set(el.pc,"PC: idle","");
+  log("Left");
+}
 
-    // Telephony
-    async function sendSMS(){
-      const to = $("phone").value.trim(), body = $("sms").value.trim();
-      if(!to || !body){ $("tStatus").textContent="Enter phone & message"; return; }
-      try{
-        const r = await fetch(BACKEND + "/sms", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ to, body }) });
-        const j = await r.json(); $("tStatus").textContent = r.ok ? `SMS sent (SID ${j.sid})` : (j.error || "Failed");
-      }catch(e){ $("tStatus").textContent="Network error"; }
-    }
-    async function makeCall(){
-      const to = $("phone").value.trim(); if(!to){ $("tStatus").textContent="Enter phone"; return; }
-      try{
-        const r = await fetch(BACKEND + "/call", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ to }) });
-        const j = await r.json(); $("tStatus").textContent = r.ok ? `Call initiated (SID ${j.sid})` : (j.error || "Failed");
-      }catch(e){ $("tStatus").textContent="Network error"; }
-    }
-    $("sendSms").onclick = sendSMS; $("call").onclick = makeCall;
-  </script>
+function retry(){ if(roomId){ start(true); } else { start(false); } }
+
+function sendChat(){
+  const text = $("msg").value.trim(); if(!text) return;
+  ws?.send(JSON.stringify({type:"chat", text}));
+  addMsg("me", text); $("msg").value="";
+}
+
+function toggleMute(){ if(!localStream) return; localStream.getAudioTracks().forEach(t=>t.enabled=!t.enabled); }
+function toggleVideo(){ if(!localStream) return; localStream.getVideoTracks().forEach(t=>t.enabled=!t.enabled); }
+
+async function shareScreen(){
+  try{
+    const scr = await navigator.mediaDevices.getDisplayMedia({video:true,audio:false});
+    const vtrack = scr.getVideoTracks()[0];
+    const sender = pc.getSenders().find(s=>s.track && s.track.kind==="video");
+    if(sender) sender.replaceTrack(vtrack);
+    vtrack.onended = ()=>{
+      const orig = el.local.srcObject?.getVideoTracks()[0];
+      if(sender && orig) sender.replaceTrack(orig);
+    };
+  }catch(e){ log("Share canceled"); }
+}
+
+function record(){
+  if(recorder){
+    recorder.stop(); recorder=null;
+    const blob = new Blob(recorded, {type:"video/webm"});
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+    a.download = `icallnow-${Date.now()}.webm`; a.click(); recorded=[]; return;
+  }
+  const src = el.remote.srcObject || el.local.srcObject;
+  if(!src){ log("Nothing to record"); return; }
+  recorder = new MediaRecorder(src, {mimeType:"video/webm"});
+  recorder.ondataavailable = e => recorded.push(e.data);
+  recorder.start();
+  log("Recording… click Record again to stop");
+}
+
+function snapshot(){
+  const v = el.remote.srcObject ? $("remote") : $("local");
+  if(!v || !v.videoWidth){ log("No video to snapshot"); return; }
+  const c = el.canvas; c.width = v.videoWidth; c.height = v.videoHeight;
+  const ctx = c.getContext("2d"); ctx.drawImage(v,0,0);
+  c.toBlob(b=>{
+    const a = document.createElement("a"); a.href=URL.createObjectURL(b);
+    a.download=`icallnow-snap-${Date.now()}.png`; a.click();
+  });
+}
+
+function copyLink(){
+  const url = location.origin + location.pathname + "?room=" + encodeURIComponent($("room").value||roomId||"");
+  navigator.clipboard.writeText(url).then(()=>{ log("Join link copied"); });
+}
+
+// Telephony
+async function sendSMS(){
+  const to = $("phone").value.trim(), body = $("sms").value.trim();
+  if(!to || !body){ $("tStatus").textContent="Enter phone & message"; return; }
+  try{
+    const r = await fetch(BACKEND+"/sms",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({to,body})});
+    const j = await r.json(); $("tStatus").textContent = r.ok ? `SMS sent (SID ${j.sid})` : (j.error || "Failed");
+  }catch(e){ $("tStatus").textContent="Network error"; }
+}
+async function makeCall(){
+  const to = $("phone").value.trim(); if(!to){ $("tStatus").textContent="Enter phone"; return; }
+  try{
+    const r = await fetch(BACKEND+"/call",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({to})});
+    const j = await r.json(); $("tStatus").textContent = r.ok ? `Call initiated (SID ${j.sid})` : (j.error || "Failed");
+  }catch(e){ $("tStatus").textContent="Network error"; }
+}
+
+// UI binds
+$("start").onclick=()=>start(false);
+$("leave").onclick=leave;
+$("retry").onclick=retry;
+$("send").onclick=sendChat;
+$("mute").onclick=toggleMute;
+$("video").onclick=toggleVideo;
+$("share").onclick=shareScreen;
+$("rec").onclick=record;
+$("snap").onclick=snapshot;
+$("copyLink").onclick=copyLink;
+$("quickStart").onclick=()=>{ if(!$("room").value) $("room").value=""; start(false); };
+
+window.addEventListener("load", async ()=>{
+  // pre-select room from URL if present
+  const r=new URLSearchParams(location.search).get("room"); if(r){ $("room").value=r; }
+  try{
+    // ask for mic/cam once to unlock labels, then stop
+    const tmp = await navigator.mediaDevices.getUserMedia({audio:true,video:true});
+    tmp.getTracks().forEach(t=>t.stop());
+  }catch(_){}
+  listDevices();
+});
+</script>
 </body>
 </html>
