@@ -2,81 +2,216 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>iCALLnow — Instant Video, Voice & SMS</title>
+  <title>iCALLnow — Video · Voice · SMS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="iCALLnow is the fastest way to video call, phone call, and text — all in one sleek app." />
-  <meta property="og:title" content="iCALLnow — Instant Video, Voice & SMS" />
-  <meta property="og:description" content="Jump into a room, call, or text in seconds. Built for speed, clarity, and scale." />
-  <meta property="og:image" content="https://id01t.github.io/assets/logo.png" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="iCALLnow — instant video, voice, and SMS in one sleek app." />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <style>
-    :root { --bg:#070b18; --ink:#eaf0ff; --muted:#aab6d0; --acc:#39ff14; --acc2:#2f7cff; --glass:rgba(255,255,255,.06); }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:radial-gradient(120% 160% at 20% 0%,#0e1834 0%,#070b18 60%);color:var(--ink)}
-    header{display:flex;align-items:center;gap:14px;padding:16px 20px;position:sticky;top:0;background:rgba(0,0,0,.45);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(12px);z-index:10}
-    header img{height:42px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
-    header .spacer{flex:1}
-    .btn{border:0;padding:10px 14px;border-radius:12px;font-weight:800;cursor:pointer}
-    .btn-primary{background:linear-gradient(180deg,#6aff7a,var(--acc));color:#031106}
-    .btn-ghost{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.18)}
-    .hero{max-width:1100px;margin:40px auto;padding:0 16px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
-    .hero h1{font-size:40px;line-height:1.1;margin:0 0 12px 0}
-    .hero p{color:var(--muted);font-size:18px;margin:0 0 18px 0}
-    .card{background:var(--glass);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px}
-    .features{max-width:1100px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .feat{background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
-    .feat h3{margin:0 0 8px 0}
-    .cta-bar{max-width:1100px;margin:28px auto;padding:18px 16px;display:flex;gap:12px;align-items:center;background:linear-gradient(90deg,rgba(57,255,20,.1),rgba(47,124,255,.1));border:1px solid rgba(255,255,255,.12);border-radius:16px}
-    footer{max-width:1100px;margin:36px auto;padding:16px;color:#9fb0cc;text-align:center}
-    @media (max-width: 980px){.hero{grid-template-columns:1fr}.features{grid-template-columns:1fr}}
+    :root { --bg:#0b1220; --ink:#e8eefc; --muted:#a9b6d0; --glass:rgba(255,255,255,.08); --card:rgba(255,255,255,.06); --acc:#39ff14; --acc2:#2f7cff; }
+    * { box-sizing: border-box }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial; color:var(--ink);
+           background: radial-gradient(110% 140% at 10% 0%, #121c38 0%, #0b1220 60%); }
+    /* Large branding bar */
+    .brandbar { position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:16px;
+                padding:18px 20px; background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
+                border-bottom:1px solid rgba(255,255,255,.08); backdrop-filter: blur(12px); }
+    .brandbar .logo { height:48px; width:auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.45); }
+    .brandbar .title { font-size:22px; font-weight:900; letter-spacing:.2px; margin:0 }
+    .brandbar .cta { margin-left:auto; display:flex; gap:10px; }
+    .btn { border:0; padding:10px 14px; border-radius:12px; font-weight:800; cursor:pointer; transition:transform .08s, filter .12s; }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .btn-primary { background: linear-gradient(180deg, #6aff7a, var(--acc)); color:#09100c }
+    .btn-ghost { background: transparent; color: var(--ink); border:1px solid rgba(255,255,255,.15) }
+
+    .wrap { max-width:1200px; margin:20px auto; padding:0 16px; display:grid; grid-template-columns:360px 1fr; gap:16px; }
+    .card { background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px; backdrop-filter: blur(10px); box-shadow:0 18px 60px rgba(0,0,0,.35) }
+    .section-title { font-size:18px; font-weight:900; letter-spacing:.3px; margin-bottom:8px }
+    .row { display:flex; gap:8px; align-items:center }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px }
+    .field, textarea { width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--glass); color:var(--ink) }
+    .muted { color: var(--muted); font-size:12px }
+    video { width:100%; background:#000; border-radius:12px }
+    .chat { height: 240px; overflow:auto; display:flex; flex-direction:column; gap:6px }
+    .msg { background: rgba(255,255,255,.06); padding:8px 10px; border-radius:10px; font-size:14px }
+    footer { max-width:1200px; margin:36px auto; color:#9fb0cc; text-align:center; padding:16px }
+    @media (max-width: 960px) { .wrap { grid-template-columns:1fr } .grid { grid-template-columns:1fr } .brandbar .title { font-size:18px } }
   </style>
 </head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="iCALLnow logo" />
-    <strong>iCALLnow</strong>
-    <div class="spacer"></div>
-    <a href="icallnow.html" class="btn btn-primary">Open App</a>
-    <a href="#pricing" class="btn btn-ghost">Pricing</a>
+  <!-- LARGE BRANDING BAR -->
+  <header class="brandbar">
+    <img src="assets/logo.png" alt="iCALLnow logo" class="logo" />
+    <h1 class="title">iCALLnow — Video · Voice · SMS</h1>
+    <div class="cta">
+      <a href="index.html" class="btn btn-ghost" title="Landing">Landing</a>
+      <button id="quickStart" class="btn btn-primary">Quick Start</button>
+    </div>
   </header>
 
-  <section class="hero">
-    <div>
-      <h1>Video. Voice. SMS. <br/>One lightning-fast app.</h1>
-      <p>Start a room, place a call, or send a text in seconds. iCALLnow is engineered for clarity, speed, and zero-friction collaboration.</p>
-      <div style="display:flex; gap:10px; margin-top:12px">
-        <a href="icallnow.html" class="btn btn-primary">Start Now</a>
-        <a href="#features" class="btn btn-ghost">See Features</a>
+  <main class="wrap">
+    <!-- LEFT PANEL -->
+    <aside class="card">
+      <div class="section-title">Connect</div>
+      <input id="room" class="field" placeholder="Room ID (blank = auto)" />
+      <div class="row" style="margin-top:8px">
+        <button id="start" class="btn btn-primary">Start</button>
+        <button id="leave" class="btn btn-ghost">Leave</button>
       </div>
-    </div>
-    <div class="card">
-      <img src="assets/logo.png" alt="Preview" style="width:100%; border-radius:12px; background:#000; aspect-ratio:16/10; object-fit:contain" />
-    </div>
-  </section>
 
-  <section id="features" class="features">
-    <div class="feat">
-      <h3>Crystal Video</h3>
-      <p>Low-latency WebRTC with TURN/STUN fallback for tough networks.</p>
-    </div>
-    <div class="feat">
-      <h3>Voice & SMS</h3>
-      <p>Twilio-powered telephony with delivery status and webhook handling.</p>
-    </div>
-    <div class="feat">
-      <h3>Pro Controls</h3>
-      <p>Screen share, local recording, room chat, and quick re-join.</p>
-    </div>
-  </section>
+      <div class="section-title" style="margin-top:16px">Chat</div>
+      <div id="chat" class="chat card"></div>
+      <div class="row" style="margin-top:8px">
+        <input id="msg" class="field" placeholder="Type message…" />
+        <button id="send" class="btn btn-primary">Send</button>
+      </div>
 
-  <section id="pricing" class="cta-bar">
-    <div style="flex:1">
-      <strong>Simple pricing.</strong> Start free, scale as you grow.
-    </div>
-    <a href="icallnow.html" class="btn btn-primary">Launch iCALLnow</a>
-    <a href="mailto:contact@id01t.com" class="btn btn-ghost">Enterprise</a>
-  </section>
+      <div class="row" style="margin-top:12px">
+        <button id="mute" class="btn btn-ghost">Mute</button>
+        <button id="video" class="btn btn-ghost">Video</button>
+        <button id="share" class="btn btn-ghost">Share</button>
+        <button id="rec" class="btn btn-ghost">Record</button>
+      </div>
+      <div class="muted" id="status" style="margin-top:8px">Idle</div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="section-title">Phone & SMS</div>
+        <input id="phone" class="field" placeholder="Phone (+1…)" />
+        <textarea id="sms" rows="3" class="field" placeholder="SMS message"></textarea>
+        <div class="row" style="margin-top:8px">
+          <button id="sendSms" class="btn btn-primary">Send SMS</button>
+          <button id="call" class="btn btn-ghost">Call</button>
+        </div>
+        <div class="muted" id="tStatus" style="margin-top:6px"></div>
+      </div>
+    </aside>
+
+    <!-- RIGHT PANEL -->
+    <section class="card">
+      <div class="section-title">Live Session</div>
+      <div class="grid" style="margin-top:8px">
+        <video id="local" autoplay playsinline muted></video>
+        <video id="remote" autoplay playsinline></video>
+      </div>
+    </section>
+  </main>
 
   <footer>© 2025 iD01t Productions — All rights reserved.</footer>
+
+  <script>
+    // --- Configure your backend (ngrok / deployed FastAPI) ---
+    const BACKEND = "https://97fb8c099fc3.ngrok-free.app";
+    const WS = BACKEND.replace(/^https/, "wss") + "/ws";
+
+    const $ = (id) => document.getElementById(id);
+    function setStatus(t){ $("status").textContent = t; }
+    function addMsg(from, text){
+      const div=document.createElement('div'); div.className='msg'; div.textContent=`${from}: ${text}`;
+      $("chat").appendChild(div); $("chat").scrollTop = $("chat").scrollHeight;
+    }
+
+    let pc=null, ws=null, localStream=null, recorder=null, recorded=[];
+    let roomId="";
+
+    async function getIce(){ const r = await fetch(BACKEND + "/ice"); return r.json(); }
+    function wsUrl(){ return WS + "?room=" + encodeURIComponent(roomId); }
+
+    async function start(){
+      roomId = $("room").value || Math.random().toString(36).slice(2,10);
+      $("room").value = roomId;
+
+      setStatus("Accessing camera/mic…");
+      localStream = await navigator.mediaDevices.getUserMedia({ video:true, audio:true });
+      $("local").srcObject = localStream;
+
+      const ice = await getIce();
+      pc = new RTCPeerConnection({ iceServers: ice.iceServers || [] });
+      pc.ontrack = e => { $("remote").srcObject = e.streams[0]; };
+      pc.onicecandidate = e => { if (e.candidate) ws?.send(JSON.stringify({ type:"candidate", candidate:e.candidate })); };
+      localStream.getTracks().forEach(t => pc.addTrack(t, localStream));
+
+      ws = new WebSocket(wsUrl());
+      ws.onopen = async () => {
+        setStatus("Connected. Creating offer…");
+        const offer = await pc.createOffer();
+        await pc.setLocalDescription(offer);
+        ws.send(JSON.stringify({ type:"offer", sdp:offer }));
+      };
+      ws.onmessage = async (ev) => {
+        const msg = JSON.parse(ev.data);
+        if (msg.type === "offer") {
+          await pc.setRemoteDescription(msg.sdp);
+          const ans = await pc.createAnswer();
+          await pc.setLocalDescription(ans);
+          ws.send(JSON.stringify({ type:"answer", sdp:ans }));
+        } else if (msg.type === "answer") {
+          await pc.setRemoteDescription(msg.sdp);
+          setStatus("Connected");
+        } else if (msg.type === "candidate") {
+          try { await pc.addIceCandidate(msg.candidate); } catch(e){ console.warn(e); }
+        } else if (msg.type === "chat") {
+          addMsg(msg.from || "peer", msg.text);
+        }
+      };
+      ws.onclose = () => setStatus("Disconnected");
+    }
+    function leave(){
+      ws?.close(); ws=null;
+      pc?.close(); pc=null;
+      if (localStream){ localStream.getTracks().forEach(t=>t.stop()); localStream=null; }
+      setStatus("Left");
+    }
+    function sendChat(){
+      const text = $("msg").value.trim(); if(!text) return;
+      ws?.send(JSON.stringify({ type:"chat", text })); addMsg("me", text); $("msg").value="";
+    }
+    function toggleMute(){ localStream?.getAudioTracks().forEach(t => t.enabled = !t.enabled); }
+    function toggleVideo(){ localStream?.getVideoTracks().forEach(t => t.enabled = !t.enabled); }
+    async function shareScreen(){
+      const scr = await navigator.mediaDevices.getDisplayMedia({ video:true });
+      const vtrack = scr.getVideoTracks()[0];
+      const sender = pc.getSenders().find(s => s.track && s.track.kind === "video");
+      if (sender) sender.replaceTrack(vtrack);
+      vtrack.onended = () => {
+        const orig = $("local").srcObject?.getVideoTracks()[0];
+        if (sender && orig) sender.replaceTrack(orig);
+      };
+    }
+    function record(){
+      if (recorder){
+        recorder.stop(); recorder=null;
+        const blob = new Blob(recorded, { type:"video/webm" });
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+        a.download = `icallnow-${Date.now()}.webm`; a.click(); recorded=[]; return;
+      }
+      const src = $("remote").srcObject || $("local").srcObject;
+      recorder = new MediaRecorder(src, { mimeType: "video/webm" });
+      recorder.ondataavailable = e => recorded.push(e.data);
+      recorder.start();
+    }
+
+    $("quickStart").onclick = () => { if(!$("room").value) $("room").value = ""; start(); };
+    $("start").onclick = start; $("leave").onclick = leave;
+    $("send").onclick = sendChat; $("mute").onclick = toggleMute;
+    $("video").onclick = toggleVideo; $("share").onclick = shareScreen; $("rec").onclick = record;
+
+    // Telephony
+    async function sendSMS(){
+      const to = $("phone").value.trim(), body = $("sms").value.trim();
+      if(!to || !body){ $("tStatus").textContent="Enter phone & message"; return; }
+      try{
+        const r = await fetch(BACKEND + "/sms", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ to, body }) });
+        const j = await r.json(); $("tStatus").textContent = r.ok ? `SMS sent (SID ${j.sid})` : (j.error || "Failed");
+      }catch(e){ $("tStatus").textContent="Network error"; }
+    }
+    async function makeCall(){
+      const to = $("phone").value.trim(); if(!to){ $("tStatus").textContent="Enter phone"; return; }
+      try{
+        const r = await fetch(BACKEND + "/call", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ to }) });
+        const j = await r.json(); $("tStatus").textContent = r.ok ? `Call initiated (SID ${j.sid})` : (j.error || "Failed");
+      }catch(e){ $("tStatus").textContent="Network error"; }
+    }
+    $("sendSms").onclick = sendSMS; $("call").onclick = makeCall;
+  </script>
 </body>
 </html>
