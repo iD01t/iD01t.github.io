@@ -1,169 +1,249 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iD01t Academy: Python Exercises Book 3 by Guillaume Lessard | iD01t Productions</title>
-  <meta name="description" content="Read iD01t Academy: Python Exercises Book 3 by Guillaume Lessard - A comprehensive guide covering essential programming concepts, automation techniques, and digital skills.">
-  <meta name="keywords" content="iD01t Academy: Python Exercises Book 3, Guillaume Lessard, iD01t Productions, programming, automation, tech education, digital skills">
-  <link rel="canonical" href="https://id01t.github.io/ebooks/id01t-academy-python-exercises-book-3.html">
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="Guillaume Lessard">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="iD01t Academy: Python Exercises Book 3 by Guillaume Lessard"/>
-  <meta property="og:description" content="A comprehensive guide covering essential programming concepts, automation techniques, and digital skills."/>
-  <meta property="og:type" content="book"/>
-  <meta property="og:url" content="https://id01t.github.io/ebooks/id01t-academy-python-exercises-book-3.html"/>
-  <meta property="og:image" content="https://id01t.github.io/assets/harvested/ebooks/ebook_045_id01t_academy_python_exercises_book_3_zoom5.jpg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="iD01t Academy: Python Exercises Book 3 by Guillaume Lessard"/>
-  <meta name="twitter:description" content="A comprehensive guide covering essential programming concepts, automation techniques, and digital skills."/>
-  <meta name="twitter:image" content="https://id01t.github.io/assets/harvested/ebooks/ebook_045_id01t_academy_python_exercises_book_3_zoom5.jpg"/>
-
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>iD01t Academy: Python Exercises Book 3 · iD01t Productions</title>
+  <meta name="description" content="iD01t Academy: Python Exercises Book 3 · Building Real, Monetizable, and Scalable Applications with Python<p&">
+  <link rel="canonical" href="https://id01t.store/ebooks/id01t-academy-python-exercises-book-3.html">
+  <meta name="theme-color" content="#16185c"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
+  <link rel="icon" href="/favicon.ico"/>
   <link rel="apple-touch-icon" href="/assets/logo-512.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="iD01t Academy: Python Exercises Book 3">
+  <meta property="og:description" content="iD01t Academy: Python Exercises Book 3 · Building Real, Monetizable, and Scalable Applications with Python<p&">
+  <meta property="og:url" content="https://id01t.store/ebooks/id01t-academy-python-exercises-book-3.html">
+  <meta property="og:image" content="/assets/harvested/ebooks/ebook_043_iD01t_Academy_Python_Exercises_Book_1__Edition_2_zoom5.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="iD01t Productions : Apps, eBooks, Games & Music for Creators"/>
+  <meta name="twitter:description" content="Outils concrets pour développeurs et créateurs : apps, eBooks, jeux, musique."/>
+  <meta name="twitter:image" content="https://id01t.github.io/assets/img/placeholders/hero-1600x900.webp"/>
 
-  <!-- Tailwind -->
+  <!-- Preconnects for perf -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  
+  <script>
+    tailwind.config = {theme:{extend:{colors:{brand:{50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}}}}};
+  </script>
+  <link rel="stylesheet" href="/css/custom.css">
   <style>
-    body {font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    .book-cover img { transition: transform .3s ease }
-    .book-cover:hover img { transform: scale(1.02) }
+    .link-underline { position: relative; }
+    .link-underline::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: currentColor; transform:scaleX(0); transform-origin:left; transition: transform .2s; }
+    .link-underline:hover::after { transform:scaleX(1); }
   </style>
-</head>
-<body data-active="eBooks" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  
 
-  <header id="site-header" class="sticky">
-    <div class="wrap nav">
-      <a href="/" class="logo" aria-label="iD01t Home"><strong>iD01t</strong></a>
-      <nav>
-        <a href="/products.html">Products</a>
-        <a href="/ebooks.html" style="text-decoration: underline;">eBooks</a>
-        <a href="/audiobooks.html">Audiobooks</a>
-        <a href="/apps.html">Apps</a>
-        <a href="/games.html">Games</a>
-        <a href="/music.html">Music</a>
-        <a href="/services.html">Services</a>
-        <a href="/blog.html">Blog</a>
-      </nav>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <form action="/search.html" method="GET" style="display: flex; align-items: center;">
-          <input type="search" name="q" placeholder="Search..." 
-                 style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;">
-          <button type="submit" style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;">
-            🔍
+  <!-- Organization + WebSite + SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"iD01t Productions",
+    "url":"https://id01t.github.io/",
+    "logo":"https://id01t.github.io/assets/img/brand/logo.png",
+    "sameAs":[
+      "https://github.com/id01t",
+      "https://id01t.itch.io",
+      "https://open.spotify.com/artist/0EihiI3hgiPfIiyb154dgB",
+      "https://music.apple.com/us/artist/dj-id01t/1803964475"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "url":"https://id01t.github.io/",
+    "name":"iD01t Productions",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://id01t.github.io/search.html?q={query}",
+      "query-input":"required name=query"
+    }
+  }
+  </script>
+
+  <!-- Key entity JSON-LD pulled from real pages -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"HTML2exe Pro",
+    "applicationCategory":"DeveloperApplication",
+    "operatingSystem":"Windows",
+    "publisher":{"@type":"Organization","name":"iD01t Productions"},
+    "url":"https://id01t.itch.io/html2exe"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"VideoGame",
+    "name":"Nini’s Adventures: Kitties Mayhem!",
+    "url":"https://id01t.github.io/games.html",
+    "gamePlatform":"PC",
+    "applicationCategory":"Game",
+    "author":{"@type":"Organization","name":"iD01t Productions"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MusicGroup",
+    "name":"DJ iD01t",
+    "url":"https://id01t.github.io/music.html"
+  }
+  </script>
+
+  <!-- FAQ schema to gain rich results -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Quels types d’apps proposez-vous ?","acceptedAnswer":{"@type":"Answer","text":"Des utilitaires Windows pro (packaging Python→EXE, créateur d’apps HTML→EXE, outils créatifs) avec design moderne et support."}},
+      {"@type":"Question","name":"Où trouver vos eBooks ?","acceptedAnswer":{"@type":"Answer","text":"Nos eBooks sont listés sur la page eBooks et disponibles via Google Play Books et Apple Books."}},
+      {"@type":"Question","name":"Quand commence la bêta de Nini’s Adventures ?","acceptedAnswer":{"@type":"Answer","text":"La bêta PC publique ouvre le 24 septembre 2025. Inscription sur la page d’accueil ou la page Games."}}
+    ]
+  }
+  </script>
+
+  <!-- Analytics & Pixels -->
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'META_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
+  /></noscript>
+
+  <!-- X Pixel -->
+  <script>
+    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+    twq('init','X_PIXEL_ID');
+    twq('track','PageView');
+  </script>
+
+  <!-- TikTok Pixel -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]. daarom="1.2.10",ttq._i[e].setAndDefer(ttq._i[e],"setEvtId",n),ttq.setAndDefer(ttq,"load",e);if(e)return document.getElementById(e);var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+      ttq.load('TIKTOK_PIXEL_ID');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2" aria-label="Home">
+          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
+          <span class="font-semibold tracking-tight">iD01t Productions</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+          <a href="/index.html" class="link-underline">Home</a>
+          <a href="/store.html" class="link-underline">Store</a>
+          <a href="/apps.html" class="link-underline">Apps</a>
+          <a href="/ebooks.html" class="link-underline">eBooks</a>
+          <a href="/audiobooks.html" class="link-underline">Audiobooks</a>
+          <a href="/games.html" class="link-underline">Games</a>
+          <a href="/music.html" class="link-underline">Music</a>
+          <a href="/blog.html" class="link-underline">Blog</a>
+          <a href="/about.html" class="link-underline">About</a>
+          <a href="/contact.html" class="link-underline">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
+          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
           </button>
-        </form>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="/index.html" class="py-2">Home</a>
+        <a href="/store.html" class="py-2">Store</a>
+        <a href="/apps.html" class="py-2">Apps</a>
+        <a href="/ebooks.html" class="py-2">eBooks</a>
+        <a href="/audiobooks.html" class="py-2">Audiobooks</a>
+        <a href="/games.html" class="py-2">Games</a>
+        <a href="/music.html" class="py-2">Music</a>
+        <a href="/blog.html" class="py-2">Blog</a>
+        <a href="/about.html" class="py-2">About</a>
+        <a href="/contact.html" class="py-2">Contact</a>
       </div>
     </div>
   </header>
 
-  <main class="wrap" style="margin-top: 40px;">
-    <div class="book-layout" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start;">
-      <div class="book-cover" style="position: sticky; top: 100px;">
-        <img src="/assets/harvested/ebooks/ebook_045_id01t_academy_python_exercises_book_3_zoom5.jpg" alt="iD01t Academy: Python Exercises Book 3 Cover" loading="eager" 
-             style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);"
-             onerror="this.src='/assets/harvested/ebooks/ebook_001_Echoes_of_the_Heart_zoom5.jpg'">
-      </div>
-      
-      <div class="book-info">
-        <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 16px; line-height: 1.2;">iD01t Academy: Python Exercises Book 3</h1>
-        <div class="book-meta" style="margin-bottom: 24px; color: #6b7280;">
-          <p style="margin: 8px 0;"><strong>Author:</strong> Guillaume Lessard</p>
-          <p style="margin: 8px 0;"><strong>Publisher:</strong> iD01t Productions</p>
-          <p style="margin: 8px 0;"><strong>Published:</strong> 2025-08-21</p>
-          <p style="margin: 8px 0;"><strong>Language:</strong> English</p>
-          <p style="margin: 8px 0;"><strong>Format:</strong> eBook</p>
-        </div>
-        
-        <div class="book-description" style="margin-bottom: 32px;">
-          <p style="font-size: 1.125rem; line-height: 1.6; margin-bottom: 16px;">
-            A comprehensive guide by Guillaume Lessard covering essential programming concepts, automation techniques, and digital skills. 
-            Perfect for developers, students, and professionals who want to master modern development practices and advance their technical skills.
-          </p>
-          <p style="font-size: 1.125rem; line-height: 1.6;">
-            This book provides detailed explanations, real-world examples, and practical exercises that you can immediately apply to your work. 
-            Learn industry best practices and modern development standards used by professional developers worldwide.
-          </p>
-        </div>
-        
-        <div class="book-actions" style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
-          <a href="https://books.google.com/books?id=BqR_EQAAQBAJ" target="_blank" rel="noopener" 
-             style="background: #3b82f6; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s;">
-            Read on Google Books
-          </a>
-          <a href="/ebooks.html" 
-             style="background: transparent; color: #3b82f6; padding: 12px 24px; border: 2px solid #3b82f6; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s;">
-            ← Back to eBooks
-          </a>
-        </div>
-
-        <!-- Features -->
-        <div class="features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 40px;">
-          <div class="feature" style="padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
-            <h3 style="margin: 0 0 12px; font-size: 1.25rem; font-weight: 600;">📚 Comprehensive Content</h3>
-            <p style="margin: 0; color: #6b7280; line-height: 1.6;">Detailed explanations, examples, and exercises covering all essential topics in this field.</p>
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-10">
+      <nav class="text-sm text-slate-500 mb-4"><a class="link-underline" href="/">Home</a> › <a class="link-underline" href="/ebooks.html">eBooks</a> › <span>iD01t Academy: Python Exercises Book 3</span></nav>
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <img src="/assets/harvested/ebooks/ebook_043_iD01t_Academy_Python_Exercises_Book_1__Edition_2_zoom5.jpg" alt="iD01t Academy: Python Exercises Book 3 cover" class="w-full aspect-[3/4] object-cover rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800" loading="eager">
+        <div>
+          <h1 class="text-3xl font-bold tracking-tight">iD01t Academy: Python Exercises Book 3</h1>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">iD01t Academy: Python Exercises Book 3 · Building Real, Monetizable, and Scalable Applications with Python<p&</p>
+          <div class="mt-5 flex items-center gap-3">
+            
+            <a href="https://play.google.com/store/books/details?id=GGKEY:QBDDYLUA19W" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2">Buy Now</a>
+            <a href="/ebooks.html" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-5 py-2">All eBooks</a>
           </div>
-          <div class="feature" style="padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
-            <h3 style="margin: 0 0 12px; font-size: 1.25rem; font-weight: 600;">💻 Practical Examples</h3>
-            <p style="margin: 0; color: #6b7280; line-height: 1.6;">Real-world code examples and projects that you can immediately apply to your work.</p>
-          </div>
-          <div class="feature" style="padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
-            <h3 style="margin: 0 0 12px; font-size: 1.25rem; font-weight: 600;">🚀 Industry Best Practices</h3>
-            <p style="margin: 0; color: #6b7280; line-height: 1.6;">Learn modern development practices and industry standards used by professional developers.</p>
-          </div>
-          <div class="feature" style="padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
-            <h3 style="margin: 0 0 12px; font-size: 1.25rem; font-weight: 600;">🔄 Regular Updates</h3>
-            <p style="margin: 0; color: #6b7280; line-height: 1.6;">Content is regularly updated to reflect the latest technologies and best practices.</p>
-          </div>
+          <ul class="mt-4 text-sm text-slate-500 space-y-1">
+            
+            <li>Language: EN</li>
+            
+          </ul>
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 40px 0; margin-top: 80px;">
-    <div class="wrap">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+<footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
-          <h3 style="margin: 0 0 16px; font-size: 20px;">iD01t Productions</h3>
-          <p style="margin: 0 0 16px; color: #6b7280; line-height: 1.6;">
-            Professional digital content creator specializing in AI apps, tech eBooks, and electronic music.
-          </p>
+          <p class="font-semibold">iD01t Productions</p>
+          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
         </div>
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Products</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/ebooks.html" style="color: #6b7280; text-decoration: none;">eBooks</a></li>
-            <li style="margin-bottom: 8px;"><a href="/audiobooks.html" style="color: #6b7280; text-decoration: none;">Audiobooks</a></li>
-            <li style="margin-bottom: 8px;"><a href="/music.html" style="color: #6b7280; text-decoration: none;">Music</a></li>
-            <li style="margin-bottom: 8px;"><a href="/games.html" style="color: #6b7280; text-decoration: none;">Games</a></li>
-            <li style="margin-bottom: 8px;"><a href="/apps.html" style="color: #6b7280; text-decoration: none;">Apps</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="margin: 0 0 16px; font-size: 16px;">Company</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="/about.html" style="color: #6b7280; text-decoration: none;">About</a></li>
-            <li style="margin-bottom: 8px;"><a href="/blog.html" style="color: #6b7280; text-decoration: none;">Blog</a></li>
-            <li style="margin-bottom: 8px;"><a href="/contact.html" style="color: #6b7280; text-decoration: none;">Contact</a></li>
-            <li style="margin-bottom: 8px;"><a href="/search.html" style="color: #6b7280; text-decoration: none;">Search</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div style="border-top: 1px solid #e2e8f0; padding-top: 24px; text-align: center; color: #6b7280;">
-        <p style="margin: 0;">© <span id="year"></span> iD01t Productions. All rights reserved. | Montreal, Quebec, Canada</p>
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a href="/legal/terms.html" class="link-underline">Terms</a>
+          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
+          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
+          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
+        </nav>
       </div>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+</body></html>
