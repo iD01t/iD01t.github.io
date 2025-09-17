@@ -83,9 +83,11 @@
   }
   /* gradient text */
   .gradient-text {
-    background: linear-gradient(to right, theme('colors.brand.500'), theme('colors.brand.700'));
+    background: linear-gradient(to right, #2aa7ff, #0070d7);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback to ensure visibility */
   }
   /* card hover lift */
   .card-hover {
@@ -189,10 +191,8 @@
   <!-- Hero -->
   <section class="grid md:grid-cols-2 gap-12 items-center intersection-animate">
     <div>
-      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
-        <span class="gradient-text">Apps and content</span><br />
-        <span>that accelerate</span><br />
-        <span>your projects</span>
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight mb-6 leading-tight">
+        <span class="gradient-text block">Apps, eBooks, Games &amp; Music for creators</span>
       </h1>
       <p class="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
         Professional Windows utilities, technical eBooks, multiplayer games, and original music.
@@ -414,4 +414,4 @@
 </script>
 
   </body>
-  </html>
+</html>
