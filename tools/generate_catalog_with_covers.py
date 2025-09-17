@@ -187,6 +187,29 @@ def generate_comprehensive_catalog(ebooks_dir, audiobooks_dir, output_file):
         # Add delay to be respectful
         time.sleep(1)
     
+    # Process audiobooks (similar structure)
+    print("\n🎧 Processing audiobooks...")
+    audiobook_files = list(audiobooks_dir.glob('*.html'))
+
+    for i, html_file in enumerate(audiobook_files, 1):
+        print(f"    🎧 [{i}/{len(audiobook_files)}] Processing: {html_file.name}")
+
+        book_info = extract_book_info_from_html(html_file)
+        if not book_info or not book_info['title']:
+            continue
+
+        # Try to find a real cover
+        real_cover = find_book_cover(book_info['title'], book_info['author'])
+        if real_cover:
+            book_info['image'] = real_cover
+            print(f"        🎨 Updated with real cover")
+        else:
+            print(f"        ⚠️  Using existing image: {book_info['image']}")
+
+        catalog['audiobooks'].append(book_info)
+
+        # Add delay to be respectful
+        time.sleep(1)
     
     # Add some series (you can customize this)
     catalog['series'] = [
