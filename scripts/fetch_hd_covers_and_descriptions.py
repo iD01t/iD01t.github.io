@@ -113,6 +113,9 @@ def main():
         if cover_url:
             # bump resolution if param present
             cover_url = re.sub(r'zoom=\d', 'zoom=6', cover_url)
+            # switch to https if missing
+            if cover_url.startswith('http://'):
+                cover_url = 'https://' + cover_url[len('http://'):]
             local_name = build_local_image_name(title, (volume.get('id') or 'id'))
             local_path = HD_DIR / local_name
             if download_image(cover_url, local_path):
@@ -122,6 +125,10 @@ def main():
         desc = get_long_description(volume)
         if desc:
             book['description'] = desc
+            # also provide a short version for grids
+            plain = re.sub(r'<[^>]*>', '', desc)
+            short = (plain.strip())[:180]
+            book['short'] = short
 
         # Buy link
         buy = normalize_buy_link(volume)
