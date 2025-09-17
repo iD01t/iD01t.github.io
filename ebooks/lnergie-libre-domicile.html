@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L’Énergie Libre à Domicile · iD01t Productions</title>
+    <meta name="description" content="<p>L’Énergie Libre à Domicile : Construire son système autonome pour alimenter une maison complète – par El’Nox Rah</p><p><br></p><p>Ce que contient réellement "><!-- Tailwind (CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Early theme init to avoid FOUC -->
+<script>(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches; if(s==='dark'||(!s&&d)){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
+<script>
+  /* Extend Tailwind with brand palette */
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50:  '#f5faff',
+            100: '#e0f2ff',
+            200: '#bae0ff',
+            300: '#8dceff',
+            400: '#5abaff',
+            500: '#2aa7ff',
+            600: '#008ef6',
+            700: '#0070d7',
+            800: '#0057b5',
+            900: '#003f92'
+          }
+        },
+        keyframes: {
+          bounceSubtle: {
+            '0%,100%': { transform: 'translateY(0)' },
+            '50%': { transform: 'translateY(-4px)' }
+          },
+          pulseGlow: {
+            '0%,100%': { opacity: 0.2 },
+            '50%': { opacity: 0.4 }
+          },
+          float: {
+            '0%,100%': { transform: 'translateY(0)' },
+            '50%': { transform: 'translateY(-6px)' }
+          }
+        },
+        animation: {
+          'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
+          'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
+          float: 'float 6s ease-in-out infinite'
+        }
+      }
+    }
+  };
+</script>
+
+<!-- Custom utility classes -->
+<style>
+  :root {
+    --ring-color: theme('colors.brand.500');
+  }
+  /* underline utility */
+  .link-underline {
+    position: relative;
+    transition: color 0.2s;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-out;
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  /* focus ring */
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--ring-color);
+    outline-offset: 2px;
+  }
+  /* gradient text */
+  .gradient-text {
+    background: linear-gradient(to right, #2aa7ff, #0070d7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback to ensure visibility */
+  }
+  /* card hover lift */
+  .card-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  }
+  /* glass effect */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px) saturate(150%);
+  }
+  @media (prefers-color-scheme: dark) {
+    .glass-effect {
+      background: rgba(30, 41, 59, 0.55);
+    }
+  }
+  /* intersection animations */
+  .intersection-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .intersection-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="canonical" href="https://id01t.store/ebooks/lnergie-libre-domicile.html">
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="L’Énergie Libre à Domicile">
+  <meta property="og:description" content="<p>L’Énergie Libre à Domicile : Construire son système autonome pour alimenter une maison complète – par El’Nox Rah</p><p><br></p><p>Ce que contient réellement cette édition</p><p><br></p><p>Une struc">
+  <meta property="og:url" content="https://id01t.store/ebooks/lnergie-libre-domicile.html">
+  <meta property="og:image" content="/assets/harvested/ebooks/ebook_088_LÉnergie_Libre_à_Domicile_zoom5.jpg">
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
+        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+        <span class="font-semibold text-lg hidden sm:inline">iD01t Productions</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
+        <a href="/store.html" class="link-underline focus-ring rounded px-2 py-1">Store</a>
+        <a href="/ebooks.html" class="link-underline focus-ring rounded px-2 py-1">eBooks</a>
+        <a href="/audiobooks.html" class="link-underline focus-ring rounded px-2 py-1">Audiobooks</a>
+        <a href="/apps.html" class="link-underline focus-ring rounded px-2 py-1">Apps</a>
+        <a href="/games.html" class="link-underline focus-ring rounded px-2 py-1">Games</a>
+        <a href="/music.html" class="link-underline focus-ring rounded px-2 py-1">Music</a>
+        <a href="/blog.html" class="link-underline focus-ring rounded px-2 py-1">Blog</a>
+        <a href="/about.html" class="link-underline focus-ring rounded px-2 py-1">About</a>
+        <a href="/contact.html" class="link-underline focus-ring rounded px-2 py-1">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="focus-ring rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle theme">
+          <span class="theme-text">Theme</span>
+        </button>
+        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2 transition-all duration-300 hover:scale-105 animate-pulse-glow focus-ring">
+          Newsletter
+        </a>
+        <button id="mobileMenuBtn" class="md:hidden focus-ring inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 hidden transition-transform" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6l12 12M6 18L18 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 glass-effect" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <h2 id="mobile-menu-title" class="sr-only">Navigation Menu</h2>
+      <a href="/store.html" class="py-2 px-2 rounded focus-ring">Store</a>
+      <a href="/ebooks.html" class="py-2 px-2 rounded focus-ring">eBooks</a>
+      <a href="/audiobooks.html" class="py-2 px-2 rounded focus-ring">Audiobooks</a>
+      <a href="/apps.html" class="py-2 px-2 rounded focus-ring">Apps</a>
+      <a href="/games.html" class="py-2 px-2 rounded focus-ring">Games</a>
+      <a href="/music.html" class="py-2 px-2 rounded focus-ring">Music</a>
+      <a href="/blog.html" class="py-2 px-2 rounded focus-ring">Blog</a>
+      <a href="/about.html" class="py-2 px-2 rounded focus-ring">About</a>
+      <a href="/contact.html" class="py-2 px-2 rounded focus-ring">Contact</a>
+    </div>
+  </div>
+</header>
+
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-10">
+      <nav class="text-sm text-slate-500 mb-4"><a class="link-underline" href="/">Home</a> › <a class="link-underline" href="/ebooks.html">eBooks</a> › <span>L’Énergie Libre à Domicile</span></nav>
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <img src="/assets/harvested/ebooks/ebook_088_LÉnergie_Libre_à_Domicile_zoom5.jpg" alt="L’Énergie Libre à Domicile cover" class="w-full aspect-[3/4] object-cover rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800" loading="eager">
+        <div>
+          <h1 class="text-3xl font-bold tracking-tight">L’Énergie Libre à Domicile</h1>
+          <p class="mt-3 text-slate-600 dark:text-slate-300"><p>L’Énergie Libre à Domicile : Construire son système autonome pour alimenter une maison complète – par El’Nox Rah</p><p><br></p><p>Ce que contient réellement cette édition</p><p><br></p><p>Une structure claire et progressive : 25 chapitres qui partent des bases physiques (électricité, magnétisme, résonance, énergie du point zéro) jusqu’à l’intégration de solutions hybrides et la conception d’un « sanctuaire énergétique » autonome .</p><p><br></p><p>Plans textuels détaillés pour un premier générateur magnétique, liste de matériaux avec prix moyens, explications pas-à-pas des tests et raccordements aux batteries .</p><p><br></p><p>Dimensionnement complet d’une installation domestique : calcul des besoins quotidiens, boucles de stockage, gestion des circuits prioritaires, exemples chiffrés pour trois maisons réelles .</p><p><br></p><p>Chapitre dédié à l’hybride solaire + récupérateur d’énergie ambiante : schéma de branchement décrit, production quotidienne estimée, sélection de composants multi-source .</p><p><br></p><p>Focus légal et communautaire : obligations au Québec et au Canada, partage de surplus, création de collectifs d’énergie libre .</p><p><br></p><p>Annexes opérationnelles : tableau de composants avec coûts (≈53 CAD pour un module thermoélectrique de démonstration), fournisseurs recommandés, schéma électrique simplifié (description), bibliographie scientifique et liens GitHub .</p><p><br></p><p>Mot de l’auteur : vision, éthique et invitation au passage à l’action .</p><p><br></p><p>Important : cette version est entièrement textuelle. Les schémas, rendus 3D et photos pratiques seront ajoutés dans une mise à jour future. Toutes les instructions et tableaux sont déjà inclus ; ils suffisent pour commencer la conception et les calculs.</p></p>
+          <div class="mt-5 flex items-center gap-3">
+            
+            <a href="https://play.google.com/store/books/details?id=GGKEY:WQWJC3YLGNN" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2">Buy Now</a>
+            <a href="/ebooks.html" class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-5 py-2">All eBooks</a>
+          </div>
+          <ul class="mt-4 text-sm text-slate-500 space-y-1">
+            
+            <li>Language: EN</li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+    <div class="space-y-4">
+      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
+        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+        <span class="font-semibold text-lg text-white">iD01t Productions</span>
+      </a>
+      <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Products</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
+        <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
+        <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
+        <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
+        <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Resources</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
+        <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
+        <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
+        <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
+        <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Legal</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
+        <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
+        <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+    <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
+      <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
+      <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
+    </div>
+  </div>
+</footer>
+</body></html>

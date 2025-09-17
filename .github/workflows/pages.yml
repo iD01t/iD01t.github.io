@@ -1,5 +1,4 @@
 name: pages-build-deployment
-
 on:
   push:
     branches: [ main ]
@@ -21,14 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          submodules: false
           fetch-depth: 1
-
-      # Build or stage your static site into _site (adjust if you use docs/)
       - name: Prepare static
         run: |
           mkdir -p _site
           rsync -av --delete --exclude ".git" --exclude ".github" ./ _site/
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -37,13 +34,10 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
