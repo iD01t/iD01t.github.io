@@ -6,6 +6,8 @@
     <title>iD01t Productions — Professional Digital Solutions</title>
     <meta name="description" content="Professional Windows utilities, technical eBooks, multiplayer games, and original music built for creators who demand quality, speed, and reliability." /><!-- Tailwind (CDN) -->
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- Early theme init to avoid FOUC -->
+<script>(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches; if(s==='dark'||(!s&&d)){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
 <script>
   /* Extend Tailwind with brand palette */
   tailwind.config = {
@@ -297,6 +299,9 @@
   </section>
   <!-- Additional sections (Latest Insights, Complete Ecosystem, Newsletter) would follow here using similar markup as above -->
 </main>
+
+<!-- Spacer to ensure footer visibility on short viewports -->
+<div class="h-10"></div>
 
 <!-- ==================== FOOTER ==================== -->
 <footer class="mt-24 bg-slate-900 text-slate-300 py-16">

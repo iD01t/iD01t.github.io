@@ -164,17 +164,23 @@
         .replace(/-+$/, '');            // Trim - from end of text
     }
 
+    function stripTags(html) {
+      if (!html) return '';
+      return String(html).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+    }
+
     function card(ebook) {
       const { title, description, image, url, price_cad } = ebook;
       const slug = slugify(title);
       const detailsUrl = `/ebooks/${slug}.html`;
+      const short = (ebook.short || stripTags(description)).slice(0, 180) + (stripTags(description).length > 180 ? '…' : '');
 
       return `
       <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col bg-white dark:bg-slate-900">
-        <a href="${detailsUrl}"><img src="${image}" alt="${title}" class="w-full aspect-[3/4] object-cover"></a>
+        <a href="${detailsUrl}"><img src="${image}" alt="${title}" class="w-full aspect-[3/4] object-cover" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/img/placeholders/card-portrait-384x576.webp';"></a>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-semibold leading-snug"><a href="${detailsUrl}" class="link-underline">${title}</a></h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300 mt-3 line-clamp-6">${description}</p>
+          <p class="text-sm text-slate-700 dark:text-slate-300 mt-3 line-clamp-6">${short}</p>
           <div class="mt-auto pt-4 flex items-center justify-between">
             <span class="text-sm">${price_cad ? `$${price_cad} CAD` : ""}</span>
             <div class="flex gap-2">
