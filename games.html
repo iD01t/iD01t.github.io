@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -10,11 +10,11 @@
   <meta property="og:title" content="Games · iD01t Productions"/>
   <meta property="og:description" content="Fast-paced action games built for online play by iD01t Productions."/>
   <meta property="og:url" content="https://id01t.store/games.html"/>
-  <meta property="og:image" content="https://id01t.store/assets/img/placeholders/hero-1600x900.webp"/>
+  <meta property="og:image" content="https://img.itch.zone/aW1nLzIyOTk4NzEyLnBuZw==/original/SbMphI.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Games · iD01t Productions"/>
   <meta name="twitter:description" content="Fast-paced action games built for online play by iD01t Productions."/>
-  <meta name="twitter:image" content="https://id01t.store/assets/img/placeholders/hero-1600x900.webp"/>
+  <meta name="twitter:image" content="https://img.itch.zone/aW1nLzIyOTk4NzEyLnBuZw==/original/SbMphI.png"/>
   <link rel="icon" href="/favicon.ico"/>
   <meta name="theme-color" content="#16185c"/>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,67 +28,89 @@
         extend: {
           colors: {
             brand: {50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'slide-up': 'slideUp 0.5s ease-out forwards',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 20px rgba(84, 92, 255, 0.3)' },
+              '100%': { boxShadow: '0 0 30px rgba(84, 92, 255, 0.6)' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
           }
         }
       }
     };
   </script>
-  <link rel="stylesheet" href="/css/custom.css">
   <style>
     .link-underline { position: relative; }
     .link-underline::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: currentColor; transform:scaleX(0); transform-origin:left; transition: transform .2s; }
     .link-underline:hover::after { transform:scaleX(1); }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .dark .glass-card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #545cff 0%, #3a3fe6 25%, #2c30b4 50%, #202383 75%, #16185c 100%);
+    }
+    
+    .feature-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6));
+      backdrop-filter: blur(20px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .dark .feature-card {
+      background: linear-gradient(145deg, rgba(15,23,42,0.9), rgba(30,41,59,0.6));
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(84, 92, 255, 0.15);
+    }
+    
+    .swiper-slide img {
+      transition: transform 0.3s ease;
+    }
+    
+    .swiper-slide:hover img {
+      transform: scale(1.05);
+    }
+    
+    .game-tag {
+      background: linear-gradient(135deg, rgba(84, 92, 255, 0.1), rgba(84, 92, 255, 0.2));
+      transition: all 0.2s ease;
+    }
+    
+    .game-tag:hover {
+      background: linear-gradient(135deg, rgba(84, 92, 255, 0.2), rgba(84, 92, 255, 0.3));
+      transform: translateY(-2px);
+    }
   </style>
   
 </head>
-  <!-- Analytics & Pixels -->
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'META_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
-  /></noscript>
-
-  <!-- X Pixel -->
-  <script>
-    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-    twq('init','X_PIXEL_ID');
-    twq('track','PageView');
-  </script>
-
-  <!-- TikTok Pixel -->
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]. daarom="1.2.10",ttq._i[e].setAndDefer(ttq._i[e],"setEvtId",n),ttq.setAndDefer(ttq,"load",e);if(e)return document.getElementById(e);var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-      ttq.load('TIKTOK_PIXEL_ID');
-      ttq.page();
-    }(window, document, 'ttq');
-  </script>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-  <!-- Header (unchanged) -->
+<body class="bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100">
   
-  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="/" class="flex items-center gap-2" aria-label="Home">
@@ -108,8 +130,8 @@
           <a href="/contact.html" class="link-underline">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
-          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
+          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Theme</button>
+          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2 transition-all hover:scale-105">Newsletter</a>
           <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
           </button>
@@ -131,142 +153,299 @@
       </div>
     </div>
   </header>
-    
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6">
-      <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Games</h1>
-        <p class="mt-3 text-slate-600 dark:text-slate-300">Fast-paced action built for online play.</p>
+  <!-- Enhanced Hero -->
+  <section class="relative overflow-hidden hero-gradient">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div class="text-center text-white">
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight animate-slide-up">
+          Epic <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Games</span>
+        </h1>
+        <p class="mt-4 text-xl text-slate-200 animate-slide-up" style="animation-delay: 0.2s;">Fast-paced multiplayer action built for competitive online play</p>
+        <div class="mt-8 animate-slide-up" style="animation-delay: 0.4s;">
+          <a href="#main-game" class="inline-flex items-center gap-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 py-3 text-lg font-medium transition-all hover:scale-105">
+            <span>Explore Now</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
+    <!-- Floating elements -->
+    <div class="absolute top-20 left-10 w-16 h-16 bg-yellow-400/20 rounded-full animate-float"></div>
+    <div class="absolute top-40 right-16 w-12 h-12 bg-orange-500/20 rounded-full animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute bottom-20 left-20 w-20 h-20 bg-brand-400/20 rounded-full animate-float" style="animation-delay: 4s;"></div>
   </section>
 
-  <!-- Main -->
-  <main class="py-8 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-8 items-start">
-      <!-- Left column: Media -->
-      <div class="lg:col-span-2 space-y-4">
-        <!-- Screenshot Carousel -->
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-3">
-          <div class="swiper mySwiper rounded-xl">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="https://img.itch.zone/aW1nLzIyOTk4NzEyLnBuZw%3D%3D/original/SbMphI.png" alt="Nini screenshot" class="w-full h-auto object-cover rounded-xl" referrerpolicy="no-referrer" loading="lazy"/></div>
-              <div class="swiper-slide"><img src="https://img.itch.zone/aW1hZ2UvMzg0NTI5NC8yMjkzNTYxNC5qcGVn/original/1la0er.jpeg" alt="Nini screenshot" class="w-full h-auto object-cover rounded-xl" referrerpolicy="no-referrer" loading="lazy"/></div>
-              <div class="swiper-slide"><img src="https://img.itch.zone/aW1hZ2UvMzg0NTI5NC8yMjk5ODcyOC5wbmc%3D/original/Jh6%2BUU.png" alt="Nini screenshot" class="w-full h-auto object-cover rounded-xl" referrerpolicy="no-referrer" loading="lazy"/></div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+  <!-- Main Game Content -->
+  <main id="main-game" class="py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Game Header -->
+      <div class="text-center mb-12">
+        <div class="inline-block rounded-full bg-gradient-to-r from-brand-500 to-purple-600 p-1 mb-4">
+          <div class="rounded-full bg-white dark:bg-slate-900 px-6 py-2">
+            <span class="text-sm font-medium bg-gradient-to-r from-brand-600 to-purple-600 bg-clip-text text-transparent">Featured Game</span>
           </div>
         </div>
-
-        <!-- Videos -->
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-            <div class="aspect-video">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/GsVqmOx4Rwc?si=_qq4xQ90_XYCxC3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-            <div class="aspect-video">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/bpmMQEh37ZA?si=lfCkSik5mMW1rwae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-        <!-- itch.io embed -->
-        <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-          <iframe frameborder="0" src="https://itch.io/embed/3845294?linkback=true&amp;border_width=4&amp;dark=true" width="100%" height="173"></iframe>
-        </div>
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+          Nini's Adventures: Kitties Mayhem!
+        </h2>
+        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          Explosive online multiplayer shooter where cute kitties transform into fierce warriors in chaotic, colorful arenas
+        </p>
       </div>
 
-      <!-- Right column: Details -->
-      <aside class="space-y-6">
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <h3 class="font-semibold text-2xl">Nini’s Adventures: Kitties Mayhem!</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">
-            Explosive online multiplayer shooter. PC public beta on <strong>September 24, 2025</strong>.
-            No single-player. AWS powered servers. Made with Unity and Blender.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-xs bg-brand-100 text-brand-800 dark:bg-brand-900/40 dark:text-brand-100">Shooter</span>
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Action</span>
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">3D</span>
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Arena</span>
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Fast-Paced</span>
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Multiplayer</span>
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800">Cats</span>
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <!-- Left column: Enhanced Media -->
+        <div class="lg:col-span-2 space-y-8">
+          <!-- Enhanced Screenshot Carousel -->
+          <div class="feature-card rounded-3xl p-6 animate-glow">
+            <h3 class="text-2xl font-bold mb-4 text-center">Game Screenshots</h3>
+            <div class="swiper gameSwiper rounded-2xl overflow-hidden">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://img.itch.zone/aW1nLzIyOTk4NzEyLnBuZw==/original/SbMphI.png" 
+                       alt="Nini's Adventures gameplay" 
+                       class="w-full h-auto object-cover" 
+                       loading="lazy"/>
+                  <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-sm">
+                    Arena Combat
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://img.itch.zone/aW1hZ2UvMzg0NTI5NC8yMjkzNTYxNC5qcGVn/original/1la0er.jpeg" 
+                       alt="Kitty characters in action" 
+                       class="w-full h-auto object-cover" 
+                       loading="lazy"/>
+                  <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-sm">
+                    Character Selection
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://img.itch.zone/aW1hZ2UvMzg0NTI5NC8yMjk5ODcyOC5wbmc=/original/Jh6%2BUU.png" 
+                       alt="Game environment" 
+                       class="w-full h-auto object-cover" 
+                       loading="lazy"/>
+                  <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-sm">
+                    Dynamic Arenas
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
           </div>
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem?utm_source=id01t_site&utm_medium=button&utm_campaign=games_page" target="_blank" rel="noopener" class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2">View on itch.io</a>
-            <a href="#beta" class="rounded-full border border-brand-600 text-brand-700 dark:text-brand-300 hover:bg-brand-50 dark:hover:bg-brand-900/30 px-5 py-2">Request Beta Access</a>
+
+          <!-- Enhanced Videos Section -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="feature-card rounded-3xl overflow-hidden p-4">
+              <h4 class="font-semibold text-lg mb-3">Gameplay Trailer</h4>
+              <div class="aspect-video rounded-xl overflow-hidden">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/GsVqmOx4Rwc?si=_qq4xQ90_XYCxC3K" title="Gameplay Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="feature-card rounded-3xl overflow-hidden p-4">
+              <h4 class="font-semibold text-lg mb-3">Behind the Scenes</h4>
+              <div class="aspect-video rounded-xl overflow-hidden">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/bpmMQEh37ZA?si=lfCkSik5mMW1rwae" title="Behind the Scenes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
-          <p class="text-xs text-slate-500 mt-3">Updated Sept 1, 2025 • English • Server-based networked multiplayer</p>
+
+          <!-- Enhanced itch.io embed -->
+          <div class="feature-card rounded-3xl overflow-hidden p-4">
+            <h4 class="font-semibold text-lg mb-3">Play on itch.io</h4>
+            <div class="rounded-xl overflow-hidden">
+              <iframe frameborder="0" src="https://itch.io/embed/3845294?linkback=true&amp;border_width=4&amp;dark=true" width="100%" height="173"></iframe>
+            </div>
+          </div>
         </div>
 
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <h4 class="font-semibold mb-2">Key Features</h4>
-          <ul class="list-disc list-inside space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            <li>Competitive online multiplayer with first public beta opening on <strong>September 24, 2025</strong>.</li>
-            <li>Chaotic cat-themed arenas with traps, obstacles, and surprises.</li>
-            <li>Fast, responsive gameplay designed for intense, short matches.</li>
-            <li>AWS-powered servers for stability, scalability, and smooth global play.</li>
-            <li>Unique kitty characters with special abilities and reactive, destructible environments.</li>
-          </ul>
-        </div>
+        <!-- Right column: Enhanced Details -->
+        <aside class="space-y-6">
+          <!-- Main Game Info -->
+          <div class="feature-card rounded-3xl p-6">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🐱</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-1">Nini's Adventures</h3>
+                <p class="text-brand-600 dark:text-brand-400 font-medium">Kitties Mayhem!</p>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <div class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-xl mb-3 text-center font-medium">
+                🚀 Public Beta: September 24, 2025
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Explosive online multiplayer shooter with AWS-powered servers. 
+                No single-player mode. Built with Unity and Blender for maximum chaos and fun.
+              </p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="game-tag px-3 py-1 rounded-full text-xs font-medium border border-brand-200 dark:border-brand-800">🎯 Shooter</span>
+              <span class="game-tag px-3 py-1 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">⚡ Action</span>
+              <span class="game-tag px-3 py-1 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">🎮 3D</span>
+              <span class="game-tag px-3 py-1 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">🏟️ Arena</span>
+              <span class="game-tag px-3 py-1 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">⚡ Fast-Paced</span>
+              <span class="game-tag px-3 py-1 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">👥 Multiplayer</span>
+              <span class="game-tag px-3 py-1 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">🐱 Cats</span>
+            </div>
+            
+            <div class="flex flex-col gap-3">
+              <a href="https://id01t.itch.io/ninis-adventures-kitties-mayhem?utm_source=id01t_site&utm_medium=button&utm_campaign=games_page" 
+                 target="_blank" rel="noopener" 
+                 class="rounded-full bg-gradient-to-r from-brand-600 to-purple-600 hover:from-brand-700 hover:to-purple-700 text-white px-6 py-3 text-center font-medium transition-all hover:scale-105 hover:shadow-lg">
+                🎮 Play on itch.io
+              </a>
+              <a href="#beta" 
+                 class="rounded-full border-2 border-brand-600 text-brand-700 dark:text-brand-300 hover:bg-brand-50 dark:hover:bg-brand-900/30 px-6 py-3 text-center font-medium transition-all hover:scale-105">
+                🔑 Request Beta Access
+              </a>
+            </div>
+            
+            <p class="text-xs text-slate-500 mt-4 text-center">
+              Updated Sept 1, 2025 • English • Server-based multiplayer
+            </p>
+          </div>
 
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <h4 class="font-semibold mb-2">Technical</h4>
-          <dl class="grid grid-cols-2 gap-y-1 text-sm">
-            <dt class="text-slate-500">Engine</dt><dd>Unity</dd>
-            <dt class="text-slate-500">Art</dt><dd>Blender</dd>
-            <dt class="text-slate-500">Inputs</dt><dd>Keyboard + Mouse</dd>
-            <dt class="text-slate-500">Mode</dt><dd>Online multiplayer only</dd>
-            <dt class="text-slate-500">Servers</dt><dd>AWS</dd>
-            <dt class="text-slate-500">Average session</dt><dd>A few minutes</dd>
-          </dl>
-        </div>
+          <!-- Key Features -->
+          <div class="feature-card rounded-3xl p-6">
+            <h4 class="font-bold text-xl mb-4 flex items-center gap-2">
+              <span class="text-2xl">✨</span>
+              Key Features
+            </h4>
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <span class="text-green-500 text-xl flex-shrink-0">🎯</span>
+                <p class="text-sm text-slate-700 dark:text-slate-300">
+                  <strong>Competitive Multiplayer:</strong> First public beta launching September 24, 2025
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-orange-500 text-xl flex-shrink-0">🏟️</span>
+                <p class="text-sm text-slate-700 dark:text-slate-300">
+                  <strong>Chaotic Arenas:</strong> Cat-themed environments with traps and destructible elements
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-blue-500 text-xl flex-shrink-0">⚡</span>
+                <p class="text-sm text-slate-700 dark:text-slate-300">
+                  <strong>Lightning Fast:</strong> Responsive gameplay designed for intense, quick matches
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-purple-500 text-xl flex-shrink-0">☁️</span>
+                <p class="text-sm text-slate-700 dark:text-slate-300">
+                  <strong>AWS Servers:</strong> Reliable, scalable infrastructure for smooth global play
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-pink-500 text-xl flex-shrink-0">🐱</span>
+                <p class="text-sm text-slate-700 dark:text-slate-300">
+                  <strong>Unique Kitties:</strong> Special abilities and reactive environments for strategic gameplay
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <!-- Beta form -->
-        <div id="beta" class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <h4 class="font-semibold mb-3">Request Beta Access</h4>
-          <form name="nini-beta" method="POST" data-netlify="true" class="grid gap-3">
-            <input type="hidden" name="form-name" value="nini-beta" />
-            <input name="email" type="email" placeholder="Email" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-3">
-            <button class="rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 w-max">Request Access</button>
-            <p class="text-xs text-slate-500">No payment. Email only.</p>
-          </form>
-        </div>
-      </aside>
+          <!-- Technical Specs -->
+          <div class="feature-card rounded-3xl p-6">
+            <h4 class="font-bold text-xl mb-4 flex items-center gap-2">
+              <span class="text-2xl">⚙️</span>
+              Technical Specs
+            </h4>
+            <div class="grid grid-cols-2 gap-y-3 text-sm">
+              <dt class="text-slate-500 flex items-center gap-1">
+                <span>🎮</span> Engine
+              </dt>
+              <dd class="font-medium">Unity</dd>
+              
+              <dt class="text-slate-500 flex items-center gap-1">
+                <span>🎨</span> Art
+              </dt>
+              <dd class="font-medium">Blender</dd>
+              
+              <dt class="text-slate-500 flex items-center gap-1">
+                <span>🖱️</span> Input
+              </dt>
+              <dd class="font-medium">Keyboard + Mouse</dd>
+              
+              <dt class="text-slate-500 flex items-center gap-1">
+                <span>🌐</span> Mode
+              </dt>
+              <dd class="font-medium">Online Only</dd>
+              
+              <dt class="text-slate-500 flex items-center gap-1">
+                <span>☁️</span> Servers
+              </dt>
+              <dd class="font-medium">AWS</dd>
+              
+              <dt class="text-slate-500 flex items-center gap-1">
+                <span>⏱️</span> Session
+              </dt>
+              <dd class="font-medium">3-5 minutes</dd>
+            </div>
+          </div>
+
+          <!-- Beta Access Form -->
+          <div id="beta" class="feature-card rounded-3xl p-6">
+            <h4 class="font-bold text-xl mb-4 flex items-center gap-2">
+              <span class="text-2xl">🔑</span>
+              Beta Access
+            </h4>
+            <form name="nini-beta" method="POST" data-netlify="true" class="space-y-4">
+              <input type="hidden" name="form-name" value="nini-beta" />
+              <div>
+                <input name="email" 
+                       type="email" 
+                       placeholder="Enter your email address" 
+                       required 
+                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
+              </div>
+              <button class="w-full rounded-full bg-gradient-to-r from-brand-600 to-purple-600 hover:from-brand-700 hover:to-purple-700 text-white px-6 py-4 font-medium transition-all hover:scale-105 hover:shadow-lg">
+                🚀 Secure Beta Access
+              </button>
+              <p class="text-xs text-slate-500 text-center">
+                Free access • No payment required • Email updates only
+              </p>
+            </form>
+          </div>
+        </aside>
+      </div>
     </div>
   </main>
 
-  <!-- Footer (unchanged) -->
-  
-  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+  <!-- Footer -->
+  <footer class="py-12 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
-          <p class="font-semibold">iD01t Productions</p>
+          <p class="font-semibold text-lg">iD01t Productions</p>
           <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
         </div>
-        <nav class="flex flex-wrap gap-4 text-sm">
-          <a href="/legal/terms.html" class="link-underline">Terms</a>
-          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
-          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
-          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
+        <nav class="flex flex-wrap gap-6 text-sm">
+          <a href="/legal/terms.html" class="link-underline hover:text-brand-600">Terms</a>
+          <a href="/legal/privacy.html" class="link-underline hover:text-brand-600">Privacy</a>
+          <a href="/legal/refunds.html" class="link-underline hover:text-brand-600">Refunds</a>
+          <a href="https://github.com/id01t" class="link-underline hover:text-brand-600" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://id01t.itch.io" class="link-underline hover:text-brand-600" target="_blank" rel="noopener">itch.io</a>
         </nav>
       </div>
     </div>
   </footer>
 
-
   <!-- Scripts -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Theme functionality
+    
+    // Enhanced theme functionality
     function initTheme() {
       const savedTheme = localStorage.getItem('theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -287,7 +466,6 @@
     // Theme toggle functionality
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
-      // Set initial button state
       themeToggle.setAttribute('aria-pressed', String(currentTheme));
       themeToggle.textContent = currentTheme ? 'Light' : 'Dark';
       
@@ -298,6 +476,8 @@
         themeToggle.textContent = isDark ? 'Light' : 'Dark';
       });
     }
+    
+    // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (mobileMenuBtn && mobileMenu) {
@@ -305,14 +485,98 @@
         mobileMenu.classList.toggle('hidden');
       });
     }
-    // Init Swiper
-    const swiper = new Swiper('.mySwiper', {
+    
+    // Enhanced Swiper initialization
+    const swiper = new Swiper('.gameSwiper', {
       loop: true,
       slidesPerView: 1,
-      spaceBetween: 12,
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-      autoplay: { delay: 4500, disableOnInteraction: false },
+      spaceBetween: 0,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      pagination: { 
+        el: '.swiper-pagination', 
+        clickable: true,
+        dynamicBullets: true
+      },
+      navigation: { 
+        nextEl: '.swiper-button-next', 
+        prevEl: '.swiper-button-prev' 
+      },
+      autoplay: { 
+        delay: 5000, 
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      mousewheel: {
+        invert: false,
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Form enhancement
+    const betaForm = document.querySelector('form[name="nini-beta"]');
+    if (betaForm) {
+      betaForm.addEventListener('submit', function(e) {
+        const submitBtn = this.querySelector('button[type="submit"], button:not([type])');
+        if (submitBtn) {
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = '🚀 Submitting...';
+          submitBtn.disabled = true;
+          
+          setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }, 2000);
+        }
+      });
+    }
+    
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+    
+    // Observe animated elements
+    document.querySelectorAll('.animate-slide-up, .feature-card').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // Add loading states to external links
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+      link.addEventListener('click', function() {
+        this.style.opacity = '0.7';
+        setTimeout(() => {
+          this.style.opacity = '1';
+        }, 1000);
+      });
     });
   </script>
 </body>
