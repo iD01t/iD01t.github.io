@@ -2,7 +2,7 @@
 import json, re, os, sys
 from pathlib import Path
 
-ROOT = Path('/') / 'workspace'
+ROOT = Path('.')
 EBOOKS_DIR = ROOT / 'ebooks'
 CATALOG = ROOT / 'assets' / 'catalog.json'
 INDEX = ROOT / 'index.html'
@@ -30,27 +30,10 @@ def extract_shell(html: str):
     return head_html, (header_match.group(1) if header_match else ''), (footer_match.group(1) if footer_match else '')
 
 
-def pick_cover(title: str) -> str:
-    # Prefer harvested HD image that likely matches title index mapping, else catalog image
-    # Try to find zoom5 variant first
-    safe = re.sub(r"[^A-Za-z0-9]+", "_", title).strip('_')
-    # Search files containing a close match
-    candidates = list(HARV_DIR.glob("*zoom5.jpg"))
-    title_l = title.lower()
-    for p in candidates:
-        if any(tok and tok in p.name.lower() for tok in title_l.split()[:4]):
-            return "/assets/harvested/ebooks/" + p.name
-    # fallback to any harvested jpg
-    for p in HARV_DIR.glob("*.jpg"):
-        if any(tok and tok in p.name.lower() for tok in title_l.split()[:4]):
-            return "/assets/harvested/ebooks/" + p.name
-    return ''
-
-
 def build_page(item: dict, head_html: str, header_html: str, footer_html: str) -> str:
     title = item.get('title','').strip()
     desc = (item.get('description') or '').strip()
-    img = pick_cover(title) or item.get('image','')
+    img = item.get('image','')
     price = item.get('price_cad')
     pages = item.get('pages') or ''
     date = item.get('date') or ''
@@ -107,17 +90,30 @@ def build_page(item: dict, head_html: str, header_html: str, footer_html: str) -
     return "\n".join(doc)
 
 
+import argparse
+
 def main():
+    parser = argparse.ArgumentParser(description="Rebuild ebook pages from catalog.")
+    parser.add_argument("--start", type=int, default=0, help="Start index of ebooks to process.")
+    parser.add_argument("--end", type=int, default=None, help="End index of ebooks to process.")
+    args = parser.parse_args()
+
     if not INDEX.exists():
         print("index.html not found", file=sys.stderr)
         sys.exit(1)
     head_html, header_html, footer_html = extract_shell(INDEX.read_text(encoding='utf-8'))
     data = json.loads(CATALOG.read_text(encoding='utf-8'))
     ebooks = data.get('ebooks', [])
+
+    if args.end is None:
+        args.end = len(ebooks)
+
+    ebooks_to_process = ebooks[args.start:args.end]
+
     EBOOKS_DIR.mkdir(parents=True, exist_ok=True)
 
     written = 0
-    for item in ebooks:
+    for item in ebooks_to_process:
         title = item.get('title') or ''
         if not title:
             continue
@@ -126,7 +122,7 @@ def main():
         html = build_page(item, head_html, header_html, footer_html)
         out_path.write_text(html, encoding='utf-8')
         written += 1
-    print(f"Wrote {written} ebook pages to {EBOOKS_DIR}")
+    print(f"Wrote {written} ebook pages to {EBOOKS_DIR} (from index {args.start} to {args.end})")
 
 if __name__ == '__main__':
     main()
