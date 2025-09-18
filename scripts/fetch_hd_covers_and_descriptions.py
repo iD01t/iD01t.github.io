@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 import requests
 
-ROOT = Path('/workspace')
+ROOT = Path('.')
 CATALOG = ROOT / 'assets' / 'catalog.json'
 HD_DIR = ROOT / 'assets' / 'harvested' / 'ebooks'
 SUMMARY = ROOT / 'assets' / 'harvested' / 'ebooks' / 'download_summary.json'
@@ -18,6 +18,18 @@ def slugify(text: str) -> str:
     s = re.sub(r'[^a-z0-9\-]', '', s)
     s = re.sub(r'-{2,}', '-', s).strip('-')
     return s
+
+
+def extract_book_id_from_url(url: str) -> str:
+    if not url:
+        return ''
+    match = re.search(r'[?&]id=([^&]+)', url)
+    if match:
+        # Exclude GGKEY patterns as they are not volume IDs
+        if 'GGKEY' in match.group(1):
+            return ''
+        return match.group(1)
+    return ''
 
 
 def ensure_dir(p: Path):
@@ -34,7 +46,7 @@ def best_cover_from_volume(volume: dict) -> str:
 
 
 def fetch_volume_by_id(book_id: str) -> dict:
-    url = f'{GOOGLE_API}/{book_id}'
+    url = f'{GOOGLE_API}/{book_id}?country=US'
     r = requests.get(url, timeout=12, headers=HEADERS)
     if r.ok:
         return r.json()
@@ -42,7 +54,7 @@ def fetch_volume_by_id(book_id: str) -> dict:
 
 
 def search_volume(title: str, author: str='Guillaume Lessard') -> dict:
-    q = {'q': f'intitle:{title} inauthor:{author}'}
+    q = {'q': f'intitle:{title} inauthor:{author}', 'country': 'US'}
     r = requests.get(GOOGLE_API, params=q, timeout=12, headers=HEADERS)
     if not r.ok:
         return {}
@@ -100,11 +112,17 @@ def main():
         title = (book.get('title') or '').strip()
         if not title:
             continue
-        key = title.lower()
-        book_id = id_map.get(key, '')
+
+        book_id = extract_book_id_from_url(book.get('url', ''))
+
+        if not book_id:
+            key = title.lower()
+            book_id = id_map.get(key, '')
+
         volume = fetch_volume_by_id(book_id) if book_id else {}
         if not volume:
             volume = search_volume(title)
+
         if not volume:
             continue
 
