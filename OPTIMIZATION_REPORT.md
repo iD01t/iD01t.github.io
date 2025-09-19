@@ -45,6 +45,7 @@
 ## 🚀 PERFORMANCE FEATURES
 
 ### Speed & Loading
+
 - CDN-delivered Tailwind CSS for fast styling
 - Optimized image loading with lazy loading
 - Error handling with fallback images
