@@ -1,76 +1,412 @@
-&lt;!doctype html&gt;
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>AI Cash Empire · iD01t Productions</title>
-<meta content="&lt;p&gt;&lt;em&gt;AI Cash Empire&lt;/em&gt; is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerf" name="description"/>
-<link href="https://iD01t.github.io/audiobooks/ai-cash-empire.html" rel="canonical"/>
-<link href="https://iD01t.github.io/audiobooks/ai-cash-empire.html" hreflang="x-default" rel="alternate"/>
-<meta content="website" property="og:type"/>
-<meta content="AI Cash Empire · iD01t Productions" property="og:title"/>
-<meta content="&lt;p&gt;&lt;em&gt;AI Cash Empire&lt;/em&gt; is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerf" property="og:description"/>
-<meta content="https://i.imgur.com/Ct6GmGm.png" property="og:image"/>
-<meta content="https://iD01t.github.io/audiobooks/ai-cash-empire.html" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="AI Cash Empire · iD01t Productions" name="twitter:title"/>
-<meta content="&lt;p&gt;&lt;em&gt;AI Cash Empire&lt;/em&gt; is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerf" name="twitter:description"/>
-<meta content="https://i.imgur.com/Ct6GmGm.png" name="twitter:image"/>
-<style>
-    .topbar{position:sticky;top:0;background:#0b0b0b;color:#fff;border-bottom:1px solid #222;z-index:999}
-    .topbar .container{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:10px 16px}
-    .topbar .brand{font-weight:800;color:#fff;text-decoration:none;font-size:1.1rem}
-    .topbar .nav{list-style:none;display:flex;gap:14px;margin:0;padding:0}
-    .topbar .nav a{color:#bbd1ff;text-decoration:none} .topbar .nav a:hover{color:#fff;text-decoration:underline}
-    .container-page{max-width:1100px;margin:24px auto;padding:0 16px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
-    .card{border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.04)}
-    .card .media{aspect-ratio:3/4;background:#f3f4f6;display:flex;align-items:center;justify-content:center}
-    .card img{max-width:100%;max-height:100%;display:block}
-    .card .body{padding:12px}
-    .muted{color:#6b7280}
-    footer{margin:40px 0;color:#6b7280;text-align:center}
-    .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:.75rem;margin-right:6px}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Cash Empire (Audiobook) · iD01t Productions</title>
+    <meta name="description" content="AI Cash Empire is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful eBook reveals how anyone ca...">
+    
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Early theme init to avoid FOUC -->
+    <script>(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches; if(s==='dark'||(!s&&d)){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
+    
+    <script>
+      /* Extend Tailwind with brand palette */
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50:  '#f5faff',
+                100: '#e0f2ff',
+                200: '#bae0ff',
+                300: '#8dceff',
+                400: '#5abaff',
+                500: '#2aa7ff',
+                600: '#008ef6',
+                700: '#0070d7',
+                800: '#0057b5',
+                900: '#003f92'
+              }
+            },
+            keyframes: {
+              bounceSubtle: {
+                '0%,100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-4px)' }
+              },
+              pulseGlow: {
+                '0%,100%': { opacity: 0.2 },
+                '50%': { opacity: 0.4 }
+              },
+              float: {
+                '0%,100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-6px)' }
+              }
+            },
+            animation: {
+              'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
+              'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
+              float: 'float 6s ease-in-out infinite'
+            }
+          }
+        }
+      };
+    </script>
+
+    <!-- Custom utility classes -->
+    <style>
+      :root {
+        --ring-color: theme('colors.brand.500');
+      }
+      /* underline utility */
+      .link-underline {
+        position: relative;
+        transition: color 0.2s;
+      }
+      .link-underline::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.2s ease-out;
+      }
+      .link-underline:hover::after,
+      .link-underline:focus-visible::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      /* focus ring */
+      .focus-ring:focus-visible {
+        outline: 2px solid var(--ring-color);
+        outline-offset: 2px;
+      }
+      /* gradient text */
+      .gradient-text {
+        background: linear-gradient(to right, #2aa7ff, #0070d7);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent; /* fallback to ensure visibility */
+      }
+      /* card hover lift */
+      .card-hover {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+      }
+      /* glass effect */
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px) saturate(150%);
+      }
+      @media (prefers-color-scheme: dark) {
+        .glass-effect {
+          background: rgba(30, 41, 59, 0.55);
+        }
+      }
+      /* intersection animations */
+      .intersection-animate {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .intersection-animate.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
-<script type="application/ld+json">
-{"@context": "http://schema.org", "@type": "Audiobook", "name": "AI Cash Empire", "author": {"@type": "Person", "name": "Unknown"}, "inLanguage": "eng", "image": "https://i.imgur.com/Ct6GmGm.png", "description": "&lt;p&gt;&lt;em&gt;AI Cash Empire&lt;/em&gt; is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful eBook reveals how anyone can harness today’s most advanced AI tools to build multiple automated income streams, whether you are a beginner or an experienced entrepreneur.&lt;/p&gt;&lt;p&gt;Inside this book you will discover:&lt;/p&gt;&lt;p&gt;✅ How to publish profitable AI assisted eBooks that generate sales every day&lt;/p&gt;&lt;p&gt", "url": "https://iD01t.github.io/audiobooks/ai-cash-empire.html", "offers": [{"@type": "Offer", "priceCurrency": "USD", "price": "7.68", "url": "https://play.google.com/store/books/details?id=GGKEY:1XP4SHLUQFP", "availability": "http://schema.org/InStock"}, {"@type": "Offer", "priceCurrency": "EUR", "price": "8.99", "url": "https://play.google.com/store/books/details?id=GGKEY:1XP4SHLUQFP", "availability": "http://schema.org/InStock"}, {"@type": "Offer", "priceCurrency": "INR", "price": "129.0", "url": "https://play.google.com/store/books/details?id=GGKEY:1XP4SHLUQFP", "availability": "http://schema.org/InStock"}, {"@type": "Offer", "priceCurrency": "JPY", "price": "999.0", "url": "https://play.google.com/store/books/details?id=GGKEY:1XP4SHLUQFP", "availability": "http://schema.org/InStock"}]}
-</script>
-<!-- Google Analytics (replace G-XXXX with your id) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="canonical" href="https://id01t.store/audiobooks/ai-cash-empire.html">
+    <meta property="og:type" content="audiobook">
+    <meta property="og:title" content="AI Cash Empire (Audiobook)">
+    <meta property="og:description" content="AI Cash Empire is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful eBook reveals how anyone ca...">
+    <meta property="og:url" content="https://id01t.store/audiobooks/ai-cash-empire.html">
+    <meta property="og:image" content="/assets/harvested/ebooks/https://i.imgur.com/Ct6GmGm.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Cash Empire (Audiobook)">
+    <meta name="twitter:description" content="AI Cash Empire is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful eBook reveals how anyone ca...">
+    <meta name="twitter:image" content="/assets/harvested/ebooks/https://i.imgur.com/Ct6GmGm.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Audiobook",
+      "name": "AI Cash Empire",
+      "author": {
+        "@type": "Person",
+        "name": "Unknown"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "iD01t Productions",
+        "url": "https://id01t.store"
+      },
+      "description": "AI Cash Empire is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful eBook reveals how anyone ca...",
+      "image": "/assets/harvested/ebooks/https://i.imgur.com/Ct6GmGm.png",
+      "url": "https://id01t.store/audiobooks/ai-cash-empire.html",
+      "inLanguage": "eng",
+      "bookFormat": "AudiobookFormat"
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+
+<!-- Header (Professional Design) -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
+        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+        <span class="font-semibold text-lg hidden sm:inline">iD01t Productions</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
+        <a href="/store.html" class="link-underline focus-ring rounded px-2 py-1">Store</a>
+        <a href="/ebooks.html" class="link-underline focus-ring rounded px-2 py-1">eBooks</a>
+        <a href="/audiobooks.html" class="link-underline focus-ring rounded px-2 py-1 text-blue-600 dark:text-blue-400">Audiobooks</a>
+        <a href="/apps.html" class="link-underline focus-ring rounded px-2 py-1">Apps</a>
+        <a href="/games.html" class="link-underline focus-ring rounded px-2 py-1">Games</a>
+        <a href="/music.html" class="link-underline focus-ring rounded px-2 py-1">Music</a>
+        <a href="/blog.html" class="link-underline focus-ring rounded px-2 py-1">Blog</a>
+        <a href="/about.html" class="link-underline focus-ring rounded px-2 py-1">About</a>
+        <a href="/contact.html" class="link-underline focus-ring rounded px-2 py-1">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="focus-ring rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle theme">
+          <span class="theme-text">Theme</span>
+        </button>
+        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2 transition-all duration-300 hover:scale-105 animate-pulse-glow focus-ring">
+          Newsletter
+        </a>
+        <button id="mobileMenuBtn" class="md:hidden focus-ring inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 hidden transition-transform" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6l12 12M6 18L18 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 glass-effect" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <h2 id="mobile-menu-title" class="sr-only">Navigation Menu</h2>
+      <a href="/store.html" class="py-2 px-2 rounded focus-ring">Store</a>
+      <a href="/ebooks.html" class="py-2 px-2 rounded focus-ring">eBooks</a>
+      <a href="/audiobooks.html" class="py-2 px-2 rounded focus-ring text-blue-600 dark:text-blue-400">Audiobooks</a>
+      <a href="/apps.html" class="py-2 px-2 rounded focus-ring">Apps</a>
+      <a href="/games.html" class="py-2 px-2 rounded focus-ring">Games</a>
+      <a href="/music.html" class="py-2 px-2 rounded focus-ring">Music</a>
+      <a href="/blog.html" class="py-2 px-2 rounded focus-ring">Blog</a>
+      <a href="/about.html" class="py-2 px-2 rounded focus-ring">About</a>
+      <a href="/contact.html" class="py-2 px-2 rounded focus-ring">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<section class="relative overflow-hidden">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-10">
+    <nav class="text-sm text-slate-500 mb-4">
+      <a class="link-underline" href="/">Home</a> › 
+      <a class="link-underline" href="/audiobooks.html">Audiobooks</a> › 
+      <span>AI Cash Empire</span>
+    </nav>
+    
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <img src="/assets/harvested/ebooks/https://i.imgur.com/Ct6GmGm.png" 
+           alt="AI Cash Empire audiobook cover" 
+           class="w-full aspect-[3/4] object-cover rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800" 
+           loading="eager"
+           onerror="this.onerror=null;this.src='/assets/img/placeholders/card-portrait-384x576.webp'">
+      
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm font-medium">
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.369 4.369 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/>
+            </svg>
+            Audiobook
+          </span>
+        </div>
+        
+        <h1 class="text-3xl font-bold tracking-tight mb-3">AI Cash Empire</h1>
+        
+        <p class="text-slate-600 dark:text-slate-300 mb-4">
+          <span class="font-medium">Narrated by:</span> Unknown
+        </p>
+        
+        <div class="prose prose-slate dark:prose-invert max-w-none mb-6">
+          <p>AI Cash Empire is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful eBook reveals how anyone can harness today’s most advanced AI tools to build multiple automated income streams, whether you are a beginner or an experienced entrepreneur.Inside this book you will discover:✅ How to publish profitable AI assisted eBooks that generate sales every day<p&gt</p>
+        </div>
+        
+        <div class="flex items-center gap-3 mb-4">
+          <a href="https://play.google.com/store/books/details?id=GGKEY:1XP4SHLUQFP" 
+             target="_blank" 
+             rel="noopener" 
+             class="inline-flex items-center gap-2 rounded-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 font-medium transition-all duration-300 hover:scale-105 focus-ring">
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+            </svg>
+            Listen Now
+          </a>
+          <a href="/audiobooks.html" 
+             class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-6 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors focus-ring">
+            All Audiobooks
+          </a>
+        </div>
+        
+        <ul class="text-sm text-slate-500 space-y-1">
+          <li><span class="font-medium">Language:</span> ENG</li>
+          <li><span class="font-medium">Format:</span> Digital Audiobook</li>
+          <li><span class="font-medium">Publisher:</span> iD01t Productions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Professional Footer -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+    <div class="space-y-4">
+      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
+        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+        <span class="font-semibold text-lg text-white">iD01t Productions</span>
+      </a>
+      <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Products</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
+        <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
+        <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
+        <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
+        <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Resources</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
+        <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
+        <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
+        <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
+        <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Legal</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
+        <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
+        <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+    <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <span class="text-slate-400">All systems operational</span>
+      </span>
+      <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
+      <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript -->
 <script>
-  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
+  // Theme functionality
+  function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+    
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
+    return isDark;
+  }
+  
+  // Initialize theme on page load
+  const currentTheme = initTheme();
+  
+  // Theme toggle functionality
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    const themeText = themeToggle.querySelector('.theme-text');
+    
+    function updateThemeText() {
+      const isDark = document.documentElement.classList.contains('dark');
+      themeText.textContent = isDark ? 'Light' : 'Dark';
+    }
+    
+    updateThemeText();
+    
+    themeToggle.addEventListener('click', function() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeText();
+    });
+  }
+  
+  // Mobile menu functionality
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
+  const closeIcon = document.getElementById('closeIcon');
+  
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function() {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden', !isOpen);
+      closeIcon.classList.toggle('hidden', isOpen);
+      mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+  
+  // Set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-<link href="/assets/site.css" rel="stylesheet"/></head>
-<body>
-<nav class="topbar">
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 32px 20px;">
-<a class="brand" href="/index.html">iD01t Productions</a>
-<ul class="nav">
-<li><a href="/catalog.html">Catalog</a></li>
-<li><a href="/series/index.html">Series</a></li>
-<li><a href="/audiobooks/index.html">Audiobooks</a></li>
-<li><a href="/about.html">About</a></li>
-</ul>
-</div>
-</nav>
-<div class="container-page">
-<article>
-<div>
-<div><img alt="AI Cash Empire cover" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="/assets/images/ai-cash-empire-cover.webp"/></div>
-<div>
-<h1>AI Cash Empire</h1>
-<div class="muted">By Unknown · Audiobook</div>
-<p>&lt;p&gt;&lt;em&gt;AI Cash Empire&lt;/em&gt; is your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful eBook reveals how anyone can harness today’s most advanced AI tools to build multiple automated income streams, whether you are a beginner or an experienced entrepreneur.&lt;/p&gt;&lt;p&gt;Inside this book you will discover:&lt;/p&gt;&lt;p&gt;✅ How to publish profitable AI assisted eBooks that generate sales every day&lt;/p&gt;&lt;p&gt; ✅ How to design and launch simple but highly profitable apps with AI automation&lt;/p&gt;&lt;p&gt; ✅ How to create viral content and monetize social media with AI powered strategies&lt;/p&gt;&lt;p&gt; ✅ How to package and sell optimized prompt packs that customers pay for again and again&lt;/p&gt;&lt;p&gt; ✅ How to build chatbots and digital agents that work for you around the clock&lt;/p&gt;&lt;p&gt; ✅ How to scale your empire with outsourcing, automation, and growth hacking methods&lt;/p&gt;&lt;p&gt;This book is packed with real world case studies, detailed examples, and practical strategies that you can apply immediately. Every chapter gives you tools, templates, and a clear roadmap to move from idea to income. Instead of vague promises, you get a system that is proven, scalable, and designed for long term success.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why this book is different&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Written for bot</p>
-<div>
-<a class="badge" href="https://play.google.com/store/books/details?id=GGKEY:1XP4SHLUQFP" rel="noopener" target="_blank">Buy on Google Play</a>
-</div>
-<div class="muted">Language: ENG</div>
-</div>
-</div>
-</article>
-</div>
-<footer>© iD01t Productions — Built for speed &amp; SEO</footer>
-<script defer="" src="/assets/site.js"></script></body></html>
+
+</body>
+</html>
