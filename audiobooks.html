@@ -3,199 +3,343 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Audiobooks · iD01t Productions</title>
-  <meta name="description" content="Audiobooks by iD01t Productions — narrated titles, spoken word, and audio editions. Live from Google Books API."/>
+  <title>Professional Audiobooks - Programming, AI, Chess & More · iD01t Productions</title>
+  <meta name="description" content="Discover our premium collection of audiobooks covering programming, AI, chess mastery, business development, and personal growth. Professionally narrated by Guillaume Lessard with HD cover art and seamless purchasing experience."/>
   <link rel="canonical" href="https://id01t.store/audiobooks.html"/>
+  
+  <!-- SEO & Social Media -->
+  <meta name="keywords" content="audiobooks, programming audiobooks, AI audiobooks, chess audiobooks, technical audiobooks, Guillaume Lessard, iD01t Productions"/>
+  <meta name="author" content="Guillaume Lessard"/>
+  <meta name="robots" content="index, follow"/>
   <meta name="theme-color" content="#16185c"/>
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Audiobooks · iD01t Productions"/>
-  <meta property="og:description" content="Browse narrated titles and audio editions by Guillaume Lessard."/>
+  <meta property="og:site_name" content="iD01t Productions"/>
+  <meta property="og:title" content="Professional Audiobooks - Programming, AI, Chess & More"/>
+  <meta property="og:description" content="Premium collection of professionally narrated audiobooks covering programming, AI, chess mastery, and business development by Guillaume Lessard."/>
   <meta property="og:url" content="https://id01t.store/audiobooks.html"/>
-  <meta property="og:image" content="https://id01t.store/assets/img/placeholders/card-square-640.webp"/>
+  <meta property="og:image" content="https://id01t.store/assets/img/brand/audiobooks-og.webp"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="iD01t Productions Professional Audiobooks Collection"/>
+  
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Audiobooks · iD01t Productions"/>
-  <meta name="twitter:description" content="Narrated titles and audio editions."/>
+  <meta name="twitter:site" content="@id01t"/>
+  <meta name="twitter:creator" content="@id01t"/>
+  <meta name="twitter:title" content="Professional Audiobooks - Programming, AI, Chess & More"/>
+  <meta name="twitter:description" content="Premium audiobooks by Guillaume Lessard covering programming, AI, chess, and business development."/>
+  <meta name="twitter:image" content="https://id01t.store/assets/img/brand/audiobooks-og.webp"/>
+  
+  <!-- Additional SEO -->
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Professional Audiobooks by iD01t Productions",
+    "description": "Premium audiobooks covering programming, AI, chess mastery, and business development",
+    "url": "https://id01t.store/audiobooks.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "iD01t Productions",
+      "url": "https://id01t.store",
+      "logo": "https://id01t.store/assets/img/brand/logo.svg"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Guillaume Lessard",
+      "url": "https://id01t.store/about.html"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Professional Audiobooks Collection",
+      "numberOfItems": "200+"
+    }
+  }
+  </script>
 
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={theme:{extend:{colors:{brand:{50:"#f5f6ff",100:"#e6e9ff",200:"#c9ccff",300:"#a2a8ff",400:"#7a82ff",500:"#545cff",600:"#3a3fe6",700:"#2c30b4",800:"#202383",900:"#16185c"}}}}};</script>
-  <link rel="stylesheet" href="/css/custom.css">
+  
+  <!-- Custom Styles -->
   <style>
-    .line-clamp-2 {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+    .focus-ring:focus { 
+      outline: none; 
+      box-shadow: 0 0 0 2px #2aa7ff, 0 0 0 4px rgba(42, 167, 255, 0.1); 
     }
+    .dark .focus-ring:focus { 
+      box-shadow: 0 0 0 2px #2aa7ff, 0 0 0 4px rgba(42, 167, 255, 0.2); 
+    }
+    .link-underline:hover { 
+      text-decoration: underline; 
+      text-underline-offset: 4px; 
+      text-decoration-thickness: 2px; 
+      text-decoration-color: rgba(42, 167, 255, 0.6); 
+      transition: all 0.2s; 
+    }
+    .card-hover:hover { 
+      transform: scale(1.02) translateY(-4px); 
+      transition: transform 0.3s ease; 
+    }
+    .line-clamp-2 { 
+      display: -webkit-box; 
+      -webkit-line-clamp: 2; 
+      line-clamp: 2; 
+      -webkit-box-orient: vertical; 
+      overflow: hidden; 
+    }
+    .line-clamp-3 { 
+      display: -webkit-box; 
+      -webkit-line-clamp: 3; 
+      line-clamp: 3; 
+      -webkit-box-orient: vertical; 
+      overflow: hidden; 
+    }
+    .intersection-animate { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+    .intersection-animate.visible { opacity: 1; transform: translateY(0); }
+    .glass-effect { backdrop-filter: blur(16px); background: rgba(255, 255, 255, 0.8); }
+    .dark .glass-effect { background: rgba(15, 23, 42, 0.8); }
   </style>
-  
 
-  <link rel="preconnect" href="https://www.googleapis.com">
-  
-  <!-- Google Books API Key -->
-  <meta name="google-books-api-key" content="AIzaSyB_YuwaxJeZuDMijJA6eS6WQ3x28k3SI14">
+  <!-- Preconnects for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://www.googleapis.com"/>
+  <link rel="dns-prefetch" href="//books.google.com"/>
+  <link rel="dns-prefetch" href="//play.google.com"/>
 </head>
-  <!-- Analytics & Pixels -->
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
 
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'META_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
-  /></noscript>
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased">
 
-  <!-- X Pixel -->
-  <script>
-    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-    twq('init','X_PIXEL_ID');
-    twq('track','PageView');
-  </script>
-
-  <!-- TikTok Pixel -->
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]. daarom="1.2.10",ttq._i[e].setAndDefer(ttq._i[e],"setEvtId",n),ttq.setAndDefer(ttq,"load",e);if(e)return document.getElementById(e);var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-      ttq.load('TIKTOK_PIXEL_ID');
-      ttq.page();
-    }(window, document, 'ttq');
-  </script>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-  
-<header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+<!-- Header -->
+<header class="sticky top-0 z-50 glass-effect border-b border-slate-200/50 dark:border-slate-800/50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2" aria-label="Home">
-        <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
-        <span class="font-semibold tracking-tight">iD01t Productions</span>
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 focus-ring rounded-lg p-1" aria-label="iD01t Productions home">
+        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+        <span class="font-bold text-lg bg-gradient-to-r from-brand-600 to-brand-800 bg-clip-text text-transparent">iD01t Productions</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
-        <a href="/index.html" class="link-underline">Home</a>
-        <a href="/store.html" class="link-underline">Store</a>
-        <a href="/apps.html" class="link-underline">Apps</a>
-        <a href="/ebooks.html" class="link-underline">eBooks</a>
-        <a href="/audiobooks.html" class="link-underline text-brand-600 dark:text-brand-400">Audiobooks</a>
-        <a href="/games.html" class="link-underline">Games</a>
-        <a href="/music.html" class="link-underline">Music</a>
-        <a href="/blog.html" class="link-underline">Blog</a>
-        <a href="/about.html" class="link-underline">About</a>
-        <a href="/contact.html" class="link-underline">Contact</a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+        <a href="/index.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">Home</a>
+        <a href="/store.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">Store</a>
+        <a href="/apps.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">Apps</a>
+        <a href="/ebooks.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">eBooks</a>
+        <a href="/audiobooks.html" class="text-brand-600 dark:text-brand-400 font-semibold focus-ring rounded px-2 py-1" aria-current="page">Audiobooks</a>
+        <a href="/games.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">Games</a>
+        <a href="/music.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">Music</a>
+        <a href="/blog.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">Blog</a>
+        <a href="/about.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">About</a>
+        <a href="/contact.html" class="text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded px-2 py-1">Contact</a>
       </nav>
+
+      <!-- Header Actions -->
       <div class="flex items-center gap-3">
-        <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="inline-flex items-center gap-2 rounded-full border border-slate-300 dark:border-slate-600 px-3 py-1.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle theme">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <span class="theme-text">Dark</span>
+        </button>
+        
+        <!-- Newsletter CTA -->
+        <a href="/#newsletter" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 transition-colors focus-ring focus:ring-offset-2">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Newsletter
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Open menu" aria-expanded="false">
+          <svg id="menuIcon" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="closeIcon" class="h-5 w-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
         </button>
       </div>
     </div>
   </div>
-  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
-    <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/index.html" class="py-2">Home</a>
-        <a href="/store.html" class="py-2">Store</a>
-        <a href="/apps.html" class="py-2">Apps</a>
-        <a href="/ebooks.html" class="py-2">eBooks</a>
-        <a href="/audiobooks.html" class="py-2 text-brand-600 dark:text-brand-400">Audiobooks</a>
-        <a href="/games.html" class="py-2">Games</a>
-        <a href="/music.html" class="py-2">Music</a>
-        <a href="/blog.html" class="py-2">Blog</a>
-        <a href="/about.html" class="py-2">About</a>
-        <a href="/contact.html" class="py-2">Contact</a>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/50 dark:border-slate-800/50 glass-effect" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="px-4 py-6 space-y-4">
+      <a href="/index.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">Home</a>
+      <a href="/store.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">Store</a>
+      <a href="/apps.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">Apps</a>
+      <a href="/ebooks.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">eBooks</a>
+      <a href="/audiobooks.html" class="block py-2 text-brand-600 dark:text-brand-400 font-semibold focus-ring rounded" aria-current="page">Audiobooks</a>
+      <a href="/games.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">Games</a>
+      <a href="/music.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">Music</a>
+      <a href="/blog.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">Blog</a>
+      <a href="/about.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">About</a>
+      <a href="/contact.html" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors focus-ring rounded">Contact</a>
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+        <a href="/#newsletter" class="inline-flex items-center gap-2 rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 transition-colors focus-ring">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Newsletter
+        </a>
+      </div>
     </div>
   </div>
 </header>
 
-  <!-- Hero -->
-  <section class="bg-white dark:bg-slate-950 py-20">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h1 class="text-6xl font-black text-slate-900 dark:text-white mb-6">
-        Audiobooks
-      </h1>
-      <p class="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-        Professional narrated content by Guillaume Lessard
-      </p>
-      <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-full text-sm text-slate-600 dark:text-slate-400">
-        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-        Live from Google Books API
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-brand-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 py-24 intersection-animate">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 dark:bg-brand-900/50 text-brand-700 dark:text-brand-300 rounded-full text-sm font-medium mb-8">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 14.142M9 9a3 3 0 106 0v5a3 3 0 11-6 0V9z"></path>
+      </svg>
+      Premium Audiobook Collection
+    </div>
+
+    <!-- Main Heading -->
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-none">
+      Professional
+      <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-brand-600 bg-clip-text text-transparent">Audiobooks</span>
+    </h1>
+
+    <!-- Description -->
+    <p class="text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+      Discover our premium collection of <strong>200+ audiobooks</strong> covering programming, AI, chess mastery, business development, and personal growth. Professionally narrated by Guillaume Lessard with crystal-clear audio quality.
+    </p>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-brand-600 dark:text-brand-400" id="totalCount">200+</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400">Audiobooks</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-brand-600 dark:text-brand-400">7</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400">Categories</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-brand-600 dark:text-brand-400">HD</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400">Audio Quality</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-brand-600 dark:text-brand-400">24/7</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400">Availability</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Controls -->
-  <section class="bg-slate-50 dark:bg-slate-900 py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-col lg:flex-row gap-6 items-end">
-        <div class="flex-1">
-          <input id="q" type="search" placeholder="Search audiobooks..." 
-                 class="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-        
-        <div class="flex gap-4">
-          <select id="language" class="px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="">All Languages</option>
-          </select>
-          
-          <input id="from" type="number" placeholder="From" 
-                 class="w-24 px-3 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          
-          <input id="to" type="number" placeholder="To" 
-                 class="w-24 px-3 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          
-          <select id="sort" class="px-4 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="date_desc">Newest</option>
-            <option value="date_asc">Oldest</option>
-            <option value="title_asc">A-Z</option>
-            <option value="title_desc">Z-A</option>
-          </select>
-          
-          <button id="reset" class="px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-            Reset
-          </button>
-          
-          <button id="refresh" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
-            Refresh
-          </button>
-        </div>
+  <!-- Background Elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-brand-200/20 dark:bg-brand-800/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-brand-300/20 dark:bg-brand-700/20 rounded-full blur-3xl"></div>
+  </div>
+</section>
+
+<!-- Search & Filter Controls -->
+<section class="bg-white dark:bg-slate-900 py-16 intersection-animate border-b border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12">
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Browse Audiobooks</h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2">
+          <span id="resultsCount">200+</span> professional audiobooks available
+        </p>
       </div>
       
-      <div id="tally" class="mt-4 text-sm text-slate-500 dark:text-slate-400"></div>
+      <!-- Quick Filters -->
+      <div class="flex flex-wrap gap-2">
+        <button class="category-filter-btn px-4 py-2 text-sm font-medium bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 rounded-full hover:bg-brand-200 dark:hover:bg-brand-800 transition-colors focus-ring" data-category="">All</button>
+        <button class="category-filter-btn px-4 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus-ring" data-category="programming">Programming</button>
+        <button class="category-filter-btn px-4 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus-ring" data-category="ai">AI & ML</button>
+        <button class="category-filter-btn px-4 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus-ring" data-category="chess">Chess</button>
+        <button class="category-filter-btn px-4 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus-ring" data-category="business">Business</button>
+      </div>
     </div>
-  </section>
 
-  <!-- Grid -->
-  <section class="bg-white dark:bg-slate-950 py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between items-center mb-12">
-        <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Audiobooks</h2>
-        <div id="count" class="text-slate-500 dark:text-slate-400"></div>
+    <!-- Search & Sort Controls -->
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Search Input -->
+      <div class="md:col-span-2 lg:col-span-2">
+        <div class="relative">
+          <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input 
+            type="search" 
+            id="searchInput"
+            placeholder="Search audiobooks by title, author, or topic..." 
+            class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors"
+          />
+        </div>
       </div>
-      
-      <div id="loading" class="text-center py-20">
-        <div class="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <p class="text-slate-600 dark:text-slate-400">Loading audiobooks...</p>
+
+      <!-- Category Filter -->
+      <div>
+        <select id="categoryFilter" class="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors">
+          <option value="">All Categories</option>
+          <option value="programming">Programming</option>
+          <option value="ai">AI & Machine Learning</option>
+          <option value="chess">Chess Strategy</option>
+          <option value="music">Music Production</option>
+          <option value="business">Business & Finance</option>
+          <option value="personal">Personal Growth</option>
+          <option value="science">Science & Tech</option>
+        </select>
       </div>
-      
-      <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden"></div>
+
+      <!-- Sort Order -->
+      <div>
+        <select id="sortOrder" class="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors">
+          <option value="newest">Newest First</option>
+          <option value="title">Title A-Z</option>
+          <option value="popular">Most Popular</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Audiobooks Grid -->
+<section class="bg-slate-50 dark:bg-slate-950 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Loading State -->
+    <div id="loadingState" class="text-center py-20">
+      <div class="inline-flex items-center gap-3 text-slate-600 dark:text-slate-400">
+        <svg class="animate-spin h-6 w-6" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span class="text-lg font-medium">Loading premium audiobooks...</span>
+      </div>
+    </div>
+
+    <!-- Audiobooks Grid -->
+    <div id="audiobooksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden"></div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-16">
+      <button id="loadMoreBtn" class="hidden inline-flex items-center gap-2 px-8 py-3 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-full transition-colors focus-ring">
+        <span>Load More Audiobooks</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
       
       <noscript>
         <div class="text-center py-20">
