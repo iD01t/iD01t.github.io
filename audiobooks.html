@@ -868,40 +868,205 @@
       };
     }
 
-    // Create book card HTML
+    // Enhanced create book card with better error handling and accessibility
     function createCard(book) {
-      const linkUrl = book.localUrl || book.infoLink;
-      const linkTarget = book.localUrl ? '_self' : '_blank';
-      const linkRel = book.localUrl ? 'noopener' : 'noopener nofollow';
+      try {
+        if (!book || !book.title) {
+          console.warn('Invalid book data for card creation:', book);
+          return createErrorCard('Invalid book data');
+        }
 
+        const linkUrl = book.localUrl || book.infoLink || '#';
+        const linkTarget = book.localUrl ? '_self' : '_blank';
+        const linkRel = book.localUrl ? '' : 'noopener nofollow';
+        const safeTitle = escapeHtml(book.title);
+        const safeAuthors = escapeHtml(book.authors || 'Unknown Author');
+        const safeYear = book.year || '';
+        
+        // Validate image URL
+        const imageUrl = book.image && book.image !== '#' ? book.image : '/assets/img/placeholders/card-portrait-384x576.webp';
+        
+        // Prepare image with error handling
+        const imageHTML = `
+          <img src="${imageUrl}" 
+               alt="${safeTitle} audiobook cover"
+               data-original-url="${book.originalImageUrl || imageUrl}"
+               class="w-full aspect-[3/4] object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" 
+               loading="lazy"
+               decoding="async"
+               onerror="handleImageError(this)">
+        `;
+
+        return `
+          <article class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700">
+            <div class="relative">
+              ${imageHTML}
+              ${book.isAudiobook ? '<div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>Audio</div>' : ''}
+            </div>
+            
+            <div class="p-6 space-y-3">
+              <div class="space-y-2">
+                <h3 class="font-semibold text-lg text-slate-900 dark:text-white line-clamp-2 leading-tight">
+                  ${safeTitle}
+                </h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">
+                  by ${safeAuthors}
+                </p>
+                ${safeYear ? `<p class="text-sm text-slate-500 dark:text-slate-500">${safeYear}</p>` : ''}
+                ${book.categories && book.categories.length > 0 ? 
+                  `<div class="flex flex-wrap gap-1">
+                    ${book.categories.slice(0, 2).map(cat => 
+                      `<span class="px-2 py-1 text-xs bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 rounded-full">${escapeHtml(cat)}</span>`
+                    ).join('')}
+                  </div>` : ''
+                }
+              </div>
+              
+              <div class="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <a href="${linkUrl}" 
+                   target="${linkTarget}" 
+                   ${linkRel ? `rel="${linkRel}"` : ''}
+                   class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300 text-sm font-medium transition-colors focus-ring rounded px-2 py-1"
+                   ${linkUrl === '#' ? 'style="opacity: 0.5; cursor: not-allowed;"' : ''}>
+                  <span>View Details</span>
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      } catch (error) {
+        console.error('Error creating book card:', error, book);
+        return createErrorCard(`Error loading "${book?.title || 'Unknown'}" audiobook`);
+      }
+    }
+
+    // Create error card for failed book renders
+    function createErrorCard(message = 'Error loading audiobook') {
       return `
-        <div class="group">
-          <div class="relative mb-4">
-            <img src="${book.image}" 
-                 alt="${escapeHtml(book.title)}" 
-                 class="w-full aspect-[3/4] object-cover rounded-lg" 
-                 loading="lazy"
-                 onerror="this.onerror=null;this.src='/assets/img/placeholders/card-portrait-384x576.webp'">
-            ${book.isAudiobook ? '<div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Audio</div>' : ''}
+        <article class="group bg-slate-100 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 opacity-75">
+          <div class="p-6 text-center space-y-3">
+            <div class="text-slate-500 dark:text-slate-400">
+              <svg class="h-12 w-12 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <p class="text-sm font-medium">${escapeHtml(message)}</p>
+            </div>
           </div>
-          
-          <div class="space-y-2">
-            <h3 class="font-semibold text-slate-900 dark:text-white line-clamp-2">
-              ${escapeHtml(book.title)}
-            </h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">
-              ${escapeHtml(book.authors || '')}
-            </p>
-            <p class="text-sm text-slate-500 dark:text-slate-500">
-              ${book.year || ''}
-            </p>
-            <a href="${linkUrl}" target="${linkTarget}" rel="${linkRel}"
-               class="inline-block mt-3 text-blue-600 hover:text-blue-700 text-sm font-medium">
-              View Details →
-            </a>
-          </div>
-        </div>
+        </article>
       `;
+    }
+
+    // Enhanced render books with comprehensive error handling
+    function renderBooks(filtered, allBooks) {
+      try {
+        const loading = document.getElementById('loading');
+        const grid = document.getElementById('grid');
+        const empty = document.getElementById('empty');
+        const count = document.getElementById('count');
+        const tally = document.getElementById('tally');
+
+        if (!grid) {
+          console.error('Grid element not found');
+          return;
+        }
+
+        loading.classList.add('hidden');
+        
+        if (!filtered || !filtered.length) {
+          grid.classList.add('hidden');
+          if (empty) empty.classList.remove('hidden');
+          if (count) count.textContent = '0 audiobooks';
+          return;
+        }
+
+        if (empty) empty.classList.add('hidden');
+        grid.classList.remove('hidden');
+        
+        // Create cards with error handling for each book
+        const cardsHTML = filtered.map(book => {
+          try {
+            return createCard(book);
+          } catch (e) {
+            console.warn('Failed to create card for book:', book, e);
+            return createErrorCard(`Error loading "${book?.title || 'Unknown'}" audiobook`);
+          }
+        }).filter(Boolean).join('');
+        
+        grid.innerHTML = cardsHTML;
+        
+        // Update counters with error handling
+        try {
+          const audiobookCount = allBooks ? allBooks.filter(book => book && book.isAudiobook).length : 0;
+          if (count) count.textContent = `${filtered.length} audiobook${filtered.length !== 1 ? 's' : ''}`;
+          if (tally) tally.textContent = `${allBooks?.length || 0} titles • ${audiobookCount} audiobooks`;
+        } catch (e) {
+          console.warn('Error updating counters:', e);
+        }
+
+        // Initialize image loading observers
+        initImageObservers();
+
+      } catch (error) {
+        console.error('Error rendering books:', error);
+        showErrorState('Error displaying audiobooks');
+      }
+    }
+
+    // Initialize image observers for lazy loading and error handling
+    function initImageObservers() {
+      try {
+        if ('IntersectionObserver' in window) {
+          const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                // Image is already loaded due to loading="lazy", just observe for error handling
+                imageObserver.unobserve(img);
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.1
+          });
+
+          // Observe all images in the grid
+          document.querySelectorAll('#grid img').forEach(img => {
+            imageObserver.observe(img);
+          });
+        }
+      } catch (e) {
+        console.warn('Failed to initialize image observers:', e);
+      }
+    }
+
+    // Show error state in the UI
+    function showErrorState(message = 'Something went wrong') {
+      const loading = document.getElementById('loading');
+      const grid = document.getElementById('grid');
+      
+      if (loading) {
+        loading.innerHTML = `
+          <div class="text-center py-12">
+            <div class="text-red-500 dark:text-red-400 mb-4">
+              <svg class="h-12 w-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <p class="text-lg font-medium">${escapeHtml(message)}</p>
+            </div>
+            <button onclick="init()" class="mt-4 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors focus-ring">
+              Try Again
+            </button>
+          </div>
+        `;
+        loading.classList.remove('hidden');
+      }
+      
+      if (grid) {
+        grid.classList.add('hidden');
+      }
     }
 
     // Apply filters
@@ -1101,71 +1266,368 @@
       return items;
     }
 
-    // Main initialization
+    // Enhanced main initialization with comprehensive error handling
     async function init() {
-      const loading = document.getElementById('loading');
-      loading.textContent = '🎧 Loading audiobooks...';
-      loading.classList.remove('hidden');
-
       try {
-        console.log('🎧 Fetching from Google Books API...');
-        const rawBooks = await fetchFromGoogleBooks();
-        console.log(`📚 Raw books fetched: ${rawBooks.length}`);
-        
-        let allBooks = rawBooks.map(normalizeBook);
-        console.log(`📖 Books normalized: ${allBooks.length}`);
-        
-        // Log details about each book for debugging
-        allBooks.forEach((book, index) => {
-          console.log(`Book ${index + 1}: "${book.title}" by ${book.authors} - Audiobook: ${book.isAudiobook}`);
-        });
-        
-        const audiobooks = allBooks.filter(b => b.isAudiobook);
-        console.log(`🎧 Audiobooks identified: ${audiobooks.length}`);
-
-        if (audiobooks.length === 0) {
-          console.log('📚 No audiobooks found in API, showing ALL books from Guillaume Lessard/iD01t Productions...');
-          // Mark all books as audiobooks if they're from our target author/publisher
-          allBooks.forEach(book => {
-            if (book.authors.toLowerCase().includes('guillaume lessard') || 
-                book.authors.toLowerCase().includes('id01t')) {
-              book.isAudiobook = true;
-              console.log(`🎧 Marking as audiobook: "${book.title}"`);
-            }
-          });
-          
-          const newAudiobooks = allBooks.filter(b => b.isAudiobook);
-          if (newAudiobooks.length === 0) {
-            console.log('📚 Still no audiobooks found, using fallback data...');
-            allBooks = FALLBACK_DATA;
-          } else {
-            console.log(`✅ Found ${newAudiobooks.length} books from Guillaume Lessard/iD01t Productions!`);
-          }
-        } else {
-          console.log('✅ Found audiobooks from Google Books API!');
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.innerHTML = `
+            <div class="inline-flex items-center gap-3 text-slate-600 dark:text-slate-300">
+              <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Loading audiobooks...
+            </div>
+          `;
+          loading.classList.remove('hidden');
         }
 
-        console.log(`📚 Final: ${allBooks.length} books, ${audiobooks.length} audiobooks`);
+        // Check online status
+        if (!navigator.onLine) {
+          throw new Error('No internet connection available');
+        }
+
+        console.log('🎧 Starting audiobook initialization...');
         
-        populateLanguages(allBooks);
-        setupEventListeners(allBooks);
-        renderBooks(applyFilters(allBooks), allBooks);
+        let allBooks = [];
+        let usesFallback = false;
+
+        try {
+          console.log('🎧 Fetching from Google Books API...');
+          const rawBooks = await fetchFromGoogleBooks();
+          console.log(`📚 Raw books fetched: ${rawBooks.length}`);
+          
+          if (rawBooks.length === 0) {
+            throw new Error('No books found from API');
+          }
+
+          // Normalize books with validation
+          const normalizedBooks = rawBooks.map(normalizeBook).filter(Boolean);
+          console.log(`📖 Books normalized: ${normalizedBooks.length}`);
+          
+          if (normalizedBooks.length === 0) {
+            throw new Error('No valid books after normalization');
+          }
+
+          // Log details about each book for debugging
+          normalizedBooks.forEach((book, index) => {
+            console.log(`Book ${index + 1}: "${book.title}" by ${book.authors} - Audiobook: ${book.isAudiobook}`);
+          });
+          
+          let audiobooks = normalizedBooks.filter(b => b.isAudiobook);
+          console.log(`🎧 Audiobooks identified: ${audiobooks.length}`);
+
+          if (audiobooks.length === 0) {
+            console.log('📚 No audiobooks found in API, marking relevant books as audiobooks...');
+            // Mark all books as audiobooks if they're from our target author/publisher
+            normalizedBooks.forEach(book => {
+              if (book.authors.toLowerCase().includes('guillaume lessard') || 
+                  book.authors.toLowerCase().includes('id01t')) {
+                book.isAudiobook = true;
+                console.log(`🎧 Marking as audiobook: "${book.title}"`);
+              }
+            });
+            
+            audiobooks = normalizedBooks.filter(b => b.isAudiobook);
+            
+            if (audiobooks.length === 0) {
+              console.log('📚 Still no audiobooks found, using fallback data...');
+              allBooks = [...FALLBACK_DATA];
+              usesFallback = true;
+            } else {
+              console.log(`✅ Found ${audiobooks.length} books from Guillaume Lessard/iD01t Productions!`);
+              allBooks = normalizedBooks;
+            }
+          } else {
+            console.log('✅ Found audiobooks from Google Books API!');
+            allBooks = normalizedBooks;
+          }
+
+        } catch (apiError) {
+          console.error('❌ API failed:', apiError);
+          const errorInfo = handleApiError(apiError, 'Google Books API');
+          
+          if (errorInfo.shouldRetry && !usesFallback) {
+            // Show retry option
+            if (loading) {
+              loading.innerHTML = `
+                <div class="text-center py-12">
+                  <div class="text-orange-500 dark:text-orange-400 mb-4">
+                    <svg class="h-12 w-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <p class="text-lg font-medium">${errorInfo.userMessage}</p>
+                  </div>
+                  <div class="space-x-4">
+                    <button onclick="init()" class="px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors focus-ring">
+                      Retry
+                    </button>
+                    <button onclick="initWithFallback()" class="px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors focus-ring">
+                      Use Offline Data
+                    </button>
+                  </div>
+                </div>
+              `;
+              return;
+            }
+          }
+          
+          console.log('Using fallback data due to API failure');
+          allBooks = [...FALLBACK_DATA];
+          usesFallback = true;
+        }
+
+        console.log(`📚 Final: ${allBooks.length} books`);
+        
+        if (allBooks.length === 0) {
+          throw new Error('No audiobooks available');
+        }
+
+        // Initialize UI components with error handling
+        try {
+          populateLanguages(allBooks);
+        } catch (e) {
+          console.warn('Failed to populate languages:', e);
+        }
+
+        try {
+          setupEventListeners(allBooks);
+        } catch (e) {
+          console.warn('Failed to setup event listeners:', e);
+        }
+
+        try {
+          renderBooks(applyFilters(allBooks), allBooks);
+        } catch (e) {
+          console.error('Failed to render books:', e);
+          showErrorState('Error displaying audiobooks');
+          return;
+        }
+
+        // Show success message if using fallback
+        if (usesFallback) {
+          setTimeout(() => {
+            const indicator = document.createElement('div');
+            indicator.className = 'fixed top-4 left-4 bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 text-sm';
+            indicator.innerHTML = '⚠️ Showing offline audiobook collection';
+            document.body.appendChild(indicator);
+            
+            setTimeout(() => indicator.remove(), 5000);
+          }, 1000);
+        }
         
       } catch (error) {
-        console.error('❌ API failed, using fallback data:', error);
-        const allBooks = FALLBACK_DATA;
-        populateLanguages(allBooks);
-        setupEventListeners(allBooks);
-        renderBooks(applyFilters(allBooks), allBooks);
+        console.error('❌ Initialization failed completely:', error);
+        showErrorState(`Failed to load audiobooks: ${error.message}`);
       }
     }
 
-    // Start when DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-    init();
+    // Fallback initialization function
+    function initWithFallback() {
+      try {
+        console.log('🎧 Initializing with fallback data only...');
+        const allBooks = [...FALLBACK_DATA];
+        
+        populateLanguages(allBooks);
+        setupEventListeners(allBooks);
+        renderBooks(applyFilters(allBooks), allBooks);
+        
+        // Show offline indicator
+        const indicator = document.createElement('div');
+        indicator.className = 'fixed top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 text-sm';
+        indicator.innerHTML = '📚 Showing offline audiobook collection';
+        document.body.appendChild(indicator);
+        
+        setTimeout(() => indicator.remove(), 5000);
+        
+      } catch (error) {
+        console.error('❌ Fallback initialization failed:', error);
+        showErrorState('Failed to load offline audiobooks');
+      }
     }
+
+    // Enhanced event listener setup with error boundaries
+    function setupEventListeners(allBooks) {
+      try {
+        const updateResults = () => {
+          try {
+            renderBooks(applyFilters(allBooks), allBooks);
+          } catch (e) {
+            console.error('Error updating results:', e);
+            showErrorState('Error filtering audiobooks');
+          }
+        };
+        
+        // Debounced search to prevent excessive filtering
+        const debouncedUpdate = debounce(updateResults, 300);
+        
+        ['q', 'language', 'from', 'to', 'sort'].forEach(id => {
+          const element = document.getElementById(id);
+          if (element) {
+            const eventType = id === 'q' ? 'input' : 'change';
+            element.addEventListener(eventType, eventType === 'input' ? debouncedUpdate : updateResults);
+          }
+        });
+
+        const resetBtn = document.getElementById('reset');
+        if (resetBtn) {
+          resetBtn.addEventListener('click', () => {
+            try {
+              ['q', 'language', 'from', 'to'].forEach(id => {
+                const element = document.getElementById(id);
+                if (element) element.value = '';
+              });
+              const sortElement = document.getElementById('sort');
+              if (sortElement) sortElement.value = 'date_desc';
+              updateResults();
+            } catch (e) {
+              console.error('Error resetting filters:', e);
+            }
+          });
+        }
+
+        const refreshBtn = document.getElementById('refresh');
+        if (refreshBtn) {
+          refreshBtn.addEventListener('click', () => {
+            try {
+              localStorage.removeItem('id01t_audiobooks_cache');
+              init();
+            } catch (e) {
+              console.error('Error refreshing:', e);
+            }
+          });
+        }
+
+      } catch (error) {
+        console.error('Error setting up event listeners:', error);
+      }
+    }
+
+    // Debounce function to prevent excessive API calls
+    function debounce(func, wait) {
+      let timeout;
+      return function executedFunction(...args) {
+        const later = () => {
+          clearTimeout(timeout);
+          func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    }
+
+    // Enhanced initialization with comprehensive error handling
+    function initializePage() {
+      try {
+        // Initialize connection monitoring
+        initConnectionMonitoring();
+
+        // Initialize theme with error handling
+        try {
+          const currentTheme = initTheme();
+          setupThemeToggle(currentTheme);
+        } catch (e) {
+          console.warn('Theme initialization failed:', e);
+        }
+
+        // Initialize mobile menu with error handling
+        try {
+          setupMobileMenu();
+        } catch (e) {
+          console.warn('Mobile menu initialization failed:', e);
+        }
+
+        // Set current year
+        try {
+          const yearElement = document.getElementById('year');
+          if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+          }
+        } catch (e) {
+          console.warn('Year initialization failed:', e);
+        }
+
+        // Start main initialization
+        init();
+
+        // Add global error handlers
+        window.addEventListener('error', (event) => {
+          console.error('Global error:', event.error);
+        });
+
+        window.addEventListener('unhandledrejection', (event) => {
+          console.error('Unhandled promise rejection:', event.reason);
+        });
+
+      } catch (error) {
+        console.error('Page initialization failed:', error);
+        showErrorState('Failed to initialize audiobooks page');
+      }
+    }
+
+    // Setup theme toggle with error handling
+    function setupThemeToggle(currentTheme) {
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        themeToggle.setAttribute('aria-pressed', String(currentTheme));
+        const themeText = themeToggle.querySelector('.theme-text');
+        if (themeText) {
+          themeText.textContent = currentTheme ? 'Light' : 'Dark';
+        }
+        
+        themeToggle.addEventListener('click', function() {
+          try {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            themeToggle.setAttribute('aria-pressed', String(isDark));
+            if (themeText) {
+              themeText.textContent = isDark ? 'Light' : 'Dark';
+            }
+          } catch (e) {
+            console.warn('Theme toggle failed:', e);
+          }
+        });
+      }
+    }
+
+    // Setup mobile menu with error handling
+    function setupMobileMenu() {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      const closeIcon = document.getElementById('closeIcon');
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          try {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+            
+            if (menuIcon && closeIcon) {
+              menuIcon.classList.toggle('hidden', !isOpen);
+              closeIcon.classList.toggle('hidden', isOpen);
+            }
+          } catch (e) {
+            console.warn('Mobile menu toggle failed:', e);
+          }
+        });
+      }
+    }
+
+    // Start when DOM is ready with comprehensive error handling
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializePage);
+    } else {
+      // DOM already loaded
+      setTimeout(initializePage, 0);
+    }
+
+    // Expose functions globally for button onclick handlers
+    window.init = init;
+    window.initWithFallback = initWithFallback;
+    window.handleImageError = handleImageError;
   </script>
 </body>
 </html>
