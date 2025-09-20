@@ -496,7 +496,7 @@
       TIMEOUT: 9000
     };
 
-    // Fallback data
+    // Fallback data with local image paths
     const FALLBACK_DATA = [
       {
         id: "ab-unstoppable",
@@ -506,10 +506,11 @@
         language: "en",
         categories: ["Self-Improvement"],
         description: "High-impact systems, mindset, and automation. Audiobook edition with enhanced narration and production quality.",
-        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        image: null, // Will use local image system
         infoLink: "https://books.google.com/books?id=unstoppable-audiobook",
         isAudiobook: true,
-        localUrl: "/audiobooks/unstoppable.html"
+        localUrl: "/audiobooks/unstoppable.html",
+        audiobook_number: "001"
       },
       {
         id: "ab-python-hero",
@@ -519,10 +520,11 @@
         language: "en",
         categories: ["Programming"],
         description: "A narrated path from absolute beginner to productive Python developer. Perfect for learning while commuting.",
-        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        image: null, // Will use local image system
         infoLink: "https://books.google.com/books?id=python-zero-to-hero-audio",
         isAudiobook: true,
-        localUrl: "/audiobooks/python-zero-to-hero.html"
+        localUrl: "/audiobooks/python-zero-to-hero.html",
+        audiobook_number: "002"
       },
       {
         id: "ab-healing-code-fr",
@@ -532,10 +534,11 @@
         language: "fr",
         categories: ["Health & Wellness"],
         description: "Exploration francophone des fréquences naturelles et de l'auto-guérison. Version audio complète.",
-        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        image: null, // Will use local image system
         infoLink: "https://books.google.com/books?id=healing-code-fr-audio",
         isAudiobook: true,
-        localUrl: "/audiobooks/le-code-de-guerison.html"
+        localUrl: "/audiobooks/le-code-de-guerison.html",
+        audiobook_number: "003"
       },
       {
         id: "ab-producer-workflow",
@@ -545,10 +548,11 @@
         language: "en",
         categories: ["Music"],
         description: "Studio and live performance workflows powered by AI tools. Narrated by the author with musical examples.",
-        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        image: null, // Will use local image system
         infoLink: "https://books.google.com/books?id=producer-workflow-audio",
         isAudiobook: true,
-        localUrl: "/audiobooks/music-producer-workflow.html"
+        localUrl: "/audiobooks/music-producer-workflow.html",
+        audiobook_number: "004"
       },
       {
         id: "ab-ai-automation",
@@ -558,10 +562,11 @@
         language: "en",
         categories: ["Technology"],
         description: "Complete guide to automating creative workflows with artificial intelligence. Perfect for content creators.",
-        image: "/assets/img/placeholders/card-portrait-384x576.webp",
+        image: null, // Will use local image system
         infoLink: "https://books.google.com/books?id=ai-automation-audio",
         isAudiobook: true,
-        localUrl: "/audiobooks/ai-automation.html"
+        localUrl: "/audiobooks/ai-automation.html",
+        audiobook_number: "005"
       }
     ];
 
@@ -870,7 +875,6 @@
         }
 
         const volumeInfo = item.volumeInfo;
-        const imageLinks = volumeInfo.imageLinks || {};
 
         // Validate required fields
         if (!volumeInfo.title) {
@@ -878,36 +882,7 @@
           return null;
         }
 
-        // Handle Google Books images with enhanced CORS handling
-        let imageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || '/assets/img/placeholders/card-portrait-384x576.webp';
-        let originalImageUrl = imageUrl;
-        
-        // For Google Books images, use CORS proxy with better error handling
-        if (imageUrl.includes('books.google.com')) {
-          const bookId = item.id;
-          if (bookId && imageLinks.thumbnail) {
-            try {
-              // Use multiple CORS proxy services as fallbacks
-              const proxies = [
-                'https://images.weserv.nl/?url=',
-                'https://api.allorigins.win/raw?url=',
-                'https://cors-anywhere.herokuapp.com/'
-              ];
-              
-              const originalUrl = imageLinks.thumbnail.replace('http://', 'https://');
-              imageUrl = `${proxies[0]}${encodeURIComponent(originalUrl)}&w=400&h=600&fit=cover&output=webp`;
-            } catch (e) {
-              console.warn('Failed to create proxy URL:', e);
-              imageUrl = '/assets/img/placeholders/card-portrait-384x576.webp';
-            }
-          } else {
-            imageUrl = '/assets/img/placeholders/card-portrait-384x576.webp';
-          }
-        }
-        
-        // Ensure HTTPS
-        imageUrl = imageUrl.replace('http://', 'https://');
-        
+        // Use local image system instead of external APIs
         const normalizedBook = {
           id: item.id || `book-${Date.now()}-${Math.random()}`,
           title: volumeInfo.title || 'Untitled',
@@ -916,8 +891,7 @@
           language: volumeInfo.language || 'en',
           categories: volumeInfo.categories || [],
           description: volumeInfo.description || '',
-          image: imageUrl,
-          originalImageUrl: originalImageUrl,
+          image: null, // Will be handled by getImagePath function
           infoLink: (volumeInfo.infoLink || volumeInfo.canonicalVolumeLink || '#').replace('http://', 'https://'),
           isAudiobook: isAudiobook(volumeInfo),
           localUrl: null
