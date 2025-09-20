@@ -604,45 +604,189 @@
       return { userMessage, shouldRetry };
     }
 
-    // Enhanced image error handling with multiple fallbacks
-    function handleImageError(img) {
-      try {
-        let retryCount = parseInt(img.dataset.retryCount || '0');
-        img.dataset.retryCount = (retryCount + 1).toString();
+    // Enhanced HD image handling with multiple resolution support for audiobooks
+    function getImageResolutions(audiobook) {
+      const baseName = audiobook.title.toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
+      
+      // Extract Google Books ID from URL
+      let googleBooksId = '';
+      if (audiobook.infoLink && audiobook.infoLink.includes('id=')) {
+        googleBooksId = audiobook.infoLink.split('id=')[1];
+      }
+      
+      // Check for audiobook_number format from the data
+      const audiobookNumber = getAudiobookNumber(audiobook);
+      
+      const resolutions = {
+        // HD zoom versions (highest quality)
+        zoom5: audiobookNumber ? `/assets/harvested/audiobooks/audiobook_${audiobookNumber}_${audiobook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_zoom5.jpg` : null,
         
-        // Max 3 retries per image
-        if (retryCount >= 3) {
-          img.src = '/assets/img/placeholders/card-portrait-384x576.webp';
-          img.onerror = null;
-          img.classList.add('error-placeholder');
-          return;
-        }
+        // Thumbnail versions (medium quality)  
+        thumbnail: audiobookNumber ? `/assets/harvested/audiobooks/audiobook_${audiobookNumber}_${audiobook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_thumbnail.jpg` : null,
+        
+        // Google Books covers (fallback)
+        googleBooks: googleBooksId ? `/assets/harvested/audiobooks/${baseName}_${googleBooksId}_cover.jpg` : null,
+        
+        // Use existing image if available
+        existing: audiobook.image || null,
+        
+        // Legacy paths
+        legacy: [
+          `/assets/harvested/audiobooks/${baseName}.jpg`,
+          `/assets/images/${baseName}_cover.jpg`,
+          `/assets/images/${baseName}.jpg`
+        ],
+        
+        // Final fallback
+        placeholder: '/assets/placeholder-cover.svg'
+      };
+      
+      return resolutions;
+    }
 
-        // Retry with delay (exponential backoff)
-        const delay = Math.min(1000 * Math.pow(2, retryCount), 5000);
+    function getAudiobookNumber(audiobook) {
+      // Extract audiobook number from catalog data if available
+      if (audiobook.audiobook_number) return audiobook.audiobook_number;
+      
+      // Create mapping based on known HD audiobook images
+      const titleMappings = {
+        'unstoppable unlock your potential': '001',
+        'python zero to hero audiobook edition': '002', 
+        'le code de guerison de la nature edition audio': '003',
+        'music producer workflow audiobook': '004',
+        'ai automation for creators audiobook': '005',
+        'chess mastery audio edition': '006',
+        'ableton elevation dj id01ts complete guide to building hits and elevating your sound': '007',
+        'beat alchemy the dj id01t guide to mastering fl studio and making hits': '008',
+        'ai in education': '009',
+        'bite by bite': '010',
+        'before the storm': '011',
+        'anarchie et evolution lhistoire de la musique punk': '012',
+        'anarchy and evolution': '013',
+        'agentic ai sprint for solopreneurs': '014',
+        'ai cash empire': '015',
+        'ai goldmine 100 passive income ideas using chatgpt and free ai tools': '016',
+        'ai revolution how automation is transforming everyday life': '017',
+        'automation and seo mastery strategies for growth and efficiency': '018',
+        'beneath the bloom': '019',
+        'beyond the event horizon solving the black hole information paradox': '020',
+        'bridging worlds a practical guide to connecting with parallel energies and dimensions': '021',
+        'c zero to hero': '022',
+        'chess mastery': '023',
+        'christ quil est intelligent daimer': '024',
+        'code in every language master programming with chatgpt': '025'
+      };
+      
+      const cleanTitle = audiobook.title.toLowerCase()
+        .replace(/[🌿✨🎧🚀📖]+\s*/g, '') // Remove emoji prefixes
+        .replace(/[^a-z0-9\s]/g, '') // Remove special chars
+        .replace(/\s+/g, ' ')
+        .trim();
+      
+      // Check direct mapping first
+      if (titleMappings[cleanTitle]) {
+        return titleMappings[cleanTitle];
+      }
+      
+      // Try partial matches for longer titles
+      for (const [key, value] of Object.entries(titleMappings)) {
+        if (cleanTitle.includes(key) || key.includes(cleanTitle)) {
+          return value;
+        }
+      }
+      
+      // Try to extract from title or other fields
+      const match = audiobook.title.match(/audiobook[_\s]?(\d+)/i);
+      if (match) return String(parseInt(match[1])).padStart(3, '0');
+      
+      return null;
+    }
+
+    function getImagePath(audiobook) {
+      const resolutions = getImageResolutions(audiobook);
+      
+      // Priority order: existing image → HD zoom5 → Google Books → thumbnail → placeholder
+      return resolutions.existing || 
+             resolutions.zoom5 || 
+             resolutions.googleBooks || 
+             resolutions.thumbnail || 
+             resolutions.placeholder;
+    }
+
+    function createResponsiveImageSrcSet(audiobook) {
+      const resolutions = getImageResolutions(audiobook);
+      const srcset = [];
+      
+      // Add available resolutions to srcset in optimal order
+      if (resolutions.thumbnail) {
+        srcset.push(`${resolutions.thumbnail} 300w`);
+      }
+      if (resolutions.existing) {
+        srcset.push(`${resolutions.existing} 400w`);
+      }
+      if (resolutions.googleBooks) {
+        srcset.push(`${resolutions.googleBooks} 400w`);
+      }
+      if (resolutions.zoom5) {
+        srcset.push(`${resolutions.zoom5} 800w`);
+      }
+      
+      return srcset.length > 0 ? srcset.join(', ') : '';
+    }
+
+    function getOptimalImageSize(containerWidth = 300) {
+      // Determine optimal image based on container size and device pixel ratio
+      const pixelRatio = window.devicePixelRatio || 1;
+      const targetWidth = containerWidth * pixelRatio;
+      
+      if (targetWidth <= 300) return 'thumbnail';
+      if (targetWidth <= 600) return 'googleBooks'; 
+      return 'zoom5';
+    }
+
+    function createAdvancedImageFallback(audiobook, className = '') {
+      const resolutions = getImageResolutions(audiobook);
+      const srcset = createResponsiveImageSrcSet(audiobook);
+      const primarySrc = getImagePath(audiobook);
+      
+      return `
+        <img 
+          src="${primarySrc}"
+          ${srcset ? `srcset="${srcset}"` : ''}
+          sizes="(max-width: 640px) 300px, (max-width: 1024px) 400px, 800px"
+          alt="${audiobook.title.replace(/^[🌿✨🎧🚀📖]+\s*/, '')} audiobook cover"
+          class="${className}"
+          loading="lazy"
+          decoding="async"
+          tabindex="0"
+          onerror="handleImageError(this, '${JSON.stringify(resolutions).replace(/"/g, '&quot;')}')"
+        />
+      `;
+    }
+
+    function handleImageError(img, resolutionsJson) {
+      try {
+        const resolutions = JSON.parse(resolutionsJson.replace(/&quot;/g, '"'));
+        const currentSrc = img.src;
         
-        setTimeout(() => {
-          if (img.src.includes('weserv.nl')) {
-            // If CORS proxy failed, try direct URL
-            const originalUrl = img.dataset.originalUrl;
-            if (originalUrl) {
-              img.src = originalUrl;
-            } else {
-              img.src = '/assets/img/placeholders/card-portrait-384x576.webp';
-              img.onerror = null;
-            }
-          } else {
-            // Fallback to placeholder
-            img.src = '/assets/img/placeholders/card-portrait-384x576.webp';
-            img.onerror = null;
-          }
-        }, delay);
-        
+        // Try fallback hierarchy
+        if (currentSrc.includes('zoom5') && resolutions.thumbnail) {
+          img.src = resolutions.thumbnail;
+        } else if (currentSrc.includes('thumbnail') && resolutions.googleBooks) {
+          img.src = resolutions.googleBooks;
+        } else if (currentSrc.includes('_cover.jpg') && resolutions.legacy.length > 0) {
+          img.src = resolutions.legacy[0];
+        } else {
+          img.src = resolutions.placeholder;
+          img.onerror = null; // Prevent infinite loop
+        }
       } catch (e) {
-        console.error('Image error handling failed:', e);
-        img.src = '/assets/img/placeholders/card-portrait-384x576.webp';
+        img.src = '/assets/placeholder-cover.svg';
         img.onerror = null;
-        img.classList.add('error-placeholder');
       }
     }
 
