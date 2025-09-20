@@ -354,30 +354,59 @@
     </div>
   </section>
 
-<footer class="bg-slate-50 dark:bg-slate-900 py-12">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="flex items-center gap-2">
-        <img src="/assets/img/brand/logo.png" class="h-6 w-6" alt="iD01t Productions">
-        <span class="font-semibold text-slate-900 dark:text-white">iD01t Productions</span>
-      </div>
-      
-      <div class="flex items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
-        <a href="/index.html" class="hover:text-slate-900 dark:hover:text-white">Home</a>
-        <a href="/store.html" class="hover:text-slate-900 dark:hover:text-white">Store</a>
-        <a href="/apps.html" class="hover:text-slate-900 dark:hover:text-white">Apps</a>
-        <a href="/ebooks.html" class="hover:text-slate-900 dark:hover:text-white">eBooks</a>
-        <a href="/audiobooks.html" class="text-blue-600 dark:text-blue-400">Audiobooks</a>
-        <a href="/games.html" class="hover:text-slate-900 dark:hover:text-white">Games</a>
-        <a href="/music.html" class="hover:text-slate-900 dark:hover:text-white">Music</a>
-        <a href="/blog.html" class="hover:text-slate-900 dark:hover:text-white">Blog</a>
-        <a href="/about.html" class="hover:text-slate-900 dark:hover:text-white">About</a>
-        <a href="/contact.html" class="hover:text-slate-900 dark:hover:text-white">Contact</a>
-      </div>
-      
-      <div class="text-sm text-slate-500 dark:text-slate-500">
-        © <span id="year"></span> All rights reserved
-      </div>
+<!-- Spacer to ensure footer visibility on short viewports -->
+<div class="h-20"></div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+    <div class="space-y-4">
+      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
+        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+        <span class="font-semibold text-lg text-white">iD01t Productions</span>
+      </a>
+      <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Products</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
+        <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
+        <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
+        <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
+        <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Resources</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
+        <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
+        <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
+        <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
+        <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Legal</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
+        <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
+        <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+    <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
+      <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
+      <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
     </div>
   </div>
 </footer>
