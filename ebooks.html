@@ -168,6 +168,69 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+    
+    /* HD Image Loading Enhancements */
+    .image-placeholder {
+      background: linear-gradient(45deg, 
+        rgba(148, 163, 184, 0.3) 0%, 
+        rgba(203, 213, 225, 0.5) 50%, 
+        rgba(148, 163, 184, 0.3) 100%);
+      background-size: 400% 400%;
+      animation: shimmer 2s ease-in-out infinite;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+    
+    .image-loaded {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Responsive image containers */
+    .aspect-\[3\/4\] {
+      aspect-ratio: 3/4;
+    }
+    
+    /* High DPI image optimization */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      img[srcset] {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+      }
+    }
+    
+    /* Better image quality on retina displays */
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: optimize-contrast;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+    
+    /* Loading state for images */
+    img[loading="lazy"] {
+      transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+    
+    /* Dark mode image placeholder */
+    @media (prefers-color-scheme: dark) {
+      .image-placeholder {
+        background: linear-gradient(45deg, 
+          rgba(51, 65, 85, 0.3) 0%, 
+          rgba(71, 85, 105, 0.5) 50%, 
+          rgba(51, 65, 85, 0.3) 100%);
+      }
+    }
+    
+    /* Focus states for better accessibility */
+    img:focus-visible {
+      outline: 2px solid rgba(59, 130, 246, 0.5);
+      outline-offset: 2px;
+    }
   </style>
 
   <!-- Favicons -->
@@ -493,26 +556,213 @@
         .substring(0, 200) + (description.length > 200 ? '...' : '');
     }
 
-    function getImagePath(ebook) {
-      // Try to find the best image available
-      if (ebook.image && ebook.image.includes('/assets/harvested/')) {
-        return ebook.image;
+    // Enhanced HD image handling with multiple resolution support
+    function getImageResolutions(ebook) {
+      const baseName = ebook.title.toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
+      
+      // Extract Google Books ID from URL
+      let googleBooksId = '';
+      if (ebook.url && ebook.url.includes('id=')) {
+        googleBooksId = ebook.url.split('id=')[1];
       }
       
-      // Try to construct path from title
-      const slug = ebook.title.toLowerCase()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .substring(0, 50);
+      // Check for ebook_number format from the data
+      const ebookNumber = getEbookNumber(ebook);
       
-      // Check for various image patterns
-      const possiblePaths = [
-        `/assets/harvested/ebooks/${slug}_*_cover.jpg`,
-        `/assets/harvested/ebooks/img_*.jpg`,
-        `/assets/placeholder-cover.svg`
-      ];
+      const resolutions = {
+        // HD zoom versions (highest quality)
+        zoom5: ebookNumber ? `/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_zoom5.jpg` : null,
+        
+        // Thumbnail versions (medium quality)  
+        thumbnail: ebookNumber ? `/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_thumbnail.jpg` : null,
+        
+        // Google Books covers (fallback)
+        googleBooks: googleBooksId ? `/assets/harvested/ebooks/${baseName}_${googleBooksId}_cover.jpg` : null,
+        
+        // Use existing image if available
+        existing: ebook.image || null,
+        
+        // Legacy paths
+        legacy: [
+          `/assets/harvested/ebooks/${baseName}.jpg`,
+          `/assets/images/${baseName}_cover.jpg`,
+          `/assets/images/${baseName}.jpg`
+        ],
+        
+        // Final fallback
+        placeholder: '/assets/placeholder-cover.svg'
+      };
       
-      return ebook.image || '/assets/placeholder-cover.svg';
+      return resolutions;
+    }
+
+    function getEbookNumber(ebook) {
+      // Extract ebook number from catalog data if available
+      if (ebook.ebook_number) return ebook.ebook_number;
+      
+      // Create mapping based on known HD images
+      const titleMappings = {
+        'echoes of the heart': '001',
+        'windows zero to hero': '002', 
+        'to the top of the mountain': '003',
+        'intersection the moment their paths crossed': '004',
+        'the architects legacy': '005',
+        'ai today transforming lives and industries for the future': '006',
+        'shadows of redemption': '007',
+        'quantum tao': '008',
+        'light at the veils edge': '009',
+        'legacy of shadows': '010',
+        'before the storm': '011',
+        'spiritual psychosis memoir': '012',
+        'the dream dialogue': '013',
+        'veil of echoes': '014',
+        'the many realities': '015',
+        'master the basics of reading music': '016',
+        'eternal roots': '017',
+        'the quantum passive empire': '018',
+        'shadows reforged the war isnt over': '019',
+        'ai in education': '020',
+        'legacy of shadows 2': '021',
+        'java maestro': '022',
+        'mastering blender': '023',
+        'mastering generative ai and llms third edition': '024',
+        'bite by bite': '025',
+        'mastering quantum error correction': '026',
+        'jacks stand': '027',
+        'crossroads of shadows': '028',
+        'the power of repetition transforming minds through words': '029',
+        'forever in bloom': '030',
+        'sacred timing when the universe speaks through synchronicity': '031',
+        'shadows of serenity': '032',
+        'sacred vibrational technology': '033',
+        'zen and the art of resilient living': '034',
+        'shadows of bloom': '035',
+        'love prevails': '036',
+        'final transmission i am echo': '037',
+        'quantum jumping unlocked edition 2': '038',
+        'machine learning demystified a practical guide to building smarter systems': '039',
+        'the end of an era the tiktok shutdown in the usa': '040',
+        'the adventure of id01t productions a story of passion resilience and creativity': '041',
+        'id01t academy python exercises book 1 edition 2': '043',
+        'ableton elevation dj id01ts complete guide to building hits and elevating your sound': '044',
+        'id01t academy python exercises book 3': '045',
+        'id01t academy python exercises book 2 edition 2': '046',
+        'beat alchemy the dj id01t guide to mastering fl studio and making hits': '047',
+        'real': '049',
+        'kimi k2 unlocked': '050'
+      };
+      
+      const cleanTitle = ebook.title.toLowerCase()
+        .replace(/[🌿✨🎧🚀📖]+\s*/g, '') // Remove emoji prefixes
+        .replace(/[^a-z0-9\s]/g, '') // Remove special chars
+        .replace(/\s+/g, ' ')
+        .trim();
+      
+      // Check direct mapping first
+      if (titleMappings[cleanTitle]) {
+        return titleMappings[cleanTitle];
+      }
+      
+      // Try partial matches for longer titles
+      for (const [key, value] of Object.entries(titleMappings)) {
+        if (cleanTitle.includes(key) || key.includes(cleanTitle)) {
+          return value;
+        }
+      }
+      
+      // Try to extract from title or other fields
+      const match = ebook.title.match(/ebook[_\s]?(\d+)/i);
+      if (match) return String(parseInt(match[1])).padStart(3, '0');
+      
+      return null;
+    }
+
+    function getImagePath(ebook) {
+      const resolutions = getImageResolutions(ebook);
+      
+      // Priority order: existing image → HD zoom5 → Google Books → thumbnail → placeholder
+      return resolutions.existing || 
+             resolutions.zoom5 || 
+             resolutions.googleBooks || 
+             resolutions.thumbnail || 
+             resolutions.placeholder;
+    }
+
+    function createResponsiveImageSrcSet(ebook) {
+      const resolutions = getImageResolutions(ebook);
+      const srcset = [];
+      
+      // Add available resolutions to srcset in optimal order
+      if (resolutions.thumbnail) {
+        srcset.push(`${resolutions.thumbnail} 300w`);
+      }
+      if (resolutions.existing) {
+        srcset.push(`${resolutions.existing} 400w`);
+      }
+      if (resolutions.googleBooks) {
+        srcset.push(`${resolutions.googleBooks} 400w`);
+      }
+      if (resolutions.zoom5) {
+        srcset.push(`${resolutions.zoom5} 800w`);
+      }
+      
+      return srcset.length > 0 ? srcset.join(', ') : '';
+    }
+
+    function getOptimalImageSize(containerWidth = 300) {
+      // Determine optimal image based on container size and device pixel ratio
+      const pixelRatio = window.devicePixelRatio || 1;
+      const targetWidth = containerWidth * pixelRatio;
+      
+      if (targetWidth <= 300) return 'thumbnail';
+      if (targetWidth <= 600) return 'googleBooks'; 
+      return 'zoom5';
+    }
+
+    function createAdvancedImageFallback(ebook, className = '') {
+      const resolutions = getImageResolutions(ebook);
+      const srcset = createResponsiveImageSrcSet(ebook);
+      const primarySrc = getImageByConnectionSpeed ? getImageByConnectionSpeed(ebook) : getImagePath(ebook);
+      
+      return `
+        <img 
+          data-src="${primarySrc}"
+          ${srcset ? `srcset="${srcset}"` : ''}
+          sizes="(max-width: 640px) 300px, (max-width: 1024px) 400px, 800px"
+          alt="${ebook.title.replace(/^[🌿✨🎧🚀📖]+\s*/, '')} cover"
+          class="${className}"
+          loading="lazy"
+          decoding="async"
+          tabindex="0"
+          onerror="handleImageError(this, '${JSON.stringify(resolutions).replace(/"/g, '&quot;')}')"
+        />
+      `;
+    }
+
+    function handleImageError(img, resolutionsJson) {
+      try {
+        const resolutions = JSON.parse(resolutionsJson.replace(/&quot;/g, '"'));
+        const currentSrc = img.src;
+        
+        // Try fallback hierarchy
+        if (currentSrc.includes('zoom5') && resolutions.thumbnail) {
+          img.src = resolutions.thumbnail;
+        } else if (currentSrc.includes('thumbnail') && resolutions.googleBooks) {
+          img.src = resolutions.googleBooks;
+        } else if (currentSrc.includes('_cover.jpg') && resolutions.legacy.length > 0) {
+          img.src = resolutions.legacy[0];
+        } else {
+          img.src = resolutions.placeholder;
+          img.onerror = null; // Prevent infinite loop
+        }
+      } catch (e) {
+        img.src = '/assets/placeholder-cover.svg';
+        img.onerror = null;
+      }
     }
 
     function getCategoryFromTitle(title) {
@@ -536,14 +786,9 @@
 
       return `
         <article class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700 card-hover">
-          <div class="aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden">
-            <img 
-              src="${getImagePath(ebook)}" 
-              alt="${cleanTitle} cover"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-              onerror="this.src='/assets/placeholder-cover.svg'"
-            />
+          <div class="aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 animate-pulse image-placeholder"></div>
+            ${createAdvancedImageFallback(ebook, 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 image-loaded')}
           </div>
           <div class="p-6 space-y-4">
             <div class="space-y-2">
@@ -634,6 +879,12 @@
       const newBooks = filteredEbooks.slice(startIndex, endIndex);
       ebooksGrid.insertAdjacentHTML('beforeend', newBooks.map(createBookCard).join(''));
 
+      // Initialize progressive image loading for new images
+      setTimeout(() => {
+        observeImages();
+        preloadNextPageImages();
+      }, 100);
+
       // Show/hide load more button
       if (endIndex >= filteredEbooks.length) {
         loadMoreBtn.classList.add('hidden');
@@ -664,6 +915,110 @@
       }
     }
 
+    // Progressive Image Loading with Intersection Observer
+    let imageObserver = null;
+
+    function initializeImageObserver() {
+      if ('IntersectionObserver' in window) {
+        imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              loadImageProgressive(img);
+              imageObserver.unobserve(img);
+            }
+          });
+        }, {
+          rootMargin: '50px 0px',
+          threshold: 0.1
+        });
+      }
+    }
+
+    function loadImageProgressive(img) {
+      const placeholder = img.parentElement.querySelector('.image-placeholder');
+      
+      // Add blur-to-sharp loading effect
+      img.style.filter = 'blur(5px)';
+      img.style.opacity = '0';
+      img.style.transition = 'all 0.3s ease-in-out';
+      
+      img.onload = function() {
+        // Hide placeholder with fade out
+        if (placeholder) {
+          placeholder.style.opacity = '0';
+          setTimeout(() => placeholder.remove(), 300);
+        }
+        
+        // Show image with blur-to-sharp effect
+        img.style.opacity = '1';
+        img.style.filter = 'blur(0px)';
+        img.classList.add('image-loaded');
+      };
+      
+      // Start loading the image
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+      }
+    }
+
+    function observeImages() {
+      if (imageObserver) {
+        document.querySelectorAll('img[loading="lazy"]:not(.image-loaded)').forEach(img => {
+          imageObserver.observe(img);
+        });
+      }
+    }
+
+    // Image preloading for better UX
+    function preloadNextPageImages() {
+      const nextPageStart = currentPage * itemsPerPage;
+      const nextPageEnd = Math.min(nextPageStart + itemsPerPage, filteredEbooks.length);
+      
+      for (let i = nextPageStart; i < nextPageEnd; i++) {
+        const ebook = filteredEbooks[i];
+        if (ebook) {
+          const resolutions = getImageResolutions(ebook);
+          
+          // Preload thumbnail first (smaller, faster)
+          if (resolutions.thumbnail) {
+            const preloadLink = document.createElement('link');
+            preloadLink.rel = 'preload';
+            preloadLink.as = 'image';
+            preloadLink.href = resolutions.thumbnail;
+            document.head.appendChild(preloadLink);
+          }
+        }
+      }
+    }
+
+    // Connection-aware image quality
+    function getConnectionSpeed() {
+      if ('connection' in navigator) {
+        const connection = navigator.connection;
+        if (connection.effectiveType === '4g') return 'high';
+        if (connection.effectiveType === '3g') return 'medium';
+        return 'low';
+      }
+      return 'medium'; // Default
+    }
+
+    function getImageByConnectionSpeed(ebook) {
+      const resolutions = getImageResolutions(ebook);
+      const speed = getConnectionSpeed();
+      
+      switch (speed) {
+        case 'high':
+          return resolutions.zoom5 || resolutions.googleBooks || resolutions.thumbnail;
+        case 'medium':
+          return resolutions.googleBooks || resolutions.thumbnail || resolutions.zoom5;
+        case 'low':
+          return resolutions.thumbnail || resolutions.googleBooks;
+        default:
+          return resolutions.googleBooks || resolutions.thumbnail;
+      }
+    }
+
     // Event listeners
     searchInput.addEventListener('input', filterAndSortEbooks);
     categoryFilter.addEventListener('change', filterAndSortEbooks);
@@ -674,7 +1029,10 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Initialize
-    document.addEventListener('DOMContentLoaded', loadCatalog);
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeImageObserver();
+      loadCatalog();
+    });
   </script>
 </body>
 </html>
