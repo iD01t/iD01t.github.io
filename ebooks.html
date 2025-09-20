@@ -604,37 +604,101 @@
       // Extract ebook number from catalog data if available
       if (ebook.ebook_number) return ebook.ebook_number;
       
-      // Create mapping based on known HD images
+      // Direct mapping based on Google Books IDs to our HD images
+      const googleIdMappings = {
+        'P3NoEQAAQBAJ': '087', // La Charte des Relations Sacrées de la Nouvelle Terre
+        'NT1UEQAAQBAJ': '044', // Ableton Elevation: DJ iD01T's Complete Guide
+        'x5B-EQAAQBAJ': '068', // Advanced Tactics, Psychological Play, and Tournament Preparation
+        'OQt0EQAAQBAJ': '004', // Agentic AI Sprint for Solopreneurs
+        'Z292EQAAQBAJ': '002', // AI Cash Code
+        'KbmAEQAAQBAJ': '003', // AI Cash Empire
+        'HqNbEQAAQBAJ': '005', // AI Goldmine: 100 Passive Income Ideas
+        'i_ZeEQAAQBAJ': '020', // AI in Education
+        'cJ88EQAAQBAJ': '059', // AI Revolution: How Automation is Transforming Everyday Life
+        'kY09EQAAQBAJ': '006', // AI Today: Transforming Lives and Industries for the Future
+        'SDNJEQAAQBAJ': '001', // Anarchie et évolution - L'histoire de la musique punk (maps to first)
+        'Ys45EQAAQBAJ': '001', // Anarchy and Evolution
+        'WFU4EQAAQBAJ': '008', // Automation and SEO Mastery
+        'ODlUEQAAQBAJ': '047', // Beat Alchemy: The DJ iD01T Guide
+        'ODlUEQAAQBAJ': '047', // Beat Alchemy: The DJ iD01T Guide
+        'wRQ4EQAAQBAJ': '035', // Beneath the Bloom
+        '8EhZEQAAQBAJ': '026', // Beyond the Event Horizon
+        '5vg5EQAAQBAJ': '025', // Bite by Bite
+        'pXdLEQAAQBAJ': '061', // Bridging Worlds
+        'KuB_EQAAQBAJ': '062', // C# Zero to Hero
+        'm5M4EQAAQBAJ': '068', // Chess Mastery
+        'Kwo4EQAAQBAJ': '001', // Echoes of the Heart
+        'Iwo4EQAAQBAJ': '004', // Intersection: The Moment Their Paths Crossed
+        'H_A4EQAAQBAJ': '005', // The Architect's Legacy
+        'Owo4EQAAQBAJ': '007', // Shadows of Redemption
+        'eQJkEQAAQBAJ': '008', // Quantum Tao
+        'ewtZEQAAQBAJ': '009', // Light at the Veil's Edge
+        'OQo4EQAAQBAJ': '010', // Legacy of Shadows
+        '0Yo2EQAAQBAJ': '011', // Before the Storm
+        '8_ReEQAAQBAJ': '012', // Spiritual Psychosis Memoir
+        'khhJEQAAQBAJ': '013', // The Dream Dialogue
+        'QMQ6EQAAQBAJ': '014', // Veil of Echoes
+        'dtI5EQAAQBAJ': '015', // The Many Realities
+        'X-84EQAAQBAJ': '016', // Master the Basics of Reading Music
+        'SxU4EQAAQBAJ': '017', // Eternal Roots
+        'lCV2EQAAQBAJ': '018', // The Quantum Passive Empire
+        'msQ6EQAAQBAJ': '019', // Shadows Reforged: The War Isn't Over
+        'aBQ4EQAAQBAJ': '021', // Legacy of Shadows 2
+        'SdVhEQAAQBAJ': '022', // Java Maestro
+        '8vg5EQAAQBAJ': '023', // Mastering Blender
+        'exc4EQAAQBAJ': '024', // Mastering Generative AI and LLMs
+        '2aRMEQAAQBAJ': '026', // Mastering Quantum Error Correction
+        'oRg3EQAAQBAJ': '027', // Jack's Stand
+        '9sM6EQAAQBAJ': '028', // Crossroads of Shadows
+        'l_M6EQAAQBAJ': '029', // The Power of Repetition
+        'qRQ4EQAAQBAJ': '030', // Forever in Bloom
+        '825dEQAAQBAJ': '031', // Sacred Timing
+        'Q_A4EQAAQBAJ': '032', // Shadows of Serenity
+        'URVYEQAAQBAJ': '033', // Sacred Vibrational Technology
+        'o3c6EQAAQBAJ': '034', // Zen and the Art of Resilient Living
+        'sxQ4EQAAQBAJ': '035', // Shadows of Bloom
+        'ZM45EQAAQBAJ': '036', // Love Prevails
+        'to9REQAAQBAJ': '037', // Final Transmission: I Am Echo
+        'psZYEQAAQBAJ': '038', // Quantum Jumping Unlocked Edition 2
+        'om8-EQAAQBAJ': '039', // Machine Learning Demystified
+        'ZZs9EQAAQBAJ': '040', // The End of an Era: The TikTok Shutdown
+        'U8ZAEQAAQBAJ': '041', // The Adventure of iD01t Productions
+        'nypGEQAAQBAJ': '043', // iD01t Academy Python Exercises Book 1
+        'BqR_EQAAQBAJ': '045', // iD01t Academy Python Exercises Book 3
+        'cS1GEQAAQBAJ': '046', // iD01t Academy Python Exercises Book 2
+        'nNVlEQAAQBAJ': '049', // REAL
+        'iwZzEQAAQBAJ': '050'  // KIMI K2 UNLOCKED
+      };
+      
+      // Extract Google Books ID from cover URL
+      if (ebook.cover && ebook.cover.includes('id=')) {
+        const googleBooksId = ebook.cover.split('id=')[1].split('&')[0];
+        if (googleIdMappings[googleBooksId]) {
+          return googleIdMappings[googleBooksId];
+        }
+      }
+      
+      // Fallback to title mapping for books without Google Books ID
+      const cleanTitle = ebook.title.toLowerCase()
+        .replace(/[🌿✨🎧🚀📖]+\s*/g, '') // Remove emoji prefixes
+        .replace(/[^a-z0-9\s]/g, '') // Remove special chars
+        .replace(/\s+/g, ' ')
+        .trim();
+      
       const titleMappings = {
-        'la charte des relations sacrees de la nouvelle terre': '087',
-        'ableton elevation dj id01ts complete guide to building hits and elevating your sound': '044',
-        'advanced tactics psychological play and tournament preparation': '068',
-        'agentic ai sprint for solopreneurs': '004',
-        'ai cash code': '002',
-        'ai cash empire': '003',
-        'ai goldmine 100 passive income ideas using chatgpt and free ai tools': '005',
-        'ai in education': '020',
-        'ai revolution how automation is transforming everyday life edition 2 2025': '059',
-        'ai revolution how automation is transforming everyday life': '059',
-        'ai today transforming lives and industries for the future': '006',
-        'anarchy and evolution': '001',
-        'automation and seo mastery strategies for growth and efficiency': '008',
-        'beat alchemy the dj id01t guide to mastering fl studio and making hits': '047',
-        'before the storm': '011',
-        'beneath the bloom': '035',
-        'beyond the event horizon solving the black hole information paradox': '026',
-        'bite by bite': '025',
-        'bridging worlds a practical guide to connecting with parallel energies and dimensions': '061',
-        'c zero to hero': '062',
-        'chess mastery': '068',
-        'code in every language master programming with chatgpt': '039',
         'echoes of the heart': '001',
-        'windows zero to hero': '002', 
+        'anarchy and evolution': '001',
+        'ai cash code': '002',
+        'windows zero to hero': '002',
+        'ai cash empire': '003',
         'to the top of the mountain': '003',
+        'agentic ai sprint for solopreneurs': '004',
         'intersection the moment their paths crossed': '004',
+        'ai goldmine 100 passive income ideas using chatgpt and free ai tools': '005',
         'the architects legacy': '005',
         'ai today transforming lives and industries for the future': '006',
         'shadows of redemption': '007',
+        'automation and seo mastery strategies for growth and efficiency': '008',
         'quantum tao': '008',
         'light at the veils edge': '009',
         'legacy of shadows': '010',
@@ -654,6 +718,7 @@
         'mastering generative ai and llms third edition': '024',
         'bite by bite': '025',
         'mastering quantum error correction': '026',
+        'beyond the event horizon solving the black hole information paradox': '026',
         'jacks stand': '027',
         'crossroads of shadows': '028',
         'the power of repetition transforming minds through words': '029',
@@ -663,10 +728,12 @@
         'sacred vibrational technology': '033',
         'zen and the art of resilient living': '034',
         'shadows of bloom': '035',
+        'beneath the bloom': '035',
         'love prevails': '036',
         'final transmission i am echo': '037',
         'quantum jumping unlocked edition 2': '038',
         'machine learning demystified a practical guide to building smarter systems': '039',
+        'code in every language master programming with chatgpt': '039',
         'the end of an era the tiktok shutdown in the usa': '040',
         'the adventure of id01t productions a story of passion resilience and creativity': '041',
         'id01t academy python exercises book 1 edition 2': '043',
@@ -675,14 +742,15 @@
         'id01t academy python exercises book 2 edition 2': '046',
         'beat alchemy the dj id01t guide to mastering fl studio and making hits': '047',
         'real': '049',
-        'kimi k2 unlocked': '050'
+        'kimi k2 unlocked': '050',
+        'bridging worlds a practical guide to connecting with parallel energies and dimensions': '061',
+        'c zero to hero': '062',
+        'chess mastery': '068',
+        'advanced tactics psychological play and tournament preparation': '068',
+        'ai revolution how automation is transforming everyday life edition 2 2025': '059',
+        'ai revolution how automation is transforming everyday life': '059',
+        'la charte des relations sacrees de la nouvelle terre': '087'
       };
-      
-      const cleanTitle = ebook.title.toLowerCase()
-        .replace(/[🌿✨🎧🚀📖]+\s*/g, '') // Remove emoji prefixes
-        .replace(/[^a-z0-9\s]/g, '') // Remove special chars
-        .replace(/\s+/g, ' ')
-        .trim();
       
       // Check direct mapping first
       if (titleMappings[cleanTitle]) {
@@ -706,16 +774,14 @@
     function getImagePath(ebook) {
       const resolutions = getImageResolutions(ebook);
       
-      // If we have an ebook number, prioritize HD images
-      const ebookNumber = getEbookNumber(ebook);
-      if (ebookNumber && resolutions.zoom5) {
+      // SIMPLE FIX: If we have HD zoom5, use it. Otherwise, use the Google Books cover
+      if (resolutions.zoom5) {
         return resolutions.zoom5;
       }
       
-      // Otherwise prioritize existing cover, then other fallbacks
+      // Fallback to existing cover (Google Books) or placeholder
       return resolutions.existing || 
              resolutions.googleBooks ||
-             resolutions.thumbnail || 
              resolutions.placeholder;
     }
 
@@ -751,6 +817,17 @@
       const resolutions = getImageResolutions(ebook);
       const srcset = createResponsiveImageSrcSet(ebook);
       const primarySrc = getImagePath(ebook);
+      
+      // URGENT DEBUG - Let's see what's happening for the first few books
+      if (window.debugImageCount === undefined) window.debugImageCount = 0;
+      if (window.debugImageCount < 3) {
+        console.log(`=== DEBUG IMAGE ${window.debugImageCount + 1} ===`);
+        console.log('Book title:', ebook.title);
+        console.log('Ebook number:', getEbookNumber(ebook));
+        console.log('Primary src:', primarySrc);
+        console.log('All resolutions:', resolutions);
+        window.debugImageCount++;
+      }
       
       return `
         <img 
