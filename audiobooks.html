@@ -412,6 +412,12 @@
 </footer>
 
   <script>
+    // Global variables
+    let allAudiobooks = [];
+    let filteredAudiobooks = [];
+    let currentPage = 0;
+    const itemsPerPage = 16;
+
     // Theme and mobile menu functionality
     document.getElementById('year').textContent = new Date().getFullYear();
     
