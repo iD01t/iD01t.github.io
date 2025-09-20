@@ -726,11 +726,11 @@
     function createAdvancedImageFallback(ebook, className = '') {
       const resolutions = getImageResolutions(ebook);
       const srcset = createResponsiveImageSrcSet(ebook);
-      const primarySrc = getImageByConnectionSpeed ? getImageByConnectionSpeed(ebook) : getImagePath(ebook);
+      const primarySrc = getImagePath(ebook);
       
       return `
         <img 
-          data-src="${primarySrc}"
+          src="${primarySrc}"
           ${srcset ? `srcset="${srcset}"` : ''}
           sizes="(max-width: 640px) 300px, (max-width: 1024px) 400px, 800px"
           alt="${ebook.title.replace(/^[🌿✨🎧🚀📖]+\s*/, '')} cover"
