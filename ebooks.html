@@ -772,17 +772,34 @@
     }
 
     function getImagePath(ebook) {
-      const resolutions = getImageResolutions(ebook);
+      // BULLETPROOF APPROACH: Try ALL possible paths systematically
       
-      // SIMPLE FIX: If we have HD zoom5, use it. Otherwise, use the Google Books cover
-      if (resolutions.zoom5) {
-        return resolutions.zoom5;
+      // 1. Try Google Books cover first (most reliable)
+      if (ebook.cover && ebook.cover.includes('http')) {
+        return ebook.cover;
       }
       
-      // Fallback to existing cover (Google Books) or placeholder
-      return resolutions.existing || 
-             resolutions.googleBooks ||
-             resolutions.placeholder;
+      // 2. Try to get ebook number and use HD image if available
+      const ebookNumber = getEbookNumber(ebook);
+      if (ebookNumber) {
+        const hdPath = `/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_zoom5.jpg`;
+        return hdPath;
+      }
+      
+      // 3. Extract Google Books ID and try local downloaded version
+      if (ebook.cover && ebook.cover.includes('id=')) {
+        const googleBooksId = ebook.cover.split('id=')[1].split('&')[0];
+        const baseName = ebook.title.toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-')
+          .trim();
+        const googlePath = `/assets/harvested/ebooks/${baseName}_${googleBooksId}_cover.jpg`;
+        return googlePath;
+      }
+      
+      // 4. Fallback to placeholder
+      return '/assets/placeholder-cover.svg';
     }
 
     function createResponsiveImageSrcSet(ebook) {
@@ -814,32 +831,50 @@
     }
 
     function createAdvancedImageFallback(ebook, className = '') {
-      const resolutions = getImageResolutions(ebook);
-      const srcset = createResponsiveImageSrcSet(ebook);
       const primarySrc = getImagePath(ebook);
       
-      // URGENT DEBUG - Let's see what's happening for the first few books
-      if (window.debugImageCount === undefined) window.debugImageCount = 0;
-      if (window.debugImageCount < 3) {
-        console.log(`=== DEBUG IMAGE ${window.debugImageCount + 1} ===`);
-        console.log('Book title:', ebook.title);
-        console.log('Ebook number:', getEbookNumber(ebook));
-        console.log('Primary src:', primarySrc);
-        console.log('All resolutions:', resolutions);
-        window.debugImageCount++;
+      // Create multiple fallback sources in order of preference
+      const fallbackSources = [];
+      
+      // 1. HD image if we have ebook number
+      const ebookNumber = getEbookNumber(ebook);
+      if (ebookNumber) {
+        fallbackSources.push(`/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_zoom5.jpg`);
+        fallbackSources.push(`/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_thumbnail.jpg`);
       }
+      
+      // 2. Google Books cover (original URL)
+      if (ebook.cover && ebook.cover.includes('http')) {
+        fallbackSources.push(ebook.cover);
+      }
+      
+      // 3. Local Google Books download
+      if (ebook.cover && ebook.cover.includes('id=')) {
+        const googleBooksId = ebook.cover.split('id=')[1].split('&')[0];
+        const baseName = ebook.title.toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-')
+          .trim();
+        fallbackSources.push(`/assets/harvested/ebooks/${baseName}_${googleBooksId}_cover.jpg`);
+      }
+      
+      // 4. Final fallback
+      fallbackSources.push('/assets/placeholder-cover.svg');
+      
+      // Remove duplicates and start with first source
+      const uniqueSources = [...new Set(fallbackSources)];
+      const firstSrc = uniqueSources[0] || '/assets/placeholder-cover.svg';
       
       return `
         <img 
-          src="${primarySrc}"
-          ${srcset ? `srcset="${srcset}"` : ''}
-          sizes="(max-width: 640px) 300px, (max-width: 1024px) 400px, 800px"
+          src="${firstSrc}"
           alt="${ebook.title.replace(/^[🌿✨🎧🚀📖]+\s*/, '')} cover"
           class="${className}"
           loading="lazy"
           decoding="async"
           tabindex="0"
-          onerror="handleImageError(this, '${JSON.stringify(resolutions).replace(/"/g, '&quot;')}')"
+          onerror="handleAdvancedImageError(this, ${JSON.stringify(uniqueSources)})"
         />
       `;
     }
@@ -866,6 +901,25 @@
         console.error('Image error handling failed:', e);
         img.src = '/assets/placeholder-cover.svg';
         img.onerror = null;
+      }
+    }
+
+    // NEW BULLETPROOF ERROR HANDLER
+    function handleAdvancedImageError(img, fallbackSources) {
+      if (!img.dataset.currentIndex) img.dataset.currentIndex = '0';
+      
+      const currentIndex = parseInt(img.dataset.currentIndex);
+      const nextIndex = currentIndex + 1;
+      
+      if (nextIndex < fallbackSources.length) {
+        img.dataset.currentIndex = nextIndex.toString();
+        img.src = fallbackSources[nextIndex];
+        console.log(`🔄 Trying fallback ${nextIndex}:`, fallbackSources[nextIndex]);
+      } else {
+        // All sources failed, use placeholder and stop
+        img.src = '/assets/placeholder-cover.svg';
+        img.onerror = null;
+        console.error('❌ All image sources failed for:', img.alt);
       }
     }
 
