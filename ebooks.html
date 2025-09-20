@@ -564,10 +564,10 @@
         .replace(/-+/g, '-')
         .trim();
       
-      // Extract Google Books ID from URL
+      // Extract Google Books ID from cover URL
       let googleBooksId = '';
-      if (ebook.url && ebook.url.includes('id=')) {
-        googleBooksId = ebook.url.split('id=')[1];
+      if (ebook.cover && ebook.cover.includes('id=')) {
+        googleBooksId = ebook.cover.split('id=')[1].split('&')[0];
       }
       
       // Check for ebook_number format from the data
@@ -583,8 +583,8 @@
         // Google Books covers (fallback)
         googleBooks: googleBooksId ? `/assets/harvested/ebooks/${baseName}_${googleBooksId}_cover.jpg` : null,
         
-        // Use existing image if available
-        existing: ebook.image || null,
+        // Use existing cover if available
+        existing: ebook.cover || ebook.image || null,
         
         // Legacy paths
         legacy: [
@@ -606,6 +606,28 @@
       
       // Create mapping based on known HD images
       const titleMappings = {
+        'la charte des relations sacrees de la nouvelle terre': '087',
+        'ableton elevation dj id01ts complete guide to building hits and elevating your sound': '044',
+        'advanced tactics psychological play and tournament preparation': '068',
+        'agentic ai sprint for solopreneurs': '004',
+        'ai cash code': '002',
+        'ai cash empire': '003',
+        'ai goldmine 100 passive income ideas using chatgpt and free ai tools': '005',
+        'ai in education': '020',
+        'ai revolution how automation is transforming everyday life edition 2 2025': '059',
+        'ai revolution how automation is transforming everyday life': '059',
+        'ai today transforming lives and industries for the future': '006',
+        'anarchy and evolution': '001',
+        'automation and seo mastery strategies for growth and efficiency': '008',
+        'beat alchemy the dj id01t guide to mastering fl studio and making hits': '047',
+        'before the storm': '011',
+        'beneath the bloom': '035',
+        'beyond the event horizon solving the black hole information paradox': '026',
+        'bite by bite': '025',
+        'bridging worlds a practical guide to connecting with parallel energies and dimensions': '061',
+        'c zero to hero': '062',
+        'chess mastery': '068',
+        'code in every language master programming with chatgpt': '039',
         'echoes of the heart': '001',
         'windows zero to hero': '002', 
         'to the top of the mountain': '003',
@@ -684,10 +706,15 @@
     function getImagePath(ebook) {
       const resolutions = getImageResolutions(ebook);
       
-      // Priority order: existing image → HD zoom5 → Google Books → thumbnail → placeholder
+      // If we have an ebook number, prioritize HD images
+      const ebookNumber = getEbookNumber(ebook);
+      if (ebookNumber && resolutions.zoom5) {
+        return resolutions.zoom5;
+      }
+      
+      // Otherwise prioritize existing cover, then other fallbacks
       return resolutions.existing || 
-             resolutions.zoom5 || 
-             resolutions.googleBooks || 
+             resolutions.googleBooks ||
              resolutions.thumbnail || 
              resolutions.placeholder;
     }
@@ -696,12 +723,9 @@
       const resolutions = getImageResolutions(ebook);
       const srcset = [];
       
-      // Add available resolutions to srcset in optimal order
+      // Add available resolutions to srcset in optimal order (smallest to largest)
       if (resolutions.thumbnail) {
         srcset.push(`${resolutions.thumbnail} 300w`);
-      }
-      if (resolutions.existing) {
-        srcset.push(`${resolutions.existing} 400w`);
       }
       if (resolutions.googleBooks) {
         srcset.push(`${resolutions.googleBooks} 400w`);
@@ -748,18 +772,21 @@
         const resolutions = JSON.parse(resolutionsJson.replace(/&quot;/g, '"'));
         const currentSrc = img.src;
         
-        // Try fallback hierarchy
+        // Try fallback hierarchy in order of preference
         if (currentSrc.includes('zoom5') && resolutions.thumbnail) {
           img.src = resolutions.thumbnail;
         } else if (currentSrc.includes('thumbnail') && resolutions.googleBooks) {
           img.src = resolutions.googleBooks;
-        } else if (currentSrc.includes('_cover.jpg') && resolutions.legacy.length > 0) {
+        } else if ((currentSrc.includes('_cover.jpg') || currentSrc.includes('googleBooks')) && resolutions.legacy && resolutions.legacy.length > 0) {
           img.src = resolutions.legacy[0];
+        } else if (resolutions.existing && !currentSrc.includes(resolutions.existing)) {
+          img.src = resolutions.existing;
         } else {
           img.src = resolutions.placeholder;
           img.onerror = null; // Prevent infinite loop
         }
       } catch (e) {
+        console.error('Image error handling failed:', e);
         img.src = '/assets/placeholder-cover.svg';
         img.onerror = null;
       }
@@ -1260,56 +1287,7 @@
       }, { once: true });
     }
 
-    // Enhanced image error handling with retry mechanism
-    function handleImageError(img, resolutionsJson) {
-      try {
-        const resolutions = JSON.parse(resolutionsJson.replace(/&quot;/g, '"'));
-        const currentSrc = img.src;
-        let retryCount = parseInt(img.dataset.retryCount || '0');
-        
-        // Increment retry count
-        img.dataset.retryCount = (retryCount + 1).toString();
-        
-        // Max 3 retries per image
-        if (retryCount >= 3) {
-          img.src = resolutions.placeholder;
-          img.onerror = null;
-          img.classList.add('error-placeholder');
-          return;
-        }
-
-        // Try fallback hierarchy with exponential backoff
-        const fallbackSources = [
-          resolutions.zoom5,
-          resolutions.thumbnail,
-          resolutions.googleBooks,
-          ...(resolutions.legacy || []),
-          resolutions.placeholder
-        ].filter(Boolean);
-
-        const currentIndex = fallbackSources.findIndex(src => currentSrc.includes(src.split('/').pop()));
-        const nextIndex = currentIndex + 1;
-
-        if (nextIndex < fallbackSources.length) {
-          // Add delay for retries to avoid overwhelming the server
-          const delay = Math.min(1000 * Math.pow(2, retryCount), 5000);
-          
-          setTimeout(() => {
-            img.src = fallbackSources[nextIndex];
-          }, delay);
-        } else {
-          img.src = resolutions.placeholder;
-          img.onerror = null;
-          img.classList.add('error-placeholder');
-        }
-        
-      } catch (e) {
-        console.error('Image error handling failed:', e);
-        img.src = '/assets/placeholder-cover.svg';
-        img.onerror = null;
-        img.classList.add('error-placeholder');
-      }
-    }
+    // Enhanced image error handling with retry mechanism (REMOVED - using primary version above)
 
     // Enhanced filter and sort with error boundaries
     function filterAndSortEbooks() {
