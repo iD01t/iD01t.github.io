@@ -824,7 +824,7 @@
       }
     }
 
-    // Connection monitoring for audiobooks
+    // Enhanced connection monitoring for audiobooks
     function initConnectionMonitoring() {
       if ('onLine' in navigator) {
         window.addEventListener('online', () => {
@@ -867,7 +867,213 @@
       }
     }
 
-    // Enhanced book normalization with validation
+    // Progressive Image Loading with Intersection Observer
+    let imageObserver = null;
+
+    function initializeImageObserver() {
+      if ('IntersectionObserver' in window) {
+        imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              loadImageProgressive(img);
+              imageObserver.unobserve(img);
+            }
+          });
+        }, {
+          rootMargin: '50px 0px',
+          threshold: 0.1
+        });
+      }
+    }
+
+    function loadImageProgressive(img) {
+      const placeholder = img.parentElement.querySelector('.image-placeholder');
+      
+      // Add blur-to-sharp loading effect
+      img.style.filter = 'blur(5px)';
+      img.style.opacity = '0';
+      img.style.transition = 'all 0.3s ease-in-out';
+      
+      img.onload = function() {
+        // Hide placeholder with fade out
+        if (placeholder) {
+          placeholder.style.opacity = '0';
+          setTimeout(() => placeholder.remove(), 300);
+        }
+        
+        // Show image with blur-to-sharp effect
+        img.style.opacity = '1';
+        img.style.filter = 'blur(0px)';
+        img.classList.add('image-loaded');
+      };
+      
+      // Start loading the image
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+      }
+    }
+
+    function observeImages() {
+      if (imageObserver) {
+        document.querySelectorAll('img[loading="lazy"]:not(.image-loaded)').forEach(img => {
+          imageObserver.observe(img);
+        });
+      }
+    }
+
+    // Image preloading for better UX
+    function preloadNextPageImages() {
+      const nextPageStart = currentPage * itemsPerPage;
+      const nextPageEnd = Math.min(nextPageStart + itemsPerPage, filteredAudiobooks.length);
+      
+      for (let i = nextPageStart; i < nextPageEnd; i++) {
+        const audiobook = filteredAudiobooks[i];
+        if (audiobook) {
+          const resolutions = getImageResolutions(audiobook);
+          
+          // Preload thumbnail first (smaller, faster)
+          if (resolutions.thumbnail) {
+            const preloadLink = document.createElement('link');
+            preloadLink.rel = 'preload';
+            preloadLink.as = 'image';
+            preloadLink.href = resolutions.thumbnail;
+            document.head.appendChild(preloadLink);
+          }
+        }
+      }
+    }
+
+    // Global error handlers
+    function handleGlobalError(event) {
+      console.error('Global error:', event.error);
+      // Could send to analytics or error reporting service
+    }
+
+    function handleUnhandledRejection(event) {
+      console.error('Unhandled promise rejection:', event.reason);
+      // Could send to analytics or error reporting service
+    }
+
+    // Initialize everything with comprehensive error handling
+    function initializePage() {
+      try {
+        // Initialize theme with error handling
+        try {
+          initTheme();
+        } catch (e) {
+          console.warn('Theme initialization failed:', e);
+        }
+
+        // Initialize mobile menu with error handling
+        try {
+          initMobileMenu();
+        } catch (e) {
+          console.warn('Mobile menu initialization failed:', e);
+        }
+
+        // Initialize intersection observers with error handling
+        try {
+          initializeIntersectionObservers();
+        } catch (e) {
+          console.warn('Intersection observer initialization failed:', e);
+        }
+
+        // Initialize image observer with error handling
+        try {
+          initializeImageObserver();
+        } catch (e) {
+          console.warn('Image observer initialization failed:', e);
+        }
+
+        // Initialize connection monitoring
+        try {
+          initConnectionMonitoring();
+        } catch (e) {
+          console.warn('Connection monitoring initialization failed:', e);
+        }
+
+        // Load audiobooks
+        init();
+
+        // Add global error handler
+        window.addEventListener('error', handleGlobalError);
+        window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+      } catch (error) {
+        console.error('Page initialization failed:', error);
+        document.body.innerHTML = `
+          <div class="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900">
+            <div class="text-center p-8">
+              <h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Something went wrong</h1>
+              <p class="text-slate-600 dark:text-slate-300 mb-6">We're having trouble loading the page. Please try refreshing.</p>
+              <button onclick="window.location.reload()" class="px-6 py-3 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors">
+                Refresh Page
+              </button>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Initialize intersection observers separately for better error handling
+    function initializeIntersectionObservers() {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      document.querySelectorAll('.intersection-animate').forEach(el => {
+        try {
+          observer.observe(el);
+        } catch (e) {
+          console.warn('Failed to observe element:', el, e);
+          // Fallback: just add visible class
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    // Initialize mobile menu separately
+    function initMobileMenu() {
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      const closeIcon = document.getElementById('closeIcon');
+      
+      if (!mobileBtn || !mobileMenu) {
+        console.warn('Mobile menu elements not found');
+        return;
+      }
+
+      mobileBtn.addEventListener('click', () => {
+        try {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+          
+          if (menuIcon && closeIcon) {
+            menuIcon.classList.toggle('hidden', !isOpen);
+            closeIcon.classList.toggle('hidden', isOpen);
+          }
+          
+          if (!isOpen) {
+            const firstLink = mobileMenu.querySelector('a');
+            if (firstLink) firstLink.focus();
+          } else {
+            mobileBtn.focus();
+          }
+        } catch (e) {
+          console.warn('Mobile menu toggle failed:', e);
+        }
+      });
+    }
+
+    // Enhanced book normalization with validation and local image handling
     function normalizeBook(item) {
       try {
         if (!item || !item.volumeInfo) {
@@ -1030,24 +1236,16 @@
         const safeAuthors = escapeHtml(book.authors || 'Unknown Author');
         const safeYear = book.year || '';
         
-        // Validate image URL
-        const imageUrl = book.image && book.image !== '#' ? book.image : '/assets/img/placeholders/card-portrait-384x576.webp';
-        
-        // Prepare image with error handling
-        const imageHTML = `
-          <img src="${imageUrl}" 
-               alt="${safeTitle} audiobook cover"
-               data-original-url="${book.originalImageUrl || imageUrl}"
-               class="w-full aspect-[3/4] object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" 
-               loading="lazy"
-               decoding="async"
-               onerror="handleImageError(this)">
-        `;
+        // Use enhanced image fallback system with local HD support
+        const imageHTML = createAdvancedImageFallback(book, 'w-full aspect-[3/4] object-cover rounded-lg transition-transform duration-300 group-hover:scale-105');
 
         return `
           <article class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700">
             <div class="relative">
-              ${imageHTML}
+              <div class="aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 animate-pulse image-placeholder"></div>
+                ${imageHTML}
+              </div>
               ${book.isAudiobook ? '<div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>Audio</div>' : ''}
             </div>
             
