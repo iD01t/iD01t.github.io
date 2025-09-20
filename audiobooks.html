@@ -545,13 +545,215 @@
       return div.innerHTML;
     }
 
+    // Enhanced fetch with timeout and retry mechanisms
     async function fetchWithTimeout(url, opts = {}, timeout = CONFIG.TIMEOUT) {
       const ctrl = new AbortController();
       const id = setTimeout(() => ctrl.abort(), timeout);
+      
       try {
-        return await fetch(url, { ...opts, signal: ctrl.signal, cache: 'no-store' });
+        const response = await fetch(url, { 
+          ...opts, 
+          signal: ctrl.signal, 
+          cache: 'default',
+          headers: {
+            'Accept': 'application/json',
+            'Cache-Control': 'max-age=300',
+            ...opts.headers
+          }
+        });
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        return response;
+      } catch (error) {
+        if (error.name === 'AbortError') {
+          throw new Error('Request timed out');
+        }
+        throw error;
       } finally {
         clearTimeout(id);
+      }
+    }
+
+    // Enhanced error handling for different error types
+    function handleApiError(error, context = 'API') {
+      console.error(`${context} error:`, error);
+      
+      let userMessage = 'Unable to load audiobooks';
+      let shouldRetry = false;
+      
+      if (error.message.includes('timed out')) {
+        userMessage = 'Request timed out - please check your connection';
+        shouldRetry = true;
+      } else if (error.message.includes('HTTP 429')) {
+        userMessage = 'Too many requests - please wait a moment';
+        shouldRetry = true;
+      } else if (error.message.includes('HTTP 5')) {
+        userMessage = 'Server error - please try again later';
+        shouldRetry = true;
+      } else if (!navigator.onLine) {
+        userMessage = 'You appear to be offline';
+        shouldRetry = true;
+      } else if (error.message.includes('HTTP 4')) {
+        userMessage = 'Unable to access audiobook data';
+        shouldRetry = false;
+      }
+      
+      return { userMessage, shouldRetry };
+    }
+
+    // Enhanced image error handling with multiple fallbacks
+    function handleImageError(img) {
+      try {
+        let retryCount = parseInt(img.dataset.retryCount || '0');
+        img.dataset.retryCount = (retryCount + 1).toString();
+        
+        // Max 3 retries per image
+        if (retryCount >= 3) {
+          img.src = '/assets/img/placeholders/card-portrait-384x576.webp';
+          img.onerror = null;
+          img.classList.add('error-placeholder');
+          return;
+        }
+
+        // Retry with delay (exponential backoff)
+        const delay = Math.min(1000 * Math.pow(2, retryCount), 5000);
+        
+        setTimeout(() => {
+          if (img.src.includes('weserv.nl')) {
+            // If CORS proxy failed, try direct URL
+            const originalUrl = img.dataset.originalUrl;
+            if (originalUrl) {
+              img.src = originalUrl;
+            } else {
+              img.src = '/assets/img/placeholders/card-portrait-384x576.webp';
+              img.onerror = null;
+            }
+          } else {
+            // Fallback to placeholder
+            img.src = '/assets/img/placeholders/card-portrait-384x576.webp';
+            img.onerror = null;
+          }
+        }, delay);
+        
+      } catch (e) {
+        console.error('Image error handling failed:', e);
+        img.src = '/assets/img/placeholders/card-portrait-384x576.webp';
+        img.onerror = null;
+        img.classList.add('error-placeholder');
+      }
+    }
+
+    // Connection monitoring for audiobooks
+    function initConnectionMonitoring() {
+      if ('onLine' in navigator) {
+        window.addEventListener('online', () => {
+          console.log('Connection restored');
+          const loading = document.getElementById('loading');
+          if (loading && !loading.classList.contains('hidden')) {
+            // Retry loading if we were in a loading state
+            init();
+          }
+          hideOfflineIndicator();
+        });
+
+        window.addEventListener('offline', () => {
+          console.log('Connection lost');
+          showOfflineIndicator();
+        });
+      }
+    }
+
+    function showOfflineIndicator() {
+      const existingIndicator = document.getElementById('offline-indicator');
+      if (existingIndicator) return;
+
+      const indicator = document.createElement('div');
+      indicator.id = 'offline-indicator';
+      indicator.className = 'fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center gap-2';
+      indicator.innerHTML = `
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        You are offline
+      `;
+      document.body.appendChild(indicator);
+    }
+
+    function hideOfflineIndicator() {
+      const indicator = document.getElementById('offline-indicator');
+      if (indicator) {
+        indicator.remove();
+      }
+    }
+
+    // Enhanced book normalization with validation
+    function normalizeBook(item) {
+      try {
+        if (!item || !item.volumeInfo) {
+          throw new Error('Invalid book data structure');
+        }
+
+        const volumeInfo = item.volumeInfo;
+        const imageLinks = volumeInfo.imageLinks || {};
+
+        // Validate required fields
+        if (!volumeInfo.title) {
+          console.warn('Book missing title:', item.id);
+          return null;
+        }
+
+        // Handle Google Books images with enhanced CORS handling
+        let imageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || '/assets/img/placeholders/card-portrait-384x576.webp';
+        let originalImageUrl = imageUrl;
+        
+        // For Google Books images, use CORS proxy with better error handling
+        if (imageUrl.includes('books.google.com')) {
+          const bookId = item.id;
+          if (bookId && imageLinks.thumbnail) {
+            try {
+              // Use multiple CORS proxy services as fallbacks
+              const proxies = [
+                'https://images.weserv.nl/?url=',
+                'https://api.allorigins.win/raw?url=',
+                'https://cors-anywhere.herokuapp.com/'
+              ];
+              
+              const originalUrl = imageLinks.thumbnail.replace('http://', 'https://');
+              imageUrl = `${proxies[0]}${encodeURIComponent(originalUrl)}&w=400&h=600&fit=cover&output=webp`;
+            } catch (e) {
+              console.warn('Failed to create proxy URL:', e);
+              imageUrl = '/assets/img/placeholders/card-portrait-384x576.webp';
+            }
+          } else {
+            imageUrl = '/assets/img/placeholders/card-portrait-384x576.webp';
+          }
+        }
+        
+        // Ensure HTTPS
+        imageUrl = imageUrl.replace('http://', 'https://');
+        
+        const normalizedBook = {
+          id: item.id || `book-${Date.now()}-${Math.random()}`,
+          title: volumeInfo.title || 'Untitled',
+          authors: (volumeInfo.authors || []).join(', ') || 'Unknown Author',
+          year: parseInt((volumeInfo.publishedDate || '').slice(0, 4)) || null,
+          language: volumeInfo.language || 'en',
+          categories: volumeInfo.categories || [],
+          description: volumeInfo.description || '',
+          image: imageUrl,
+          originalImageUrl: originalImageUrl,
+          infoLink: (volumeInfo.infoLink || volumeInfo.canonicalVolumeLink || '#').replace('http://', 'https://'),
+          isAudiobook: isAudiobook(volumeInfo),
+          localUrl: null
+        };
+
+        return normalizedBook;
+      } catch (error) {
+        console.warn('Error normalizing book:', error, item);
+        return null;
       }
     }
 
