@@ -186,7 +186,7 @@ Check browser console for performance warnings.
 ## 📞 Support
 
 For technical support or customization requests:
-- Email: support@id01t.com
+- Email: admin@id01t.store
 - GitHub Issues: Create an issue in the repository
 - Documentation: Check this guide and inline comments
 
