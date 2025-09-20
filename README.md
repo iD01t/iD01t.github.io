@@ -231,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ## 🆘 Support
 - **Issues**: Open a GitHub issue
 - **Questions**: Use the contact form
-- **Business**: hello@id01t.com
+- **Business**: admin@id01t.store
 
 ---
 

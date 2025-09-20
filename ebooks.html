@@ -255,48 +255,65 @@
   <!-- Skip to content -->
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 bg-brand-600 text-white p-2 rounded focus-ring">Skip to main content</a>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg hidden sm:inline">iD01t Productions</span>
+  <!-- ==================== HEADER ==================== -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
+        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+        <span class="font-semibold text-lg hidden sm:inline">iD01t Productions</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
+        <a href="/store.html" class="link-underline focus-ring rounded px-2 py-1">Store</a>
+        <a href="/ebooks.html" class="link-underline focus-ring rounded px-2 py-1">eBooks</a>
+        <a href="/audiobooks.html" class="link-underline focus-ring rounded px-2 py-1">Audiobooks</a>
+        <a href="/apps.html" class="link-underline focus-ring rounded px-2 py-1">Apps</a>
+        <a href="/games.html" class="link-underline focus-ring rounded px-2 py-1">Games</a>
+        <a href="/music.html" class="link-underline focus-ring rounded px-2 py-1">Music</a>
+        <a href="/blog.html" class="link-underline focus-ring rounded px-2 py-1">Blog</a>
+        <a href="/about.html" class="link-underline focus-ring rounded px-2 py-1">About</a>
+        <a href="/contact.html" class="link-underline focus-ring rounded px-2 py-1">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="focus-ring rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle theme">
+          <span class="theme-text">Theme</span>
+        </button>
+        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2 transition-all duration-300 hover:scale-105 animate-pulse-glow focus-ring">
+          Newsletter
         </a>
-
-        <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
-          <a href="/store.html" class="link-underline focus-ring rounded px-2 py-1">Store</a>
-          <a href="/ebooks.html" class="link-underline focus-ring rounded px-2 py-1 text-brand-600 dark:text-brand-400">eBooks</a>
-          <a href="/audiobooks.html" class="link-underline focus-ring rounded px-2 py-1">Audiobooks</a>
-          <a href="/apps.html" class="link-underline focus-ring rounded px-2 py-1">Apps</a>
-          <a href="/games.html" class="link-underline focus-ring rounded px-2 py-1">Games</a>
-          <a href="/music.html" class="link-underline focus-ring rounded px-2 py-1">Music</a>
-          <a href="/blog.html" class="link-underline focus-ring rounded px-2 py-1">Blog</a>
-          <a href="/about.html" class="link-underline focus-ring rounded px-2 py-1">About</a>
-          <a href="/contact.html" class="link-underline focus-ring rounded px-2 py-1">Contact</a>
-        </nav>
-
-        <!-- Actions -->
-        <div class="flex items-center gap-3">
-          <button id="themeToggle" class="focus-ring rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle theme">
-            <span class="theme-text">Theme</span>
-          </button>
-          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2 transition-all duration-300 hover:scale-105 animate-pulse-glow focus-ring">
-            Newsletter
-          </a>
-          <button id="mobileMenuBtn" class="md:hidden focus-ring inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
-            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 6h18M3 12h18M3 18h18" />
-            </svg>
-            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 hidden transition-transform" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 6l12 12M6 18L18 6" />
-            </svg>
-          </button>
-        </div>
+        <button id="mobileMenuBtn" class="md:hidden focus-ring inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 hidden transition-transform" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6l12 12M6 18L18 6" />
+          </svg>
+        </button>
       </div>
     </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 glass-effect" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <h2 id="mobile-menu-title" class="sr-only">Navigation Menu</h2>
+      <a href="/store.html" class="py-2 px-2 rounded focus-ring">Store</a>
+      <a href="/ebooks.html" class="py-2 px-2 rounded focus-ring">eBooks</a>
+      <a href="/audiobooks.html" class="py-2 px-2 rounded focus-ring">Audiobooks</a>
+      <a href="/apps.html" class="py-2 px-2 rounded focus-ring">Apps</a>
+      <a href="/games.html" class="py-2 px-2 rounded focus-ring">Games</a>
+      <a href="/music.html" class="py-2 px-2 rounded focus-ring">Music</a>
+      <a href="/blog.html" class="py-2 px-2 rounded focus-ring">Blog</a>
+      <a href="/about.html" class="py-2 px-2 rounded focus-ring">About</a>
+      <a href="/contact.html" class="py-2 px-2 rounded focus-ring">Contact</a>
+    </div>
+  </div>
+</header>
 
     <!-- Mobile menu -->
     <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 glass-effect" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
@@ -1667,5 +1684,59 @@
       }, 0);
     }
   </script>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+    <div class="space-y-4">
+      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
+        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+        <span class="font-semibold text-lg text-white">iD01t Productions</span>
+      </a>
+      <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Products</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
+        <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
+        <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
+        <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
+        <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Resources</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
+        <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
+        <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
+        <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
+        <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Legal</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
+        <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
+        <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+    <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
+      <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
+      <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
