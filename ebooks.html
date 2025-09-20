@@ -772,21 +772,18 @@
     }
 
     function getImagePath(ebook) {
-      // BULLETPROOF APPROACH: Try ALL possible paths systematically
-      
-      // 1. Try Google Books cover first (most reliable)
-      if (ebook.cover && ebook.cover.includes('http')) {
-        return ebook.cover;
-      }
-      
-      // 2. Try to get ebook number and use HD image if available
+      // Try local HD image first
       const ebookNumber = getEbookNumber(ebook);
       if (ebookNumber) {
         const hdPath = `/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_zoom5.jpg`;
-        return hdPath;
+        if (window.imageExistsCache?.[hdPath]) return hdPath;
       }
-      
-      // 3. Extract Google Books ID and try local downloaded version
+      // Try local thumbnail
+      if (ebookNumber) {
+        const thumbPath = `/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_thumbnail.jpg`;
+        if (window.imageExistsCache?.[thumbPath]) return thumbPath;
+      }
+      // Try local Google Books cover
       if (ebook.cover && ebook.cover.includes('id=')) {
         const googleBooksId = ebook.cover.split('id=')[1].split('&')[0];
         const baseName = ebook.title.toLowerCase()
@@ -795,10 +792,13 @@
           .replace(/-+/g, '-')
           .trim();
         const googlePath = `/assets/harvested/ebooks/${baseName}_${googleBooksId}_cover.jpg`;
-        return googlePath;
+        if (window.imageExistsCache?.[googlePath]) return googlePath;
       }
-      
-      // 4. Fallback to placeholder
+      // Try external Google Books cover
+      if (ebook.cover && ebook.cover.includes('http')) {
+        return ebook.cover;
+      }
+      // Fallback
       return '/assets/placeholder-cover.svg';
     }
 
@@ -831,24 +831,13 @@
     }
 
     function createAdvancedImageFallback(ebook, className = '') {
-      const primarySrc = getImagePath(ebook);
-      
-      // Create multiple fallback sources in order of preference
-      const fallbackSources = [];
-      
-      // 1. HD image if we have ebook number
+      // Build all possible sources in order
       const ebookNumber = getEbookNumber(ebook);
+      const sources = [];
       if (ebookNumber) {
-        fallbackSources.push(`/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_zoom5.jpg`);
-        fallbackSources.push(`/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_thumbnail.jpg`);
+        sources.push(`/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_zoom5.jpg`);
+        sources.push(`/assets/harvested/ebooks/ebook_${ebookNumber}_${ebook.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_')}_thumbnail.jpg`);
       }
-      
-      // 2. Google Books cover (original URL)
-      if (ebook.cover && ebook.cover.includes('http')) {
-        fallbackSources.push(ebook.cover);
-      }
-      
-      // 3. Local Google Books download
       if (ebook.cover && ebook.cover.includes('id=')) {
         const googleBooksId = ebook.cover.split('id=')[1].split('&')[0];
         const baseName = ebook.title.toLowerCase()
@@ -856,19 +845,16 @@
           .replace(/\s+/g, '-')
           .replace(/-+/g, '-')
           .trim();
-        fallbackSources.push(`/assets/harvested/ebooks/${baseName}_${googleBooksId}_cover.jpg`);
+        sources.push(`/assets/harvested/ebooks/${baseName}_${googleBooksId}_cover.jpg`);
       }
-      
-      // 4. Final fallback
-      fallbackSources.push('/assets/placeholder-cover.svg');
-      
-      // Remove duplicates and start with first source
-      const uniqueSources = [...new Set(fallbackSources)];
-      const firstSrc = uniqueSources[0] || '/assets/placeholder-cover.svg';
-      
+      if (ebook.cover && ebook.cover.includes('http')) {
+        sources.push(ebook.cover);
+      }
+      sources.push('/assets/placeholder-cover.svg');
+      const uniqueSources = [...new Set(sources)];
       return `
         <img 
-          src="${firstSrc}"
+          src="${uniqueSources[0]}"
           alt="${ebook.title.replace(/^[🌿✨🎧🚀📖]+\s*/, '')} cover"
           class="${className}"
           loading="lazy"
