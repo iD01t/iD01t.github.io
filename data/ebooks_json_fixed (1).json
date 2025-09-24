@@ -1,0 +1,222 @@
+[
+  {
+    "id": "ebook-veo3-json",
+    "title": "Veo3 JSON Guide",
+    "author": "Guillaume Lessard",
+    "price_cad": 7.99,
+    "price_usd": 5.99,
+    "pages": 45,
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=MJFJEQAAQBAJ",
+    "preview_url": "/previews/veo3-json-guide.html",
+    "tags": ["json", "veo3", "video", "ai", "cinematic"],
+    "date": "2025-08-10",
+    "language": "en",
+    "format": "PDF + EPUB",
+    "description": "Master JSON prompting for Veo3 video generation. Learn smart templates and techniques for cinematic AI-generated content.",
+    "features": [
+      "50+ Tested JSON Templates",
+      "Cinematic Prompt Library", 
+      "Video Style Guides",
+      "Advanced Parameter Tuning"
+    ]
+  },
+  {
+    "id": "ebook-digital-skills",
+    "title": "DIY Digital Skills: Tech Career Roadmap",
+    "author": "Guillaume Lessard",
+    "price_cad": 16.99,
+    "price_usd": 12.99,
+    "pages": 140,
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=f8o9EQAAQBAJ",
+    "preview_url": "/previews/diy-digital-skills.html",
+    "tags": ["career", "skills", "programming", "freelancing", "remote-work"],
+    "date": "2025-07-01", 
+    "language": "en",
+    "format": "PDF + EPUB + Web",
+    "description": "Build a profitable tech career from scratch. Comprehensive roadmap from beginner to professional with real-world projects.",
+    "features": [
+      "12-Month Learning Path",
+      "Portfolio Project Templates",
+      "Salary Negotiation Scripts",
+      "Remote Work Strategies"
+    ]
+  },
+  {
+    "id": "ebook-chess-mastery",
+    "title": "Chess Mastery: Advanced Strategies",
+    "author": "Guillaume Lessard",
+    "price_cad": 18.99,
+    "price_usd": 14.99,
+    "pages": 180,
+    "image": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=m5M4EQAAQBAJ", 
+    "preview_url": "/previews/chess-mastery.html",
+    "tags": ["chess", "strategy", "tactics", "endgame", "openings"],
+    "date": "2025-05-01",
+    "language": "en",
+    "format": "PDF + PGN Files",
+    "description": "Advanced chess strategies and expert analysis for serious players. Master complex positions and winning techniques.",
+    "features": [
+      "300+ Analyzed Games",
+      "Interactive PGN Database",
+      "Tactical Puzzles",
+      "Endgame Masterclass"
+    ]
+  },
+  {
+    "id": "ebook-python-automation",
+    "title": "Python Automation Cookbook", 
+    "author": "Guillaume Lessard",
+    "price_cad": 24.99,
+    "price_usd": 19.99,
+    "pages": 220,
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=python-automation-cookbook",
+    "preview_url": "/previews/python-automation.html",
+    "tags": ["python", "automation", "scripting", "productivity", "api"],
+    "date": "2025-06-15",
+    "language": "en", 
+    "format": "PDF + Source Code",
+    "description": "Automate everything with Python. 50+ practical recipes for web scraping, file processing, and task automation.",
+    "features": [
+      "50+ Automation Scripts",
+      "GitHub Repository Access", 
+      "API Integration Examples",
+      "Deployment Strategies"
+    ]
+  },
+  {
+    "id": "ebook-ai-content-creation",
+    "title": "AI Content Creation Mastery",
+    "author": "Guillaume Lessard",
+    "price_cad": 22.99,
+    "price_usd": 17.99,
+    "pages": 165,
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=ai-content-creation-mastery",
+    "preview_url": "/previews/ai-content-creation.html",
+    "tags": ["ai", "content", "automation", "writing", "creativity"],
+    "date": "2025-04-20",
+    "language": "en",
+    "format": "PDF + Template Pack",
+    "description": "Master AI tools for content creation. From writing to video, learn to create professional content at scale.",
+    "features": [
+      "AI Tool Comparison Matrix",
+      "Content Templates Library",
+      "Workflow Automation Guide", 
+      "Quality Control Checklists"
+    ]
+  },
+  {
+    "id": "ebook-music-production-business",
+    "title": "Music Production Business Guide",
+    "author": "Guillaume Lessard (DJ iD01t)",
+    "price_cad": 19.99,
+    "price_usd": 15.99,
+    "pages": 195,
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=music-production-business",
+    "preview_url": "/previews/music-production-business.html", 
+    "tags": ["music", "business", "production", "monetization", "streaming"],
+    "date": "2025-03-10",
+    "language": "en",
+    "format": "PDF + Audio Samples",
+    "description": "Turn your music production skills into a profitable business. Complete guide to monetizing electronic music.",
+    "features": [
+      "Revenue Stream Analysis",
+      "Contract Templates",
+      "Marketing Strategies",
+      "Sample Licensing Guide"
+    ]
+  },
+  {
+    "id": "ebook-seo-2025",
+    "title": "SEO Mastery 2025: Algorithm Updates",
+    "author": "Guillaume Lessard",
+    "price_cad": 21.99,
+    "price_usd": 16.99,
+    "pages": 175,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=seo-mastery-2025",
+    "preview_url": "/previews/seo-mastery-2025.html",
+    "tags": ["seo", "marketing", "google", "algorithms", "traffic"],
+    "date": "2025-09-05", 
+    "language": "en",
+    "format": "PDF + Toolkit",
+    "description": "Master modern SEO with latest algorithm updates. Proven strategies for ranking in 2025 and beyond.",
+    "features": [
+      "Algorithm Update Timeline",
+      "Keyword Research Tools", 
+      "Technical SEO Checklist",
+      "Content Optimization Framework"
+    ]
+  },
+  {
+    "id": "ebook-indie-game-dev",
+    "title": "Indie Game Development Blueprint",
+    "author": "Guillaume Lessard",
+    "price_cad": 26.99,
+    "price_usd": 20.99,
+    "pages": 250,
+    "image": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=indie-game-dev-blueprint", 
+    "preview_url": "/previews/indie-game-dev.html",
+    "tags": ["gamedev", "indie", "unity", "programming", "monetization"],
+    "date": "2025-02-28",
+    "language": "en",
+    "format": "PDF + Unity Assets",
+    "description": "Complete guide to indie game development. From concept to Steam release with proven monetization strategies.",
+    "features": [
+      "Game Design Framework",
+      "Unity Asset Collection",
+      "Marketing Launch Plan",
+      "Steam Store Optimization"
+    ]
+  },
+  {
+    "id": "ebook-freelancer-systems",
+    "title": "Freelancer Business Systems",
+    "author": "Guillaume Lessard", 
+    "price_cad": 17.99,
+    "price_usd": 13.99,
+    "pages": 135,
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=faces&auto=format&q=80",
+    "url": "https://books.google.com/books?id=freelancer-business-systems",
+    "preview_url": "/previews/freelancer-systems.html",
+    "tags": ["freelancing", "business", "systems", "productivity", "scaling"],
+    "date": "2025-01-15",
+    "language": "en",
+    "format": "PDF + Template Bundle",
+    "description": "Build systems that scale your freelance business. From client acquisition to project delivery automation.",
+    "features": [
+      "Client Onboarding System",
+      "Proposal Templates",
+      "Time Tracking Framework",
+      "Pricing Calculator"
+    ]
+  },
+  {
+    "id": "ebook-digital-nomad-guide",
+    "title": "The Digital Nomad's Tech Stack",
+    "author": "Guillaume Lessard",
+    "price_cad": 15.99,
+    "price_usd": 11.99, 
+    "pages": 120,
+    "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+    "url": "https://books.google.com/books?id=digital-nomad-tech-stack",
+    "preview_url": "/previews/digital-nomad-guide.html",
+    "tags": ["remote-work", "nomad", "technology", "travel", "productivity"],
+    "date": "2024-12-20",
+    "language": "en",
+    "format": "PDF + App Recommendations",
+    "description": "Essential technology stack for location-independent professionals. Tools, apps, and systems for productive remote work.",
+    "features": [
+      "Recommended Hardware List",
+      "Software Stack Guide",
+      "Security Best Practices", 
+      "Connectivity Solutions"
+    ]
+  }
+]

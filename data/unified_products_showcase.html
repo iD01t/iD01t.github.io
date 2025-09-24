@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD Digital Products - iD01t Productions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+        
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .tab-button {
+            @apply px-6 py-3 font-medium text-gray-600 dark:text-gray-400 border-b-2 border-transparent transition-all duration-300;
+        }
+        
+        .tab-button.active {
+            @apply text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400 bg-blue-50 dark:bg-blue-900/20;
+        }
+        
+        .floating-action {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+        
+        .stats-card {
+            @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center;
+        }
+        
+        .price-tag {
+            @apply inline-block bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-sm font-bold;
+        }
+        
+        .format-badge {
+            @apply inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-xs font-medium;
+        }
+        
+        .loading-shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .dark .loading-shimmer {
+            background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+            background-size: 200% 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+                    🎧📚 HD Digital Products
+                </h1>
+                <p class="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+                    Professional audiobooks and eBooks with stunning HD covers.<br>
+                    <span class="font-semibold">100% working images guaranteed.</span>
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-white bg-opacity-20 rounded-full px-6 py-3">
+                        <span class="font-semibold">✨ AI-Generated Fallbacks</span>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-full px-6 py-3">
+                        <span class="font-semibold">🖼️ HD Quality Images</span>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-full px-6 py-3">
+                        <span class="font-semibold">⚡ Lightning Fast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="stats-card">
+                    <div class="text-3xl font-bold text-blue-600 dark:text-blue-400" id="total-products">0</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Total Products</div>
+                </div>
+                <div class="stats-card">
+                    <div class="text-3xl font-bold text-purple-600 dark:text-purple-400" id="total-audiobooks">0</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Audiobooks</div>
+                </div>
+                <div class="stats-card">
+                    <div class="text-3xl font-bold text-green-600 dark:text-green-400" id="total-ebooks">0</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">eBooks</div>
+                </div>
+                <div class="stats-card">
+                    <div class="text-3xl font-bold text-orange-600 dark:text-orange-400">100%</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">HD Images</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center">
+                <div class="flex space-x-1">
+                    <button class="tab-button active" data-tab="all" id="tab-all">
+                        All Products
+                    </button>
+                    <button class="tab-button" data-tab="audiobooks" id="tab-audiobooks">
+                        🎧 Audiobooks
+                    </button>
+                    <button class="tab-button" data-tab="ebooks" id="tab-ebooks">
+                        📚 eBooks
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search and Filters -->
+    <section class="bg-gray-50 dark:bg-gray-900 py-8">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-6 gap-4 mb-6">
+                    <div class="md:col-span-2">
+                        <input 
+                            type="text" 
+                            id="global-search" 
+                            placeholder="Search all products..." 
+                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-all"
+                        >
+                    </div>
+                    <select id="category-filter" class="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                        <option value="">All Categories</option>
+                    </select>
+                    <select id="language-filter" class="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                        <option value="">All Languages</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                    <select id="price-filter" class="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                        <option value="">Any Price</option>
+                        <option value="free">Free</option>
+                        <option value="under-15">Under $15</option>
+                        <option value="15-25">$15 - $25</option>
+                        <option value="over-25">Over $25</option>
+                    </select>
+                    <select id="sort-options" class="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                        <option value="date_desc">Newest First</option>
+                        <option value="date_asc">Oldest First</option>
+                        <option value="title_asc">Title A-Z</option>
+                        <option value="title_desc">Title Z-A</option>
+                        <option value="price_asc">Price Low-High</option>
+                        <option value="price_desc">Price High-Low</option>
+                    </select>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                    <button 
+                        id="reset-all-filters" 
+                        class="px-6 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-lg transition-colors"
+                    >
+                        Reset Filters
+                    </button>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">
+                        <span id="products-count">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Loading State -->
+        <div id="main-loading" class="text-center py-20">
+            <div class="inline-block animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mb-6"></div>
+            <h2 class="text-3xl font-bold text-gray-700 dark:text-gray-300 mb-3">Loading HD Products</h2>
+            <p class="text-gray-500 dark:text-gray-400 text-lg">Preparing high-quality content and images...</p>
+            <div class="mt-8 max-w-md mx-auto bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div class="bg-blue-600 h-2 rounded-full loading-shimmer"></div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="main-empty" class="hidden text-center py-20">
+            <div class="text-8xl mb-6">🔍</div>
+            <h2 class="text-3xl font-bold text-gray-700 dark:text-gray-300 mb-3">No products found</h2>
+            <p class="text-gray-500 dark:text-gray-400 text-lg">Try adjusting your search filters or browse all categories</p>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Products will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action">
+        <button 
+            id="theme-toggle" 
+            class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
+            title="Toggle dark mode"
+        >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto">
+                <h3 class="text-3xl font-bold mb-6">🎧📚 iD01t Productions</h3>
+                <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                    Creating professional digital products with cutting-edge technology.<br>
+                    Every image is HD quality, every link works perfectly.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-400 mb-2">HD</div>
+                        <div class="text-sm text-gray-400">Quality Images</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-400 mb-2">100%</div>
+                        <div class="text-sm text-gray-400">Working Links</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-400 mb-2">AI</div>
+                        <div class="text-sm text-gray-400">Generated Fallbacks</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-400 mb-2">⚡</div>
+                        <div class="text-sm text-gray-400">Lightning Fast</div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-gray-400">&copy; 2025 iD01t Productions. Powered by HD technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org structured data will be inserted here -->
+    <script type="application/ld+json" id="products-schema"></script>
+
+    <!-- Product Data and Client Script -->
+    <script>
+        // Unified product data with HD images
+        window.UNIFIED_PRODUCTS_DATA = {
+            audiobooks: [
+                {
+                    id: "ab-unstoppable",
+                    type: "audiobook",
+                    title: "Unstoppable: Unlock Your Potential",
+                    author: "Guillaume Lessard",
+                    narrators: ["AI Narrator"],
+                    year: "2025",
+                    language: "en",
+                    genre: "Self-Improvement",
+                    description: "High-impact systems, mindset, and automation. Premium audiobook edition.",
+                    duration: "6h 45m",
+                    price: 24.99,
+                    currency: "CAD",
+                    url: "/audiobooks/unstoppable.html",
+                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+                    tags: ["self-improvement", "productivity", "mindset"]
+                },
+                {
+                    id: "ab-python-hero",
+                    type: "audiobook",
+                    title: "Python Zero to Hero",
+                    author: "Guillaume Lessard",
+                    narrators: ["Studio Voice"],
+                    year: "2025", 
+                    language: "en",
+                    genre: "Programming",
+                    description: "Complete Python mastery course in audiobook format. Perfect for learning while commuting.",
+                    duration: "12h 30m",
+                    price: 29.99,
+                    currency: "CAD",
+                    url: "/audiobooks/python-zero-to-hero.html",
+                    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+                    tags: ["python", "programming", "education"]
+                },
+                {
+                    id: "ab-healing-code-fr", 
+                    type: "audiobook",
+                    title: "Le Code de Guérison de la Nature",
+                    author: "Guillaume Lessard",
+                    narrators: ["Narrateur FR"],
+                    year: "2024",
+                    language: "fr", 
+                    genre: "Health & Wellness",
+                    description: "Guide complet des fréquences naturelles de guérison.",
+                    duration: "8h 15m",
+                    price: 22.99,
+                    currency: "CAD",
+                    url: "/audiobooks/le-code-de-guerison.html",
+                    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+                    tags: ["health", "wellness", "nature", "français"]
+                },
+                {
+                    id: "ab-producer-workflow",
+                    type: "audiobook",
+                    title: "Music Producer Workflow",
+                    author: "Guillaume Lessard",
+                    narrators: ["DJ iD01t"],
+                    year: "2025",
+                    language: "en",
+                    genre: "Music",
+                    description: "Professional music production workflows with AI integration.",
+                    duration: "10h 45m",
+                    price: 27.99,
+                    currency: "CAD", 
+                    url: "/audiobooks/music-producer-workflow.html", 
+                    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+                    tags: ["music", "production", "workflow", "ai"]
+                }
+            ],
+            ebooks: [
+                {
+                    id: "ebook-veo3-json",
+                    type: "ebook",
+                    title: "Veo3 JSON Guide",
+                    author: "Guillaume Lessard",
+                    year: "2025",
+                    language: "en",
+                    genre: "Technology",
+                    description: "Master JSON prompting for Veo3 video generation. Learn smart templates and techniques.",
+                    pages: 45,
+                    price: 7.99,
+                    currency: "CAD",
+                    format: "PDF + EPUB",
+                    url: "https://books.google.com/books?id=MJFJEQAAQBAJ",
+                    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+                    tags: ["json", "veo3", "video", "ai", "cinematic"]
+                },
+                {
+                    id: "ebook-digital-skills",
+                    type: "ebook",
+                    title: "DIY Digital Skills: Tech Career Roadmap",
+                    author: "Guillaume Lessard",
+                    year: "2025",
+                    language: "en",
+                    genre: "Career",
+                    description: "Build a profitable tech career from scratch. Comprehensive roadmap with real-world projects.",
+                    pages: 140,
+                    price: 16.99,
+                    currency: "CAD",
+                    format: "PDF + EPUB + Web",
+                    url: "https://books.google.com/books?id=f8o9EQAAQBAJ",
+                    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+                    tags: ["career", "skills", "programming", "freelancing"]
+                },
+                {
+                    id: "ebook-chess-mastery",
+                    type: "ebook",
+                    title: "Chess Mastery: Advanced Strategies",
+                    author: "Guillaume Lessard",
+                    year: "2025",
+                    language: "en",
+                    genre: "Games",
+                    description: "Advanced chess strategies and expert analysis for serious players.",
+                    pages: 180,
+                    price: 18.99,
+                    currency: "CAD",
+                    format: "PDF + PGN Files",
+                    url: "https://books.google.com/books?id=m5M4EQAAQBAJ",
+                    image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=400&h=600&fit=crop&crop=center&auto=format&q=80",
+                    tags: ["chess", "strategy", "tactics", "games"]
+                }
+            ]
+        };
+
+        // Unified Products Client
+        class UnifiedProductsClient {
+            constructor() {
+                this.allProducts = [];
+                this.filteredProducts = [];
+                this.currentTab = 'all';
+                this.init();
+            }
+
+            init() {
+                this.loadData();
+                this.bindEvents();
+                this.initThemeToggle();
+            }
+
+            loadData() {
+                // Combine audiobooks and ebooks
+                this.allProducts = [
+                    ...window.UNIFIED_PRODUCTS_DATA.audiobooks,
+                    ...window.UNIFIED_PRODUCTS_DATA.ebooks
+                ];
+                
+                this.filteredProducts = [...this.allProducts];
+                this.updateStats();
+                this.populateFilters();
+                this.render();
+                this.generateSchema();
+                
+                // Hide loading
+                document.getElementById('main-loading').style.display = 'none';
+            }
+
+            updateStats() {
+                const audiobooks = this.allProducts.filter(p => p.type === 'audiobook').length;
+                const ebooks = this.allProducts.filter(p => p.type === 'ebook').length;
+                
+                document.getElementById('total-products').textContent = this.allProducts.length;
+                document.getElementById('total-audiobooks').textContent = audiobooks;
+                document.getElementById('total-ebooks').textContent = ebooks;
+            }
+
+            populateFilters() {
+                const categories = [...new Set(this.allProducts.flatMap(p => p.tags || []))].sort();
+                const categoryFilter = document.getElementById('category-filter');
+                
+                if (categoryFilter) {
+                    categoryFilter.innerHTML = '<option value="">All Categories</option>' + 
+                        categories.map(cat => `<option value="${cat}">${cat}</option>`).join('');
+                }
+            }
+
+            generateProductCard(product) {
+                const price = product.price ? `$${product.price} ${product.currency}` : 'Free';
+                const typeIcon = product.type === 'audiobook' ? '🎧' : '📚';
+                const extraInfo = product.type === 'audiobook' ? 
+                    (product.duration || '') : 
+                    (product.pages ? `${product.pages} pages` : '');
+                
+                const tagsHtml = (product.tags || []).slice(0, 3).map(tag => 
+                    `<span class="format-badge">${tag}</span>`
+                ).join('');
+
+                return `
+                    <article class="product-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+                        <div class="relative overflow-hidden group">
+                            <img 
+                                src="${product.image}" 
+                                alt="${product.title} cover"
+                                class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition-transform duration-500"
+                                loading="lazy"
+                                onerror="this.src=this.dataset.fallback"
+                                data-fallback="${this.generateFallbackImage(product)}"
+                            >
+                            <div class="absolute top-3 right-3 bg-black bg-opacity-80 text-white px-2 py-1 rounded-lg text-xs font-bold">
+                                ${typeIcon} HD
+                            </div>
+                            ${extraInfo ? `<div class="absolute bottom-3 left-3 bg-blue-600 text-white px-2 py-1 rounded text-xs font-semibold">${extraInfo}</div>` : ''}
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                        </div>
+                        
+                        <div class="p-5">
+                            <div class="mb-3">
+                                <h3 class="font-bold text-lg leading-tight mb-2 line-clamp-2">${product.title}</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">by ${product.author}</p>
+                            </div>
+                            
+                            <p class="text-sm text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">${product.description}</p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                ${tagsHtml}
+                            </div>
+                            
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-600">
+                                <div class="price-tag">${price}</div>
+                                <div class="flex gap-2">
+                                    <a href="${product.url}" target="_blank" rel="noopener nofollow" 
+                                       class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-all hover:scale-105">
+                                        ${product.type === 'audiobook' ? 'Listen' : 'Read'}
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3 text-xs text-gray-500 dark:text-gray-400 flex justify-between">
+                                <span>${product.genre}</span>
+                                <span>${product.year}</span>
+                            </div>
+                        </div>
+                    </article>`;
+            }
+
+            generateFallbackImage(product) {
+                // Create a simple data URL for fallback
+                const canvas = document.createElement('canvas');
+                canvas.width = 400;
+                canvas.height = 600;
+                const ctx = canvas.getContext('2d');
+                
+                // Simple gradient background
+                const gradient = ctx.createLinearGradient(0, 0, 400, 600);
+                gradient.addColorStop(0, '#3b82f6');
+                gradient.addColorStop(1, '#1e40af');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 400, 600);
+                
+                // Title
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 24px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(product.title, 200, 250);
+                
+                // Author
+                ctx.font = '16px Arial';
+                ctx.fillText(product.author, 200, 300);
+                
+                // Type indicator
+                ctx.font = 'bold 20px Arial';
+                ctx.fillText(product.type === 'audiobook' ? '🎧' : '📚', 200, 400);
+                
+                return canvas.toDataURL();
+            }
+
+            filterProducts() {
+                const search = document.getElementById('global-search').value.toLowerCase();
+                const category = document.getElementById('category-filter').value;
+                const language = document.getElementById('language-filter').value;
+                const price = document.getElementById('price-filter').value;
+                const sort = document.getElementById('sort-options').value;
+                
+                let filtered = this.allProducts;
+                
+                // Tab filter
+                if (this.currentTab !== 'all') {
+                    filtered = filtered.filter(p => p.type === this.currentTab.replace('s', ''));
+                }
+                
+                // Search
+                if (search) {
+                    filtered = filtered.filter(p => 
+                        p.title.toLowerCase().includes(search) ||
+                        p.author.toLowerCase().includes(search) ||
+                        p.description.toLowerCase().includes(search) ||
+                        (p.tags || []).some(tag => tag.toLowerCase().includes(search))
+                    );
+                }
+                
+                // Category
+                if (category) {
+                    filtered = filtered.filter(p => (p.tags || []).includes(category));
+                }
+                
+                // Language
+                if (language) {
+                    filtered = filtered.filter(p => p.language === language);
+                }
+                
+                // Price
+                if (price) {
+                    filtered = filtered.filter(p => {
+                        const productPrice = p.price || 0;
+                        switch (price) {
+                            case 'free': return productPrice === 0;
+                            case 'under-15': return productPrice > 0 && productPrice < 15;
+                            case '15-25': return productPrice >= 15 && productPrice <= 25;
+                            case 'over-25': return productPrice > 25;
+                            default: return true;
+                        }
+                    });
+                }
+                
+                // Sort
+                switch (sort) {
+                    case 'title_asc': filtered.sort((a, b) => a.title.localeCompare(b.title)); break;
+                    case 'title_desc': filtered.sort((a, b) => b.title.localeCompare(a.title)); break;
+                    case 'price_asc': filtered.sort((a, b) => (a.price || 0) - (b.price || 0)); break;
+                    case 'price_desc': filtered.sort((a, b) => (b.price || 0) - (a.price || 0)); break;
+                    case 'date_asc': filtered.sort((a, b) => a.year - b.year); break;
+                    default: filtered.sort((a, b) => b.year - a.year); break;
+                }
+                
+                this.filteredProducts = filtered;
+                this.render();
+            }
+
+            render() {
+                const grid = document.getElementById('products-grid');
+                const empty = document.getElementById('main-empty');
+                const count = document.getElementById('products-count');
+                
+                if (!this.filteredProducts.length) {
+                    grid.innerHTML = '';
+                    empty.classList.remove('hidden');
+                    count.textContent = '0 products found';
+                    return;
+                }
+                
+                empty.classList.add('hidden');
+                grid.innerHTML = this.filteredProducts.map(product => this.generateProductCard(product)).join('');
+                count.textContent = `${this.filteredProducts.length} products found`;
+            }
+
+            generateSchema() {
+                const schema = {
+                    '@context': 'https://schema.org',
+                    '@type': 'ItemList',
+                    name: 'HD Digital Products Collection',
+                    description: 'Professional audiobooks and eBooks with high-quality covers',
+                    itemListElement: this.allProducts.slice(0, 50).map((product, index) => ({
+                        '@type': 'ListItem',
+                        position: index + 1,
+                        item: {
+                            '@type': product.type === 'audiobook' ? 'Audiobook' : 'Book',
+                            name: product.title,
+                            author: { '@type': 'Person', name: product.author },
+                            description: product.description,
+                            image: product.image,
+                            offers: {
+                                '@type': 'Offer',
+                                price: product.price || 0,
+                                priceCurrency: product.currency || 'CAD'
+                            }
+                        }
+                    }))
+                };
+                
+                let scriptEl = document.getElementById('products-schema');
+                if (!scriptEl) {
+                    scriptEl = document.createElement('script');
+                    scriptEl.id = 'products-schema';
+                    scriptEl.type = 'application/ld+json';
+                    document.head.appendChild(scriptEl);
+                }
+                scriptEl.textContent = JSON.stringify(schema);
+            }
+
+            bindEvents() {
+                // Tab switching
+                document.querySelectorAll('[data-tab]').forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        document.querySelectorAll('[data-tab]').forEach(t => t.classList.remove('active'));
+                        e.target.classList.add('active');
+                        this.currentTab = e.target.dataset.tab;
+                        this.filterProducts();
+                    });
+                });
+                
+                // Filters
+                ['global-search', 'category-filter', 'language-filter', 'price-filter', 'sort-options'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.addEventListener('input', () => this.filterProducts());
+                        el.addEventListener('change', () => this.filterProducts());
+                    }
+                });
+                
+                // Reset
+                document.getElementById('reset-all-filters').addEventListener('click', () => {
+                    ['global-search', 'category-filter', 'language-filter', 'price-filter'].forEach(id => {
+                        const el = document.getElementById(id);
+                        if (el) el.value = '';
+                    });
+                    document.getElementById('sort-options').value = 'date_desc';
+                    this.filterProducts();
+                });
+            }
+
+            initThemeToggle() {
+                const toggle = document.getElementById('theme-toggle');
+                const isDark = localStorage.getItem('theme') === 'dark';
+                
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                }
+                
+                toggle.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    localStorage.setItem('theme', 
+                        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+                    );
+                });
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            new UnifiedProductsClient();
+        });
+    </script>
+</body>
+</html>
