@@ -1,15 +1,29 @@
 name: Validate Covers
 on: [push, pull_request]
+fix/ci-covers-1
+
 
 permissions:
   contents: write
   pull-requests: write
 
+main
 jobs:
   covers:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+fix/ci-covers-1
+      - name: Scan for hybrid URLs
+        run: |
+          set -e
+          HITS=$(grep -R '/assets/.*https\?://' -n audiobooks || true)
+          if [ -n "$HITS" ]; then
+            echo "::error::Hybrid image URLs found:"
+            echo "$HITS"
+            exit 1
+          fi
+
 
       - name: Scan for hybrid URLs
         shell: bash
@@ -70,3 +84,4 @@ jobs:
             The fixer keeps the absolute URL and drops the local prefix across affected HTML files.
           branch: autofix/hybrid-cover-urls
           labels: maintenance, automated-pr
+main
