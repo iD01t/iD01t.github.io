@@ -8,12 +8,33 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Scan for hybrid URLs
+        shell: bash
         run: |
           set -euo pipefail
-          # Use extended regex so "https?://" matches http:// or https://
-          HITS=$(grep -REn '/assets/.*https?://' audiobooks || true)
+          # Find any URL where a local /assets/... prefix is glued to an http(s) URL.
+          # Example hit:
+          #   /assets/harvested/ebooks/https://i.imgur.com/Ct6GmGm.png
+          HITS=$(grep -REn --include='*.html' '/assets/[^"'\''\s>]*https?://' audiobooks || true)
+
           if [ -n "$HITS" ]; then
-            echo "::error::Hybrid image URLs found:"
+            echo "::group::Hybrid image URLs found"
             echo "$HITS"
+            echo "::endgroup::"
+
+            # Emit one GitHub annotation per hit (so you get clickable links in the UI)
+            # Expected grep format: path:line:the matching text...
+            while IFS= read -r hit; do
+              file="${hit%%:*}"
+              rest="${hit#*:}"
+              line="${rest%%:*}"
+              msg="${rest#*:}"
+              # Escape % and newlines for GitHub annotation
+              msg="${msg//'%'/'%25'}"
+              msg="${msg//$'\n'/'%0A'}"
+              msg="${msg//$'\r'/'%0D'}"
+              echo "::error file=${file},line=${line},col=1::Hybrid URL -> ${msg}"
+            done <<< "$HITS"
+
+            echo "ERROR: Hybrid image URLs detected. See annotations above."
             exit 1
           fi
