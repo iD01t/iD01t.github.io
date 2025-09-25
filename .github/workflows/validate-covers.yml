@@ -1,6 +1,10 @@
 name: Validate Covers
 on: [push, pull_request]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   covers:
     runs-on: ubuntu-latest
@@ -11,9 +15,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # Find any URL where a local /assets/... prefix is glued to an http(s) URL.
-          # Example hit:
-          #   /assets/harvested/ebooks/https://i.imgur.com/Ct6GmGm.png
+
+          # Any /assets/... immediately followed by http(s):// is a hybrid
           HITS=$(grep -REn --include='*.html' '/assets/[^"'\''\s>]*https?://' audiobooks || true)
 
           if [ -n "$HITS" ]; then
@@ -21,20 +24,49 @@ jobs:
             echo "$HITS"
             echo "::endgroup::"
 
-            # Emit one GitHub annotation per hit (so you get clickable links in the UI)
-            # Expected grep format: path:line:the matching text...
+            # Emit one GitHub annotation per hit
             while IFS= read -r hit; do
               file="${hit%%:*}"
               rest="${hit#*:}"
               line="${rest%%:*}"
               msg="${rest#*:}"
-              # Escape % and newlines for GitHub annotation
-              msg="${msg//'%'/'%25'}"
-              msg="${msg//$'\n'/'%0A'}"
-              msg="${msg//$'\r'/'%0D'}"
+              msg="${msg//'%'/'%25'}"; msg="${msg//$'\n'/'%0A'}"; msg="${msg//$'\r'/'%0D'}"
               echo "::error file=${file},line=${line},col=1::Hybrid URL -> ${msg}"
             done <<< "$HITS"
 
-            echo "ERROR: Hybrid image URLs detected. See annotations above."
+            echo "ERROR: Hybrid image URLs detected."
             exit 1
           fi
+
+  autofix:
+    needs: covers
+    if: ${{ failure() }}  # run only if the scan job failed
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix hybrid URLs (drop /assets/... prefix before http/https)
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILES=$(grep -RlE --include='*.html' '/assets/[^"'\''\s>]*https?://' audiobooks || true)
+          if [ -z "${FILES}" ]; then
+            echo "No files to fix."
+            exit 0
+          fi
+          # Keep only the real absolute URL and discard the glued /assets/... prefix.
+          # Works for meta tags, JSON-LD, and <img src>
+          echo "${FILES}" | xargs -I{} perl -0777 -i -pe 's{/(?:assets/[^"'\''\s>]*)?(https?://[^"'\''\s>]+)}{$1}g' {}
+
+      - name: Create PR with fixes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Fix hybrid cover URLs: remove /assets/... prefix before absolute URLs"
+          title: "Auto-fix: hybrid cover URLs → absolute"
+          body: |
+            This PR was generated automatically after the **Validate Covers** job detected hybrid URLs like:
+            `/assets/harvested/ebooks/https://i.imgur.com/Ct6GmGm.png`
+
+            The fixer keeps the absolute URL and drops the local prefix across affected HTML files.
+          branch: autofix/hybrid-cover-urls
+          labels: maintenance, automated-pr
