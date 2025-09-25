@@ -423,8 +423,57 @@
       return 'other';
     }
 
+    function getEbookNumber(book) {
+      if (book.ebook_number) return book.ebook_number;
+      if (book.audiobook_number) return book.audiobook_number;
+      return null;
+    }
+
+    function createAdvancedImageFallback(book, className = '') {
+      const bookNumber = getEbookNumber(book);
+      const sources = [];
+      if (bookNumber) {
+        const titleSlug = book.title.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_');
+        sources.push(`/assets/harvested/ebooks/ebook_${bookNumber}_${titleSlug}_zoom5.jpg`);
+        sources.push(`/assets/harvested/ebooks/ebook_${bookNumber}_${titleSlug}_thumbnail.jpg`);
+      }
+      if (book.image && book.image.includes('id=')) {
+        const googleBooksId = book.image.split('id=')[1].split('&')[0];
+        const baseName = book.title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
+        sources.push(`/assets/harvested/ebooks/${baseName}_${googleBooksId}_cover.jpg`);
+      }
+      if (book.image && book.image.includes('http')) {
+        sources.push(book.image);
+      }
+      sources.push('/assets/placeholder-cover.svg');
+      const uniqueSources = [...new Set(sources)];
+
+      return `
+        <img
+          src="${uniqueSources[0]}"
+          alt="Cover for ${book.title.replace(/^[🌿✨🎧🚀📖]+\s*/, '')}"
+          class="${className}"
+          loading="lazy"
+          decoding="async"
+          onerror="handleAdvancedImageError(this, ${JSON.stringify(uniqueSources)})"
+        />
+      `;
+    }
+
+    function handleAdvancedImageError(img, fallbackSources) {
+      if (!img.dataset.currentIndex) img.dataset.currentIndex = '0';
+      const currentIndex = parseInt(img.dataset.currentIndex);
+      const nextIndex = currentIndex + 1;
+      if (nextIndex < fallbackSources.length) {
+        img.dataset.currentIndex = nextIndex.toString();
+        img.src = fallbackSources[nextIndex];
+      } else {
+        img.src = '/assets/placeholder-cover.svg';
+        img.onerror = null;
+      }
+    }
+
     function createCard(book) {
-        const imageSrc = book.image && book.image.startsWith('http') ? book.image : `/${(book.image || '').replace(/^\//, '')}`;
         const buyUrl = book.link || book.url || '#';
         const detailUrl = `/audiobooks/${(book.title || 'untitled').toLowerCase().replace(/[^a-z0-9]+/g, '-')}.html`;
 
@@ -432,7 +481,7 @@
           <article class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700 card-hover">
             <a href="${detailUrl}" class="block">
               <div class="aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
-                <img src="${imageSrc}" alt="Cover for ${book.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null;this.src='/assets/placeholder-cover.svg';">
+                ${createAdvancedImageFallback(book, 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300')}
               </div>
             </a>
             <div class="p-6 space-y-4">
