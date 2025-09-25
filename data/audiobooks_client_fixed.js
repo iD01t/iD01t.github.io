@@ -125,11 +125,28 @@
     }
   }
 
+  function normalizeCover(src) {
+    if (!src) return src;
+    let s = String(src).trim();
+    s = s.replace(/^\/assets\/harvested\/(?:ebooks|audiobooks)\/(https?:\/\/.*)$/i, '$1');
+    if (/^https?:\/\//i.test(s)) {
+      const hasExt = /\.[a-z]{3,4}(\?.*)?$/i.test(s);
+      const isImgurRaw = /^https?:\/\/i\.imgur\.com\/[^.\/\s?]+(?:\?.*)?$/i.test(s);
+      if (isImgurRaw && !hasExt) s += '.png';
+      return s;
+    }
+    if (/^\/.+\.(png|jpe?g|webp|avif|gif)(\?.*)?$/i.test(s)) return s;
+    return s;
+  }
+
   // ---- Image handling with HD fallbacks -----------------------------------
   async function getWorkingImage(imageUrl, title, author, genre) {
-    if (!imageUrl) {
+    const normalizedUrl = normalizeCover(imageUrl);
+    if (!normalizedUrl) {
       return generateHDCover(title, author, genre);
     }
+
+    imageUrl = normalizedUrl;
 
     try {
       // Test if the image URL works

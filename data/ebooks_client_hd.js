@@ -175,12 +175,27 @@
     }
   }
 
+  function normalizeCover(src) {
+    if (!src) return src;
+    let s = String(src).trim();
+    s = s.replace(/^\/assets\/harvested\/(?:ebooks|audiobooks)\/(https?:\/\/.*)$/i, '$1');
+    if (/^https?:\/\//i.test(s)) {
+      const hasExt = /\.[a-z]{3,4}(\?.*)?$/i.test(s);
+      const isImgurRaw = /^https?:\/\/i\.imgur\.com\/[^.\/\s?]+(?:\?.*)?$/i.test(s);
+      if (isImgurRaw && !hasExt) s += '.png';
+      return s;
+    }
+    if (/^\/.+\.(png|jpe?g|webp|avif|gif)(\?.*)?$/i.test(s)) return s;
+    return s;
+  }
+
   async function getOptimalImage(ebook) {
     const { title, author, tags = [], price_cad, price_usd, image } = ebook;
+    const normalizedImage = normalizeCover(image);
     
     // Try original image first
-    if (image && await testImageUrl(image)) {
-      return image;
+    if (normalizedImage && await testImageUrl(normalizedImage)) {
+      return normalizedImage;
     }
     
     // Generate price string for cover
