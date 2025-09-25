@@ -1,14 +1,17 @@
 name: Validate Covers
 on: [push, pull_request]
+
 jobs:
   covers:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Scan for hybrid URLs
         run: |
-          set -e
-          HITS=$(grep -R '/assets/.*https\?://' -n audiobooks || true)
+          set -euo pipefail
+          # Use extended regex so "https?://" matches http:// or https://
+          HITS=$(grep -REn '/assets/.*https?://' audiobooks || true)
           if [ -n "$HITS" ]; then
             echo "::error::Hybrid image URLs found:"
             echo "$HITS"
