@@ -52,7 +52,7 @@
     a{color:var(--gold);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{width:min(1100px,92vw);margin-inline:auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.35);backdrop-filter:blur(8px)}
+    header, footer{background:transparent}
     nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
     .brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
     .brand svg{width:28px;height:28px;fill:var(--amber)}
@@ -90,30 +90,17 @@
     /* Tiny reveal animation */
     .reveal{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s ease}
     .reveal.in{opacity:1;transform:none}
+    /* Site header/footer slots (injected from index.html) */
+    #site-header,#site-footer{min-height:40px}
   </style></head>
 <body>
-  <header>
-    <div class="container">
-      <nav aria-label="Primary">
-        <a class="brand" href="#top" title="Home">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c2 2 4 5 4 7s-2 4-4 4-4-2-4-4 2-5 4-7zm-7 19c0-3 5-5 7-5s7 2 7 5v1H5v-1z"/></svg>
-          <span>iD01t Productions</span>
-        </a>
-        <div class="menu" role="navigation">
-          <a href="#story">Story</a>
-          <a href="#characters">Characters</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#download">Download</a>
-          <a href="#credits">Credits</a>
-        </div>
-      </nav>
-    </div>
-  </header>  <main id="top">
+  <!-- Header will be injected from /index.html -->
+  <div id="site-header"></div>  <main id="top">
     <!-- HERO -->
     <section class="hero">
       <div class="container wrap">
         <div>
-          <span class="badge">New • Free Illustrated eBook</span>
+          <span class="badge">Free Illustrated eBook</span>
           <h1 class="reveal">Nini’s Adventures <span class="title-accent">— Episode 1</span></h1>
           <p class="lead reveal" style="transition-delay:.05s">The Paw Medallion & the Labyrinth of El’Nox Rah. Follow Nini, Smokey, and Billy through torch‑lit corridors to a starlit doorway guarded by a mysterious cat priest.</p>
           <div class="cta-row reveal" style="transition-delay:.1s">
@@ -122,8 +109,7 @@
           </div>
         </div>
         <div class="hero-illustration reveal" style="transition-delay:.15s">
-          <!-- Replace the src with your exported cover image path under /assets/nini/ -->
-          <img src="/assets/nini/cover.jpg" alt="Nini, Smokey, and Billy gaze at a glowing medallion inside a pyramid corridor" loading="eager" />
+          <img id="hero-cover" src="/assets/nini/cover.jpg" alt="Nini, Smokey, and Billy gaze at a glowing medallion inside a pyramid corridor" loading="eager" />
         </div>
       </div>
     </section><!-- STORY -->
@@ -133,14 +119,14 @@
     <p class="lead reveal" style="max-width:60ch">A golden medallion wakes inside an ancient temple. Three curious kittens follow its light through a living labyrinth to meet El’Nox Rah, a guardian who speaks in riddles and star‑maps. Adventure, wonder, and gentle suspense—designed for kids, made for families.</p>
     <div class="two-col" style="margin-top:22px">
       <div class="card reveal">
-        <img src="/assets/nini/title-card.jpg" alt="Series title over pyramids at sunrise" loading="lazy">
+        <img id="title-card-img" src="/assets/nini/title-card.jpg" alt="Series title over pyramids at sunrise" loading="lazy">
         <div class="pad">
           <strong>Sunrise & Pyramids</strong>
           <p class="credits">Warm gold and soft bloom set the tone: cozy adventure with hieroglyphic charm.</p>
         </div>
       </div>
       <div class="card reveal">
-        <img src="/assets/nini/throne.jpg" alt="El’Nox Rah seated in a golden hall" loading="lazy">
+        <img id="throne-card-img" src="/assets/nini/throne.jpg" alt="El’Nox Rah seated in a golden hall" loading="lazy">
         <div class="pad">
           <strong>El’Nox Rah</strong>
           <p class="credits">Sleek black fur, gold ankh, turquoise collar—our priestly guide to the maze’s heart.</p>
@@ -156,28 +142,28 @@
     <h2 class="reveal">Characters</h2>
     <div class="grid cards">
       <article class="card reveal">
-        <img src="/assets/nini/nini.jpg" alt="Nini, orange tabby kitten, wide-eyed" loading="lazy" />
+        <img id="nini-img" src="/assets/nini/nini.jpg" alt="Nini, orange tabby kitten, wide-eyed" loading="lazy" />
         <div class="pad"><span class="pill">Explorer</span>
           <h3 style="margin:.4rem 0 0">Nini</h3>
           <p class="credits">Brave and bright—first to step onto a glowing tile.</p>
         </div>
       </article>
       <article class="card reveal">
-        <img src="/assets/nini/smokey.jpg" alt="Smokey, charcoal grey kitten with amber eyes" loading="lazy" />
+        <img id="smokey-img" src="/assets/nini/smokey.jpg" alt="Smokey, charcoal grey kitten with amber eyes" loading="lazy" />
         <div class="pad"><span class="pill">Scout</span>
           <h3 style="margin:.4rem 0 0">Smokey</h3>
           <p class="credits">Quiet paws, careful eyes. Finds the safe stones when the floor shifts.</p>
         </div>
       </article>
       <article class="card reveal">
-        <img src="/assets/nini/billy.jpg" alt="Billy, cream kitten with blue-green eyes" loading="lazy" />
+        <img id="billy-img" src="/assets/nini/billy.jpg" alt="Billy, cream kitten with blue-green eyes" loading="lazy" />
         <div class="pad"><span class="pill">Heart</span>
           <h3 style="margin:.4rem 0 0">Billy</h3>
           <p class="credits">Kind, curious, and the best listener when the maze hums.</p>
         </div>
       </article>
       <article class="card reveal">
-        <img src="/assets/nini/elnoxrah.jpg" alt="El’Nox Rah holding an ankh" loading="lazy" />
+        <img id="elnoxrah-img" src="/assets/nini/elnoxrah.jpg" alt="El’Nox Rah holding an ankh" loading="lazy" />
         <div class="pad"><span class="pill">Guardian</span>
           <h3 style="margin:.4rem 0 0">El’Nox Rah</h3>
           <p class="credits">Keeper of riddles, watcher of paths, friend to true seekers.</p>
@@ -191,15 +177,8 @@
 <section id="gallery">
   <div class="container">
     <h2 class="reveal">Gallery</h2>
-    <div class="grid gallery">
-      <!-- Swap these file paths with your exported PNGs under /assets/nini/ -->
-      <figure class="reveal"><img src="/assets/nini/corridor.jpg" alt="Three kittens in a torch‑lit corridor" loading="lazy" /><figcaption>Into the Pyramid</figcaption></figure>
-      <figure class="reveal"><img src="/assets/nini/maze.jpg" alt="Glowing labyrinth lines beneath their paws" loading="lazy" /><figcaption>The Living Map</figcaption></figure>
-      <figure class="reveal"><img src="/assets/nini/medallion.jpg" alt="Floating paw medallion radiating golden beams" loading="lazy" /><figcaption>The Paw Medallion</figcaption></figure>
-      <figure class="reveal"><img src="/assets/nini/hall.jpg" alt="Treasure hall shimmering in gold" loading="lazy" /><figcaption>Hall of Gold</figcaption></figure>
-      <figure class="reveal"><img src="/assets/nini/throne-wide.jpg" alt="Distant silhouette of the priest in the throne room" loading="lazy" /><figcaption>Throne Room</figcaption></figure>
-      <figure class="reveal"><img src="/assets/nini/tile-test.jpg" alt="A tile depresses under a tiny paw" loading="lazy" /><figcaption>The Test of the Tiles</figcaption></figure>
-    </div>
+    <div id="gallery-grid" class="grid gallery"></div>
+    <p class="credits" id="gallery-note" style="margin-top:10px"></p>
   </div>
 </section>
 
@@ -224,16 +203,72 @@
   </div>
 </section>
 
-  </main>  <footer class="footer">
-    <div class="container">
-      <div class="credits">© <span id="y"></span> iD01t Productions • All rights reserved.</div>
-    </div>
-  </footer>  <script>
-    // Year + scroll reveal
-    document.getElementById('y').textContent = new Date().getFullYear();
+  </main>  <!-- Footer will be injected from /index.html -->  <div id="site-footer"></div>  <script>
+    // Inject header & footer from the existing index.html so nini.html shares the same chrome
+    (async function injectShell(){
+      try{
+        const res = await fetch('/index.html', {cache:'no-store'});
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const header = doc.querySelector('header');
+        const footer = doc.querySelector('footer');
+        if(header) document.getElementById('site-header').innerHTML = header.outerHTML;
+        if(footer) document.getElementById('site-footer').innerHTML = footer.outerHTML;
+      }catch(err){ console.warn('Header/Footer injection failed', err); }
+    })();
+
+    // Reveal on scroll
     const io = new IntersectionObserver((els)=>{
       els.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
     },{threshold:.08});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  </script></body>
-  </html>
+
+    // Use ONLY images from /assets/nini/. Auto‑discover them via GitHub API and render the gallery.
+    const GITHUB_API = 'https://api.github.com/repos/iD01t/iD01t.github.io/contents/assets/nini';
+    const ASSET_BASE = 'https://id01t.github.io/assets/nini/';
+
+    function isImage(name){ return /\.(png|jpe?g|webp|gif)$/i.test(name); }
+
+    function niceLabel(name){
+      const base = name.replace(/\.[^.]+$/, '').replace(/[-_]+/g,' ').trim();
+      return base.charAt(0).toUpperCase()+base.slice(1);
+    }
+
+    (async function loadGallery(){
+      const grid = document.getElementById('gallery-grid');
+      const note = document.getElementById('gallery-note');
+      try{
+        const r = await fetch(GITHUB_API, {headers:{'Accept':'application/vnd.github+json'}});
+        const data = await r.json();
+        const files = (Array.isArray(data)?data:[]).filter(f=>isImage(f.name));
+
+        // Prefer specific hero/character images when present
+        const pick = (regex) => files.find(f=>regex.test(f.name));
+        const setSrc = (id, rx) => { const f = pick(rx); if(f) document.getElementById(id).src = ASSET_BASE + f.name; };
+        setSrc('hero-cover', /(cover|title|intro)/i);
+        setSrc('title-card-img', /(title|pyramid|sunrise)/i);
+        setSrc('throne-card-img', /(throne|priest|elnox)/i);
+        setSrc('nini-img', /nini/i);
+        setSrc('smokey-img', /smokey/i);
+        setSrc('billy-img', /billy/i);
+        setSrc('elnoxrah-img', /(elnox|rah|priest)/i);
+
+        // Build gallery from ALL images in /assets/nini/
+        files.sort((a,b)=>a.name.localeCompare(b.name));
+        for(const f of files){
+          const fig = document.createElement('figure');
+          fig.className = 'reveal';
+          fig.innerHTML = `<img src="${ASSET_BASE + f.name}" alt="${niceLabel(f.name)}" loading="lazy"><figcaption>${niceLabel(f.name)}</figcaption>`;
+          grid.appendChild(fig);
+        }
+        note.textContent = `${files.length} images loaded from /assets/nini/`;
+      }catch(e){
+        note.textContent = 'Gallery auto‑load failed. Ensure the repository is public or add assets/nini/manifest.json.';
+        console.warn('Gallery load error', e);
+      }
+    })();
+  </script>  <noscript>
+    <div style="padding:1rem;color:#cdbf9a">Enable JavaScript to load the shared header/footer and the dynamic gallery from <code>/assets/nini/</code>.</div>
+  </noscript>
+</body>
+</html>
