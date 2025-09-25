@@ -1,0 +1,97 @@
+name: Repair Audiobook Covers
+on:
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: "Max files to fix in this run"
+        default: "60"
+        required: true
+      shard:
+        description: "Which shard index to process (0-based)"
+        default: "0"
+        required: true
+      shards:
+        description: "Total number of shards"
+        default: "1"
+        required: true
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install deps
+        run: pip install beautifulsoup4
+
+      - name: Scan for hybrid paths
+        run: |
+          python3 scripts/repair_media_paths.py > scan.txt || true
+          # Extract file list from the scanner's output lines
+          grep '^ - ' scan.txt | sed 's/^ - //' > files.txt || true
+          echo "Found $(wc -l < files.txt || echo 0) hybrid files"
+
+      - name: Slice files for this run
+        env:
+          SHARD: ${{ github.event.inputs.shard }}
+          SHARDS: ${{ github.event.inputs.shards }}
+          BATCH: ${{ github.event.inputs.batch_size }}
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          shard  = int(os.getenv("SHARD", "0"))
+          shards = int(os.getenv("SHARDS", "1"))
+          batch  = int(os.getenv("BATCH", "60"))
+          files = []
+          try:
+              with open("files.txt", "r", encoding="utf-8") as f:
+                  files = [x.strip() for x in f if x.strip()]
+          except FileNotFoundError:
+              pass
+
+          # Stable subset: shard by index modulo count, then cap to batch size
+          subset = [f for i, f in enumerate(files) if shards <= 1 or (i % shards) == shard][:batch]
+          with open("slice.txt", "w", encoding="utf-8") as out:
+              out.write("\n".join(subset))
+          print(f"Selected {len(subset)} files for this run (shard {shard}/{shards})")
+          PY
+
+      - name: Apply fixes (batched within the run)
+        run: |
+          if [ -s slice.txt ]; then
+            # Process in mini-batches of 20 so BeautifulSoup edits are small and safe
+            xargs -a slice.txt -d '\n' -n 20 -r python3 scripts/upgrade_audiobook_pages.py
+          else
+            echo "No files to fix in this slice."
+          fi
+
+      - name: Verify no hybrids remain in edited subset
+        run: |
+          if [ -s slice.txt ]; then
+            # Re-scan only changed files for quick feedback
+            FOUND=0
+            while IFS= read -r f; do
+              if grep -E '/assets/.*https?://' -q "$f"; then
+                echo "::error file=$f::Hybrid URL still present"
+                FOUND=1
+              fi
+            done < slice.txt
+            exit $FOUND
+          fi
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "CI: fix audiobook cover image URLs (shard=${{ github.event.inputs.shard }}/${{ github.event.inputs.shards }}, batch=${{ github.event.inputs.batch_size }})"
+          commit_user_name: "jules-bot"
+          commit_user_email: "actions@users.noreply.github.com"
+          push_options: '--force-with-lease'  # normal push is fine too; remove if you prefer
