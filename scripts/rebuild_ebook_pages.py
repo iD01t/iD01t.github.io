@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json, re, os, sys
 from pathlib import Path
+from urllib.parse import quote_plus
 
 ROOT = Path('.')
 EBOOKS_DIR = ROOT / 'ebooks'
@@ -39,6 +40,7 @@ def build_page(item: dict, head_html: str, header_html: str, footer_html: str) -
     date = item.get('date') or ''
     url = item.get('link') or item.get('url') or '#'
     lang = item.get('lang') or 'en'
+    status = item.get('status', 'available')
 
     # Normalize head to include canonical + OG for the book
     canonical = f"https://id01t.store/ebooks/{slugify(title)}.html"
@@ -73,8 +75,10 @@ def build_page(item: dict, head_html: str, header_html: str, footer_html: str) -
     upsert_og('url', canonical)
     upsert_og('image', img)
 
+    buy_button_html = f'<a href="{url}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2">Buy Now</a>' if status == 'available' else '<span class="inline-flex items-center rounded-full bg-slate-400 text-white px-5 py-2 cursor-not-allowed">Temporarily Unavailable</span>'
+
     body_main = f"""
-  <section class=\"relative overflow-hidden\">\n    <div class=\"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-10\">\n      <nav class=\"text-sm text-slate-500 mb-4\"><a class=\"link-underline\" href=\"/\">Home</a> › <a class=\"link-underline\" href=\"/ebooks.html\">eBooks</a> › <span>{title}</span></nav>\n      <div class=\"grid md:grid-cols-2 gap-8 items-start\">\n        <img src=\"{img}\" alt=\"{title} cover\" class=\"w-full aspect-[3/4] object-cover rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800\" loading=\"eager\">\n        <div>\n          <h1 class=\"text-3xl font-bold tracking-tight\">{title}</h1>\n          <p class=\"mt-3 text-slate-600 dark:text-slate-300\">{desc}</p>\n          <div class=\"mt-5 flex items-center gap-3\">\n            {(f'<span class=\\"font-semibold\\">${price:.2f} CAD</span>' if isinstance(price,(int,float)) else '')}\n            <a href=\"{url}\" target=\"_blank\" rel=\"noopener\" class=\"inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2\">Buy Now</a>\n            <a href=\"/ebooks.html\" class=\"inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-5 py-2\">All eBooks</a>\n          </div>\n          <ul class=\"mt-4 text-sm text-slate-500 space-y-1\">\n            {(f'<li>Pages: {pages}</li>' if pages else '')}\n            {(f'<li>Language: {lang}</li>' if lang else '')}\n            {(f'<li>Published: {date}</li>' if date else '')}\n          </ul>\n        </div>\n      </div>\n    </div>\n  </section>\n"""
+  <section class=\"relative overflow-hidden\">\n    <div class=\"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-10\">\n      <nav class=\"text-sm text-slate-500 mb-4\"><a class=\"link-underline\" href=\"/\">Home</a> › <a class=\"link-underline\" href=\"/ebooks.html\">eBooks</a> › <span>{title}</span></nav>\n      <div class=\"grid md:grid-cols-2 gap-8 items-start\">\n        <img src=\"{img}\" alt=\"{title} cover\" class=\"w-full aspect-[3/4] object-cover rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800\" loading=\"eager\">\n        <div>\n          <h1 class=\"text-3xl font-bold tracking-tight\">{title}</h1>\n          <p class=\"mt-3 text-slate-600 dark:text-slate-300\">{desc}</p>\n          <div class=\"mt-5 flex items-center gap-3\">\n            {(f'<span class="font-semibold">${price:.2f} CAD</span>' if isinstance(price,(int,float)) else '')}\n            {buy_button_html}\n            <a href=\"/ebooks.html\" class=\"inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-5 py-2\">All eBooks</a>\n          </div>\n          <ul class=\"mt-4 text-sm text-slate-500 space-y-1\">\n            {(f'<li>Pages: {pages}</li>' if pages else '')}\n            {(f'<li>Language: {lang}</li>' if lang else '')}\n            {(f'<li>Published: {date}</li>' if date else '')}\n          </ul>\n          <div class="mt-6">\n            <a href="mailto:support@id01t.store?subject=Issue%20with%20eBook%3A%20{quote_plus(title)}" class="text-xs text-slate-500 hover:underline">Report an issue</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n"""
 
     # Assemble full doc around header/footer
     doc = [
