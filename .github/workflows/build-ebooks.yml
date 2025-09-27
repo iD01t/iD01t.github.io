@@ -1,28 +1,71 @@
 name: Build ebook pages
+
 on:
   push:
-    paths: [ "data/ebooks.json", "templates/**", "scripts/**" ]
+    branches: [ main ]              # adjust if your default branch differs
+    paths:
+      - "data/ebooks.json"
+      - "templates/**"
+      - "scripts/**"
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
-        with: { python-version: "3.x" }
-      - run: pip install jinja2
-      - run: python scripts/build_ebook_pages.py
-        env: { SITE_ORIGIN: "https://id01t.store" }
-      - name: Publish to docs/ for GitHub Pages
+        with:
+          python-version: "3.x"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install jinja2
+          fi
+
+      - name: Build static ebook pages
+        env:
+          SITE_ORIGIN: "https://id01t.store"
+        run: python scripts/build_ebook_pages.py
+
+      - name: Stage files for GitHub Pages
+        shell: bash
         run: |
           mkdir -p docs/ebooks
-          cp -r ebooks/*.html docs/ebooks/
-          cp ebook.html docs/ # keep dynamic fallback if you want
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: docs }
+          shopt -s nullglob
+          # copy generated ebook pages if present
+          for f in ebooks/*.html; do
+            cp -v "$f" docs/ebooks/
+          done
+          # keep dynamic fallback if present
+          [ -f ebook.html ] && cp -v ebook.html docs/
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
   deploy:
     needs: build
-    permissions: { pages: write, id-token: write }
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
