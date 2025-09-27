@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://id01t.github.io/sitemap.xml
