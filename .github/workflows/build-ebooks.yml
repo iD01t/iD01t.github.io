@@ -2,7 +2,7 @@ name: Build ebook pages
 
 on:
   push:
-    branches: [ main ]                 # change if your default branch differs
+    branches: [ main ]
     paths:
       - "data/ebooks.json"
       - "templates/**"
@@ -27,17 +27,12 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
-          cache: "pip"
+          python-version: "3.x"      # 🚫 no cache here
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          else
-            pip install jinja2
-          fi
+          pip install jinja2
 
       - name: Find & run build_ebook_pages.py
         env:
@@ -45,7 +40,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          echo "Workspace: $GITHUB_WORKSPACE"
           CANDIDATES=(
             "scripts/build_ebook_pages.py"
             "build_ebook_pages.py"
@@ -53,23 +47,16 @@ jobs:
             "website/scripts/build_ebook_pages.py"
             "tools/build_ebook_pages.py"
           )
-          FOUND=""
           for c in "${CANDIDATES[@]}"; do
             if [[ -f "$c" ]]; then
-              echo "Found builder at: $c"
+              echo "Found builder: $c"
               python "$c"
-              FOUND="yes"
-              break
+              exit 0
             fi
           done
-          if [[ -z "$FOUND" ]]; then
-            echo "::error title=Missing build script::Could not find build_ebook_pages.py in repository."
-            echo "Searched:"
-            printf ' - %s\n' "${CANDIDATES[@]}"
-            echo "Nearest matches in tree:"
-            find . -maxdepth 3 -type f \( -name "build*_pages.py" -o -name "*ebook*.py" \) -print || true
-            exit 1
-          fi
+          echo "::error title=Missing build script::Could not find build_ebook_pages.py"
+          find . -maxdepth 3 -type f \( -name "build*_pages.py" -o -name "*ebook*.py" \) -print || true
+          exit 1
 
       - name: Stage files for GitHub Pages
         shell: bash
@@ -77,9 +64,7 @@ jobs:
           set -euo pipefail
           mkdir -p docs/ebooks
           shopt -s nullglob
-          for f in ebooks/*.html; do
-            cp -v "$f" docs/ebooks/
-          done
+          for f in ebooks/*.html; do cp -v "$f" docs/ebooks/; done
           [[ -f ebook.html ]] && cp -v ebook.html docs/
 
       - name: Upload pages artifact
