@@ -1,84 +1,12 @@
-name: Build ebook pages
-
-on:
-  push:
-    branches: [ main ]
-    paths:
-      - "data/ebooks.json"
-      - "templates/**"
-      - "scripts/**"
-      - "ebook.html"
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"      # 🚫 no cache here
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install jinja2
-
-      - name: Find & run build_ebook_pages.py
-        env:
-          SITE_ORIGIN: "https://id01t.store"
-        shell: bash
-        run: |
-          set -euo pipefail
-          CANDIDATES=(
-            "scripts/build_ebook_pages.py"
-            "build_ebook_pages.py"
-            "site/scripts/build_ebook_pages.py"
-            "website/scripts/build_ebook_pages.py"
-            "tools/build_ebook_pages.py"
-          )
-          for c in "${CANDIDATES[@]}"; do
-            if [[ -f "$c" ]]; then
-              echo "Found builder: $c"
-              python "$c"
-              exit 0
-            fi
-          done
-          echo "::error title=Missing build script::Could not find build_ebook_pages.py"
-          find . -maxdepth 3 -type f \( -name "build*_pages.py" -o -name "*ebook*.py" \) -print || true
-          exit 1
-
-      - name: Stage files for GitHub Pages
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p docs/ebooks
-          shopt -s nullglob
-          for f in ebooks/*.html; do cp -v "$f" docs/ebooks/; done
-          [[ -f ebook.html ]] && cp -v ebook.html docs/
-
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+- name: Build Ebook Pages
+  shell: bash
+  env:
+    SITE_ORIGIN: "https://id01t.store"
+  run: |
+    set -euo pipefail
+    if [[ -f scripts/build_ebook_pages.py ]]; then
+      python scripts/build_ebook_pages.py
+    else
+      echo "::error title=Missing build script::scripts/build_ebook_pages.py was not found."
+      exit 1
+    fi
