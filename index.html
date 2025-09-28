@@ -1,251 +1,315 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iD01t Productions — Professional Digital Solutions</title>
-    <meta name="description" content="Professional Windows utilities, technical eBooks, multiplayer games, and original music built for creators who demand quality, speed, and reliability." /><!-- Tailwind (CDN) -->
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- Early theme init to avoid FOUC -->
-<script>(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches; if(s==='dark'||(!s&&d)){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
-<script>
-  /* Extend Tailwind with brand palette */
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brand: {
-            50:  '#f5faff',
-            100: '#e0f2ff',
-            200: '#bae0ff',
-            300: '#8dceff',
-            400: '#5abaff',
-            500: '#2aa7ff',
-            600: '#008ef6',
-            700: '#0070d7',
-            800: '#0057b5',
-            900: '#003f92'
-          }
-        },
-        keyframes: {
-          bounceSubtle: {
-            '0%,100%': { transform: 'translateY(0)' },
-            '50%': { transform: 'translateY(-4px)' }
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iD01t Productions — Professional Digital Solutions</title>
+  <meta name="description" content="Professional Windows utilities, technical eBooks, multiplayer games, and original music. Built for creators who demand quality, speed, and reliability.">
+  
+  <!-- SEO Meta Tags -->
+  <link rel="canonical" href="https://id01t.store/">
+  <meta name="author" content="Guillaume Lessard">
+  <meta name="keywords" content="Windows utilities, technical eBooks, multiplayer games, original music, programming tools, AI automation, chess software, music production">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="iD01t Productions — Professional Digital Solutions">
+  <meta property="og:description" content="Professional Windows utilities, technical eBooks, multiplayer games, and original music for creators.">
+  <meta property="og:url" content="https://id01t.store/">
+  <meta property="og:image" content="https://id01t.store/assets/img/brand/og-home.jpg">
+  <meta property="og:site_name" content="iD01t Productions">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="iD01t Productions — Professional Digital Solutions">
+  <meta name="twitter:description" content="Professional Windows utilities, technical eBooks, multiplayer games, and original music.">
+  <meta name="twitter:image" content="https://id01t.store/assets/img/brand/og-home.jpg">
+  <meta name="twitter:creator" content="@id01t">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "iD01t Productions",
+    "description": "Professional digital tools and creative content for developers and creators",
+    "url": "https://id01t.store",
+    "logo": "https://id01t.store/assets/img/brand/logo.svg",
+    "founder": {
+      "@type": "Person",
+      "name": "Guillaume Lessard",
+      "url": "https://id01t.store/about.html"
+    },
+    "sameAs": [
+      "https://github.com/iD01t",
+      "https://twitter.com/id01t"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Windows Utilities",
+        "description": "Professional Windows applications and tools"
+      },
+      {
+        "@type": "Offer",
+        "name": "Technical eBooks",
+        "description": "Programming guides and technical books"
+      },
+      {
+        "@type": "Offer",
+        "name": "Multiplayer Games",
+        "description": "Online gaming experiences"
+      },
+      {
+        "@type": "Offer",
+        "name": "Original Music",
+        "description": "Music production and audio content"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5faff',
+              100: '#e0f2ff',
+              200: '#bae0ff',
+              300: '#8dceff',
+              400: '#5abaff',
+              500: '#2aa7ff',
+              600: '#008ef6',
+              700: '#0070d7',
+              800: '#0057b5',
+              900: '#003f92'
+            }
           },
-          pulseGlow: {
-            '0%,100%': { opacity: 0.2 },
-            '50%': { opacity: 0.4 }
+          keyframes: {
+            bounceSubtle: {
+              '0%,100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-4px)' }
+            },
+            pulseGlow: {
+              '0%,100%': { opacity: 0.2 },
+              '50%': { opacity: 0.4 }
+            },
+            float: {
+              '0%,100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-6px)' }
+            }
           },
-          float: {
-            '0%,100%': { transform: 'translateY(0)' },
-            '50%': { transform: 'translateY(-6px)' }
+          animation: {
+            'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite'
           }
-        },
-        animation: {
-          'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
-          'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
-          float: 'float 6s ease-in-out infinite'
         }
       }
     }
-  };
-</script>
-
-<!-- Custom utility classes -->
-<style>
-  :root {
-    --ring-color: theme('colors.brand.500');
-  }
-  /* underline utility */
-  .link-underline {
-    position: relative;
-    transition: color 0.2s;
-  }
-  .link-underline::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 1px;
-    background: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.2s ease-out;
-  }
-  .link-underline:hover::after,
-  .link-underline:focus-visible::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  /* focus ring */
-  .focus-ring:focus-visible {
-    outline: 2px solid var(--ring-color);
-    outline-offset: 2px;
-  }
-  /* gradient text */
-  .gradient-text {
-    background: linear-gradient(to right, #2aa7ff, #0070d7);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent; /* fallback to ensure visibility */
-  }
-  /* card hover lift */
-  .card-hover {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  .card-hover:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
-  }
-  /* glass effect */
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px) saturate(150%);
-  }
-  @media (prefers-color-scheme: dark) {
-    .glass-effect {
-      background: rgba(30, 41, 59, 0.55);
+  </script>
+  
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --ring-color: theme('colors.brand.500');
     }
-  }
-  /* intersection animations */
-  .intersection-animate {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .intersection-animate.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-</style>
+    .link-underline {
+      position: relative;
+      transition: color 0.2s;
+    }
+    .link-underline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.2s ease-out;
+    }
+    .link-underline:hover::after,
+    .link-underline:focus-visible::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    .focus-ring:focus-visible {
+      outline: 2px solid var(--ring-color);
+      outline-offset: 2px;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #2aa7ff, #0070d7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .card-hover {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px) saturate(150%);
+    }
+    @media (prefers-color-scheme: dark) {
+      .glass-effect {
+        background: rgba(30, 41, 59, 0.55);
+      }
+    }
+    .intersection-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .intersection-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .image-placeholder {
+      background: linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
+                  linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
+                  linear-gradient(45deg, transparent 75%, #e2e8f0 75%), 
+                  linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+    .dark .image-placeholder {
+      background: linear-gradient(45deg, #334155 25%, transparent 25%), 
+                  linear-gradient(-45deg, #334155 25%, transparent 25%), 
+                  linear-gradient(45deg, transparent 75%, #334155 75%), 
+                  linear-gradient(-45deg, transparent 75%, #334155 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+  </style>
+</head>
 
-<!-- Favicons -->
-<link rel="icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
-
-  </head>  <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-    <!-- Skip to content -->
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 bg-brand-600 text-white p-2 rounded focus-ring">Skip to main content</a><!-- ==================== HEADER ==================== -->
-<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-        <span class="font-semibold text-lg hidden sm:inline">iD01t Productions</span>
-      </a>
-
-      <!-- Desktop nav -->
-      <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
-        <a href="/store.html" class="link-underline focus-ring rounded px-2 py-1">Store</a>
-        <a href="/ebooks.html" class="link-underline focus-ring rounded px-2 py-1">eBooks</a>
-        <a href="/audiobooks.html" class="link-underline focus-ring rounded px-2 py-1">Audiobooks</a>
-        <a href="/apps.html" class="link-underline focus-ring rounded px-2 py-1">Apps</a>
-        <a href="/games.html" class="link-underline focus-ring rounded px-2 py-1">Games</a>
-        <a href="/music.html" class="link-underline focus-ring rounded px-2 py-1">Music</a>
-        <a href="/blog.html" class="link-underline focus-ring rounded px-2 py-1">Blog</a>
-        <a href="/about.html" class="link-underline focus-ring rounded px-2 py-1">About</a>
-        <a href="/contact.html" class="link-underline focus-ring rounded px-2 py-1">Contact</a>
-      </nav>
-
-      <!-- Actions -->
-      <div class="flex items-center gap-3">
-        <button id="themeToggle" class="focus-ring rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle theme">
-          <span class="theme-text">Theme</span>
-        </button>
-        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2 transition-all duration-300 hover:scale-105 animate-pulse-glow focus-ring">
-          Newsletter
-        </a>
-        <button id="mobileMenuBtn" class="md:hidden focus-ring inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
-          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 6h18M3 12h18M3 18h18" />
-          </svg>
-          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 hidden transition-transform" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 6l12 12M6 18L18 6" />
-          </svg>
-        </button>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-8">
+          <a href="/" class="flex items-center space-x-2 focus-ring" aria-label="iD01t Productions home">
+            <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8">
+            <span class="font-semibold text-lg">iD01t Productions</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="/store.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Store</a>
+            <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">eBooks</a>
+            <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Audiobooks</a>
+            <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Apps</a>
+            <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Games</a>
+            <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Music</a>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="themeToggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle theme">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          <a href="/contact.html" class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring">Contact</a>
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle mobile menu" aria-expanded="false">
+            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Mobile menu -->
-  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 glass-effect" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
-    <div class="px-4 py-3 flex flex-col gap-2">
-      <h2 id="mobile-menu-title" class="sr-only">Navigation Menu</h2>
-      <a href="/store.html" class="py-2 px-2 rounded focus-ring">Store</a>
-      <a href="/ebooks.html" class="py-2 px-2 rounded focus-ring">eBooks</a>
-      <a href="/audiobooks.html" class="py-2 px-2 rounded focus-ring">Audiobooks</a>
-      <a href="/apps.html" class="py-2 px-2 rounded focus-ring">Apps</a>
-      <a href="/games.html" class="py-2 px-2 rounded focus-ring">Games</a>
-      <a href="/music.html" class="py-2 px-2 rounded focus-ring">Music</a>
-      <a href="/blog.html" class="py-2 px-2 rounded focus-ring">Blog</a>
-      <a href="/about.html" class="py-2 px-2 rounded focus-ring">About</a>
-      <a href="/contact.html" class="py-2 px-2 rounded focus-ring">Contact</a>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <div class="px-4 py-4 space-y-3">
+        <a href="/store.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Store</a>
+        <a href="/ebooks.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">eBooks</a>
+        <a href="/audiobooks.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Audiobooks</a>
+        <a href="/apps.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Apps</a>
+        <a href="/games.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Games</a>
+        <a href="/music.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Music</a>
+        <a href="/contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+      </div>
     </div>
-  </div>
-</header>
+  </nav>
 
-<!-- ==================== MAIN ==================== -->
-<main id="main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 space-y-24">
-  <!-- Hero -->
-  <section class="grid md:grid-cols-2 gap-12 items-center intersection-animate">
-    <div>
-      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight mb-6 leading-tight">
-        <span class="gradient-text block">Apps, eBooks, Games &amp; Music for creators</span>
-      </h1>
-      <p class="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-        Professional Windows utilities, technical eBooks, multiplayer games, and original music.
-        <strong>Built for creators who demand quality, speed, and reliability.</strong>
-      </p>
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="intersection-animate">
+        <h1 class="text-5xl md:text-7xl font-bold gradient-text mb-6">
+          Apps, eBooks, Games & Music
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300 mb-8">
+          Professional Windows utilities, technical eBooks, multiplayer games, and original music.
+        </h2>
+        <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+          Built for creators who demand <strong>quality, speed, and reliability</strong>.
+        </p>
 
-      <div class="grid sm:grid-cols-3 gap-4 mb-8">
-        <a href="/apps.html" class="group flex items-center justify-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
-          <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
-          Discover Apps
-        </a>
-        <a href="/ebooks.html" class="group flex items-center justify-center rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
-          <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Browse eBooks
-        </a>
-        <a href="/music.html" class="group flex items-center justify-center rounded-xl bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
-          <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/></svg>
-          Listen to Music
-        </a>
+        <div class="grid sm:grid-cols-3 gap-4 mb-8">
+          <a href="/apps.html" class="group flex items-center justify-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
+            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
+            Discover Apps
+          </a>
+          <a href="/ebooks.html" class="group flex items-center justify-center rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
+            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Browse eBooks
+          </a>
+          <a href="/music.html" class="group flex items-center justify-center rounded-xl bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
+            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/></svg>
+            Listen to Music
+          </a>
+        </div>
+
+        <div class="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400 mb-6">
+          <div class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Professional Quality</div>
+          <div class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Instant Access</div>
+          <div class="flex items-center gap-2"><svg class="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20"><path d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z"/></svg>24/7 Support</div>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400">
+          <time datetime="2025-09-06">Updated September 06, 2025</time> •
+          <span class="animate-bounce-subtle inline-block">🔥</span>
+          <strong>New:</strong> Nini's Adventures Beta Sept 24
+        </p>
       </div>
 
-      <div class="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400 mb-6">
-        <div class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Professional Quality</div>
-        <div class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Instant Access</div>
-        <div class="flex items-center gap-2"><svg class="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20"><path d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z"/></svg>24/7 Support</div>
-      </div>
-      <p class="text-xs text-slate-500 dark:text-slate-400">
-        <time datetime="2025-09-06">Updated September 06, 2025</time> •
-        <span class="animate-bounce-subtle inline-block">🔥</span>
-        <strong>New:</strong> Nini's Adventures Beta Sept 24
-      </p>
-    </div>
-
-    <div class="intersection-animate">
-      <div class="relative">
-        <img src="/assets/img/placeholders/hero-1600x900.webp" alt="Screenshot showcasing iD01t Productions products" class="aspect-[16/10] rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-slate-800 shadow-2xl hover:shadow-brand-500/25 transition-all duration-500 card-hover" width="800" height="500" loading="eager" />
-        <div class="absolute -top-4 -right-4 w-20 h-20 bg-brand-500 rounded-full opacity-20 animate-pulse-glow"></div>
-        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-emerald-500 rounded-full opacity-20 animate-float"></div>
+      <div class="intersection-animate">
+        <div class="relative">
+          <img src="/assets/img/placeholders/hero-1600x900.webp" alt="Screenshot showcasing iD01t Productions products" class="aspect-[16/10] rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-slate-800 shadow-2xl hover:shadow-brand-500/25 transition-all duration-500 card-hover" width="800" height="500" loading="eager" />
+          <div class="absolute -top-4 -right-4 w-20 h-20 bg-brand-500 rounded-full opacity-20 animate-pulse-glow"></div>
+          <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-emerald-500 rounded-full opacity-20 animate-float"></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Products section -->
-  <section class="space-y-12">
-    <h2 class="text-4xl font-bold gradient-text intersection-animate">Featured Products</h2>
-    <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 intersection-animate">Professional tools and content built with real‑world testing and creator feedback</p>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-16 intersection-animate">
+      <h2 class="text-4xl font-bold gradient-text mb-4">Featured Products</h2>
+      <p class="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Professional tools and content built with real‑world testing and creator feedback</p>
+    </div>
+
     <div class="grid md:grid-cols-3 gap-8">
       <!-- HTML2exe Pro -->
       <article class="intersection-animate group card-hover">
         <div class="relative overflow-hidden rounded-xl mb-4">
-          <img src="/c43cedc5-98a1-4c85-8435-2482eafb8c67.png" alt="HTML2exe Pro - Convert HTML to Windows applications" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <img src="/assets/img/products/html2exe-pro-cover.webp" alt="HTML2exe Pro - Convert HTML to Windows applications" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
           <div class="absolute top-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">Popular</div>
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
@@ -263,7 +327,7 @@
       <!-- Nini's Adventures -->
       <article class="intersection-animate group card-hover">
         <div class="relative overflow-hidden rounded-xl mb-4">
-          <img src="/1a031cc5-3393-43fb-81b2-a5fded519458.png" alt="Nini's Adventures: Kitties Mayhem - Online multiplayer game" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <img src="/assets/img/products/nini-adventures-cover.webp" alt="Nini's Adventures: Kitties Mayhem - Online multiplayer game" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
           <div class="absolute top-3 right-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium animate-pulse">Beta Soon!</div>
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
@@ -281,7 +345,7 @@
       <!-- Technical eBooks -->
       <article class="intersection-animate group card-hover">
         <div class="relative overflow-hidden rounded-xl mb-4">
-          <img src="/assets/img/brand/ebooks-hd.png" alt="Technical eBooks cover" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <img src="/assets/img/products/technical-ebooks-cover.webp" alt="Technical eBooks cover" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
           <div class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-medium">Technical</div>
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
@@ -292,7 +356,7 @@
             <span class="flex items-center gap-1 text-emerald-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Instant Download</span>
             <span class="flex items-center gap-1 text-amber-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>Expert Content</span>
           </div>
-          <a href="/ebooks/technical.html" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">
+          <a href="/ebooks.html" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">
             Buy Now<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -300,181 +364,242 @@
     </div>
   </section>
 
-  <!-- Nini's Adventures Section -->
-  <section class="nini_home space-y-12 intersection-animate">
-    <header class="text-center">
-      <h2 class="text-4xl font-bold gradient-text mb-4">Welcome to Nini’s Adventures</h2>
-      <p class="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Step into a bright world of comedy, action, and cozy kitty chaos with Nini and friends</p>
-    </header>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <article class="feature group card-hover glass-effect rounded-2xl p-6 text-center">
-        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">🎬 New Episode</h3>
-        <p class="text-slate-600 dark:text-slate-300 mb-4">Catch the latest cartoon episode packed with laughs, surprises, and a tiny splash of mayhem</p>
-        <p><a href="/watch" class="cta inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Watch now <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></p>
-      </article>
-
-      <article class="feature group card-hover glass-effect rounded-2xl p-6 text-center">
-        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">📖 Illustrated Ebook</h3>
-        <p class="text-slate-600 dark:text-slate-300 mb-4">Enjoy a full color storybook with vivid art, playful dialogue, and a heartwarming message</p>
-        <p><a href="/ebook" class="cta inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Get the ebook <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></p>
-      </article>
-
-      <article class="feature group card-hover glass-effect rounded-2xl p-6 text-center">
-        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">🖍️ Coloring PDF</h3>
-        <p class="text-slate-600 dark:text-slate-300 mb-4">Print friendly pages for artists of every age plus bonus frames and stickers</p>
-        <p><a href="/coloring" class="cta inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Download pages <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></p>
-      </article>
-
-      <article class="feature group card-hover glass-effect rounded-2xl p-6 text-center">
-        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">🛍️ Official Merch</h3>
-        <p class="text-slate-600 dark:text-slate-300 mb-4">Wear the adventure with tees, hoodies, mugs, and more created for fans and collectors</p>
-        <p><a href="/shop" class="cta inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Shop merch <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></p>
-      </article>
-
-      <article class="feature group card-hover glass-effect rounded-2xl p-6 text-center">
-        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">🎵 Official Cartoon Soundtrack</h3>
-        <p class="text-slate-600 dark:text-slate-300 mb-4">Turn up the fun with catchy themes and tender tunes from the show</p>
-        <p><a href="/soundtrack" class="cta inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Listen now <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></p>
-      </article>
-
-      <article class="feature group card-hover glass-effect rounded-2xl p-6 text-center">
-        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">✨ And More</h3>
-        <p class="text-slate-600 dark:text-slate-300 mb-4">Behind the scenes art, wallpapers, creator notes, and community events</p>
-        <p><a href="/extras" class="cta inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Explore extras <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></p>
-      </article>
-    </div>
-
-    <footer class="subscribe bg-slate-100 dark:bg-slate-800/50 rounded-2xl p-8 text-center max-w-3xl mx-auto">
-      <h3 class="font-bold text-2xl mb-3">Join the Nini Club</h3>
-      <p class="text-slate-600 dark:text-slate-300 mb-6">Get early updates, sneak peeks, and special offers</p>
-      <form action="/subscribe" method="post" class="subscribe_form flex justify-center gap-2">
-        <input type="email" name="email" placeholder="Your email" required class="w-full max-w-sm rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-900 focus:ring-brand-500 focus:border-brand-500 transition">
-        <button type="submit" class="inline-flex items-center rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 transition-all duration-300 hover:scale-105 focus-ring">Join now</button>
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-8 md:p-12 text-center intersection-animate">
+      <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Stay Updated</h2>
+      <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+        Get the latest updates on new releases, exclusive content, and special offers. Join our community of creators and innovators.
+      </p>
+      
+      <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+        <input 
+          type="email" 
+          placeholder="Enter your email address" 
+          class="flex-1 px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+          required
+        >
+        <button 
+          type="submit" 
+          class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-colors hover:scale-105 focus-ring"
+        >
+          Subscribe
+        </button>
       </form>
-    </footer>
+      
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-4">
+        No spam, unsubscribe at any time. Privacy policy respected.
+      </p>
+    </div>
   </section>
 
-  <!-- Additional sections (Latest Insights, Complete Ecosystem, Newsletter) would follow here using similar markup as above -->
-</main>
+  <!-- Footer -->
+  <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+      <div class="space-y-4">
+        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
+          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
+          <span class="font-semibold text-lg text-white">iD01t Productions</span>
+        </a>
+        <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+      </div>
 
-<!-- Spacer to ensure footer visibility on short viewports -->
-<div class="h-20"></div>
+      <div>
+        <h3 class="font-semibold text-white mb-4">Products</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
+          <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
+          <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
+          <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
+          <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
+        </ul>
+      </div>
 
-<!-- ==================== FOOTER ==================== -->
-<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-    <div class="space-y-4">
-      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-        <span class="font-semibold text-lg text-white">iD01t Productions</span>
-      </a>
-      <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+      <div>
+        <h3 class="font-semibold text-white mb-4">Resources</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
+          <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
+          <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
+          <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
+          <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-white mb-4">Legal</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
+          <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
+          <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div>
-      <h3 class="font-semibold text-white mb-4">Products</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
-        <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
-        <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
-        <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
-        <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
-      </ul>
+    <!-- Bottom -->
+    <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
+        <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
+        <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
+      </div>
     </div>
+  </footer>
 
-    <div>
-      <h3 class="font-semibold text-white mb-4">Resources</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
-        <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
-        <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
-        <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
-        <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
-      </ul>
-    </div>
+  <!-- Scripts -->
+  <script>
+    // Theme toggle functionality
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const setTheme = (mode) => {
+      if (mode === 'dark') {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+      localStorage.setItem('theme', mode);
+    };
+    themeToggle.addEventListener('click', () => {
+      const newMode = root.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(newMode);
+    });
+    // Init theme
+    (() => {
+      const saved = localStorage.getItem('theme');
+      if (saved) setTheme(saved);
+      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+    })();
 
-    <div>
-      <h3 class="font-semibold text-white mb-4">Legal</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
-        <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
-        <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bottom -->
-  <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-    <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-    <div class="flex items-center gap-6">
-      <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
-      <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
-      <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
-    </div>
-  </div>
-</footer>
-
-<!-- ==================== SCRIPTS ==================== -->
-<script>
-  // Theme toggle (light/dark)
-  const themeToggle = document.getElementById('themeToggle');
-  const root = document.documentElement;
-  const updateThemeText = () => {
-    const isDark = root.classList.contains('dark');
-    document.querySelectorAll('.theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
-  };
-  const setTheme = mode => {
-    if (mode === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-    localStorage.setItem('theme', mode);
-    updateThemeText();
-  };
-  themeToggle.addEventListener('click', () => {
-    const newMode = root.classList.contains('dark') ? 'light' : 'dark';
-    setTheme(newMode);
-  });
-  // Init theme based on saved value / system preference
-  (() => {
-    const saved = localStorage.getItem('theme');
-    if (saved) setTheme(saved);
-    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
-  })();
-
-  // Mobile nav toggle
-  const mobileBtn = document.getElementById('mobileMenuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const menuIcon = document.getElementById('menuIcon');
-  const closeIcon = document.getElementById('closeIcon');
-  mobileBtn.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('hidden');
-    mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    menuIcon.classList.toggle('hidden', isOpen);
-    closeIcon.classList.toggle('hidden', !isOpen);
-    if (isOpen) {
-      mobileMenu.querySelector('a').focus();
-    } else {
-      mobileBtn.focus();
-    }
-  });
-
-  // Intersection animations
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+    // Mobile menu functionality
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuIcon.classList.toggle('hidden', isOpen);
+      closeIcon.classList.toggle('hidden', !isOpen);
+      if (isOpen) {
+        mobileMenu.querySelector('a').focus();
+      } else {
+        mobileBtn.focus();
       }
     });
-  }, { threshold: 0.3 });
-  document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
 
-  // Current year in footer
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    // Intersection animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
 
-  </body>
+    // Enhanced image loading with multiple fallback strategies
+    function loadImageWithFallback(img, primarySrc, fallbackSrc = '/assets/placeholder-cover.svg') {
+      const imageLoader = new Image();
+      
+      imageLoader.onload = function() {
+        img.src = primarySrc;
+        img.classList.remove('opacity-0');
+        img.classList.add('opacity-100');
+      };
+      
+      imageLoader.onerror = function() {
+        // Try a different fallback strategy
+        const secondaryFallback = '/assets/images/placeholder-product-cover.webp';
+        const tertiaryFallback = '/assets/img/placeholders/product-placeholder.png';
+        
+        const secondLoader = new Image();
+        secondLoader.onload = function() {
+          img.src = secondaryFallback;
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100');
+        };
+        secondLoader.onerror = function() {
+          const thirdLoader = new Image();
+          thirdLoader.onload = function() {
+            img.src = tertiaryFallback;
+            img.classList.remove('opacity-0');
+            img.classList.add('opacity-100');
+          };
+          thirdLoader.onerror = function() {
+            // Final fallback to basic SVG
+            img.src = fallbackSrc;
+            img.classList.remove('opacity-0');
+            img.classList.add('opacity-100');
+          };
+          thirdLoader.src = tertiaryFallback;
+        };
+        secondLoader.src = secondaryFallback;
+      };
+      
+      imageLoader.src = primarySrc;
+    }
+
+    // Load product images with enhanced fallback system
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      // Load images with fallback system
+      const productImages = [
+        {
+          selector: 'img[alt*="HTML2exe Pro"]',
+          primary: '/assets/img/products/html2exe-pro-cover.webp',
+          fallback: '/assets/img/placeholders/app-placeholder.webp'
+        },
+        {
+          selector: 'img[alt*="Nini\'s Adventures"]',
+          primary: '/assets/img/products/nini-adventures-cover.webp', 
+          fallback: '/assets/img/placeholders/game-placeholder.webp'
+        },
+        {
+          selector: 'img[alt*="Technical eBooks"]',
+          primary: '/assets/img/products/technical-ebooks-cover.webp',
+          fallback: '/assets/img/placeholders/ebook-placeholder.webp'
+        }
+      ];
+
+      productImages.forEach(({ selector, primary, fallback }) => {
+        const img = document.querySelector(selector);
+        if (img) {
+          loadImageWithFallback(img, primary, fallback);
+        }
+      });
+
+      // Newsletter form handling
+      const newsletterForm = document.querySelector('#newsletter form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = e.target.querySelector('input[type="email"]').value;
+          
+          // Simulate newsletter signup
+          const button = e.target.querySelector('button');
+          const originalText = button.textContent;
+          button.textContent = 'Subscribing...';
+          button.disabled = true;
+          
+          setTimeout(() => {
+            button.textContent = 'Subscribed!';
+            button.classList.add('bg-green-600');
+            setTimeout(() => {
+              button.textContent = originalText;
+              button.disabled = false;
+              button.classList.remove('bg-green-600');
+              e.target.reset();
+            }, 2000);
+          }, 1000);
+        });
+      }
+    });
+  </script>
+</body>
 </html>
