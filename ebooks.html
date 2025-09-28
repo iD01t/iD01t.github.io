@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Professional eBooks · iD01t Productions — Technical Guides, AI, Programming & More</title>
-  <meta name="description" content="Discover 200+ professional eBooks by Guillaume Lessard covering programming, AI, automation, chess, music production, and personal development. Available on Google Play Books with HD covers and detailed guides." />
+  <meta name="description" content="Discover 200+ professional eBooks by Guillaume Lessard covering programming, AI, automation, chess, music production, and personal development. Available on Google Play Books with HD covers and detailed guides.">
   
   <!-- SEO Meta Tags -->
-  <link rel="canonical" href="https://id01t.store/ebooks.html" />
-  <meta name="author" content="Guillaume Lessard" />
-  <meta name="keywords" content="eBooks, programming guides, AI books, Python tutorials, chess strategies, music production, technical books, Guillaume Lessard, iD01t Productions" />
+  <link rel="canonical" href="https://id01t.store/ebooks.html">
+  <meta name="author" content="Guillaume Lessard">
+  <meta name="keywords" content="eBooks, programming guides, AI books, Python tutorials, chess strategies, music production, technical books, Guillaume Lessard, iD01t Productions">
   
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Professional eBooks · iD01t Productions" />
-  <meta property="og:description" content="200+ professional eBooks covering programming, AI, automation, and creative skills. Technical guides by Guillaume Lessard." />
-  <meta property="og:url" content="https://id01t.store/ebooks.html" />
-  <meta property="og:image" content="https://id01t.store/assets/harvested/ebooks/og_ebooks.jpg" />
-  <meta property="og:site_name" content="iD01t Productions" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Professional eBooks · iD01t Productions">
+  <meta property="og:description" content="200+ professional eBooks covering programming, AI, automation, and creative skills. Technical guides by Guillaume Lessard.">
+  <meta property="og:url" content="https://id01t.store/ebooks.html">
+  <meta property="og:image" content="https://id01t.store/assets/harvested/ebooks/og_ebooks.jpg">
+  <meta property="og:site_name" content="iD01t Productions">
   
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Professional eBooks · iD01t Productions" />
-  <meta name="twitter:description" content="200+ professional eBooks covering programming, AI, automation, and creative skills." />
-  <meta name="twitter:image" content="https://id01t.store/assets/harvested/ebooks/og_ebooks.jpg" />
-  <meta name="twitter:creator" content="@id01t" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Professional eBooks · iD01t Productions">
+  <meta name="twitter:description" content="200+ professional eBooks covering programming, AI, automation, and creative skills.">
+  <meta name="twitter:image" content="https://id01t.store/assets/harvested/ebooks/og_ebooks.jpg">
+  <meta name="twitter:creator" content="@id01t">
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -54,7 +54,7 @@
     }
   }
   </script>
-
+  
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -63,7 +63,7 @@
         extend: {
           colors: {
             brand: {
-              50:  '#f5faff',
+              50: '#f5faff',
               100: '#e0f2ff',
               200: '#bae0ff',
               300: '#8dceff',
@@ -92,13 +92,13 @@
           animation: {
             'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
             'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
-            float: 'float 6s ease-in-out infinite'
+            'float': 'float 6s ease-in-out infinite'
           }
         }
       }
-    };
+    }
   </script>
-
+  
   <!-- Custom Styles -->
   <style>
     :root {
@@ -161,192 +161,89 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .line-clamp-3 {
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    
-    /* HD Image Loading Enhancements */
     .image-placeholder {
-      background: linear-gradient(45deg, 
-        rgba(148, 163, 184, 0.3) 0%, 
-        rgba(203, 213, 225, 0.5) 50%, 
-        rgba(148, 163, 184, 0.3) 100%);
-      background-size: 400% 400%;
-      animation: shimmer 2s ease-in-out infinite;
-      transition: opacity 0.3s ease-in-out;
+      background: linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
+                  linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
+                  linear-gradient(45deg, transparent 75%, #e2e8f0 75%), 
+                  linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
     }
-    
-    @keyframes shimmer {
-      0% { background-position: 0% 0%; }
-      50% { background-position: 100% 100%; }
-      100% { background-position: 0% 0%; }
-    }
-    
-    .image-loaded {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    /* Responsive image containers */
-    .aspect-\[3\/4\] {
-      aspect-ratio: 3/4;
-    }
-    
-    /* High DPI image optimization */
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      img[srcset] {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-      }
-    }
-    
-    /* Better image quality on retina displays */
-    img {
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: optimize-contrast;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-    }
-    
-    /* Loading state for images */
-    img[loading="lazy"] {
-      transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
-    }
-    
-    /* Dark mode image placeholder */
-    @media (prefers-color-scheme: dark) {
-      .image-placeholder {
-        background: linear-gradient(45deg, 
-          rgba(51, 65, 85, 0.3) 0%, 
-          rgba(71, 85, 105, 0.5) 50%, 
-          rgba(51, 65, 85, 0.3) 100%);
-      }
-    }
-    
-    /* Focus states for better accessibility */
-    img:focus-visible {
-      outline: 2px solid rgba(59, 130, 246, 0.5);
-      outline-offset: 2px;
+    .dark .image-placeholder {
+      background: linear-gradient(45deg, #334155 25%, transparent 25%), 
+                  linear-gradient(-45deg, #334155 25%, transparent 25%), 
+                  linear-gradient(45deg, transparent 75%, #334155 75%), 
+                  linear-gradient(-45deg, transparent 75%, #334155 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
     }
   </style>
-
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Early theme init to avoid FOUC -->
-  <script>
-    (function(){
-      try {
-        var s = localStorage.getItem('theme');
-        var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; 
-        if(s === 'dark' || (!s && d)) {
-          document.documentElement.classList.add('dark');
-        }
-      } catch(e) {}
-    })();
-  </script>
 </head>
-<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-  <!-- Skip to content -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 bg-brand-600 text-white p-2 rounded focus-ring">Skip to main content</a>
 
-  <!-- ==================== HEADER ==================== -->
-<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-        <span class="font-semibold text-lg hidden sm:inline">iD01t Productions</span>
-      </a>
-
-      <!-- Desktop nav -->
-      <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
-        <a href="/store.html" class="link-underline focus-ring rounded px-2 py-1">Store</a>
-        <a href="/ebooks.html" class="link-underline focus-ring rounded px-2 py-1">eBooks</a>
-        <a href="/audiobooks.html" class="link-underline focus-ring rounded px-2 py-1">Audiobooks</a>
-        <a href="/apps.html" class="link-underline focus-ring rounded px-2 py-1">Apps</a>
-        <a href="/games.html" class="link-underline focus-ring rounded px-2 py-1">Games</a>
-        <a href="/music.html" class="link-underline focus-ring rounded px-2 py-1">Music</a>
-        <a href="/blog.html" class="link-underline focus-ring rounded px-2 py-1">Blog</a>
-        <a href="/about.html" class="link-underline focus-ring rounded px-2 py-1">About</a>
-        <a href="/contact.html" class="link-underline focus-ring rounded px-2 py-1">Contact</a>
-      </nav>
-
-      <!-- Actions -->
-      <div class="flex items-center gap-3">
-        <button id="themeToggle" class="focus-ring rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle theme">
-          <span class="theme-text">Theme</span>
-        </button>
-        <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2 transition-all duration-300 hover:scale-105 animate-pulse-glow focus-ring">
-          Newsletter
-        </a>
-        <button id="mobileMenuBtn" class="md:hidden focus-ring inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
-          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 6h18M3 12h18M3 18h18" />
-          </svg>
-          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 hidden transition-transform" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 6l12 12M6 18L18 6" />
-          </svg>
-        </button>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-8">
+          <a href="/" class="flex items-center space-x-2 focus-ring" aria-label="iD01t Productions home">
+            <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8">
+            <span class="font-semibold text-lg">iD01t Productions</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="/store.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Store</a>
+            <a href="/ebooks.html" class="text-brand-600 dark:text-brand-400 font-medium link-underline">eBooks</a>
+            <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Audiobooks</a>
+            <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Apps</a>
+            <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Games</a>
+            <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Music</a>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="themeToggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle theme">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          <a href="/contact.html" class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring">Contact</a>
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle mobile menu" aria-expanded="false">
+            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Mobile menu -->
-  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 glass-effect" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
-    <div class="px-4 py-3 flex flex-col gap-2">
-      <h2 id="mobile-menu-title" class="sr-only">Navigation Menu</h2>
-      <a href="/store.html" class="py-2 px-2 rounded focus-ring">Store</a>
-      <a href="/ebooks.html" class="py-2 px-2 rounded focus-ring">eBooks</a>
-      <a href="/audiobooks.html" class="py-2 px-2 rounded focus-ring">Audiobooks</a>
-      <a href="/apps.html" class="py-2 px-2 rounded focus-ring">Apps</a>
-      <a href="/games.html" class="py-2 px-2 rounded focus-ring">Games</a>
-      <a href="/music.html" class="py-2 px-2 rounded focus-ring">Music</a>
-      <a href="/blog.html" class="py-2 px-2 rounded focus-ring">Blog</a>
-      <a href="/about.html" class="py-2 px-2 rounded focus-ring">About</a>
-      <a href="/contact.html" class="py-2 px-2 rounded focus-ring">Contact</a>
-    </div>
-  </div>
-</header>
-
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 glass-effect" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <h2 id="mobile-menu-title" class="sr-only">Navigation Menu</h2>
-        <a href="/store.html" class="py-2 px-2 rounded focus-ring">Store</a>
-        <a href="/ebooks.html" class="py-2 px-2 rounded focus-ring text-brand-600 dark:text-brand-400">eBooks</a>
-        <a href="/audiobooks.html" class="py-2 px-2 rounded focus-ring">Audiobooks</a>
-        <a href="/apps.html" class="py-2 px-2 rounded focus-ring">Apps</a>
-        <a href="/games.html" class="py-2 px-2 rounded focus-ring">Games</a>
-        <a href="/music.html" class="py-2 px-2 rounded focus-ring">Music</a>
-        <a href="/blog.html" class="py-2 px-2 rounded focus-ring">Blog</a>
-        <a href="/about.html" class="py-2 px-2 rounded focus-ring">About</a>
-        <a href="/contact.html" class="py-2 px-2 rounded focus-ring">Contact</a>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <div class="px-4 py-4 space-y-3">
+        <a href="/store.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Store</a>
+        <a href="/ebooks.html" class="block text-brand-600 dark:text-brand-400 font-medium">eBooks</a>
+        <a href="/audiobooks.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Audiobooks</a>
+        <a href="/apps.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Apps</a>
+        <a href="/games.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Games</a>
+        <a href="/music.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Music</a>
+        <a href="/contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
       </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Main Content -->
-  <main id="main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 space-y-12">
-    
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Hero Section -->
-    <section class="text-center intersection-animate">
-      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight mb-6 leading-tight">
-        <span class="gradient-text">Professional eBooks</span>
-      </h1>
-      <p class="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+    <section class="text-center mb-16 intersection-animate">
+      <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-6">Professional eBooks</h1>
+      <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
         200+ technical eBooks covering programming, AI, automation, chess mastery, music production, and personal development. 
         Written by Guillaume Lessard with clear explanations and practical examples.
       </p>
       
-      <!-- Quick Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto mb-12">
         <div class="text-center">
           <div class="text-3xl font-bold text-brand-600 dark:text-brand-400">200+</div>
           <div class="text-sm text-slate-600 dark:text-slate-300">eBooks Available</div>
@@ -516,10 +413,8 @@
     const setTheme = (mode) => {
       if (mode === 'dark') {
         root.classList.add('dark');
-        document.querySelector('.theme-text').textContent = 'Light';
       } else {
         root.classList.remove('dark');
-        document.querySelector('.theme-text').textContent = 'Dark';
       }
       localStorage.setItem('theme', mode);
     };
@@ -585,24 +480,72 @@
       return 'other';
     }
 
+    // Enhanced image loading with multiple fallback strategies
+    function loadImageWithFallback(img, primarySrc, fallbackSrc = '/assets/placeholder-cover.svg') {
+      const imageLoader = new Image();
+      
+      imageLoader.onload = function() {
+        img.src = primarySrc;
+        img.classList.remove('opacity-0');
+        img.classList.add('opacity-100');
+        img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
+      };
+      
+      imageLoader.onerror = function() {
+        // Try a different fallback strategy
+        const secondaryFallback = '/assets/images/placeholder-book-cover.webp';
+        const tertiaryFallback = '/assets/img/placeholders/book-cover-placeholder.png';
+        
+        const secondLoader = new Image();
+        secondLoader.onload = function() {
+          img.src = secondaryFallback;
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100');
+          img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
+        };
+        secondLoader.onerror = function() {
+          const thirdLoader = new Image();
+          thirdLoader.onload = function() {
+            img.src = tertiaryFallback;
+            img.classList.remove('opacity-0');
+            img.classList.add('opacity-100');
+            img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
+          };
+          thirdLoader.onerror = function() {
+            // Final fallback to basic SVG
+            img.src = fallbackSrc;
+            img.classList.remove('opacity-0');
+            img.classList.add('opacity-100');
+            img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
+          };
+          thirdLoader.src = tertiaryFallback;
+        };
+        secondLoader.src = secondaryFallback;
+      };
+      
+      imageLoader.src = primarySrc;
+    }
+
     function createBookCard(ebook) {
       const category = getCategoryFromTitle(ebook.title);
       const cleanTitle = ebook.title.replace(/^[🌿✨🎧🚀📖]+\s*/, ''); // Remove emoji prefixes
       const cleanDesc = cleanDescription(ebook.description);
       const landingPageUrl = `/ebooks/${ebook.title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}.html`;
       const buyUrl = ebook.link || '#';
+      const imageUrl = ebook.image || '/assets/placeholder-cover.svg';
 
       return `
         <article class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700 card-hover">
           <div class="aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
             <div class="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 animate-pulse image-placeholder"></div>
             <img
-              src="${ebook.image}"
+              src="/assets/placeholder-cover.svg"
+              data-src="${imageUrl}"
               alt="${cleanTitle} cover"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 image-loaded"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 image-loaded opacity-0"
               loading="lazy"
               decoding="async"
-              onerror="this.onerror=null;this.src='/assets/placeholder-cover.svg';"
+              onerror="this.onerror=null;this.src='/assets/placeholder-cover.svg';this.classList.remove('opacity-0');this.classList.add('opacity-100');this.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');"
             />
           </div>
           <div class="p-6 space-y-4">
@@ -666,6 +609,22 @@
 
         const booksHTML = newBooks.map(createBookCard).join('');
         ebooksGrid.insertAdjacentHTML('beforeend', booksHTML);
+
+        // Load images with enhanced fallback system
+        setTimeout(() => {
+          const images = ebooksGrid.querySelectorAll('img[data-src]');
+          images.forEach(img => {
+            const dataSrc = img.getAttribute('data-src');
+            if (dataSrc && dataSrc !== '/assets/placeholder-cover.svg') {
+              loadImageWithFallback(img, dataSrc);
+            } else {
+              img.src = '/assets/placeholder-cover.svg';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+              img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
+            }
+          });
+        }, 100);
 
         if (endIndex >= filteredEbooks.length) {
           loadMoreBtn.classList.add('hidden');
@@ -742,16 +701,32 @@
     async function loadCatalog() {
       try {
         loadingState.style.display = 'block';
-        const response = await fetch('/assets/catalog.json');
         
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        // Try multiple fallback sources for the catalog
+        let data = null;
+        const catalogSources = [
+          '/assets/catalog.json',
+          '/assets/data/catalog.json',
+          '/catalog.json',
+          'https://raw.githubusercontent.com/iD01t/id01t.github.io/main/assets/catalog.json'
+        ];
+        
+        for (const source of catalogSources) {
+          try {
+            const response = await fetch(source);
+            if (response.ok) {
+              data = await response.json();
+              console.log(`Successfully loaded catalog from: ${source}`);
+              break;
+            }
+          } catch (e) {
+            console.warn(`Failed to load catalog from ${source}:`, e);
+            continue;
+          }
         }
-
-        const data = await response.json();
-
+        
         if (!data || !Array.isArray(data.ebooks)) {
-          throw new Error('Invalid catalog data format');
+          throw new Error('Invalid catalog data format or no catalog found');
         }
 
         allEbooks = data.ebooks.filter(ebook => ebook && ebook.title);
@@ -763,7 +738,36 @@
       } catch (error) {
         console.error('Error loading catalog:', error);
         loadingState.innerHTML = `<div class="text-center py-12 text-red-500">Error loading catalog. Please try again later.</div>`;
+        
+        // Show fallback content with sample books
+        showFallbackBooks();
       }
+    }
+    
+    function showFallbackBooks() {
+      const fallbackBooks = [
+        {
+          title: "Professional Python Programming",
+          description: "Master Python with comprehensive guides and real-world examples.",
+          author: "Guillaume Lessard",
+          image: "/assets/images/python-programming-cover.webp",
+          link: "https://play.google.com/store/books",
+          lang: "EN"
+        },
+        {
+          title: "AI Automation Mastery",
+          description: "Learn to build intelligent automation systems with modern AI tools.",
+          author: "Guillaume Lessard", 
+          image: "/assets/images/ai-automation-cover.webp",
+          link: "https://play.google.com/store/books",
+          lang: "EN"
+        }
+      ];
+      
+      allEbooks = fallbackBooks;
+      filteredEbooks = [...allEbooks];
+      resultsCount.textContent = allEbooks.length;
+      loadBooks();
     }
 
     function loadMoreBooks() {
@@ -799,58 +803,5 @@
 
   </script>
 
-<!-- ==================== FOOTER ==================== -->
-<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-    <div class="space-y-4">
-      <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-        <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-        <span class="font-semibold text-lg text-white">iD01t Productions</span>
-      </a>
-      <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-white mb-4">Products</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
-        <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
-        <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
-        <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
-        <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-white mb-4">Resources</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
-        <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
-        <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
-        <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
-        <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-white mb-4">Legal</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
-        <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
-        <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bottom -->
-  <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-    <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-    <div class="flex items-center gap-6">
-      <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
-      <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
-      <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
-    </div>
-  </div>
-</footer>
 </body>
 </html>
