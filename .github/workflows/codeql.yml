@@ -53,7 +53,7 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
-          build-mode: ${{ matrix.build-mode }}
+          build-mode: ${{ matrix['build-mode'] }}
 
       - name: Perform CodeQL Analysis
         if: ${{ matrix.language != 'python' || steps.detect_py.outputs.has_py == 'true' }}
