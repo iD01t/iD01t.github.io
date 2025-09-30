@@ -1,7 +1,24 @@
+# .github/workflows/codeql.yml
+name: "CodeQL Advanced"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '29 11 * * 5'
+
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
     runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+
     strategy:
       fail-fast: false
       matrix:
@@ -12,34 +29,34 @@ jobs:
             build-mode: none
           - language: python
             build-mode: none
-    steps:
-      - uses: actions/checkout@v4
 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      # 👇 detect whether there are any Python files
       - name: Detect Python sources
-        id: detect
+        id: detect_py
         shell: bash
         run: |
           if git ls-files '*.py' | grep -q .; then
-            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "has_py=true" >> "$GITHUB_OUTPUT"
           else
-            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "has_py=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Initialize CodeQL
-        if: ${{ matrix.language != 'python' || steps.detect.outputs.found == 'true' }}
+        if: ${{ matrix.language != 'python' || steps.detect_py.outputs.has_py == 'true' }}
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
-          build-mode: ${{ matrix['build-mode'] }}
+          build-mode: ${{ matrix.build-mode }}
 
       - name: Perform CodeQL Analysis
-        if: ${{ matrix.language != 'python' || steps.detect.outputs.found == 'true' }}
+        if: ${{ matrix.language != 'python' || steps.detect_py.outputs.has_py == 'true' }}
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{ matrix.language }}"
-
-          - uses: actions/checkout@v4
-  with:
-    submodules: true
-    fetch-depth: 0
-
