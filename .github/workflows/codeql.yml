@@ -37,3 +37,9 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{ matrix.language }}"
+
+          - uses: actions/checkout@v4
+  with:
+    submodules: true
+    fetch-depth: 0
+
