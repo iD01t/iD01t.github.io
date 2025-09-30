@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete documentation for HTML2Win Pro - Convert HTML apps into professional Windows executables">
+    <title>HTML2Win Pro - Documentation & Help</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header .tagline {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 1rem 0;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            border-bottom-color: #667eea;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        main {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 2rem auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        h4 {
+            color: #333;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        p {
+            margin: 1rem 0;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .feature-card h4 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .warning-box strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .info-box strong {
+            color: #0c5460;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .legal-box {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .legal-box h3 {
+            color: #721c24;
+            margin-top: 0;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .step-list li {
+            counter-increment: step-counter;
+            margin: 1.5rem 0;
+            padding-left: 3rem;
+            position: relative;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        footer {
+            background: #2d2d2d;
+            color: white;
+            padding: 3rem 0 1rem 0;
+            margin-top: 4rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: #8ab4f8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        footer .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #999;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav .container {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HTML2Win Pro v1.0.0.0</h1>
+            <p class="tagline">Professional Edition - Complete Documentation & User Guide</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#getting-started">Getting Started</a>
+            <a href="#features">Features</a>
+            <a href="#building">Building Apps</a>
+            <a href="#configuration">Configuration</a>
+            <a href="#cli">Command Line</a>
+            <a href="#troubleshooting">Troubleshooting</a>
+            <a href="#legal">Legal & Licensing</a>
+            <a href="#support">Support</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>HTML2Win Pro is a professional desktop application that converts HTML-based applications into standalone Windows executables. The tool provides a complete graphical user interface for configuring, building, and packaging your web applications as native Windows programs without requiring programming knowledge.</p>
+
+            <p>Built on proven open-source technologies including PyWebView and PyInstaller, HTML2Win Pro streamlines the conversion process while offering advanced features for professional developers and businesses.</p>
+        </section>
+
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+
+            <h3>System Requirements</h3>
+            <ul>
+                <li><strong>Operating System:</strong> Windows 10 or later (64-bit recommended)</li>
+                <li><strong>Disk Space:</strong> Minimum 500 MB free space for the application plus additional space for builds</li>
+                <li><strong>Memory:</strong> 4 GB RAM minimum, 8 GB recommended</li>
+                <li><strong>Dependencies:</strong> Microsoft Edge WebView2 Runtime (installed automatically on Windows 10/11)</li>
+                <li><strong>Internet:</strong> Required for URL-based projects and update checks</li>
+            </ul>
+
+            <h3>First Launch</h3>
+            <ol class="step-list">
+                <li><strong>Run the Application:</strong> Double-click <code>HTML2Win Pro.exe</code> to launch the application. The first launch may take a few seconds to initialize.</li>
+                <li><strong>Interface Overview:</strong> You'll see a modern dark-themed interface with a sidebar for navigation and a main panel for configuration.</li>
+                <li><strong>Check Dependencies:</strong> Go to Tools → Check Dependencies to verify all required packages are installed correctly.</li>
+                <li><strong>Start Your First Project:</strong> Follow the Quick Start guide below to create your first executable.</li>
+            </ol>
+
+            <h3>Quick Start Guide</h3>
+            <ol class="step-list">
+                <li><strong>Prepare Your HTML Project:</strong> Ensure you have a folder containing your HTML application with an <code>index.html</code> file as the entry point.</li>
+                <li><strong>Configure Application Information:</strong> In the Project tab, enter your app name, version, and author information.</li>
+                <li><strong>Select Source:</strong> Choose "Local Folder" and browse to select your HTML project folder.</li>
+                <li><strong>Configure Window Settings:</strong> Switch to the Window tab to set your application's window title and initial size.</li>
+                <li><strong>Preview Your App:</strong> Click the "PREVIEW (F6)" button to test your application before building. This opens your app in a WebView window exactly as it will appear in the final executable.</li>
+                <li><strong>Build Executable:</strong> Once satisfied with the preview, click "BUILD (F5)" to create your Windows executable. The build process typically takes 2-5 minutes depending on project size.</li>
+                <li><strong>Locate Output:</strong> After successful build, click "Yes" when prompted to open the output folder containing your executable.</li>
+            </ol>
+        </section>
+
+        <section id="features">
+            <h2>Features & Capabilities</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🎨 Intuitive GUI</h4>
+                    <p>Modern, professional interface built with CustomTkinter for easy configuration without command-line complexity.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>👁️ Live Preview</h4>
+                    <p>Test your application before building with the integrated preview feature, including optional developer tools.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>📦 Single File Output</h4>
+                    <p>Create standalone single-file executables for easy distribution, or multi-file builds for faster startup.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🔒 Code Signing</h4>
+                    <p>Support for digitally signing executables with your certificate to avoid Windows security warnings.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🌐 URL Support</h4>
+                    <p>Convert both local HTML projects and remote web URLs into desktop applications.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>⚡ Build Caching</h4>
+                    <p>Intelligent caching system speeds up rebuilds by reusing unchanged resources.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🎯 Custom Icons</h4>
+                    <p>Add professional custom icons to your executables with validation and format checking.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>📊 License Scanning</h4>
+                    <p>Automatic scanning of dependencies to identify licensing requirements and restrictions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🔧 Git Integration</h4>
+                    <p>Automatically detect version numbers from Git tags for version-controlled projects.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>💾 Project Management</h4>
+                    <p>Save and load project configurations as JSON files for reusable build profiles.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>📝 Templates</h4>
+                    <p>Built-in project templates (Basic, Dashboard) for quick-starting new applications.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>⌨️ CLI Support</h4>
+                    <p>Command-line interface available for automation and continuous integration workflows.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="building">
+            <h2>Building Applications</h2>
+
+            <h3>Project Configuration</h3>
+
+            <h4>Application Information</h4>
+            <ul>
+                <li><strong>App Name:</strong> The name of your application and resulting executable file. Use only alphanumeric characters, spaces, hyphens, and underscores.</li>
+                <li><strong>Version:</strong> Application version in format <code>1.0.0</code> or <code>1.0.0.0</code>. This appears in Windows file properties.</li>
+                <li><strong>Author:</strong> Your name or company name. Appears in executable metadata.</li>
+                <li><strong>Use Git Version:</strong> Automatically detect version from Git tags if your project is in a Git repository.</li>
+            </ul>
+
+            <h4>Source Content</h4>
+            <p><strong>Local Folder:</strong> Select a folder containing your HTML application. Requirements:</p>
+            <ul>
+                <li>Must contain an <code>index.html</code> file in the root</li>
+                <li>Can include subdirectories for CSS, JavaScript, images, and other assets</li>
+                <li>Supports all standard web file types: HTML, CSS, JS, images, fonts, JSON</li>
+                <li>Total project size should be under 500 MB for optimal build times</li>
+            </ul>
+
+            <p><strong>URL:</strong> Enter a web URL to package an online application:</p>
+            <ul>
+                <li>Must be a complete URL including <code>http://</code> or <code>https://</code></li>
+                <li>The URL will be loaded when the application starts</li>
+                <li>Requires internet connection to function</li>
+                <li>Useful for web-based dashboards, documentation, or cloud applications</li>
+            </ul>
+
+            <h3>Window Configuration</h3>
+            <ul>
+                <li><strong>Window Title:</strong> Text displayed in the application's title bar</li>
+                <li><strong>Initial Size:</strong> Starting window dimensions in pixels (width × height)</li>
+                <li><strong>Resizable Window:</strong> Allow users to resize the application window</li>
+                <li><strong>Start in Fullscreen:</strong> Launch application in fullscreen mode (users can exit with F11 or Alt+F4)</li>
+            </ul>
+
+            <h3>Build Options</h3>
+
+            <h4>Executable Type</h4>
+            <ul>
+                <li><strong>Single File Executable:</strong> Creates one standalone .exe file. Advantages: Easy distribution, no installation needed. Disadvantages: Slower startup (2-5 seconds), larger file size.</li>
+                <li><strong>Multi-File Build:</strong> Creates an executable with supporting files in a folder. Advantages: Faster startup, smaller main executable. Disadvantages: Requires distributing entire folder.</li>
+            </ul>
+
+            <h4>Advanced Options</h4>
+            <ul>
+                <li><strong>Show Console Window:</strong> Display a console window for debugging output. Only enable for development and troubleshooting.</li>
+                <li><strong>Compress Resources:</strong> Apply lossless compression to images (PNG/JPEG) to reduce build size. May increase build time by 10-20%.</li>
+                <li><strong>Use Build Cache:</strong> Cache processed resources between builds for faster rebuilds. Recommended for iterative development.</li>
+                <li><strong>Enable Debug Tools:</strong> Enable developer tools (F12) in preview mode for debugging JavaScript and CSS.</li>
+            </ul>
+
+            <h4>Application Icon</h4>
+            <p>Add a custom icon to your executable for professional branding:</p>
+            <ul>
+                <li><strong>Windows:</strong> Requires .ico format (256×256 pixels recommended)</li>
+                <li><strong>File Size:</strong> Maximum 10 MB per icon file</li>
+                <li><strong>Validation:</strong> Icon files are automatically validated for correct format</li>
+                <li><strong>Creating Icons:</strong> Use tools like GIMP, Paint.NET, or online converters to create .ico files from PNG/JPG images</li>
+            </ul>
+
+            <h4>Code Signing (Optional)</h4>
+            <p>Digital signatures prevent Windows SmartScreen warnings and verify authenticity:</p>
+            <ul>
+                <li><strong>Certificate:</strong> Path to your .pfx or .p12 code signing certificate</li>
+                <li><strong>Password:</strong> Certificate password (if required)</li>
+                <li><strong>Requirements:</strong> Windows SDK must be installed with signtool.exe</li>
+                <li><strong>Timestamping:</strong> Automatically includes timestamp for long-term validity</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Code Signing Best Practices</strong>
+                <p>Code signing certificates can be obtained from Certificate Authorities like DigiCert, Sectigo, or GlobalSign. Prices typically range from $100-$500 per year. Extended Validation (EV) certificates provide immediate SmartScreen reputation but require hardware tokens.</p>
+            </div>
+
+            <h4>Package Format</h4>
+            <ul>
+                <li><strong>None:</strong> Output raw executable/folder only</li>
+                <li><strong>ZIP:</strong> Automatically create a compressed ZIP archive for easy distribution</li>
+            </ul>
+
+            <h3>Building Your Application</h3>
+
+            <ol class="step-list">
+                <li><strong>Configure All Settings:</strong> Complete all tabs (Project, Window, Build) with your desired configuration.</li>
+                <li><strong>Save Project (Optional):</strong> Use File → Save Project to save your configuration as a .json file for future use.</li>
+                <li><strong>Preview First:</strong> Always preview your application before building to verify functionality.</li>
+                <li><strong>Start Build:</strong> Click "BUILD (F5)" or use Tools → Build App. The build process begins immediately.</li>
+                <li><strong>Monitor Progress:</strong> Watch the progress bar and console output for build status. Typical builds take 2-5 minutes.</li>
+                <li><strong>Handle Warnings:</strong> Review any warnings shown after build completion. Common warnings include missing WebView2 on target systems.</li>
+                <li><strong>Test Executable:</strong> Always test the built executable on a clean system to verify all resources are included.</li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>⚠️ Build Process Notes</strong>
+                <p>The build process temporarily uses significant disk space (up to 1 GB) for intermediate files. Ensure adequate free space before building. Temporary files are automatically cleaned up after successful or failed builds.</p>
+            </div>
+
+            <h3>Build Verification</h3>
+            <p>HTML2Win Pro automatically verifies builds to ensure integrity:</p>
+            <ul>
+                <li>Checks output file exists and is not corrupted</li>
+                <li>Verifies file size is reasonable (not truncated)</li>
+                <li>Confirms executable permissions on non-Windows platforms</li>
+                <li>Reports any anomalies in build output</li>
+            </ul>
+        </section>
+
+        <section id="configuration">
+            <h2>Advanced Configuration</h2>
+
+            <h3>Project Files</h3>
+            <p>Save your build configurations as reusable project files:</p>
+            <ul>
+                <li><strong>Format:</strong> JSON text format, human-readable and version-control friendly</li>
+                <li><strong>Location:</strong> Save anywhere; commonly in your project root as <code>build-config.json</code></li>
+                <li><strong>Sharing:</strong> Project files can be shared with team members for consistent builds</li>
+                <li><strong>Recent Projects:</strong> Access recently used projects via File → Recent Projects</li>
+            </ul>
+
+            <h3>Templates</h3>
+            <p>Create new projects from built-in templates:</p>
+            <ul>
+                <li><strong>Basic:</strong> Simple single-page application with modern gradient design</li>
+                <li><strong>Dashboard:</strong> Multi-section dashboard with sidebar navigation and stat cards</li>
+            </ul>
+            <p>Use Tools → Create from Template to generate starter projects.</p>
+
+            <h3>Build Cache</h3>
+            <p>The caching system stores processed resources to speed up subsequent builds:</p>
+            <ul>
+                <li><strong>Location:</strong> <code>%USERPROFILE%\.html2win_pro\cache</code></li>
+                <li><strong>Behavior:</strong> Automatically caches unchanged files between builds</li>
+                <li><strong>Size:</strong> Cache grows over time; typically 100-500 MB</li>
+                <li><strong>Clearing:</strong> Delete the cache folder manually if needed; rebuilds automatically</li>
+            </ul>
+
+            <h3>Logs and Debugging</h3>
+            <ul>
+                <li><strong>Application Logs:</strong> <code>%USERPROFILE%\.html2win_pro\app.log</code></li>
+                <li><strong>Crash Reports:</strong> <code>%USERPROFILE%\.html2win_pro\crashes\</code></li>
+                <li><strong>Build History:</strong> <code>%USERPROFILE%\.html2win_pro\build_history.json</code></li>
+                <li><strong>Log Rotation:</strong> Logs automatically rotate at 10 MB with 10 backup copies</li>
+            </ul>
+        </section>
+
+        <section id="cli">
+            <h2>Command Line Interface</h2>
+
+            <p>While HTML2Win Pro provides a graphical interface, advanced users can leverage the command-line interface for automation and CI/CD pipelines.</p>
+
+            <div class="info-box">
+                <strong>💡 CLI Access</strong>
+                <p>The CLI is built into the same executable. Run commands from Command Prompt or PowerShell in the same folder as the executable.</p>
+            </div>
+
+            <h3>Build Command</h3>
+            <pre><code>HTML2WinPro.exe build --source "C:\MyProject" --name "MyApp" --version-str "1.0.0"</code></pre>
+
+            <h4>Build Options</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--source</code></td>
+                        <td>Source folder or URL (required)</td>
+                        <td><code>--source "C:\MyApp"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--project</code></td>
+                        <td>Load configuration from project file</td>
+                        <td><code>--project config.json</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--name</code></td>
+                        <td>Application name</td>
+                        <td><code>--name "MyApp"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--version-str</code></td>
+                        <td>Application version</td>
+                        <td><code>--version-str "2.0.1"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--output</code></td>
+                        <td>Output directory</td>
+                        <td><code>--output "dist"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--icon</code></td>
+                        <td>Icon file path</td>
+                        <td><code>--icon "app.ico"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--console</code></td>
+                        <td>Show console window</td>
+                        <td><code>--console</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--compress</code></td>
+                        <td>Compress resources</td>
+                        <td><code>--compress</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--git-version</code></td>
+                        <td>Use Git tag for version</td>
+                        <td><code>--git-version</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--package</code></td>
+                        <td>Package format (zip)</td>
+                        <td><code>--package zip</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>--sign-cert</code></td>
+                        <td>Code signing certificate</td>
+                        <td><code>--sign-cert cert.pfx</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Preview Command</h3>
+            <pre><code>HTML2WinPro.exe preview --source "C:\MyProject" --debug</code></pre>
+
+            <h3>Template Command</h3>
+            <pre><code>HTML2WinPro.exe template basic "C:\NewProject"</code></pre>
+
+            <h3>Utility Commands</h3>
+            <pre><code>HTML2WinPro.exe check-deps
+HTML2WinPro.exe install-deps
+HTML2WinPro.exe licenses --format table</code></pre>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>Troubleshooting</h2>
+
+            <h3>Common Build Issues</h3>
+
+            <h4>Build Fails with "Missing index.html"</h4>
+            <p><strong>Cause:</strong> The selected source folder doesn't contain an index.html file in the root.</p>
+            <p><strong>Solution:</strong> Ensure your project has index.html in the main folder, not in a subdirectory.</p>
+
+            <h4>Executable Won't Run on Target System</h4>
+            <p><strong>Cause:</strong> Missing Microsoft Edge WebView2 Runtime on the target computer.</p>
+            <p><strong>Solution:</strong> Install WebView2 Runtime from Microsoft's website (free). Windows 10/11 typically have it pre-installed.</p>
+
+            <h4>Build Takes Very Long Time</h4>
+            <p><strong>Cause:</strong> Large project size or disabled build cache.</p>
+            <p><strong>Solution:</strong> Enable build cache, remove unnecessary files from source, consider using multi-file build instead of single-file.</p>
+
+            <h4>"Icon file invalid" Error</h4>
+            <p><strong>Cause:</strong> Icon file is not in proper .ico format or corrupted.</p>
+            <p><strong>Solution:</strong> Recreate icon using proper tools. Ensure file starts with correct ICO header (00 00 01 00).</p>
+
+            <h3>Runtime Issues</h3>
+
+            <h4>Application Shows Blank White Screen</h4>
+            <p><strong>Cause:</strong> JavaScript errors, missing resources, or incorrect file paths.</p>
+            <p><strong>Solution:</strong> Test in preview mode with debug tools enabled (F12) to check console for errors. Verify all resource paths are relative, not absolute.</p>
+
+            <h4>Resources Not Loading</h4>
