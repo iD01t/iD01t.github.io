@@ -735,3 +735,540 @@ HTML2WinPro.exe licenses --format table</code></pre>
             <p><strong>Solution:</strong> Test in preview mode with debug tools enabled (F12) to check console for errors. Verify all resource paths are relative, not absolute.</p>
 
             <h4>Resources Not Loading</h4>
+            <p><strong>Cause:</strong> Incorrect file paths using absolute URLs or drive letters.</p>
+            <p><strong>Solution:</strong> Use relative paths only (e.g., <code>./images/logo.png</code> not <code>C:\images\logo.png</code>). Test in preview mode first.</p>
+
+            <h4>Antivirus Blocking Executable</h4>
+            <p><strong>Cause:</strong> Unsigned executables may trigger false positives in antivirus software.</p>
+            <p><strong>Solution:</strong> Sign your executable with a code signing certificate, or add exception in antivirus software. Report false positives to your antivirus vendor.</p>
+
+            <h3>Performance Optimization</h3>
+
+            <h4>Reduce Build Size</h4>
+            <ul>
+                <li>Enable resource compression for images</li>
+                <li>Remove unused files from source folder</li>
+                <li>Optimize images before building (compress to WebP or optimized PNG/JPEG)</li>
+                <li>Remove development files (node_modules, .git, etc.)</li>
+                <li>Use multi-file build instead of single-file for smaller main executable</li>
+            </ul>
+
+            <h4>Improve Startup Time</h4>
+            <ul>
+                <li>Use multi-file build (faster startup than single-file)</li>
+                <li>Minimize JavaScript execution on load</li>
+                <li>Use lazy loading for images and resources</li>
+                <li>Reduce number of external dependencies</li>
+            </ul>
+
+            <h3>Getting Help</h3>
+            <p>If you encounter issues not covered in this documentation:</p>
+            <ul>
+                <li>Check the console output in the application for detailed error messages</li>
+                <li>Review log files in <code>%USERPROFILE%\.html2win_pro\</code></li>
+                <li>Visit our support page at <a href="https://id01t.store">https://id01t.store</a></li>
+                <li>Contact support: <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a></li>
+            </ul>
+        </section>
+
+        <section id="legal">
+            <h2>Legal Information & Licensing</h2>
+
+            <div class="legal-box">
+                <h3>⚖️ IMPORTANT LEGAL NOTICES</h3>
+                <p><strong>READ CAREFULLY BEFORE USING THIS SOFTWARE</strong></p>
+            </div>
+
+            <h3>Software License</h3>
+            <p>HTML2Win Pro is licensed under the MIT License:</p>
+
+            <pre><code>MIT License
+
+Copyright (c) 2025 Guillaume Lessard / iD01t Productions
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</code></pre>
+
+            <h3>Disclaimer of Warranties</h3>
+            <p><strong>HTML2Win Pro is provided "AS IS" without warranty of any kind.</strong> This includes but is not limited to:</p>
+            <ul>
+                <li>No warranty that the software will be error-free or uninterrupted</li>
+                <li>No warranty that the software will meet your specific requirements</li>
+                <li>No warranty regarding the quality, accuracy, or reliability of output</li>
+                <li>No warranty of merchantability or fitness for a particular purpose</li>
+                <li>No warranty that executables created will function on all systems</li>
+            </ul>
+
+            <h3>Limitation of Liability</h3>
+            <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+            <ul>
+                <li>Guillaume Lessard and iD01t Productions shall NOT be liable for any direct, indirect, incidental, special, consequential, or exemplary damages</li>
+                <li>This includes but is not limited to: loss of profits, loss of data, business interruption, or any other commercial damages or losses</li>
+                <li>This limitation applies even if advised of the possibility of such damages</li>
+                <li>Some jurisdictions do not allow limitation of liability for consequential damages; in such cases, liability is limited to the maximum extent permitted by law</li>
+            </ul>
+
+            <h3>User Responsibilities</h3>
+            <p><strong>As a user of HTML2Win Pro, you are solely responsible for:</strong></p>
+
+            <ol>
+                <li><strong>License Compliance:</strong> Ensuring all content, code, libraries, and resources included in your applications comply with their respective licenses. Use the built-in license scanner to review dependencies.</li>
+                
+                <li><strong>Intellectual Property:</strong> Ensuring you have the legal right to package and distribute all content included in your executables. This includes:
+                    <ul>
+                        <li>Source code (yours or properly licensed)</li>
+                        <li>Images, graphics, and media files</li>
+                        <li>Fonts and typography</li>
+                        <li>Third-party libraries and frameworks</li>
+                        <li>Any other resources or content</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Legal Compliance:</strong> Ensuring your application and its distribution comply with all applicable laws in your jurisdiction and target markets, including but not limited to:
+                    <ul>
+                        <li>Copyright and trademark laws</li>
+                        <li>Data protection and privacy regulations (GDPR, CCPA, etc.)</li>
+                        <li>Export control regulations</li>
+                        <li>Software licensing requirements</li>
+                        <li>Consumer protection laws</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Testing:</strong> Thoroughly testing executables before distribution to ensure functionality, security, and stability on target systems.</li>
+                
+                <li><strong>Security:</strong> Implementing appropriate security measures in your applications to protect user data and prevent malicious use.</li>
+                
+                <li><strong>End User Support:</strong> Providing appropriate support, documentation, and disclaimers to your end users.</li>
+            </ol>
+
+            <h3>Third-Party Dependencies</h3>
+            <p>HTML2Win Pro incorporates the following open-source components:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>License</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PyWebView</td>
+                        <td>BSD 3-Clause</td>
+                        <td>Desktop window rendering</td>
+                    </tr>
+                    <tr>
+                        <td>PyInstaller</td>
+                        <td>GPL 2.0 with exception</td>
+                        <td>Executable building</td>
+                    </tr>
+                    <tr>
+                        <td>CustomTkinter</td>
+                        <td>MIT License</td>
+                        <td>User interface</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>PSF License</td>
+                        <td>Runtime environment</td>
+                    </tr>
+                    <tr>
+                        <td>Pillow</td>
+                        <td>HPND License</td>
+                        <td>Image processing</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>⚠️ PyInstaller GPL Exception</strong>
+                <p>PyInstaller is licensed under GPL 2.0 with a special exception that allows executables created with PyInstaller to be distributed under any license. This means executables you create with HTML2Win Pro are NOT subject to GPL requirements and can be distributed commercially under any license you choose.</p>
+            </div>
+
+            <h3>Prohibited Uses</h3>
+            <p><strong>You may NOT use HTML2Win Pro to:</strong></p>
+            <ul>
+                <li>Create malware, viruses, trojans, or any malicious software</li>
+                <li>Develop applications that violate laws or regulations</li>
+                <li>Package content you do not have rights to distribute</li>
+                <li>Circumvent software protection mechanisms or DRM</li>
+                <li>Create applications that infringe intellectual property rights</li>
+                <li>Develop software for illegal activities</li>
+                <li>Create applications that harvest personal data without consent</li>
+                <li>Build software that facilitates fraud or deception</li>
+            </ul>
+
+            <h3>Distribution of Executables</h3>
+            <p><strong>When distributing applications created with HTML2Win Pro:</strong></p>
+            <ul>
+                <li>You are NOT required to mention HTML2Win Pro in your application (though attribution is appreciated)</li>
+                <li>You may distribute executables under any license you choose</li>
+                <li>You must ensure all included content complies with applicable licenses</li>
+                <li>You should include appropriate disclaimers and terms of use with your application</li>
+                <li>You are responsible for providing support to your end users</li>
+                <li>You must comply with any platform-specific distribution requirements</li>
+            </ul>
+
+            <h3>Data Collection & Privacy</h3>
+            <p><strong>HTML2Win Pro respects your privacy:</strong></p>
+            <ul>
+                <li>No personal data is collected or transmitted to remote servers</li>
+                <li>All processing occurs locally on your computer</li>
+                <li>Project files and configurations remain on your system</li>
+                <li>The "Check for Updates" feature only sends the current version number</li>
+                <li>No telemetry, analytics, or usage tracking is performed</li>
+                <li>Log files stored locally contain only technical information</li>
+            </ul>
+
+            <h3>Updates & Modifications</h3>
+            <ul>
+                <li>Software updates may be provided but are not guaranteed</li>
+                <li>Updates may change functionality or introduce breaking changes</li>
+                <li>You are responsible for maintaining backups of your project files</li>
+                <li>These terms may be updated; continued use constitutes acceptance</li>
+            </ul>
+
+            <h3>Indemnification</h3>
+            <p>You agree to indemnify and hold harmless Guillaume Lessard, iD01t Productions, and their affiliates from any claims, damages, losses, or expenses (including legal fees) arising from:</p>
+            <ul>
+                <li>Your use of HTML2Win Pro</li>
+                <li>Applications you create and distribute</li>
+                <li>Violation of these terms or applicable laws</li>
+                <li>Infringement of third-party rights</li>
+            </ul>
+
+            <h3>Export Compliance</h3>
+            <p>HTML2Win Pro may be subject to export control laws. You are responsible for complying with all applicable export regulations when distributing software internationally.</p>
+
+            <h3>Governing Law</h3>
+            <p>This software and these terms are governed by the laws of the jurisdiction where iD01t Productions operates, without regard to conflict of law principles.</p>
+
+            <h3>Severability</h3>
+            <p>If any provision of these terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
+
+            <div class="info-box">
+                <strong>💡 Not Legal Advice</strong>
+                <p>This documentation provides general information about the software and its use. It does not constitute legal advice. Consult with a qualified attorney regarding your specific legal obligations when developing and distributing software applications.</p>
+            </div>
+
+            <h3>License Scanning Tool</h3>
+            <p>HTML2Win Pro includes a license scanning feature to help you identify dependencies and their licenses. However:</p>
+            <ul>
+                <li>The scanner provides information only and cannot guarantee completeness</li>
+                <li>You remain solely responsible for license compliance</li>
+                <li>Always review licenses manually for commercial projects</li>
+                <li>Consult legal counsel for license interpretation</li>
+                <li>Keep documentation of all third-party components used</li>
+            </ul>
+
+            <h3>Commercial Use</h3>
+            <p><strong>YES, you may use HTML2Win Pro for commercial purposes:</strong></p>
+            <ul>
+                <li>Create and sell commercial applications</li>
+                <li>Use in corporate/enterprise environments</li>
+                <li>Offer applications as services</li>
+                <li>Include in commercial products</li>
+                <li>No royalties or fees owed to HTML2Win Pro creators</li>
+            </ul>
+            <p>The MIT License explicitly permits commercial use. However, you remain responsible for all licensing obligations of components included in your applications.</p>
+        </section>
+
+        <section id="best-practices">
+            <h2>Best Practices & Recommendations</h2>
+
+            <h3>Development Workflow</h3>
+            <ol class="step-list">
+                <li><strong>Develop Locally:</strong> Create and test your HTML application in a browser first using standard web development tools.</li>
+                <li><strong>Use Relative Paths:</strong> Ensure all resource references use relative paths, never absolute file paths.</li>
+                <li><strong>Preview Early:</strong> Use HTML2Win Pro's preview feature frequently during development to catch issues early.</li>
+                <li><strong>Save Configurations:</strong> Save project files to maintain consistent build settings across versions.</li>
+                <li><strong>Version Control:</strong> Keep your source code in Git or another version control system. Use the Git version feature for automatic versioning.</li>
+                <li><strong>Test Thoroughly:</strong> Test built executables on clean systems without development tools installed.</li>
+                <li><strong>Document Dependencies:</strong> Maintain a clear record of all third-party libraries and their licenses.</li>
+            </ol>
+
+            <h3>Security Recommendations</h3>
+            <ul>
+                <li><strong>Code Signing:</strong> Always sign commercial applications to avoid security warnings</li>
+                <li><strong>Input Validation:</strong> Validate all user inputs in your application code</li>
+                <li><strong>Secure Communication:</strong> Use HTTPS for any network communications</li>
+                <li><strong>Sensitive Data:</strong> Never hardcode passwords, API keys, or sensitive data in your application</li>
+                <li><strong>Updates:</strong> Plan for application updates and include version checking in your app</li>
+                <li><strong>Error Handling:</strong> Implement proper error handling to prevent information leakage</li>
+            </ul>
+
+            <h3>Performance Tips</h3>
+            <ul>
+                <li>Minimize JavaScript execution during startup</li>
+                <li>Optimize and compress images before building</li>
+                <li>Use modern web technologies (CSS Grid, Flexbox) over JavaScript for layout</li>
+                <li>Lazy load non-critical resources</li>
+                <li>Minimize external dependencies</li>
+                <li>Use build cache for faster iteration during development</li>
+            </ul>
+
+            <h3>Distribution Guidelines</h3>
+            <ul>
+                <li>Include a README file with system requirements</li>
+                <li>Provide clear installation instructions</li>
+                <li>Include license information for your application</li>
+                <li>Specify whether WebView2 is required (it usually is)</li>
+                <li>Consider creating an installer for professional distribution</li>
+                <li>Test on multiple Windows versions (10, 11, Server editions)</li>
+                <li>Provide uninstall instructions if applicable</li>
+            </ul>
+
+            <h3>Maintenance Strategy</h3>
+            <ul>
+                <li>Keep source code and build configurations organized</li>
+                <li>Document your build process for team members</li>
+                <li>Maintain changelog of application versions</li>
+                <li>Archive built executables with version tags</li>
+                <li>Regularly update dependencies for security patches</li>
+                <li>Test builds after dependency updates</li>
+            </ul>
+        </section>
+
+        <section id="support">
+            <h2>Support & Resources</h2>
+
+            <h3>Getting Support</h3>
+            <p>If you need assistance with HTML2Win Pro:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>📧 Email Support</h4>
+                    <p><a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a></p>
+                    <p>For technical questions, bug reports, and general inquiries.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🌐 Website</h4>
+                    <p><a href="https://id01t.store" target="_blank">id01t.store</a></p>
+                    <p>Product information, updates, and additional resources.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>📖 Documentation</h4>
+                    <p>This comprehensive guide covers all features and common issues.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🔄 Updates</h4>
+                    <p>Check for updates via Tools → Check for Updates in the application.</p>
+                </div>
+            </div>
+
+            <h3>Reporting Issues</h3>
+            <p>When reporting problems, please include:</p>
+            <ul>
+                <li>HTML2Win Pro version number</li>
+                <li>Windows version and build number</li>
+                <li>Detailed description of the issue</li>
+                <li>Steps to reproduce the problem</li>
+                <li>Error messages from console or log files</li>
+                <li>Project configuration (if applicable)</li>
+                <li>Screenshots if relevant</li>
+            </ul>
+
+            <h3>Feature Requests</h3>
+            <p>We welcome suggestions for new features and improvements. Contact us via email with detailed descriptions of requested functionality.</p>
+
+            <h3>Community Guidelines</h3>
+            <p>When seeking help or sharing projects:</p>
+            <ul>
+                <li>Be respectful and professional</li>
+                <li>Provide clear and detailed information</li>
+                <li>Search existing resources before asking questions</li>
+                <li>Share solutions when you solve problems</li>
+                <li>Respect intellectual property and licenses</li>
+            </ul>
+
+            <h3>Additional Resources</h3>
+            <ul>
+                <li><strong>PyWebView Documentation:</strong> <a href="https://pywebview.flowrl.com/" target="_blank">pywebview.flowrl.com</a></li>
+                <li><strong>PyInstaller Manual:</strong> <a href="https://pyinstaller.org/en/stable/" target="_blank">pyinstaller.org</a></li>
+                <li><strong>WebView2 Runtime:</strong> <a href="https://developer.microsoft.com/microsoft-edge/webview2/" target="_blank">Microsoft Edge WebView2</a></li>
+                <li><strong>Code Signing Guide:</strong> <a href="https://docs.microsoft.com/windows/win32/seccrypto/cryptography-tools" target="_blank">Microsoft Code Signing</a></li>
+            </ul>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>General Questions</h3>
+
+            <h4>Q: Is HTML2Win Pro free to use?</h4>
+            <p>A: Yes, HTML2Win Pro is licensed under the MIT License, which permits free commercial and personal use.</p>
+
+            <h4>Q: Can I use HTML2Win Pro for commercial applications?</h4>
+            <p>A: Yes, absolutely. You may create and sell commercial applications without any royalties or fees to the HTML2Win Pro creators.</p>
+
+            <h4>Q: Do I need to mention HTML2Win Pro in my application?</h4>
+            <p>A: No, attribution is not required, though it is appreciated.</p>
+
+            <h4>Q: Will my executables work on Mac or Linux?</h4>
+            <p>A: The current version creates Windows executables only. Cross-platform support may be added in future versions.</p>
+
+            <h3>Technical Questions</h3>
+
+            <h4>Q: Why does my executable take several seconds to start?</h4>
+            <p>A: Single-file executables unpack themselves to a temporary directory on each launch. Use multi-file builds for faster startup.</p>
+
+            <h4>Q: Can I include Node.js applications?</h4>
+            <p>A: HTML2Win Pro is designed for client-side HTML/JavaScript applications. Server-side Node.js apps require different packaging approaches.</p>
+
+            <h4>Q: How large will my executable be?</h4>
+            <p>A: Base size is typically 40-60 MB due to embedded Python and WebView dependencies, plus your application content.</p>
+
+            <h4>Q: Can users modify my application after building?</h4>
+            <p>A: While resources are embedded in the executable, determined users can extract them. For true protection, implement server-side logic or additional encryption.</p>
+
+            <h4>Q: Does HTML2Win Pro support Electron features?</h4>
+            <p>A: HTML2Win Pro uses PyWebView, not Electron. Native OS integration is more limited but executables are much smaller.</p>
+
+            <h3>Licensing Questions</h3>
+
+            <h4>Q: What if my application uses GPL libraries?</h4>
+            <p>A: GPL libraries require your application to also be GPL-licensed. Use the license scanner and consult legal counsel for GPL compliance.</p>
+
+            <h4>Q: Can I sell executables created with HTML2Win Pro?</h4>
+            <p>A: Yes, you may sell your applications under any license. Ensure all included components permit commercial use.</p>
+
+            <h4>Q: Am I liable if my application causes problems?</h4>
+            <p>A: You are solely responsible for applications you create and distribute. HTML2Win Pro is provided as-is without warranties.</p>
+
+            <h3>Distribution Questions</h3>
+
+            <h4>Q: How do I distribute my application to end users?</h4>
+            <p>A: Single-file executables can be distributed directly. Multi-file builds require distributing the entire folder. Consider creating an installer for professional distribution.</p>
+
+            <h4>Q: Will Windows Defender block my executable?</h4>
+            <p>A: Unsigned executables may trigger SmartScreen warnings. Sign your application with a code signing certificate to avoid this.</p>
+
+            <h4>Q: Can I create installers for my applications?</h4>
+            <p>A: HTML2Win Pro creates executables, not installers. Use tools like Inno Setup or NSIS to create professional installers.</p>
+
+            <h4>Q: Do end users need to install anything?</h4>
+            <p>A: Only Microsoft Edge WebView2 Runtime, which is pre-installed on modern Windows systems or freely downloadable.</p>
+        </section>
+
+        <section id="version-history">
+            <h2>Version History</h2>
+
+            <h3>Version 1.0.0.0 (2025)</h3>
+            <ul>
+                <li>Initial public release</li>
+                <li>Professional GUI with CustomTkinter</li>
+                <li>Support for local folders and URLs</li>
+                <li>Live preview functionality with optional debug tools</li>
+                <li>Single-file and multi-file build options</li>
+                <li>Custom icon support with validation</li>
+                <li>Code signing integration</li>
+                <li>Build caching system</li>
+                <li>Git version integration</li>
+                <li>License scanning tool</li>
+                <li>Project templates (Basic, Dashboard)</li>
+                <li>Command-line interface</li>
+                <li>Comprehensive logging and crash reporting</li>
+                <li>Resource compression</li>
+                <li>Build verification</li>
+                <li>ZIP packaging option</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>HTML2Win Pro</h3>
+                    <p>Professional Edition v1.0.0.0</p>
+                    <p>Convert HTML apps into Windows executables with ease.</p>
+                </div>
+                
+                <div>
+                    <h3>Links</h3>
+                    <p><a href="https://id01t.store">Official Website</a></p>
+                    <p><a href="mailto:itechinfomtl@gmail.com">Email Support</a></p>
+                    <p><a href="#top">Back to Top</a></p>
+                </div>
+                
+                <div>
+                    <h3>Legal</h3>
+                    <p><a href="#legal">License Information</a></p>
+                    <p><a href="#legal">Terms of Use</a></p>
+                    <p><a href="#legal">Privacy Policy</a></p>
+                </div>
+                
+                <div>
+                    <h3>Resources</h3>
+                    <p><a href="#getting-started">Getting Started</a></p>
+                    <p><a href="#troubleshooting">Troubleshooting</a></p>
+                    <p><a href="#faq">FAQ</a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Guillaume Lessard / iD01t Productions. All rights reserved.</p>
+                <p>Licensed under MIT License. HTML2Win Pro is provided "as is" without warranty of any kind.</p>
+                <p>Microsoft, Windows, and Edge are trademarks of Microsoft Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, footer a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Highlight current section in navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.borderBottomColor = 'transparent';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.borderBottomColor = '#667eea';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
