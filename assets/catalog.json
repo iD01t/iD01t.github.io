@@ -1,15 +1,15 @@
 {
   "ebooks": [
     {
-      "title": "🌿 La Charte des Relations Sacrées de la Nouvelle Terre",
-      "description": "Un guide pour aimer librement, en conscience et en vérité. Dans un monde en pleine mutation, les anciens modèles relationnels s'effondrent. Ce livre propose une charte claire, vivante et profondément humaine pour celles et ceux qui veulent aimer autrement.",
+      "title": "\ud83c\udf3f La Charte des Relations Sacr\u00e9es de la Nouvelle Terre",
+      "description": "Un guide pour aimer librement, en conscience et en v\u00e9rit\u00e9. Dans un monde en pleine mutation, les anciens mod\u00e8les relationnels s'effondrent. Ce livre propose une charte claire, vivante et profond\u00e9ment humaine pour celles et ceux qui veulent aimer autrement.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/la-charte-des-relations-sacrées-de-la-nouvelle-terre-cover.webp",
+      "image": "/assets/images/la-charte-des-relations-sacres-de-la-nouvelle-terre-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-1.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=P3NoEQAAQBAJ",
+      "link": "https://www.google.com/search?q=%22%F0%9F%8C%BF%20La%20Charte%20des%20Relations%20Sacr%C3%A9es%20de%20la%20Nouvelle%20Terre%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "personal",
       "status": "available",
@@ -36,12 +36,12 @@
       "title": "ADVANCED TACTICS, PSYCHOLOGICAL PLAY, AND TOURNAMENT PREPARATION",
       "description": "Step into the world of competitive chess and unlock the secrets that separate winners from the rest. The ultimate guide for players who want to dominate tournaments, outthink opponents, and master the hidden game within the game.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/advanced-tactics-psychological-play-and-tournament-preparation-cover.webp",
+      "image": "/assets/images/advanced-tactics-psychological-play-and-tournament-preparation-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-3.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=x5B-EQAAQBAJ",
+      "link": "https://www.google.com/search?q=%22ADVANCED%20TACTICS%2C%20PSYCHOLOGICAL%20PLAY%2C%20AND%20TOURNAMENT%20PREPARATION%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "chess",
       "status": "available",
@@ -52,12 +52,12 @@
       "title": "Agentic AI Sprint for Solopreneurs",
       "description": "Discover how to turn cutting-edge artificial intelligence into your most reliable business partner. A step-by-step execution sprint designed to help you deploy fully autonomous, revenue-generating AI agents in just seven days.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/agentic-ai-sprint-for-solopreneurs-cover.webp",
+      "image": "/assets/images/agentic-ai-sprint-for-solopreneurs-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-4.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=OQt0EQAAQBAJ",
+      "link": "https://www.google.com/search?q=%22Agentic%20AI%20Sprint%20for%20Solopreneurs%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "ai",
       "status": "available",
@@ -68,12 +68,12 @@
       "title": "AI Cash Code",
       "description": "Discover how to launch profitable digital businesses in just days using cutting-edge AI tools like ChatGPT and Midjourney, all without writing a line of code. This comprehensive guide reveals the exact blueprint for creating multiple income streams.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/ai-cash-code-cover.webp",
+      "image": "/assets/images/ai-cash-code-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-5.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=GGKEY:QCLHQ3QN5L6",
+      "link": "https://www.google.com/search?q=%22AI%20Cash%20Code%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "business",
       "status": "available",
@@ -84,12 +84,12 @@
       "title": "AI Cash Empire",
       "description": "Your ultimate step by step playbook for turning artificial intelligence into real financial freedom. This powerful guide reveals how to build multiple AI-powered income streams that work 24/7.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/ai-cash-empire-cover.webp",
+      "image": "/assets/images/ai-cash-empire-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-6.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=GGKEY:8XG8T6GC1MB",
+      "link": "https://www.google.com/search?q=%22AI%20Cash%20Empire%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "business",
       "status": "available",
@@ -98,7 +98,7 @@
     },
     {
       "title": "AI Goldmine: 100 Passive Income Ideas",
-      "description": "Unlock the Future of Passive Income with AI – Even If You Have $0 to Start. This comprehensive guide reveals 100 proven passive income strategies that leverage free AI tools like ChatGPT to create multiple revenue streams.",
+      "description": "Unlock the Future of Passive Income with AI \u2013 Even If You Have $0 to Start. This comprehensive guide reveals 100 proven passive income strategies that leverage free AI tools like ChatGPT to create multiple revenue streams.",
       "author": "Guillaume Lessard",
       "image": "/assets/images/ai-goldmine-100-passive-income-ideas-using-chatgpt-and-free-ai-tools-cover.webp",
       "fallback_images": [
@@ -116,12 +116,12 @@
       "title": "AI in Education",
       "description": "Unlock the future of learning with this essential guide to artificial intelligence in education. Explore how AI is revolutionizing teaching, learning, and educational administration with practical implementation strategies.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/ai-in-education-cover.webp",
+      "image": "/assets/images/ai-in-education-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-8.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=GGKEY:8XG8T6GC1MB",
+      "link": "https://www.google.com/search?q=%22AI%20in%20Education%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "science",
       "status": "available",
@@ -180,12 +180,12 @@
       "title": "iD01t Academy: Python Exercises Book 3",
       "description": "Building Real, Monetizable, and Scalable Applications with Python. Transform your coding skills into profitable digital products with this advanced guide to professional application development.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/id01t-academy-python-exercises-book-3-cover.webp",
+      "image": "/assets/images/id01t-academy-python-exercises-book-3-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-12.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=BqR_EQAAQBAJ",
+      "link": "https://www.google.com/search?q=%22iD01t%20Academy%3A%20Python%20Exercises%20Book%203%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "programming",
       "status": "available",
@@ -196,12 +196,12 @@
       "title": "Intersection: The Moment Their Paths Crossed",
       "description": "When destiny calls, two relentless seekers of truth collide. A thrilling novel about investigative journalism, environmental law, and the dangerous intersection of fate, courage, and sacrifice.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/intersection-the-moment-their-paths-crossed-cover.webp",
+      "image": "/assets/images/intersection-the-moment-their-paths-crossed-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-13.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=Iwo4EQAAQBAJ",
+      "link": "https://www.google.com/search?q=%22Intersection%3A%20The%20Moment%20Their%20Paths%20Crossed%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "other",
       "status": "available",
@@ -228,12 +228,12 @@
       "title": "Java Maestro",
       "description": "Unlock the next level of Java mastery and transform your technical skills into unstoppable leverage. A strategic blueprint for turning code into capital with advanced JVM tuning, cloud-native deployments, and monetization strategies.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/java-maestro-cover.webp",
+      "image": "/assets/images/java-maestro-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-15.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=SdVhEQAAQBAJ",
+      "link": "https://www.google.com/search?q=%22Java%20Maestro%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "programming",
       "status": "available",
@@ -260,12 +260,12 @@
       "title": "Jesus: The Eternal Legacy",
       "description": "The life that changed the world, the message that endures forever. A powerful journey into the life, teachings, and everlasting influence of Jesus Christ, rooted in Catholic tradition and masterful storytelling.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/jesus-the-eternal-legacy-cover.webp",
+      "image": "/assets/images/jesus-the-eternal-legacy-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/book-cover-17.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=oRg3EQAAQBAJ",
+      "link": "https://www.google.com/search?q=%22Jesus%3A%20The%20Eternal%20Legacy%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "other",
       "status": "available",
@@ -323,15 +323,15 @@
   ],
   "audiobooks": [
     {
-      "title": "🌿 La Charte des Relations Sacrées de la Nouvelle Terre",
-      "description": "Un guide pour aimer librement, en conscience et en vérité. Ce livre audio propose une charte claire, vivante et profondément humaine pour celles et ceux qui veulent aimer autrement.",
+      "title": "\ud83c\udf3f La Charte des Relations Sacr\u00e9es de la Nouvelle Terre",
+      "description": "Un guide pour aimer librement, en conscience et en v\u00e9rit\u00e9. Ce livre audio propose une charte claire, vivante et profond\u00e9ment humaine pour celles et ceux qui veulent aimer autrement.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/la-charte-des-relations-sacrées-de-la-nouvelle-terre-audio-cover.webp",
+      "image": "/assets/images/la-charte-des-relations-sacres-de-la-nouvelle-terre-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/audiobook-cover-1.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=P3NoEQAAQBAJ",
+      "link": "https://www.google.com/search?q=%22%F0%9F%8C%BF%20La%20Charte%20des%20Relations%20Sacr%C3%A9es%20de%20la%20Nouvelle%20Terre%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "personal",
       "audiobook_number": "087",
@@ -426,7 +426,7 @@
     },
     {
       "title": "AI Goldmine: 100 Passive Income Ideas",
-      "description": "Unlock the Future of Passive Income with AI – Even If You Have $0 to Start. This comprehensive audio guide reveals 100 proven passive income strategies that leverage free AI tools like ChatGPT.",
+      "description": "Unlock the Future of Passive Income with AI \u2013 Even If You Have $0 to Start. This comprehensive audio guide reveals 100 proven passive income strategies that leverage free AI tools like ChatGPT.",
       "author": "Guillaume Lessard",
       "image": "/assets/images/ai-goldmine-100-passive-income-ideas-using-chatgpt-and-free-ai-tools-audio-cover.webp",
       "fallback_images": [
@@ -445,12 +445,12 @@
       "title": "AI in Education",
       "description": "Unlock the future of learning with this essential guide to artificial intelligence in education. Explore how AI is revolutionizing teaching, learning, and educational administration with practical implementation strategies.",
       "author": "Guillaume Lessard",
-      "image": "/assets/images/ai-in-education-audio-cover.webp",
+      "image": "/assets/images/ai-in-education-cover.png",
       "fallback_images": [
         "/assets/img/placeholders/audiobook-cover-8.webp",
         "/assets/placeholder-cover.svg"
       ],
-      "link": "https://play.google.com/store/books/details?id=GGKEY:8XG8T6GC1MB",
+      "link": "https://www.google.com/search?q=%22AI%20in%20Education%22%20%20site%3Aplay.google.com/books%20OR%20site%3Aamazon.",
       "lang": "EN",
       "category": "science",
       "audiobook_number": "005",
@@ -536,7 +536,7 @@
     "author": "Guillaume Lessard",
     "categories": {
       "programming": "Programming & Development",
-      "ai": "AI & Machine Learning", 
+      "ai": "AI & Machine Learning",
       "chess": "Chess & Strategy",
       "music": "Music Production",
       "business": "Business & Finance",
