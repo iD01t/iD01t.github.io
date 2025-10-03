@@ -264,6 +264,30 @@
             border-radius: 12px;
         }
 
+        /* Responsive Video Container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 3rem auto;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(26, 26, 46, 0.4);
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
         .cta-buttons {
             display: flex;
             gap: 1.5rem;
@@ -666,12 +690,16 @@
                     <h1 id="hero-title" class="hero-title">HTML2 Suite Pro</h1>
                     <p class="hero-subtitle">Build Anywhere, Run Everywhere</p>
                     
-                    <!-- Suite Overview Image -->
-                    <div class="hero-image">
-                        <img src="https://id01t.github.io/html2-suite-overview.png" 
-                             alt="HTML2 Suite Pro showing three products: HTML2Win for Windows, HTML2Linux for Linux, and HTML2Mac for macOS" 
-                             width="800" 
-                             height="450">
+                    <!-- HTML2Win Pro Demo Video -->
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/u990Kr1EndI" 
+                            title="HTML2Win Pro Demonstration Video"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
                     </div>
                     
                     <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
@@ -710,7 +738,7 @@
                         </ul>
                         <div class="platform-badge" aria-label="Platform: Windows">Windows</div>
                         <br><br>
-                        <a href="#cta" class="btn btn-primary" style="width: 100%;" aria-label="Get HTML2Win Pro">Get HTML2Win Pro</a>
+                        <a href="https://id01t.itch.io/html2win" class="btn btn-primary" style="width: 100%;" aria-label="Get HTML2Win Pro" target="_blank" rel="noopener noreferrer">Get HTML2Win Pro</a>
                     </article>
 
                     <!-- HTML2Linux Pro -->
@@ -730,7 +758,7 @@
                         </ul>
                         <div class="platform-badge" aria-label="Platform: Linux">Linux</div>
                         <br><br>
-                        <a href="#cta" class="btn btn-primary" style="width: 100%;" aria-label="Get HTML2Linux Pro">Get HTML2Linux Pro</a>
+                        <a href="https://id01t.itch.io/html2linux-pro" class="btn btn-primary" style="width: 100%;" aria-label="Get HTML2Linux Pro" target="_blank" rel="noopener noreferrer">Get HTML2Linux Pro</a>
                     </article>
 
                     <!-- HTML2Mac Pro -->
@@ -978,4 +1006,4 @@
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>
-                                </html>
+</html>
