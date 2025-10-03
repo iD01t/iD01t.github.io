@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML2 Suite Pro | Build Anywhere, Run Everywhere</title>
     <meta name="description" content="Transform your HTML projects into native Windows, Linux, and macOS applications. Professional-grade conversion tools for developers.">
+    
+    <!-- SEO & Social Media -->
+    <link rel="canonical" href="https://html2suite.com">
+    <meta property="og:title" content="HTML2 Suite Pro | Build Anywhere, Run Everywhere">
+    <meta property="og:description" content="Transform your HTML projects into native Windows, Linux, and macOS applications. Professional-grade conversion tools for developers.">
+    <meta property="og:image" content="https://html2suite.com/html2-suite-overview.png">
+    <meta property="og:url" content="https://html2suite.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HTML2 Suite Pro | Build Anywhere, Run Everywhere">
+    <meta name="twitter:description" content="Transform your HTML projects into native Windows, Linux, and macOS applications.">
+    <meta name="twitter:image" content="https://html2suite.com/html2-suite-overview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:;">
+    
+    <!-- Performance -->
+    <link rel="preload" href="https://id01t.github.io/html2-suite-overview.png" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "HTML2 Suite Pro",
+        "operatingSystem": "Windows, Linux, macOS",
+        "applicationCategory": "DeveloperApplication",
+        "description": "Transform your HTML projects into native applications for Windows, Linux, and macOS.",
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "offeredBy": {
+                "@type": "Organization",
+                "name": "HTML2 Suite Pro"
+            }
+        }
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -30,6 +75,22 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* Skip to Main Content */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            top: 0;
         }
 
         /* Animated Background Particles */
@@ -67,18 +128,29 @@
             z-index: 1;
         }
 
+        /* Focus Styles for Accessibility */
+        a:focus, button:focus, input:focus {
+            outline: 3px solid var(--primary-blue);
+            outline-offset: 2px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
         /* Navigation */
         nav {
             padding: 2rem 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
         }
 
         .logo {
@@ -88,6 +160,21 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
         }
 
         .nav-links {
@@ -103,8 +190,25 @@
             font-weight: 500;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a:focus {
             color: var(--primary-blue);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger:focus {
+            outline: 3px solid var(--primary-blue);
+            outline-offset: 2px;
         }
 
         /* Hero Section */
@@ -146,6 +250,20 @@
             font-weight: 300;
         }
 
+        .hero-image {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(26, 26, 46, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
         .cta-buttons {
             display: flex;
             gap: 1.5rem;
@@ -171,7 +289,8 @@
             box-shadow: 0 0 30px var(--glow-blue);
         }
 
-        .btn-primary:hover {
+        .btn-primary:hover,
+        .btn-primary:focus {
             transform: translateY(-3px);
             box-shadow: 0 0 50px var(--glow-blue);
         }
@@ -182,7 +301,8 @@
             border: 2px solid var(--primary-blue);
         }
 
-        .btn-secondary:hover {
+        .btn-secondary:hover,
+        .btn-secondary:focus {
             background: var(--primary-blue);
             color: white;
         }
@@ -221,56 +341,36 @@
             padding: 3rem;
             transition: all 0.4s;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            text-align: center;
         }
 
-        .product-card:hover {
+        .product-card:hover,
+        .product-card:focus-within {
             transform: translateY(-10px);
             border-color: var(--primary-blue);
             box-shadow: 0 20px 60px var(--glow-blue);
         }
 
-        .product-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--primary-blue);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .product-icon::after {
-            content: 'Pro';
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background: var(--primary-green);
-            color: white;
-            font-size: 0.7rem;
-            padding: 0.3rem 0.7rem;
-            border-radius: 8px;
-            font-weight: 700;
-        }
-
-        .product-name {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary-blue);
+        .product-logo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
         }
 
         .product-description {
             color: var(--text-secondary);
             margin-bottom: 2rem;
             line-height: 1.8;
+            text-align: left;
         }
 
         .feature-list {
             list-style: none;
             margin-bottom: 2rem;
+            text-align: left;
         }
 
         .feature-list li {
@@ -335,7 +435,7 @@
         .comparison-table {
             background: rgba(26, 26, 46, 0.6);
             border-radius: 20px;
-            overflow: hidden;
+            overflow-x: auto;
             border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
@@ -387,6 +487,38 @@
             margin-bottom: 3rem;
         }
 
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px var(--glow-blue);
+            transition: all 0.3s;
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            display: flex;
+        }
+
+        .back-to-top:hover,
+        .back-to-top:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px var(--glow-blue);
+        }
+
         /* Footer */
         footer {
             padding: 4rem 0;
@@ -395,10 +527,39 @@
             color: var(--text-secondary);
         }
 
+        /* Platform Badge Styling */
+        .platform-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--primary-green);
+            color: white;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
             .nav-links {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.98);
+                padding: 1rem;
+                gap: 1rem;
+                border-top: 1px solid rgba(59, 130, 246, 0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
             }
             
             .hero-title {
@@ -416,6 +577,18 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .product-logo {
+                max-width: 250px;
+            }
+
+            .products, .features, .comparison, .cta-section {
+                padding: 4rem 0;
+            }
+
+            .particle {
+                display: none;
+            }
         }
 
         /* Scroll Animations */
@@ -431,224 +604,297 @@
                 transform: translateY(0);
             }
         }
+
+        /* Loading State */
+        .loading {
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(26, 26, 46, 0.4);
+            border-radius: 12px;
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
     </style>
 </head>
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Animated Background -->
-    <div class="particles" id="particles"></div>
+    <div class="particles" id="particles" aria-hidden="true"></div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div class="logo">HTML2 Suite Pro</div>
-            <ul class="nav-links">
-                <li><a href="#products">Products</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#comparison">Compare</a></li>
-                <li><a href="#cta">Get Started</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
+            <!-- Header with Navigation -->
+    <header role="banner">
         <div class="container">
-            <div class="hero-content fade-in">
-                <h1 class="hero-title">Build Anywhere,<br>Run Everywhere</h1>
-                <p class="hero-subtitle">Transform your HTML projects into powerful native applications for Windows, Linux, and macOS</p>
-                <div class="cta-buttons">
-                    <a href="#products" class="btn btn-primary">Explore Products</a>
-                    <a href="#features" class="btn btn-secondary">View Features</a>
+            <nav role="navigation" aria-label="Main navigation">
+                <div class="logo">
+                    <div class="logo-icon" aria-hidden="true">&lt;/&gt;</div>
+                    <span>HTML2 Suite Pro</span>
+                </div>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span aria-hidden="true">☰</span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#comparison">Compare</a></li>
+                    <li><a href="#cta">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1 id="hero-title" class="hero-title">HTML2 Suite Pro</h1>
+                    <p class="hero-subtitle">Build Anywhere, Run Everywhere</p>
+                    
+                    <!-- Suite Overview Image -->
+                    <div class="hero-image">
+                        <img src="https://id01t.github.io/html2-suite-overview.png" 
+                             alt="HTML2 Suite Pro showing three products: HTML2Win for Windows, HTML2Linux for Linux, and HTML2Mac for macOS" 
+                             width="800" 
+                             height="450">
+                    </div>
+                    
+                    <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        Transform your HTML projects into powerful native applications for Windows, Linux, and macOS
+                    </p>
+                    
+                    <div class="cta-buttons">
+                        <a href="#products" class="btn btn-primary" aria-label="Explore our products">Choose Your Platform</a>
+                        <a href="#features" class="btn btn-secondary" aria-label="View all features">View Features</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
-        <div class="container">
-            <h2 class="section-title">Choose Your Platform</h2>
-            <p class="section-subtitle">Professional-grade conversion tools tailored for each operating system</p>
-            
-            <div class="product-grid">
-                <!-- HTML2Win Pro -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">💻</div>
-                    <h3 class="product-name">HTML2Win Pro</h3>
-                    <p class="product-description">Turn your HTML projects into powerful Windows applications with seamless system integration and enterprise-grade performance.</p>
-                    <ul class="feature-list">
-                        <li>Native Windows application builds</li>
-                        <li>Full system integration</li>
-                        <li>Optimized for speed & efficiency</li>
-                        <li>Perfect for desktop & enterprise tools</li>
-                    </ul>
-                    <a href="#cta" class="btn btn-primary" style="width: 100%;">Get HTML2Win Pro</a>
-                </div>
+        <!-- Products Section -->
+        <section class="products" id="products" aria-labelledby="products-title">
+            <div class="container">
+                <h2 id="products-title" class="section-title">Choose Your Platform</h2>
+                <p class="section-subtitle">Professional-grade conversion tools tailored for each operating system</p>
+                
+                <div class="product-grid">
+                    <!-- HTML2Win Pro -->
+                    <article class="product-card fade-in">
+                        <img src="https://id01t.github.io/html2win-pro-logo.png" 
+                             alt="HTML2Win Pro - Convert HTML to Windows applications" 
+                             class="product-logo"
+                             loading="lazy"
+                             width="300"
+                             height="100">
+                        <p class="product-description">Turn your HTML projects into powerful Windows applications with seamless system integration and enterprise-grade performance.</p>
+                        <ul class="feature-list" aria-label="HTML2Win Pro features">
+                            <li>Native Windows application builds</li>
+                            <li>Full system integration</li>
+                            <li>Optimized for speed and efficiency</li>
+                            <li>Perfect for desktop and enterprise tools</li>
+                        </ul>
+                        <div class="platform-badge" aria-label="Platform: Windows">Windows</div>
+                        <br><br>
+                        <a href="#cta" class="btn btn-primary" style="width: 100%;" aria-label="Get HTML2Win Pro">Get HTML2Win Pro</a>
+                    </article>
 
-                <!-- HTML2Linux Pro -->
-                <div class="product-card fade-in" style="animation-delay: 0.2s;">
-                    <div class="product-icon">🐧</div>
-                    <h3 class="product-name">HTML2Linux Pro</h3>
-                    <p class="product-description">Build reliable native Linux applications for open-source, enterprise, and custom Linux environments with maximum compatibility.</p>
-                    <ul class="feature-list">
-                        <li>Native Linux application builds</li>
-                        <li>Compatible with major distributions</li>
-                        <li>Lightweight & optimized</li>
-                        <li>Perfect for servers & workstations</li>
-                    </ul>
-                    <a href="#cta" class="btn btn-primary" style="width: 100%;">Get HTML2Linux Pro</a>
-                </div>
+                    <!-- HTML2Linux Pro -->
+                    <article class="product-card fade-in" style="animation-delay: 0.2s;">
+                        <img src="https://id01t.github.io/html2linux-pro-logo.png" 
+                             alt="HTML2Linux Pro - Convert HTML to Linux applications" 
+                             class="product-logo"
+                             loading="lazy"
+                             width="300"
+                             height="100">
+                        <p class="product-description">Build reliable native Linux applications for open-source, enterprise, and custom Linux environments with maximum compatibility.</p>
+                        <ul class="feature-list" aria-label="HTML2Linux Pro features">
+                            <li>Native Linux application builds</li>
+                            <li>Compatible with major distributions</li>
+                            <li>Lightweight and optimized</li>
+                            <li>Perfect for servers and workstations</li>
+                        </ul>
+                        <div class="platform-badge" aria-label="Platform: Linux">Linux</div>
+                        <br><br>
+                        <a href="#cta" class="btn btn-primary" style="width: 100%;" aria-label="Get HTML2Linux Pro">Get HTML2Linux Pro</a>
+                    </article>
 
-                <!-- HTML2Mac Pro -->
-                <div class="product-card fade-in" style="animation-delay: 0.4s;">
-                    <div class="product-icon">🍎</div>
-                    <h3 class="product-name">HTML2Mac Pro</h3>
-                    <p class="product-description">Deliver elegant macOS applications with polished design and smooth integration with the Apple ecosystem.</p>
-                    <ul class="feature-list">
-                        <li>Professional macOS app generation</li>
-                        <li>Built-in macOS design standards</li>
-                        <li>Seamless system integration</li>
-                        <li>Perfect for creative & productivity tools</li>
-                    </ul>
-                    <a href="#cta" class="btn btn-primary" style="width: 100%;">Get HTML2Mac Pro</a>
+                    <!-- HTML2Mac Pro -->
+                    <article class="product-card fade-in" style="animation-delay: 0.4s;">
+                        <img src="https://id01t.github.io/html2mac-pro-logo.png" 
+                             alt="HTML2Mac Pro - Convert HTML to macOS applications" 
+                             class="product-logo"
+                             loading="lazy"
+                             width="300"
+                             height="100">
+                        <p class="product-description">Deliver elegant macOS applications with polished design and smooth integration with the Apple ecosystem.</p>
+                        <ul class="feature-list" aria-label="HTML2Mac Pro features">
+                            <li>Professional macOS app generation</li>
+                            <li>Built-in macOS design standards</li>
+                            <li>Seamless system integration</li>
+                            <li>Perfect for creative and productivity tools</li>
+                        </ul>
+                        <div class="platform-badge" aria-label="Platform: macOS">macOS</div>
+                        <br><br>
+                        <a href="#cta" class="btn btn-primary" style="width: 100%;" aria-label="Get HTML2Mac Pro">Get HTML2Mac Pro</a>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose HTML2 Suite Pro</h2>
-            <p class="section-subtitle">Professional tools designed for serious developers</p>
-            
-            <div class="features-grid">
-                <div class="feature-item fade-in">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Lightning Fast</h3>
-                    <p class="feature-text">Optimized build process that converts your HTML projects to native apps in seconds, not minutes.</p>
-                </div>
+        <!-- Features Section -->
+        <section class="features" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="section-title">Why Choose HTML2 Suite Pro</h2>
+                <p class="section-subtitle">Professional tools designed for serious developers</p>
                 
-                <div class="feature-item fade-in" style="animation-delay: 0.1s;">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Secure & Reliable</h3>
-                    <p class="feature-text">Enterprise-grade security with code signing support and sandboxed execution environments.</p>
-                </div>
-                
-                <div class="feature-item fade-in" style="animation-delay: 0.2s;">
-                    <div class="feature-icon">🎨</div>
-                    <h3 class="feature-title">No Code Changes</h3>
-                    <p class="feature-text">Your existing HTML, CSS, and JavaScript work perfectly. No framework lock-in or rewrites required.</p>
-                </div>
-                
-                <div class="feature-item fade-in" style="animation-delay: 0.3s;">
-                    <div class="feature-icon">🚀</div>
-                    <h3 class="feature-title">Production Ready</h3>
-                    <p class="feature-text">Deploy professional applications with installer generation, auto-updates, and distribution support.</p>
-                </div>
-                
-                <div class="feature-item fade-in" style="animation-delay: 0.4s;">
-                    <div class="feature-icon">🔧</div>
-                    <h3 class="feature-title">Developer Friendly</h3>
-                    <p class="feature-text">Simple CLI tools, comprehensive documentation, and active community support for when you need help.</p>
-                </div>
-                
-                <div class="feature-item fade-in" style="animation-delay: 0.5s;">
-                    <div class="feature-icon">📦</div>
-                    <h3 class="feature-title">All-In-One</h3>
-                    <p class="feature-text">Everything you need included: runtime, packaging, icons, signing—no additional dependencies required.</p>
+                <div class="features-grid">
+                    <article class="feature-item fade-in">
+                        <div class="feature-icon" aria-hidden="true">⚡</div>
+                        <h3 class="feature-title">Lightning Fast</h3>
+                        <p class="feature-text">Optimized build process that converts your HTML projects to native apps in seconds, not minutes.</p>
+                    </article>
+                    
+                    <article class="feature-item fade-in" style="animation-delay: 0.1s;">
+                        <div class="feature-icon" aria-hidden="true">🔒</div>
+                        <h3 class="feature-title">Secure and Reliable</h3>
+                        <p class="feature-text">Enterprise-grade security with code signing support and sandboxed execution environments.</p>
+                    </article>
+                    
+                    <article class="feature-item fade-in" style="animation-delay: 0.2s;">
+                        <div class="feature-icon" aria-hidden="true">🎨</div>
+                        <h3 class="feature-title">No Code Changes</h3>
+                        <p class="feature-text">Your existing HTML, CSS, and JavaScript work perfectly. No framework lock-in or rewrites required.</p>
+                    </article>
+                    
+                    <article class="feature-item fade-in" style="animation-delay: 0.3s;">
+                        <div class="feature-icon" aria-hidden="true">🚀</div>
+                        <h3 class="feature-title">Production Ready</h3>
+                        <p class="feature-text">Deploy professional applications with installer generation, auto-updates, and distribution support.</p>
+                    </article>
+                    
+                    <article class="feature-item fade-in" style="animation-delay: 0.4s;">
+                        <div class="feature-icon" aria-hidden="true">🔧</div>
+                        <h3 class="feature-title">Developer Friendly</h3>
+                        <p class="feature-text">Simple CLI tools, comprehensive documentation, and active community support for when you need help.</p>
+                    </article>
+                    
+                    <article class="feature-item fade-in" style="animation-delay: 0.5s;">
+                        <div class="feature-icon" aria-hidden="true">📦</div>
+                        <h3 class="feature-title">All-In-One</h3>
+                        <p class="feature-text">Everything you need included: runtime, packaging, icons, signing—no additional dependencies required.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Comparison Section -->
-    <section class="comparison" id="comparison">
-        <div class="container">
-            <h2 class="section-title">Platform Comparison</h2>
-            <p class="section-subtitle">All products include these core features</p>
-            
-            <div class="comparison-table fade-in">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>HTML2Win Pro</th>
-                            <th>HTML2Linux Pro</th>
-                            <th>HTML2Mac Pro</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Native App Generation</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>Code Signing</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>Auto-Updates</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>Installer Generation</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>System Tray Support</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>File System Access</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>CLI Tools</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>Lifetime Updates</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <div class="cta-box fade-in">
-                <h2>Ready to Build Native Apps?</h2>
-                <p>Choose the platform that matches your needs and start shipping professional applications today.</p>
-                <div class="cta-buttons">
-                    <a href="#products" class="btn btn-primary">View All Products</a>
-                    <a href="mailto:sales@html2suite.com" class="btn btn-secondary">Contact Sales</a>
+        <!-- Comparison Section -->
+        <section class="comparison" id="comparison" aria-labelledby="comparison-title">
+            <div class="container">
+                <h2 id="comparison-title" class="section-title">Platform Comparison</h2>
+                <p class="section-subtitle">All products include these core features</p>
+                
+                <div class="comparison-table fade-in">
+                    <table role="table" aria-label="Feature comparison across platforms">
+                        <thead>
+                            <tr>
+                                <th scope="col">Feature</th>
+                                <th scope="col">HTML2Win Pro</th>
+                                <th scope="col">HTML2Linux Pro</th>
+                                <th scope="col">HTML2Mac Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Native App Generation</th>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Code Signing</th>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Auto-Updates</th>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Installer Generation</th>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">System Tray Support</th>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">File System Access</th>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CLI Tools</th>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Lifetime Updates</th>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                                <td><span aria-label="Supported">✓</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-box fade-in">
+                    <h2 id="cta-title">Ready to Build Native Apps?</h2>
+                    <p>Choose the platform that matches your needs and start shipping professional applications today.</p>
+                    <div class="cta-buttons">
+                        <a href="#products" class="btn btn-primary" aria-label="View all products">View All Products</a>
+                        <a href="mailto:sales@html2suite.com" class="btn btn-secondary" rel="noopener" aria-label="Contact sales team">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <span aria-hidden="true">↑</span>
+    </button>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 HTML2 Suite Pro. All rights reserved.</p>
             <p style="margin-top: 1rem;">Professional-grade tools for professional developers.</p>
@@ -656,9 +902,30 @@
     </footer>
 
     <script>
-        // Generate floating particles
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Generate floating particles (reduced for performance)
         const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 50; i++) {
+        const isMobile = window.innerWidth < 768;
+        const particleCount = isMobile ? 0 : 30; // No particles on mobile
+        
+        for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
@@ -675,8 +942,22 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Set focus for keyboard users
+                    target.setAttribute('tabindex', '-1');
+                    target.focus();
                 }
             });
+        });
+
+        // Back to top button functionality
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 300);
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Intersection Observer for fade-in animations
@@ -697,4 +978,4 @@
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>
-</html>
+                                </html>
