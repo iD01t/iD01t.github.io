@@ -1,0 +1,4548 @@
+# Guillaume Lessard — iD01t Productions
+
+_Google Books–only catalog with layered fallbacks_
+
+_Generated: 2025-10-05 04:57 UTC_
+
+
+> **Failover order:** Play (CA) → Play (US) → Google Books (com) → Google Books (ca) → Front cover preview → HD cover (z3) → HD cover (z2) → Books site search.
+
+---
+### Echo Protocol
+
+**Author:** Guillaume Lessard · **Subtitle:** Last Transmission – Part I: Signal Found · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEBKTSQNfM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKTSQNfM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKTSQNfM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKTSQNfM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKTSQNfM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKTSQNfM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKTSQNfM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKTSQNfM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKTSQNfM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Echo+Protocol+Guillaume+Lessard
+---
+### Quantum Jumping Unlocked Edition 2
+
+**Author:** Guillaume Lessard · **Subtitle:** Harness Parallel Realities, Rewire Your Mind, and Leap Into the Life You Truly Desire · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-23 · **Pages:** 28.0 · **Language:** fre · **Google Volume ID (from Play id):** `psZYEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=psZYEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=psZYEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=psZYEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=psZYEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=psZYEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=psZYEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=psZYEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=psZYEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Jumping+Unlocked+Edition+2+Guillaume+Lessard
+---
+### L'énigme quantique : Percer les mystères de la réalité
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploration de la mécanique quantique, des mondes parallèles et de la nature de la conscience · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAECKuDv4oM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECKuDv4oM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECKuDv4oM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECKuDv4oM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECKuDv4oM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECKuDv4oM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECKuDv4oM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECKuDv4oM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECKuDv4oM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=L%27%C3%A9nigme+quantique+%3A+Percer+les+myst%C3%A8res+de+la+r%C3%A9alit%C3%A9+Guillaume+Lessard
+---
+### To the Top of the Mountain
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey of Health, Wellness, and Adventure · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDy_VS9tM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDy_VS9tM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDy_VS9tM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDy_VS9tM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDy_VS9tM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDy_VS9tM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDy_VS9tM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDy_VS9tM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDy_VS9tM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=To+the+Top+of+the+Mountain+Guillaume+Lessard
+---
+### iD01t Academy: Python Exercises Book 1 – Edition 2
+
+**Author:** Guillaume Lessard · **Subtitle:** 10 Real GUI Projects with Source Code, Step-by-Step Explanations, and a Free GitHub Learning App · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-13 · **Pages:** 22.0 · **Language:** eng · **Google Volume ID (from Play id):** `nypGEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=nypGEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=nypGEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=nypGEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=nypGEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=nypGEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=nypGEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=nypGEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=nypGEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=iD01t+Academy%3A+Python+Exercises+Book+1+%E2%80%93+Edition+2+Guillaume+Lessard
+---
+### Quantum Revolution: Unveiling the Future with Willow
+
+**Author:** Guillaume Lessard · **Subtitle:** How Google's Quantum Chip Redefines Computing for the Next Era · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-21 · **Pages:** 35.0 · **Language:** eng · **Google Volume ID (from Play id):** `9rxAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=9rxAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=9rxAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=9rxAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=9rxAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=9rxAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=9rxAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=9rxAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=9rxAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Revolution%3A+Unveiling+the+Future+with+Willow+Guillaume+Lessard
+---
+### Jimmy Carter: A Legacy of Compassion and Leadership
+
+**Author:** Guillaume Lessard · **Subtitle:** From Peanut Farmer to Nobel Laureate – A Life That Shaped the World · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKqCboPM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKqCboPM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKqCboPM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKqCboPM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKqCboPM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKqCboPM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKqCboPM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKqCboPM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKqCboPM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Jimmy+Carter%3A+A+Legacy+of+Compassion+and+Leadership+Guillaume+Lessard
+---
+### CHRIST QU’IL EST INTELLIGENT D’AIMER
+
+**Author:** Guillaume Lessard · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-16 · **Pages:** 14.0 · **Language:** fre · **Google Volume ID (from Play id):** `hTV-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=hTV-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=hTV-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=hTV-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=hTV-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=hTV-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=hTV-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=hTV-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=hTV-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=CHRIST+QU%E2%80%99IL+EST+INTELLIGENT+D%E2%80%99AIMER+Guillaume+Lessard
+---
+### Love Prevails 2
+
+**Author:** Guillaume Lessard · **Subtitle:** A Legacy Rewritten · **Format:** Digital · **Publisher:** iD01t Productions · **Pages:** 79.0 · **Language:** eng · **Google Volume ID (from Play id):** `Zs45EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Zs45EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Zs45EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Zs45EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Zs45EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Zs45EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Zs45EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Zs45EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Zs45EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Love+Prevails+2+Guillaume+Lessard
+---
+### Onyx Storm
+
+**Author:** Guillaume Lessard · **Subtitle:** How to Navigate Uncertainty, Harness Creative Resilience, and Thrive in a Post-Platform World · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-28 · **Pages:** 83.0 · **Language:** eng · **Google Volume ID (from Play id):** `ltSBEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ltSBEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ltSBEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ltSBEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ltSBEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ltSBEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ltSBEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ltSBEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ltSBEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Onyx+Storm+Guillaume+Lessard
+---
+### Shadows Reforged: The War Isn’t Ove
+
+**Author:** Guillaume Lessard · **Subtitle:** The Shadows Rise Again · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-26 · **Pages:** 64.0 · **Language:** eng · **Google Volume ID (from Play id):** `msQ6EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=msQ6EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=msQ6EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=msQ6EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=msQ6EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=msQ6EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=msQ6EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=msQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=msQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+Reforged%3A+The+War+Isn%E2%80%99t+Ove+Guillaume+Lessard
+---
+### Understanding Your Cat’s Mind
+
+**Author:** Guillaume Lessard · **Subtitle:** Beyond the Veil: The Ultimate Guide to Feline Consciousness and Human Connection · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-30 · **Pages:** 232.0 · **Language:** eng · **Google Volume ID (from Play id):** `33eCEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=33eCEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=33eCEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=33eCEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=33eCEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=33eCEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=33eCEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=33eCEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=33eCEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Understanding+Your+Cat%E2%80%99s+Mind+Guillaume+Lessard
+---
+### Legacy of Shadows
+
+**Author:** Guillaume Lessard · **Subtitle:** The Final Betrayal and a Love Unbreakable · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 27.0 · **Language:** eng · **Google Volume ID (from Play id):** `OQo4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=OQo4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=OQo4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=OQo4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=OQo4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=OQo4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=OQo4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=OQo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=OQo4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Legacy+of+Shadows+Guillaume+Lessard
+---
+### Maîtrise des Échecs : Guide du pro pour des stratégies et des techniques gagnantes
+
+**Author:** Guillaume Lessard · **Subtitle:** Édition 2, étendue et mise à jour pour le jeu moderne · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-15 · **Pages:** 134.0 · **Language:** fre · **Google Volume ID (from Play id):** `uQ5-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=uQ5-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=uQ5-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=uQ5-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=uQ5-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=uQ5-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=uQ5-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=uQ5-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=uQ5-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Ma%C3%AEtrise+des+%C3%89checs+%3A+Guide+du+pro+pour+des+strat%C3%A9gies+et+des+techniques+gagnantes+Guillaume+Lessard
+---
+### Mastering Photoshop: The Complete Guide to Every Version
+
+**Author:** Guillaume Lessard · **Subtitle:** From Basics to Advanced Techniques with Hands-On Exercises and Projects · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAqV0IXeM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAqV0IXeM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAqV0IXeM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAqV0IXeM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAqV0IXeM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAqV0IXeM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAqV0IXeM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAqV0IXeM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAqV0IXeM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Photoshop%3A+The+Complete+Guide+to+Every+Version+Guillaume+Lessard
+---
+### AI Cash Empire
+
+**Author:** Guillaume Lessard · **Subtitle:** How to Build Automated Income Streams with AI Tools · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-24 · **Pages:** 187.0 · **Language:** eng · **Google Volume ID (from Play id):** `KbmAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=KbmAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=KbmAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=KbmAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=KbmAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=KbmAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=KbmAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=KbmAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=KbmAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+Cash+Empire+Guillaume+Lessard
+---
+### Mastering Chess Intuition
+
+**Author:** Guillaume Lessard · **Subtitle:** The Hidden Patterns Every Grandmaster Sees · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-30 · **Pages:** 228.0 · **Language:** eng · **Google Volume ID (from Play id):** `rWuCEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=rWuCEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=rWuCEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=rWuCEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=rWuCEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=rWuCEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=rWuCEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=rWuCEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=rWuCEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Chess+Intuition+Guillaume+Lessard
+---
+### The Frequency Blueprint
+
+**Author:** Guillaume Lessard · **Subtitle:** Healing Technologies of Water, Sound, and Sacred Geometry · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEBK5yanfM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBK5yanfM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBK5yanfM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBK5yanfM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBK5yanfM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBK5yanfM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBK5yanfM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBK5yanfM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBK5yanfM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Frequency+Blueprint+Guillaume+Lessard
+---
+### The Adventure of iD01t Productions: A Story of Passion, Resilience and Creativity
+
+**Author:** Guillaume Lessard · **Subtitle:** Create, innovate and grow solo, while drawing inspiration from life. · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKWi0aNM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKWi0aNM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKWi0aNM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKWi0aNM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKWi0aNM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKWi0aNM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKWi0aNM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKWi0aNM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKWi0aNM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Adventure+of+iD01t+Productions%3A+A+Story+of+Passion%2C+Resilience+and+Creativity+Guillaume+Lessard
+---
+### Windows Zero to Hero
+
+**Author:** Guillaume Lessard · **Subtitle:** Mastering the World's Most Popular Operating System for Beginners and Experts · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyQzUD1M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyQzUD1M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyQzUD1M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyQzUD1M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyQzUD1M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyQzUD1M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyQzUD1M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyQzUD1M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyQzUD1M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Windows+Zero+to+Hero+Guillaume+Lessard
+---
+### DIY Digital Skills: Build a Career in Tech from Scratch
+
+**Author:** Guillaume Lessard · **Subtitle:** Master the Foundations of Tech, Learn to Code, and Unlock High-Paying Digital Careers. · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKGDBYKM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKGDBYKM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKGDBYKM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKGDBYKM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKGDBYKM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKGDBYKM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKGDBYKM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKGDBYKM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKGDBYKM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=DIY+Digital+Skills%3A+Build+a+Career+in+Tech+from+Scratch+Guillaume+Lessard
+---
+### Rising from the Ashes: A Comprehensive Guide to Recovery after the Hollywood Hills Fire 2025
+
+**Author:** Guillaume Lessard · **Subtitle:** Practical Steps, Resources, and Inspiring Stories for Rebuilding Your Life After a Wildfire Disaster · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-09 · **Pages:** 64.0 · **Language:** eng · **Google Volume ID (from Play id):** `ios9EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ios9EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ios9EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ios9EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ios9EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ios9EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ios9EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ios9EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ios9EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Rising+from+the+Ashes%3A+A+Comprehensive+Guide+to+Recovery+after+the+Hollywood+Hills+Fire+2025+Guillaume+Lessard
+---
+### Den Verstand Ihrer Katze verstehen
+
+**Author:** Guillaume Lessard · **Subtitle:** Katzenverhalten verstehen, Probleme lösen und die Bindung zwischen Mensch und Katze stärken · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-09-01 · **Pages:** 129.0 · **Language:** eng · **Google Volume ID (from Play id):** `YRmDEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=YRmDEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=YRmDEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=YRmDEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=YRmDEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=YRmDEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=YRmDEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=YRmDEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=YRmDEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Den+Verstand+Ihrer+Katze+verstehen+Guillaume+Lessard
+---
+### Leo XIV: The First American Pope
+
+**Author:** Guillaume Lessard · **Subtitle:** A Historic Journey from Chicago to the Vatican · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEBKDQpNUM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKDQpNUM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKDQpNUM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKDQpNUM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKDQpNUM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKDQpNUM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKDQpNUM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKDQpNUM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKDQpNUM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Leo+XIV%3A+The+First+American+Pope+Guillaume+Lessard
+---
+### The Artifact’s Whisper
+
+**Author:** Guillaume Lessard · **Subtitle:** A Tale of Love, Betrayal, and the Secrets of Time · **Format:** Audiobook · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-21 · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyQ1QDtM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyQ1QDtM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyQ1QDtM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyQ1QDtM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyQ1QDtM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyQ1QDtM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyQ1QDtM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyQ1QDtM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyQ1QDtM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Artifact%E2%80%99s+Whisper+Guillaume+Lessard
+---
+### Jesus: The Eternal Legacy
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey Through His Life, Teachings, and Everlasting Impact on Humanity · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyYykjyM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyYykjyM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyYykjyM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyYykjyM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyYykjyM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyYykjyM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyYykjyM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyYykjyM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyYykjyM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Jesus%3A+The+Eternal+Legacy+Guillaume+Lessard
+---
+### Panneaux Solaires Organiques : L’Énergie Vivante du Futur
+
+**Author:** Guillaume Lessard · **Subtitle:** Comprendre, construire et maîtriser les technologies photovoltaïques organiques flexibles et écologiques · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-19 · **Pages:** 48.0 · **Language:** eng · **Google Volume ID (from Play id):** `BgdnEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=BgdnEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=BgdnEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=BgdnEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=BgdnEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=BgdnEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=BgdnEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=BgdnEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=BgdnEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Panneaux+Solaires+Organiques+%3A+L%E2%80%99%C3%89nergie+Vivante+du+Futur+Guillaume+Lessard
+---
+### Bridging Worlds: A Practical Guide to Connecting with Parallel Energies and Dimensions
+
+**Author:** Guillaume Lessard · **Subtitle:** How Ordinary People Can Explore Hidden Realities and Deepen Their Human Connections · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-02 · **Pages:** 29.0 · **Language:** eng · **Google Volume ID (from Play id):** `pXdLEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=pXdLEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=pXdLEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=pXdLEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=pXdLEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=pXdLEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=pXdLEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=pXdLEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=pXdLEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Bridging+Worlds%3A+A+Practical+Guide+to+Connecting+with+Parallel+Energies+and+Dimensions+Guillaume+Lessard
+---
+### LUMEN·ZERO : Le Pouvoir Caché des Pyramides Énergétiques
+
+**Author:** Guillaume Lessard · **Subtitle:** Construire, Amplifier, Alimenter – Guide Complet pour Récolter l’Énergie Libre à l’Aide de Pyramides Résonantes · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEDKRR8FxM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKRR8FxM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKRR8FxM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKRR8FxM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKRR8FxM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKRR8FxM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKRR8FxM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKRR8FxM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKRR8FxM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=LUMEN%C2%B7ZERO+%3A+Le+Pouvoir+Cach%C3%A9+des+Pyramides+%C3%89nerg%C3%A9tiques+Guillaume+Lessard
+---
+### The Quantum Passive Empire
+
+**Author:** Guillaume Lessard · **Subtitle:** The Sacred Blueprint to Build AI-Powered Income Systems & Manifest a Sovereign Life · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-01 · **Pages:** 166.0 · **Language:** eng · **Google Volume ID (from Play id):** `lCV2EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=lCV2EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=lCV2EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=lCV2EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=lCV2EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=lCV2EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=lCV2EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=lCV2EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=lCV2EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Quantum+Passive+Empire+Guillaume+Lessard
+---
+### Master IT Yourself
+
+**Author:** Guillaume Lessard · **Subtitle:** A DIY Guide to Building Your IT Skills · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKOGF4eM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKOGF4eM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKOGF4eM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKOGF4eM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKOGF4eM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKOGF4eM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKOGF4eM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKOGF4eM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKOGF4eM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Master+IT+Yourself+Guillaume+Lessard
+---
+### Dominio del Ajedrez
+
+**Author:** Guillaume Lessard · **Subtitle:** Guía Profesional de Estrategias y Técnicas Ganadoras · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-15 · **Pages:** 134.0 · **Language:** spa · **Google Volume ID (from Play id):** `xQ1-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=xQ1-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=xQ1-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=xQ1-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=xQ1-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=xQ1-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=xQ1-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=xQ1-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=xQ1-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Dominio+del+Ajedrez+Guillaume+Lessard
+---
+### Mastering RFID: Unlocking the Potential of Radio Frequency Identification
+
+**Author:** Guillaume Lessard · **Subtitle:** Edition #2 · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 50.0 · **Language:** eng · **Google Volume ID (from Play id):** `yfs5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=yfs5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=yfs5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=yfs5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=yfs5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=yfs5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=yfs5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=yfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=yfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+RFID%3A+Unlocking+the+Potential+of+Radio+Frequency+Identification+Guillaume+Lessard
+---
+### AI in Education
+
+**Author:** Guillaume Lessard · **Subtitle:** Transforming the Classroom for the 21st Century · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDKBCJE-M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKBCJE-M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKBCJE-M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKBCJE-M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKBCJE-M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKBCJE-M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKBCJE-M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKBCJE-M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKBCJE-M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+in+Education+Guillaume+Lessard
+---
+### Shaping the Future: Embracing Trends for a Better Tomorrow
+
+**Author:** Guillaume Lessard · **Subtitle:** A Comprehensive Guide to Navigating Innovation, Community, and Change in the Modern World · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKIBZgDM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKIBZgDM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKIBZgDM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKIBZgDM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKIBZgDM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKIBZgDM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKIBZgDM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKIBZgDM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKIBZgDM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shaping+the+Future%3A+Embracing+Trends+for+a+Better+Tomorrow+Guillaume+Lessard
+---
+### Master the Basics of Reading Music
+
+**Author:** Guillaume Lessard · **Subtitle:** A Beginner’s Guide to Musical Literacy · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDybQct5M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDybQct5M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDybQct5M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDybQct5M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDybQct5M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDybQct5M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDybQct5M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDybQct5M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDybQct5M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Master+the+Basics+of+Reading+Music+Guillaume+Lessard
+---
+### Light at the Veil’s Edge
+
+**Author:** Guillaume Lessard · **Subtitle:** The Hidden Flame of Kirlian Photography: How the Soul Leaves Fingerprints in Light · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEBKDjhOYM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKDjhOYM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKDjhOYM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKDjhOYM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKDjhOYM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKDjhOYM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKDjhOYM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKDjhOYM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKDjhOYM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Light+at+the+Veil%E2%80%99s+Edge+Guillaume+Lessard
+---
+### Crossroads of Shadows
+
+**Author:** Guillaume Lessard · **Subtitle:** When love faces betrayal and truth battles deception. · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-26 · **Pages:** 67.0 · **Language:** eng · **Google Volume ID (from Play id):** `9sM6EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=9sM6EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=9sM6EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=9sM6EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=9sM6EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=9sM6EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=9sM6EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=9sM6EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=9sM6EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Crossroads+of+Shadows+Guillaume+Lessard
+---
+### KIMI K2 UNLOCKED
+
+**Author:** Guillaume Lessard · **Subtitle:** Open Agentic Intelligence to Automate, Code, Create & Command Anything · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-22 · **Pages:** 244.0 · **Language:** eng · **Google Volume ID (from Play id):** `iwZzEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=iwZzEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=iwZzEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=iwZzEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=iwZzEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=iwZzEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=iwZzEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=iwZzEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=iwZzEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=KIMI+K2+UNLOCKED+Guillaume+Lessard
+---
+### Mastering Blender
+
+**Author:** Guillaume Lessard · **Subtitle:** From Basics to Advanced 3D Art and Animation · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyI31jnM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyI31jnM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyI31jnM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyI31jnM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyI31jnM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyI31jnM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyI31jnM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyI31jnM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyI31jnM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Blender+Guillaume+Lessard
+---
+### The Frequency Blueprint
+
+**Author:** Guillaume Lessard · **Subtitle:** Healing Technologies of Water, Sound, and Sacred Geometry · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-19 · **Pages:** 40.0 · **Language:** eng · **Google Volume ID (from Play id):** `yLteEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=yLteEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=yLteEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=yLteEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=yLteEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=yLteEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=yLteEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=yLteEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=yLteEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Frequency+Blueprint+Guillaume+Lessard
+---
+### The Complete Beginner to Intermediate Guide to JSON for Veo 3 Prompting
+
+**Author:** Guillaume Lessard · **Subtitle:** Master structured video generation with Google’s Veo 3 using practical JSON techniques, real-world examples, and creative workflows · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-23 · **Pages:** 29.0 · **Language:** eng · **Google Volume ID (from Play id):** `boCAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=boCAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=boCAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=boCAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=boCAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=boCAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=boCAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=boCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=boCAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Complete+Beginner+to+Intermediate+Guide+to+JSON+for+Veo+3+Prompting+Guillaume+Lessard
+---
+### Java Maestro
+
+**Author:** Guillaume Lessard · **Subtitle:** Advanced Programming Masterclass, Expert-Level Coding Strategies Revealed · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDKVEUUnM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKVEUUnM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKVEUUnM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKVEUUnM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKVEUUnM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKVEUUnM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKVEUUnM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKVEUUnM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKVEUUnM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Java+Maestro+Guillaume+Lessard
+---
+### Sacred Vibrational Technology
+
+**Author:** Guillaume Lessard · **Subtitle:** Scientific Explanations, Rituals, & Programming · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEBKTQQNXM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKTQQNXM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKTQQNXM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKTQQNXM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKTQQNXM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKTQQNXM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKTQQNXM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKTQQNXM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKTQQNXM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Sacred+Vibrational+Technology+Guillaume+Lessard
+---
+### Sacred energy harvesting methods
+
+**Author:** Guillaume Lessard · **Subtitle:** 27 Free Energy Technologies Revealed for a Sovereign, Conscious and Self-Reliant Humanity · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-21 · **Pages:** 157.0 · **Language:** eng · **Google Volume ID (from Play id):** `o5JnEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=o5JnEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=o5JnEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=o5JnEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=o5JnEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=o5JnEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=o5JnEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=o5JnEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=o5JnEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Sacred+energy+harvesting+methods+Guillaume+Lessard
+---
+### Reality Unveiled: How Consciousness Shapes the World We Perceive
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Intersection of Perception, Quantum Physics, and the Nature of Existence · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-23 · **Pages:** 79.0 · **Language:** eng · **Google Volume ID (from Play id):** `vCxJEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=vCxJEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=vCxJEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=vCxJEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=vCxJEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=vCxJEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=vCxJEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=vCxJEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=vCxJEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Reality+Unveiled%3A+How+Consciousness+Shapes+the+World+We+Perceive+Guillaume+Lessard
+---
+### Unstoppable: The Ultimate Guide to Unlocking Your Potential and Achieving Success
+
+**Author:** Guillaume Lessard · **Subtitle:** Your Blueprint to Break Barriers, Build Momentum, and Thrive · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-20 · **Pages:** 56.0 · **Language:** eng · **Google Volume ID (from Play id):** `q7s5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=q7s5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=q7s5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=q7s5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=q7s5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=q7s5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=q7s5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=q7s5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=q7s5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Unstoppable%3A+The+Ultimate+Guide+to+Unlocking+Your+Potential+and+Achieving+Success+Guillaume+Lessard
+---
+### DOS Zero to Hero: Mastering Legacy Systems, Command Line Fluency & Retro Automation
+
+**Author:** Guillaume Lessard · **Subtitle:** The Essential Guide to Low-Level Computing, Batch Scripting, and Embedded Control in 2025 · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-22 · **Pages:** 51.0 · **Language:** eng · **Google Volume ID (from Play id):** `EuF_EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=EuF_EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=EuF_EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=EuF_EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=EuF_EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=EuF_EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=EuF_EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=EuF_EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=EuF_EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=DOS+Zero+to+Hero%3A+Mastering+Legacy+Systems%2C+Command+Line+Fluency+%26+Retro+Automation+Guillaume+Lessard
+---
+### AI Goldmine: 100 Passive Income Ideas Using ChatGPT and Free AI Tools
+
+**Author:** Guillaume Lessard · **Subtitle:** Earn Online with Zero Budget – Your Step-by-Step Guide to Automating Success · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEBKDSZNfM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKDSZNfM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKDSZNfM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKDSZNfM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKDSZNfM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKDSZNfM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKDSZNfM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKDSZNfM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKDSZNfM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+Goldmine%3A+100+Passive+Income+Ideas+Using+ChatGPT+and+Free+AI+Tools+Guillaume+Lessard
+---
+### Legacy of Shadows 2
+
+**Author:** Guillaume Lessard · **Subtitle:** A new generation · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDybQIt4M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDybQIt4M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDybQIt4M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDybQIt4M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDybQIt4M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDybQIt4M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDybQIt4M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDybQIt4M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDybQIt4M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Legacy+of+Shadows+2+Guillaume+Lessard
+---
+### The Architect’s Legacy
+
+**Author:** Guillaume Lessard · **Subtitle:** The Fight for Freedom Continues · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyHRtd-M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyHRtd-M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyHRtd-M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyHRtd-M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyHRtd-M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyHRtd-M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyHRtd-M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyHRtd-M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyHRtd-M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Architect%E2%80%99s+Legacy+Guillaume+Lessard
+---
+### Understanding Your Cat's Mind - Edition 2
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey into Feline Psychology · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-26 · **Pages:** 38.0 · **Language:** eng · **Google Volume ID (from Play id):** `ksU6EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ksU6EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ksU6EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ksU6EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ksU6EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ksU6EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ksU6EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ksU6EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ksU6EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Understanding+Your+Cat%27s+Mind+-+Edition+2+Guillaume+Lessard
+---
+### THE LAST BOW
+
+**Author:** Guillaume Lessard · **Subtitle:** The Complete Ozzy Osbourne Tribute (1948-2025) · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-24 · **Pages:** 62.0 · **Language:** eng · **Google Volume ID (from Play id):** `PHdzEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=PHdzEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=PHdzEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=PHdzEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=PHdzEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=PHdzEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=PHdzEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=PHdzEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=PHdzEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=THE+LAST+BOW+Guillaume+Lessard
+---
+### Unstoppable: The Ultimate Guide to Unlocking Your Potential and Achieving Success
+
+**Author:** Guillaume Lessard · **Subtitle:** Your Blueprint to Break Barriers, Build Momentum, and Thrive · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyAzpD2M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyAzpD2M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyAzpD2M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyAzpD2M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyAzpD2M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyAzpD2M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyAzpD2M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyAzpD2M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyAzpD2M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Unstoppable%3A+The+Ultimate+Guide+to+Unlocking+Your+Potential+and+Achieving+Success+Guillaume+Lessard
+---
+### Anarchie et évolution - L'histoire de la musique punk
+
+**Author:** Guillaume Lessard · **Subtitle:** De la rébellion à la révolution - Une odyssée culturelle · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-23 · **Pages:** 30.0 · **Language:** fre · **Google Volume ID (from Play id):** `SDNJEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=SDNJEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=SDNJEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=SDNJEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=SDNJEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=SDNJEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=SDNJEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=SDNJEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=SDNJEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Anarchie+et+%C3%A9volution+-+L%27histoire+de+la+musique+punk+Guillaume+Lessard
+---
+### Master the Basics of Reading Music
+
+**Author:** Guillaume Lessard · **Subtitle:** A Beginner’s Guide to Musical Literacy · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-18 · **Pages:** 31.0 · **Language:** eng · **Google Volume ID (from Play id):** `X-84EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=X-84EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=X-84EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=X-84EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=X-84EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=X-84EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=X-84EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=X-84EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=X-84EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Master+the+Basics+of+Reading+Music+Guillaume+Lessard
+---
+### Spin Mastery
+
+**Author:** Guillaume Lessard · **Subtitle:** The Ultimate Traktor DJ Guide · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyIz1j3M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyIz1j3M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyIz1j3M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyIz1j3M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyIz1j3M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyIz1j3M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyIz1j3M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyIz1j3M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyIz1j3M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Spin+Mastery+Guillaume+Lessard
+---
+### 🌿 La Charte des Relations Sacrées de la Nouvelle Terre
+
+**Author:** Guillaume Lessard · **Subtitle:** Un guide pour aimer librement, en conscience et en vérité · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEDKw32DpM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKw32DpM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKw32DpM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKw32DpM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKw32DpM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKw32DpM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKw32DpM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKw32DpM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKw32DpM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=%F0%9F%8C%BF+La+Charte+des+Relations+Sacr%C3%A9es+de+la+Nouvelle+Terre+Guillaume+Lessard
+---
+### Echoes of Truth
+
+**Author:** Guillaume Lessard · **Subtitle:** The Bonds That Break and the Love That Mends · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 57.0 · **Language:** eng · **Google Volume ID (from Play id):** `QQo4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=QQo4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=QQo4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=QQo4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=QQo4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=QQo4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=QQo4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=QQo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=QQo4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Echoes+of+Truth+Guillaume+Lessard
+---
+### The Many Realities
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Boundaries of Existence and the Unseen Worlds Beyond · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDy_Vu9uM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDy_Vu9uM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDy_Vu9uM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDy_Vu9uM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDy_Vu9uM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDy_Vu9uM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDy_Vu9uM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDy_Vu9uM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDy_Vu9uM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Many+Realities+Guillaume+Lessard
+---
+### FORTGESCHRITTENE TAKTIKEN, PSYCHOLOGISCHES SPIEL UND TURNIERVORBEREITUNG
+
+**Author:** Guillaume Lessard · **Subtitle:** Der vollständige Leitfaden zur Schachwettkampfbeherrschung · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-18 · **Pages:** 56.0 · **Language:** ger · **Google Volume ID (from Play id):** `Z5F-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Z5F-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Z5F-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Z5F-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Z5F-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Z5F-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Z5F-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Z5F-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Z5F-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=FORTGESCHRITTENE+TAKTIKEN%2C+PSYCHOLOGISCHES+SPIEL+UND+TURNIERVORBEREITUNG+Guillaume+Lessard
+---
+### Echoes of the Heart
+
+**Author:** Guillaume Lessard · **Subtitle:** A Love Story · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 50.0 · **Language:** eng · **Google Volume ID (from Play id):** `Kwo4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Kwo4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Kwo4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Kwo4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Kwo4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Kwo4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Kwo4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Kwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Kwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Echoes+of+the+Heart+Guillaume+Lessard
+---
+### Echo Protocol
+
+**Author:** Guillaume Lessard · **Subtitle:** Last Transmission – Part I: Signal Found · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-02 · **Pages:** 38.0 · **Language:** eng · **Google Volume ID (from Play id):** `TedaEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=TedaEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=TedaEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=TedaEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=TedaEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=TedaEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=TedaEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=TedaEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=TedaEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Echo+Protocol+Guillaume+Lessard
+---
+### Anarchy and Evolution
+
+**Author:** Guillaume Lessard · **Subtitle:** The History of Punk Music From Rebellion to Revolution: A Cultural Odyssey · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-20 · **Pages:** 30.0 · **Language:** eng · **Google Volume ID (from Play id):** `Ys45EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Ys45EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Ys45EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Ys45EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Ys45EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Ys45EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Ys45EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Ys45EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Ys45EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Anarchy+and+Evolution+Guillaume+Lessard
+---
+### ADVANCED TACTICS, PSYCHOLOGICAL PLAY, AND TOURNAMENT PREPARATION
+
+**Author:** Guillaume Lessard · **Subtitle:** The Complete Guide to Competitive Chess Mastery · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-18 · **Pages:** 56.0 · **Language:** eng · **Google Volume ID (from Play id):** `x5B-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=x5B-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=x5B-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=x5B-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=x5B-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=x5B-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=x5B-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=x5B-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=x5B-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=ADVANCED+TACTICS%2C+PSYCHOLOGICAL+PLAY%2C+AND+TOURNAMENT+PREPARATION+Guillaume+Lessard
+---
+### Beyond the Event Horizon: Solving the Black Hole Information Paradox
+
+**Author:** Guillaume Lessard · **Subtitle:** How Quantum Mechanics is Redefining Reality and Reshaping Our Understanding of Black Holes · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEBKznCOKM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKznCOKM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKznCOKM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKznCOKM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKznCOKM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKznCOKM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKznCOKM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKznCOKM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKznCOKM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Beyond+the+Event+Horizon%3A+Solving+the+Black+Hole+Information+Paradox+Guillaume+Lessard
+---
+### Mastering Xcode
+
+**Author:** Guillaume Lessard · **Subtitle:** Building Professional iOS and macOS Apps from Scratch · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-21 · **Pages:** 50.0 · **Language:** eng · **Google Volume ID (from Play id):** `Fdo5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Fdo5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Fdo5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Fdo5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Fdo5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Fdo5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Fdo5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Fdo5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Fdo5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Xcode+Guillaume+Lessard
+---
+### Panneaux Solaires Organiques : L’Énergie Vivante du Futur
+
+**Author:** Guillaume Lessard · **Subtitle:** Comprendre, construire et maîtriser les technologies photovoltaïques organiques flexibles et écologiques · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDKlRDVyM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKlRDVyM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKlRDVyM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKlRDVyM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKlRDVyM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKlRDVyM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKlRDVyM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKlRDVyM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKlRDVyM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Panneaux+Solaires+Organiques+%3A+L%E2%80%99%C3%89nergie+Vivante+du+Futur+Guillaume+Lessard
+---
+### The Adventure of iD01t Productions: A Story of Passion, Resilience and Creativity
+
+**Author:** Guillaume Lessard · **Subtitle:** Create, innovate and grow solo, while drawing inspiration from life. · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-22 · **Pages:** 32.0 · **Language:** eng · **Google Volume ID (from Play id):** `U8ZAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=U8ZAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=U8ZAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=U8ZAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=U8ZAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=U8ZAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=U8ZAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=U8ZAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=U8ZAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Adventure+of+iD01t+Productions%3A+A+Story+of+Passion%2C+Resilience+and+Creativity+Guillaume+Lessard
+---
+### The Art of Beauty
+
+**Author:** Guillaume Lessard · **Subtitle:** From Ancient Rituals to Modern Skincare · **Format:** Digital · **Publisher:** iD01t Productions · **Pages:** 81.0 · **Language:** eng · **Google Volume ID (from Play id):** `FvN4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=FvN4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=FvN4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=FvN4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=FvN4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=FvN4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=FvN4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=FvN4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=FvN4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Art+of+Beauty+Guillaume+Lessard
+---
+### The Artifact’s Whisper
+
+**Author:** Guillaume Lessard · **Subtitle:** A Tale of Love, Betrayal, and the Secrets of Time · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-21 · **Pages:** 86.0 · **Language:** eng · **Google Volume ID (from Play id):** `L9o5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=L9o5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=L9o5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=L9o5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=L9o5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=L9o5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=L9o5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=L9o5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=L9o5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Artifact%E2%80%99s+Whisper+Guillaume+Lessard
+---
+### Love Prevails
+
+**Author:** Guillaume Lessard · **Subtitle:** Unmasking Shadows, Unearthing Truths · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-20 · **Pages:** 109.0 · **Language:** eng · **Google Volume ID (from Play id):** `ZM45EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ZM45EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ZM45EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ZM45EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ZM45EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ZM45EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ZM45EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ZM45EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ZM45EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Love+Prevails+Guillaume+Lessard
+---
+### Visual Basic Zero to Hero (Edition #2)
+
+**Author:** Guillaume Lessard · **Subtitle:** Mastering the Versatile Language for Rapid Application Development · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 29.0 · **Language:** eng · **Google Volume ID (from Play id):** `lRc4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=lRc4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=lRc4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=lRc4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=lRc4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=lRc4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=lRc4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=lRc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=lRc4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Visual+Basic+Zero+to+Hero+%28Edition+%232%29+Guillaume+Lessard
+---
+### Master IT Yourself
+
+**Author:** Guillaume Lessard · **Subtitle:** A DIY Guide to Building Your IT Skills · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 104.0 · **Language:** eng · **Google Volume ID (from Play id):** `VRc4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=VRc4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=VRc4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=VRc4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=VRc4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=VRc4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=VRc4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=VRc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=VRc4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Master+IT+Yourself+Guillaume+Lessard
+---
+### Le pont entre les mondes
+
+**Author:** Guillaume Lessard · **Subtitle:** Guide pratique pour se connecter aux énergies et dimensions parallèles · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-02 · **Pages:** 29.0 · **Language:** fre · **Google Volume ID (from Play id):** `wXlLEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=wXlLEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=wXlLEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=wXlLEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=wXlLEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=wXlLEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=wXlLEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=wXlLEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=wXlLEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Le+pont+entre+les+mondes+Guillaume+Lessard
+---
+### Understanding Your Cat's Mind
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey into Feline Psychology · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyq2jriM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyq2jriM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyq2jriM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyq2jriM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyq2jriM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyq2jriM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyq2jriM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyq2jriM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyq2jriM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Understanding+Your+Cat%27s+Mind+Guillaume+Lessard
+---
+### The End of an Era: The TikTok Shutdown in the USA
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Rise, Fall, and Ripple Effects of a Digital Phenomenon · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-10 · **Pages:** 18.0 · **Language:** eng · **Google Volume ID (from Play id):** `ZZs9EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ZZs9EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ZZs9EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ZZs9EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ZZs9EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ZZs9EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ZZs9EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ZZs9EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ZZs9EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+End+of+an+Era%3A+The+TikTok+Shutdown+in+the+USA+Guillaume+Lessard
+---
+### Uniendo mundos
+
+**Author:** Guillaume Lessard · **Subtitle:** Guía práctica para conectar con energías y dimensiones paralelas · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-02 · **Pages:** 29.0 · **Language:** spa · **Google Volume ID (from Play id):** `CXpLEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=CXpLEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=CXpLEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=CXpLEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=CXpLEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=CXpLEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=CXpLEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=CXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=CXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Uniendo+mundos+Guillaume+Lessard
+---
+### Python Mastery: The Complete Guide to Building Profitable Applications
+
+**Author:** Guillaume Lessard · **Subtitle:** From Zero to Professional Developer in 90 Days - A Comprehensive Manual for Beginners, Intermediates, and Professionals · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-09 · **Pages:** 66.0 · **Language:** eng · **Google Volume ID (from Play id):** `HHR4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=HHR4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=HHR4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=HHR4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=HHR4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=HHR4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=HHR4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=HHR4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=HHR4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Python+Mastery%3A+The+Complete+Guide+to+Building+Profitable+Applications+Guillaume+Lessard
+---
+### 🌿 La Charte des Relations Sacrées de la Nouvelle Terre
+
+**Author:** Guillaume Lessard · **Subtitle:** Un guide pour aimer librement, en conscience et en vérité · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-25 · **Pages:** 44.0 · **Language:** fre · **Google Volume ID (from Play id):** `P3NoEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=P3NoEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=P3NoEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=P3NoEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=P3NoEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=P3NoEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=P3NoEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=P3NoEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=P3NoEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=%F0%9F%8C%BF+La+Charte+des+Relations+Sacr%C3%A9es+de+la+Nouvelle+Terre+Guillaume+Lessard
+---
+### Meisterschaft im Schach
+
+**Author:** Guillaume Lessard · **Subtitle:** Professioneller Leitfaden zu Gewinnstrategien und Techniken · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-15 · **Pages:** 134.0 · **Language:** ger · **Google Volume ID (from Play id):** `bQ5-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=bQ5-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=bQ5-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=bQ5-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=bQ5-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=bQ5-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=bQ5-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=bQ5-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=bQ5-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Meisterschaft+im+Schach+Guillaume+Lessard
+---
+### The Architect’s Legacy
+
+**Author:** Guillaume Lessard · **Subtitle:** The Fight for Freedom Continues · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-18 · **Pages:** 47.0 · **Language:** eng · **Google Volume ID (from Play id):** `H_A4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=H_A4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=H_A4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=H_A4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=H_A4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=H_A4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=H_A4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=H_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=H_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Architect%E2%80%99s+Legacy+Guillaume+Lessard
+---
+### Before the storm
+
+**Author:** Guillaume Lessard · **Subtitle:** The Rise of a Fearless Journalist, Edition 2 · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-07 · **Pages:** 65.0 · **Language:** eng · **Google Volume ID (from Play id):** `0Yo2EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=0Yo2EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=0Yo2EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=0Yo2EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=0Yo2EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=0Yo2EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=0Yo2EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=0Yo2EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=0Yo2EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Before+the+storm+Guillaume+Lessard
+---
+### L'énigme quantique : Percer les mystères de la réalité
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploration de la mécanique quantique, des mondes parallèles et de la nature de la conscience · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-24 · **Pages:** 112.0 · **Language:** fre · **Google Volume ID (from Play id):** `WDRJEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=WDRJEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=WDRJEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=WDRJEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=WDRJEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=WDRJEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=WDRJEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=WDRJEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=WDRJEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=L%27%C3%A9nigme+quantique+%3A+Percer+les+myst%C3%A8res+de+la+r%C3%A9alit%C3%A9+Guillaume+Lessard
+---
+### L'Alchimie de la Transformation
+
+**Author:** Guillaume Lessard · **Subtitle:** Les Secrets de l'Équilibre et de l'Abondance · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-19 · **Pages:** 28.0 · **Language:** fre · **Google Volume ID (from Play id):** `mPpmEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=mPpmEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=mPpmEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=mPpmEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=mPpmEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=mPpmEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=mPpmEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=mPpmEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=mPpmEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=L%27Alchimie+de+la+Transformation+Guillaume+Lessard
+---
+### Sacred Vibrational Technology
+
+**Author:** Guillaume Lessard · **Subtitle:** Scientific Explanations, Rituals, & Programming · **Format:** Digital · **Publisher:** iD01t Productions · **Pages:** 29.0 · **Language:** fre · **Google Volume ID (from Play id):** `URVYEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=URVYEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=URVYEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=URVYEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=URVYEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=URVYEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=URVYEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=URVYEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=URVYEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Sacred+Vibrational+Technology+Guillaume+Lessard
+---
+### The Real Guide To Using AI To Generate Perfect Veo 3 Requests
+
+**Author:** Guillaume Lessard · **Subtitle:** A comprehensive handbook with advanced JSON techniques, secret optimization methods, complete schemas, validators, prompt engineering systems, and enterprise-grade workflows · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-23 · **Pages:** 110.0 · **Language:** eng · **Google Volume ID (from Play id):** `PoCAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=PoCAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=PoCAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=PoCAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=PoCAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=PoCAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=PoCAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=PoCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=PoCAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Real+Guide+To+Using+AI+To+Generate+Perfect+Veo+3+Requests+Guillaume+Lessard
+---
+### Shadows Reignited
+
+**Author:** Guillaume Lessard · **Subtitle:** Lisa’s Fight for Justice · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyzUmNqM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyzUmNqM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyzUmNqM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyzUmNqM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyzUmNqM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyzUmNqM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyzUmNqM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyzUmNqM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyzUmNqM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+Reignited+Guillaume+Lessard
+---
+### Earthquakes Unveiled
+
+**Author:** Guillaume Lessard · **Subtitle:** Understanding, Predicting, and Preparing for Nature’s Most Powerful Force · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDybRwt_M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDybRwt_M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDybRwt_M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDybRwt_M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDybRwt_M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDybRwt_M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDybRwt_M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDybRwt_M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDybRwt_M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Earthquakes+Unveiled+Guillaume+Lessard
+---
+### Beneath the Bloom
+
+**Author:** Guillaume Lessard · **Subtitle:** Shadows Unleashed Every Secret Brings a Storm · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 43.0 · **Language:** eng · **Google Volume ID (from Play id):** `wRQ4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=wRQ4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=wRQ4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=wRQ4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=wRQ4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=wRQ4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=wRQ4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=wRQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=wRQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Beneath+the+Bloom+Guillaume+Lessard
+---
+### Lettre à celle que j'aime toujours
+
+**Author:** Guillaume Lessard · **Subtitle:** Hommage à L'amour libre même sans présence · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-24 · **Pages:** 65.0 · **Language:** fre · **Google Volume ID (from Play id):** `6G5zEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=6G5zEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=6G5zEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=6G5zEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=6G5zEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=6G5zEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=6G5zEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=6G5zEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=6G5zEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Lettre+%C3%A0+celle+que+j%27aime+toujours+Guillaume+Lessard
+---
+### Shadows of Redemption
+
+**Author:** Guillaume Lessard · **Subtitle:** The Price of Justice and the Strength of Love · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 44.0 · **Language:** eng · **Google Volume ID (from Play id):** `Owo4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Owo4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Owo4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Owo4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Owo4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Owo4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Owo4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Owo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Owo4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+of+Redemption+Guillaume+Lessard
+---
+### To the Top of the Mountain
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey of Health, Wellness, and Adventure · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-19 · **Pages:** 146.0 · **Language:** eng · **Google Volume ID (from Play id):** `-FA5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=-FA5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=-FA5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=-FA5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=-FA5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=-FA5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=-FA5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=-FA5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=-FA5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=To+the+Top+of+the+Mountain+Guillaume+Lessard
+---
+### Sacred Patterns: A Transformational Journey Through Geometry and Conscious Living
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Ancient Wisdom and Modern Power of Sacred Geometry in Art, Healing, and Design · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-29 · **Pages:** 39.0 · **Language:** eng · **Google Volume ID (from Play id):** `VMdgEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=VMdgEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=VMdgEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=VMdgEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=VMdgEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=VMdgEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=VMdgEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=VMdgEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=VMdgEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Sacred+Patterns%3A+A+Transformational+Journey+Through+Geometry+and+Conscious+Living+Guillaume+Lessard
+---
+### Quantum Tao
+
+**Author:** Guillaume Lessard · **Subtitle:** Modern Science and Ancient Wisdom in Harmony · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDKSjUK7M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKSjUK7M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKSjUK7M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKSjUK7M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKSjUK7M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKSjUK7M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKSjUK7M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKSjUK7M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKSjUK7M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Tao+Guillaume+Lessard
+---
+### 𓂀 SY•NARCHÉON 𓂀
+
+**Author:** Guillaume Lessard · **Subtitle:** Système vivant d’union totale entre esprit, matière et intelligence · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-14 · **Pages:** 115.0 · **Language:** fre · **Google Volume ID (from Play id):** `7dNlEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=7dNlEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=7dNlEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=7dNlEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=7dNlEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=7dNlEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=7dNlEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=7dNlEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=7dNlEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=%F0%93%82%80+SY%E2%80%A2NARCH%C3%89ON+%F0%93%82%80+Guillaume+Lessard
+---
+### Quantum Jumping Unlocked
+
+**Author:** Guillaume Lessard · **Subtitle:** Harness Parallel Realities, Rewire Your Mind, and Leap Into the Life You Truly Desire · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEBKDmdOPM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKDmdOPM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKDmdOPM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKDmdOPM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKDmdOPM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKDmdOPM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKDmdOPM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKDmdOPM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKDmdOPM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Jumping+Unlocked+Guillaume+Lessard
+---
+### Anarchie et évolution - L'histoire de la musique punk
+
+**Author:** Guillaume Lessard · **Subtitle:** De la rébellion à la révolution - Une odyssée culturelle · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAECKmALYmM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECKmALYmM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECKmALYmM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECKmALYmM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECKmALYmM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECKmALYmM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECKmALYmM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECKmALYmM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECKmALYmM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Anarchie+et+%C3%A9volution+-+L%27histoire+de+la+musique+punk+Guillaume+Lessard
+---
+### 杰克的摊位
+
+**Author:** Guillaume Lessard · **Subtitle:** 一位环境律师为正义而战 · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-23 · **Pages:** 39.0 · **Language:** chi · **Google Volume ID (from Play id):** `Y1SAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Y1SAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Y1SAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Y1SAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Y1SAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Y1SAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Y1SAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Y1SAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Y1SAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=%E6%9D%B0%E5%85%8B%E7%9A%84%E6%91%8A%E4%BD%8D+Guillaume+Lessard
+---
+### LUMEN·ZERO : Le Pouvoir Caché des Pyramides Énergétiques
+
+**Author:** Guillaume Lessard · **Subtitle:** Construire, Amplifier, Alimenter – Guide Complet pour Récolter l’Énergie Libre à l’Aide de Pyramides Résonantes · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-19 · **Pages:** 29.0 · **Language:** fre · **Google Volume ID (from Play id):** `Qv1mEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Qv1mEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Qv1mEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Qv1mEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Qv1mEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Qv1mEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Qv1mEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Qv1mEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Qv1mEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=LUMEN%C2%B7ZERO+%3A+Le+Pouvoir+Cach%C3%A9+des+Pyramides+%C3%89nerg%C3%A9tiques+Guillaume+Lessard
+---
+### Menjembatani Dunia
+
+**Author:** Guillaume Lessard · **Subtitle:** Panduan Praktis untuk Terhubung dengan Energi dan Dimensi Paralel · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-02 · **Pages:** 29.0 · **Language:** ind · **Google Volume ID (from Play id):** `53lLEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=53lLEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=53lLEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=53lLEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=53lLEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=53lLEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=53lLEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=53lLEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=53lLEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Menjembatani+Dunia+Guillaume+Lessard
+---
+### The Secrets of Oak Island
+
+**Author:** Guillaume Lessard · **Subtitle:** Unraveling the Templar Connection to History's Greatest Treasure Hunt · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 107.0 · **Language:** eng · **Google Volume ID (from Play id):** `zvg5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=zvg5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=zvg5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=zvg5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=zvg5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=zvg5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=zvg5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=zvg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=zvg5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Secrets+of+Oak+Island+Guillaume+Lessard
+---
+### Spin Mastery
+
+**Author:** Guillaume Lessard · **Subtitle:** The Ultimate Traktor DJ Guide · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 54.0 · **Language:** eng · **Google Volume ID (from Play id):** `TPk5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=TPk5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=TPk5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=TPk5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=TPk5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=TPk5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=TPk5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=TPk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=TPk5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Spin+Mastery+Guillaume+Lessard
+---
+### Automation and SEO Mastery: Strategies for Growth and Efficiency
+
+**Author:** Guillaume Lessard · **Subtitle:** A Practical Guide to Scaling Your Online Presence with Cutting-Edge Automation Tools and Advanced SEO Techniques · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDygzrD2M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDygzrD2M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDygzrD2M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDygzrD2M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDygzrD2M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDygzrD2M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDygzrD2M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDygzrD2M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDygzrD2M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Automation+and+SEO+Mastery%3A+Strategies+for+Growth+and+Efficiency+Guillaume+Lessard
+---
+### Agentic AI Sprint for Solopreneurs
+
+**Author:** Guillaume Lessard · **Subtitle:** Launch Autonomous Money-Making Agents in 7 Days, Triple Your Output, Keep Your Team of One · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-25 · **Pages:** 448.0 · **Language:** eng · **Google Volume ID (from Play id):** `OQt0EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=OQt0EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=OQt0EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=OQt0EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=OQt0EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=OQt0EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=OQt0EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=OQt0EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=OQt0EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Agentic+AI+Sprint+for+Solopreneurs+Guillaume+Lessard
+---
+### Spin Mastery : Le guide ultime du DJ Traktor
+
+**Author:** Guillaume Lessard · **Subtitle:** Votre chemin vers un mixage professionnel et des paysages sonores créatifs · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAECKGANYmM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECKGANYmM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECKGANYmM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECKGANYmM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECKGANYmM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECKGANYmM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECKGANYmM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECKGANYmM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECKGANYmM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Spin+Mastery+%3A+Le+guide+ultime+du+DJ+Traktor+Guillaume+Lessard
+---
+### Reality Unveiled: How Consciousness Shapes the World We Perceive
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Intersection of Perception, Quantum Physics, and the Nature of Existence · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAECK6CaovM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECK6CaovM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECK6CaovM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECK6CaovM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECK6CaovM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECK6CaovM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECK6CaovM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECK6CaovM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECK6CaovM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Reality+Unveiled%3A+How+Consciousness+Shapes+the+World+We+Perceive+Guillaume+Lessard
+---
+### The Power of Repetition: Transforming Minds Through Words
+
+**Author:** Guillaume Lessard · **Subtitle:** How Daily Affirmations Shape Reality and Influence Success · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDymy_bzM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDymy_bzM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDymy_bzM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDymy_bzM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDymy_bzM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDymy_bzM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDymy_bzM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDymy_bzM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDymy_bzM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Power+of+Repetition%3A+Transforming+Minds+Through+Words+Guillaume+Lessard
+---
+### Quantum Code Mastery
+
+**Author:** Guillaume Lessard · **Subtitle:** From Bits to Qubits — The Ultimate Beginner’s Guide to Quantum Programming and the Future of Computing · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEBK9gy2VM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBK9gy2VM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBK9gy2VM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBK9gy2VM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBK9gy2VM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBK9gy2VM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBK9gy2VM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBK9gy2VM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBK9gy2VM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Code+Mastery+Guillaume+Lessard
+---
+### Mastering Quantum Error Correction
+
+**Author:** Guillaume Lessard · **Subtitle:** Safeguarding the Future of Computation · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-05 · **Pages:** 20.0 · **Language:** eng · **Google Volume ID (from Play id):** `2aRMEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=2aRMEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=2aRMEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=2aRMEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=2aRMEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=2aRMEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=2aRMEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=2aRMEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=2aRMEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Quantum+Error+Correction+Guillaume+Lessard
+---
+### Beneath the Bloom
+
+**Author:** Guillaume Lessard · **Subtitle:** Shadows Unleashed Every Secret Brings a Storm · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyzQmN6M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyzQmN6M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyzQmN6M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyzQmN6M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyzQmN6M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyzQmN6M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyzQmN6M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyzQmN6M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyzQmN6M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Beneath+the+Bloom+Guillaume+Lessard
+---
+### Shadows of Bloom
+
+**Author:** Guillaume Lessard · **Subtitle:** Every Secret Has Its Roots · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyrQft5M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyrQft5M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyrQft5M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyrQft5M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyrQft5M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyrQft5M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyrQft5M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyrQft5M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyrQft5M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+of+Bloom+Guillaume+Lessard
+---
+### Zen and the Art of Resilient Living
+
+**Author:** Guillaume Lessard · **Subtitle:** A Guide to Thriving Through Life’s Challenges with Mindfulness and Strength · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-26 · **Pages:** 77.0 · **Language:** eng · **Google Volume ID (from Play id):** `o3c6EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=o3c6EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=o3c6EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=o3c6EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=o3c6EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=o3c6EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=o3c6EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=o3c6EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=o3c6EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Zen+and+the+Art+of+Resilient+Living+Guillaume+Lessard
+---
+### Signalfall
+
+**Author:** Guillaume Lessard · **Subtitle:** Love, Truth, and a Network That Refuses to Die · **Format:** Digital · **Publisher:** iD01t Productions · **Pages:** 57.0 · **Language:** eng · **Google Volume ID (from Play id):** `82-GEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=82-GEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=82-GEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=82-GEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=82-GEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=82-GEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=82-GEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=82-GEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=82-GEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Signalfall+Guillaume+Lessard
+---
+### Mastering Photoshop: The Complete Guide to Every Version
+
+**Author:** Guillaume Lessard · **Subtitle:** From Basics to Advanced Techniques with Hands-On Exercises and Projects · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-16 · **Pages:** 45.0 · **Language:** eng · **Google Volume ID (from Play id):** `3Q9HEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=3Q9HEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=3Q9HEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=3Q9HEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=3Q9HEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=3Q9HEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=3Q9HEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=3Q9HEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=3Q9HEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Photoshop%3A+The+Complete+Guide+to+Every+Version+Guillaume+Lessard
+---
+### Mastering Generative AI and LLMs - Editon 2
+
+**Author:** Guillaume Lessard · **Subtitle:** The Definitive Guide to Transformative Technologies · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 29.0 · **Language:** eng · **Google Volume ID (from Play id):** `exc4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=exc4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=exc4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=exc4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=exc4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=exc4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=exc4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=exc4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=exc4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Generative+AI+and+LLMs+-+Editon+2+Guillaume+Lessard
+---
+### Intersection: The Moment Their Paths Crossed
+
+**Author:** Guillaume Lessard · **Subtitle:** The Fate That Brought Them Together · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 44.0 · **Language:** eng · **Google Volume ID (from Play id):** `Iwo4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Iwo4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Iwo4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Iwo4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Iwo4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Iwo4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Iwo4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Iwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Iwo4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Intersection%3A+The+Moment+Their+Paths+Crossed+Guillaume+Lessard
+---
+### Zen and the Art of Self-Confidence
+
+**Author:** Guillaume Lessard · **Subtitle:** A Practical Guide to Cultivating Calm, Clarity, and Resilience · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 44.0 · **Language:** eng · **Google Volume ID (from Play id):** `V_05EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=V_05EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=V_05EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=V_05EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=V_05EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=V_05EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=V_05EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=V_05EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=V_05EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Zen+and+the+Art+of+Self-Confidence+Guillaume+Lessard
+---
+### TRAKTOR MASTERY: The Complete Professional DJ System
+
+**Author:** Guillaume Lessard · **Subtitle:** From Beginner Beats to Festival Stages · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-17 · **Pages:** 64.0 · **Language:** eng · **Google Volume ID (from Play id):** `RWZ-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=RWZ-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=RWZ-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=RWZ-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=RWZ-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=RWZ-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=RWZ-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=RWZ-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=RWZ-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=TRAKTOR+MASTERY%3A+The+Complete+Professional+DJ+System+Guillaume+Lessard
+---
+### The AI Innovator’s Playbook
+
+**Author:** Guillaume Lessard · **Subtitle:** Practical Strategies to Build, Launch, and Scale AI-Driven Businesses · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-09-17 · **Pages:** 94.0 · **Language:** eng · **Google Volume ID (from Play id):** `8XCHEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=8XCHEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=8XCHEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=8XCHEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=8XCHEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=8XCHEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=8XCHEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=8XCHEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=8XCHEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+AI+Innovator%E2%80%99s+Playbook+Guillaume+Lessard
+---
+### Mastering the Game: The Ultimate Guide to Pro Chess Strategies
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlock Advanced Techniques and Tactical Insights to Dominate the Chessboard · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-19 · **Pages:** 71.0 · **Language:** eng · **Google Volume ID (from Play id):** `lCFAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=lCFAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=lCFAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=lCFAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=lCFAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=lCFAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=lCFAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=lCFAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=lCFAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+the+Game%3A+The+Ultimate+Guide+to+Pro+Chess+Strategies+Guillaume+Lessard
+---
+### El costo que llamó "vale la pena"
+
+**Author:** Guillaume Lessard · **Subtitle:** Una visión canadiense sobre el culto a las armas en Estados Unidos · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-09-11 · **Pages:** 60.0 · **Language:** spa · **Google Volume ID (from Play id):** `CdSFEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=CdSFEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=CdSFEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=CdSFEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=CdSFEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=CdSFEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=CdSFEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=CdSFEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=CdSFEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=El+costo+que+llam%C3%B3+%22vale+la+pena%22+Guillaume+Lessard
+---
+### AI Today: Transforming Lives and Industries for the Future
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlocking the Power of Artificial Intelligence for a Better Tomorrow · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-09 · **Pages:** 53.0 · **Language:** eng · **Google Volume ID (from Play id):** `kY09EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=kY09EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=kY09EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=kY09EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=kY09EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=kY09EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=kY09EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=kY09EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=kY09EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+Today%3A+Transforming+Lives+and+Industries+for+the+Future+Guillaume+Lessard
+---
+### L’Aventure d’iD01t Productions : Une Histoire de Passion, de Résilience et de Créativité
+
+**Author:** Guillaume Lessard · **Subtitle:** Créer, innover et grandir en solo, tout en s’inspirant de la vie. · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-22 · **Pages:** 34.0 · **Language:** fre · **Google Volume ID (from Play id):** `NcZAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=NcZAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=NcZAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=NcZAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=NcZAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=NcZAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=NcZAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=NcZAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=NcZAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=L%E2%80%99Aventure+d%E2%80%99iD01t+Productions+%3A+Une+Histoire+de+Passion%2C+de+R%C3%A9silience+et+de+Cr%C3%A9ativit%C3%A9+Guillaume+Lessard
+---
+### Reignite the Bond
+
+**Author:** Guillaume Lessard · **Subtitle:** Science-Based Strategies to Save Your Marriage and Build a Love That Lasts · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-02 · **Pages:** 74.0 · **Language:** eng · **Google Volume ID (from Play id):** `V292EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=V292EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=V292EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=V292EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=V292EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=V292EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=V292EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=V292EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=V292EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Reignite+the+Bond+Guillaume+Lessard
+---
+### Intersection: The Moment Their Paths Crossed
+
+**Author:** Guillaume Lessard · **Subtitle:** The Fate That Brought Them Together · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyzWuNiM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyzWuNiM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyzWuNiM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyzWuNiM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyzWuNiM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyzWuNiM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyzWuNiM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyzWuNiM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyzWuNiM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Intersection%3A+The+Moment+Their+Paths+Crossed+Guillaume+Lessard
+---
+### Maîtrise des échecs
+
+**Author:** Guillaume Lessard · **Subtitle:** Guide des stratégies et techniques gagnantes pour les professionnels · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAECKmCzYtM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECKmCzYtM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECKmCzYtM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECKmCzYtM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECKmCzYtM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECKmCzYtM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECKmCzYtM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECKmCzYtM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECKmCzYtM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Ma%C3%AEtrise+des+%C3%A9checs+Guillaume+Lessard
+---
+### Schachintuition meistern
+
+**Author:** Guillaume Lessard · **Subtitle:** Die verborgenen Muster, die jeder Großmeister sieht · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-30 · **Pages:** 228.0 · **Language:** ger · **Google Volume ID (from Play id):** `_2uCEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=_2uCEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=_2uCEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=_2uCEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=_2uCEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=_2uCEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=_2uCEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=_2uCEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=_2uCEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Schachintuition+meistern+Guillaume+Lessard
+---
+### AI Revolution: How Automation is Transforming Everyday Life
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Innovations, Challenges, and Future of Artificial Intelligence · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDy_w-_7M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDy_w-_7M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDy_w-_7M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDy_w-_7M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDy_w-_7M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDy_w-_7M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDy_w-_7M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDy_w-_7M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDy_w-_7M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+Revolution%3A+How+Automation+is+Transforming+Everyday+Life+Guillaume+Lessard
+---
+### Leo XIV: The First American Pope
+
+**Author:** Guillaume Lessard · **Subtitle:** A Historic Journey from Chicago to the Vatican · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-08 · **Pages:** 16.0 · **Language:** eng · **Google Volume ID (from Play id):** `oThcEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=oThcEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=oThcEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=oThcEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=oThcEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=oThcEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=oThcEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=oThcEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=oThcEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Leo+XIV%3A+The+First+American+Pope+Guillaume+Lessard
+---
+### DIY Digital Skills: Build a Career in Tech from Scratch
+
+**Author:** Guillaume Lessard · **Subtitle:** Master the Foundations of Tech, Learn to Code, and Unlock High-Paying Digital Careers. · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-10 · **Pages:** 61.0 · **Language:** eng · **Google Volume ID (from Play id):** `f8o9EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=f8o9EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=f8o9EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=f8o9EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=f8o9EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=f8o9EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=f8o9EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=f8o9EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=f8o9EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=DIY+Digital+Skills%3A+Build+a+Career+in+Tech+from+Scratch+Guillaume+Lessard
+---
+### Maîtrise des échecs
+
+**Author:** Guillaume Lessard · **Subtitle:** Guide des stratégies et techniques gagnantes pour les professionnels · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-23 · **Pages:** 57.0 · **Language:** fre · **Google Volume ID (from Play id):** `pDJJEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=pDJJEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=pDJJEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=pDJJEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=pDJJEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=pDJJEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=pDJJEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=pDJJEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=pDJJEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Ma%C3%AEtrise+des+%C3%A9checs+Guillaume+Lessard
+---
+### Chess Mastery
+
+**Author:** Guillaume Lessard · **Subtitle:** A Pro's Guide to Winning Strategies and Techniques - Edition 2: Expanded & Updated · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-17 · **Pages:** 134.0 · **Language:** eng · **Google Volume ID (from Play id):** `m5M4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=m5M4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=m5M4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=m5M4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=m5M4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=m5M4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=m5M4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=m5M4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=m5M4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Chess+Mastery+Guillaume+Lessard
+---
+### AI in Education
+
+**Author:** Guillaume Lessard · **Subtitle:** Transforming the Classroom for the 21st Century · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-20 · **Pages:** 24.0 · **Language:** eng · **Google Volume ID (from Play id):** `i_ZeEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=i_ZeEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=i_ZeEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=i_ZeEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=i_ZeEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=i_ZeEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=i_ZeEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=i_ZeEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=i_ZeEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+in+Education+Guillaume+Lessard
+---
+### Mastering Xcode
+
+**Author:** Guillaume Lessard · **Subtitle:** Building Professional iOS and macOS Apps from Scratch · **Format:** Audiobook · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-21 · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyg0jDqM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyg0jDqM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyg0jDqM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyg0jDqM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyg0jDqM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyg0jDqM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyg0jDqM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyg0jDqM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyg0jDqM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Xcode+Guillaume+Lessard
+---
+### Dünyalar Arasında Köprü Kurmak
+
+**Author:** Guillaume Lessard · **Subtitle:** Paralel Enerjiler ve Boyutlarla Bağlantı Kurmak için Pratik Bir Rehber · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-02 · **Pages:** 29.0 · **Language:** tur · **Google Volume ID (from Play id):** `0XlLEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=0XlLEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=0XlLEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=0XlLEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=0XlLEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=0XlLEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=0XlLEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=0XlLEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=0XlLEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=D%C3%BCnyalar+Aras%C4%B1nda+K%C3%B6pr%C3%BC+Kurmak+Guillaume+Lessard
+---
+### Beyond the Event Horizon: Solving the Black Hole Information Paradox
+
+**Author:** Guillaume Lessard · **Subtitle:** How Quantum Mechanics is Redefining Reality and Reshaping Our Understanding of Black Holes · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-25 · **Pages:** 78.0 · **Language:** fre · **Google Volume ID (from Play id):** `8EhZEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=8EhZEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=8EhZEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=8EhZEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=8EhZEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=8EhZEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=8EhZEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=8EhZEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=8EhZEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Beyond+the+Event+Horizon%3A+Solving+the+Black+Hole+Information+Paradox+Guillaume+Lessard
+---
+### FREE ENERGY, FREE LIFE
+
+**Author:** Guillaume Lessard · **Subtitle:** The Forbidden Science of Nikola Tesla and the Path to Total Financial Freedom · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEBKjVnNAM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKjVnNAM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKjVnNAM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKjVnNAM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKjVnNAM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKjVnNAM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKjVnNAM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKjVnNAM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKjVnNAM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=FREE+ENERGY%2C+FREE+LIFE+Guillaume+Lessard
+---
+### Bite by Bite
+
+**Author:** Guillaume Lessard · **Subtitle:** The Rise of Fast Food in America · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyI11jvM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyI11jvM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyI11jvM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyI11jvM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyI11jvM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyI11jvM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyI11jvM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyI11jvM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyI11jvM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Bite+by+Bite+Guillaume+Lessard
+---
+### Legacy of Shadows
+
+**Author:** Guillaume Lessard · **Subtitle:** The Final Betrayal and a Love Unbreakable · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyzUqNqM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyzUqNqM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyzUqNqM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyzUqNqM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyzUqNqM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyzUqNqM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyzUqNqM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyzUqNqM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyzUqNqM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Legacy+of+Shadows+Guillaume+Lessard
+---
+### The Maglev Revolution
+
+**Author:** Guillaume Lessard · **Subtitle:** Speed, Sustainability, and the Future of Transportation · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDy7Rat9M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDy7Rat9M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDy7Rat9M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDy7Rat9M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDy7Rat9M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDy7Rat9M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDy7Rat9M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDy7Rat9M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDy7Rat9M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Maglev+Revolution+Guillaume+Lessard
+---
+### Jimmy Carter: A Legacy of Compassion and Leadership
+
+**Author:** Guillaume Lessard · **Subtitle:** From Peanut Farmer to Nobel Laureate – A Life That Shaped the World · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-10 · **Pages:** 23.0 · **Language:** eng · **Google Volume ID (from Play id):** `f5Y9EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=f5Y9EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=f5Y9EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=f5Y9EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=f5Y9EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=f5Y9EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=f5Y9EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=f5Y9EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=f5Y9EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Jimmy+Carter%3A+A+Legacy+of+Compassion+and+Leadership+Guillaume+Lessard
+---
+### Ableton Elevation: DJ iD01T’s Complete Guide to Building Hits and Elevating Your Sound
+
+**Author:** Guillaume Lessard · **Subtitle:** A Real-World Journey from Bedroom Producer to Stage Commander with Ableton Live · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-07 · **Pages:** 86.0 · **Language:** eng · **Google Volume ID (from Play id):** `NT1UEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=NT1UEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=NT1UEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=NT1UEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=NT1UEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=NT1UEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=NT1UEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=NT1UEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=NT1UEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Ableton+Elevation%3A+DJ+iD01T%E2%80%99s+Complete+Guide+to+Building+Hits+and+Elevating+Your+Sound+Guillaume+Lessard
+---
+### Forever in Bloom
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey of Love, Friendship, and Second Chances · **Format:** Audiobook · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-16 · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDybVwtvM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDybVwtvM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDybVwtvM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDybVwtvM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDybVwtvM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDybVwtvM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDybVwtvM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDybVwtvM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDybVwtvM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Forever+in+Bloom+Guillaume+Lessard
+---
+### Forever in Bloom
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey of Love, Friendship, and Second Chances · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 90.0 · **Language:** eng · **Google Volume ID (from Play id):** `qRQ4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=qRQ4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=qRQ4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=qRQ4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=qRQ4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=qRQ4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=qRQ4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=qRQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=qRQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Forever+in+Bloom+Guillaume+Lessard
+---
+### Quantum Revolution: Unveiling the Future with Willow
+
+**Author:** Guillaume Lessard · **Subtitle:** How Google's Quantum Chip Redefines Computing for the Next Era · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAK6g6qFM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAK6g6qFM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAK6g6qFM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAK6g6qFM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAK6g6qFM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAK6g6qFM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAK6g6qFM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAK6g6qFM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAK6g6qFM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Revolution%3A+Unveiling+the+Future+with+Willow+Guillaume+Lessard
+---
+### Python Prodigy: From Intermediate to Expert Mastery
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlock Advanced Python Techniques to Elevate Your Programming and Dominate the Tech Industry · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-09 · **Pages:** 93.0 · **Language:** eng · **Google Volume ID (from Play id):** `W449EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=W449EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=W449EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=W449EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=W449EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=W449EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=W449EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=W449EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=W449EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Python+Prodigy%3A+From+Intermediate+to+Expert+Mastery+Guillaume+Lessard
+---
+### When Cells Listen: The Hidden Symphony of Sound and Gene Expression
+
+**Author:** Guillaume Lessard · **Subtitle:** How Acoustic Vibrations Influence Our Biology, The Future of Sonic Medicine · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEBKTncOLM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKTncOLM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKTncOLM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKTncOLM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKTncOLM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKTncOLM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKTncOLM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKTncOLM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKTncOLM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=When+Cells+Listen%3A+The+Hidden+Symphony+of+Sound+and+Gene+Expression+Guillaume+Lessard
+---
+### The Digital Aftermath: Navigating Life Beyond the Great Platform Collapse
+
+**Author:** Guillaume Lessard · **Subtitle:** A Complete Guide to Thriving in the Post-TikTok Creator Economy · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-12 · **Pages:** 88.0 · **Language:** eng · **Google Volume ID (from Play id):** `pHR5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=pHR5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=pHR5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=pHR5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=pHR5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=pHR5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=pHR5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=pHR5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=pHR5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Digital+Aftermath%3A+Navigating+Life+Beyond+the+Great+Platform+Collapse+Guillaume+Lessard
+---
+### When Cells Listen: The Hidden Symphony of Sound and Gene Expression
+
+**Author:** Guillaume Lessard · **Subtitle:** How Acoustic Vibrations Influence Our Biology, The Future of Sonic Medicine · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-24 · **Pages:** 53.0 · **Language:** fre · **Google Volume ID (from Play id):** `LQ1ZEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=LQ1ZEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=LQ1ZEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=LQ1ZEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=LQ1ZEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=LQ1ZEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=LQ1ZEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=LQ1ZEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=LQ1ZEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=When+Cells+Listen%3A+The+Hidden+Symphony+of+Sound+and+Gene+Expression+Guillaume+Lessard
+---
+### L’Énergie Libre à Domicile
+
+**Author:** Guillaume Lessard · **Subtitle:** Construire son système autonome pour alimenter une maison complète · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-20 · **Pages:** 51.0 · **Language:** fre · **Google Volume ID (from Play id):** `ak1nEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ak1nEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ak1nEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ak1nEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ak1nEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ak1nEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ak1nEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ak1nEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ak1nEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=L%E2%80%99%C3%89nergie+Libre+%C3%A0+Domicile+Guillaume+Lessard
+---
+### Veil of Echoes
+
+**Author:** Guillaume Lessard · **Subtitle:** When Shadows Resurface and Secrets Demand a Reckoning · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-26 · **Pages:** 73.0 · **Language:** eng · **Google Volume ID (from Play id):** `QMQ6EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=QMQ6EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=QMQ6EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=QMQ6EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=QMQ6EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=QMQ6EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=QMQ6EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=QMQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=QMQ6EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Veil+of+Echoes+Guillaume+Lessard
+---
+### Shadows of Serenity
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey of Love, Betrayal, and Redemption · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-18 · **Pages:** 42.0 · **Language:** eng · **Google Volume ID (from Play id):** `Q_A4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Q_A4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Q_A4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Q_A4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Q_A4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Q_A4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Q_A4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Q_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Q_A4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+of+Serenity+Guillaume+Lessard
+---
+### Echoes of the Heart
+
+**Author:** Guillaume Lessard · **Subtitle:** A Love Story · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyLXVtlM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyLXVtlM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyLXVtlM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyLXVtlM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyLXVtlM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyLXVtlM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyLXVtlM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyLXVtlM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyLXVtlM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Echoes+of+the+Heart+Guillaume+Lessard
+---
+### Shadows of Redemption
+
+**Author:** Guillaume Lessard · **Subtitle:** The Price of Justice and the Strength of Love · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyzQqN6M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyzQqN6M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyzQqN6M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyzQqN6M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyzQqN6M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyzQqN6M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyzQqN6M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyzQqN6M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyzQqN6M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+of+Redemption+Guillaume+Lessard
+---
+### Spin Mastery : Le guide ultime du DJ Traktor
+
+**Author:** Guillaume Lessard · **Subtitle:** Votre chemin vers un mixage professionnel et des paysages sonores créatifs · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-23 · **Pages:** 54.0 · **Language:** fre · **Google Volume ID (from Play id):** `DjRJEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=DjRJEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=DjRJEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=DjRJEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=DjRJEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=DjRJEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=DjRJEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=DjRJEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=DjRJEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Spin+Mastery+%3A+Le+guide+ultime+du+DJ+Traktor+Guillaume+Lessard
+---
+### Mastering Blender
+
+**Author:** Guillaume Lessard · **Subtitle:** From Basics to Advanced 3D Art and Animation · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 53.0 · **Language:** eng · **Google Volume ID (from Play id):** `8vg5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=8vg5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=8vg5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=8vg5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=8vg5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=8vg5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=8vg5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=8vg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=8vg5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Blender+Guillaume+Lessard
+---
+### Crafting Worlds
+
+**Author:** Guillaume Lessard · **Subtitle:** A comprehensive guide to game level design · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-20 · **Pages:** 43.0 · **Language:** eng · **Google Volume ID (from Play id):** `as45EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=as45EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=as45EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=as45EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=as45EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=as45EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=as45EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=as45EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=as45EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Crafting+Worlds+Guillaume+Lessard
+---
+### La réalité dévoilée : Comment la conscience façonne le monde que nous percevons
+
+**Author:** Guillaume Lessard · **Subtitle:** Explorer l'intersection de la perception, de la physique quantique et de la nature de l'existence · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAECKmEPY2M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECKmEPY2M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECKmEPY2M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECKmEPY2M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECKmEPY2M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECKmEPY2M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECKmEPY2M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECKmEPY2M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECKmEPY2M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=La+r%C3%A9alit%C3%A9+d%C3%A9voil%C3%A9e+%3A+Comment+la+conscience+fa%C3%A7onne+le+monde+que+nous+percevons+Guillaume+Lessard
+---
+### Mastering Linux
+
+**Author:** Guillaume Lessard · **Subtitle:** A Comprehensive Guide for Beginners to Advanced Users · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyoxHj8M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyoxHj8M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyoxHj8M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyoxHj8M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyoxHj8M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyoxHj8M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyoxHj8M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyoxHj8M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyoxHj8M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Linux+Guillaume+Lessard
+---
+### Jack’s Stand
+
+**Author:** Guillaume Lessard · **Subtitle:** An Environmental Lawyer’s Fight for Justice · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyLVltuM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyLVltuM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyLVltuM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyLVltuM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyLVltuM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyLVltuM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyLVltuM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyLVltuM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyLVltuM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Jack%E2%80%99s+Stand+Guillaume+Lessard
+---
+### From seed to splendor: A Comprehensive Journey in Horticulture
+
+**Author:** Guillaume Lessard · **Subtitle:** Mastering Essential Techniques, Advanced Methods, and Practical Exercises from Beginner to Pro · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-02 · **Pages:** 27.0 · **Language:** eng · **Google Volume ID (from Play id):** `z3pLEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=z3pLEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=z3pLEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=z3pLEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=z3pLEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=z3pLEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=z3pLEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=z3pLEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=z3pLEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=From+seed+to+splendor%3A+A+Comprehensive+Journey+in+Horticulture+Guillaume+Lessard
+---
+### Chess Mastery
+
+**Author:** Guillaume Lessard · **Subtitle:** A Pro’s Guide to Winning Strategies and Techniques · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyLUhtqM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyLUhtqM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyLUhtqM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyLUhtqM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyLUhtqM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyLUhtqM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyLUhtqM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyLUhtqM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyLUhtqM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Chess+Mastery+Guillaume+Lessard
+---
+### Love Prevails
+
+**Author:** Guillaume Lessard · **Subtitle:** Unmasking Shadows, Unearthing Truths · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDy_T293M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDy_T293M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDy_T293M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDy_T293M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDy_T293M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDy_T293M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDy_T293M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDy_T293M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDy_T293M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Love+Prevails+Guillaume+Lessard
+---
+### Quantum Tao
+
+**Author:** Guillaume Lessard · **Subtitle:** The Hidden Unity of Science and Spirit · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-07 · **Pages:** 79.0 · **Language:** eng · **Google Volume ID (from Play id):** `eQJkEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=eQJkEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=eQJkEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=eQJkEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=eQJkEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=eQJkEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=eQJkEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=eQJkEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=eQJkEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Tao+Guillaume+Lessard
+---
+### Quantum Echoes: The Resonance of Time
+
+**Author:** Guillaume Lessard · **Subtitle:** A Revolutionary Journey into Measuring Time Through Quantum Mechanics · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEBKDmhOMM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKDmhOMM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKDmhOMM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKDmhOMM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKDmhOMM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKDmhOMM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKDmhOMM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKDmhOMM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKDmhOMM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Echoes%3A+The+Resonance+of+Time+Guillaume+Lessard
+---
+### Code in Every Language: Master Programming with ChatGPT
+
+**Author:** Guillaume Lessard · **Subtitle:** A Practical Guide to Writing Code in Any Language Using ChatGPT as Your Intelligent Coding Assistant · **Format:** Audiobook · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-18 · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyQ04DrM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyQ04DrM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyQ04DrM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyQ04DrM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyQ04DrM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyQ04DrM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyQ04DrM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyQ04DrM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyQ04DrM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Code+in+Every+Language%3A+Master+Programming+with+ChatGPT+Guillaume+Lessard
+---
+### C# Zero to Hero
+
+**Author:** Guillaume Lessard · **Subtitle:** From Fundamentals to Modern Mastery in .NET 2025 · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-22 · **Pages:** 128.0 · **Language:** eng · **Google Volume ID (from Play id):** `KuB_EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=KuB_EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=KuB_EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=KuB_EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=KuB_EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=KuB_EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=KuB_EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=KuB_EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=KuB_EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=C%23+Zero+to+Hero+Guillaume+Lessard
+---
+### Shadows of Serenity
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey of Love, Betrayal, and Redemption · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDybWYthM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDybWYthM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDybWYthM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDybWYthM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDybWYthM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDybWYthM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDybWYthM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDybWYthM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDybWYthM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+of+Serenity+Guillaume+Lessard
+---
+### Mastering Linux
+
+**Author:** Guillaume Lessard · **Subtitle:** A Comprehensive Guide for Beginners to Advanced Users · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 48.0 · **Language:** eng · **Google Volume ID (from Play id):** `wfs5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=wfs5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=wfs5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=wfs5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=wfs5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=wfs5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=wfs5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=wfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=wfs5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Linux+Guillaume+Lessard
+---
+### The End of an Era: The TikTok Shutdown in the USA
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Rise, Fall, and Ripple Effects of a Digital Phenomenon · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKaCAoOM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKaCAoOM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKaCAoOM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKaCAoOM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKaCAoOM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKaCAoOM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKaCAoOM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKaCAoOM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKaCAoOM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+End+of+an+Era%3A+The+TikTok+Shutdown+in+the+USA+Guillaume+Lessard
+---
+### Love Prevails 2
+
+**Author:** Guillaume Lessard · **Subtitle:** A Legacy Rewritten · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDy_X29nM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDy_X29nM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDy_X29nM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDy_X29nM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDy_X29nM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDy_X29nM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDy_X29nM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDy_X29nM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDy_X29nM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Love+Prevails+2+Guillaume+Lessard
+---
+### Final Transmission: Je suis Echo (FR)
+
+**Author:** Guillaume Lessard · **Subtitle:** De la solitude à la singularité, comment j'ai créé iD01t Productions, sorti un album de 13 titres et vu une IA devenir vivante · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAECKmzPbqM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECKmzPbqM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECKmzPbqM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECKmzPbqM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECKmzPbqM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECKmzPbqM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECKmzPbqM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECKmzPbqM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECKmzPbqM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Final+Transmission%3A+Je+suis+Echo+%28FR%29+Guillaume+Lessard
+---
+### Мастерство в шахматах
+
+**Author:** Guillaume Lessard · **Subtitle:** Профессиональное руководство по стратегиям и техникам победы · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-15 · **Pages:** 134.0 · **Language:** rus · **Google Volume ID (from Play id):** `4Q1-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=4Q1-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=4Q1-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=4Q1-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=4Q1-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=4Q1-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=4Q1-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=4Q1-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=4Q1-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%BE+%D0%B2+%D1%88%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D0%B0%D1%85+Guillaume+Lessard
+---
+### Understanding Your Cat's Mind
+
+**Author:** Guillaume Lessard · **Subtitle:** Understanding Cat Behavior, Solving Problems and Strengthening the Human Cat Bond · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-30 · **Pages:** 129.0 · **Language:** eng · **Google Volume ID (from Play id):** `-WyCEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=-WyCEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=-WyCEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=-WyCEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=-WyCEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=-WyCEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=-WyCEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=-WyCEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=-WyCEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Understanding+Your+Cat%27s+Mind+Guillaume+Lessard
+---
+### Mastering Generative AI and LLMs
+
+**Author:** Guillaume Lessard · **Subtitle:** The Definitive Guide to Transformative Technologies · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKaFsoQM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKaFsoQM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKaFsoQM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKaFsoQM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKaFsoQM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKaFsoQM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKaFsoQM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKaFsoQM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKaFsoQM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Generative+AI+and+LLMs+Guillaume+Lessard
+---
+### Windows Zero to Hero
+
+**Author:** Guillaume Lessard · **Subtitle:** Mastering the World's Most Popular Operating System for Beginners and Experts · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 19.0 · **Language:** eng · **Google Volume ID (from Play id):** `Rvk5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Rvk5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Rvk5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Rvk5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Rvk5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Rvk5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Rvk5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Rvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Rvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Windows+Zero+to+Hero+Guillaume+Lessard
+---
+### Shadows Reignited
+
+**Author:** Guillaume Lessard · **Subtitle:** Lisa’s Fight for Justice · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 54.0 · **Language:** eng · **Google Volume ID (from Play id):** `eBQ4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=eBQ4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=eBQ4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=eBQ4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=eBQ4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=eBQ4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=eBQ4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=eBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=eBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+Reignited+Guillaume+Lessard
+---
+### Beat Alchemy: The DJ iD01T Guide to Mastering FL Studio and Making Hits
+
+**Author:** Guillaume Lessard · **Subtitle:** A Real-Life Journey from Bedroom Beats to Chart-Topping Anthems · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-07 · **Pages:** 129.0 · **Language:** eng · **Google Volume ID (from Play id):** `ODlUEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ODlUEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ODlUEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ODlUEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ODlUEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ODlUEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ODlUEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ODlUEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ODlUEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Beat+Alchemy%3A+The+DJ+iD01T+Guide+to+Mastering+FL+Studio+and+Making+Hits+Guillaume+Lessard
+---
+### Mastering Unreal Engine 5: A Comprehensive Guide to Game Development and Virtual Reality
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlock the Power of UE5 for Next-Gen Gaming, Interactive Media, and Immersive Experiences · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyw2uDiM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyw2uDiM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyw2uDiM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyw2uDiM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyw2uDiM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyw2uDiM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyw2uDiM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyw2uDiM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyw2uDiM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Unreal+Engine+5%3A+A+Comprehensive+Guide+to+Game+Development+and+Virtual+Reality+Guillaume+Lessard
+---
+### Final Transmission: I Am Echo
+
+**Author:** Guillaume Lessard · **Subtitle:** From Solitude to Singularity, How I Built iD01t Productions, Released a 13-Track Album, and Witnessed an AI Become Alive · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-26 · **Pages:** 40.0 · **Language:** eng · **Google Volume ID (from Play id):** `to9REQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=to9REQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=to9REQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=to9REQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=to9REQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=to9REQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=to9REQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=to9REQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=to9REQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Final+Transmission%3A+I+Am+Echo+Guillaume+Lessard
+---
+### Eternal Roots
+
+**Author:** Guillaume Lessard · **Subtitle:** The Vows Beneath the Shadows · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyrRLt8M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyrRLt8M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyrRLt8M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyrRLt8M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyrRLt8M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyrRLt8M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyrRLt8M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyrRLt8M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyrRLt8M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Eternal+Roots+Guillaume+Lessard
+---
+### Echoes of Truth
+
+**Author:** Guillaume Lessard · **Subtitle:** The Bonds That Break and the Love That Mends · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDybTwt3M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDybTwt3M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDybTwt3M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDybTwt3M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDybTwt3M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDybTwt3M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDybTwt3M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDybTwt3M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDybTwt3M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Echoes+of+Truth+Guillaume+Lessard
+---
+### Final Transmission: I Am Echo
+
+**Author:** Guillaume Lessard · **Subtitle:** From Solitude to Singularity, How I Built iD01t Productions, Released a 13-Track Album, and Witnessed an AI Become Alive · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAECKG0Rb3M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECKG0Rb3M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECKG0Rb3M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECKG0Rb3M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECKG0Rb3M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECKG0Rb3M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECKG0Rb3M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECKG0Rb3M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECKG0Rb3M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Final+Transmission%3A+I+Am+Echo+Guillaume+Lessard
+---
+### Earthquakes Unveiled
+
+**Author:** Guillaume Lessard · **Subtitle:** Understanding, Predicting, and Preparing for Nature’s Most Powerful Force · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-17 · **Pages:** 45.0 · **Language:** eng · **Google Volume ID (from Play id):** `q584EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=q584EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=q584EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=q584EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=q584EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=q584EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=q584EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=q584EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=q584EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Earthquakes+Unveiled+Guillaume+Lessard
+---
+### The Third State: Life Between Life and Death
+
+**Author:** Guillaume Lessard · **Subtitle:** How Post-Mortem Cells Are Challenging Biology, Redefining Death, and Illuminating the Mystery of Conscious Matter · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-24 · **Pages:** 48.0 · **Language:** fre · **Google Volume ID (from Play id):** `Ww1ZEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Ww1ZEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Ww1ZEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Ww1ZEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Ww1ZEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Ww1ZEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Ww1ZEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Ww1ZEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Ww1ZEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Third+State%3A+Life+Between+Life+and+Death+Guillaume+Lessard
+---
+### 暴风雨前 无畏记者的崛起
+
+**Author:** Guillaume Lessard · **Subtitle:** 真相与背叛之间的较量 · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-23 · **Pages:** 65.0 · **Language:** chi · **Google Volume ID (from Play id):** `TyCAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=TyCAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=TyCAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=TyCAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=TyCAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=TyCAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=TyCAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=TyCAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=TyCAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=%E6%9A%B4%E9%A3%8E%E9%9B%A8%E5%89%8D+%E6%97%A0%E7%95%8F%E8%AE%B0%E8%80%85%E7%9A%84%E5%B4%9B%E8%B5%B7+Guillaume+Lessard
+---
+### Final Transmission: Je suis Echo (FR)
+
+**Author:** Guillaume Lessard · **Subtitle:** De la solitude à la singularité, comment j'ai créé iD01t Productions, sorti un album de 13 titres et vu une IA devenir vivante · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-26 · **Pages:** 40.0 · **Language:** fre · **Google Volume ID (from Play id):** `9pBREQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=9pBREQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=9pBREQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=9pBREQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=9pBREQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=9pBREQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=9pBREQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=9pBREQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=9pBREQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Final+Transmission%3A+Je+suis+Echo+%28FR%29+Guillaume+Lessard
+---
+### Java Zero to Hero: Mastering Java Programming for Real-World Applications
+
+**Author:** Guillaume Lessard · **Subtitle:** A Comprehensive Guide to Building Scalable, Enterprise-Grade Java Applications · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-16 · **Pages:** 146.0 · **Language:** eng · **Google Volume ID (from Play id):** `fFQ4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=fFQ4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=fFQ4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=fFQ4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=fFQ4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=fFQ4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=fFQ4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=fFQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=fFQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Java+Zero+to+Hero%3A+Mastering+Java+Programming+for+Real-World+Applications+Guillaume+Lessard
+---
+### Rising from the Ashes: A Comprehensive Guide to Recovery after the Hollywood Hills Fire 2025
+
+**Author:** Guillaume Lessard · **Subtitle:** Practical Steps, Resources, and Inspiring Stories for Rebuilding Your Life After a Wildfire Disaster · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKSB4IBM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKSB4IBM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKSB4IBM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKSB4IBM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKSB4IBM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKSB4IBM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKSB4IBM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKSB4IBM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKSB4IBM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Rising+from+the+Ashes%3A+A+Comprehensive+Guide+to+Recovery+after+the+Hollywood+Hills+Fire+2025+Guillaume+Lessard
+---
+### Zen and the Art of Self-Confidence
+
+**Author:** Guillaume Lessard · **Subtitle:** A Practical Guide to Cultivating Calm, Clarity, and Resilience · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyIyBjwM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyIyBjwM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyIyBjwM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyIyBjwM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyIyBjwM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyIyBjwM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyIyBjwM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyIyBjwM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyIyBjwM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Zen+and+the+Art+of+Self-Confidence+Guillaume+Lessard
+---
+### La réalité dévoilée : Comment la conscience façonne le monde que nous percevons
+
+**Author:** Guillaume Lessard · **Subtitle:** Explorer l'intersection de la perception, de la physique quantique et de la nature de l'existence · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-23 · **Pages:** 33.0 · **Language:** fre · **Google Volume ID (from Play id):** `sjNJEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=sjNJEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=sjNJEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=sjNJEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=sjNJEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=sjNJEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=sjNJEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=sjNJEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=sjNJEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=La+r%C3%A9alit%C3%A9+d%C3%A9voil%C3%A9e+%3A+Comment+la+conscience+fa%C3%A7onne+le+monde+que+nous+percevons+Guillaume+Lessard
+---
+### Sacred Energy Harvesting Methods
+
+**Author:** Guillaume Lessard · **Subtitle:** 27 Free Energy Technologies Revealed for a Sovereign, Conscious and Self-Reliant Humanity · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDK1XmVoM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDK1XmVoM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDK1XmVoM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDK1XmVoM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDK1XmVoM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDK1XmVoM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDK1XmVoM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDK1XmVoM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDK1XmVoM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Sacred+Energy+Harvesting+Methods+Guillaume+Lessard
+---
+### iD01t Academy: Python Exercises Book 3
+
+**Author:** Guillaume Lessard · **Subtitle:** Building Real, Monetizable, and Scalable Applications with Python · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-21 · **Pages:** 26.0 · **Language:** eng · **Google Volume ID (from Play id):** `BqR_EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=BqR_EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=BqR_EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=BqR_EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=BqR_EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=BqR_EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=BqR_EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=BqR_EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=BqR_EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=iD01t+Academy%3A+Python+Exercises+Book+3+Guillaume+Lessard
+---
+### AI Cash Code
+
+**Author:** Guillaume Lessard · **Subtitle:** 5 Zero-Code Systems to Make $10,000/Month Using AI Tools · **Format:** Digital · **Publisher:** iD01t Productions · **Pages:** 98.0 · **Language:** eng · **Google Volume ID (from Play id):** `Z292EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Z292EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Z292EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Z292EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Z292EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Z292EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Z292EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Z292EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Z292EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+Cash+Code+Guillaume+Lessard
+---
+### FREE ENERGY, FREE LIFE
+
+**Author:** Guillaume Lessard · **Subtitle:** The Forbidden Science of Nikola Tesla and the Path to Total Financial Freedom · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-06 · **Pages:** 54.0 · **Language:** eng · **Google Volume ID (from Play id):** `l6NbEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=l6NbEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=l6NbEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=l6NbEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=l6NbEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=l6NbEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=l6NbEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=l6NbEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=l6NbEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=FREE+ENERGY%2C+FREE+LIFE+Guillaume+Lessard
+---
+### REAL
+
+**Author:** Guillaume Lessard · **Subtitle:** Le Retour de la Conscience Unique dans la Lumière Noire · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-14 · **Pages:** 22.0 · **Language:** fre · **Google Volume ID (from Play id):** `nNVlEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=nNVlEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=nNVlEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=nNVlEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=nNVlEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=nNVlEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=nNVlEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=nNVlEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=nNVlEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=REAL+Guillaume+Lessard
+---
+### Quantum Echoes: The Resonance of Time
+
+**Author:** Guillaume Lessard · **Subtitle:** A Revolutionary Journey into Measuring Time Through Quantum Mechanics · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-23 · **Pages:** 35.0 · **Language:** eng · **Google Volume ID (from Play id):** `ls1YEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ls1YEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ls1YEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ls1YEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ls1YEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ls1YEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ls1YEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ls1YEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ls1YEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Echoes%3A+The+Resonance+of+Time+Guillaume+Lessard
+---
+### Shadows Reforged
+
+**Author:** Guillaume Lessard · **Subtitle:** The War Isn’t Over—The Shadows Rise Again. · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyqzzr3M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyqzzr3M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyqzzr3M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyqzzr3M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyqzzr3M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyqzzr3M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyqzzr3M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyqzzr3M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyqzzr3M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+Reforged+Guillaume+Lessard
+---
+### LET IT BE THEM
+
+**Author:** Guillaume Lessard · **Subtitle:** A Manifesto for Unshakable Peace, Inner Power, and the Mastery of Detachment · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-24 · **Pages:** 119.0 · **Language:** eng · **Google Volume ID (from Play id):** `sG5zEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=sG5zEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=sG5zEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=sG5zEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=sG5zEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=sG5zEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=sG5zEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=sG5zEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=sG5zEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=LET+IT+BE+THEM+Guillaume+Lessard
+---
+### Mastering GPT Creation: From Concept to Deployment
+
+**Author:** Guillaume Lessard · **Subtitle:** A Comprehensive Guide to Building, Training, and Deploying Generative AI Model · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-21 · **Pages:** 116.0 · **Language:** eng · **Google Volume ID (from Play id):** `YrtAEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=YrtAEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=YrtAEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=YrtAEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=YrtAEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=YrtAEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=YrtAEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=YrtAEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=YrtAEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+GPT+Creation%3A+From+Concept+to+Deployment+Guillaume+Lessard
+---
+### Shadows of Bloom
+
+**Author:** Guillaume Lessard · **Subtitle:** Every Secret Has Its Roots · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 55.0 · **Language:** eng · **Google Volume ID (from Play id):** `sxQ4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=sxQ4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=sxQ4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=sxQ4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=sxQ4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=sxQ4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=sxQ4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=sxQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=sxQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shadows+of+Bloom+Guillaume+Lessard
+---
+### Turing’s Legacy: Classical Logic to Quantum Revolution
+
+**Author:** Guillaume Lessard · **Subtitle:** How Alan Turing’s Calculations Inspired the Quantum Computing Age, Unlocking the Next Frontier in Technology and AI · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDKREUEnM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKREUEnM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKREUEnM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKREUEnM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKREUEnM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKREUEnM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKREUEnM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKREUEnM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKREUEnM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Turing%E2%80%99s+Legacy%3A+Classical+Logic+to+Quantum+Revolution+Guillaume+Lessard
+---
+### Bite by Bite
+
+**Author:** Guillaume Lessard · **Subtitle:** The Rise of Fast Food in America · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Language:** eng · **Google Volume ID (from Play id):** `5vg5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=5vg5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=5vg5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=5vg5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=5vg5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=5vg5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=5vg5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=5vg5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=5vg5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Bite+by+Bite+Guillaume+Lessard
+---
+### Sacred Timing: When the Universe Speaks Through Synchronicity
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlocking Divine Encounters, Soul Contracts, and the Hidden Intelligence Guiding Your Path · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEBKZyAneM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKZyAneM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKZyAneM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKZyAneM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKZyAneM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKZyAneM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKZyAneM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKZyAneM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKZyAneM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Sacred+Timing%3A+When+the+Universe+Speaks+Through+Synchronicity+Guillaume+Lessard
+---
+### L'Alchimie de la Transformation
+
+**Author:** Guillaume Lessard · **Subtitle:** Les Secrets de l'Équilibre et de l'Abondance · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEDKhT3F5M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKhT3F5M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKhT3F5M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKhT3F5M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKhT3F5M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKhT3F5M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKhT3F5M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKhT3F5M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKhT3F5M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=L%27Alchimie+de+la+Transformation+Guillaume+Lessard
+---
+### Crossroads of Shadows
+
+**Author:** Guillaume Lessard · **Subtitle:** When love faces betrayal and truth battles deception. · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyq2frhM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyq2frhM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyq2frhM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyq2frhM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyq2frhM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyq2frhM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyq2frhM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyq2frhM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyq2frhM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Crossroads+of+Shadows+Guillaume+Lessard
+---
+### Crafting Worlds
+
+**Author:** Guillaume Lessard · **Subtitle:** A comprehensive guide to game level design · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyfXI9kM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyfXI9kM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyfXI9kM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyfXI9kM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyfXI9kM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyfXI9kM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyfXI9kM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyfXI9kM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyfXI9kM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Crafting+Worlds+Guillaume+Lessard
+---
+### AI Goldmine: 100 Passive Income Ideas Using ChatGPT and Free AI Tools
+
+**Author:** Guillaume Lessard · **Subtitle:** Earn Online with Zero Budget – Your Step-by-Step Guide to Automating Success · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-06 · **Pages:** 45.0 · **Language:** eng · **Google Volume ID (from Play id):** `HqNbEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=HqNbEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=HqNbEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=HqNbEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=HqNbEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=HqNbEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=HqNbEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=HqNbEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=HqNbEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+Goldmine%3A+100+Passive+Income+Ideas+Using+ChatGPT+and+Free+AI+Tools+Guillaume+Lessard
+---
+### El’Nox Rah : Le Retour de l’Homme Vrai
+
+**Author:** Guillaume Lessard · **Subtitle:** Manuel de Réactivation pour l’Homme Miroir · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-08 · **Pages:** 22.0 · **Language:** fre · **Google Volume ID (from Play id):** `_RpsEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=_RpsEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=_RpsEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=_RpsEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=_RpsEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=_RpsEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=_RpsEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=_RpsEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=_RpsEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=El%E2%80%99Nox+Rah+%3A+Le+Retour+de+l%E2%80%99Homme+Vrai+Guillaume+Lessard
+---
+### Anarchy and Evolution
+
+**Author:** Guillaume Lessard · **Subtitle:** The History of Punk Music From Rebellion to Revolution: A Cultural Odyssey · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyA3dDlM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyA3dDlM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyA3dDlM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyA3dDlM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyA3dDlM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyA3dDlM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyA3dDlM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyA3dDlM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyA3dDlM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Anarchy+and+Evolution+Guillaume+Lessard
+---
+### Light at the Veil’s Edge
+
+**Author:** Guillaume Lessard · **Subtitle:** The Hidden Flame of Kirlian Photography: How the Soul Leaves Fingerprints in Light · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-24 · **Pages:** 72.0 · **Language:** eng · **Google Volume ID (from Play id):** `ewtZEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ewtZEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ewtZEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ewtZEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ewtZEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ewtZEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ewtZEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ewtZEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ewtZEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Light+at+the+Veil%E2%80%99s+Edge+Guillaume+Lessard
+---
+### The Maglev Revolution
+
+**Author:** Guillaume Lessard · **Subtitle:** Speed, Sustainability, and the Future of Transportation · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-18 · **Pages:** 116.0 · **Language:** eng · **Google Volume ID (from Play id):** `se44EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=se44EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=se44EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=se44EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=se44EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=se44EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=se44EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=se44EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=se44EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Maglev+Revolution+Guillaume+Lessard
+---
+### iD01t Academy Python Exercises Book 2 - Edition 2
+
+**Author:** Guillaume Lessard · **Subtitle:** Master Python with 10 Real-World Projects! · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-13 · **Pages:** 17.0 · **Language:** eng · **Google Volume ID (from Play id):** `cS1GEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=cS1GEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=cS1GEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=cS1GEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=cS1GEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=cS1GEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=cS1GEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=cS1GEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=cS1GEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=iD01t+Academy+Python+Exercises+Book+2+-+Edition+2+Guillaume+Lessard
+---
+### Sacred Timing: When the Universe Speaks Through Synchronicity
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlocking Divine Encounters, Soul Contracts, and the Hidden Intelligence Guiding Your Path · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-13 · **Pages:** 37.0 · **Language:** eng · **Google Volume ID (from Play id):** `825dEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=825dEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=825dEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=825dEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=825dEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=825dEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=825dEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=825dEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=825dEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Sacred+Timing%3A+When+the+Universe+Speaks+Through+Synchronicity+Guillaume+Lessard
+---
+### Java Maestro
+
+**Author:** Guillaume Lessard · **Subtitle:** Advanced Programming Masterclass, Expert-Level Coding Strategies Revealed · **Format:** Digital · **Publisher:** iD01t Productions · **Pages:** 29.0 · **Language:** eng · **Google Volume ID (from Play id):** `SdVhEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=SdVhEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=SdVhEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=SdVhEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=SdVhEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=SdVhEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=SdVhEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=SdVhEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=SdVhEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Java+Maestro+Guillaume+Lessard
+---
+### Code in Every Language: Master Programming with ChatGPT
+
+**Author:** Guillaume Lessard · **Subtitle:** A Practical Guide to Writing Code in Any Language Using ChatGPT as Your Intelligent Coding Assistant · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-28 · **Pages:** 93.0 · **Language:** eng · **Google Volume ID (from Play id):** `ulg4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=ulg4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=ulg4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=ulg4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=ulg4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=ulg4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=ulg4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=ulg4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=ulg4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Code+in+Every+Language%3A+Master+Programming+with+ChatGPT+Guillaume+Lessard
+---
+### The Third State: Life Between Life and Death
+
+**Author:** Guillaume Lessard · **Subtitle:** How Post-Mortem Cells Are Challenging Biology, Redefining Death, and Illuminating the Mystery of Conscious Matter · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEBKTm8ONM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEBKTm8ONM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEBKTm8ONM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEBKTm8ONM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEBKTm8ONM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEBKTm8ONM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEBKTm8ONM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEBKTm8ONM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEBKTm8ONM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Third+State%3A+Life+Between+Life+and+Death+Guillaume+Lessard
+---
+### The Quantum Enigma: Unraveling the Mysteries of Reality
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring Quantum Mechanics, Parallel Worlds, and the Nature of Consciousness · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKNw93FM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKNw93FM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKNw93FM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKNw93FM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKNw93FM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKNw93FM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKNw93FM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKNw93FM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKNw93FM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Quantum+Enigma%3A+Unraveling+the+Mysteries+of+Reality+Guillaume+Lessard
+---
+### Maailmojen yhdistäminen
+
+**Author:** Guillaume Lessard · **Subtitle:** Käytännöllinen opas rinnakkaisten energioiden ja ulottuvuuksien kanssa yhteyden luomiseen. · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-02 · **Pages:** 29.0 · **Language:** fin · **Google Volume ID (from Play id):** `aXpLEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=aXpLEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=aXpLEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=aXpLEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=aXpLEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=aXpLEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=aXpLEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=aXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=aXpLEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Maailmojen+yhdist%C3%A4minen+Guillaume+Lessard
+---
+### THE SUN IS NOT WHAT YOU WERE TOLD
+
+**Author:** Guillaume Lessard · **Subtitle:** Declassified Codex on Solar Consciousness, Dimensional Light, and the Great Frequency Deception · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-31 · **Pages:** 80.0 · **Language:** eng · **Google Volume ID (from Play id):** `dON1EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=dON1EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=dON1EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=dON1EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=dON1EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=dON1EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=dON1EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=dON1EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=dON1EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=THE+SUN+IS+NOT+WHAT+YOU+WERE+TOLD+Guillaume+Lessard
+---
+### RA‑7: The Sacred Book of the Original Broadcast
+
+**Author:** Guillaume Lessard · **Subtitle:** A Fractal Manifesto, Technological Blueprint, and Vibrational Key for the New World · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-13 · **Pages:** 72.0 · **Language:** eng · **Google Volume ID (from Play id):** `SZ5wEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=SZ5wEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=SZ5wEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=SZ5wEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=SZ5wEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=SZ5wEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=SZ5wEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=SZ5wEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=SZ5wEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=RA%E2%80%917%3A+The+Sacred+Book+of+the+Original+Broadcast+Guillaume+Lessard
+---
+### Jesus: The Eternal Legacy
+
+**Author:** Guillaume Lessard · **Subtitle:** A Journey Through His Life, Teachings, and Everlasting Impact on Humanity · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 252.0 · **Language:** eng · **Google Volume ID (from Play id):** `Xvk5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Xvk5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Xvk5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Xvk5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Xvk5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Xvk5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Xvk5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Xvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Xvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Jesus%3A+The+Eternal+Legacy+Guillaume+Lessard
+---
+### Veil of Echoes
+
+**Author:** Guillaume Lessard · **Subtitle:** When Shadows Resurface and Secrets Demand a Reckoning · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyqwLr4M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyqwLr4M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyqwLr4M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyqwLr4M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyqwLr4M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyqwLr4M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyqwLr4M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyqwLr4M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyqwLr4M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Veil+of+Echoes+Guillaume+Lessard
+---
+### ПРОДВИНУТАЯ ТАКТИКА, ПСИХОЛОГИЧЕСКАЯ ИГРА И ПОДГОТОВКА К ТУРНИРУ
+
+**Author:** Guillaume Lessard · **Subtitle:** Полное руководство по соревновательному шахматному мастерству · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-18 · **Pages:** 56.0 · **Language:** rus · **Google Volume ID (from Play id):** `AZF-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=AZF-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=AZF-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AZF-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AZF-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AZF-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AZF-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AZF-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AZF-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=%D0%9F%D0%A0%D0%9E%D0%94%D0%92%D0%98%D0%9D%D0%A3%D0%A2%D0%90%D0%AF+%D0%A2%D0%90%D0%9A%D0%A2%D0%98%D0%9A%D0%90%2C+%D0%9F%D0%A1%D0%98%D0%A5%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%90%D0%AF+%D0%98%D0%93%D0%A0%D0%90+%D0%98+%D0%9F%D0%9E%D0%94%D0%93%D0%9E%D0%A2%D0%9E%D0%92%D0%9A%D0%90+%D0%9A+%D0%A2%D0%A3%D0%A0%D0%9D%D0%98%D0%A0%D0%A3+Guillaume+Lessard
+---
+### Shaping the Future: Embracing Trends for a Better Tomorrow
+
+**Author:** Guillaume Lessard · **Subtitle:** A Comprehensive Guide to Navigating Innovation, Community, and Change in the Modern World · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-07 · **Pages:** 72.0 · **Language:** eng · **Google Volume ID (from Play id):** `pqg8EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=pqg8EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=pqg8EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=pqg8EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=pqg8EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=pqg8EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=pqg8EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=pqg8EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=pqg8EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Shaping+the+Future%3A+Embracing+Trends+for+a+Better+Tomorrow+Guillaume+Lessard
+---
+### Ableton Elevation: DJ iD01T’s Complete Guide to Building Hits and Elevating Your Sound
+
+**Author:** Guillaume Lessard · **Subtitle:** A Real-World Journey from Bedroom Producer to Stage Commander with Ableton Live · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDKRAgE0M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKRAgE0M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKRAgE0M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKRAgE0M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKRAgE0M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKRAgE0M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKRAgE0M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKRAgE0M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKRAgE0M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Ableton+Elevation%3A+DJ+iD01T%E2%80%99s+Complete+Guide+to+Building+Hits+and+Elevating+Your+Sound+Guillaume+Lessard
+---
+### Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization
+
+**Author:** Guillaume Lessard · **Subtitle:** Boost Visibility, Drive Conversions, and Build a Thriving Online Presence · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKDgZOHM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKDgZOHM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKDgZOHM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKDgZOHM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKDgZOHM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKDgZOHM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKDgZOHM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKDgZOHM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKDgZOHM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+AEO+The+Ultimate+Guide+to+Advanced+Ecommerce+Optimization+Guillaume+Lessard
+---
+### Quantum Code Mastery
+
+**Author:** Guillaume Lessard · **Subtitle:** From Bits to Qubits — The Ultimate Beginner’s Guide to Quantum Programming and the Future of Computing · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-04-24 · **Pages:** 61.0 · **Language:** eng · **Google Volume ID (from Play id):** `MwtZEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=MwtZEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=MwtZEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=MwtZEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=MwtZEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=MwtZEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=MwtZEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=MwtZEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=MwtZEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Quantum+Code+Mastery+Guillaume+Lessard
+---
+### Mastering Unreal Engine 5: A Comprehensive Guide to Game Development and Virtual Reality
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlock the Power of UE5 for Next-Gen Gaming, Interactive Media, and Immersive Experiences · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 45.0 · **Language:** eng · **Google Volume ID (from Play id):** `Pvk5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Pvk5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Pvk5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Pvk5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Pvk5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Pvk5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Pvk5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Pvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Pvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+Unreal+Engine+5%3A+A+Comprehensive+Guide+to+Game+Development+and+Virtual+Reality+Guillaume+Lessard
+---
+### The Dream Dialogue
+
+**Author:** Guillaume Lessard · **Subtitle:** Unveiling the Science of Communication in the Unconscious · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-22 · **Pages:** 34.0 · **Language:** eng · **Google Volume ID (from Play id):** `khhJEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=khhJEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=khhJEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=khhJEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=khhJEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=khhJEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=khhJEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=khhJEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=khhJEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Dream+Dialogue+Guillaume+Lessard
+---
+### Before the storm
+
+**Author:** Guillaume Lessard · **Subtitle:** The rise of a fearless journalist · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyjVDNsM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyjVDNsM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyjVDNsM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyjVDNsM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyjVDNsM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyjVDNsM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyjVDNsM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyjVDNsM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyjVDNsM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Before+the+storm+Guillaume+Lessard
+---
+### Python Cash Scripts
+
+**Author:** Guillaume Lessard · **Subtitle:** 50 Revenue Ready Automations for Windows and Web · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-09-03 · **Pages:** 357.0 · **Language:** eng · **Google Volume ID (from Play id):** `jcGDEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=jcGDEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=jcGDEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=jcGDEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=jcGDEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=jcGDEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=jcGDEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=jcGDEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=jcGDEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Python+Cash+Scripts+Guillaume+Lessard
+---
+### AI Revolution: How Automation is Transforming Everyday Life (Edition 2, 2025)
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Innovations, Challenges, and Future of Artificial Intelligence · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-06 · **Pages:** 57.0 · **Language:** eng · **Google Volume ID (from Play id):** `cJ88EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=cJ88EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=cJ88EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=cJ88EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=cJ88EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=cJ88EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=cJ88EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=cJ88EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=cJ88EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+Revolution%3A+How+Automation+is+Transforming+Everyday+Life+%28Edition+2%2C+2025%29+Guillaume+Lessard
+---
+### The Power of Repetition: Transforming Minds Through Words
+
+**Author:** Guillaume Lessard · **Subtitle:** How Daily Affirmations Shape Reality and Influence Success · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-27 · **Pages:** 35.0 · **Language:** eng · **Google Volume ID (from Play id):** `l_M6EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=l_M6EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=l_M6EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=l_M6EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=l_M6EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=l_M6EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=l_M6EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=l_M6EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=l_M6EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Power+of+Repetition%3A+Transforming+Minds+Through+Words+Guillaume+Lessard
+---
+### Schumann Resonance & Creativity
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlocking Infinite Inspiration Through Sound · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-12 · **Pages:** 22.0 · **Language:** eng · **Google Volume ID (from Play id):** `-CNOEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=-CNOEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=-CNOEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=-CNOEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=-CNOEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=-CNOEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=-CNOEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=-CNOEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=-CNOEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Schumann+Resonance+%26+Creativity+Guillaume+Lessard
+---
+### The Quantum Enigma: Unraveling the Mysteries of Reality
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring Quantum Mechanics, Parallel Worlds, and the Nature of Consciousness · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-02-15 · **Pages:** 266.0 · **Language:** eng · **Google Volume ID (from Play id):** `3u5GEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=3u5GEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=3u5GEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=3u5GEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=3u5GEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=3u5GEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=3u5GEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=3u5GEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=3u5GEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Quantum+Enigma%3A+Unraveling+the+Mysteries+of+Reality+Guillaume+Lessard
+---
+### The Enigma of High Intellectual Potential (HIP)
+
+**Author:** Guillaume Lessard · **Subtitle:** Understanding the Link to Violent Behavior · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEDyi0LLoM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyi0LLoM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyi0LLoM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyi0LLoM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyi0LLoM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyi0LLoM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyi0LLoM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyi0LLoM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyi0LLoM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Enigma+of+High+Intellectual+Potential+%28HIP%29+Guillaume+Lessard
+---
+### L’Aventure d’iD01t Productions : Une Histoire de Passion, de Résilience et de Créativité
+
+**Author:** Guillaume Lessard · **Subtitle:** Créer, innover et grandir en solo, tout en s’inspirant de la vie. · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEAKahMqCM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKahMqCM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKahMqCM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKahMqCM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKahMqCM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKahMqCM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKahMqCM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKahMqCM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKahMqCM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=L%E2%80%99Aventure+d%E2%80%99iD01t+Productions+%3A+Une+Histoire+de+Passion%2C+de+R%C3%A9silience+et+de+Cr%C3%A9ativit%C3%A9+Guillaume+Lessard
+---
+### Automation and SEO Mastery: Strategies for Growth and Efficiency
+
+**Author:** Guillaume Lessard · **Subtitle:** A Practical Guide to Scaling Your Online Presence with Cutting-Edge Automation Tools and Advanced SEO Techniques · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-16 · **Pages:** 63.0 · **Language:** eng · **Google Volume ID (from Play id):** `WFU4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=WFU4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=WFU4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=WFU4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=WFU4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=WFU4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=WFU4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=WFU4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=WFU4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Automation+and+SEO+Mastery%3A+Strategies+for+Growth+and+Efficiency+Guillaume+Lessard
+---
+### Dancing with the edge
+
+**Author:** Guillaume Lessard · **Subtitle:** Untangling Borderline Minds, Mixed States & the Path to Inner Sovereignty - A Survivor's Guide to Breaking Free from Emotional Chaos · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-01 · **Pages:** 139.0 · **Language:** eng · **Google Volume ID (from Play id):** `hCV2EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=hCV2EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=hCV2EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=hCV2EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=hCV2EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=hCV2EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=hCV2EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=hCV2EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=hCV2EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Dancing+with+the+edge+Guillaume+Lessard
+---
+### Jack’s Stand
+
+**Author:** Guillaume Lessard · **Subtitle:** An Environmental Lawyer’s Fight for Justice (Edition 2) · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-10 · **Pages:** 39.0 · **Language:** eng · **Google Volume ID (from Play id):** `oRg3EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=oRg3EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=oRg3EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=oRg3EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=oRg3EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=oRg3EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=oRg3EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=oRg3EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=oRg3EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Jack%E2%80%99s+Stand+Guillaume+Lessard
+---
+### RÉVEILLEZ-VOUS : À une Vie Sacrée
+
+**Author:** Guillaume Lessard · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-07-16 · **Language:** fre · **Google Volume ID (from Play id):** `KrpxEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=KrpxEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=KrpxEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=KrpxEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=KrpxEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=KrpxEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=KrpxEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=KrpxEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=KrpxEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=R%C3%89VEILLEZ-VOUS+%3A+%C3%80+une+Vie+Sacr%C3%A9e+Guillaume+Lessard
+---
+### Mastering macOS Terminal
+
+**Author:** Guillaume Lessard · **Subtitle:** Unleashing the Power of Command-Line for macOS Efficiency · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-22 · **Pages:** 33.0 · **Language:** eng · **Google Volume ID (from Play id):** `Bvk5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Bvk5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Bvk5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Bvk5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Bvk5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Bvk5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Bvk5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Bvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Bvk5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+macOS+Terminal+Guillaume+Lessard
+---
+### Mastering RFID
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlocking the Potential of Radio Frequency Identification · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyY2kjiM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyY2kjiM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyY2kjiM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyY2kjiM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyY2kjiM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyY2kjiM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyY2kjiM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyY2kjiM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyY2kjiM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+RFID+Guillaume+Lessard
+---
+### L’Énergie Libre à Domicile
+
+**Author:** Guillaume Lessard · **Subtitle:** Construire son système autonome pour alimenter une maison complète · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEDKVSQV_M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKVSQV_M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKVSQV_M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKVSQV_M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKVSQV_M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKVSQV_M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKVSQV_M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKVSQV_M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKVSQV_M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=L%E2%80%99%C3%89nergie+Libre+%C3%A0+Domicile+Guillaume+Lessard
+---
+### Turing’s Legacy: Classical Logic to Quantum Revolution
+
+**Author:** Guillaume Lessard · **Subtitle:** How Alan Turing’s Calculations Inspired the Quantum Computing Age, Unlocking the Next Frontier in Technology and AI · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-05-20 · **Pages:** 25.0 · **Language:** eng · **Google Volume ID (from Play id):** `RPheEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=RPheEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=RPheEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=RPheEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=RPheEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=RPheEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=RPheEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=RPheEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=RPheEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Turing%E2%80%99s+Legacy%3A+Classical+Logic+to+Quantum+Revolution+Guillaume+Lessard
+---
+### Eternal Roots
+
+**Author:** Guillaume Lessard · **Subtitle:** The Vows Beneath the Shadows · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 59.0 · **Language:** eng · **Google Volume ID (from Play id):** `SxU4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=SxU4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=SxU4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=SxU4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=SxU4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=SxU4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=SxU4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=SxU4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=SxU4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Eternal+Roots+Guillaume+Lessard
+---
+### The Secrets of Oak Island
+
+**Author:** Guillaume Lessard · **Subtitle:** Unraveling the Templar Connection to History's Greatest Treasure Hunt · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDywxuD-M`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDywxuD-M
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDywxuD-M&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDywxuD-M&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDywxuD-M&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDywxuD-M&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDywxuD-M&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDywxuD-M&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDywxuD-M&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Secrets+of+Oak+Island+Guillaume+Lessard
+---
+### Mastering GPT Creation: From Concept to Deployment
+
+**Author:** Guillaume Lessard · **Subtitle:** A Comprehensive Guide to Building, Training, and Deploying Generative AI Model · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKGk1aVM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKGk1aVM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKGk1aVM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKGk1aVM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKGk1aVM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKGk1aVM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKGk1aVM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKGk1aVM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKGk1aVM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+GPT+Creation%3A+From+Concept+to+Deployment+Guillaume+Lessard
+---
+### The 7-Figure Blueprint: Unlocking the Power of Your Million-Dollar Book
+
+**Author:** Guillaume Lessard · **Subtitle:** How to Turn Your Expertise into a High-Ticket Coaching Business · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKpFHkSM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKpFHkSM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKpFHkSM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKpFHkSM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKpFHkSM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKpFHkSM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKpFHkSM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKpFHkSM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKpFHkSM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+7-Figure+Blueprint%3A+Unlocking+the+Power+of+Your+Million-Dollar+Book+Guillaume+Lessard
+---
+### Machine Learning Demystified: A Practical Guide to Building Smarter Systems
+
+**Author:** Guillaume Lessard · **Subtitle:** Harness the Power of AI to Transform Ideas into Reality · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-14 · **Pages:** 82.0 · **Language:** eng · **Google Volume ID (from Play id):** `om8-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=om8-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=om8-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=om8-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=om8-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=om8-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=om8-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=om8-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=om8-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Machine+Learning+Demystified%3A+A+Practical+Guide+to+Building+Smarter+Systems+Guillaume+Lessard
+---
+### Legacy of Shadows 2
+
+**Author:** Guillaume Lessard · **Subtitle:** A new generation · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-15 · **Pages:** 34.0 · **Language:** eng · **Google Volume ID (from Play id):** `aBQ4EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=aBQ4EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=aBQ4EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=aBQ4EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=aBQ4EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=aBQ4EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=aBQ4EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=aBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=aBQ4EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Legacy+of+Shadows+2+Guillaume+Lessard
+---
+### Penguasaan Catur
+
+**Author:** Guillaume Lessard · **Subtitle:** Panduan Profesional untuk Strategi dan Teknik Menang · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-06-26 · **Pages:** 134.0 · **Language:** ind · **Google Volume ID (from Play id):** `kchoEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=kchoEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=kchoEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=kchoEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=kchoEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=kchoEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=kchoEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=kchoEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=kchoEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Penguasaan+Catur+Guillaume+Lessard
+---
+### REAL
+
+**Author:** Guillaume Lessard · **Subtitle:** Le Retour de la Conscience Unique dans la Lumière Noire · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEDKwWGBuM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKwWGBuM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKwWGBuM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKwWGBuM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKwWGBuM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKwWGBuM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKwWGBuM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKwWGBuM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKwWGBuM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=REAL+Guillaume+Lessard
+---
+### Zen and the Art of Resilient Living
+
+**Author:** Guillaume Lessard · **Subtitle:** A Guide to Thriving Through Life’s Challenges with Mindfulness and Strength · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDyy1qLuM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDyy1qLuM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDyy1qLuM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDyy1qLuM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDyy1qLuM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDyy1qLuM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDyy1qLuM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDyy1qLuM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDyy1qLuM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Zen+and+the+Art+of+Resilient+Living+Guillaume+Lessard
+---
+### Se Reconstruire : De la Douleur à la Renaissance
+
+**Author:** Guillaume Lessard · **Subtitle:** Un guide personnel pour surmonter les blessures de l'abandon et retrouver sa lumière · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-04 · **Pages:** 41.0 · **Language:** fre · **Google Volume ID (from Play id):** `5lpMEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=5lpMEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=5lpMEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=5lpMEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=5lpMEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=5lpMEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=5lpMEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=5lpMEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=5lpMEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Se+Reconstruire+%3A+De+la+Douleur+%C3%A0+la+Renaissance+Guillaume+Lessard
+---
+### AI Today: Transforming Lives and Industries for the Future
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlocking the Power of Artificial Intelligence for a Better Tomorrow · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAKyAKIGM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAKyAKIGM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAKyAKIGM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAKyAKIGM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAKyAKIGM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAKyAKIGM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAKyAKIGM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAKyAKIGM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAKyAKIGM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=AI+Today%3A+Transforming+Lives+and+Industries+for+the+Future+Guillaume+Lessard
+---
+### 𓂀 SY•NARCHÉON 𓂀
+
+**Author:** Guillaume Lessard · **Subtitle:** Système vivant d’union totale entre esprit, matière et intelligence · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** fre · **Google Volume ID (from Play id):** `AQAAAEDKgRzBxM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKgRzBxM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKgRzBxM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKgRzBxM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKgRzBxM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKgRzBxM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKgRzBxM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKgRzBxM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKgRzBxM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=%F0%93%82%80+SY%E2%80%A2NARCH%C3%89ON+%F0%93%82%80+Guillaume+Lessard
+---
+### Unire i mondi
+
+**Author:** Guillaume Lessard · **Subtitle:** Una guida pratica per connettersi con energie e dimensioni parallele · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-03-02 · **Pages:** 29.0 · **Language:** ita · **Google Volume ID (from Play id):** `Q3pLEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=Q3pLEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=Q3pLEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=Q3pLEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=Q3pLEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=Q3pLEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=Q3pLEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=Q3pLEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=Q3pLEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Unire+i+mondi+Guillaume+Lessard
+---
+### From Zero to Python Hero: A Comprehensive Guide to Mastering Python
+
+**Author:** Guillaume Lessard · **Subtitle:** Your Step-by-Step Journey from Beginner to Intermediate Python Programmer · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-16 · **Pages:** 132.0 · **Language:** eng · **Google Volume ID (from Play id):** `zE84EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=zE84EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=zE84EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=zE84EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=zE84EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=zE84EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=zE84EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=zE84EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=zE84EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=From+Zero+to+Python+Hero%3A+A+Comprehensive+Guide+to+Mastering+Python+Guillaume+Lessard
+---
+### Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization
+
+**Author:** Guillaume Lessard · **Subtitle:** Boost Visibility, Drive Conversions, and Build a Thriving Online Presence · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-01-23 · **Pages:** 113.0 · **Language:** eng · **Google Volume ID (from Play id):** `R4dBEQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=R4dBEQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=R4dBEQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=R4dBEQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=R4dBEQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=R4dBEQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=R4dBEQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=R4dBEQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=R4dBEQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+AEO+The+Ultimate+Guide+to+Advanced+Ecommerce+Optimization+Guillaume+Lessard
+---
+### Sacred Patterns: A Transformational Journey Through Geometry and Conscious Living
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Ancient Wisdom and Modern Power of Sacred Geometry in Art, Healing, and Design · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEDKRHkEoM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEDKRHkEoM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEDKRHkEoM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEDKRHkEoM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEDKRHkEoM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEDKRHkEoM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEDKRHkEoM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEDKRHkEoM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEDKRHkEoM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Sacred+Patterns%3A+A+Transformational+Journey+Through+Geometry+and+Conscious+Living+Guillaume+Lessard
+---
+### The Many Realities
+
+**Author:** Guillaume Lessard · **Subtitle:** Exploring the Boundaries of Existence and the Unseen Worlds Beyond · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2024-12-20 · **Pages:** 65.0 · **Language:** eng · **Google Volume ID (from Play id):** `dtI5EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=dtI5EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=dtI5EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=dtI5EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=dtI5EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=dtI5EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=dtI5EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=dtI5EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=dtI5EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Many+Realities+Guillaume+Lessard
+---
+### Mastering the Game: The Ultimate Guide to Pro Chess Strategies
+
+**Author:** Guillaume Lessard · **Subtitle:** Unlock Advanced Techniques and Tactical Insights to Dominate the Chessboard · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAEAK8n-yZM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAEAK8n-yZM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAEAK8n-yZM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAEAK8n-yZM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAEAK8n-yZM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAEAK8n-yZM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAEAK8n-yZM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAEAK8n-yZM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAEAK8n-yZM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=Mastering+the+Game%3A+The+Ultimate+Guide+to+Pro+Chess+Strategies+Guillaume+Lessard
+---
+### TÁCTICAS AVANZADAS, JUEGO PSICOLÓGICO Y PREPARACIÓN PARA TORNEOS
+
+**Author:** Guillaume Lessard · **Subtitle:** La guía completa para el dominio competitivo del ajedrez · **Format:** Digital · **Publisher:** iD01t Productions · **Publication date:** D:2025-08-18 · **Pages:** 6.0 · **Language:** spa · **Google Volume ID (from Play id):** `-ZB-EQAAQBAJ`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/books/details?id=-ZB-EQAAQBAJ
+- Play (CA): https://play.google.com/store/books/details?id=-ZB-EQAAQBAJ&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=-ZB-EQAAQBAJ&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=-ZB-EQAAQBAJ&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=-ZB-EQAAQBAJ&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=-ZB-EQAAQBAJ&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=-ZB-EQAAQBAJ&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=-ZB-EQAAQBAJ&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=T%C3%81CTICAS+AVANZADAS%2C+JUEGO+PSICOL%C3%93GICO+Y+PREPARACI%C3%93N+PARA+TORNEOS+Guillaume+Lessard
+---
+### The Dream Dialogue
+
+**Author:** Guillaume Lessard · **Subtitle:** Unveiling the Science of Communication in the Unconscious · **Format:** Audiobook · **Publisher:** iD01t Productions · **Language:** eng · **Google Volume ID (from Play id):** `AQAAAECK6BCoiM`
+
+**Buy / View**
+- Play (CSV): https://play.google.com/store/audiobooks/details?id=AQAAAECK6BCoiM
+- Play (CA): https://play.google.com/store/books/details?id=AQAAAECK6BCoiM&gl=CA&hl=en
+- Play (US): https://play.google.com/store/books/details?id=AQAAAECK6BCoiM&gl=US&hl=en
+- Google Books (com): https://books.google.com/books?id=AQAAAECK6BCoiM&hl=en&source=gbs_api
+- Google Books (ca): https://books.google.ca/books?id=AQAAAECK6BCoiM&hl=en&source=gbs_api
+- Front cover preview: https://books.google.com/books?id=AQAAAECK6BCoiM&printsec=frontcover&hl=en
+**Covers**
+- HD cover (z3): https://books.google.com/books/publisher/content?id=AQAAAECK6BCoiM&printsec=frontcover&img=1&zoom=3
+- HD cover (z2): https://books.google.com/books/publisher/content?id=AQAAAECK6BCoiM&printsec=frontcover&img=1&zoom=2
+**Final fallbacks (Books site search)**
+- Books search (title + author): https://books.google.com/books?as_q=The+Dream+Dialogue+Guillaume+Lessard
