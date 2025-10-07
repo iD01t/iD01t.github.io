@@ -484,47 +484,92 @@
     // ====================================
     
     /**
-     * PRODUCTION FIX: Enhanced URL construction with proper case handling
-     * This function constructs the correct path for HD/SD images
+     * PRODUCTION FIX: Enhanced image URL resolution with Google Books integration
+     * Handles multiple image source types with intelligent fallback strategy
      * 
-     * @param {string} originalUrl - Original image URL from catalog
-     * @param {string} quality - 'hd' or 'sd'
-     * @returns {string} Constructed cover URL
+     * @param {object} ebook - Book object from catalog
+     * @param {string} preferredQuality - 'hd' or 'sd'
+     * @returns {string} Resolved cover URL
      */
-    function getBookCoverUrl(originalUrl, quality = 'hd') {
-      if (!originalUrl || originalUrl === '/assets/placeholder-cover.svg') {
-        return originalUrl;
+    function getBookCoverUrl(ebook, preferredQuality = 'hd') {
+      // Priority 1: Use direct HD/SD URLs from catalog if available
+      if (preferredQuality === 'hd' && ebook.image_hd && ebook.image_hd !== '/assets/placeholder-cover.svg') {
+        return ebook.image_hd;
       }
-
-      // Handle Google Books image URLs - extract book ID and construct local path
-      if (originalUrl.includes('books.google.com') || originalUrl.includes('books.googleusercontent.com')) {
-        const idMatch = originalUrl.match(/id=([^&]+)/);
-        if (idMatch) {
-          const bookId = idMatch[1];
-          const qualityPath = CONFIG.imagePaths[quality];
-          return `/assets/harvested/ebooks/${qualityPath}/${bookId}.webp`;
-        }
+      
+      if (preferredQuality === 'sd' && ebook.image_sd && ebook.image_sd !== '/assets/placeholder-cover.svg') {
+        return ebook.image_sd;
       }
-
-      // Handle local paths
-      if (originalUrl.startsWith('/assets/')) {
-        const fileName = originalUrl.split('/').pop();
-        const fileBaseName = fileName.split('.')[0];
-        const fileExt = fileName.split('.').pop() || 'webp';
-        
-        // CRITICAL FIX: Use normalized quality path from config
-        const qualityPath = CONFIG.imagePaths[quality];
-        const coverPath = `/assets/harvested/ebooks/${qualityPath}/${fileBaseName}.${fileExt}`;
+      
+      // Priority 2: Use primary image field
+      if (ebook.image && ebook.image !== '/assets/placeholder-cover.svg') {
+        return ebook.image;
+      }
+      
+      // Priority 3: Construct from volume_id if available
+      if (ebook.volume_id) {
+        const zoom = preferredQuality === 'hd' ? '3' : '2';
+        return `https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=${zoom}`;
+      }
+      
+      // Priority 4: Try local harvested images (legacy support)
+      if (ebook.volume_id) {
+        const qualityPath = CONFIG.imagePaths[preferredQuality];
+        const localPath = `/assets/harvested/ebooks/${qualityPath}/${ebook.volume_id}.webp`;
         
         if (CONFIG.enableDebugLogging) {
-          console.log(`[getBookCoverUrl] ${quality.toUpperCase()}: ${coverPath}`);
+          console.log(`[getBookCoverUrl] Trying local: ${localPath}`);
         }
         
-        return coverPath;
+        return localPath;
       }
-
-      // Fallback: Return original URL
-      return originalUrl;
+      
+      // Final fallback: placeholder
+      return '/assets/placeholder-cover.svg';
+    }
+    
+    /**
+     * Get fallback URL cascade for a book
+     * @param {object} ebook - Book object
+     * @returns {Array<string>} Array of URLs to try in order
+     */
+    function getImageFallbackChain(ebook) {
+      const urls = [];
+      
+      // Try HD from catalog
+      if (ebook.image_hd && ebook.image_hd !== '/assets/placeholder-cover.svg') {
+        urls.push(ebook.image_hd);
+      }
+      
+      // Try SD from catalog
+      if (ebook.image_sd && ebook.image_sd !== '/assets/placeholder-cover.svg') {
+        urls.push(ebook.image_sd);
+      }
+      
+      // Try primary image
+      if (ebook.image && ebook.image !== '/assets/placeholder-cover.svg' && 
+          !urls.includes(ebook.image)) {
+        urls.push(ebook.image);
+      }
+      
+      // Try constructed Google Books URLs if we have volume_id
+      if (ebook.volume_id) {
+        urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=3`);
+        urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=2`);
+        urls.push(`https://books.google.com/books/publisher/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=3`);
+      }
+      
+      // Try local harvested images
+      if (ebook.volume_id) {
+        urls.push(`/assets/harvested/ebooks/hd/${ebook.volume_id}.webp`);
+        urls.push(`/assets/harvested/ebooks/sd/${ebook.volume_id}.webp`);
+      }
+      
+      // Always end with placeholder
+      urls.push('/assets/placeholder-cover.svg');
+      
+      // Remove duplicates while preserving order
+      return [...new Set(urls)];
     }
 
     /**
@@ -575,80 +620,65 @@
     }
 
     /**
-     * PRODUCTION FIX: Robust fallback system with cascading quality levels
-     * Tries: HD → SD → Original → Placeholder
-     * Includes comprehensive error logging for debugging
+     * PRODUCTION FIX: Robust fallback system with comprehensive URL cascade
+     * Intelligently tries multiple sources: Google Books HD/SD → Local → Placeholder
+     * Includes comprehensive error logging and performance tracking
      * 
      * @param {HTMLImageElement} img - Target image element
-     * @param {string} primarySrc - Primary image source URL
+     * @param {object} ebook - Book object with image URLs
      */
-    async function loadImageWithFallback(img, primarySrc) {
-      const hdCover = getBookCoverUrl(primarySrc, 'hd');
-      const sdCover = getBookCoverUrl(primarySrc, 'sd');
-      const placeholder = '/assets/placeholder-cover.svg';
+    async function loadImageWithFallback(img, ebook) {
+      const fallbackChain = getImageFallbackChain(ebook);
+      const startTime = performance.now();
 
       if (CONFIG.enableDebugLogging) {
-        console.group(`[loadImageWithFallback] Starting cascade for: ${img.alt || 'Untitled'}`);
-        console.log('Primary:', primarySrc);
-        console.log('HD:', hdCover);
-        console.log('SD:', sdCover);
+        console.group(`[loadImageWithFallback] ${ebook.title || 'Untitled'}`);
+        console.log(`Attempting ${fallbackChain.length} sources:`, fallbackChain);
       }
 
-      // Try loading in order: HD → SD → Original → Placeholder
-      try {
-        // Attempt 1: HD version
-        await tryLoadImage(hdCover);
-        img.src = hdCover;
-        img.srcset = `${hdCover} 1x, ${hdCover} 2x`;
-        img.classList.add('loaded-hd');
-        
-        if (CONFIG.enableDebugLogging) {
-          console.log('✅ Loaded HD version');
-          console.groupEnd();
-        }
-        
-      } catch (hdError) {
-        if (CONFIG.enableDebugLogging) {
-          console.warn('HD failed, trying SD...');
-        }
+      // Try each URL in the fallback chain
+      for (let i = 0; i < fallbackChain.length; i++) {
+        const url = fallbackChain[i];
+        const isLastAttempt = i === fallbackChain.length - 1;
         
         try {
-          // Attempt 2: SD version
-          await tryLoadImage(sdCover);
-          img.src = sdCover;
-          img.classList.add('loaded-sd');
+          await tryLoadImage(url);
+          
+          // Success! Set the image
+          img.src = url;
+          if (url.includes('zoom=3') || url.includes('/hd/')) {
+            img.classList.add('loaded-hd');
+          } else if (url.includes('zoom=2') || url.includes('/sd/')) {
+            img.classList.add('loaded-sd');
+          } else if (url.includes('placeholder')) {
+            img.classList.add('loaded-placeholder');
+          } else {
+            img.classList.add('loaded-original');
+          }
+          
+          const loadTime = (performance.now() - startTime).toFixed(2);
           
           if (CONFIG.enableDebugLogging) {
-            console.log('✅ Loaded SD version');
+            console.log(`✅ SUCCESS [${i + 1}/${fallbackChain.length}] in ${loadTime}ms: ${url.substring(0, 80)}...`);
             console.groupEnd();
           }
           
-        } catch (sdError) {
+          break; // Exit loop on success
+          
+        } catch (error) {
           if (CONFIG.enableDebugLogging) {
-            console.warn('SD failed, trying original...');
+            console.warn(`❌ FAILED [${i + 1}/${fallbackChain.length}]: ${url.substring(0, 80)}...`);
           }
           
-          try {
-            // Attempt 3: Original URL
-            await tryLoadImage(primarySrc);
-            img.src = primarySrc;
-            img.classList.add('loaded-original');
-            
-            if (CONFIG.enableDebugLogging) {
-              console.log('✅ Loaded original version');
-              console.groupEnd();
-            }
-            
-          } catch (originalError) {
-            // Attempt 4: Placeholder (always succeeds)
-            if (CONFIG.enableDebugLogging) {
-              console.error('All sources failed, using placeholder');
-              console.error('Errors:', { hdError, sdError, originalError });
-              console.groupEnd();
-            }
-            
-            img.src = placeholder;
+          // If this was the last attempt, use placeholder as absolute fallback
+          if (isLastAttempt) {
+            img.src = '/assets/placeholder-cover.svg';
             img.classList.add('loaded-placeholder');
+            
+            if (CONFIG.enableDebugLogging) {
+              console.error(`⚠️  All sources exhausted. Using placeholder.`);
+              console.groupEnd();
+            }
           }
         }
       }
@@ -683,21 +713,22 @@
       return 'Other';
     }
 
-    function createBookCard(ebook) {
+    function createBookCard(ebook, index) {
         if (!ebook || !ebook.title) return '';
         
         const category = getCategoryFromTitle(ebook.title);
         const description = cleanDescription(ebook.description || 'Professional guide with comprehensive coverage.');
         const author = ebook.author || 'Guillaume Lessard';
-        const lang = ebook.lang || 'EN';
-        const link = ebook.link || ebook.bookUrl || 'https://play.google.com/store/books';
+        const lang = ebook.lang || (ebook.language === 'eng' ? 'EN' : ebook.language === 'fre' ? 'FR' : 'EN');
+        const link = ebook.link || 'https://play.google.com/store/books';
+        const format = ebook.format || 'Digital';
 
         return `
-          <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md border border-slate-200 dark:border-slate-700 overflow-hidden card-hover intersection-animate">
+          <div class="book-card bg-white dark:bg-slate-800 rounded-xl shadow-md border border-slate-200 dark:border-slate-700 overflow-hidden card-hover intersection-animate">
             <div class="relative aspect-[2/3] bg-slate-100 dark:bg-slate-700 overflow-hidden">
               <div class="absolute inset-0 image-placeholder"></div>
               <img 
-                data-src="${ebook.image || '/assets/placeholder-cover.svg'}" 
+                data-book-index="${index}"
                 src="/assets/placeholder-cover.svg"
                 alt="${ebook.title} cover" 
                 class="w-full h-full object-cover opacity-0 transition-opacity duration-300"
@@ -707,22 +738,35 @@
                 <span class="px-2 py-1 text-xs font-semibold bg-white/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 rounded backdrop-blur-sm">${lang}</span>
                 <span class="px-2 py-1 text-xs font-semibold bg-brand-600/90 text-white rounded backdrop-blur-sm">${category}</span>
               </div>
+              ${format === 'Audiobook' ? `
+              <div class="absolute bottom-3 left-3">
+                <span class="px-2 py-1 text-xs font-semibold bg-purple-600/90 text-white rounded backdrop-blur-sm flex items-center gap-1">
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path>
+                  </svg>
+                  Audiobook
+                </span>
+              </div>` : ''}
             </div>
             <div class="p-5">
               <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2 line-clamp-2 leading-tight">${ebook.title}</h3>
+              ${ebook.subtitle ? `<p class="text-sm text-slate-500 dark:text-slate-400 mb-1 line-clamp-1">${ebook.subtitle}</p>` : ''}
               <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">${author}</p>
               <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">${description}</p>
-              <a 
-                href="${link}" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium text-sm transition-colors focus-ring"
-              >
-                <span>View on Google Play</span>
-                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </a>
+              <div class="flex items-center justify-between">
+                <a 
+                  href="${link}" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium text-sm transition-colors focus-ring"
+                >
+                  <span>View on Google Play</span>
+                  <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+                ${ebook.price_usd ? `<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">$${ebook.price_usd}</span>` : ''}
+              </div>
             </div>
           </div>
         `;
@@ -750,23 +794,28 @@
           return;
         }
 
-        const booksHTML = newBooks.map(createBookCard).join('');
+        const booksHTML = newBooks.map((book, index) => createBookCard(book, index)).join('');
         ebooksGrid.insertAdjacentHTML('beforeend', booksHTML);
 
         // PRODUCTION FIX: Use requestAnimationFrame for optimal timing
         // Ensures DOM is fully rendered before querying elements
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
-            const images = ebooksGrid.querySelectorAll('img[data-src]');
+            const bookCards = ebooksGrid.querySelectorAll('.book-card');
             
             if (CONFIG.enableDebugLogging) {
-              console.log(`[loadBooks] Processing ${images.length} images`);
+              console.log(`[loadBooks] Processing ${bookCards.length} book cards`);
             }
             
-            images.forEach(img => {
-              const dataSrc = img.getAttribute('data-src');
-              if (dataSrc && dataSrc !== '/assets/placeholder-cover.svg') {
-                loadImageWithFallback(img, dataSrc);
+            bookCards.forEach((card, index) => {
+              const img = card.querySelector('img[data-book-index]');
+              if (!img) return;
+              
+              const bookIndex = parseInt(img.getAttribute('data-book-index'));
+              const ebook = newBooks[bookIndex];
+              
+              if (ebook && ebook.image !== '/assets/placeholder-cover.svg') {
+                loadImageWithFallback(img, ebook);
               } else {
                 img.src = '/assets/placeholder-cover.svg';
                 img.classList.remove('opacity-0');
