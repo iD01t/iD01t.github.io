@@ -205,402 +205,545 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
             </svg>
           </button>
-          <a href="/contact.html" class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring">Contact</a>
-          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle mobile menu" aria-expanded="false">
-            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
       </div>
     </div>
-    
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-      <div class="px-4 py-4 space-y-3">
-        <a href="/store.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Store</a>
-        <a href="/ebooks.html" class="block text-brand-600 dark:text-brand-400 font-medium">eBooks</a>
-        <a href="/audiobooks.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Audiobooks</a>
-        <a href="/apps.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Apps</a>
-        <a href="/games.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Games</a>
-        <a href="/music.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Music</a>
-        <a href="/contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <div class="px-4 py-3 space-y-2">
+        <a href="/store.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Store</a>
+        <a href="/ebooks.html" class="block py-2 text-brand-600 dark:text-brand-400 font-medium">eBooks</a>
+        <a href="/audiobooks.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Audiobooks</a>
+        <a href="/apps.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Apps</a>
+        <a href="/games.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Games</a>
+        <a href="/music.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Music</a>
       </div>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Hero Section -->
-    <section class="text-center mb-16 intersection-animate">
-      <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-6">Professional eBooks</h1>
-      <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-        200+ technical eBooks covering programming, AI, automation, chess mastery, music production, and personal development. 
-        Written by Guillaume Lessard with clear explanations and practical examples.
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 py-16 sm:py-24">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-brand-200 dark:bg-brand-900/20 rounded-full blur-3xl opacity-30 animate-pulse-glow"></div>
+      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-200 dark:bg-blue-900/20 rounded-full blur-3xl opacity-20 animate-pulse-glow" style="animation-delay: 1.2s;"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center px-4 py-2 mb-6 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-full border border-brand-200 dark:border-brand-800/50 shadow-sm">
+        <svg class="w-4 h-4 mr-2 text-brand-600 dark:text-brand-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path>
+        </svg>
+        <span class="text-sm font-medium text-slate-700 dark:text-slate-300">200+ Professional eBooks</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+        <span class="gradient-text">Master New Skills</span><br>
+        <span class="text-slate-900 dark:text-white">With Expert Guides</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+        Comprehensive eBooks covering <strong>programming</strong>, <strong>AI</strong>, <strong>automation</strong>, <strong>chess strategies</strong>, <strong>music production</strong>, and <strong>personal development</strong>. Available on Google Play Books.
       </p>
       
-      <!-- Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto mb-12">
-        <div class="text-center">
-          <div class="text-3xl font-bold text-brand-600 dark:text-brand-400">200+</div>
-          <div class="text-sm text-slate-600 dark:text-slate-300">eBooks Available</div>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#catalog" class="inline-flex items-center px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 focus-ring">
+          <span>Browse Catalog</span>
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <a href="https://play.google.com/store/books" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg border-2 border-slate-200 dark:border-slate-700 hover:border-brand-600 dark:hover:border-brand-400 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-200 focus-ring">
+          <span>Google Play Books</span>
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+          <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 dark:bg-brand-900/30 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Expert Knowledge</h3>
+          <p class="text-slate-600 dark:text-slate-400">Written by Guillaume Lessard with years of professional experience</p>
         </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-brand-600 dark:text-brand-400">15+</div>
-          <div class="text-sm text-slate-600 dark:text-slate-300">Languages</div>
+        
+        <div class="text-center p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+          <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 dark:bg-brand-900/30 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Comprehensive Coverage</h3>
+          <p class="text-slate-600 dark:text-slate-400">From beginner basics to advanced techniques in every topic</p>
         </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-brand-600 dark:text-brand-400">10+</div>
-          <div class="text-sm text-slate-600 dark:text-slate-300">Categories</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-brand-600 dark:text-brand-400">4.8★</div>
-          <div class="text-sm text-slate-600 dark:text-slate-300">Average Rating</div>
+        
+        <div class="text-center p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+          <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 dark:bg-brand-900/30 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">HD Quality</h3>
+          <p class="text-slate-600 dark:text-slate-400">Professional cover designs and high-quality formatting</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Filters and Search -->
-    <section class="intersection-animate">
-      <div class="bg-slate-50 dark:bg-slate-900/40 rounded-2xl p-6 mb-8">
-        <div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
-          <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+  <!-- Catalog Section -->
+  <section id="catalog" class="py-16 bg-slate-50 dark:bg-slate-800/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Search and Filters -->
+      <div class="mb-10 space-y-4">
+        <div class="flex flex-col lg:flex-row gap-4">
+          <div class="flex-1">
             <div class="relative">
               <input 
-                id="searchInput" 
                 type="search" 
-                placeholder="Search titles, topics, or keywords..." 
-                class="w-full sm:w-80 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 pl-10 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
-              >
-              <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                id="searchInput"
+                placeholder="Search by title, description, or author..." 
+                class="w-full pl-12 pr-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-shadow"
+                aria-label="Search eBooks">
+              <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
               </svg>
             </div>
-            <select id="categoryFilter" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors">
-              <option value="">All Categories</option>
-              <option value="programming">Programming</option>
-              <option value="ai">AI & Machine Learning</option>
-              <option value="chess">Chess & Strategy</option>
-              <option value="music">Music Production</option>
-              <option value="automation">Automation</option>
-              <option value="business">Business</option>
-              <option value="personal">Personal Development</option>
-              <option value="science">Science & Technology</option>
-            </select>
           </div>
-          <div class="flex gap-3 items-center">
-            <select id="sortOrder" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors">
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <select id="categoryFilter" class="px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent" aria-label="Filter by category">
+              <option value="">All Categories</option>
+              <option value="Programming">Programming</option>
+              <option value="AI">AI & Machine Learning</option>
+              <option value="Chess">Chess</option>
+              <option value="Music">Music Production</option>
+              <option value="Personal">Personal Development</option>
+              <option value="Other">Other</option>
+            </select>
+            
+            <select id="sortOrder" class="px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent" aria-label="Sort order">
               <option value="newest">Newest First</option>
               <option value="title">Title A-Z</option>
               <option value="popular">Most Popular</option>
             </select>
-            <div class="text-sm text-slate-600 dark:text-slate-300">
-              <span id="resultsCount">200+</span> books
-            </div>
           </div>
         </div>
+        
+        <div class="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400">
+          <span>Showing <strong id="resultsCount" class="text-brand-600 dark:text-brand-400">0</strong> results</span>
+        </div>
       </div>
-    </section>
 
-    <!-- eBooks Grid -->
-    <section class="intersection-animate">
-      <div id="ebooksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        <!-- Books will be dynamically loaded here -->
-      </div>
-      
       <!-- Loading State -->
       <div id="loadingState" class="text-center py-12">
-        <div class="inline-flex items-center gap-3 text-slate-600 dark:text-slate-300">
-          <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+        <div class="inline-flex items-center space-x-3">
+          <svg class="animate-spin h-8 w-8 text-brand-600" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          Loading professional eBooks...
+          <span class="text-lg text-slate-600 dark:text-slate-400">Loading catalog...</span>
         </div>
       </div>
 
+      <!-- eBooks Grid -->
+      <div id="ebooksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Books will be inserted here dynamically -->
+      </div>
+
       <!-- Load More Button -->
-      <div class="text-center mt-12">
-        <button id="loadMoreBtn" class="hidden inline-flex items-center gap-2 rounded-full bg-brand-600 hover:bg-brand-700 text-white px-8 py-3 transition-all duration-300 hover:scale-105 focus-ring">
-          <span>Load More Books</span>
-          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
+      <div class="mt-10 text-center">
+        <button id="loadMoreBtn" class="hidden px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 focus-ring">
+          Load More Books
         </button>
       </div>
-    </section>
 
-  <!-- Spacer -->
-  <div class="h-20"></div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-      <div class="space-y-4">
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg text-white">iD01t Productions</span>
-        </a>
-        <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8">
+            <span class="font-semibold text-lg">iD01t Productions</span>
+          </div>
+          <p class="text-slate-600 dark:text-slate-400 mb-4">Professional eBooks, audiobooks, apps, and digital content for creative professionals and lifelong learners.</p>
+          <div class="flex space-x-4">
+            <a href="https://twitter.com/id01t" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" aria-label="Twitter">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+            </a>
+            <a href="https://github.com/id01t" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" aria-label="GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+            <li><a href="/store.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Store</a></li>
+            <li><a href="/ebooks.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">eBooks</a></li>
+            <li><a href="/audiobooks.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Audiobooks</a></li>
+            <li><a href="/apps.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Apps</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4">About</h4>
+          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+            <li><a href="/about.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About Us</a></li>
+            <li><a href="/contact.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a></li>
+            <li><a href="/privacy.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
       </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Products</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
-          <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
-          <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
-          <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
-          <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Resources</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
-          <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
-          <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
-          <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
-          <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Legal</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
-          <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
-          <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom -->
-    <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-      <div class="flex items-center gap-6">
-        <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
-        <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
-        <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
+      
+      <div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-600 dark:text-slate-400 text-sm">
+        <p>&copy; <span id="year"></span> iD01t Productions. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script>
-    // Global variables
+    // ====================================
+    // CONFIGURATION & STATE MANAGEMENT
+    // ====================================
+    const CONFIG = {
+      itemsPerPage: 20,
+      imageTimeout: 8000,
+      // CRITICAL FIX: Ensure case-sensitive path matches your actual directory structure
+      // Change 'hd' and 'sd' to uppercase 'HD' and 'SD' if that's how your folders are named
+      imagePaths: {
+        hd: 'hd',  // Change to 'HD' if your folder is uppercase
+        sd: 'sd'   // Change to 'SD' if your folder is uppercase
+      },
+      enableDebugLogging: true  // Set to false in production
+    };
+
     let allEbooks = [];
     let filteredEbooks = [];
     let currentPage = 0;
-    const itemsPerPage = 16;
-
-    // DOM elements
+    
+    // ====================================
+    // DOM ELEMENTS
+    // ====================================
     const ebooksGrid = document.getElementById('ebooksGrid');
-    const loadingState = document.getElementById('loadingState');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
     const searchInput = document.getElementById('searchInput');
     const categoryFilter = document.getElementById('categoryFilter');
     const sortOrder = document.getElementById('sortOrder');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
     const resultsCount = document.getElementById('resultsCount');
-
-    // Theme toggle functionality
-    const root = document.documentElement;
+    const loadingState = document.getElementById('loadingState');
+    
+    // ====================================
+    // THEME MANAGEMENT
+    // ====================================
     const themeToggle = document.getElementById('themeToggle');
-    const setTheme = (mode) => {
-      if (mode === 'dark') {
-        root.classList.add('dark');
-      } else {
-        root.classList.remove('dark');
-      }
-      localStorage.setItem('theme', mode);
-    };
+    const html = document.documentElement;
+    
+    const savedTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    html.classList.toggle('dark', savedTheme === 'dark');
+    
     themeToggle.addEventListener('click', () => {
-      const newMode = root.classList.contains('dark') ? 'light' : 'dark';
-      setTheme(newMode);
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
-    // Init theme
-    (() => {
-      const saved = localStorage.getItem('theme');
-      if (saved) setTheme(saved);
-      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
-    })();
-
-    // Mobile menu functionality
-    const mobileBtn = document.getElementById('mobileMenuBtn');
+    
+    // ====================================
+    // MOBILE MENU
+    // ====================================
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-    const closeIcon = document.getElementById('closeIcon');
-    mobileBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('hidden');
-      mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      menuIcon.classList.toggle('hidden', isOpen);
-      closeIcon.classList.toggle('hidden', !isOpen);
-      if (isOpen) {
-        mobileMenu.querySelector('a').focus();
-      } else {
-        mobileBtn.focus();
-      }
+    
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
 
-    // Intersection animations
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
+    // ====================================
+    // IMAGE LOADING UTILITIES
+    // ====================================
+    
+    /**
+     * PRODUCTION FIX: Enhanced URL construction with proper case handling
+     * This function constructs the correct path for HD/SD images
+     * 
+     * @param {string} originalUrl - Original image URL from catalog
+     * @param {string} quality - 'hd' or 'sd'
+     * @returns {string} Constructed cover URL
+     */
+    function getBookCoverUrl(originalUrl, quality = 'hd') {
+      if (!originalUrl || originalUrl === '/assets/placeholder-cover.svg') {
+        return originalUrl;
+      }
 
-    // Utility functions
-    function cleanDescription(description) {
-      if (!description) return '';
-      return description
-        .replace(/<[^>]*>/g, '') // Remove HTML tags
-        .replace(/&[^;]+;/g, ' ') // Remove HTML entities
-        .replace(/\s+/g, ' ') // Replace multiple spaces with single space
-        .trim()
-        .substring(0, 200) + (description.length > 200 ? '...' : '');
+      // Handle Google Books image URLs - extract book ID and construct local path
+      if (originalUrl.includes('books.google.com') || originalUrl.includes('books.googleusercontent.com')) {
+        const idMatch = originalUrl.match(/id=([^&]+)/);
+        if (idMatch) {
+          const bookId = idMatch[1];
+          const qualityPath = CONFIG.imagePaths[quality];
+          return `/assets/harvested/ebooks/${qualityPath}/${bookId}.webp`;
+        }
+      }
+
+      // Handle local paths
+      if (originalUrl.startsWith('/assets/')) {
+        const fileName = originalUrl.split('/').pop();
+        const fileBaseName = fileName.split('.')[0];
+        const fileExt = fileName.split('.').pop() || 'webp';
+        
+        // CRITICAL FIX: Use normalized quality path from config
+        const qualityPath = CONFIG.imagePaths[quality];
+        const coverPath = `/assets/harvested/ebooks/${qualityPath}/${fileBaseName}.${fileExt}`;
+        
+        if (CONFIG.enableDebugLogging) {
+          console.log(`[getBookCoverUrl] ${quality.toUpperCase()}: ${coverPath}`);
+        }
+        
+        return coverPath;
+      }
+
+      // Fallback: Return original URL
+      return originalUrl;
+    }
+
+    /**
+     * PRODUCTION FIX: Promise-based image loading with timeout protection
+     * Prevents hanging requests and provides detailed error logging
+     * 
+     * @param {string} url - Image URL to load
+     * @returns {Promise} Resolves with image element or rejects with error
+     */
+    function tryLoadImage(url) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        let timeoutId;
+
+        const cleanup = () => {
+          clearTimeout(timeoutId);
+          img.onload = null;
+          img.onerror = null;
+        };
+
+        img.onload = () => {
+          cleanup();
+          if (CONFIG.enableDebugLogging) {
+            console.log(`[tryLoadImage] ✅ SUCCESS: ${url}`);
+          }
+          resolve(img);
+        };
+
+        img.onerror = (error) => {
+          cleanup();
+          if (CONFIG.enableDebugLogging) {
+            console.warn(`[tryLoadImage] ❌ FAILED: ${url}`, error);
+          }
+          reject(new Error(`Failed to load: ${url}`));
+        };
+
+        // Timeout protection - prevents hanging requests
+        timeoutId = setTimeout(() => {
+          cleanup();
+          if (CONFIG.enableDebugLogging) {
+            console.warn(`[tryLoadImage] ⏱️ TIMEOUT: ${url} (${CONFIG.imageTimeout}ms)`);
+          }
+          reject(new Error(`Timeout loading: ${url}`));
+        }, CONFIG.imageTimeout);
+
+        img.src = url;
+      });
+    }
+
+    /**
+     * PRODUCTION FIX: Robust fallback system with cascading quality levels
+     * Tries: HD → SD → Original → Placeholder
+     * Includes comprehensive error logging for debugging
+     * 
+     * @param {HTMLImageElement} img - Target image element
+     * @param {string} primarySrc - Primary image source URL
+     */
+    async function loadImageWithFallback(img, primarySrc) {
+      const hdCover = getBookCoverUrl(primarySrc, 'hd');
+      const sdCover = getBookCoverUrl(primarySrc, 'sd');
+      const placeholder = '/assets/placeholder-cover.svg';
+
+      if (CONFIG.enableDebugLogging) {
+        console.group(`[loadImageWithFallback] Starting cascade for: ${img.alt || 'Untitled'}`);
+        console.log('Primary:', primarySrc);
+        console.log('HD:', hdCover);
+        console.log('SD:', sdCover);
+      }
+
+      // Try loading in order: HD → SD → Original → Placeholder
+      try {
+        // Attempt 1: HD version
+        await tryLoadImage(hdCover);
+        img.src = hdCover;
+        img.srcset = `${hdCover} 1x, ${hdCover} 2x`;
+        img.classList.add('loaded-hd');
+        
+        if (CONFIG.enableDebugLogging) {
+          console.log('✅ Loaded HD version');
+          console.groupEnd();
+        }
+        
+      } catch (hdError) {
+        if (CONFIG.enableDebugLogging) {
+          console.warn('HD failed, trying SD...');
+        }
+        
+        try {
+          // Attempt 2: SD version
+          await tryLoadImage(sdCover);
+          img.src = sdCover;
+          img.classList.add('loaded-sd');
+          
+          if (CONFIG.enableDebugLogging) {
+            console.log('✅ Loaded SD version');
+            console.groupEnd();
+          }
+          
+        } catch (sdError) {
+          if (CONFIG.enableDebugLogging) {
+            console.warn('SD failed, trying original...');
+          }
+          
+          try {
+            // Attempt 3: Original URL
+            await tryLoadImage(primarySrc);
+            img.src = primarySrc;
+            img.classList.add('loaded-original');
+            
+            if (CONFIG.enableDebugLogging) {
+              console.log('✅ Loaded original version');
+              console.groupEnd();
+            }
+            
+          } catch (originalError) {
+            // Attempt 4: Placeholder (always succeeds)
+            if (CONFIG.enableDebugLogging) {
+              console.error('All sources failed, using placeholder');
+              console.error('Errors:', { hdError, sdError, originalError });
+              console.groupEnd();
+            }
+            
+            img.src = placeholder;
+            img.classList.add('loaded-placeholder');
+          }
+        }
+      }
+
+      // Remove loading state and show image
+      img.classList.remove('opacity-0');
+      img.classList.add('opacity-100');
+      
+      const placeholderBg = img.parentElement?.querySelector('.image-placeholder');
+      if (placeholderBg) {
+        placeholderBg.classList.add('hidden');
+      }
+    }
+
+    // ====================================
+    // UTILITY FUNCTIONS
+    // ====================================
+    
+    function cleanDescription(desc) {
+      if (!desc) return '';
+      return desc.replace(/<[^>]+>/g, '').substring(0, 150);
     }
 
     function getCategoryFromTitle(title) {
-      const titleLower = title.toLowerCase();
-      if (titleLower.includes('python') || titleLower.includes('java') || titleLower.includes('programming') || titleLower.includes('code')) return 'programming';
-      if (titleLower.includes('ai') || titleLower.includes('machine learning') || titleLower.includes('automation')) return 'ai';
-      if (titleLower.includes('chess') || titleLower.includes('strategy')) return 'chess';
-      if (titleLower.includes('music') || titleLower.includes('dj') || titleLower.includes('ableton') || titleLower.includes('traktor')) return 'music';
-      if (titleLower.includes('business') || titleLower.includes('empire') || titleLower.includes('cash') || titleLower.includes('income')) return 'business';
-      if (titleLower.includes('zen') || titleLower.includes('spiritual') || titleLower.includes('meditation') || titleLower.includes('love')) return 'personal';
-      if (titleLower.includes('quantum') || titleLower.includes('science') || titleLower.includes('technology')) return 'science';
-      return 'other';
-    }
-
-    // Enhanced image loading with multiple fallback strategies
-    function loadImageWithFallback(img, primarySrc, fallbackSrc = '/assets/placeholder-cover.svg') {
-      const imageLoader = new Image();
-      
-      imageLoader.onload = function() {
-        img.src = primarySrc;
-        img.classList.remove('opacity-0');
-        img.classList.add('opacity-100');
-        img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
-      };
-      
-      imageLoader.onerror = function() {
-        // Try a different fallback strategy
-        const secondaryFallback = '/assets/images/placeholder-book-cover.webp';
-        const tertiaryFallback = '/assets/img/placeholders/book-cover-placeholder.png';
-        
-        const secondLoader = new Image();
-        secondLoader.onload = function() {
-          img.src = secondaryFallback;
-          img.classList.remove('opacity-0');
-          img.classList.add('opacity-100');
-          img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
-        };
-        secondLoader.onerror = function() {
-          const thirdLoader = new Image();
-          thirdLoader.onload = function() {
-            img.src = tertiaryFallback;
-            img.classList.remove('opacity-0');
-            img.classList.add('opacity-100');
-            img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
-          };
-          thirdLoader.onerror = function() {
-            // Final fallback to basic SVG
-            img.src = fallbackSrc;
-            img.classList.remove('opacity-0');
-            img.classList.add('opacity-100');
-            img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
-          };
-          thirdLoader.src = tertiaryFallback;
-        };
-        secondLoader.src = secondaryFallback;
-      };
-      
-      imageLoader.src = primarySrc;
+      if (!title) return 'Other';
+      const lower = title.toLowerCase();
+      if (lower.includes('python') || lower.includes('javascript') || lower.includes('programming') || lower.includes('code')) return 'Programming';
+      if (lower.includes('ai') || lower.includes('machine learning') || lower.includes('neural')) return 'AI';
+      if (lower.includes('chess')) return 'Chess';
+      if (lower.includes('music') || lower.includes('production') || lower.includes('audio')) return 'Music';
+      if (lower.includes('mindfulness') || lower.includes('personal') || lower.includes('growth')) return 'Personal';
+      return 'Other';
     }
 
     function createBookCard(ebook) {
-      const category = getCategoryFromTitle(ebook.title);
-      const cleanTitle = ebook.title.replace(/^[🌿✨🎧🚀📖]+\s*/, ''); // Remove emoji prefixes
-      const cleanDesc = cleanDescription(ebook.description);
-      const landingPageUrl = `/ebooks/${ebook.title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}.html`;
-      const buyUrl = ebook.link || '#';
-      const imageUrl = ebook.image || '/assets/placeholder-cover.svg';
+        if (!ebook || !ebook.title) return '';
+        
+        const category = getCategoryFromTitle(ebook.title);
+        const description = cleanDescription(ebook.description || 'Professional guide with comprehensive coverage.');
+        const author = ebook.author || 'Guillaume Lessard';
+        const lang = ebook.lang || 'EN';
+        const link = ebook.link || ebook.bookUrl || 'https://play.google.com/store/books';
 
-      return `
-        <article class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700 card-hover">
-          <div class="aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
-            <div class="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 animate-pulse image-placeholder"></div>
-            <img
-              src="/assets/placeholder-cover.svg"
-              data-src="${imageUrl}"
-              alt="${cleanTitle} cover"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 image-loaded opacity-0"
-              loading="lazy"
-              decoding="async"
-              onerror="this.onerror=null;this.src='/assets/placeholder-cover.svg';this.classList.remove('opacity-0');this.classList.add('opacity-100');this.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');"
-            />
-          </div>
-          <div class="p-6 space-y-4">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <span class="px-2 py-1 text-xs font-medium bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 rounded-full">${category}</span>
-                <span class="text-xs text-slate-500 dark:text-slate-400">${ebook.lang || 'EN'}</span>
-              </div>
-              <h3 class="font-semibold text-lg leading-tight line-clamp-2 text-slate-900 dark:text-slate-100">
-                ${cleanTitle}
-              </h3>
-              <p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
-                ${cleanDesc}
-              </p>
-            </div>
-            <div class="flex items-center justify-between pt-2 border-t border-slate-200 dark:border-slate-700">
-              <div class="text-sm text-slate-500 dark:text-slate-400">
-                by ${ebook.author || 'Guillaume Lessard'}
-              </div>
-              <div class="flex items-center gap-2">
-                <a 
-                  href="${landingPageUrl}" 
-                  class="text-sm text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium focus-ring rounded px-2 py-1"
-                  title="View details"
-                >
-                  Details
-                </a>
-                <a 
-                  href="${buyUrl}" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1 text-sm bg-brand-600 hover:bg-brand-700 text-white px-3 py-1.5 rounded-full transition-colors focus-ring"
-                  title="Buy on Google Play Books"
-                >
-                  <span>Buy</span>
-                  <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-                </a>
+        return `
+          <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md border border-slate-200 dark:border-slate-700 overflow-hidden card-hover intersection-animate">
+            <div class="relative aspect-[2/3] bg-slate-100 dark:bg-slate-700 overflow-hidden">
+              <div class="absolute inset-0 image-placeholder"></div>
+              <img 
+                data-src="${ebook.image || '/assets/placeholder-cover.svg'}" 
+                src="/assets/placeholder-cover.svg"
+                alt="${ebook.title} cover" 
+                class="w-full h-full object-cover opacity-0 transition-opacity duration-300"
+                loading="lazy"
+              >
+              <div class="absolute top-3 right-3 flex gap-2">
+                <span class="px-2 py-1 text-xs font-semibold bg-white/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 rounded backdrop-blur-sm">${lang}</span>
+                <span class="px-2 py-1 text-xs font-semibold bg-brand-600/90 text-white rounded backdrop-blur-sm">${category}</span>
               </div>
             </div>
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2 line-clamp-2 leading-tight">${ebook.title}</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">${author}</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">${description}</p>
+              <a 
+                href="${link}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium text-sm transition-colors focus-ring"
+              >
+                <span>View on Google Play</span>
+                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
           </div>
-        </article>
-      `;
+        `;
     }
 
+    // ====================================
+    // CORE FUNCTIONALITY
+    // ====================================
+    
+    /**
+     * PRODUCTION FIX: Deterministic DOM rendering with proper async image loading
+     * Removed arbitrary setTimeout, uses requestAnimationFrame for optimal timing
+     */
     function loadBooks() {
-        const startIndex = currentPage * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-
+        const startIndex = currentPage * CONFIG.itemsPerPage;
+        const endIndex = startIndex + CONFIG.itemsPerPage;
+        const newBooks = filteredEbooks.slice(startIndex, endIndex);
+        
         if (currentPage === 0) {
           ebooksGrid.innerHTML = '';
         }
-
-        const newBooks = filteredEbooks.slice(startIndex, endIndex);
         
         if (newBooks.length === 0 && currentPage === 0) {
           showEmptyState();
@@ -610,21 +753,41 @@
         const booksHTML = newBooks.map(createBookCard).join('');
         ebooksGrid.insertAdjacentHTML('beforeend', booksHTML);
 
-        // Load images with enhanced fallback system
-        setTimeout(() => {
-          const images = ebooksGrid.querySelectorAll('img[data-src]');
-          images.forEach(img => {
-            const dataSrc = img.getAttribute('data-src');
-            if (dataSrc && dataSrc !== '/assets/placeholder-cover.svg') {
-              loadImageWithFallback(img, dataSrc);
-            } else {
-              img.src = '/assets/placeholder-cover.svg';
-              img.classList.remove('opacity-0');
-              img.classList.add('opacity-100');
-              img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
+        // PRODUCTION FIX: Use requestAnimationFrame for optimal timing
+        // Ensures DOM is fully rendered before querying elements
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            const images = ebooksGrid.querySelectorAll('img[data-src]');
+            
+            if (CONFIG.enableDebugLogging) {
+              console.log(`[loadBooks] Processing ${images.length} images`);
             }
+            
+            images.forEach(img => {
+              const dataSrc = img.getAttribute('data-src');
+              if (dataSrc && dataSrc !== '/assets/placeholder-cover.svg') {
+                loadImageWithFallback(img, dataSrc);
+              } else {
+                img.src = '/assets/placeholder-cover.svg';
+                img.classList.remove('opacity-0');
+                img.classList.add('opacity-100');
+                img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
+              }
+            });
+            
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
           });
-        }, 100);
+        });
 
         if (endIndex >= filteredEbooks.length) {
           loadMoreBtn.classList.add('hidden');
@@ -680,9 +843,6 @@
             filtered.sort((a, b) => (a.title || '').toLowerCase().localeCompare((b.title || '').toLowerCase()));
         } else if (selectedSort === 'popular') {
             filtered.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
-        } else {
-            // Default to newest - assume original data is somewhat date-ordered
-            // For a true "newest", a date field would be needed. This is a simple interpretation.
         }
 
         filteredEbooks = filtered;
@@ -702,8 +862,6 @@
       try {
         loadingState.style.display = 'block';
         
-        // Try multiple fallback sources for the catalog
-        let data = null;
         const catalogSources = [
           '/assets/catalog.json',
           '/assets/data/catalog.json',
@@ -711,6 +869,7 @@
           'https://raw.githubusercontent.com/iD01t/id01t.github.io/main/assets/catalog.json'
         ];
         
+        let data = null;
         for (const source of catalogSources) {
           try {
             const response = await fetch(source);
@@ -738,8 +897,6 @@
       } catch (error) {
         console.error('Error loading catalog:', error);
         loadingState.innerHTML = `<div class="text-center py-12 text-red-500">Error loading catalog. Please try again later.</div>`;
-        
-        // Show fallback content with sample books
         showFallbackBooks();
       }
     }
@@ -787,6 +944,10 @@
       };
     }
 
+    // ====================================
+    // INITIALIZATION
+    // ====================================
+    
     document.addEventListener('DOMContentLoaded', () => {
         loadCatalog();
 
