@@ -423,595 +423,316 @@
 
   <!-- JavaScript -->
   <script>
-    // ====================================
-    // CONFIGURATION & STATE MANAGEMENT
-    // ====================================
-    const CONFIG = {
-      itemsPerPage: 20,
-      imageTimeout: 8000,
-      // CRITICAL FIX: Ensure case-sensitive path matches your actual directory structure
-      // Change 'hd' and 'sd' to uppercase 'HD' and 'SD' if that's how your folders are named
-      imagePaths: {
-        hd: 'hd',  // Change to 'HD' if your folder is uppercase
-        sd: 'sd'   // Change to 'SD' if your folder is uppercase
-      },
-      enableDebugLogging: true  // Set to false in production
-    };
+// Improved catalog loader + cover & buy link fixes
 
-    let allEbooks = [];
-    let filteredEbooks = [];
-    let currentPage = 0;
-    
-    // ====================================
-    // DOM ELEMENTS
-    // ====================================
-    const ebooksGrid = document.getElementById('ebooksGrid');
-    const searchInput = document.getElementById('searchInput');
-    const categoryFilter = document.getElementById('categoryFilter');
-    const sortOrder = document.getElementById('sortOrder');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    const resultsCount = document.getElementById('resultsCount');
-    const loadingState = document.getElementById('loadingState');
-    
-    // ====================================
-    // THEME MANAGEMENT
-    // ====================================
-    const themeToggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    
-    const savedTheme = localStorage.getItem('theme') || 
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    html.classList.toggle('dark', savedTheme === 'dark');
-    
-    themeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-    });
-    
-    // ====================================
-    // MOBILE MENU
-    // ====================================
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    mobileMenuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+const CONFIG = {
+  itemsPerPage: 24,
+  imageTimeout: 8000,
+  imagePaths: { hd: ['hd','HD'], sd: ['sd','SD'] },
+  enableDebugLogging: true
+};
 
-    // ====================================
-    // IMAGE LOADING UTILITIES
-    // ====================================
-    
-    /**
-     * PRODUCTION FIX: Enhanced image URL resolution with Google Books integration
-     * Handles multiple image source types with intelligent fallback strategy
-     * 
-     * @param {object} ebook - Book object from catalog
-     * @param {string} preferredQuality - 'hd' or 'sd'
-     * @returns {string} Resolved cover URL
-     */
-    function getBookCoverUrl(ebook, preferredQuality = 'hd') {
-      // Priority 1: Use direct HD/SD URLs from catalog if available
-      if (preferredQuality === 'hd' && ebook.image_hd && ebook.image_hd !== '/assets/placeholder-cover.svg') {
-        return ebook.image_hd;
-      }
-      
-      if (preferredQuality === 'sd' && ebook.image_sd && ebook.image_sd !== '/assets/placeholder-cover.svg') {
-        return ebook.image_sd;
-      }
-      
-      // Priority 2: Use primary image field
-      if (ebook.image && ebook.image !== '/assets/placeholder-cover.svg') {
-        return ebook.image;
-      }
-      
-      // Priority 3: Construct from volume_id if available
-      if (ebook.volume_id) {
-        const zoom = preferredQuality === 'hd' ? '3' : '2';
-        return `https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=${zoom}`;
-      }
-      
-      // Priority 4: Try local harvested images (legacy support)
-      if (ebook.volume_id) {
-        const qualityPath = CONFIG.imagePaths[preferredQuality];
-        const localPath = `/assets/harvested/ebooks/${qualityPath}/${ebook.volume_id}.webp`;
-        
-        if (CONFIG.enableDebugLogging) {
-          console.log(`[getBookCoverUrl] Trying local: ${localPath}`);
-        }
-        
-        return localPath;
-      }
-      
-      // Final fallback: placeholder
-      return '/assets/placeholder-cover.svg';
+let allEbooks = [];
+let filteredEbooks = [];
+let currentPage = 0;
+
+const ebooksGrid = document.getElementById('ebooksGrid');
+const searchInput = document.getElementById('searchInput');
+const categoryFilter = document.getElementById('categoryFilter');
+const sortOrder = document.getElementById('sortOrder');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const resultsCount = document.getElementById('resultsCount');
+const loadingState = document.getElementById('loadingState');
+
+// Theme, menu
+const themeToggle = document.getElementById('themeToggle');
+const htmlEl = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+htmlEl.classList.toggle('dark', savedTheme === 'dark');
+themeToggle.addEventListener('click', () => {
+  htmlEl.classList.toggle('dark');
+  localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
+});
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+// ---------- Normalization ----------
+function normalizeBook(raw) {
+  const pick = (...keys) => {
+    for (const k of keys) {
+      if (raw && raw[k] != null && String(raw[k]).trim() !== '') return raw[k];
     }
-    
-    /**
-     * Get fallback URL cascade for a book
-     * @param {object} ebook - Book object
-     * @returns {Array<string>} Array of URLs to try in order
-     */
-    function getImageFallbackChain(ebook) {
-      const urls = [];
-      
-      // Try HD from catalog
-      if (ebook.image_hd && ebook.image_hd !== '/assets/placeholder-cover.svg') {
-        urls.push(ebook.image_hd);
-      }
-      
-      // Try SD from catalog
-      if (ebook.image_sd && ebook.image_sd !== '/assets/placeholder-cover.svg') {
-        urls.push(ebook.image_sd);
-      }
-      
-      // Try primary image
-      if (ebook.image && ebook.image !== '/assets/placeholder-cover.svg' && 
-          !urls.includes(ebook.image)) {
-        urls.push(ebook.image);
-      }
-      
-      // Try constructed Google Books URLs if we have volume_id
-      if (ebook.volume_id) {
-        urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=3`);
-        urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=2`);
-        urls.push(`https://books.google.com/books/publisher/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=3`);
-      }
-      
-      // Try local harvested images
-      if (ebook.volume_id) {
-        urls.push(`assets/harvested/ebooks/hd/${ebook.volume_id}.webp`);
-        urls.push(`assets/harvested/ebooks/sd/${ebook.volume_id}.webp`);
-      }
-      
-      // Always end with placeholder
-      urls.push('/assets/placeholder-cover.svg');
-      
-      // Remove duplicates while preserving order
-      return [...new Set(urls)];
+    return undefined;
+  };
+
+  const title = pick('title','Title','name');
+  if (!title) return null;
+
+  const author = pick('author','Author') || 'Guillaume Lessard';
+  const description = pick('description','Description','desc');
+  const subtitle = pick('subtitle','Subtitle');
+
+  const volumeId = pick('volume_id','GoogleBooksID','gbooks_id','id');
+  const catalog = pick('CatalogLink','catalog','info_link','InfoLink','url','link');
+  const buyLink = pick('BuyLink','buy','buy_link','play','PlayLink','play_link','google_play','GooglePlay','GooglePlayURL');
+
+  const image_hd = pick('image_hd','CoverHD','cover_hd','cover','image');
+  const image_sd = pick('image_sd','thumbnail','Thumbnail','smallThumbnail');
+
+  let resolvedBuy = buyLink;
+  if (!resolvedBuy && title) {
+    const authorFrag = author ? ` ${author}` : '';
+    resolvedBuy = "https://www.google.com/search?q=" + encodeURIComponent(`site:play.google.com/books "${title}"${authorFrag}`);
+  }
+  let resolvedCatalog = catalog;
+  if (!resolvedCatalog) {
+    if (volumeId) resolvedCatalog = `https://books.google.com/books?id=${encodeURIComponent(volumeId)}`;
+    else if (title) resolvedCatalog = "https://www.google.com/search?q=" + encodeURIComponent(`site:books.google.com intitle:"${title}" ${author||''}`);
+  }
+
+  const format = pick('Format','format','type') || 'Digital';
+  const price_usd = pick('price_usd','price','PriceUSD');
+  const lang = pick('lang','language','Language');
+  const popularity = pick('popularity','score');
+
+  return {
+    title, author, subtitle, description,
+    volume_id: volumeId,
+    image_hd, image_sd,
+    image: pick('image','Image'),
+    link: resolvedCatalog,
+    buy: resolvedBuy,
+    format, price_usd, lang, popularity
+  };
+}
+
+// ---------- Covers ----------
+function getImageFallbackChain(ebook) {
+  const urls = [];
+  if (ebook.image_hd && ebook.image_hd !== '/assets/placeholder-cover.svg') urls.push(ebook.image_hd);
+  if (ebook.image_sd && ebook.image_sd !== '/assets/placeholder-cover.svg') urls.push(ebook.image_sd);
+  if (ebook.image && ebook.image !== '/assets/placeholder-cover.svg') urls.push(ebook.image);
+
+  if (ebook.volume_id) {
+    urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=5&source=gbs_api`);
+    urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=3&source=gbs_api`);
+    urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=2&source=gbs_api`);
+    CONFIG.imagePaths.hd.forEach(dir => urls.push(`/assets/harvested/ebooks/${dir}/${ebook.volume_id}.webp`));
+    CONFIG.imagePaths.sd.forEach(dir => urls.push(`/assets/harvested/ebooks/${dir}/${ebook.volume_id}.webp`));
+  }
+  urls.push('/assets/placeholder-cover.svg');
+  return [...new Set(urls)];
+}
+
+function tryLoadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    let timeoutId;
+    const cleanup = () => { clearTimeout(timeoutId); img.onload = null; img.onerror = null; };
+    img.onload = () => { cleanup(); resolve(img); };
+    img.onerror = () => { cleanup(); reject(new Error(`Failed: ${url}`)); };
+    timeoutId = setTimeout(() => { cleanup(); reject(new Error(`Timeout: ${url}`)); }, CONFIG.imageTimeout);
+    img.src = url;
+  });
+}
+
+async function loadImageWithFallback(img, ebook) {
+  const chain = getImageFallbackChain(ebook);
+  for (let i = 0; i < chain.length; i++) {
+    const url = chain[i];
+    const last = i === chain.length - 1;
+    try {
+      await tryLoadImage(url);
+      img.src = url;
+      break;
+    } catch (_) {
+      if (last) img.src = '/assets/placeholder-cover.svg';
     }
+  }
+  img.classList.remove('opacity-0');
+  img.classList.add('opacity-100');
+  img.parentElement?.querySelector('.image-placeholder')?.classList.add('hidden');
+}
 
-    /**
-     * PRODUCTION FIX: Promise-based image loading with timeout protection
-     * Prevents hanging requests and provides detailed error logging
-     * 
-     * @param {string} url - Image URL to load
-     * @returns {Promise} Resolves with image element or rejects with error
-     */
-    function tryLoadImage(url) {
-      return new Promise((resolve, reject) => {
-        const img = new Image();
-        let timeoutId;
+// ---------- UI ----------
+function cleanDescription(desc) {
+  if (!desc) return '';
+  return String(desc).replace(/<[^>]+>/g, '').slice(0, 180);
+}
+function getCategoryFromTitle(title) {
+  if (!title) return 'Other';
+  const lower = title.toLowerCase();
+  if (lower.includes('python') || lower.includes('javascript') || lower.includes('programming') || lower.includes('code')) return 'Programming';
+  if (lower.includes('ai') || lower.includes('machine learning') || lower.includes('neural')) return 'AI';
+  if (lower.includes('chess')) return 'Chess';
+  if (lower.includes('music') || lower.includes('production') || lower.includes('audio')) return 'Music';
+  if (lower.includes('mindfulness') || lower.includes('personal') || lower.includes('growth')) return 'Personal';
+  return 'Other';
+}
 
-        const cleanup = () => {
-          clearTimeout(timeoutId);
-          img.onload = null;
-          img.onerror = null;
-        };
+function createBookCard(ebook, index) {
+  const category = getCategoryFromTitle(ebook.title);
+  const description = cleanDescription(ebook.description || 'Professional guide with comprehensive coverage.');
+  const author = ebook.author || 'Guillaume Lessard';
+  const lang = ebook.lang ? String(ebook.lang).toUpperCase().slice(0,2) : 'EN';
+  const price = ebook.price_usd ? `<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">$${ebook.price_usd}</span>` : '';
+  const buyHref = ebook.buy || ebook.link || 'https://play.google.com/store/books';
+  const viewHref = ebook.link || ebook.buy || 'https://play.google.com/store/books';
 
-        img.onload = () => {
-          cleanup();
-          if (CONFIG.enableDebugLogging) {
-            console.log(`[tryLoadImage] ✅ SUCCESS: ${url}`);
-          }
-          resolve(img);
-        };
-
-        img.onerror = (error) => {
-          cleanup();
-          if (CONFIG.enableDebugLogging) {
-            console.warn(`[tryLoadImage] ❌ FAILED: ${url}`, error);
-          }
-          reject(new Error(`Failed to load: ${url}`));
-        };
-
-        // Timeout protection - prevents hanging requests
-        timeoutId = setTimeout(() => {
-          cleanup();
-          if (CONFIG.enableDebugLogging) {
-            console.warn(`[tryLoadImage] ⏱️ TIMEOUT: ${url} (${CONFIG.imageTimeout}ms)`);
-          }
-          reject(new Error(`Timeout loading: ${url}`));
-        }, CONFIG.imageTimeout);
-
-        img.src = url;
-      });
-    }
-
-    /**
-     * PRODUCTION FIX: Robust fallback system with comprehensive URL cascade
-     * Intelligently tries multiple sources: Google Books HD/SD → Local → Placeholder
-     * Includes comprehensive error logging and performance tracking
-     * 
-     * @param {HTMLImageElement} img - Target image element
-     * @param {object} ebook - Book object with image URLs
-     */
-    async function loadImageWithFallback(img, ebook) {
-      const fallbackChain = getImageFallbackChain(ebook);
-      const startTime = performance.now();
-
-      if (CONFIG.enableDebugLogging) {
-        console.group(`[loadImageWithFallback] ${ebook.title || 'Untitled'}`);
-        console.log(`Attempting ${fallbackChain.length} sources:`, fallbackChain);
-      }
-
-      // Try each URL in the fallback chain
-      for (let i = 0; i < fallbackChain.length; i++) {
-        const url = fallbackChain[i];
-        const isLastAttempt = i === fallbackChain.length - 1;
-        
-        try {
-          await tryLoadImage(url);
-          
-          // Success! Set the image
-          img.src = url;
-          if (url.includes('zoom=3') || url.includes('/hd/')) {
-            img.classList.add('loaded-hd');
-          } else if (url.includes('zoom=2') || url.includes('/sd/')) {
-            img.classList.add('loaded-sd');
-          } else if (url.includes('placeholder')) {
-            img.classList.add('loaded-placeholder');
-          } else {
-            img.classList.add('loaded-original');
-          }
-          
-          const loadTime = (performance.now() - startTime).toFixed(2);
-          
-          if (CONFIG.enableDebugLogging) {
-            console.log(`✅ SUCCESS [${i + 1}/${fallbackChain.length}] in ${loadTime}ms: ${url.substring(0, 80)}...`);
-            console.groupEnd();
-          }
-          
-          break; // Exit loop on success
-          
-        } catch (error) {
-          if (CONFIG.enableDebugLogging) {
-            console.warn(`❌ FAILED [${i + 1}/${fallbackChain.length}]: ${url.substring(0, 80)}...`);
-          }
-          
-          // If this was the last attempt, use placeholder as absolute fallback
-          if (isLastAttempt) {
-            img.src = '/assets/placeholder-cover.svg';
-            img.classList.add('loaded-placeholder');
-            
-            if (CONFIG.enableDebugLogging) {
-              console.error(`⚠️  All sources exhausted. Using placeholder.`);
-              console.groupEnd();
-            }
-          }
-        }
-      }
-
-      // Remove loading state and show image
-      img.classList.remove('opacity-0');
-      img.classList.add('opacity-100');
-      
-      const placeholderBg = img.parentElement?.querySelector('.image-placeholder');
-      if (placeholderBg) {
-        placeholderBg.classList.add('hidden');
-      }
-    }
-
-    // ====================================
-    // UTILITY FUNCTIONS
-    // ====================================
-    
-    function cleanDescription(desc) {
-      if (!desc) return '';
-      return desc.replace(/<[^>]+>/g, '').substring(0, 150);
-    }
-
-    function getCategoryFromTitle(title) {
-      if (!title) return 'Other';
-      const lower = title.toLowerCase();
-      if (lower.includes('python') || lower.includes('javascript') || lower.includes('programming') || lower.includes('code')) return 'Programming';
-      if (lower.includes('ai') || lower.includes('machine learning') || lower.includes('neural')) return 'AI';
-      if (lower.includes('chess')) return 'Chess';
-      if (lower.includes('music') || lower.includes('production') || lower.includes('audio')) return 'Music';
-      if (lower.includes('mindfulness') || lower.includes('personal') || lower.includes('growth')) return 'Personal';
-      return 'Other';
-    }
-
-    function createBookCard(ebook, index) {
-        if (!ebook || !ebook.title) return '';
-        
-        const category = getCategoryFromTitle(ebook.title);
-        const description = cleanDescription(ebook.description || 'Professional guide with comprehensive coverage.');
-        const author = ebook.author || 'Guillaume Lessard';
-        const lang = ebook.lang || (ebook.language === 'eng' ? 'EN' : ebook.language === 'fre' ? 'FR' : 'EN');
-        const link = ebook.link || 'https://play.google.com/store/books';
-        const format = ebook.format || 'Digital';
-
-        return `
-          <div class="book-card bg-white dark:bg-slate-800 rounded-xl shadow-md border border-slate-200 dark:border-slate-700 overflow-hidden card-hover intersection-animate">
-            <div class="relative aspect-[2/3] bg-slate-100 dark:bg-slate-700 overflow-hidden">
-              <div class="absolute inset-0 image-placeholder"></div>
-              <img 
-                data-book-index="${index}"
-                src="/assets/placeholder-cover.svg"
-                alt="${ebook.title} cover" 
-                class="w-full h-full object-cover opacity-0 transition-opacity duration-300"
-                loading="lazy"
-              >
-              <div class="absolute top-3 right-3 flex gap-2">
-                <span class="px-2 py-1 text-xs font-semibold bg-white/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 rounded backdrop-blur-sm">${lang}</span>
-                <span class="px-2 py-1 text-xs font-semibold bg-brand-600/90 text-white rounded backdrop-blur-sm">${category}</span>
-              </div>
-              ${format === 'Audiobook' ? `
-              <div class="absolute bottom-3 left-3">
-                <span class="px-2 py-1 text-xs font-semibold bg-purple-600/90 text-white rounded backdrop-blur-sm flex items-center gap-1">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path>
-                  </svg>
-                  Audiobook
-                </span>
-              </div>` : ''}
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2 line-clamp-2 leading-tight">${ebook.title}</h3>
-              ${ebook.subtitle ? `<p class="text-sm text-slate-500 dark:text-slate-400 mb-1 line-clamp-1">${ebook.subtitle}</p>` : ''}
-              <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">${author}</p>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">${description}</p>
-              <div class="flex items-center justify-between">
-                <a 
-                  href="${link}" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium text-sm transition-colors focus-ring"
-                >
-                  <span>View on Google Play</span>
-                  <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </a>
-                ${ebook.price_usd ? `<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">$${ebook.price_usd}</span>` : ''}
-              </div>
-            </div>
-          </div>
-        `;
-    }
-
-    // ====================================
-    // CORE FUNCTIONALITY
-    // ====================================
-    
-    /**
-     * PRODUCTION FIX: Deterministic DOM rendering with proper async image loading
-     * Removed arbitrary setTimeout, uses requestAnimationFrame for optimal timing
-     */
-    function loadBooks() {
-        const startIndex = currentPage * CONFIG.itemsPerPage;
-        const endIndex = startIndex + CONFIG.itemsPerPage;
-        const newBooks = filteredEbooks.slice(startIndex, endIndex);
-        
-        if (currentPage === 0) {
-          ebooksGrid.innerHTML = '';
-        }
-        
-        if (newBooks.length === 0 && currentPage === 0) {
-          showEmptyState();
-          return;
-        }
-
-        const booksHTML = newBooks.map((book, index) => createBookCard(book, index)).join('');
-        ebooksGrid.insertAdjacentHTML('beforeend', booksHTML);
-
-        // PRODUCTION FIX: Use requestAnimationFrame for optimal timing
-        // Ensures DOM is fully rendered before querying elements
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            const bookCards = ebooksGrid.querySelectorAll('.book-card');
-            
-            if (CONFIG.enableDebugLogging) {
-              console.log(`[loadBooks] Processing ${bookCards.length} book cards`);
-            }
-            
-            bookCards.forEach((card, index) => {
-              const img = card.querySelector('img[data-book-index]');
-              if (!img) return;
-              
-              const bookIndex = parseInt(img.getAttribute('data-book-index'));
-              const ebook = newBooks[bookIndex];
-              
-              if (ebook && ebook.image !== '/assets/placeholder-cover.svg') {
-                loadImageWithFallback(img, ebook);
-              } else {
-                img.src = '/assets/placeholder-cover.svg';
-                img.classList.remove('opacity-0');
-                img.classList.add('opacity-100');
-                img.parentElement.querySelector('.image-placeholder')?.classList.add('hidden');
-              }
-            });
-            
-            // Intersection Observer for animations
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
-                  observer.unobserve(entry.target);
-                }
-              });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
-          });
-        });
-
-        if (endIndex >= filteredEbooks.length) {
-          loadMoreBtn.classList.add('hidden');
-        } else {
-          loadMoreBtn.classList.remove('hidden');
-        }
-
-        loadingState.style.display = 'none';
-    }
-
-    function showEmptyState(message = 'No eBooks found') {
-      ebooksGrid.innerHTML = `
-        <div class="col-span-full text-center py-20">
-          <div class="text-slate-400 dark:text-slate-500">
-            <svg class="h-16 w-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-            <p class="text-lg font-medium text-slate-600 dark:text-slate-300 mb-2">${message}</p>
-            <button onclick="resetFilters()" class="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium">Clear filters</button>
-          </div>
+  return `
+    <div class="book-card bg-white dark:bg-slate-800 rounded-xl shadow-md border border-slate-200 dark:border-slate-700 overflow-hidden card-hover intersection-animate">
+      <div class="relative aspect-[2/3] bg-slate-100 dark:bg-slate-700 overflow-hidden">
+        <div class="absolute inset-0 image-placeholder"></div>
+        <img data-book-index="${index}" src="/assets/placeholder-cover.svg" alt="${ebook.title} cover" class="w-full h-full object-cover opacity-0 transition-opacity duration-300" loading="lazy">
+        <div class="absolute top-3 right-3 flex gap-2">
+          <span class="px-2 py-1 text-xs font-semibold bg-white/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 rounded backdrop-blur-sm">${lang}</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-brand-600/90 text-white rounded backdrop-blur-sm">${category}</span>
         </div>
-      `;
-      loadingState.style.display = 'none';
-    }
+      </div>
+      <div class="p-5">
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2 line-clamp-2 leading-tight">${ebook.title}</h3>
+        ${ebook.subtitle ? `<p class="text-sm text-slate-500 dark:text-slate-400 mb-1 line-clamp-1">${ebook.subtitle}</p>` : ''}
+        <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">${author}</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">${description}</p>
+        <div class="flex items-center justify-between gap-3">
+          <a href="${viewHref}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium text-sm transition-colors focus-ring">
+            <span>View</span>
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a href="${buyHref}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-600 dark:text-purple-300 hover:text-purple-700 dark:hover:text-purple-200 font-medium text-sm transition-colors focus-ring">
+            <span>Buy</span>
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3v5a3 3 0 11-6 0v-5c0-1.657 1.343-3 3-3z"></path></svg>
+          </a>
+          ${price}
+        </div>
+      </div>
+    </div>
+  `;
+}
 
-    function resetFilters() {
-      searchInput.value = '';
-      categoryFilter.value = '';
-      sortOrder.value = 'newest';
-      filterAndSortEbooks();
-    }
-
-    function filterAndSortEbooks() {
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        const selectedCategory = categoryFilter.value;
-        const selectedSort = sortOrder.value;
-
-        let filtered = allEbooks.filter(ebook => {
-            if (!ebook || !ebook.title) return false;
-
-            const matchesSearch = !searchTerm || 
-              ebook.title.toLowerCase().includes(searchTerm) ||
-              (ebook.description && cleanDescription(ebook.description).toLowerCase().includes(searchTerm)) ||
-              (ebook.author && ebook.author.toLowerCase().includes(searchTerm));
-            
-            const matchesCategory = !selectedCategory || 
-              getCategoryFromTitle(ebook.title) === selectedCategory;
-
-            return matchesSearch && matchesCategory;
-        });
-
-        if (selectedSort === 'title') {
-            filtered.sort((a, b) => (a.title || '').toLowerCase().localeCompare((b.title || '').toLowerCase()));
-        } else if (selectedSort === 'popular') {
-            filtered.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
-        }
-
-        filteredEbooks = filtered;
-        currentPage = 0;
-        resultsCount.textContent = filtered.length;
-        
-        if (filtered.length === 0 && searchTerm) {
-          showEmptyState(`No results found for "${searchTerm}"`);
-        } else if (filtered.length === 0) {
-          showEmptyState('No eBooks available');
-        } else {
-          loadBooks();
-        }
-    }
-
-    async function loadCatalog() {
-      try {
-        loadingState.style.display = 'block';
-        
-        const catalogSources = [
-          '/assets/catalog.json',
-          '/assets/data/catalog.json',
-          '/catalog.json',
-          'https://raw.githubusercontent.com/iD01t/id01t.github.io/main/assets/catalog.json'
-        ];
-        
-        let data = null;
-        for (const source of catalogSources) {
-          try {
-            const response = await fetch(source);
-            if (response.ok) {
-              data = await response.json();
-              console.log(`Successfully loaded catalog from: ${source}`);
-              break;
-            }
-          } catch (e) {
-            console.warn(`Failed to load catalog from ${source}:`, e);
-            continue;
-          }
-        }
-        
-        if (!data || !Array.isArray(data.ebooks)) {
-          throw new Error('Invalid catalog data format or no catalog found');
-        }
-
-        allEbooks = data.ebooks.filter(ebook => ebook && ebook.title);
-        filteredEbooks = [...allEbooks];
-        resultsCount.textContent = allEbooks.length + '+';
-
-        loadBooks();
-
-      } catch (error) {
-        console.error('Error loading catalog:', error);
-        loadingState.innerHTML = `<div class="text-center py-12 text-red-500">Error loading catalog. Please try again later.</div>`;
-        showFallbackBooks();
-      }
-    }
-    
-    function showFallbackBooks() {
-      const fallbackBooks = [
-        {
-          title: "Professional Python Programming",
-          description: "Master Python with comprehensive guides and real-world examples.",
-          author: "Guillaume Lessard",
-          image: "/assets/images/python-programming-cover.webp",
-          link: "https://play.google.com/store/books",
-          lang: "EN"
-        },
-        {
-          title: "AI Automation Mastery",
-          description: "Learn to build intelligent automation systems with modern AI tools.",
-          author: "Guillaume Lessard", 
-          image: "/assets/images/ai-automation-cover.webp",
-          link: "https://play.google.com/store/books",
-          lang: "EN"
-        }
-      ];
-      
-      allEbooks = fallbackBooks;
-      filteredEbooks = [...allEbooks];
-      resultsCount.textContent = allEbooks.length;
-      loadBooks();
-    }
-
-    function loadMoreBooks() {
-      currentPage++;
-      loadBooks();
-    }
-
-    function debounce(func, wait) {
-      let timeout;
-      return function executedFunction(...args) {
-        const later = () => {
-          clearTimeout(timeout);
-          func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-      };
-    }
-
-    // ====================================
-    // INITIALIZATION
-    // ====================================
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        loadCatalog();
-
-        searchInput.addEventListener('input', debounce(filterAndSortEbooks, 300));
-        categoryFilter.addEventListener('change', filterAndSortEbooks);
-        sortOrder.addEventListener('change', filterAndSortEbooks);
-        loadMoreBtn.addEventListener('click', loadMoreBooks);
-        
-        const yearElement = document.getElementById('year');
-        if (yearElement) {
-          yearElement.textContent = new Date().getFullYear();
-        }
+// ---------- Paging / filtering ----------
+function showEmptyState(message = 'No eBooks found') {
+  ebooksGrid.innerHTML = `
+    <div class="col-span-full text-center py-20">
+      <div class="text-slate-400 dark:text-slate-500">
+        <svg class="h-16 w-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        <p class="text-lg font-medium text-slate-600 dark:text-slate-300 mb-2">${message}</p>
+        <button onclick="resetFilters()" class="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium">Clear filters</button>
+      </div>
+    </div>
+  `;
+  loadingState.style.display = 'none';
+}
+function resetFilters() { searchInput.value = ''; categoryFilter.value = ''; sortOrder.value = 'newest'; filterAndSortEbooks(); }
+function filterAndSortEbooks() {
+  const searchTerm = searchInput.value.toLowerCase().trim();
+  const selCat = categoryFilter.value;
+  const selSort = sortOrder.value;
+  let filtered = allEbooks.filter(ebook => {
+    if (!ebook || !ebook.title) return false;
+    const mSearch = !searchTerm || ebook.title.toLowerCase().includes(searchTerm) ||
+      (ebook.description && cleanDescription(ebook.description).toLowerCase().includes(searchTerm)) ||
+      (ebook.author && ebook.author.toLowerCase().includes(searchTerm));
+    const mCat = !selCat || getCategoryFromTitle(ebook.title) === selCat;
+    return mSearch && mCat;
+  });
+  if (selSort === 'title') filtered.sort((a,b) => (a.title||'').toLowerCase().localeCompare((b.title||'').toLowerCase()));
+  else if (selSort === 'popular') filtered.sort((a,b) => (b.popularity||0)-(a.popularity||0));
+  filteredEbooks = filtered;
+  currentPage = 0;
+  resultsCount.textContent = String(filtered.length);
+  if (!filtered.length) showEmptyState(searchTerm ? `No results for "${searchTerm}"` : 'No eBooks available'); else loadBooks();
+}
+function loadBooks() {
+  const start = currentPage * CONFIG.itemsPerPage;
+  const end = start + CONFIG.itemsPerPage;
+  const page = filteredEbooks.slice(start, end);
+  if (currentPage === 0) ebooksGrid.innerHTML = '';
+  if (!page.length && currentPage === 0) { showEmptyState(); return; }
+  const html = page.map((b,i) => createBookCard(b,i)).join('');
+  ebooksGrid.insertAdjacentHTML('beforeend', html);
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const cards = ebooksGrid.querySelectorAll('.book-card');
+      cards.forEach((card, idx) => {
+        const img = card.querySelector('img[data-book-index]');
+        if (!img) return;
+        const ebook = page[idx];
+        loadImageWithFallback(img, ebook);
+      });
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.intersection-animate').forEach(el => obs.observe(el));
     });
+  });
+  if (end >= filteredEbooks.length) loadMoreBtn.classList.add('hidden'); else loadMoreBtn.classList.remove('hidden');
+  loadingState.style.display = 'none';
+}
+function loadMoreBooks() { currentPage++; loadBooks(); }
+function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t=setTimeout(()=>fn(...a), ms); }; }
 
-  </script>
+// ---------- Catalog load ----------
+async function loadCatalog() {
+  try {
+    loadingState.style.display = 'block';
+    const sources = [
+      '/assets/catalog.json',
+      '/assets/data/catalog.json',
+      '/catalog.json',
+      'https://raw.githubusercontent.com/iD01t/id01t.github.io/main/assets/catalog.json',
+      '/assets/id01t_productions_catalog_links.json'
+    ];
+    let data = null;
+    for (const src of sources) {
+      try {
+        const resp = await fetch(src, { cache: 'no-store' });
+        if (resp.ok) { data = await resp.json(); if (CONFIG.enableDebugLogging) console.log('Loaded catalog:', src); break; }
+      } catch {}
+    }
+    if (!data) throw new Error('No catalog found');
+    const rawList = Array.isArray(data) ? data : (Array.isArray(data.ebooks) ? data.ebooks : []);
+    if (!rawList.length) throw new Error('Invalid catalog');
+    allEbooks = rawList.map(normalizeBook).filter(Boolean);
+    resultsCount.textContent = String(allEbooks.length);
+    filteredEbooks = [...allEbooks];
+    loadBooks();
+  } catch (e) {
+    console.error('Catalog error:', e);
+    loadingState.innerHTML = `<div class="text-center py-12 text-red-500">Error loading catalog. Please try again later.</div>`;
+    showFallbackBooks();
+  }
+}
+function showFallbackBooks() {
+  const fallback = [{
+    title: "Professional Python Programming",
+    description: "Master Python with comprehensive guides and real-world examples.",
+    author: "Guillaume Lessard",
+    image_hd: "/assets/images/python-programming-cover.webp",
+    link: "https://play.google.com/store/books",
+    buy: "https://play.google.com/store/books",
+    lang: "EN"
+  }];
+  allEbooks = fallback.map(normalizeBook).filter(Boolean);
+  filteredEbooks = [...allEbooks];
+  resultsCount.textContent = String(allEbooks.length);
+  loadBooks();
+}
+
+// ---------- Init ----------
+document.addEventListener('DOMContentLoaded', () => {
+  loadCatalog();
+  searchInput.addEventListener('input', debounce(filterAndSortEbooks, 300));
+  categoryFilter.addEventListener('change', filterAndSortEbooks);
+  sortOrder.addEventListener('change', filterAndSortEbooks);
+  loadMoreBtn.addEventListener('click', loadMoreBooks);
+  const yearElement = document.getElementById('year');
+  if (yearElement) yearElement.textContent = new Date().getFullYear();
+});
+
 
 </body>
 </html>
