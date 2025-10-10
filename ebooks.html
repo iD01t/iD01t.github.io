@@ -1,738 +1,522 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional eBooks · iD01t Productions — Technical Guides, AI, Programming & More</title>
-  <meta name="description" content="Discover 200+ professional eBooks by Guillaume Lessard covering programming, AI, automation, chess, music production, and personal development. Available on Google Play Books with HD covers and detailed guides.">
-  
-  <!-- SEO Meta Tags -->
-  <link rel="canonical" href="https://id01t.store/ebooks.html">
-  <meta name="author" content="Guillaume Lessard">
-  <meta name="keywords" content="eBooks, programming guides, AI books, Python tutorials, chess strategies, music production, technical books, Guillaume Lessard, iD01t Productions">
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Professional eBooks · iD01t Productions">
-  <meta property="og:description" content="200+ professional eBooks covering programming, AI, automation, and creative skills. Technical guides by Guillaume Lessard.">
-  <meta property="og:url" content="https://id01t.store/ebooks.html">
-  <meta property="og:image" content="https://id01t.store/assets/harvested/ebooks/og_ebooks.jpg">
-  <meta property="og:site_name" content="iD01t Productions">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Professional eBooks · iD01t Productions">
-  <meta name="twitter:description" content="200+ professional eBooks covering programming, AI, automation, and creative skills.">
-  <meta name="twitter:image" content="https://id01t.store/assets/harvested/ebooks/og_ebooks.jpg">
-  <meta name="twitter:creator" content="@id01t">
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Professional eBooks by iD01t Productions",
-    "description": "200+ professional eBooks covering programming, AI, automation, chess, music production, and personal development",
-    "url": "https://id01t.store/ebooks.html",
-    "author": {
-      "@type": "Person",
-      "name": "Guillaume Lessard",
-      "url": "https://id01t.store/about.html"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "iD01t Productions",
-      "url": "https://id01t.store",
-      "logo": "https://id01t.store/assets/img/brand/logo.svg"
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "name": "eBooks Collection",
-      "numberOfItems": "200+",
-      "itemListElement": "Books available on Google Play Books"
-    }
-  }
-  </script>
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#f5faff',
-              100: '#e0f2ff',
-              200: '#bae0ff',
-              300: '#8dceff',
-              400: '#5abaff',
-              500: '#2aa7ff',
-              600: '#008ef6',
-              700: '#0070d7',
-              800: '#0057b5',
-              900: '#003f92'
-            }
-          },
-          keyframes: {
-            bounceSubtle: {
-              '0%,100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-4px)' }
-            },
-            pulseGlow: {
-              '0%,100%': { opacity: 0.2 },
-              '50%': { opacity: 0.4 }
-            },
-            float: {
-              '0%,100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-6px)' }
-            }
-          },
-          animation: {
-            'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
-            'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
-            'float': 'float 6s ease-in-out infinite'
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBooks — iD01t Productions | Guillaume Lessard</title>
+    <meta name="description" content="Curated eBooks by Guillaume Lessard - Build, learn, and publish with cutting-edge guides on AI, quantum computing, game development, and consciousness">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      }
-    }
-  </script>
-  
-  <!-- Custom Styles -->
-  <style>
-    :root {
-      --ring-color: theme('colors.brand.500');
-    }
-    .link-underline {
-      position: relative;
-      transition: color 0.2s;
-    }
-    .link-underline::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 100%;
-      height: 1px;
-      background: currentColor;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.2s ease-out;
-    }
-    .link-underline:hover::after,
-    .link-underline:focus-visible::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-    .focus-ring:focus-visible {
-      outline: 2px solid var(--ring-color);
-      outline-offset: 2px;
-    }
-    .gradient-text {
-      background: linear-gradient(to right, #2aa7ff, #0070d7);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
-    .card-hover {
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
-    }
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(12px) saturate(150%);
-    }
-    @media (prefers-color-scheme: dark) {
-      .glass-effect {
-        background: rgba(30, 41, 59, 0.55);
-      }
-    }
-    .intersection-animate {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .intersection-animate.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .image-placeholder {
-      background: linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
-                  linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
-                  linear-gradient(45deg, transparent 75%, #e2e8f0 75%), 
-                  linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
-      background-size: 20px 20px;
-      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    }
-    .dark .image-placeholder {
-      background: linear-gradient(45deg, #334155 25%, transparent 25%), 
-                  linear-gradient(-45deg, #334155 25%, transparent 25%), 
-                  linear-gradient(45deg, transparent 75%, #334155 75%), 
-                  linear-gradient(-45deg, transparent 75%, #334155 75%);
-      background-size: 20px 20px;
-      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    }
-  </style>
+        
+        :root {
+            --primary-color: #1a1a2e;
+            --secondary-color: #16213e;
+            --accent-color: #0f3460;
+            --highlight-color: #e94560;
+            --text-color: #eaeaea;
+            --card-bg: #0f3460;
+            --shadow: 0 8px 32px rgba(0,0,0,0.3);
+            --shadow-hover: 0 12px 48px rgba(233,69,96,0.4);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, rgba(233,69,96,0.2) 0%, rgba(15,52,96,0.4) 100%);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--highlight-color);
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b9d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .author-name {
+            font-size: 1rem;
+            color: var(--highlight-color);
+            font-weight: 600;
+        }
+        
+        .search-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--accent-color);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.1);
+            color: var(--text-color);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(234,234,234,0.5);
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--highlight-color);
+            box-shadow: 0 0 20px rgba(233,69,96,0.3);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .search-box button {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--highlight-color) 0%, #ff6b9d 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .search-box button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(233,69,96,0.4);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--accent-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            backdrop-filter: blur(10px);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--highlight-color);
+            border-color: var(--highlight-color);
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        .book-card {
+            background: rgba(15, 52, 96, 0.6);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(233,69,96,0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--highlight-color);
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            background: linear-gradient(135deg, rgba(233,69,96,0.3) 0%, rgba(15,52,96,0.8) 100%);
+        }
+        
+        .book-info {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .book-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--highlight-color);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .book-subtitle {
+            font-size: 0.95rem;
+            color: rgba(234,234,234,0.7);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+        
+        .book-author {
+            color: #ff6b9d;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .book-description {
+            color: rgba(234,234,234,0.85);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+            flex: 1;
+        }
+        
+        .book-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .category-tag {
+            background: rgba(233,69,96,0.2);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: var(--text-color);
+            border: 1px solid var(--highlight-color);
+        }
+        
+        .book-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 0.9rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--highlight-color) 0%, #ff6b9d 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(233,69,96,0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: var(--text-color);
+            border: 2px solid var(--accent-color);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: var(--highlight-color);
+            transform: translateY(-3px);
+        }
+        
+        .stats-bar {
+            background: rgba(15, 52, 96, 0.6);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            border: 1px solid rgba(233,69,96,0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b9d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(234,234,234,0.7);
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background: rgba(26,26,46,0.8);
+            color: var(--text-color);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 2px solid var(--highlight-color);
+            backdrop-filter: blur(10px);
+        }
+        
+        footer a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        footer a:hover {
+            color: #ff6b9d;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .catalog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-
-<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center space-x-8">
-          <a href="/" class="flex items-center space-x-2 focus-ring" aria-label="iD01t Productions home">
-            <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8">
-            <span class="font-semibold text-lg">iD01t Productions</span>
-          </a>
-          <div class="hidden md:flex items-center space-x-6">
-            <a href="/store.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Store</a>
-            <a href="/ebooks.html" class="text-brand-600 dark:text-brand-400 font-medium link-underline">eBooks</a>
-            <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Audiobooks</a>
-            <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Apps</a>
-            <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Games</a>
-            <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Music</a>
-          </div>
+<body>
+    <header>
+        <h1>📚 iD01t Productions eBooks</h1>
+        <p>Curated projects that help you build, learn, and publish</p>
+        <p class="author-name">by Guillaume Lessard</p>
+    </header>
+    
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search books by title, topic, or category...">
+            <button onclick="searchBooks()">Search</button>
         </div>
-        <div class="flex items-center space-x-4">
-          <button id="themeToggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle theme">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-            </svg>
-          </button>
-          <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Open menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCategory('all')">All Books</button>
+            <button class="filter-btn" onclick="filterCategory('ai')">AI & Automation</button>
+            <button class="filter-btn" onclick="filterCategory('quantum')">Quantum Computing</button>
+            <button class="filter-btn" onclick="filterCategory('game')">Game Development</button>
+            <button class="filter-btn" onclick="filterCategory('consciousness')">Consciousness & Spirituality</button>
         </div>
-      </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/store.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Store</a>
-        <a href="/ebooks.html" class="block py-2 text-brand-600 dark:text-brand-400 font-medium">eBooks</a>
-        <a href="/audiobooks.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Audiobooks</a>
-        <a href="/apps.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Apps</a>
-        <a href="/games.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Games</a>
-        <a href="/music.html" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Music</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 py-16 sm:py-24">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-80 h-80 bg-brand-200 dark:bg-brand-900/20 rounded-full blur-3xl opacity-30 animate-pulse-glow"></div>
-      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-200 dark:bg-blue-900/20 rounded-full blur-3xl opacity-20 animate-pulse-glow" style="animation-delay: 1.2s;"></div>
     </div>
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="inline-flex items-center px-4 py-2 mb-6 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-full border border-brand-200 dark:border-brand-800/50 shadow-sm">
-        <svg class="w-4 h-4 mr-2 text-brand-600 dark:text-brand-400" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path>
-        </svg>
-        <span class="text-sm font-medium text-slate-700 dark:text-slate-300">200+ Professional eBooks</span>
-      </div>
-      
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-        <span class="gradient-text">Master New Skills</span><br>
-        <span class="text-slate-900 dark:text-white">With Expert Guides</span>
-      </h1>
-      
-      <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-        Comprehensive eBooks covering <strong>programming</strong>, <strong>AI</strong>, <strong>automation</strong>, <strong>chess strategies</strong>, <strong>music production</strong>, and <strong>personal development</strong>. Available on Google Play Books.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#catalog" class="inline-flex items-center px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 focus-ring">
-          <span>Browse Catalog</span>
-          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </a>
-        <a href="https://play.google.com/store/books" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg border-2 border-slate-200 dark:border-slate-700 hover:border-brand-600 dark:hover:border-brand-400 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-200 focus-ring">
-          <span>Google Play Books</span>
-          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Features Section -->
-  <section class="py-16 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
-          <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 dark:bg-brand-900/30 rounded-lg flex items-center justify-center">
-            <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Expert Knowledge</h3>
-          <p class="text-slate-600 dark:text-slate-400">Written by Guillaume Lessard with years of professional experience</p>
-        </div>
-        
-        <div class="text-center p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
-          <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 dark:bg-brand-900/30 rounded-lg flex items-center justify-center">
-            <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Comprehensive Coverage</h3>
-          <p class="text-slate-600 dark:text-slate-400">From beginner basics to advanced techniques in every topic</p>
-        </div>
-        
-        <div class="text-center p-6 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
-          <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 dark:bg-brand-900/30 rounded-lg flex items-center justify-center">
-            <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">HD Quality</h3>
-          <p class="text-slate-600 dark:text-slate-400">Professional cover designs and high-quality formatting</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Catalog Section -->
-  <section id="catalog" class="py-16 bg-slate-50 dark:bg-slate-800/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Search and Filters -->
-      <div class="mb-10 space-y-4">
-        <div class="flex flex-col lg:flex-row gap-4">
-          <div class="flex-1">
-            <div class="relative">
-              <input 
-                type="search" 
-                id="searchInput"
-                placeholder="Search by title, description, or author..." 
-                class="w-full pl-12 pr-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-shadow"
-                aria-label="Search eBooks">
-              <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-number">4+</div>
+                <div class="stat-label">Books Available</div>
             </div>
-          </div>
-          
-          <div class="flex flex-col sm:flex-row gap-4">
-            <select id="categoryFilter" class="px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent" aria-label="Filter by category">
-              <option value="">All Categories</option>
-              <option value="Programming">Programming</option>
-              <option value="AI">AI & Machine Learning</option>
-              <option value="Chess">Chess</option>
-              <option value="Music">Music Production</option>
-              <option value="Personal">Personal Development</option>
-              <option value="Other">Other</option>
-            </select>
+            <div class="stat">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Cutting-Edge Content</div>
+            </div>
+        </div>
+        
+        <div class="catalog-grid" id="catalogGrid">
             
-            <select id="sortOrder" class="px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent" aria-label="Sort order">
-              <option value="newest">Newest First</option>
-              <option value="title">Title A-Z</option>
-              <option value="popular">Most Popular</option>
-            </select>
-          </div>
+            <!-- KIMI K2 UNLOCKED -->
+            <div class="book-card" data-categories="ai automation programming technology">
+                <img src="https://books.google.com/books/publisher/content/images/frontcover/iwZzEQAAQBAJ?fife=w400-h600" alt="KIMI K2 UNLOCKED" class="book-cover" onerror="this.src='https://via.placeholder.com/400x600/0f3460/e94560?text=KIMI+K2+UNLOCKED'">
+                <div class="book-info">
+                    <h3 class="book-title">KIMI K2 UNLOCKED</h3>
+                    <p class="book-subtitle">Open Agentic Intelligence to Automate, Code, Create, and Deploy with Claude-Grade Power</p>
+                    <p class="book-author">by Guillaume Lessard</p>
+                    
+                    <p class="book-description">The ultimate hands-on guide for developers, coders, and innovators who want to build, automate, and deploy powerful AI workflows using the open agent Kimi K2. Learn to install Kimi K2 locally, launch real commands, deploy agentic workflows, and optimize for Groq, Claude, and open-source LLMs with direct terminal execution.</p>
+                    
+                    <div class="book-categories">
+                        <span class="category-tag">AI</span>
+                        <span class="category-tag">Automation</span>
+                        <span class="category-tag">Python</span>
+                        <span class="category-tag">Programming</span>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <a href="https://play.google.com/store/books/details?id=iwZzEQAAQBAJ" target="_blank" class="btn btn-secondary">Preview</a>
+                        <a href="https://play.google.com/store/books/details?id=iwZzEQAAQBAJ" target="_blank" class="btn btn-primary">Buy on Google Play</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quantum Revolution -->
+            <div class="book-card" data-categories="quantum computing technology science">
+                <img src="https://books.google.com/books/publisher/content/images/frontcover/9rxAEQAAQBAJ?fife=w400-h600" alt="Quantum Revolution" class="book-cover" onerror="this.src='https://via.placeholder.com/400x600/0f3460/e94560?text=Quantum+Revolution'">
+                <div class="book-info">
+                    <h3 class="book-title">Quantum Revolution</h3>
+                    <p class="book-subtitle">Unveiling the Future with Willow - How Google's Quantum Chip is Shaping Tomorrow</p>
+                    <p class="book-author">by Guillaume Lessard</p>
+                    
+                    <p class="book-description">Explore cutting-edge advancements in quantum computing through Google's groundbreaking Willow quantum chip. Learn about qubits, superposition, entanglement, exponential error correction, and real-world applications in AI, medicine, energy, and climate change.</p>
+                    
+                    <div class="book-categories">
+                        <span class="category-tag">Quantum Computing</span>
+                        <span class="category-tag">Technology</span>
+                        <span class="category-tag">Science</span>
+                        <span class="category-tag">Innovation</span>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <a href="https://play.google.com/store/books/details?id=9rxAEQAAQBAJ" target="_blank" class="btn btn-secondary">Preview</a>
+                        <a href="https://play.google.com/store/books/details?id=9rxAEQAAQBAJ" target="_blank" class="btn btn-primary">Buy on Google Play</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mastering Unreal Engine 5 -->
+            <div class="book-card" data-categories="game development programming unreal engine technology">
+                <img src="https://books.google.com/books/publisher/content/images/frontcover/Pvk5EQAAQBAJ?fife=w400-h600" alt="Mastering Unreal Engine 5" class="book-cover" onerror="this.src='https://via.placeholder.com/400x600/0f3460/e94560?text=Mastering+UE5'">
+                <div class="book-info">
+                    <h3 class="book-title">Mastering Unreal Engine 5</h3>
+                    <p class="book-subtitle">A Comprehensive Guide to Game Development and Virtual Reality</p>
+                    <p class="book-author">by Guillaume Lessard</p>
+                    
+                    <p class="book-description">Unlock the full potential of Unreal Engine 5 with this comprehensive guide. Learn Nanite for high-detail models, Lumen for dynamic global illumination, Blueprint visual scripting, and how to build expansive open-world games, cinematic experiences, and next-generation VR applications.</p>
+                    
+                    <div class="book-categories">
+                        <span class="category-tag">Game Development</span>
+                        <span class="category-tag">Unreal Engine</span>
+                        <span class="category-tag">VR/AR</span>
+                        <span class="category-tag">3D Graphics</span>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <a href="https://play.google.com/store/books/details?id=Pvk5EQAAQBAJ" target="_blank" class="btn btn-secondary">Preview</a>
+                        <a href="https://play.google.com/store/books/details?id=Pvk5EQAAQBAJ" target="_blank" class="btn btn-primary">Buy on Google Play</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bridging Worlds -->
+            <div class="book-card" data-categories="consciousness spirituality metaphysics personal development">
+                <img src="https://books.google.com/books/publisher/content/images/frontcover/pXdLEQAAQBAJ?fife=w400-h600" alt="Bridging Worlds" class="book-cover" onerror="this.src='https://via.placeholder.com/400x600/0f3460/e94560?text=Bridging+Worlds'">
+                <div class="book-info">
+                    <h3 class="book-title">Bridging Worlds</h3>
+                    <p class="book-subtitle">A Practical Guide to Connecting with Parallel Energies and Dimensions</p>
+                    <p class="book-author">by Guillaume Lessard</p>
+                    
+                    <p class="book-description">Explore hidden energies, subtle dimensions, and alternate realms of existence. This groundbreaking guide blends science, spirituality, and practical exercises to help you develop energetic awareness, enhance intuition, and connect with multidimensional realities.</p>
+                    
+                    <div class="book-categories">
+                        <span class="category-tag">Consciousness</span>
+                        <span class="category-tag">Spirituality</span>
+                        <span class="category-tag">Metaphysics</span>
+                        <span class="category-tag">Personal Development</span>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <a href="https://play.google.com/store/books/details?id=pXdLEQAAQBAJ" target="_blank" class="btn btn-secondary">Preview</a>
+                        <a href="https://play.google.com/store/books/details?id=pXdLEQAAQBAJ" target="_blank" class="btn btn-primary">Buy on Google Play</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 iD01t Productions | Guillaume Lessard. All rights reserved.</p>
+        <p>🌐 Visit <a href="https://www.id01t.info" target="_blank">iD01t.info</a> | <a href="https://www.id01t.ca" target="_blank">iD01t.ca</a></p>
+        <p>📚 All books available on <a href="https://play.google.com/store/books/series?id=fQFYHAAAABAkHM&hl=en" target="_blank">Google Play Books</a></p>
+    </footer>
+    
+    <script>
+        function searchBooks() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.book-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+            });
+        }
         
-        <div class="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400">
-          <span>Showing <strong id="resultsCount" class="text-brand-600 dark:text-brand-400">0</strong> results</span>
-        </div>
-      </div>
-
-      <!-- Loading State -->
-      <div id="loadingState" class="text-center py-12">
-        <div class="inline-flex items-center space-x-3">
-          <svg class="animate-spin h-8 w-8 text-brand-600" fill="none" viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-          </svg>
-          <span class="text-lg text-slate-600 dark:text-slate-400">Loading catalog...</span>
-        </div>
-      </div>
-
-      <!-- eBooks Grid -->
-      <div id="ebooksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <!-- Books will be inserted here dynamically -->
-      </div>
-
-      <!-- Load More Button -->
-      <div class="mt-10 text-center">
-        <button id="loadMoreBtn" class="hidden px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 focus-ring">
-          Load More Books
-        </button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="col-span-2">
-          <div class="flex items-center space-x-2 mb-4">
-            <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8">
-            <span class="font-semibold text-lg">iD01t Productions</span>
-          </div>
-          <p class="text-slate-600 dark:text-slate-400 mb-4">Professional eBooks, audiobooks, apps, and digital content for creative professionals and lifelong learners.</p>
-          <div class="flex space-x-4">
-            <a href="https://twitter.com/id01t" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" aria-label="Twitter">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
-            </a>
-            <a href="https://github.com/id01t" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" aria-label="GitHub">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
-            </a>
-          </div>
-        </div>
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.book-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            cards.forEach(card => {
+                const categories = card.dataset.categories;
+                if (category === 'all' || categories.includes(category.toLowerCase())) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
         
-        <div>
-          <h4 class="font-semibold mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
-            <li><a href="/store.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Store</a></li>
-            <li><a href="/ebooks.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">eBooks</a></li>
-            <li><a href="/audiobooks.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Audiobooks</a></li>
-            <li><a href="/apps.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Apps</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="font-semibold mb-4">About</h4>
-          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
-            <li><a href="/about.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About Us</a></li>
-            <li><a href="/contact.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a></li>
-            <li><a href="/privacy.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-600 dark:text-slate-400 text-sm">
-        <p>&copy; <span id="year"></span> iD01t Productions. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script>
-// Improved catalog loader + cover & buy link fixes
-
-const CONFIG = {
-  itemsPerPage: 24,
-  imageTimeout: 8000,
-  imagePaths: { hd: ['hd','HD'], sd: ['sd','SD'] },
-  enableDebugLogging: true
-};
-
-let allEbooks = [];
-let filteredEbooks = [];
-let currentPage = 0;
-
-const ebooksGrid = document.getElementById('ebooksGrid');
-const searchInput = document.getElementById('searchInput');
-const categoryFilter = document.getElementById('categoryFilter');
-const sortOrder = document.getElementById('sortOrder');
-const loadMoreBtn = document.getElementById('loadMoreBtn');
-const resultsCount = document.getElementById('resultsCount');
-const loadingState = document.getElementById('loadingState');
-
-// Theme, menu
-const themeToggle = document.getElementById('themeToggle');
-const htmlEl = document.documentElement;
-const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-htmlEl.classList.toggle('dark', savedTheme === 'dark');
-themeToggle.addEventListener('click', () => {
-  htmlEl.classList.toggle('dark');
-  localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
-});
-const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-// ---------- Normalization ----------
-function normalizeBook(raw) {
-  const pick = (...keys) => {
-    for (const k of keys) {
-      if (raw && raw[k] != null && String(raw[k]).trim() !== '') return raw[k];
-    }
-    return undefined;
-  };
-
-  const title = pick('title','Title','name');
-  if (!title) return null;
-
-  const author = pick('author','Author') || 'Guillaume Lessard';
-  const description = pick('description','Description','desc');
-  const subtitle = pick('subtitle','Subtitle');
-
-  const volumeId = pick('volume_id','GoogleBooksID','gbooks_id','id');
-  const catalog = pick('CatalogLink','catalog','info_link','InfoLink','url','link');
-  const buyLink = pick('BuyLink','buy','buy_link','play','PlayLink','play_link','google_play','GooglePlay','GooglePlayURL');
-
-  const image_hd = pick('image_hd','CoverHD','cover_hd','cover','image');
-  const image_sd = pick('image_sd','thumbnail','Thumbnail','smallThumbnail');
-
-  let resolvedBuy = buyLink;
-  if (!resolvedBuy && title) {
-    const authorFrag = author ? ` ${author}` : '';
-    resolvedBuy = "https://www.google.com/search?q=" + encodeURIComponent(`site:play.google.com/books "${title}"${authorFrag}`);
-  }
-  let resolvedCatalog = catalog;
-  if (!resolvedCatalog) {
-    if (volumeId) resolvedCatalog = `https://books.google.com/books?id=${encodeURIComponent(volumeId)}`;
-    else if (title) resolvedCatalog = "https://www.google.com/search?q=" + encodeURIComponent(`site:books.google.com intitle:"${title}" ${author||''}`);
-  }
-
-  const format = pick('Format','format','type') || 'Digital';
-  const price_usd = pick('price_usd','price','PriceUSD');
-  const lang = pick('lang','language','Language');
-  const popularity = pick('popularity','score');
-
-  return {
-    title, author, subtitle, description,
-    volume_id: volumeId,
-    image_hd, image_sd,
-    image: pick('image','Image'),
-    link: resolvedCatalog,
-    buy: resolvedBuy,
-    format, price_usd, lang, popularity
-  };
-}
-
-// ---------- Covers ----------
-function getImageFallbackChain(ebook) {
-  const urls = [];
-  if (ebook.image_hd && ebook.image_hd !== '/assets/placeholder-cover.svg') urls.push(ebook.image_hd);
-  if (ebook.image_sd && ebook.image_sd !== '/assets/placeholder-cover.svg') urls.push(ebook.image_sd);
-  if (ebook.image && ebook.image !== '/assets/placeholder-cover.svg') urls.push(ebook.image);
-
-  if (ebook.volume_id) {
-    urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=5&source=gbs_api`);
-    urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=3&source=gbs_api`);
-    urls.push(`https://books.google.com/books/content?id=${ebook.volume_id}&printsec=frontcover&img=1&zoom=2&source=gbs_api`);
-    CONFIG.imagePaths.hd.forEach(dir => urls.push(`/assets/harvested/ebooks/${dir}/${ebook.volume_id}.webp`));
-    CONFIG.imagePaths.sd.forEach(dir => urls.push(`/assets/harvested/ebooks/${dir}/${ebook.volume_id}.webp`));
-  }
-  urls.push('/assets/placeholder-cover.svg');
-  return [...new Set(urls)];
-}
-
-function tryLoadImage(url) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    let timeoutId;
-    const cleanup = () => { clearTimeout(timeoutId); img.onload = null; img.onerror = null; };
-    img.onload = () => { cleanup(); resolve(img); };
-    img.onerror = () => { cleanup(); reject(new Error(`Failed: ${url}`)); };
-    timeoutId = setTimeout(() => { cleanup(); reject(new Error(`Timeout: ${url}`)); }, CONFIG.imageTimeout);
-    img.src = url;
-  });
-}
-
-async function loadImageWithFallback(img, ebook) {
-  const chain = getImageFallbackChain(ebook);
-  for (let i = 0; i < chain.length; i++) {
-    const url = chain[i];
-    const last = i === chain.length - 1;
-    try {
-      await tryLoadImage(url);
-      img.src = url;
-      break;
-    } catch (_) {
-      if (last) img.src = '/assets/placeholder-cover.svg';
-    }
-  }
-  img.classList.remove('opacity-0');
-  img.classList.add('opacity-100');
-  img.parentElement?.querySelector('.image-placeholder')?.classList.add('hidden');
-}
-
-// ---------- UI ----------
-function cleanDescription(desc) {
-  if (!desc) return '';
-  return String(desc).replace(/<[^>]+>/g, '').slice(0, 180);
-}
-function getCategoryFromTitle(title) {
-  if (!title) return 'Other';
-  const lower = title.toLowerCase();
-  if (lower.includes('python') || lower.includes('javascript') || lower.includes('programming') || lower.includes('code')) return 'Programming';
-  if (lower.includes('ai') || lower.includes('machine learning') || lower.includes('neural')) return 'AI';
-  if (lower.includes('chess')) return 'Chess';
-  if (lower.includes('music') || lower.includes('production') || lower.includes('audio')) return 'Music';
-  if (lower.includes('mindfulness') || lower.includes('personal') || lower.includes('growth')) return 'Personal';
-  return 'Other';
-}
-
-function createBookCard(ebook, index) {
-  const category = getCategoryFromTitle(ebook.title);
-  const description = cleanDescription(ebook.description || 'Professional guide with comprehensive coverage.');
-  const author = ebook.author || 'Guillaume Lessard';
-  const lang = ebook.lang ? String(ebook.lang).toUpperCase().slice(0,2) : 'EN';
-  const price = ebook.price_usd ? `<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">$${ebook.price_usd}</span>` : '';
-  const buyHref = ebook.buy || ebook.link || 'https://play.google.com/store/books';
-  const viewHref = ebook.link || ebook.buy || 'https://play.google.com/store/books';
-
-  return `
-    <div class="book-card bg-white dark:bg-slate-800 rounded-xl shadow-md border border-slate-200 dark:border-slate-700 overflow-hidden card-hover intersection-animate">
-      <div class="relative aspect-[2/3] bg-slate-100 dark:bg-slate-700 overflow-hidden">
-        <div class="absolute inset-0 image-placeholder"></div>
-        <img data-book-index="${index}" src="/assets/placeholder-cover.svg" alt="${ebook.title} cover" class="w-full h-full object-cover opacity-0 transition-opacity duration-300" loading="lazy">
-        <div class="absolute top-3 right-3 flex gap-2">
-          <span class="px-2 py-1 text-xs font-semibold bg-white/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 rounded backdrop-blur-sm">${lang}</span>
-          <span class="px-2 py-1 text-xs font-semibold bg-brand-600/90 text-white rounded backdrop-blur-sm">${category}</span>
-        </div>
-      </div>
-      <div class="p-5">
-        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2 line-clamp-2 leading-tight">${ebook.title}</h3>
-        ${ebook.subtitle ? `<p class="text-sm text-slate-500 dark:text-slate-400 mb-1 line-clamp-1">${ebook.subtitle}</p>` : ''}
-        <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">${author}</p>
-        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">${description}</p>
-        <div class="flex items-center justify-between gap-3">
-          <a href="${viewHref}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium text-sm transition-colors focus-ring">
-            <span>View</span>
-            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </a>
-          <a href="${buyHref}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-600 dark:text-purple-300 hover:text-purple-700 dark:hover:text-purple-200 font-medium text-sm transition-colors focus-ring">
-            <span>Buy</span>
-            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3v5a3 3 0 11-6 0v-5c0-1.657 1.343-3 3-3z"></path></svg>
-          </a>
-          ${price}
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// ---------- Paging / filtering ----------
-function showEmptyState(message = 'No eBooks found') {
-  ebooksGrid.innerHTML = `
-    <div class="col-span-full text-center py-20">
-      <div class="text-slate-400 dark:text-slate-500">
-        <svg class="h-16 w-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-        </svg>
-        <p class="text-lg font-medium text-slate-600 dark:text-slate-300 mb-2">${message}</p>
-        <button onclick="resetFilters()" class="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium">Clear filters</button>
-      </div>
-    </div>
-  `;
-  loadingState.style.display = 'none';
-}
-function resetFilters() { searchInput.value = ''; categoryFilter.value = ''; sortOrder.value = 'newest'; filterAndSortEbooks(); }
-function filterAndSortEbooks() {
-  const searchTerm = searchInput.value.toLowerCase().trim();
-  const selCat = categoryFilter.value;
-  const selSort = sortOrder.value;
-  let filtered = allEbooks.filter(ebook => {
-    if (!ebook || !ebook.title) return false;
-    const mSearch = !searchTerm || ebook.title.toLowerCase().includes(searchTerm) ||
-      (ebook.description && cleanDescription(ebook.description).toLowerCase().includes(searchTerm)) ||
-      (ebook.author && ebook.author.toLowerCase().includes(searchTerm));
-    const mCat = !selCat || getCategoryFromTitle(ebook.title) === selCat;
-    return mSearch && mCat;
-  });
-  if (selSort === 'title') filtered.sort((a,b) => (a.title||'').toLowerCase().localeCompare((b.title||'').toLowerCase()));
-  else if (selSort === 'popular') filtered.sort((a,b) => (b.popularity||0)-(a.popularity||0));
-  filteredEbooks = filtered;
-  currentPage = 0;
-  resultsCount.textContent = String(filtered.length);
-  if (!filtered.length) showEmptyState(searchTerm ? `No results for "${searchTerm}"` : 'No eBooks available'); else loadBooks();
-}
-function loadBooks() {
-  const start = currentPage * CONFIG.itemsPerPage;
-  const end = start + CONFIG.itemsPerPage;
-  const page = filteredEbooks.slice(start, end);
-  if (currentPage === 0) ebooksGrid.innerHTML = '';
-  if (!page.length && currentPage === 0) { showEmptyState(); return; }
-  const html = page.map((b,i) => createBookCard(b,i)).join('');
-  ebooksGrid.insertAdjacentHTML('beforeend', html);
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      const cards = ebooksGrid.querySelectorAll('.book-card');
-      cards.forEach((card, idx) => {
-        const img = card.querySelector('img[data-book-index]');
-        if (!img) return;
-        const ebook = page[idx];
-        loadImageWithFallback(img, ebook);
-      });
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-      }, { threshold: 0.1 });
-      document.querySelectorAll('.intersection-animate').forEach(el => obs.observe(el));
-    });
-  });
-  if (end >= filteredEbooks.length) loadMoreBtn.classList.add('hidden'); else loadMoreBtn.classList.remove('hidden');
-  loadingState.style.display = 'none';
-}
-function loadMoreBooks() { currentPage++; loadBooks(); }
-function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t=setTimeout(()=>fn(...a), ms); }; }
-
-// ---------- Catalog load ----------
-async function loadCatalog() {
-  try {
-    loadingState.style.display = 'block';
-    const sources = [
-      '/assets/catalog.json',
-      '/assets/data/catalog.json',
-      '/catalog.json',
-      'https://raw.githubusercontent.com/iD01t/id01t.github.io/main/assets/catalog.json',
-      '/assets/id01t_productions_catalog_links.json'
-    ];
-    let data = null;
-    for (const src of sources) {
-      try {
-        const resp = await fetch(src, { cache: 'no-store' });
-        if (resp.ok) { data = await resp.json(); if (CONFIG.enableDebugLogging) console.log('Loaded catalog:', src); break; }
-      } catch {}
-    }
-    if (!data) throw new Error('No catalog found');
-    const rawList = Array.isArray(data) ? data : (Array.isArray(data.ebooks) ? data.ebooks : []);
-    if (!rawList.length) throw new Error('Invalid catalog');
-    allEbooks = rawList.map(normalizeBook).filter(Boolean);
-    resultsCount.textContent = String(allEbooks.length);
-    filteredEbooks = [...allEbooks];
-    loadBooks();
-  } catch (e) {
-    console.error('Catalog error:', e);
-    loadingState.innerHTML = `<div class="text-center py-12 text-red-500">Error loading catalog. Please try again later.</div>`;
-    showFallbackBooks();
-  }
-}
-function showFallbackBooks() {
-  const fallback = [{
-    title: "Professional Python Programming",
-    description: "Master Python with comprehensive guides and real-world examples.",
-    author: "Guillaume Lessard",
-    image_hd: "/assets/images/python-programming-cover.webp",
-    link: "https://play.google.com/store/books",
-    buy: "https://play.google.com/store/books",
-    lang: "EN"
-  }];
-  allEbooks = fallback.map(normalizeBook).filter(Boolean);
-  filteredEbooks = [...allEbooks];
-  resultsCount.textContent = String(allEbooks.length);
-  loadBooks();
-}
-
-// ---------- Init ----------
-document.addEventListener('DOMContentLoaded', () => {
-  loadCatalog();
-  searchInput.addEventListener('input', debounce(filterAndSortEbooks, 300));
-  categoryFilter.addEventListener('change', filterAndSortEbooks);
-  sortOrder.addEventListener('change', filterAndSortEbooks);
-  loadMoreBtn.addEventListener('click', loadMoreBooks);
-  const yearElement = document.getElementById('year');
-  if (yearElement) yearElement.textContent = new Date().getFullYear();
-});
-
-
+        // Search on Enter key
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBooks();
+            }
+        });
+    </script>
 </body>
-</html>
+  </html>
