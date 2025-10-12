@@ -543,6 +543,7 @@
         }
 
         function populateGrids(catalog) {
+            console.log("Populating grids with catalog data:", catalog);
             const ebooksGrid = document.getElementById('ebooksGrid');
             const audiobooksGrid = document.getElementById('audiobooksGrid');
 
@@ -581,11 +582,20 @@
             let currentSource = 0;
             const loadImage = () => {
                 if (currentSource < sources.length) {
-                    const source = sources[currentSource];
+                    const source = sources[currentSource]; 
+                  fix-ebook-images-and-links
+                    if (source && source.startsWith('/')) {
+                        img.src = source;
+                    } else if (source) { // For external URLs
+                        img.src = source;
+                    }
+                    else {
+
                     if (source) { // Check if the source is not null or undefined
                         img.src = source;
                     } else {
                         // If the source is null, immediately try the next one
+main
                         currentSource++;
                         loadImage();
                     }
