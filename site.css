@@ -1,0 +1,132 @@
+/* Enhanced styles for iD01t Productions catalog pages - extends Tailwind design */
+
+/* Custom properties matching brand theme */
+:root {
+  --ring-color: #2aa7ff;
+}
+
+/* Link animations from index.html */
+.link-underline {
+  position: relative;
+  transition: color .2s;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .2s ease-out;
+}
+
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Focus ring matching site standard */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--ring-color);
+  outline-offset: 2px;
+}
+
+/* Gradient text for headings */
+.gradient-text {
+  background: linear-gradient(to right, #2aa7ff, #0070d7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Card hover animations */
+.card-hover {
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, .15);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-hover:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, .4);
+  }
+}
+
+/* Glass effect for sticky elements */
+.glass-effect {
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(12px) saturate(150%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-effect {
+    background: rgba(30, 41, 59, .9);
+  }
+}
+
+/* Intersection animations */
+.intersection-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+.intersection-animate.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Catalog-specific styles */
+.catalog-card {
+  @apply bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-lg;
+}
+
+.catalog-card-media {
+  @apply aspect-[2/3] bg-slate-100 dark:bg-slate-900 overflow-hidden;
+}
+
+.catalog-card-media img {
+  @apply w-full h-full object-cover;
+}
+
+.catalog-badge {
+  @apply inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full;
+  @apply bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300;
+  @apply border border-slate-200 dark:border-slate-700;
+}
+
+.catalog-badge.format {
+  @apply bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300;
+  @apply border-brand-200 dark:border-brand-800;
+}
+
+/* Filter controls */
+.filter-input {
+  @apply px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700;
+  @apply bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100;
+  @apply focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors;
+}
+
+/* Loading state */
+.skeleton {
+  @apply animate-pulse bg-slate-200 dark:bg-slate-700 rounded;
+}
+
+/* Empty state */
+.empty-state {
+  @apply text-center py-16 text-slate-500 dark:text-slate-400;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
