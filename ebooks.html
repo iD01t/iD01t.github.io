@@ -1,679 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eBooks & Audiobooks — iD01t Productions Store</title>
-    <meta name="description" content="Complete catalog of iD01t Productions - 165 eBooks and 103 Audiobooks. Buy on Google Play Books.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #0a0e27;
-            --secondary: #1a1f3a;
-            --accent: #6366f1;
-            --accent-hover: #818cf8;
-            --text: #e2e8f0;
-            --text-muted: #94a3b8;
-            --border: #334155;
-            --card-bg: #1e293b;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-            --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.5);
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: var(--text);
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-        
-        /* Header */
-        header {
-            background: rgba(30, 41, 59, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            text-decoration: none;
-        }
-        
-        .logo-icon {
-            font-size: 2rem;
-        }
-        
-        nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-        }
-        
-        nav a:hover, nav a.active {
-            color: var(--accent-hover);
-            border-bottom-color: var(--accent-hover);
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 4rem 2rem;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(129, 140, 248, 0.05) 100%);
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-        
-        .stat {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent-hover);
-        }
-        
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        
-        /* Search & Filter */
-        .controls {
-            max-width: 1400px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
-        .search-bar {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .search-bar input {
-            flex: 1;
-            padding: 1rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 0.5rem;
-            color: var(--text);
-            font-size: 1rem;
-        }
-        
-        .search-bar input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-        
-        .search-bar button {
-            padding: 1rem 2rem;
-            background: var(--accent);
-            border: none;
-            border-radius: 0.5rem;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .search-bar button:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-        
-        .filters {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-        
-        .filter-btn {
-            padding: 0.5rem 1.25rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 2rem;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: all 0.2s;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: white;
-        }
-        
-        /* Section Headers */
-        .section {
-            max-width: 1400px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-        
-        .section-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--border);
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .section-count {
-            font-size: 1rem;
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-        
-        /* Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        /* Book Cards */
-        .book-card {
-            background: var(--card-bg);
-            border-radius: 0.75rem;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .book-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent);
-        }
-        
-        .book-cover {
-            width: 100%;
-            aspect-ratio: 2/3;
-            object-fit: cover;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        }
-        
-        .book-info {
-            padding: 1.25rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .book-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 1rem;
-            color: var(--text);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .book-actions {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: auto;
-        }
-        
-        .btn {
-            flex: 1;
-            padding: 0.75rem;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            font-size: 0.875rem;
-            transition: all 0.2s;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-            border: none;
-        }
-        
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--secondary);
-            border-top: 1px solid var(--border);
-            margin-top: 4rem;
-            padding: 3rem 2rem;
-        }
-        
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-        
-        .footer-section h3 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        
-        .footer-section a:hover {
-            color: var(--accent-hover);
-        }
-        
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 3rem auto 0;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            color: var(--text-muted);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .stats {
-                gap: 1.5rem;
-            }
-            
-            .grid {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                gap: 1.5rem;
-            }
-            
-            nav {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-        }
-        
-        .loading {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: var(--text-muted);
-        }
-    </style>
+<meta charset="utf-8">
+<title>eBooks · iD01t Productions</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Browse the full iD01t Productions eBook catalog by Guillaume Lessard / El’Nox Rah / DJ iD01t. Buy on Google Play.">
+<link rel="canonical" href="https://id01t.github.io/ebooks.html">
+<link rel="preconnect" href="https://books.google.com" crossorigin>
+<link rel="preconnect" href="https://play.google.com" crossorigin>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0b0c0f">
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <a href="https://id01tstore.github.io" class="logo">
-                <span class="logo-icon">📚</span>
-                <span>iD01t Store</span>
-            </a>
-            <nav>
-                <a href="https://id01tstore.github.io">Home</a>
-                <a href="https://id01tstore.github.io/ebooks.html" class="active">Catalog</a>
-                <a href="https://www.id01t.info">About</a>
-                <a href="https://www.id01t.ca">Website</a>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Complete Digital Catalog</h1>
-        <p>Discover our full collection of eBooks and Audiobooks. Buy directly on Google Play Books.</p>
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number" id="ebookCount">0</div>
-                <div class="stat-label">eBooks</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" id="audiobookCount">0</div>
-                <div class="stat-label">Audiobooks</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" id="totalCount">0</div>
-                <div class="stat-label">Total Items</div>
-            </div>
-        </div>
+<header class="header">
+  <div class="topbar">
+    <a class="brand" href="/"><span class="dot"></span> <span>iD01t Productions</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/ebooks.html" aria-current="page">eBooks</a>
+      <a href="/audiobooks.html">Audiobooks</a>
+      <a href="/">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="main-hero container">
+    <h1 class="h1">eBooks</h1>
+    <p class="muted">Full catalog with instant search, filters, and Google Play links.</p>
+  </section>
+
+  <section class="controls">
+    <div class="field" style="grid-column:1 / -1">
+      <label for="q">Search</label>
+      <input id="q" class="input" type="search" placeholder="Title, author, publisher, keyword…">
     </div>
-    
-    <!-- Search & Filters -->
-    <div class="controls">
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search by title...">
-            <button onclick="searchItems()">Search</button>
-        </div>
-        <div class="filters">
-            <button class="filter-btn active" onclick="filterType('all')">All</button>
-            <button class="filter-btn" onclick="filterType('ebooks')">eBooks Only</button>
-            <button class="filter-btn" onclick="filterType('audiobooks')">Audiobooks Only</button>
-        </div>
+    <div class="field">
+      <label for="lang">Language</label>
+      <select id="lang"></select>
     </div>
-    
-    <!-- eBooks Section -->
-    <div class="section" id="ebooksSection">
-        <div class="section-header">
-            <h2 class="section-title">
-                📖 eBooks
-                <span class="section-count" id="ebookSectionCount">(0 items)</span>
-            </h2>
-        </div>
-        <div class="grid" id="ebooksGrid">
-            <!-- Book cards will be inserted here -->
-        </div>
+    <div class="field">
+      <label for="min">Min Price (USD)</label>
+      <input id="min" class="input" type="number" step="0.01" inputmode="decimal" placeholder="0.00">
     </div>
-    
-    <!-- Audiobooks Section -->
-    <div class="section" id="audiobooksSection">
-        <div class="section-header">
-            <h2 class="section-title">
-                🎧 Audiobooks
-                <span class="section-count" id="audiobookSectionCount">(0 items)</span>
-            </h2>
-        </div>
-        <div class="grid" id="audiobooksGrid">
-            <!-- Audiobook cards will be inserted here -->
-        </div>
+    <div class="field">
+      <label for="max">Max Price (USD)</label>
+      <input id="max" class="input" type="number" step="0.01" inputmode="decimal" placeholder="9.99">
     </div>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>iD01t Productions</h3>
-                <p style="color: var(--text-muted);">
-                    Leading publisher of innovative eBooks and audiobooks across technology, 
-                    consciousness, gaming, and creative arts.
-                </p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="https://id01tstore.github.io">Home</a></li>
-                    <li><a href="https://id01tstore.github.io/ebooks.html">Full Catalog</a></li>
-                    <li><a href="https://www.id01t.info">Official Website</a></li>
-                    <li><a href="https://www.id01t.ca">iD01t.ca</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Buy Our Books</h3>
-                <ul>
-                    <li><a href="https://play.google.com/store/books/series?id=fQFYHAAAABAkHM&hl=en" target="_blank">Google Play Books</a></li>
-                    <li><a href="https://play.google.com/store/audiobooks/collection/promoted_audiobooks?pli=1" target="_blank">Google Play Audiobooks</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <ul>
-                    <li><a href="https://github.com/id01tstore">GitHub</a></li>
-                    <li><a href="https://www.id01t.info/contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 iD01t Productions. All rights reserved. | Created by Guillaume Lessard</p>
-        </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script>
-        const CONFIG = {
-            imagePaths: {
-                hd: 'assets/harvested/ebooks/hd',
-                sd: 'assets/harvested/ebooks/sd'
-            },
-            enableDebugLogging: false,
-            imageTimeout: 8000
-        };
+    <div class="field">
+      <label for="sort">Sort</label>
+      <select id="sort">
+        <option value="relevance">Relevance</option>
+        <option value="date-desc">Newest</option>
+        <option value="title-asc">Title A→Z</option>
+        <option value="price-asc">Price Low→High</option>
+      </select>
+    </div>
+  </section>
 
-        document.addEventListener("DOMContentLoaded", () => {
-            fetchCatalog();
-        });
+  <section class="container">
+    <p id="count" class="muted">Loading…</p>
+    <div id="grid" class="grid" aria-live="polite"></div>
+  </section>
+</main>
 
-        async function fetchCatalog() {
-            try {
-                const response = await fetch('catalog.json');
-                const catalog = await response.json();
-                populateGrids(catalog);
-                updateCounts(catalog);
-            } catch (error) {
-                console.error("Failed to load catalog:", error);
-            }
-        }
+<footer class="footer">
+  <div class="inner container">
+    <span>© <span id="y"></span> iD01t Productions</span>
+    <span><a href="/audiobooks.html">Audiobooks</a> · <a href="/ebooks.html">eBooks</a> · <a href="/">Home</a></span>
+  </div>
+</footer>
 
-        function populateGrids(catalog) {
-            console.log("Populating grids with catalog data:", catalog);
-            const ebooksGrid = document.getElementById('ebooksGrid');
-            const audiobooksGrid = document.getElementById('audiobooksGrid');
-
-            ebooksGrid.innerHTML = '';
-            audiobooksGrid.innerHTML = '';
-
-            catalog.ebooks.forEach(book => {
-                ebooksGrid.appendChild(createBookCard(book, 'ebook'));
-            });
-
-            if (catalog.audiobooks) {
-                catalog.audiobooks.forEach(book => {
-                    audiobooksGrid.appendChild(createBookCard(book, 'audiobook'));
-                });
-            }
-        }
-
-        function createBookCard(book, type) {
-            const card = document.createElement('div');
-            card.className = 'book-card';
-            card.dataset.type = type;
-
-            const placeholder = `https://via.placeholder.com/280x420/1e293b/6366f1?text=No+Cover`;
-
-            const img = document.createElement('img');
-            img.alt = book.title;
-            img.className = 'book-cover';
-
-            const sources = [
-                book.image_hd,
-                book.image_sd,
-                book.image,
-                placeholder
-            ];
-
-            let currentSource = 0;
-            const loadImage = () => {
-                if (currentSource < sources.length) {
-                    const source = sources[currentSource]; 
-                  fix-ebook-images-and-links
-                    if (source && source.startsWith('/')) {
-                        img.src = source;
-                    } else if (source) { // For external URLs
-                        img.src = source;
-                    }
-                    else {
-
-                    if (source) { // Check if the source is not null or undefined
-                        img.src = source;
-                    } else {
-                        // If the source is null, immediately try the next one
-main
-                        currentSource++;
-                        loadImage();
-                    }
-                    currentSource++;
-                }
-            };
-
-            img.onerror = loadImage;
-            loadImage();
-
-            card.innerHTML = `
-                <div class="book-info">
-                    <h3 class="book-title">${book.title}</h3>
-                    <div class="book-actions">
-                        <a href="${book.link}" target="_blank" class="btn btn-primary">Buy on Google Play</a>
-                    </div>
-                </div>
-            `;
-            card.prepend(img);
-            return card;
-        }
-
-        function toUrlSafe(s) {
-            if (!s) return "";
-            return s.toLowerCase()
-                .replace(/[^a-z0-9\s-]/g, '')
-                .replace(/[\s-]+/g, '-')
-                .replace(/^-+|-+$/g, '');
-        }
-
-
-        function updateCounts(catalog) {
-            const ebookCount = catalog.ebooks.length;
-            const audiobookCount = catalog.audiobooks ? catalog.audiobooks.length : 0;
-            const totalCount = ebookCount + audiobookCount;
-
-            document.getElementById('ebookCount').textContent = ebookCount;
-            document.getElementById('audiobookCount').textContent = audiobookCount;
-            document.getElementById('totalCount').textContent = totalCount;
-            document.getElementById('ebookSectionCount').textContent = `(${ebookCount} items)`;
-            document.getElementById('audiobookSectionCount').textContent = `(${audiobookCount} items)`;
-        }
-
-        function searchItems() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const allCards = document.querySelectorAll('.book-card');
-            
-            allCards.forEach(card => {
-                const title = card.querySelector('.book-title').textContent.toLowerCase();
-                card.style.display = title.includes(searchTerm) ? 'flex' : 'none';
-            });
-        }
-        
-        function filterType(type) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            const ebooksSection = document.getElementById('ebooksSection');
-            const audiobooksSection = document.getElementById('audiobooksSection');
-            
-            if (type === 'all') {
-                ebooksSection.style.display = 'block';
-                audiobooksSection.style.display = 'block';
-            } else if (type === 'ebooks') {
-                ebooksSection.style.display = 'block';
-                audiobooksSection.style.display = 'none';
-            } else if (type === 'audiobooks') {
-                ebooksSection.style.display = 'none';
-                audiobooksSection.style.display = 'block';
-            }
-        }
-        
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchItems();
-            }
-        });
-    </script>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script src="/assets/js/app.js" defer></script>
 </body>
 </html>
