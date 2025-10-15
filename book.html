@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Title · iD01t Productions</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Title details, cover, and Google Play buy link.">
+<link rel="preconnect" href="https://books.google.com" crossorigin>
+<link rel="preconnect" href="https://play.google.com" crossorigin>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0b0c0f">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="canonical" href="">
+</head>
+<body>
+<header class="header">
+  <div class="topbar">
+    <a class="brand" href="/"><span class="dot"></span> <span>iD01t Productions</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/ebooks.html">eBooks</a>
+      <a href="/audiobooks.html">Audiobooks</a>
+      <a href="/">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div id="detail" class="detail">
+    <p class="muted">Loading…</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="inner container">
+    <span>© <span id="y"></span> iD01t Productions</span>
+    <span><a href="/audiobooks.html">Audiobooks</a> · <a href="/ebooks.html">eBooks</a> · <a href="/">Home</a></span>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script src="/assets/js/app.js" defer></script>
+</body>
+</html>
