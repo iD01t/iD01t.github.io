@@ -197,7 +197,95 @@
 
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    async function loadBookDetails() {
+      const params = new URLSearchParams(window.location.search);
+      const bookId = params.get('id');
+
+      if (!bookId) {
+        document.getElementById('detailContainer').innerHTML = '<div class="text-center py-20"><h1 class="text-2xl font-bold text-red-600">Missing book ID</h1></div>';
+        return;
+      }
+
+      const data = await loadCatalog();
+      const allBooks = [...(data.ebooks || []), ...(data.audiobooks || [])];
+      const book = allBooks.find(b => b.id === bookId);
+
+      if (!book) {
+        document.getElementById('detailContainer').innerHTML = '<div class="text-center py-20"><h1 class="text-2xl font-bold text-red-600">Book not found</h1></div>';
+        return;
+      }
+
+      // Update page title and meta
+      document.title = `${book.title} · iD01t Productions`;
+
+      // Render detail view
+      document.getElementById('detailContainer').innerHTML = `
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Cover -->
+          <div>
+            <img
+              src="${book.cover_hd}"
+              alt="${book.title} cover"
+              class="w-full rounded-2xl shadow-2xl"
+              onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'"
+            />
+          </div>
+
+          <!-- Details -->
+          <div class="space-y-6">
+            <div>
+              <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-2">${book.title}</h1>
+              ${book.subtitle ? `<h2 class="text-xl text-slate-600 dark:text-slate-400">${book.subtitle}</h2>` : ''}
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              ${(book.categories || []).map(cat =>
+                `<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full text-sm font-medium">${cat}</span>`
+              ).join('')}
+            </div>
+
+            <div class="space-y-3 text-slate-600 dark:text-slate-400">
+              <p><strong class="text-slate-900 dark:text-slate-100">By:</strong> ${book.contributors}</p>
+              <p><strong class="text-slate-900 dark:text-slate-100">Publisher:</strong> ${book.publisher}</p>
+              <p><strong class="text-slate-900 dark:text-slate-100">Published:</strong> ${new Date(book.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              ${book.pages ? `<p><strong class="text-slate-900 dark:text-slate-100">Pages:</strong> ${book.pages}</p>` : ''}
+              ${book.duration ? `<p><strong class="text-slate-900 dark:text-slate-100">Duration:</strong> ${book.duration}</p>` : ''}
+              <p><strong class="text-slate-900 dark:text-slate-100">Language:</strong> ${book.language === 'en' ? 'English' : book.language === 'fr' ? 'French' : book.language}</p>
+            </div>
+
+            <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-bold text-brand-600 dark:text-brand-400">$${book.price}</span>
+              </div>
+              <a
+                href="${book.buy}"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="block w-full py-4 bg-brand-600 hover:bg-brand-700 text-white text-center font-bold rounded-lg transition-colors text-lg"
+              >
+                Buy on Google Play
+              </a>
+            </div>
+
+            ${book.description ? `
+              <div class="prose dark:prose-invert max-w-none">
+                <h3 class="text-2xl font-bold mb-4">About This Book</h3>
+                <p class="text-slate-600 dark:text-slate-400">${book.description}</p>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadBookDetails);
+    } else {
+      loadBookDetails();
+    }
   </script>
-<script defer="" src="/assets/js/app.js"></script>
+<script src="/assets/js/catalog.js"></script>
 </body>
 </html>
