@@ -1,6 +1,9 @@
 {
   "ebooks": [
     {
+      feature/catalog-system
+
+      main
       "id": "NT1UEQAAQBAJ",
       "title": "Ableton Elevation: DJ iD01T’s Complete Guide to Building Hits and Elevating Your Sound",
       "subtitle": "",
@@ -2843,5 +2846,66 @@
       "pages": 250
     }
   ],
+ feature/catalog-system
   "audiobooks": []
+=======
+      feature/catalog-system
+  "audiobooks": [
+      "id": "GGKEY:SAMPLE001",
+      "title": "Sample eBook Title",
+      "subtitle": "Advanced Techniques and Strategies",
+      "contributors": "Guillaume Lessard",
+      "publisher": "iD01t Productions",
+      "language": "en",
+      "date": "2024-08-15",
+      "cover_hd": "https://books.google.com/books/content?id=GGKEY%3ASAMPLE001&printsec=frontcover&img=1&zoom=3",
+      "buy": "https://play.google.com/store/books/details?id=GGKEY:SAMPLE001",
+      "price": "9.99",
+      "description": "This is a book titled 'Sample eBook Title'.",
+      "categories": [
+        "Fiction",
+        "Technology"
+      ],
+      "pages": 300
+    },
+    {
+      "id": "GGKEY:SAMPLE003",
+      "title": "Another eBook Example",
+      "subtitle": "Comprehensive Guide",
+      "contributors": "DJ iD01t",
+      "publisher": "iD01t Productions",
+      "language": "fr",
+      "date": "2024-07-10",
+      "cover_hd": "https://books.google.com/books/content?id=GGKEY%3ASAMPLE003&printsec=frontcover&img=1&zoom=3",
+      "buy": "https://play.google.com/store/books/details?id=GGKEY:SAMPLE003",
+      "price": "7.99",
+      "description": "This is a book titled 'Another eBook Example'.",
+      "categories": [
+        "Fiction",
+        "Technology"
+      ],
+      "pages": 300
+    }
+  ],
+  "audiobooks": [
+    {
+      "id": "GGKEY:SAMPLE002",
+      "title": "Sample Audiobook Title",
+      "subtitle": "",
+      "contributors": "El'Nox Rah",
+      "publisher": "iD01t Productions",
+      "language": "en",
+      "date": "2024-09-20",
+      "cover_hd": "https://books.google.com/books/content?id=GGKEY%3ASAMPLE002&printsec=frontcover&img=1&zoom=3",
+      "buy": "https://play.google.com/store/audiobooks/details?id=GGKEY:SAMPLE002",
+      "price": "14.99",
+      "description": "This is a book titled 'Sample Audiobook Title'.",
+      "categories": [
+        "Fiction",
+        "Technology"
+      ],
+      "duration": "6h 15m"
+    }
+  ]
+      main
 }

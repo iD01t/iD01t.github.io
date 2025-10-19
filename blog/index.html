@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="h-full scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Tech Blog & Resources - iD01t Productions | AI, Programming & Creator Insights</title>
+    <meta content="Expert insights on AI automation, programming tutorials, indie development, and creator workflows. Learn from a full-stack developer with 100+ digital products" name="description"/>
+    <!-- ... (rest of the head section remains the same) ... -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/css/site.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 font-sans">
+    <!-- ==================== HEADER ==================== -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+                        <img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+                        <span class="font-semibold text-lg">iD01t Productions</span>
+                    </a>
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog">Blog</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                    </button>
+                    <a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+                    <button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+            <div class="px-4 py-4 space-y-2">
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog">Blog</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+                <a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="pt-16">
+        <!-- ... (Hero, Featured Post, Categories sections remain the same) ... -->
+
+        <!-- Blog Posts Grid -->
+        <section class="py-16 intersection-animate">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        feature/dynamic-blog
+                <!-- Search and Filters -->
+                <div class="mb-12">
+                    <div class="max-w-2xl mx-auto">
+                        <div class="relative">
+                            <input id="search-input" type="search" placeholder="Search articles..." class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            <svg class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="category-filters" class="flex flex-wrap justify-center gap-2 mt-6">
+                        <button class="category-filter active px-4 py-2 rounded-lg text-sm font-medium bg-brand-100 text-brand-800 dark:bg-brand-900 dark:text-brand-200" data-category="all">
+                            All
+                        </button>
+                        <!-- Categories will be dynamically injected here -->
+                    </div>
+                </div>
+
+
+                <!-- ... (Latest Articles header remains the same) ... -->
+       main
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
+                    <!-- Articles will be dynamically injected here -->
+                </div>
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-900 dark:text-slate-50 px-8 py-3 rounded-lg font-medium focus-ring transition-all" id="loadMoreBtn">
+                        Load More Articles
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ... (Newsletter, Author Bio, Footer sections remain the same) ... -->
+    </main>
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const blogGrid = document.getElementById('blogGrid');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+       feature/dynamic-blog
+            const categoryFiltersContainer = document.getElementById('category-filters');
+            const searchInput = document.getElementById('search-input');
+            let allPosts = [];
+            let filteredPosts = [];
+            let visiblePosts = 6;
+            let currentCategory = 'all';
+            let currentSearchTerm = '';
+
+            // Fetch posts and initialize
+
+            const categoryFilters = document.querySelectorAll('.category-filter');
+            let allPosts = [];
+            let filteredPosts = [];
+            let visiblePosts = 6;
+
+            // Fetch and render posts
+        main
+            fetch('/blog/posts.json')
+                .then(response => response.json())
+                .then(posts => {
+                    allPosts = posts;
+      feature/dynamic-blog
+                    populateCategories();
+                    applyFilters();
+                });
+
+            function populateCategories() {
+                const categories = ['all', ...new Set(allPosts.flatMap(post => post.categories))];
+                categories.forEach(category => {
+                    if (category === 'all') return; // Skip 'all' as it's already there
+                    const button = document.createElement('button');
+                    button.className = 'category-filter px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 hover:bg-brand-100 hover:text-brand-800 dark:hover:bg-brand-900 dark:hover:text-brand-200';
+                    button.dataset.category = category;
+                    button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                    categoryFiltersContainer.appendChild(button);
+                });
+            }
+
+            function applyFilters() {
+                // 1. Filter by category
+                if (currentCategory === 'all') {
+                    filteredPosts = allPosts;
+                } else {
+                    filteredPosts = allPosts.filter(post => post.categories.includes(currentCategory));
+                }
+
+                // 2. Filter by search term
+                if (currentSearchTerm) {
+                    const searchTerm = currentSearchTerm.toLowerCase();
+                    filteredPosts = filteredPosts.filter(post =>
+                        post.title.toLowerCase().includes(searchTerm) ||
+                        post.description.toLowerCase().includes(searchTerm) ||
+                        post.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                    );
+                }
+
+                visiblePosts = 6; // Reset visible posts
+                renderPosts();
+            }
+=======
+                    filteredPosts = allPosts;
+                    renderPosts();
+                });
+      main
+
+            function renderPosts() {
+                blogGrid.innerHTML = '';
+                const postsToRender = filteredPosts.slice(0, visiblePosts);
+
+              feature/dynamic-blog
+
+                if (postsToRender.length === 0) {
+                    blogGrid.innerHTML = '<p class="text-center md:col-span-2 lg:col-span-3 text-slate-500">No articles found. Try a different search or category.</p>';
+                    loadMoreBtn.style.display = 'none';
+                    return;
+                }
+
+                loadMoreBtn.style.display = 'block';
+
+                postsToRender.forEach(post => {
+                    const postElement = document.createElement('article');
+                    postElement.className = 'blog-post rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-slate-800';
+
+                postsToRender.forEach(post => {
+                    const postElement = document.createElement('article');
+                    postElement.className = 'blog-card rounded-2xl overflow-hidden';
+                  main
+                    postElement.innerHTML = `
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <p class="text-xs text-slate-500 dark:text-slate-400">${post.date} · ${post.readTime} min</p>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">${post.category}</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+                                <a class="hover:text-brand-primary transition-colors" href="${post.url}">${post.title}</a>
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">${post.description}</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                ${post.tags.map(tag => `<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">${tag}</span>`).join('')}
+                            </div>
+                            <a class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring" href="${post.url}">Read Article →</a>
+                        </div>
+                    `;
+                    blogGrid.appendChild(postElement);
+                });
+
+                // Update "Load More" button
+                if (visiblePosts >= filteredPosts.length) {
+                    loadMoreBtn.textContent = 'All articles loaded';
+                    loadMoreBtn.disabled = true;
+                    loadMoreBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    loadMoreBtn.textContent = 'Load More Articles';
+                    loadMoreBtn.disabled = false;
+                    loadMoreBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+            }
+
+            // "Load More" button functionality
+            loadMoreBtn.addEventListener('click', () => {
+                visiblePosts += 6;
+                renderPosts();
+            });
+              
+              feature/dynamic-blog
+            // Event listener for category filters (delegated)
+            categoryFiltersContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('category-filter')) {
+                    document.querySelectorAll('.category-filter').forEach(f => f.classList.remove('active', 'bg-brand-100', 'text-brand-800', 'dark:bg-brand-900', 'dark:text-brand-200'));
+                    e.target.classList.add('active', 'bg-brand-100', 'text-brand-800', 'dark:bg-brand-900', 'dark:text-brand-200');
+
+                    currentCategory = e.target.dataset.category;
+                    applyFilters();
+                }
+            });
+
+            // Event listener for search input
+            searchInput.addEventListener('input', () => {
+                currentSearchTerm = searchInput.value;
+                // Debounce search input
+                setTimeout(() => {
+                    applyFilters();
+                }, 300);
+
+            // Category filtering
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('click', () => {
+                    categoryFilters.forEach(f => f.classList.remove('active'));
+                    filter.classList.add('active');
+                    const category = filter.getAttribute('data-category');
+
+                    if (category === 'all') {
+                        filteredPosts = allPosts;
+                    } else {
+                        filteredPosts = allPosts.filter(post => post.categories.includes(category));
+                    }
+                    visiblePosts = 6;
+                    renderPosts();
+                });
+    main
+            });
+        });
+    </script>
+</body>
+</html>
