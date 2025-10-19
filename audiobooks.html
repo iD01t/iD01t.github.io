@@ -268,7 +268,71 @@
 
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    async function initAudiobooksCatalog() {
+      const catalogGrid = document.getElementById('catalogGrid');
+      const resultCount = document.getElementById('resultCount');
+      const searchInput = document.getElementById('searchInput');
+      const langFilter = document.getElementById('langFilter');
+      const brandFilter = document.getElementById('brandFilter');
+      const minPrice = document.getElementById('minPrice');
+      const maxPrice = document.getElementById('maxPrice');
+      const sortFilter = document.getElementById('sortFilter');
+
+      // Load catalog
+      const data = await loadCatalog();
+      const allAudiobooks = data.audiobooks || [];
+
+      // Populate filters
+      populateFilters(allAudiobooks);
+
+      // Render function
+      function render() {
+        const filters = {
+          search: searchInput.value,
+          language: langFilter.value,
+          brand: brandFilter.value,
+          minPrice: minPrice.value,
+          maxPrice: maxPrice.value,
+          sort: sortFilter.value
+        };
+
+        const filtered = filterAndSortCatalog(allAudiobooks, filters);
+
+        // Update count
+        resultCount.textContent = `${filtered.length} Audiobook${filtered.length !== 1 ? 's' : ''} found`;
+
+        // Render cards
+        if (filtered.length === 0) {
+          catalogGrid.innerHTML = `
+            <div class="col-span-full text-center py-12">
+              <p class="text-slate-600 dark:text-slate-400 text-lg">No Audiobooks found matching your criteria.</p>
+            </div>
+          `;
+        } else {
+          catalogGrid.innerHTML = filtered.map(item => createBookCard(item, 'audiobook')).join('');
+        }
+      }
+
+      // Event listeners
+      searchInput.addEventListener('input', render);
+      langFilter.addEventListener('change', render);
+      brandFilter.addEventListener('change', render);
+      minPrice.addEventListener('input', render);
+      maxPrice.addEventListener('input', render);
+      sortFilter.addEventListener('change', render);
+
+      // Initial render
+      render();
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAudiobooksCatalog);
+    } else {
+      initAudiobooksCatalog();
+    }
   </script>
-<script defer="" src="/assets/js/app.js"></script>
+<script src="/assets/js/catalog.js"></script>
 </body>
 </html>
