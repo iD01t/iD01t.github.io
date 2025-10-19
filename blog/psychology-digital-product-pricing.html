@@ -1,411 +1,147 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>The Psychology of Digital Product Pricing | iD01t Productions</title>
-<meta content="Understand the psychological principles that drive digital product purchasing decisions. Learn how to optimize your pricing strategy using behavioral economics and consumer psychology." name="description"/>
-<meta content="digital product pricing, pricing psychology, behavioral economics, pricing strategy, consumer psychology, Guillaume Lessard" name="keywords"/>
-<link href="https://id01t.github.io/blog/psychology-digital-product-pricing.html" rel="canonical"/>
-<meta content="index,follow" name="robots"/>
-<meta content="Guillaume Lessard" name="author"/>
-<meta content="#5468ff" name="theme-color"/>
-<!-- Open Graph -->
-<meta content="article" property="og:type"/>
-<meta content="The Psychology of Digital Product Pricing" property="og:title"/>
-<meta content="Understand the psychological principles that drive digital product purchasing decisions. Learn how to optimize your pricing strategy using behavioral economics." property="og:description"/>
-<meta content="https://id01t.github.io/blog/psychology-digital-product-pricing.html" property="og:url"/>
-<meta content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg" property="og:image"/>
-<meta content="1200" property="og:image:width"/>
-<meta content="630" property="og:image:height"/>
-<meta content="iD01t Productions" property="og:site_name"/>
-<meta content="Guillaume Lessard" property="article:author"/>
-<meta content="2024-12-19T00:00:00Z" property="article:published_time"/>
-<meta content="Business" property="article:section"/>
-<meta content="Pricing" property="article:tag"/>
-<meta content="Psychology" property="article:tag"/>
-<meta content="Business" property="article:tag"/>
-<!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="The Psychology of Digital Product Pricing" name="twitter:title"/>
-<meta content="Understand the psychological principles that drive digital product purchasing decisions. Learn how to optimize your pricing strategy." name="twitter:description"/>
-<meta content="https://id01t.github.io/assets/harvested/brand/og_brand.jpg" name="twitter:image"/>
-<meta content="@id01t" name="twitter:creator"/>
-<link href="/assets/favicon.ico" rel="icon"/>
-<link href="/assets/logo-512.png" rel="apple-touch-icon"/>
-<link href="/manifest.json" rel="manifest"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { brand: {50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'} }
-        }
-      }
-    };
-  </script>
-<link href="/css/custom.css" rel="stylesheet"/>
-<!-- Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
-  </script>
-<!-- Article JSON-LD -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "The Psychology of Digital Product Pricing",
-    "description": "Understand the psychological principles that drive digital product purchasing decisions. Learn how to optimize your pricing strategy using behavioral economics and consumer psychology.",
-    "image": "https://id01t.github.io/assets/harvested/brand/og_brand.jpg",
-    "url": "https://id01t.github.io/blog/psychology-digital-product-pricing.html",
-    "datePublished": "2024-12-19T00:00:00Z",
-    "dateModified": "2024-12-19T00:00:00Z",
-    "author": {
-      "@type": "Person",
-      "name": "Guillaume Lessard",
-      "url": "https://id01t.github.io/about.html"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "iD01t Productions",
-      "url": "https://id01t.github.io/",
-      "logo": "https://id01t.github.io/assets/harvested/brand/og_brand.jpg"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://id01t.github.io/blog/psychology-digital-product-pricing.html"
-    },
-    "keywords": ["digital product pricing", "pricing psychology", "behavioral economics", "pricing strategy", "consumer psychology"],
-    "articleSection": "Business",
-    "wordCount": "3800"
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psychology of Digital Product Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --ring-color: theme('colors.brand.500'); }
+        .link-underline { position: relative; transition: color .2s; }
+        .link-underline::after { content:""; position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .2s ease-out; }
+        .link-underline:hover::after, .link-underline:focus-visible::after { transform:scaleX(1); transform-origin:left; }
+        .focus-ring:focus-visible { outline:2px solid var(--ring-color); outline-offset:2px; }
+    </style>
 </head>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<div class="flex items-center space-x-8">
-<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
-<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
-<span class="font-semibold text-lg">iD01t Productions</span>
-</a>
-<div class="hidden md:flex items-center space-x-6">
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
-</div>
-</div>
-<div class="flex items-center space-x-4">
-<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
-<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
-<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
-<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-</div>
-</div>
-</div>
-<!-- Mobile menu -->
-<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
-<div class="px-4 py-4 space-y-2">
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
-<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
-</div>
-</div>
-</nav>
-<main class="py-8">
-<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-<!-- Hero Section -->
-<section class="text-center py-12">
-<h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4">The Psychology of Digital Product Pricing</h1>
-<p class="text-lg text-slate-600 dark:text-slate-300">Understanding the psychological principles that drive purchasing decisions in the digital economy</p>
-</section>
-<!-- Article Meta -->
-<div class="flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400 mb-6">
-<span>By <strong class="text-slate-700 dark:text-slate-300">Guillaume Lessard</strong></span>
-<span>•</span>
-<span>December 19, 2024</span>
-<span>•</span>
-<span>16 min read</span>
-</div>
-<!-- Article Tags -->
-<div class="flex flex-wrap gap-2 mb-8">
-<span class="bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 px-3 py-1 rounded-full text-xs font-medium">Pricing</span>
-<span class="bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 px-3 py-1 rounded-full text-xs font-medium">Psychology</span>
-<span class="bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 px-3 py-1 rounded-full text-xs font-medium">Business</span>
-<span class="bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 px-3 py-1 rounded-full text-xs font-medium">Strategy</span>
-</div>
-<!-- Article Content -->
-<article class="max-w-none">
-<div class="space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Introduction</h2>
-<p class="text-lg leading-relaxed mb-4">Digital product pricing exists at the fascinating intersection of psychology, economics, and technology. Unlike physical products with tangible production costs and material constraints, digital products challenge traditional pricing models while offering unprecedented flexibility in pricing strategies.</p>
-<p class="text-lg leading-relaxed mb-6">After years of launching digital products across various categories and price points, analyzing thousands of pricing decisions and their outcomes, I've discovered that successful digital product pricing relies more on understanding human psychology than calculating production costs.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">The Unique Psychology of Digital Product Purchases</h2>
-<p class="text-lg leading-relaxed mb-6">Digital products create unique psychological considerations that don't exist with physical goods. The absence of tangible objects, immediate delivery, and infinite replicability fundamentally alter how customers perceive value and make purchasing decisions.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">The Intangibility Challenge</h3>
-<p class="text-lg leading-relaxed mb-6">Physical products provide sensory feedback that helps customers assess value. You can hold a book, test drive a car, or examine clothing quality before purchasing. Digital products lack these tangible cues, making value perception more abstract and dependent on psychological factors like trust, perceived expertise, and social proof.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Instant Gratification vs Delayed Satisfaction</h3>
-<p class="text-lg leading-relaxed mb-6">Digital products offer immediate delivery but may provide delayed value realization. A customer can download an eBook instantly but must invest time reading it to receive value. This temporal separation between purchase and value realization creates unique psychological dynamics that affect pricing sensitivity and customer satisfaction.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">The Abundance Mindset Paradox</h3>
-<p class="text-lg leading-relaxed mb-6">Digital products can be replicated infinitely at near zero marginal cost, creating an abundance that customers intellectually understand but emotionally struggle to process. This abundance can simultaneously increase and decrease willingness to pay, depending on how it's framed and positioned.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Anchoring Effects in Digital Product Pricing</h2>
-<p class="text-lg leading-relaxed mb-6">Anchoring is one of the most powerful psychological factors affecting price perception. The first price customers see significantly influences their perception of all subsequent prices, making anchor selection crucial for digital product success.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Strategic Anchor Selection</h3>
-<p class="text-lg leading-relaxed mb-6">The anchor price doesn't need to be your intended selling price. It establishes a reference point that makes other prices seem reasonable or expensive by comparison. Many successful digital product creators use premium packages or services as anchors that make their core products seem attractively priced.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Multiple Anchor Strategies</h3>
-<p class="text-lg leading-relaxed mb-6">Sophisticated pricing strategies use multiple anchors to guide customer decision making toward desired price points. This might involve showing monthly versus annual pricing, basic versus premium tiers, or individual versus bundle pricing.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">The Power of Decoy Pricing</h2>
-<p class="text-lg leading-relaxed mb-6">Decoy pricing, also known as asymmetric dominance, uses strategically inferior options to make target options appear more attractive. This psychological principle, discovered through extensive behavioral economics research, applies particularly well to digital product pricing.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Classic Decoy Structure</h3>
-<p class="text-lg leading-relaxed mb-6">The most effective decoys are similar to your target product but clearly inferior in value. This makes the target product appear obviously superior while providing customers with easy decision making frameworks.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Digital Product Decoy Examples</h3>
-<ul>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Feature Limited Versions</strong>: Offer a version with significant limitations alongside your target product</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Time Limited Access</strong>: Position lifetime access against limited term subscriptions</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Support Level Variations</strong>: Different levels of support or community access create clear value differentiations</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Content Volume Differences</strong>: Varying amounts of content or resources between tiers</li>
-</ul>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Social Proof and Pricing Psychology</h2>
-<p class="text-lg leading-relaxed mb-6">Social proof significantly impacts digital product pricing effectiveness. Customers rely heavily on others' experiences and decisions when evaluating unfamiliar digital products, making social validation crucial for pricing success.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Types of Social Proof in Pricing</h3>
-<ul>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Customer Testimonials</strong>: Specific testimonials that mention value received relative to price paid reinforce pricing decisions</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Sales Volume Indicators</strong>: Showing purchase quantities, download numbers, or customer counts provides social validation</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Authority Endorsements</strong>: Endorsements from recognized experts or authorities in your field validate both product quality and pricing appropriateness</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Community Engagement</strong>: Active user communities, discussion forums, and social media engagement around your products provide ongoing social proof</li>
-</ul>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Cognitive Biases Affecting Digital Product Pricing</h2>
-<p class="text-lg leading-relaxed mb-6">Understanding cognitive biases that affect purchasing decisions enables more effective pricing strategies that work with, rather than against, natural human psychology.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Loss Aversion</h3>
-<p class="text-lg leading-relaxed mb-6">People feel losses more intensely than equivalent gains, making "what you'll miss out on" messaging more powerful than "what you'll gain" messaging. Digital product pricing can leverage loss aversion through limited time offers, bonus removal deadlines, or emphasis on opportunity costs of inaction.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">The Endowment Effect</h3>
-<p class="text-lg leading-relaxed mb-6">Once people feel ownership of something, they value it more highly and are reluctant to give it up. Digital product creators can create endowment effects through free trials, sample content, or personalized experiences that create psychological ownership before purchase.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Confirmation Bias</h3>
-<p class="text-lg leading-relaxed mb-6">People seek information that confirms their existing beliefs and ignore contradictory evidence. Understanding your target customers' existing beliefs about pricing, value, and solutions helps craft pricing messages that feel confirming rather than challenging.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Pricing Tiers and Choice Architecture</h2>
-<p class="text-lg leading-relaxed mb-6">How you present pricing options significantly affects customer decisions. The number of options, their presentation order, and the differences between them all influence purchasing psychology.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">The Paradox of Choice</h3>
-<p class="text-lg leading-relaxed mb-6">While customers appreciate having options, too many choices can create decision paralysis and reduce conversion rates. Research suggests that 3-4 pricing tiers provide optimal choice without overwhelming customers.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Optimal Tier Structures</h3>
-<ul>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Three Tier Classic</strong>: Basic, Standard, Premium with clear value progression</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Good Better Best</strong>: Entry level, popular middle option, comprehensive high end</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Usage Based Tiers</strong>: Different access levels or usage limits that scale with customer needs</li>
-</ul>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Psychological Pricing Tactics for Digital Products</h2>
-<p class="text-lg leading-relaxed mb-6">Specific pricing tactics leverage psychological principles to optimize conversion rates and customer satisfaction while maintaining ethical business practices.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Charm Pricing and Price Endings</h3>
-<p class="text-lg leading-relaxed mb-4">Price endings significantly affect perception and conversion rates. Different endings create different psychological associations that can enhance or detract from your product positioning.</p>
-<ul>
-<li><strong class="font-semibold text-slate-900 dark:text-white">$X.99 vs $X.00 Pricing</strong>: Charm pricing ($9.99 instead of $10.00) can increase sales for lower priced digital products but may reduce perceived quality for premium offerings</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Premium Price Endings</strong>: Round numbers ($100, $500) often work better for high value digital products because they suggest quality and premium positioning</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Psychological Price Thresholds</strong>: Understanding psychological price barriers ($10, $25, $50, $100) helps optimize pricing to maximize revenue without triggering resistance</li>
-</ul>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Bundle Pricing Psychology</h3>
-<p class="text-lg leading-relaxed mb-6">Bundling multiple digital products or services creates unique psychological advantages that can dramatically increase average order value and customer satisfaction.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">The Psychology of Free</h3>
-<p class="text-lg leading-relaxed mb-6">"Free" triggers powerful psychological responses that can significantly impact digital product pricing strategies. Understanding when and how to use free elements can dramatically improve conversion rates and customer acquisition.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Cultural and Demographic Pricing Considerations</h2>
-<p class="text-lg leading-relaxed mb-6">Digital products' global reach requires understanding how cultural background and demographic factors influence pricing psychology and purchasing behavior.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Cultural Price Sensitivity Variations</h3>
-<ul>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Western Markets</strong>: Generally comfortable with fixed pricing, value convenience and time savings, respond well to premium positioning for quality products</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Emerging Markets</strong>: Often more price sensitive but willing to pay premium for genuine value, appreciate flexible payment options and local currency pricing</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Professional vs Consumer Segments</strong>: Business customers typically exhibit different pricing psychology than individual consumers</li>
-</ul>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Dynamic Pricing and Personalization</h2>
-<p class="text-lg leading-relaxed mb-6">Digital products enable sophisticated pricing strategies that adapt to customer behavior, market conditions, and individual circumstances in ways impossible with physical products.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Behavioral Pricing Adjustments</h3>
-<p class="text-lg leading-relaxed mb-6">Modern analytics enable pricing adjustments based on customer behavior patterns, engagement levels, and demonstrated value realization.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Time Based Pricing Strategies</h3>
-<ul>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Launch Pricing Sequences</strong>: Strategic pricing evolution from early bird discounts through regular pricing to premium positioning as products mature</li>
-<li><strong class="font-semibold text-slate-900 dark:text-white">Seasonal Adjustments</strong>: Educational products might increase prices at the beginning of academic years, while business tools might offer year end discounts</li>
-</ul>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Testing and Optimizing Digital Product Pricing</h2>
-<p class="text-lg leading-relaxed mb-6">Pricing psychology is best understood through systematic testing rather than theoretical application. Digital products enable sophisticated testing approaches that provide data driven pricing insights.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">A/B Testing Pricing Strategies</h3>
-<p class="text-lg leading-relaxed mb-6">Systematic price testing reveals how different pricing approaches affect conversion rates, customer quality, and long term value.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Qualitative Pricing Research</h3>
-<p class="text-lg leading-relaxed mb-6">Quantitative testing should be supplemented with qualitative research that reveals the psychological reasons behind pricing responses.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Building Sustainable Pricing Strategies</h2>
-<p class="text-lg leading-relaxed mb-6">Long term success requires pricing strategies that evolve with your business while maintaining customer relationships and market position.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Pricing Evolution Planning</h3>
-<p class="text-lg leading-relaxed mb-6">Successful digital products typically require pricing strategy evolution as they mature and markets change.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Customer Relationship Maintenance</h3>
-<p class="text-lg leading-relaxed mb-6">Pricing changes can significantly impact existing customer relationships and require careful management to maintain loyalty and satisfaction.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Ethical Considerations in Pricing Psychology</h2>
-<p class="text-lg leading-relaxed mb-6">Understanding pricing psychology creates responsibility to use this knowledge ethically and in ways that serve customers' genuine interests while building sustainable businesses.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Manipulation vs Influence</h3>
-<p class="text-lg leading-relaxed mb-6">There's an important distinction between using psychological insights to help customers make good decisions and manipulating them into poor decisions.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Long Term Relationship Focus</h3>
-<p class="text-lg leading-relaxed mb-6">Ethical pricing psychology focuses on building long term customer relationships rather than maximizing individual transaction value.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Future Trends in Digital Product Pricing Psychology</h2>
-<p class="text-lg leading-relaxed mb-6">Understanding emerging trends in pricing psychology helps future proof your digital product strategies while capitalizing on new opportunities.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">AI Driven Personalization</h3>
-<p class="text-lg leading-relaxed mb-6">Artificial intelligence enables increasingly sophisticated personalized pricing that adapts to individual customer psychology and behavior patterns.</p>
-<h3 class="text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-4">Subscription Economy Evolution</h3>
-<p class="text-lg leading-relaxed mb-6">The subscription model continues evolving with new psychological insights about customer retention and value perception.</p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Conclusion</h2>
-<p class="text-lg leading-relaxed mb-4">The psychology of digital product pricing represents a fascinating intersection of human behavior, economic principles, and technological capabilities. Success requires understanding not just what customers will pay, but why they make pricing decisions and how different psychological factors influence their perception of value and willingness to invest.</p>
-<p class="text-lg leading-relaxed mb-4">The most successful digital product pricing strategies combine psychological insights with genuine value delivery, creating win win scenarios where customers receive value proportional to their investment while creators build sustainable, profitable businesses.</p>
-<p class="text-lg leading-relaxed mb-4">As digital markets continue evolving and customers become more sophisticated, pricing strategies must become more nuanced and customer focused. The future belongs to creators who understand both the psychological principles governing pricing decisions and the ethical responsibility that comes with this knowledge.</p>
-<p class="text-lg leading-relaxed mb-4">Ultimately, the best pricing psychology serves customers by helping them find products that genuinely improve their lives while enabling creators to build sustainable businesses that continue delivering value over time. When pricing aligns with psychology and value, everyone wins, creating the foundation for long term success in the digital product economy.</p>
-</div>
-</article>
-<!-- Author Bio -->
-<section class="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-12 flex flex-col sm:flex-row gap-6 items-center">
-<img alt="Guillaume Lessard" class="w-20 h-20 rounded-full object-cover" src="/assets/harvested/brand/og_brand.jpg"/>
-<div class="text-center sm:text-left">
-<h4 class="text-xl font-semibold mb-2">Guillaume Lessard</h4>
-<p class="text-slate-600 dark:text-slate-300">Professional digital content creator, developer, and creative technologist based in Montreal, Quebec, Canada. With over 10 years of experience in technology and digital media, Guillaume founded iD01t Productions to create high-quality, educational, and entertaining digital content.</p>
-</div>
-</section>
-<!-- Related Posts -->
-<section class="my-12">
-<h3 class="text-2xl font-semibold mb-6">Related Articles</h3>
-<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<article class="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:transform hover:-translate-y-1 transition-transform">
-<h4 class="text-lg font-semibold mb-3"><a class="text-slate-900 dark:text-slate-100 hover:text-brand-600 dark:hover:text-brand-400" href="/blog/building-profitable-ebook-business-100-publications.html">Building a Profitable eBook Business: Lessons from 100+ Publications</a></h4>
-<p class="text-slate-600 dark:text-slate-300 text-sm">Learn the strategies and insights from publishing over 100 eBooks across multiple platforms.</p>
-</article></div>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+                        <img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+                        <span class="font-semibold text-lg">iD01t Productions</span>
+                    </a>
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog">Blog</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                    </button>
+                    <a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+                    <button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+            <div class="px-4 py-4 space-y-2">
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog">Blog</a>
+                <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+                <a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        <article>
+            <h1 class="text-4xl font-bold mb-4">The Psychology of Digital Product Pricing</h1>
+            <p class="text-gray-600 mb-8">Published on Dec 19, 2024 by iD01t</p>
+            <div class="prose lg:prose-xl">
+                <p>Behavioral pricing tactics to increase customer lifetime value without damaging trust or brand perception.</p>
+                <!-- Add more content here -->
+            </div>
+        </article>
 
-<article class="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:transform hover:-translate-y-1 transition-transform">
-<h4 class="text-lg font-semibold mb-3"><a class="text-slate-900 dark:text-slate-100 hover:text-brand-600 dark:hover:text-brand-400" href="/blog/10-essential-python-automation-scripts-content-creators.html">10 Essential Python Automation Scripts for Content Creators</a></h4>
-<p class="text-slate-600 dark:text-slate-300 text-sm">Transform your content creation workflow with battle-tested Python automation scripts that save hours every week.</p>
-</article></section></div>
+        <!-- Author Bio -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-bold mb-4">About the Author</h2>
+            <div class="flex items-center">
+                <img src="/blog/images/author.jpg" alt="Author" class="w-24 h-24 rounded-full mr-8">
+                <div>
+                    <h3 class="text-xl font-bold">iD01t</h3>
+                    <p class="text-gray-600">Full-stack developer, DJ, and digital entrepreneur with 100+ published products. Specializes in AI automation, music production, and building scalable creative businesses. Shares practical insights from real-world experience building and launching digital products.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<article class="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:transform hover:-translate-y-1 transition-transform">
-<h4 class="text-lg font-semibold mb-3"><a class="text-slate-900 dark:text-slate-100 hover:text-brand-600 dark:hover:text-brand-400" href="/blog/seo-strategies-creative-professionals.html">SEO Strategies That Actually Work for Creative Professionals</a></h4>
-<p class="text-slate-600 dark:text-slate-300 text-sm">Discover specialized SEO approaches designed specifically for creative professionals and content creators.</p>
-
-</article>
-
-
-
-</main>
-<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-<div class="space-y-4">
-<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
-<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
-<span class="font-semibold text-lg text-white">iD01t Productions</span>
-</a>
-<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
-</div>
-<div>
-<h3 class="font-semibold text-white mb-4">Products</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold text-white mb-4">Resources</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold text-white mb-4">Legal</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-<div class="flex items-center gap-6">
-<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
-<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
-<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
-</div>
-</div>
-</footer>
-<script>
-    // Theme functionality
-    function initTheme() {
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-
-      if (isDark) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-
-      return isDark;
-    }
-
-    // Initialize theme on page load
-    const currentTheme = initTheme();
-
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      // Set initial button state
-      themeToggle.setAttribute('aria-pressed', String(currentTheme));
-      themeToggle.textContent = currentTheme ? 'Light' : 'Dark';
-
-      themeToggle.addEventListener('click', function() {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeToggle.setAttribute('aria-pressed', String(isDark));
-        themeToggle.textContent = isDark ? 'Light' : 'Dark';
-      });
-    }
-
-    // Mobile menu functionality
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-
-    // Year update
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
-  </script>
+    <!-- Footer -->
+    <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+            <div class="space-y-4">
+                <a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+                    <img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+                    <span class="font-semibold text-lg text-white">iD01t Productions</span>
+                </a>
+                <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-white mb-4">Products</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-white mb-4">Resources</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog">Blog</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-white mb-4">Legal</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+                    <li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+            <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+                <a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+                <a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
