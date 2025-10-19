@@ -13,6 +13,54 @@ def normalize(s):
     """Normalize string value"""
     return (s or '').strip()
 
+def infer_language(title):
+    # Simple heuristic to infer language from title
+    if any(word in title.lower() for word in ['le', 'la', 'des', 'et', 'pour', 'que', 'qui', 'dans']):
+        return 'fr'
+    if any(word in title.lower() for word in ['der', 'die', 'das', 'und', 'für']):
+        return 'de'
+    if any(word in title.lower() for word in ['el', 'la', 'los', 'y', 'para', 'que', 'en']):
+        return 'es'
+    return 'en'
+
+def assign_categories(title):
+    categories = []
+    title_lower = title.lower()
+    if any(keyword in title_lower for keyword in ['python', 'java', 'c#', 'c++', 'javascript', 'html', 'css', 'code', 'programming']):
+        categories.append('Programming')
+    if any(keyword in title_lower for keyword in ['ai', 'machine learning', 'gpt']):
+        categories.append('AI')
+    if 'chess' in title_lower:
+        categories.append('Games')
+    if 'seo' in title_lower:
+        categories.append('Marketing')
+    if any(keyword in title_lower for keyword in ['dj', 'music', 'traktor', 'ableton', 'fl studio']):
+        categories.append('Music')
+    if 'quantum' in title_lower:
+        categories.append('Science')
+    if any(keyword in title_lower for keyword in ['sacred', 'god', 'jesus', 'spirituality', 'zen']):
+        categories.append('Spirituality')
+    if not categories:
+        categories.append('General')
+    return categories
+
+def generate_description(title, categories):
+    category_map = {
+        "Programming": f"A comprehensive technical guide to mastering the concepts in '{title}'.",
+        "AI": f"An in-depth exploration of the world of Artificial Intelligence and its applications, as discussed in '{title}'.",
+        "Games": f"A strategic guide to mastering the game of chess, focusing on the techniques in '{title}'.",
+        "Music": f"A creative guide for music producers and DJs, covering the methods in '{title}'.",
+        "Science": f"A scientific exploration of the principles and theories presented in '{title}'.",
+        "Spirituality": f"A journey into spiritual concepts and practices, as revealed in '{title}'.",
+        "Marketing": f"A guide to modern marketing techniques, with a focus on the strategies in '{title}'.",
+        "General": f"An insightful book that explores the topics presented in '{title}'."
+    }
+    # Return the first description that matches a category, or the general one.
+    for cat in categories:
+        if cat in category_map:
+            return category_map[cat]
+    return category_map["General"]
+
 def build_catalog():
     """Read CSV and generate JSON catalog"""
     # Paths
@@ -26,7 +74,7 @@ def build_catalog():
     
     print(f"📖 Reading catalog from: {csv_path}")
     
-    catalog = []
+    catalog = {"ebooks": [], "audiobooks": []}
     
     try:
         with csv_path.open('r', encoding='utf-8') as f:
@@ -34,7 +82,16 @@ def build_catalog():
             
             for row in reader:
                 # Extract and normalize fields
-                # Support multiple possible column names from different exports
+                title = normalize(row.get("Title") or row.get("title"))
+
+                # Skip if title is 'nan' or empty
+                if title.lower() == 'nan' or not title:
+                    continue
+
+                categories = assign_categories(title)
+                description = generate_description(title, categories)
+                language = infer_language(title)
+
                 item = {
                     "id": normalize(
                         row.get("Identifier") or 
@@ -42,13 +99,8 @@ def build_catalog():
                         row.get("id") or 
                         row.get("Google Play Store Link ID")
                     ),
-                    "title": normalize(row.get("Title") or row.get("title")),
+                    "title": title,
                     "subtitle": normalize(row.get("Subtitle") or row.get("subtitle") or ""),
-                    "format": normalize(
-                        row.get("Format") or 
-                        row.get("Book Format") or 
-                        row.get("format")
-                    ),
                     "contributors": normalize(
                         row.get("Primary Creator(s) / Contributors") or
                         row.get("Contributor [Role], Semicolon-Separated") or
@@ -60,10 +112,7 @@ def build_catalog():
                         row.get("Publisher") or 
                         row.get("publisher")
                     ),
-                    "language": normalize(
-                        row.get("Language") or 
-                        row.get("language")
-                    ),
+                    "language": language,
                     "date": normalize(
                         row.get("Release / Publish Date") or 
                         row.get("On Sale Date") or
@@ -86,18 +135,27 @@ def build_catalog():
                         row.get("Price") or 
                         row.get("price") or
                         ""
-                    )
+                    ),
+                    "description": description,
+                    "categories": categories
                 }
                 
                 # Validate required fields
                 if not item["id"] or not item["title"]:
                     continue
                 
-                # Validate format
-                if item["format"] not in ("eBook", "Audiobook"):
-                    continue
-                
-                catalog.append(item)
+                # Validate and sort format
+                format_type = normalize(
+                    row.get("Format") or
+                    row.get("Book Format") or
+                    row.get("format")
+                )
+                if format_type == "eBook":
+                    item["pages"] = 250
+                    catalog["ebooks"].append(item)
+                elif format_type == "Audiobook":
+                    item["duration"] = "5h 30m"
+                    catalog["audiobooks"].append(item)
         
         # Write JSON output
         json_path.parent.mkdir(parents=True, exist_ok=True)
@@ -105,13 +163,12 @@ def build_catalog():
         with json_path.open('w', encoding='utf-8') as f:
             json.dump(catalog, f, ensure_ascii=False, indent=2)
         
-        print(f"✅ Successfully wrote {len(catalog)} items to: {json_path}")
+        item_count = len(catalog["ebooks"]) + len(catalog["audiobooks"])
+        print(f"✅ Successfully wrote {item_count} items to: {json_path}")
         
         # Statistics
-        ebooks = sum(1 for item in catalog if item["format"] == "eBook")
-        audiobooks = sum(1 for item in catalog if item["format"] == "Audiobook")
-        print(f"   📚 eBooks: {ebooks}")
-        print(f"   🎧 Audiobooks: {audiobooks}")
+        print(f"   📚 eBooks: {len(catalog['ebooks'])}")
+        print(f"   🎧 Audiobooks: {len(catalog['audiobooks'])}")
         
         return 0
         

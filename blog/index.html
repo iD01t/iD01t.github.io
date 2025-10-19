@@ -70,6 +70,7 @@
         <!-- Blog Posts Grid -->
         <section class="py-16 intersection-animate">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        feature/dynamic-blog
                 <!-- Search and Filters -->
                 <div class="mb-12">
                     <div class="max-w-2xl mx-auto">
@@ -88,6 +89,9 @@
                     </div>
                 </div>
 
+
+                <!-- ... (Latest Articles header remains the same) ... -->
+       main
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
                     <!-- Articles will be dynamically injected here -->
                 </div>
@@ -107,6 +111,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const blogGrid = document.getElementById('blogGrid');
             const loadMoreBtn = document.getElementById('loadMoreBtn');
+       feature/dynamic-blog
             const categoryFiltersContainer = document.getElementById('category-filters');
             const searchInput = document.getElementById('search-input');
             let allPosts = [];
@@ -116,10 +121,19 @@
             let currentSearchTerm = '';
 
             // Fetch posts and initialize
+
+            const categoryFilters = document.querySelectorAll('.category-filter');
+            let allPosts = [];
+            let filteredPosts = [];
+            let visiblePosts = 6;
+
+            // Fetch and render posts
+        main
             fetch('/blog/posts.json')
                 .then(response => response.json())
                 .then(posts => {
                     allPosts = posts;
+      feature/dynamic-blog
                     populateCategories();
                     applyFilters();
                 });
@@ -157,10 +171,17 @@
                 visiblePosts = 6; // Reset visible posts
                 renderPosts();
             }
+=======
+                    filteredPosts = allPosts;
+                    renderPosts();
+                });
+      main
 
             function renderPosts() {
                 blogGrid.innerHTML = '';
                 const postsToRender = filteredPosts.slice(0, visiblePosts);
+
+              feature/dynamic-blog
 
                 if (postsToRender.length === 0) {
                     blogGrid.innerHTML = '<p class="text-center md:col-span-2 lg:col-span-3 text-slate-500">No articles found. Try a different search or category.</p>';
@@ -173,6 +194,11 @@
                 postsToRender.forEach(post => {
                     const postElement = document.createElement('article');
                     postElement.className = 'blog-post rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-slate-800';
+
+                postsToRender.forEach(post => {
+                    const postElement = document.createElement('article');
+                    postElement.className = 'blog-card rounded-2xl overflow-hidden';
+                  main
                     postElement.innerHTML = `
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
@@ -209,7 +235,8 @@
                 visiblePosts += 6;
                 renderPosts();
             });
-
+              
+              feature/dynamic-blog
             // Event listener for category filters (delegated)
             categoryFiltersContainer.addEventListener('click', (e) => {
                 if (e.target.classList.contains('category-filter')) {
@@ -228,6 +255,23 @@
                 setTimeout(() => {
                     applyFilters();
                 }, 300);
+
+            // Category filtering
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('click', () => {
+                    categoryFilters.forEach(f => f.classList.remove('active'));
+                    filter.classList.add('active');
+                    const category = filter.getAttribute('data-category');
+
+                    if (category === 'all') {
+                        filteredPosts = allPosts;
+                    } else {
+                        filteredPosts = allPosts.filter(post => post.categories.includes(category));
+                    }
+                    visiblePosts = 6;
+                    renderPosts();
+                });
+    main
             });
         });
     </script>

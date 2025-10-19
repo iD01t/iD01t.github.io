@@ -286,6 +286,14 @@
       // Populate filters
       populateFilters(allAudiobooks);
 
+      if (allAudiobooks.length === 0) {
+        document.querySelector('.bg-slate-50').style.display = 'none';
+      }
+
+      feature/catalog-system
+
+
+      main
       // Render function
       function render() {
         const filters = {
