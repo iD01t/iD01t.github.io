@@ -10,7 +10,7 @@ const SITE = {
     audiobooks: '/audiobooks.html',
     book: '/book.html'
   },
-  dataUrl: '/data/catalog.json',
+  dataUrl: '/catalog.json',
   
   // Determine current page mode
   mode() {
