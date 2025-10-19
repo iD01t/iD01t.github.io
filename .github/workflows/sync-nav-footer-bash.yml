@@ -1,0 +1,139 @@
+name: Sync Navigation and Footer (Bash Version)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+  workflow_dispatch:
+
+jobs:
+  sync-header-footer:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      
+      - name: Sync header and footer using bash
+        run: |
+          #!/bin/bash
+          set -e
+          
+          SOURCE_FILE="index.html"
+          TEMP_NAV="/tmp/nav.html"
+          TEMP_FOOTER="/tmp/footer.html"
+          
+          echo "🔍 Extracting navigation and footer from $SOURCE_FILE"
+          
+          # Extract navigation section (from <nav> to </nav>)
+          sed -n '/<nav/,/<\/nav>/p' "$SOURCE_FILE" > "$TEMP_NAV"
+          
+          # Extract footer section (from <footer> to </footer>)
+          sed -n '/<footer/,/<\/footer>/p' "$SOURCE_FILE" > "$TEMP_FOOTER"
+          
+          if [ ! -s "$TEMP_NAV" ]; then
+            echo "❌ ERROR: Could not extract navigation from $SOURCE_FILE"
+            exit 1
+          fi
+          
+          if [ ! -s "$TEMP_FOOTER" ]; then
+            echo "❌ ERROR: Could not extract footer from $SOURCE_FILE"
+            exit 1
+          fi
+          
+          echo "✅ Successfully extracted navigation and footer"
+          
+          # Find all HTML files (excluding hidden directories and source file)
+          find . -type f -name "*.html" \
+            -not -path "./.git/*" \
+            -not -path "./node_modules/*" \
+            -not -path "./.github/*" \
+            -not -path "$SOURCE_FILE" | while read -r html_file; do
+            
+            echo "📝 Processing: $html_file"
+            
+            # Create a temporary file
+            TEMP_FILE="${html_file}.tmp"
+            
+            # Replace navigation
+            if grep -q "<nav" "$html_file"; then
+              # Extract everything before <nav>
+              sed -n '1,/<nav/p' "$html_file" | sed '/<nav/d' > "$TEMP_FILE"
+              
+              # Add new navigation
+              cat "$TEMP_NAV" >> "$TEMP_FILE"
+              
+              # Extract everything after </nav>
+              sed -n '/<\/nav>/,$p' "$html_file" | sed '/<\/nav>/d' >> "$TEMP_FILE"
+              
+              # Copy temp back to original
+              cp "$html_file" "${html_file}.backup"
+              mv "$TEMP_FILE" "$html_file"
+              
+              echo "  ✓ Updated navigation"
+            else
+              echo "  ⚠ No <nav> tag found, skipping navigation update"
+            fi
+            
+            # Replace footer
+            if grep -q "<footer" "$html_file"; then
+              # Create another temp file
+              TEMP_FILE2="${html_file}.tmp2"
+              
+              # Extract everything before <footer>
+              sed -n '1,/<footer/p' "$html_file" | sed '/<footer/d' > "$TEMP_FILE2"
+              
+              # Add new footer
+              cat "$TEMP_FOOTER" >> "$TEMP_FILE2"
+              
+              # Extract everything after </footer>
+              sed -n '/<\/footer>/,$p' "$html_file" | sed '/<\/footer>/d' >> "$TEMP_FILE2"
+              
+              # Move temp to original
+              mv "$TEMP_FILE2" "$html_file"
+              
+              echo "  ✓ Updated footer"
+            else
+              echo "  ⚠ No <footer> tag found, skipping footer update"
+            fi
+            
+            # Remove backup if everything succeeded
+            rm -f "${html_file}.backup"
+            
+          done
+          
+          echo ""
+          echo "✅ Sync complete!"
+          
+          # Clean up temp files
+          rm -f "$TEMP_NAV" "$TEMP_FOOTER"
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "📋 Changes detected in the following files:"
+            git status --short
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git commit -m "🔄 Auto-sync: Update navigation and footer across all HTML files [skip ci]"
+          git push
+      
+      - name: No changes detected
+        if: steps.check_changes.outputs.changes == 'false'
+        run: |
+          echo "ℹ️ No changes detected. All HTML files are already in sync."
