@@ -1,0 +1,62 @@
+[
+    {
+        "title": "10 Essential Python Automation Scripts for Content Creators",
+        "date": "Dec 19, 2024",
+        "readTime": 15,
+        "category": "Automation",
+        "categories": ["automation", "programming"],
+        "description": "Save 3–5 hours weekly with proven automation scripts tailored for creators. From social media posting to file organization.",
+        "tags": ["Python", "Scripts", "Workflow"],
+        "url": "/blog/10-essential-python-automation-scripts-content-creators.html"
+    },
+    {
+        "title": "The Future of AI in Music Production: A DJ's Perspective",
+        "date": "Dec 19, 2024",
+        "readTime": 18,
+        "category": "AI & Creative",
+        "categories": ["ai", "creative"],
+        "description": "How AI tools reshape studio and stage workflows. Practical setups and creative tactics from a working DJ.",
+        "tags": ["AI", "Music", "Production"],
+        "url": "/blog/future-ai-music-production-dj-perspective.html"
+    },
+    {
+        "title": "Building a Profitable eBook Business: Lessons from 100+ Publications",
+        "date": "Dec 19, 2024",
+        "readTime": 20,
+        "category": "Business",
+        "categories": ["business"],
+        "description": "Niche selection, production workflows, and distribution strategies that compound revenue over time.",
+        "tags": ["Publishing", "Revenue", "Strategy"],
+        "url": "/blog/building-profitable-ebook-business-100-publications.html"
+    },
+    {
+        "title": "SEO Strategies That Actually Work for Creative Professionals",
+        "date": "Dec 19, 2024",
+        "readTime": 17,
+        "category": "SEO",
+        "categories": ["business", "creative"],
+        "description": "A focused playbook to rank portfolios, content pages, and product listings in competitive markets.",
+        "tags": ["SEO", "Marketing", "Growth"],
+        "url": "/blog/seo-strategies-creative-professionals.html"
+    },
+    {
+        "title": "From Zero to Hero: Learning Programming in 2024",
+        "date": "Dec 19, 2024",
+        "readTime": 14,
+        "category": "Learning",
+        "categories": ["programming"],
+        "description": "A modern roadmap to go from complete beginner to hireable developer, with practical projects and resources.",
+        "tags": ["Learning", "Career", "Roadmap"],
+        "url": "/blog/zero-to-hero-learning-programming-2024.html"
+    },
+    {
+        "title": "The Psychology of Digital Product Pricing",
+        "date": "Dec 19, 2024",
+        "readTime": 16,
+        "category": "Psychology",
+        "categories": ["business"],
+        "description": "Behavioral pricing tactics to increase customer lifetime value without damaging trust or brand perception.",
+        "tags": ["Pricing", "Psychology", "Products"],
+        "url": "/blog/psychology-digital-product-pricing.html"
+    }
+]
