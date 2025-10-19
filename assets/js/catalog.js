@@ -15,19 +15,11 @@ function createBookCard(item, format) {
       <!-- Cover Image with fallback -->
       <a href="/book.html?id=${encodeURIComponent(item.id)}" class="block aspect-[2/3] overflow-hidden bg-slate-200 dark:bg-slate-700">
         <img
-          feature/catalog-system
           src="${item.cover_hd || '/assets/img/placeholders/card-portrait-384x576.webp'}"
           alt="${item.title} cover"
           class="w-full h-full object-cover"
           loading="lazy"
           onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'"
-
-          src="${item.cover_hd || '/assets/img/placeholder-cover.jpg'}"
-          alt="${item.title} cover"
-          class="w-full h-full object-cover"
-          loading="lazy"
-          onerror="this.src='/assets/img/placeholder-cover.jpg'"
-       main
         />
       </a>
 
