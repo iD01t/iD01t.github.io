@@ -1,93 +1,178 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Kitties Mayhem Beta Announcement · iD01t Productions</title>
-  <meta name="description" content="The public PC beta for Nini’s Adventures: Kitties Mayhem! opens on September 24, 2025."/>
-  <link rel="canonical" href="https://id01t.store/blog/kitties-mayhem-beta.html"/>
-  <meta name="theme-color" content="#16185c"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}}}}};</script>
-  <link rel="stylesheet" href="/css/custom.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Kitties Mayhem Beta Announcement · iD01t Productions</title>
+<meta content="The public PC beta for Nini’s Adventures: Kitties Mayhem! opens on September 24, 2025." name="description"/>
+<link href="https://id01t.store/blog/kitties-mayhem-beta.html" rel="canonical"/>
+<meta content="#16185c" name="theme-color"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f5f6ff',100:'#e6e9ff',200:'#c9ccff',300:'#a2a8ff',400:'#7a82ff',500:'#545cff',600:'#3a3fe6',700:'#2c30b4',800:'#202383',900:'#16185c'}}}}};</script>
+<link href="/css/custom.css" rel="stylesheet"/>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-
-  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="flex items-center gap-2" aria-label="Home">
-          <img src="/assets/img/brand/logo.png" class="h-8 w-8" alt="iD01t Productions">
-          <span class="font-semibold tracking-tight">iD01t Productions</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
-          <a href="/index.html" class="link-underline">Home</a>
-          <a href="/store.html" class="link-underline">Store</a>
-          <a href="/apps.html" class="link-underline">Apps</a>
-          <a href="/ebooks.html" class="link-underline">eBooks</a>
-          <a href="/audiobooks.html" class="link-underline">Audiobooks</a>
-          <a href="/games.html" class="link-underline">Games</a>
-          <a href="/music.html" class="link-underline">Music</a>
-          <a href="/blog.html" class="link-underline text-brand-600 dark:text-brand-400">Blog</a>
-          <a href="/about.html" class="link-underline">About</a>
-          <a href="/contact.html" class="link-underline">Contact</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <button id="themeToggle" class="rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm">Theme</button>
-          <a href="/#newsletter" class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2">Newsletter</a>
-          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="/index.html" class="py-2">Home</a>
-        <a href="/store.html" class="py-2">Store</a>
-        <a href="/apps.html" class="py-2">Apps</a>
-        <a href="/ebooks.html" class="py-2">eBooks</a>
-        <a href="/audiobooks.html" class="py-2">Audiobooks</a>
-        <a href="/games.html" class="py-2">Games</a>
-        <a href="/music.html" class="py-2">Music</a>
-        <a href="/blog.html" class="py-2 text-brand-600 dark:text-brand-400">Blog</a>
-        <a href="/about.html" class="py-2">About</a>
-        <a href="/contact.html" class="py-2">Contact</a>
-      </div>
-    </div>
-  </header>
-
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
 <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <article class="prose prose-lg dark:prose-invert max-w-none">
-    <header class="mb-12">
-      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Kitties Mayhem Beta Announcement</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-400">Published on September 8, 2025</p>
-    </header>
-    <p>The public PC beta for Nini’s Adventures: Kitties Mayhem! opens on September 24, 2025. Get ready for some chaotic online multiplayer action!</p>
-    <p>Nini’s Adventures: Kitties Mayhem! is a fast-paced online shooter with unique feline abilities and colorful destructible arenas. We are excited to finally let you play it.</p>
-    <p>You can learn more about the game and request beta access on our <a href="/games.html">Games page</a>.</p>
-  </article>
+<article class="prose prose-lg dark:prose-invert max-w-none">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<p>The public PC beta for Nini’s Adventures: Kitties Mayhem! opens on September 24, 2025. Get ready for some chaotic online multiplayer action!</p>
+<p>Nini’s Adventures: Kitties Mayhem! is a fast-paced online shooter with unique feline abilities and colorful destructible arenas. We are excited to finally let you play it.</p>
+<p>You can learn more about the game and request beta access on our <a href="/games.html">Games page</a>.</p>
+</article>
 </main>
-
-  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <p class="font-semibold">iD01t Productions</p>
-          <p class="text-sm text-slate-500">© <span id="year"></span> All rights reserved</p>
-        </div>
-        <nav class="flex flex-wrap gap-4 text-sm">
-          <a href="/legal/terms.html" class="link-underline">Terms</a>
-          <a href="/legal/privacy.html" class="link-underline">Privacy</a>
-          <a href="/legal/refunds.html" class="link-underline">Refunds</a>
-          <a href="https://github.com/id01t" class="link-underline" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://id01t.itch.io" class="link-underline" target="_blank" rel="noopener">itch.io</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

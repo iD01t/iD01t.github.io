@@ -1,39 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full scroll-smooth">
+
+<html class="h-full scroll-smooth" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Windows Apps · iD01t Productions</title>
-    <meta name="description" content="Professional Windows utilities and creative tools - HTML2exe Pro, Sprite Forge Pro, Py2Win, CryptoPulse Monitor, and more. Built for developers and creators.">
-    <meta name="keywords" content="Windows apps, desktop applications, HTML2exe Pro, Sprite Forge Pro, Py2Win, CryptoPulse Monitor, development tools, creative software">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://id01t.store/apps.html">
-    <meta property="og:title" content="Professional Windows Apps · iD01t Productions">
-    <meta property="og:description" content="Professional Windows utilities and creative tools for developers and creators">
-    <meta property="og:image" content="https://id01t.store/assets/img/apps-preview.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://id01t.store/apps.html">
-    <meta property="twitter:title" content="Professional Windows Apps · iD01t Productions">
-    <meta property="twitter:description" content="Professional Windows utilities and creative tools for developers and creators">
-    <meta property="twitter:image" content="https://id01t.store/assets/img/apps-preview.png">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="canonical" href="https://id01t.store/apps.html">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Windows Apps · iD01t Productions</title>
+<meta content="Professional Windows utilities and creative tools - HTML2exe Pro, Sprite Forge Pro, Py2Win, CryptoPulse Monitor, and more. Built for developers and creators." name="description"/>
+<meta content="Windows apps, desktop applications, HTML2exe Pro, Sprite Forge Pro, Py2Win, CryptoPulse Monitor, development tools, creative software" name="keywords"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.store/apps.html" property="og:url"/>
+<meta content="Professional Windows Apps · iD01t Productions" property="og:title"/>
+<meta content="Professional Windows utilities and creative tools for developers and creators" property="og:description"/>
+<meta content="https://id01t.store/assets/img/apps-preview.png" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://id01t.store/apps.html" property="twitter:url"/>
+<meta content="Professional Windows Apps · iD01t Productions" property="twitter:title"/>
+<meta content="Professional Windows utilities and creative tools for developers and creators" property="twitter:description"/>
+<meta content="https://id01t.store/assets/img/apps-preview.png" property="twitter:image"/>
+<!-- Favicon -->
+<link href="/assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://id01t.store/apps.html" rel="canonical"/>
+<!-- Preload critical resources -->
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<!-- Structured Data -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -47,10 +43,9 @@
       }
     }
     </script>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -74,7 +69,7 @@
                         },
                         app: {
                             50: '#f5faff',
-                            100: '#e0f2ff', 
+                            100: '#e0f2ff',
                             200: '#bae0ff',
                             300: '#8dceff',
                             400: '#5abaff',
@@ -108,9 +103,8 @@
             }
         }
     </script>
-    
-    <!-- Custom styles -->
-    <style>
+<!-- Custom styles -->
+<style>
         .focus-ring {
             outline: none;
             box-shadow: 0 0 0 2px #16185c;
@@ -148,118 +142,92 @@
         }
     </style>
 </head>
-<<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 font-sans">
-  <!-- ==================== HEADER ==================== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg">iD01t Productions</span>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          <a href="/apps.html" class="text-app-600 dark:text-app-400 font-medium transition-colors focus-ring rounded">Apps</a>
-          <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">eBooks</a>
-          <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Audiobooks</a>
-          <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Games</a>
-          <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Music</a>
-          <a href="/blog.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Blog</a>
-          <a href="/about.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">About</a>
-          <a href="/contact.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Contact</a>
-        </nav>
-
-        <!-- Desktop Actions -->
-        <div class="hidden md:flex items-center gap-4">
-          <button id="themeToggle" class="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors focus-ring rounded-lg" aria-label="Toggle theme">
-            <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            <span class="sr-only theme-text">Dark</span>
-          </button>
-          <a href="/store.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
-            Store
-          </a>
-        </div>
-
-        <!-- Mobile menu button -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 focus-ring rounded-lg" aria-label="Toggle mobile menu" aria-expanded="false">
-          <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <div id="mobileMenu" class="hidden md:hidden pb-4 border-t border-slate-200 dark:border-slate-800 mt-4">
-        <nav class="flex flex-col gap-4 pt-4">
-          <a href="/apps.html" class="text-app-600 dark:text-app-400 font-medium transition-colors focus-ring rounded">Apps</a>
-          <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">eBooks</a>
-          <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Audiobooks</a>
-          <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Games</a>
-          <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Music</a>
-          <a href="/blog.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Blog</a>
-          <a href="/about.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">About</a>
-          <a href="/contact.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Contact</a>
-          <div class="flex items-center gap-4 pt-2">
-            <button id="mobileThemeToggle" class="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors focus-ring rounded-lg" aria-label="Toggle theme">
-              <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-              </svg>
-              <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-              <span class="sr-only mobile-theme-text">Dark</span>
-            </button>
-            <a href="/store.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
-              Store
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="pt-16">
-    <!-- Hero Section -->
-    <section class="py-16 intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-5xl sm:text-6xl font-bold mb-6">
-          <span class="gradient-text">Professional Windows Apps</span>
-        </h1>
-        <p class="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 font-sans">
+<!-- ==================== HEADER ==================== -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="py-16 intersection-animate">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-5xl sm:text-6xl font-bold mb-6">
+<span class="gradient-text">Professional Windows Apps</span>
+</h1>
+<p class="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto">
           Desktop tools and creative utilities built for speed, reliability, and professional workflows.
           <strong>Transform your development process with battle-tested applications.</strong>
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 mb-8">
-          <span class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+</p>
+<div class="flex flex-wrap justify-center gap-4 mb-8">
+<span class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
             Windows 10/11 Compatible
           </span>
-          <span class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+<span class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="w-2 h-2 bg-blue-500 rounded-full"></span>
             Instant Download
           </span>
-          <span class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-            <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+<span class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="w-2 h-2 bg-purple-500 rounded-full"></span>
             Professional Support
           </span>
-        </div>
-      </div>
-    </section>
-    <div class="flex flex-wrap justify-center gap-8 my-8">
-      <iframe frameborder="0" src="https://itch.io/embed/3844409?linkback=true&amp;border_width=3&amp;dark=true" width="556" height="171"><a href="https://id01t.itch.io/html2win">HTML2Win Pro by iD01t Productions</a></iframe>
-      <iframe frameborder="0" src="https://itch.io/embed/3927691?linkback=true&amp;border_width=3&amp;dark=true" width="556" height="171"><a href="https://id01t.itch.io/html2linux-pro">HTML2Linux Pro by iD01t Productions</a></iframe>
-    </div>
+</div>
+</div>
+</section>
+<div class="flex flex-wrap justify-center gap-8 my-8">
+<iframe frameborder="0" height="171" src="https://itch.io/embed/3844409?linkback=true&amp;border_width=3&amp;dark=true" width="556"><a href="https://id01t.itch.io/html2win">HTML2Win Pro by iD01t Productions</a></iframe>
+<iframe frameborder="0" height="171" src="https://itch.io/embed/3927691?linkback=true&amp;border_width=3&amp;dark=true" width="556"><a href="https://id01t.itch.io/html2linux-pro">HTML2Linux Pro by iD01t Productions</a></iframe>
+</div>
 <!-- Sprite Forge Pro -->
 <section class="mb-24 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20 rounded-3xl p-8 md:p-12" id="sprite-forge">
 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -452,79 +420,71 @@
 </div>
 </section>
 </main>
-  </main>
 
-  <!-- Spacer to ensure footer visibility on short viewports -->
-  <div class="h-20"></div>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-      <div class="space-y-4">
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg text-white">iD01t Productions</span>
-        </a>
-        <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Products</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
-          <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
-          <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
-          <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
-          <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Resources</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
-          <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
-          <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
-          <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
-          <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Legal</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
-          <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
-          <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
-          <li><a href="/legal/cookies.html" class="hover:text-white transition-colors focus-ring rounded">Cookie Policy</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom -->
-    <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-      <div class="flex items-center gap-6">
-        <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
-        <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
-        <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ==================== SCRIPTS ==================== -->
-  <script>
+<!-- Spacer to ensure footer visibility on short viewports -->
+<div class="h-20"></div>
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- ==================== SCRIPTS ==================== -->
+<script>
     // Theme toggle (light/dark)
     const themeToggle = document.getElementById('themeToggle');
     const mobileThemeToggle = document.getElementById('mobileThemeToggle');
     const root = document.documentElement;
-    
+
     const updateThemeText = () => {
       const isDark = root.classList.contains('dark');
       document.querySelectorAll('.theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
       document.querySelectorAll('.mobile-theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
     };
-    
+
     const setTheme = mode => {
       if (mode === 'dark') {
         root.classList.add('dark');
@@ -534,7 +494,7 @@
       localStorage.setItem('theme', mode);
       updateThemeText();
     };
-    
+
     [themeToggle, mobileThemeToggle].forEach(toggle => {
       if (toggle) {
         toggle.addEventListener('click', () => {
@@ -543,7 +503,7 @@
         });
       }
     });
-    
+
     // Init theme based on saved value / system preference
     (() => {
       const saved = localStorage.getItem('theme');
@@ -556,7 +516,7 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
     const closeIcon = document.getElementById('closeIcon');
-    
+
     if (mobileBtn && mobileMenu) {
       mobileBtn.addEventListener('click', () => {
         const isOpen = mobileMenu.classList.toggle('hidden');
@@ -575,7 +535,7 @@
         }
       });
     }, { threshold: 0.3 });
-    
+
     document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
 
     // Current year in footer

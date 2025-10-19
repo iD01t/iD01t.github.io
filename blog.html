@@ -1,39 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full scroll-smooth">
+
+<html class="h-full scroll-smooth" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Blog & Resources - iD01t Productions | AI, Programming & Creator Insights</title>
-    <meta name="description" content="Expert insights on AI automation, programming tutorials, indie development, and creator workflows. Learn from a full-stack developer with 100+ digital products">
-    <meta name="keywords" content="AI automation, programming tutorials, indie development, creator workflows, Python scripts, music production, digital products, ebook business, SEO strategies">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://id01t.store/blog.html">
-    <meta property="og:title" content="Tech Blog & Resources - iD01t Productions">
-    <meta property="og:description" content="Expert insights on AI automation, programming tutorials, indie development, and creator workflows. Learn from a full-stack developer with 100+ digital products">
-    <meta property="og:image" content="https://id01t.store/assets/img/blog-preview.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://id01t.store/blog.html">
-    <meta property="twitter:title" content="Tech Blog & Resources - iD01t Productions">
-    <meta property="twitter:description" content="Expert insights on AI automation, programming tutorials, indie development, and creator workflows">
-    <meta property="twitter:image" content="https://id01t.store/assets/img/blog-preview.png">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="canonical" href="https://id01t.store/blog.html">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tech Blog &amp; Resources - iD01t Productions | AI, Programming &amp; Creator Insights</title>
+<meta content="Expert insights on AI automation, programming tutorials, indie development, and creator workflows. Learn from a full-stack developer with 100+ digital products" name="description"/>
+<meta content="AI automation, programming tutorials, indie development, creator workflows, Python scripts, music production, digital products, ebook business, SEO strategies" name="keywords"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.store/blog.html" property="og:url"/>
+<meta content="Tech Blog &amp; Resources - iD01t Productions" property="og:title"/>
+<meta content="Expert insights on AI automation, programming tutorials, indie development, and creator workflows. Learn from a full-stack developer with 100+ digital products" property="og:description"/>
+<meta content="https://id01t.store/assets/img/blog-preview.png" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://id01t.store/blog.html" property="twitter:url"/>
+<meta content="Tech Blog &amp; Resources - iD01t Productions" property="twitter:title"/>
+<meta content="Expert insights on AI automation, programming tutorials, indie development, and creator workflows" property="twitter:description"/>
+<meta content="https://id01t.store/assets/img/blog-preview.png" property="twitter:image"/>
+<!-- Favicon -->
+<link href="/assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://id01t.store/blog.html" rel="canonical"/>
+<!-- Preload critical resources -->
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<!-- Structured Data -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
@@ -63,10 +59,9 @@
       ]
     }
     </script>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -118,9 +113,8 @@
             }
         }
     </script>
-    
-    <!-- Custom styles -->
-    <style>
+<!-- Custom styles -->
+<style>
         .focus-ring {
             outline: none;
             box-shadow: 0 0 0 2px #16185c;
@@ -185,494 +179,446 @@
         }
     </style>
 </head>
-
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 font-sans">
-  <!-- ==================== HEADER ==================== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg">iD01t Productions</span>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Apps</a>
-          <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">eBooks</a>
-          <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Audiobooks</a>
-          <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Games</a>
-          <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Music</a>
-          <a href="/blog.html" class="text-brand-primary font-medium focus-ring rounded">Blog</a>
-          <a href="/about.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">About</a>
-          <a href="/contact.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Contact</a>
-        </nav>
-
-        <!-- Desktop Actions -->
-        <div class="hidden md:flex items-center gap-4">
-          <button id="themeToggle" class="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors focus-ring rounded-lg" aria-label="Toggle theme">
-            <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            <span class="sr-only theme-text">Dark</span>
-          </button>
-          <a href="/store.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
-            Store
-          </a>
-        </div>
-
-        <!-- Mobile menu button -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 focus-ring rounded-lg" aria-label="Toggle mobile menu" aria-expanded="false">
-          <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <div id="mobileMenu" class="hidden md:hidden pb-4 border-t border-slate-200 dark:border-slate-800 mt-4">
-        <nav class="flex flex-col gap-4 pt-4">
-          <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Apps</a>
-          <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">eBooks</a>
-          <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Audiobooks</a>
-          <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Games</a>
-          <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Music</a>
-          <a href="/blog.html" class="text-brand-primary font-medium focus-ring rounded">Blog</a>
-          <a href="/about.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">About</a>
-          <a href="/contact.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Contact</a>
-          <div class="flex items-center gap-4 pt-2">
-            <button id="mobileThemeToggle" class="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors focus-ring rounded-lg" aria-label="Toggle theme">
-              <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-              </svg>
-              <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-              <span class="sr-only mobile-theme-text">Dark</span>
-            </button>
-            <a href="/store.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
-              Store
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="pt-16">
-    <!-- Hero Section -->
-    <section class="relative gradient-bg text-white py-24 intersection-animate">
-      <div class="absolute inset-0 bg-black/30"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-          Tech Blog & <span class="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Resources</span>
-        </h1>
-        <p class="text-xl sm:text-2xl text-slate-200 mb-4 max-w-4xl mx-auto">
-          <strong>AI automation, programming, and creative workflows</strong>
-        </p>
-        <p class="text-lg text-slate-300 mb-8 max-w-3xl mx-auto">
+<!-- ==================== HEADER ==================== -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative gradient-bg text-white py-24 intersection-animate">
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+          Tech Blog &amp; <span class="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Resources</span>
+</h1>
+<p class="text-xl sm:text-2xl text-slate-200 mb-4 max-w-4xl mx-auto">
+<strong>AI automation, programming, and creative workflows</strong>
+</p>
+<p class="text-lg text-slate-300 mb-8 max-w-3xl mx-auto">
           Expert insights from building 100+ digital products. Learn practical techniques for automation, development, and creative business growth
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <div class="relative max-w-md mx-auto sm:mx-0">
-            <input type="text" id="searchInput" placeholder="Search articles..." class="w-full px-4 py-3 pr-12 rounded-lg text-slate-900 border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
-            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-          <a href="#newsletter" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-lg text-lg font-medium focus-ring transition-all">
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<div class="relative max-w-md mx-auto sm:mx-0">
+<input class="w-full px-4 py-3 pr-12 rounded-lg text-slate-900 border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none" id="searchInput" placeholder="Search articles..." type="text"/>
+<svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<a class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-lg text-lg font-medium focus-ring transition-all" href="#newsletter">
             📧 Newsletter
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Post -->
-    <section class="py-16 intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+</div>
+</section>
+<!-- Featured Post -->
+<section class="py-16 intersection-animate">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-4">
             🔥 Featured Article
           </h2>
-          <p class="text-lg text-slate-600 dark:text-slate-400">
+<p class="text-lg text-slate-600 dark:text-slate-400">
             Must-read content for developers and creators
           </p>
-        </div>
-        
-        <article class="featured-card rounded-2xl p-8 max-w-4xl mx-auto text-center">
-          <p class="text-white/80 text-sm mb-4">Dec 19, 2024 · 15 min read · Featured</p>
-          <h3 class="text-3xl font-bold mb-4">
-            <a href="/blog/10-essential-python-automation-scripts-content-creators.html" class="hover:underline">
+</div>
+<article class="featured-card rounded-2xl p-8 max-w-4xl mx-auto text-center">
+<p class="text-white/80 text-sm mb-4">Dec 19, 2024 · 15 min read · Featured</p>
+<h3 class="text-3xl font-bold mb-4">
+<a class="hover:underline" href="/blog/10-essential-python-automation-scripts-content-creators.html">
               10 Essential Python Automation Scripts for Content Creators
             </a>
-          </h3>
-          <p class="text-xl text-white/90 mb-6 max-w-3xl mx-auto">
+</h3>
+<p class="text-xl text-white/90 mb-6 max-w-3xl mx-auto">
             Save 3–5 hours weekly with proven automation scripts tailored for creators. From social media posting to file organization, these scripts will transform your workflow.
           </p>
-          <div class="flex flex-wrap justify-center gap-2 mb-6">
-            <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Python</span>
-            <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Automation</span>
-            <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Productivity</span>
-          </div>
-          <a href="/blog/10-essential-python-automation-scripts-content-creators.html" class="bg-white text-purple-600 hover:bg-slate-100 px-8 py-3 rounded-lg font-medium focus-ring transition-all">
+<div class="flex flex-wrap justify-center gap-2 mb-6">
+<span class="px-3 py-1 bg-white/20 rounded-full text-sm">Python</span>
+<span class="px-3 py-1 bg-white/20 rounded-full text-sm">Automation</span>
+<span class="px-3 py-1 bg-white/20 rounded-full text-sm">Productivity</span>
+</div>
+<a class="bg-white text-purple-600 hover:bg-slate-100 px-8 py-3 rounded-lg font-medium focus-ring transition-all" href="/blog/10-essential-python-automation-scripts-content-creators.html">
             Read Featured Article →
           </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Categories & Search -->
-    <section class="py-8 intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8">
-          <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">Browse by Category</h3>
-          <div class="flex flex-wrap justify-center gap-3">
-            <button class="category-filter active px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="all">
+</article>
+</div>
+</section>
+<!-- Categories & Search -->
+<section class="py-8 intersection-animate">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">Browse by Category</h3>
+<div class="flex flex-wrap justify-center gap-3">
+<button class="category-filter active px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="all">
               All Posts
             </button>
-            <button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="automation">
+<button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="automation">
               🤖 Automation
             </button>
-            <button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="programming">
+<button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="programming">
               💻 Programming
             </button>
-            <button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="business">
+<button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="business">
               💼 Business
             </button>
-            <button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="creative">
+<button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="creative">
               🎨 Creative
             </button>
-            <button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="ai">
-              🧠 AI & ML
+<button class="category-filter px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-sm font-medium focus-ring transition-all" data-category="ai">
+              🧠 AI &amp; ML
             </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog Posts Grid -->
-    <section class="py-16 intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Posts Grid -->
+<section class="py-16 intersection-animate">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-4">
             Latest Articles
           </h2>
-          <p class="text-lg text-slate-600 dark:text-slate-400">
+<p class="text-lg text-slate-600 dark:text-slate-400">
             Practical guides and insights for developers and creators
           </p>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
             Updated September 06, 2025
           </p>
-        </div>
-
-        <div id="searchResults" class="hidden mb-8">
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-4">Search Results</h3>
-          <div id="searchResultsContainer"></div>
-        </div>
-
-        <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Post 1: Python Automation -->
-          <article class="blog-card rounded-2xl overflow-hidden" data-category="automation programming">
-            <div class="p-6">
-              <div class="flex items-center justify-between mb-4">
-                <p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 15 min</p>
-                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Automation</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
-                <a href="/blog/10-essential-python-automation-scripts-content-creators.html" class="hover:text-brand-primary transition-colors">
+</div>
+<div class="hidden mb-8" id="searchResults">
+<h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-4">Search Results</h3>
+<div id="searchResultsContainer"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
+<!-- Post 1: Python Automation -->
+<article class="blog-card rounded-2xl overflow-hidden" data-category="automation programming">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 15 min</p>
+<span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Automation</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+<a class="hover:text-brand-primary transition-colors" href="/blog/10-essential-python-automation-scripts-content-creators.html">
                   10 Essential Python Automation Scripts for Content Creators
                 </a>
-              </h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">
+</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">
                 Save 3–5 hours weekly with proven automation scripts tailored for creators. From social media posting to file organization.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Python</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Scripts</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Workflow</span>
-              </div>
-              <a href="/blog/10-essential-python-automation-scripts-content-creators.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Python</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Scripts</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Workflow</span>
+</div>
+<a class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring" href="/blog/10-essential-python-automation-scripts-content-creators.html">
                 Read Article →
               </a>
-            </div>
-          </article>
-
-          <!-- Post 2: AI Music Production -->
-          <article class="blog-card rounded-2xl overflow-hidden" data-category="ai creative">
-            <div class="p-6">
-              <div class="flex items-center justify-between mb-4">
-                <p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 18 min</p>
-                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">AI & Creative</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
-                <a href="/blog/future-ai-music-production-dj-perspective.html" class="hover:text-brand-primary transition-colors">
+</div>
+</article>
+<!-- Post 2: AI Music Production -->
+<article class="blog-card rounded-2xl overflow-hidden" data-category="ai creative">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 18 min</p>
+<span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">AI &amp; Creative</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+<a class="hover:text-brand-primary transition-colors" href="/blog/future-ai-music-production-dj-perspective.html">
                   The Future of AI in Music Production: A DJ's Perspective
                 </a>
-              </h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">
+</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">
                 How AI tools reshape studio and stage workflows. Practical setups and creative tactics from a working DJ.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">AI</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Music</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Production</span>
-              </div>
-              <a href="/blog/future-ai-music-production-dj-perspective.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">AI</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Music</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Production</span>
+</div>
+<a class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring" href="/blog/future-ai-music-production-dj-perspective.html">
                 Read Article →
               </a>
-            </div>
-          </article>
-
-          <!-- Post 3: eBook Business -->
-          <article class="blog-card rounded-2xl overflow-hidden" data-category="business">
-            <div class="p-6">
-              <div class="flex items-center justify-between mb-4">
-                <p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 20 min</p>
-                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Business</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
-                <a href="/blog/building-profitable-ebook-business-100-publications.html" class="hover:text-brand-primary transition-colors">
+</div>
+</article>
+<!-- Post 3: eBook Business -->
+<article class="blog-card rounded-2xl overflow-hidden" data-category="business">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 20 min</p>
+<span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Business</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+<a class="hover:text-brand-primary transition-colors" href="/blog/building-profitable-ebook-business-100-publications.html">
                   Building a Profitable eBook Business: Lessons from 100+ Publications
                 </a>
-              </h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">
+</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">
                 Niche selection, production workflows, and distribution strategies that compound revenue over time.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Publishing</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Revenue</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Strategy</span>
-              </div>
-              <a href="/blog/building-profitable-ebook-business-100-publications.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Publishing</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Revenue</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Strategy</span>
+</div>
+<a class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring" href="/blog/building-profitable-ebook-business-100-publications.html">
                 Read Article →
               </a>
-            </div>
-          </article>
-
-          <!-- Post 4: SEO for Creatives -->
-          <article class="blog-card rounded-2xl overflow-hidden" data-category="business creative">
-            <div class="p-6">
-              <div class="flex items-center justify-between mb-4">
-                <p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 17 min</p>
-                <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">SEO</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
-                <a href="/blog/seo-strategies-creative-professionals.html" class="hover:text-brand-primary transition-colors">
+</div>
+</article>
+<!-- Post 4: SEO for Creatives -->
+<article class="blog-card rounded-2xl overflow-hidden" data-category="business creative">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 17 min</p>
+<span class="px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs">SEO</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+<a class="hover:text-brand-primary transition-colors" href="/blog/seo-strategies-creative-professionals.html">
                   SEO Strategies That Actually Work for Creative Professionals
                 </a>
-              </h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">
+</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">
                 A focused playbook to rank portfolios, content pages, and product listings in competitive markets.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">SEO</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Marketing</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Growth</span>
-              </div>
-              <a href="/blog/seo-strategies-creative-professionals.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">SEO</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Marketing</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Growth</span>
+</div>
+<a class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring" href="/blog/seo-strategies-creative-professionals.html">
                 Read Article →
               </a>
-            </div>
-          </article>
-
-          <!-- Post 5: Programming Learning -->
-          <article class="blog-card rounded-2xl overflow-hidden" data-category="programming">
-            <div class="p-6">
-              <div class="flex items-center justify-between mb-4">
-                <p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 14 min</p>
-                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Learning</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
-                <a href="/blog/zero-to-hero-learning-programming-2024.html" class="hover:text-brand-primary transition-colors">
+</div>
+</article>
+<!-- Post 5: Programming Learning -->
+<article class="blog-card rounded-2xl overflow-hidden" data-category="programming">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 14 min</p>
+<span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Learning</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+<a class="hover:text-brand-primary transition-colors" href="/blog/zero-to-hero-learning-programming-2024.html">
                   From Zero to Hero: Learning Programming in 2024
                 </a>
-              </h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">
+</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">
                 A modern roadmap to go from complete beginner to hireable developer, with practical projects and resources.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Learning</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Career</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Roadmap</span>
-              </div>
-              <a href="/blog/zero-to-hero-learning-programming-2024.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Learning</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Career</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Roadmap</span>
+</div>
+<a class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring" href="/blog/zero-to-hero-learning-programming-2024.html">
                 Read Article →
               </a>
-            </div>
-          </article>
-
-          <!-- Post 6: Pricing Psychology -->
-          <article class="blog-card rounded-2xl overflow-hidden" data-category="business">
-            <div class="p-6">
-              <div class="flex items-center justify-between mb-4">
-                <p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 16 min</p>
-                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Psychology</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
-                <a href="/blog/psychology-digital-product-pricing.html" class="hover:text-brand-primary transition-colors">
+</div>
+</article>
+<!-- Post 6: Pricing Psychology -->
+<article class="blog-card rounded-2xl overflow-hidden" data-category="business">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<p class="text-xs text-slate-500 dark:text-slate-400">Dec 19, 2024 · 16 min</p>
+<span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Psychology</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+<a class="hover:text-brand-primary transition-colors" href="/blog/psychology-digital-product-pricing.html">
                   The Psychology of Digital Product Pricing
                 </a>
-              </h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">
+</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">
                 Behavioral pricing tactics to increase customer lifetime value without damaging trust or brand perception.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Pricing</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Psychology</span>
-                <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Products</span>
-              </div>
-              <a href="/blog/psychology-digital-product-pricing.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Pricing</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Psychology</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs">Products</span>
+</div>
+<a class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring" href="/blog/psychology-digital-product-pricing.html">
                 Read Article →
               </a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Load More Button -->
-        <div class="text-center mt-12">
-          <button id="loadMoreBtn" class="bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-900 dark:text-slate-50 px-8 py-3 rounded-lg font-medium focus-ring transition-all">
+</div>
+</article>
+</div>
+<!-- Load More Button -->
+<div class="text-center mt-12">
+<button class="bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-900 dark:text-slate-50 px-8 py-3 rounded-lg font-medium focus-ring transition-all" id="loadMoreBtn">
             Load More Articles
           </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section id="newsletter" class="py-24 bg-gradient-to-br from-slate-900 via-brand-primary to-purple-900 text-white intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-4xl sm:text-5xl font-bold mb-6">
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-24 bg-gradient-to-br from-slate-900 via-brand-primary to-purple-900 text-white intersection-animate" id="newsletter">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl sm:text-5xl font-bold mb-6">
             Stay Updated with <span class="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Expert Insights</span>
-          </h2>
-          <p class="text-xl text-slate-200 mb-8">
+</h2>
+<p class="text-xl text-slate-200 mb-8">
             Get the latest tutorials, automation scripts, and business strategies delivered to your inbox. No spam, just actionable content for developers and creators.
           </p>
-          <form class="max-w-md mx-auto mb-8" name="blog_newsletter" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="blog_newsletter" />
-            <div class="flex gap-3">
-              <input type="email" name="email" placeholder="Enter your email" required class="flex-1 px-4 py-3 rounded-lg text-slate-900 border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
-              <button type="submit" class="btn-primary text-white px-6 py-3 rounded-lg font-medium focus-ring whitespace-nowrap">
+<form class="max-w-md mx-auto mb-8" data-netlify="true" method="POST" name="blog_newsletter">
+<input name="form-name" type="hidden" value="blog_newsletter">
+<div class="flex gap-3">
+<input class="flex-1 px-4 py-3 rounded-lg text-slate-900 border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none" name="email" placeholder="Enter your email" required="" type="email"/>
+<button class="btn-primary text-white px-6 py-3 rounded-lg font-medium focus-ring whitespace-nowrap" type="submit">
                 Subscribe
               </button>
-            </div>
-          </form>
-          <p class="text-sm text-slate-300">
+</div>
+</input></form>
+<p class="text-sm text-slate-300">
             Join 1,000+ developers and creators • Unsubscribe anytime
           </p>
-          <p class="text-xs text-slate-400 mt-2">
-            By subscribing you agree to our <a href="/legal/terms.html" class="underline hover:text-white">Terms</a> and <a href="/legal/privacy.html" class="underline hover:text-white">Privacy Policy</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Author Bio -->
-    <section class="py-16 intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-6">
+<p class="text-xs text-slate-400 mt-2">
+            By subscribing you agree to our <a class="underline hover:text-white" href="/legal/terms.html">Terms</a> and <a class="underline hover:text-white" href="/legal/privacy.html">Privacy Policy</a>
+</p>
+</div>
+</div>
+</section>
+<!-- Author Bio -->
+<section class="py-16 intersection-animate">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-6">
             About the Author
           </h2>
-          <div class="blog-card rounded-2xl p-8">
-            <div class="flex flex-col md:flex-row items-center gap-6">
-              <div class="w-24 h-24 bg-gradient-to-br from-brand-primary to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+<div class="blog-card rounded-2xl p-8">
+<div class="flex flex-col md:flex-row items-center gap-6">
+<div class="w-24 h-24 bg-gradient-to-br from-brand-primary to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                 iD01t
               </div>
-              <div class="flex-1 text-left">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-2">iD01t</h3>
-                <p class="text-slate-600 dark:text-slate-400 mb-4">
+<div class="flex-1 text-left">
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-2">iD01t</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">
                   Full-stack developer, DJ, and digital entrepreneur with 100+ published products. Specializes in AI automation, music production, and building scalable creative businesses. Shares practical insights from real-world experience building and launching digital products.
                 </p>
-                <div class="flex gap-4">
-                  <a href="/about.html" class="text-brand-primary hover:underline">More About Me →</a>
-                  <a href="/contact.html" class="text-brand-primary hover:underline">Get in Touch →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Spacer to ensure footer visibility on short viewports -->
-  <div class="h-20"></div>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-      <div class="space-y-4">
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg text-white">iD01t Productions</span>
-        </a>
-        <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Products</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
-          <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
-          <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
-          <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
-          <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Resources</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
-          <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
-          <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
-          <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
-          <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Legal</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
-          <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
-          <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom -->
-    <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-      <div class="flex items-center gap-6">
-        <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
-        <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
-        <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ==================== SCRIPTS ==================== -->
-  <script>
+<div class="flex gap-4">
+<a class="text-brand-primary hover:underline" href="/about.html">More About Me →</a>
+<a class="text-brand-primary hover:underline" href="/contact.html">Get in Touch →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Spacer to ensure footer visibility on short viewports -->
+<div class="h-20"></div>
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- ==================== SCRIPTS ==================== -->
+<script>
     // Theme toggle (light/dark)
     const themeToggle = document.getElementById('themeToggle');
     const mobileThemeToggle = document.getElementById('mobileThemeToggle');
     const root = document.documentElement;
-    
+
     const updateThemeText = () => {
       const isDark = root.classList.contains('dark');
       document.querySelectorAll('.theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
       document.querySelectorAll('.mobile-theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
     };
-    
+
     const setTheme = mode => {
       if (mode === 'dark') {
         root.classList.add('dark');
@@ -682,7 +628,7 @@
       localStorage.setItem('theme', mode);
       updateThemeText();
     };
-    
+
     [themeToggle, mobileThemeToggle].forEach(toggle => {
       if (toggle) {
         toggle.addEventListener('click', () => {
@@ -691,7 +637,7 @@
         });
       }
     });
-    
+
     // Init theme based on saved value / system preference
     (() => {
       const saved = localStorage.getItem('theme');
@@ -704,7 +650,7 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
     const closeIcon = document.getElementById('closeIcon');
-    
+
     if (mobileBtn && mobileMenu) {
       mobileBtn.addEventListener('click', () => {
         const isOpen = mobileMenu.classList.toggle('hidden');
@@ -723,7 +669,7 @@
         }
       });
     }, { threshold: 0.3 });
-    
+
     document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
 
     // Current year in footer
@@ -741,7 +687,7 @@
         filter.classList.add('active');
 
         const category = filter.getAttribute('data-category');
-        
+
         // Filter articles
         articles.forEach(article => {
           const articleCategories = article.getAttribute('data-category');
@@ -772,9 +718,9 @@
         const title = article.querySelector('h3 a').textContent.toLowerCase();
         const description = article.querySelector('p').textContent.toLowerCase();
         const tags = Array.from(article.querySelectorAll('.px-2')).map(tag => tag.textContent.toLowerCase());
-        
-        if (title.includes(query.toLowerCase()) || 
-            description.includes(query.toLowerCase()) || 
+
+        if (title.includes(query.toLowerCase()) ||
+            description.includes(query.toLowerCase()) ||
             tags.some(tag => tag.includes(query.toLowerCase()))) {
           results.push(article.cloneNode(true));
         }
@@ -785,22 +731,22 @@
         searchResultsContainer.innerHTML = '';
         const resultsGrid = document.createElement('div');
         resultsGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
-        
+
         results.forEach(result => {
           // Highlight search term
           const highlightText = (element, query) => {
             const regex = new RegExp(`(${query})`, 'gi');
             element.innerHTML = element.innerHTML.replace(regex, '<span class="search-highlight">$1</span>');
           };
-          
+
           const title = result.querySelector('h3 a');
           const description = result.querySelector('p');
           highlightText(title, query);
           highlightText(description, query);
-          
+
           resultsGrid.appendChild(result);
         });
-        
+
         searchResultsContainer.appendChild(resultsGrid);
         searchResults.classList.remove('hidden');
         blogGrid.style.display = 'none';
