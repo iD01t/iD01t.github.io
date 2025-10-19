@@ -1,38 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full scroll-smooth">
+
+<html class="h-full scroll-smooth" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - iD01t Productions</title>
-    <meta name="description" content="Learn about iD01t Productions - A Canadian creative technology studio uniting software engineering, AI, music, and publishing to empower creators worldwide">
-    <meta name="keywords" content="about iD01t Productions, Guillaume Lessard, Canadian tech studio, software engineering, AI, music production, publishing">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://id01t.store/about.html">
-    <meta property="og:title" content="About Us - iD01t Productions">
-    <meta property="og:description" content="Learn about iD01t Productions - A Canadian creative technology studio uniting software engineering, AI, music, and publishing to empower creators worldwide">
-    <meta property="og:image" content="https://id01t.store/assets/img/about-preview.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://id01t.store/about.html">
-    <meta property="twitter:title" content="About Us - iD01t Productions">
-    <meta property="twitter:description" content="Learn about iD01t Productions - A Canadian creative technology studio uniting software engineering, AI, music, and publishing to empower creators worldwide">
-    <meta property="twitter:image" content="https://id01t.store/assets/img/about-preview.png">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - iD01t Productions</title>
+<meta content="Learn about iD01t Productions - A Canadian creative technology studio uniting software engineering, AI, music, and publishing to empower creators worldwide" name="description"/>
+<meta content="about iD01t Productions, Guillaume Lessard, Canadian tech studio, software engineering, AI, music production, publishing" name="keywords"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.store/about.html" property="og:url"/>
+<meta content="About Us - iD01t Productions" property="og:title"/>
+<meta content="Learn about iD01t Productions - A Canadian creative technology studio uniting software engineering, AI, music, and publishing to empower creators worldwide" property="og:description"/>
+<meta content="https://id01t.store/assets/img/about-preview.png" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://id01t.store/about.html" property="twitter:url"/>
+<meta content="About Us - iD01t Productions" property="twitter:title"/>
+<meta content="Learn about iD01t Productions - A Canadian creative technology studio uniting software engineering, AI, music, and publishing to empower creators worldwide" property="twitter:description"/>
+<meta content="https://id01t.store/assets/img/about-preview.png" property="twitter:image"/>
+<!-- Favicon -->
+<link href="/assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/manifest.json" rel="manifest"/>
+<!-- Preload critical resources -->
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<!-- Structured Data -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -58,10 +54,9 @@
       ]
     }
     </script>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -103,9 +98,8 @@
             }
         }
     </script>
-    
-    <!-- Custom styles -->
-    <style>
+<!-- Custom styles -->
+<style>
         .focus-ring {
             outline: none;
             box-shadow: 0 0 0 2px #16185c;
@@ -147,351 +141,302 @@
         }
     </style>
 </head>
-
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 font-sans">
-  <!-- ==================== HEADER ==================== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg">iD01t Productions</span>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Apps</a>
-          <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">eBooks</a>
-          <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Audiobooks</a>
-          <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Games</a>
-          <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Music</a>
-          <a href="/blog.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Blog</a>
-          <a href="/about.html" class="text-brand-primary font-medium focus-ring rounded">About</a>
-          <a href="/contact.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Contact</a>
-        </nav>
-
-        <!-- Desktop Actions -->
-        <div class="hidden md:flex items-center gap-4">
-          <button id="themeToggle" class="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors focus-ring rounded-lg" aria-label="Toggle theme">
-            <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            <span class="sr-only theme-text">Dark</span>
-          </button>
-          <a href="/store.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
-            Store
-          </a>
-        </div>
-
-        <!-- Mobile menu button -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 focus-ring rounded-lg" aria-label="Toggle mobile menu" aria-expanded="false">
-          <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <div id="mobileMenu" class="hidden md:hidden pb-4 border-t border-slate-200 dark:border-slate-800 mt-4">
-        <nav class="flex flex-col gap-4 pt-4">
-          <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Apps</a>
-          <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">eBooks</a>
-          <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Audiobooks</a>
-          <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Games</a>
-          <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Music</a>
-          <a href="/blog.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Blog</a>
-          <a href="/about.html" class="text-brand-primary font-medium focus-ring rounded">About</a>
-          <a href="/contact.html" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-50 transition-colors focus-ring rounded">Contact</a>
-          <div class="flex items-center gap-4 pt-2">
-            <button id="mobileThemeToggle" class="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors focus-ring rounded-lg" aria-label="Toggle theme">
-              <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-              </svg>
-              <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-              <span class="sr-only mobile-theme-text">Dark</span>
-            </button>
-            <a href="/store.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium focus-ring">
-              Store
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="pt-16">
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-brand-primary via-blue-900 to-purple-900 text-white py-24 intersection-animate">
-      <div class="absolute inset-0 bg-black/20"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+<!-- ==================== HEADER ==================== -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-brand-primary via-blue-900 to-purple-900 text-white py-24 intersection-animate">
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
           About <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">iD01t Productions</span>
-        </h1>
-        <p class="text-xl sm:text-2xl text-slate-200 mb-8 max-w-4xl mx-auto">
+</h1>
+<p class="text-xl sm:text-2xl text-slate-200 mb-8 max-w-4xl mx-auto">
           A Canadian creative technology studio uniting software engineering, AI, music, and publishing to empower creators worldwide
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#story" class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-medium focus-ring inline-flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-medium focus-ring inline-flex items-center gap-2" href="#story">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
             Our Story
           </a>
-          <a href="/contact.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg text-lg font-medium focus-ring transition-all">
+<a class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg text-lg font-medium focus-ring transition-all" href="/contact.html">
             Get in Touch
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Story Section -->
-    <section id="story" class="py-24 intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <!-- Image -->
-          <div class="feature-card rounded-2xl p-8">
-            <img src="/assets/img/placeholders/about.webp" 
-                 alt="About iD01t Productions" 
-                 class="w-full rounded-xl aspect-square object-cover">
-          </div>
-
-          <!-- Content -->
-          <div class="space-y-6">
-            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-50">
+</div>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-24 intersection-animate" id="story">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<!-- Image -->
+<div class="feature-card rounded-2xl p-8">
+<img alt="About iD01t Productions" class="w-full rounded-xl aspect-square object-cover" src="/assets/img/placeholders/about.webp"/>
+</div>
+<!-- Content -->
+<div class="space-y-6">
+<h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-50">
               Innovation at the Intersection
             </h2>
-            
-            <div class="prose prose-lg text-slate-600 dark:text-slate-300 max-w-none space-y-6">
-              <p>
-                <strong>iD01t Productions</strong> is a Canadian creative and technology studio founded by Guillaume Lessard. We unite software engineering, artificial intelligence, music, and publishing into a single ecosystem designed to empower creators worldwide.
+<div class="prose prose-lg text-slate-600 dark:text-slate-300 max-w-none space-y-6">
+<p>
+<strong>iD01t Productions</strong> is a Canadian creative and technology studio founded by Guillaume Lessard. We unite software engineering, artificial intelligence, music, and publishing into a single ecosystem designed to empower creators worldwide.
               </p>
-              
-              <p>
+<p>
                 From desktop apps that simplify workflows to technical eBooks that train the next generation of developers, from independent games that blend humor and intensity to music projects that inspire audiences across platforms, iD01t Productions thrives at the intersection of technology and creativity.
               </p>
-              
-              <p>
+<p>
                 Our philosophy is simple: <em>automation first, clarity always, and freedom for creators</em>. We focus on building products that save time, maximize return on investment, and provide tangible value. Every release, whether an app, a book, or an album, is shipped with professional quality and a commitment to innovation.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Key Activities Section -->
-    <section class="py-24 bg-slate-100 dark:bg-slate-800 intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Activities Section -->
+<section class="py-24 bg-slate-100 dark:bg-slate-800 intersection-animate">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-4">
             What We Do
           </h2>
-          <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Our diverse portfolio spans multiple industries, all unified by our commitment to excellence and innovation
           </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Software Development -->
-          <div class="feature-card rounded-2xl p-8 text-center">
-            <div class="w-16 h-16 bg-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Software Development -->
+<div class="feature-card rounded-2xl p-8 text-center">
+<div class="w-16 h-16 bg-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
               Software Development
             </h3>
-            <p class="text-slate-600 dark:text-slate-300">
+<p class="text-slate-600 dark:text-slate-300">
               Development of Windows apps and utilities for creators and businesses, integrating AWS and advanced AI for scalability
             </p>
-          </div>
-
-          <!-- Publishing -->
-          <div class="feature-card rounded-2xl p-8 text-center">
-            <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+<!-- Publishing -->
+<div class="feature-card rounded-2xl p-8 text-center">
+<div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
               Publishing
             </h3>
-            <p class="text-slate-600 dark:text-slate-300">
+<p class="text-slate-600 dark:text-slate-300">
               Publication of eBooks and audiobooks on programming, AI, design, and personal growth, including our 50-book love story saga
             </p>
-          </div>
-
-          <!-- Game Development -->
-          <div class="feature-card rounded-2xl p-8 text-center">
-            <div class="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+<!-- Game Development -->
+<div class="feature-card rounded-2xl p-8 text-center">
+<div class="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
               Game Development
             </h3>
-            <p class="text-slate-600 dark:text-slate-300">
+<p class="text-slate-600 dark:text-slate-300">
               Production of independent video games with multiplayer and cross-platform reach, creating universes that expand into literature and music
             </p>
-          </div>
-
-          <!-- Music Production -->
-          <div class="feature-card rounded-2xl p-8 text-center">
-            <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+<!-- Music Production -->
+<div class="feature-card rounded-2xl p-8 text-center">
+<div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
               Music Production
             </h3>
-            <p class="text-slate-600 dark:text-slate-300">
+<p class="text-slate-600 dark:text-slate-300">
               Release of original electronic music under the alias DJ iD01t, reaching listeners across Spotify, Apple Music, and major platforms
             </p>
-          </div>
-
-          <!-- AI Integration -->
-          <div class="feature-card rounded-2xl p-8 text-center">
-            <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+<!-- AI Integration -->
+<div class="feature-card rounded-2xl p-8 text-center">
+<div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
               AI Integration
             </h3>
-            <p class="text-slate-600 dark:text-slate-300">
+<p class="text-slate-600 dark:text-slate-300">
               Integration of AWS and advanced AI into every project for scalability, automation, and enhanced user experiences
             </p>
-          </div>
-
-          <!-- Creative Projects -->
-          <div class="feature-card rounded-2xl p-8 text-center">
-            <div class="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+</div>
+<!-- Creative Projects -->
+<div class="feature-card rounded-2xl p-8 text-center">
+<div class="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">
               Creative Projects
             </h3>
-            <p class="text-slate-600 dark:text-slate-300">
+<p class="text-slate-600 dark:text-slate-300">
               Long-form creative projects including educational series for developers and interconnected universes spanning multiple media
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section class="py-24 intersection-animate">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="feature-card rounded-2xl p-12 text-center">
-          <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-8">
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Section -->
+<section class="py-24 intersection-animate">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="feature-card rounded-2xl p-12 text-center">
+<h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-8">
             Our Vision
           </h2>
-          <p class="text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            Based in Montreal, iD01t Productions operates globally with a digital-first approach, reaching readers, players, and listeners across Amazon, Apple, Google, Spotify, Deezer, itch.io, and beyond. 
+<p class="text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
+            Based in Montreal, iD01t Productions operates globally with a digital-first approach, reaching readers, players, and listeners across Amazon, Apple, Google, Spotify, Deezer, itch.io, and beyond.
             Our vision is to <strong>inspire bold thinking, build communities, and design tools that empower creators to take control of their craft.</strong>
-          </p>
-          <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/store.html" class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-medium focus-ring inline-flex items-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-              </svg>
+</p>
+<div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+<a class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-medium focus-ring inline-flex items-center gap-2" href="/store.html">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
               Explore Our Products
             </a>
-            <a href="/contact.html" class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-50 px-8 py-4 rounded-lg text-lg font-medium focus-ring transition-colors">
+<a class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-50 px-8 py-4 rounded-lg text-lg font-medium focus-ring transition-colors" href="/contact.html">
               Contact Us
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Spacer to ensure footer visibility on short viewports -->
-  <div class="h-20"></div>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-      <div class="space-y-4">
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg text-white">iD01t Productions</span>
-        </a>
-        <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Products</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
-          <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
-          <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
-          <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
-          <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Resources</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
-          <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
-          <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
-          <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
-          <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Legal</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
-          <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
-          <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom -->
-    <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-      <div class="flex items-center gap-6">
-        <span class="flex items-center gap-2"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><span class="text-slate-400">All systems operational</span></span>
-        <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
-        <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ==================== SCRIPTS ==================== -->
-  <script>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Spacer to ensure footer visibility on short viewports -->
+<div class="h-20"></div>
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- ==================== SCRIPTS ==================== -->
+<script>
     // Theme toggle (light/dark)
     const themeToggle = document.getElementById('themeToggle');
     const mobileThemeToggle = document.getElementById('mobileThemeToggle');
     const root = document.documentElement;
-    
+
     const updateThemeText = () => {
       const isDark = root.classList.contains('dark');
       document.querySelectorAll('.theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
       document.querySelectorAll('.mobile-theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
     };
-    
+
     const setTheme = mode => {
       if (mode === 'dark') {
         root.classList.add('dark');
@@ -501,7 +446,7 @@
       localStorage.setItem('theme', mode);
       updateThemeText();
     };
-    
+
     [themeToggle, mobileThemeToggle].forEach(toggle => {
       if (toggle) {
         toggle.addEventListener('click', () => {
@@ -510,7 +455,7 @@
         });
       }
     });
-    
+
     // Init theme based on saved value / system preference
     (() => {
       const saved = localStorage.getItem('theme');
@@ -523,7 +468,7 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
     const closeIcon = document.getElementById('closeIcon');
-    
+
     if (mobileBtn && mobileMenu) {
       mobileBtn.addEventListener('click', () => {
         const isOpen = mobileMenu.classList.toggle('hidden');
@@ -547,7 +492,7 @@
         }
       });
     }, { threshold: 0.3 });
-    
+
     document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
 
     // Current year in footer

@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Thank you for your purchase — iD01t Productions</title>
-  <meta name="description" content="Thanks for your purchase! Your order is confirmed. Access downloads, review your receipt, or continue shopping." />
-  <meta name="robots" content="noindex,follow,max-image-preview:large" />
-  <meta name="theme-color" content="#2aa7ff" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://id01t.github.io/thank-you.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Thank you — iD01t Productions" />
-  <meta property="og:description" content="Order confirmed. Your downloads and receipt are ready." />
-  <meta property="og:url" content="https://id01t.github.io/thank-you.html" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" />
-  <meta property="og:site_name" content="iD01t Productions" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Thank you — iD01t Productions" />
-  <meta name="twitter:description" content="Order confirmed. Your downloads and receipt are ready." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" />
-  <meta name="twitter:creator" content="@id01t" />
-
-  <!-- Tailwind CSS (same setup as index) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank you for your purchase — iD01t Productions</title>
+<meta content="Thanks for your purchase! Your order is confirmed. Access downloads, review your receipt, or continue shopping." name="description"/>
+<meta content="noindex,follow,max-image-preview:large" name="robots"/>
+<meta content="#2aa7ff" name="theme-color"/>
+<!-- Canonical -->
+<link href="https://id01t.github.io/thank-you.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Thank you — iD01t Productions" property="og:title"/>
+<meta content="Order confirmed. Your downloads and receipt are ready." property="og:description"/>
+<meta content="https://id01t.github.io/thank-you.html" property="og:url"/>
+<meta content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" property="og:image"/>
+<meta content="iD01t Productions" property="og:site_name"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Thank you — iD01t Productions" name="twitter:title"/>
+<meta content="Order confirmed. Your downloads and receipt are ready." name="twitter:description"/>
+<meta content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" name="twitter:image"/>
+<meta content="@id01t" name="twitter:creator"/>
+<!-- Tailwind CSS (same setup as index) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     tailwind.config = {
       theme: {
         extend: {
@@ -60,9 +56,8 @@
       }
     }
   </script>
-
-  <!-- Custom Styles (reused + a few extras) -->
-  <style>
+<!-- Custom Styles (reused + a few extras) -->
+<style>
     :root { --ring-color: theme('colors.brand.500'); }
     .link-underline { position: relative; transition: color .2s; }
     .link-underline::after { content:""; position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .2s ease-out; }
@@ -86,227 +81,215 @@
     }
   </style>
 </head>
-
 <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
-
-  <!-- ===== Header (copied from index (3).html) ===== -->
-  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center space-x-8">
-          <a href="/" class="flex items-center space-x-2 focus-ring" aria-label="iD01t Productions home">
-            <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-            <span class="font-semibold text-lg">iD01t Productions</span>
-          </a>
-          <div class="hidden md:flex items-center space-x-6">
-            <a href="/store.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Store</a>
-            <a href="/ebooks.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">eBooks</a>
-            <a href="/audiobooks.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Audiobooks</a>
-            <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Apps</a>
-            <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Games</a>
-            <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Music</a>
-          </div>
-        </div>
-        <div class="flex items-center space-x-4">
-          <button id="themeToggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle theme">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-            </svg>
-          </button>
-          <a href="/contact.html" class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring">Contact</a>
-          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" aria-label="Toggle mobile menu" aria-expanded="false">
-            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-      <div class="px-4 py-4 space-y-3">
-        <a href="/store.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Store</a>
-        <a href="/ebooks.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">eBooks</a>
-        <a href="/audiobooks.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Audiobooks</a>
-        <a href="/apps.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Apps</a>
-        <a href="/games.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Games</a>
-        <a href="/music.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Music</a>
-        <a href="/contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ===== Success Hero ===== -->
-  <section class="relative overflow-hidden">
-    <!-- subtle confetti -->
-    <div id="confetti" class="no-print pointer-events-none"></div>
-
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
-      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-emerald-900/40 ring-1 ring-emerald-200 dark:ring-emerald-800 mb-6">
-        <svg class="w-8 h-8 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-      </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold gradient-text mb-4">Thank you! Your order is confirmed.</h1>
-      <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+<!-- ===== Header (copied from index (3).html) ===== -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<!-- ===== Success Hero ===== -->
+<section class="relative overflow-hidden">
+<!-- subtle confetti -->
+<div class="no-print pointer-events-none" id="confetti"></div>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-emerald-900/40 ring-1 ring-emerald-200 dark:ring-emerald-800 mb-6">
+<svg aria-hidden="true" class="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h1 class="text-4xl md:text-5xl font-extrabold gradient-text mb-4">Thank you! Your order is confirmed.</h1>
+<p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
         We emailed your receipt and download links to <strong id="customerEmail">your email</strong>. You can access everything below or from your inbox.
       </p>
-    </div>
-  </section>
-
-  <!-- ===== Order Summary Card ===== -->
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-    <div class="glass-effect rounded-2xl p-6 md:p-8 ring-1 ring-slate-200 dark:ring-slate-800 card-hover intersection-animate">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        <div>
-          <h2 class="text-2xl font-bold">Order <span id="orderId" class="text-brand-700 dark:text-brand-300">#000000</span></h2>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Placed on <time id="orderDate" datetime=""></time></p>
-        </div>
-        <div class="flex gap-3">
-          <button id="printBtn" class="no-print inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white focus-ring">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12"/></svg>
+</div>
+</section>
+<!-- ===== Order Summary Card ===== -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+<div class="glass-effect rounded-2xl p-6 md:p-8 ring-1 ring-slate-200 dark:ring-slate-800 card-hover intersection-animate">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+<div>
+<h2 class="text-2xl font-bold">Order <span class="text-brand-700 dark:text-brand-300" id="orderId">#000000</span></h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Placed on <time datetime="" id="orderDate"></time></p>
+</div>
+<div class="flex gap-3">
+<button class="no-print inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white focus-ring" id="printBtn">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
             Print receipt
           </button>
-          <a id="downloadsBtn" href="/store.html#downloads" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white focus-ring">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white focus-ring" href="/store.html#downloads" id="downloadsBtn">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
             View downloads
           </a>
-        </div>
-      </div>
-
-      <div class="mt-6 overflow-hidden rounded-xl ring-1 ring-slate-200 dark:ring-slate-800">
-        <table class="w-full text-sm">
-          <thead class="bg-slate-50 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300">
-            <tr>
-              <th class="text-left p-3">Item</th>
-              <th class="text-left p-3">Qty</th>
-              <th class="text-right p-3">Price</th>
-            </tr>
-          </thead>
-          <tbody id="itemsTbody" class="divide-y divide-slate-200 dark:divide-slate-800 bg-white dark:bg-slate-900">
-            <!-- items will be injected here -->
-          </tbody>
-          <tfoot class="bg-slate-50 dark:bg-slate-800/60">
-            <tr>
-              <td class="p-3 font-semibold" colspan="2">Total</td>
-              <td id="orderTotal" class="p-3 font-bold text-right">—</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-
-      <div class="mt-6 text-sm text-slate-600 dark:text-slate-300">
-        <p>Having trouble? <a href="/contact.html" class="text-brand-700 dark:text-brand-300 link-underline">Contact support</a> and include your order number.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Next Steps / CTAs ===== -->
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <div class="grid md:grid-cols-3 gap-6">
-      <a href="/store.html" class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Continue Shopping</h3>
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </div>
-        <p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Explore apps, eBooks, games, and music.</p>
-      </a>
-
-      <a href="/ebooks.html" class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Read Your eBooks</h3>
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </div>
-        <p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Access instant downloads any time.</p>
-      </a>
-
-      <a href="/apps.html" class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Install Your Apps</h3>
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </div>
-        <p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Grab Windows builds and updates.</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- ===== FAQs ===== -->
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-    <div class="rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 bg-white/70 dark:bg-slate-900/70">
-      <h3 class="text-2xl font-bold mb-4">Common questions</h3>
-      <details class="border-t border-slate-200 dark:border-slate-800 py-4" open>
-        <summary class="cursor-pointer font-medium">Where do I find my downloads?</summary>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">We emailed links to <span id="faqEmail" class="font-medium">your email</span>. You can also revisit this page or go to <a href="/store.html#downloads" class="link-underline text-brand-700 dark:text-brand-300">Store → Downloads</a>.</p>
-      </details>
-      <details class="border-t border-slate-200 dark:border-slate-800 py-4">
-        <summary class="cursor-pointer font-medium">Can I get a refund?</summary>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Please review our <a href="/legal/refunds.html" class="link-underline text-brand-700 dark:text-brand-300">Refund Policy</a> for eligibility and instructions.</p>
-      </details>
-      <details class="border-t border-slate-200 dark:border-slate-800 py-4">
-        <summary class="cursor-pointer font-medium">Need additional help?</summary>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Reach us via <a href="/contact.html" class="link-underline text-brand-700 dark:text-brand-300">Contact</a>. Include your order number for faster support.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- ===== Footer (copied from index (3).html) ===== -->
-  <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-      <div class="space-y-4">
-        <a href="/" class="flex items-center gap-2 focus-ring" aria-label="iD01t Productions home">
-          <img src="/assets/img/brand/logo.svg" alt="iD01t Productions logo" class="h-8 w-8" />
-          <span class="font-semibold text-lg text-white">iD01t Productions</span>
-        </a>
-        <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Products</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/apps.html" class="hover:text-white transition-colors focus-ring rounded">Windows Apps</a></li>
-          <li><a href="/ebooks.html" class="hover:text-white transition-colors focus-ring rounded">Technical eBooks</a></li>
-          <li><a href="/audiobooks.html" class="hover:text-white transition-colors focus-ring rounded">Audiobooks</a></li>
-          <li><a href="/games.html" class="hover:text-white transition-colors focus-ring rounded">Online Games</a></li>
-          <li><a href="/music.html" class="hover:text-white transition-colors focus-ring rounded">Original Music</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Resources</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
-          <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
-          <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
-          <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
-          <li><a href="/#newsletter" class="hover:text-white transition-colors focus-ring rounded">Newsletter</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-white mb-4">Legal</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms of Service</a></li>
-          <li><a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy Policy</a></li>
-          <li><a href="/legal/refunds.html" class="hover:text-white transition-colors focus-ring rounded">Refund Policy</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-      <div class="flex items-center gap-6">
-        <span class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full animate-pulse" aria-hidden="true"></span><span class="text-slate-400">All systems operational</span></span>
-        <a href="/legal/terms.html" class="hover:text-white transition-colors focus-ring rounded">Terms</a>
-        <a href="/legal/privacy.html" class="hover:text-white transition-colors focus-ring rounded">Privacy</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ===== Scripts (reused + page logic) ===== -->
-  <script>
+</div>
+</div>
+<div class="mt-6 overflow-hidden rounded-xl ring-1 ring-slate-200 dark:ring-slate-800">
+<table class="w-full text-sm">
+<thead class="bg-slate-50 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300">
+<tr>
+<th class="text-left p-3">Item</th>
+<th class="text-left p-3">Qty</th>
+<th class="text-right p-3">Price</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800 bg-white dark:bg-slate-900" id="itemsTbody">
+<!-- items will be injected here -->
+</tbody>
+<tfoot class="bg-slate-50 dark:bg-slate-800/60">
+<tr>
+<td class="p-3 font-semibold" colspan="2">Total</td>
+<td class="p-3 font-bold text-right" id="orderTotal">—</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div class="mt-6 text-sm text-slate-600 dark:text-slate-300">
+<p>Having trouble? <a class="text-brand-700 dark:text-brand-300 link-underline" href="/contact.html">Contact support</a> and include your order number.</p>
+</div>
+</div>
+</section>
+<!-- ===== Next Steps / CTAs ===== -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="grid md:grid-cols-3 gap-6">
+<a class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70" href="/store.html">
+<div class="flex items-center justify-between">
+<h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Continue Shopping</h3>
+<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Explore apps, eBooks, games, and music.</p>
+</a>
+<a class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70" href="/ebooks.html">
+<div class="flex items-center justify-between">
+<h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Read Your eBooks</h3>
+<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Access instant downloads any time.</p>
+</a>
+<a class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70" href="/apps.html">
+<div class="flex items-center justify-between">
+<h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Install Your Apps</h3>
+<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Grab Windows builds and updates.</p>
+</a>
+</div>
+</section>
+<!-- ===== FAQs ===== -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+<div class="rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 bg-white/70 dark:bg-slate-900/70">
+<h3 class="text-2xl font-bold mb-4">Common questions</h3>
+<details class="border-t border-slate-200 dark:border-slate-800 py-4" open="">
+<summary class="cursor-pointer font-medium">Where do I find my downloads?</summary>
+<p class="mt-2 text-slate-600 dark:text-slate-300">We emailed links to <span class="font-medium" id="faqEmail">your email</span>. You can also revisit this page or go to <a class="link-underline text-brand-700 dark:text-brand-300" href="/store.html#downloads">Store → Downloads</a>.</p>
+</details>
+<details class="border-t border-slate-200 dark:border-slate-800 py-4">
+<summary class="cursor-pointer font-medium">Can I get a refund?</summary>
+<p class="mt-2 text-slate-600 dark:text-slate-300">Please review our <a class="link-underline text-brand-700 dark:text-brand-300" href="/legal/refunds.html">Refund Policy</a> for eligibility and instructions.</p>
+</details>
+<details class="border-t border-slate-200 dark:border-slate-800 py-4">
+<summary class="cursor-pointer font-medium">Need additional help?</summary>
+<p class="mt-2 text-slate-600 dark:text-slate-300">Reach us via <a class="link-underline text-brand-700 dark:text-brand-300" href="/contact.html">Contact</a>. Include your order number for faster support.</p>
+</details>
+</div>
+</section>
+<!-- ===== Footer (copied from index (3).html) ===== -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- ===== Scripts (reused + page logic) ===== -->
+<script>
     // Theme toggle (same behavior as index)
     const root = document.documentElement;
     const themeToggle = document.getElementById('themeToggle');

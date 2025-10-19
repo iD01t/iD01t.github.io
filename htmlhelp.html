@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML2EXE Professional v28.0 - Complete User Guide | iD01t Productions</title>
-    <meta name="description" content="Flawless guide to building HTML apps into executables with HTML2EXE Pro. GUI, CLI, troubleshooting, and pro tips for senior devs.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HTML2EXE Professional v28.0 - Complete User Guide | iD01t Productions</title>
+<meta content="Flawless guide to building HTML apps into executables with HTML2EXE Pro. GUI, CLI, troubleshooting, and pro tips for senior devs." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
         .header { background: linear-gradient(135deg, #0d6efd, #6610f2); color: white; padding: 1rem 0; }
         .header h1 { margin: 0; font-weight: bold; }
@@ -21,209 +22,231 @@
     </style>
 </head>
 <body>
-
 <!-- Header: Inspired by iD01t Productions - Professional top nav with branding -->
-<header class="header">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1 class="mb-0">iD01t Productions — Professional Digital Solutions</h1>
-                <p class="mb-0 small">Empowering Developers with Flawless Tools | HTML2EXE Professional v28.0</p>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <nav>
-                    <a href="#introduction" class="me-3 text-white text-decoration-none">Guide Home</a>
-                    <a href="#gui" class="me-3 text-white text-decoration-none">GUI Tutorial</a>
-                    <a href="#cli" class="me-3 text-white text-decoration-none">CLI Guide</a>
-                    <a href="#troubleshooting" class="me-3 text-white text-decoration-none">Troubleshoot</a>
-                    <a href="#support" class="text-white text-decoration-none">Support</a>
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
-
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
 <!-- Main Content -->
 <main class="container my-5">
-    <div class="row">
-        <div class="col-lg-3">
-            <!-- Table of Contents -->
-            <div class="toc sticky-top" style="top: 1rem;">
-                <h5>Quick Navigation</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#introduction">Introduction</a></li>
-                    <li><a href="#installation">Installation</a></li>
-                    <li><a href="#gui">GUI Walkthrough</a>
-                        <ul class="ps-3">
-                            <li><a href="#project-tab">Project Tab</a></li>
-                            <li><a href="#window-tab">Window Tab</a></li>
-                            <li><a href="#build-tab">Build Tab</a></li>
-                            <li><a href="#licenses-tab">Licenses Tab</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#cli">CLI Reference</a></li>
-                    <li><a href="#advanced">Advanced Features</a></li>
-                    <li><a href="#troubleshooting">Troubleshooting</a></li>
-                    <li><a href="#best-practices">Best Practices</a></li>
-                    <li><a href="#support">Support & Updates</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-lg-9">
-            <!-- Introduction -->
-            <section id="introduction" class="guide-section">
-                <h2>Introduction to HTML2EXE Professional v28.0</h2>
-                <p>Welcome to the definitive guide for <strong>HTML2EXE Professional v28.0</strong>, the ultimate tool for transforming HTML-based web applications into standalone desktop executables (.exe for Windows, .app for macOS, and binaries for Linux). Built by iD01t Productions, this production-release software combines a intuitive CustomTkinter GUI with a robust CLI, powered by PyInstaller and pywebview, to deliver flawless builds every time.</p>
-                <p><strong>Key Features:</strong></p>
-                <ul>
-                    <li><strong>GUI Simplicity:</strong> Drag-and-drop configuration for source folders/URLs, window settings, and build options.</li>
-                    <li><strong>CLI Power:</strong> Headless mode for automation and CI/CD pipelines.</li>
-                    <li><strong>License Compliance Scanner:</strong> Scans dependencies for GPL/MIT/Apache compliance to ensure commercial safety.</li>
-                    <li><strong>Cross-Platform:</strong> Builds for Windows, macOS, and Linux from any platform.</li>
-                    <li><strong>Pro Enhancements:</strong> Icon support, single-file bundling, progress tracking, and logging.</li>
-                </ul>
-                <p>This guide is your blueprint: From zero-setup installation to advanced troubleshooting, we've covered every angle to save you dev hours. Whether you're an indie hacker shipping MVPs or a senior dev scaling agency workflows, HTML2EXE Pro is your flawless companion.</p>
-                <div class="pro-tip">
-                    <strong>Pro Tip:</strong> Always run the dependency check first—it's your shield against build failures.
+<div class="row">
+<div class="col-lg-3">
+<!-- Table of Contents -->
+<div class="toc sticky-top" style="top: 1rem;">
+<h5>Quick Navigation</h5>
+<ul class="list-unstyled">
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#gui">GUI Walkthrough</a>
+<ul class="ps-3">
+<li><a href="#project-tab">Project Tab</a></li>
+<li><a href="#window-tab">Window Tab</a></li>
+<li><a href="#build-tab">Build Tab</a></li>
+<li><a href="#licenses-tab">Licenses Tab</a></li>
+</ul>
+</li>
+<li><a href="#cli">CLI Reference</a></li>
+<li><a href="#advanced">Advanced Features</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#support">Support &amp; Updates</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-9">
+<!-- Introduction -->
+<section class="guide-section" id="introduction">
+<h2>Introduction to HTML2EXE Professional v28.0</h2>
+<p>Welcome to the definitive guide for <strong>HTML2EXE Professional v28.0</strong>, the ultimate tool for transforming HTML-based web applications into standalone desktop executables (.exe for Windows, .app for macOS, and binaries for Linux). Built by iD01t Productions, this production-release software combines a intuitive CustomTkinter GUI with a robust CLI, powered by PyInstaller and pywebview, to deliver flawless builds every time.</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>GUI Simplicity:</strong> Drag-and-drop configuration for source folders/URLs, window settings, and build options.</li>
+<li><strong>CLI Power:</strong> Headless mode for automation and CI/CD pipelines.</li>
+<li><strong>License Compliance Scanner:</strong> Scans dependencies for GPL/MIT/Apache compliance to ensure commercial safety.</li>
+<li><strong>Cross-Platform:</strong> Builds for Windows, macOS, and Linux from any platform.</li>
+<li><strong>Pro Enhancements:</strong> Icon support, single-file bundling, progress tracking, and logging.</li>
+</ul>
+<p>This guide is your blueprint: From zero-setup installation to advanced troubleshooting, we've covered every angle to save you dev hours. Whether you're an indie hacker shipping MVPs or a senior dev scaling agency workflows, HTML2EXE Pro is your flawless companion.</p>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> Always run the dependency check first—it's your shield against build failures.
                 </div>
-            </section>
-
-            <!-- Installation -->
-            <section id="installation" class="guide-section">
-                <h2>Installation and Setup</h2>
-                <h3>Prerequisites</h3>
-                <p>HTML2EXE requires Python 3.8+ (tested up to 3.13). No admin rights needed for user installs.</p>
-                <table class="table table-striped">
-                    <thead>
-                        <tr><th>Platform</th><th>Requirements</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Windows</td><td>Python 3.8+, Visual C++ Build Tools (for pywebview compilation)</td></tr>
-                        <tr><td>macOS</td><td>Python 3.8+, Xcode Command Line Tools</td></tr>
-                        <tr><td>Linux</td><td>Python 3.8+, GTK3 (for webview)</td></tr>
-                    </tbody>
-                </table>
-
-                <h3>Step-by-Step Installation</h3>
-                <ol>
-                    <li><strong>Install Python:</strong> Download from <a href="https://python.org">python.org</a>. Check "Add to PATH" during setup.</li>
-                    <li><strong>Create Virtual Environment (Recommended):</strong>
-                        <pre><code>python -m venv html2exe_venv
+</section>
+<!-- Installation -->
+<section class="guide-section" id="installation">
+<h2>Installation and Setup</h2>
+<h3>Prerequisites</h3>
+<p>HTML2EXE requires Python 3.8+ (tested up to 3.13). No admin rights needed for user installs.</p>
+<table class="table table-striped">
+<thead>
+<tr><th>Platform</th><th>Requirements</th></tr>
+</thead>
+<tbody>
+<tr><td>Windows</td><td>Python 3.8+, Visual C++ Build Tools (for pywebview compilation)</td></tr>
+<tr><td>macOS</td><td>Python 3.8+, Xcode Command Line Tools</td></tr>
+<tr><td>Linux</td><td>Python 3.8+, GTK3 (for webview)</td></tr>
+</tbody>
+</table>
+<h3>Step-by-Step Installation</h3>
+<ol>
+<li><strong>Install Python:</strong> Download from <a href="https://python.org">python.org</a>. Check "Add to PATH" during setup.</li>
+<li><strong>Create Virtual Environment (Recommended):</strong>
+<pre><code>python -m venv html2exe_venv
                         # On Windows: html2exe_venv\Scripts\activate.bat
                         # On macOS/Linux: source html2exe_venv/bin/activate</code></pre>
-                    </li>
-                    <li><strong>Install Dependencies:</strong>
-                        <pre><code>pip install --upgrade pip
+</li>
+<li><strong>Install Dependencies:</strong>
+<pre><code>pip install --upgrade pip
                         pip install customtkinter pywebview pyinstaller Pillow requests</code></pre>
-                        <p><strong>Note for Windows:</strong> If pywebview fails, install Microsoft C++ Build Tools from <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">here</a>, then retry.</p>
-                    </li>
-                    <li><strong>Download & Run:</strong>
-                        <ul>
-                            <li>GUI: <code>python html2exe.py</code> or double-click <code>HTML2exe.exe</code>.</li>
-                            <li>CLI: <code>python html2exe.py check-deps</code> to verify.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Build the Standalone .exe (Optional):</strong>
-                        <pre><code>pyinstaller --name HTML2exe --onefile --windowed --icon=assets/icon.ico html2exe.py</code></pre>
-                    </li>
-                </ol>
-                <p><strong>Logs Location:</strong> <code>%USERPROFILE%\.html2exe_pro\app.log</code> (Windows) or <code>~/.html2exe_pro/app.log</code> (others).</p>
-                <div class="pro-tip">
-                    <strong>Pro Tip:</strong> Use <code>--user</code> flag outside venv to avoid permission issues: <code>python -m pip install --user ...</code>.
+<p><strong>Note for Windows:</strong> If pywebview fails, install Microsoft C++ Build Tools from <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">here</a>, then retry.</p>
+</li>
+<li><strong>Download &amp; Run:</strong>
+<ul>
+<li>GUI: <code>python html2exe.py</code> or double-click <code>HTML2exe.exe</code>.</li>
+<li>CLI: <code>python html2exe.py check-deps</code> to verify.</li>
+</ul>
+</li>
+<li><strong>Build the Standalone .exe (Optional):</strong>
+<pre><code>pyinstaller --name HTML2exe --onefile --windowed --icon=assets/icon.ico html2exe.py</code></pre>
+</li>
+</ol>
+<p><strong>Logs Location:</strong> <code>%USERPROFILE%\.html2exe_pro\app.log</code> (Windows) or <code>~/.html2exe_pro/app.log</code> (others).</p>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> Use <code>--user</code> flag outside venv to avoid permission issues: <code>python -m pip install --user ...</code>.
                 </div>
-            </section>
-
-            <!-- GUI Walkthrough -->
-            <section id="gui" class="guide-section">
-                <h2>GUI Walkthrough: Building Your First App</h2>
-                <p>The GUI is a dark-themed, responsive interface built with CustomTkinter. Launch it via <code>python html2exe.py</code> or <code>HTML2exe.exe</code>. It features a sidebar for navigation and tabs for configuration.</p>
-
-                <h3 id="project-tab">Project Tab: Core Configuration</h3>
-                <p>This tab sets up your app's metadata and source content.</p>
-                <img src="https://via.placeholder.com/800x400?text=Project+Tab+Screenshot" alt="Project Tab Screenshot" class="img-fluid mb-3">
-                <ol>
-                    <li><strong>App Name:</strong> Enter your executable's name (e.g., "MyDashboard"). Validates for alphanumeric chars.</li>
-                    <li><strong>Version:</strong> Semantic versioning (e.g., "1.0.0"). Ensures format compliance.</li>
-                    <li><strong>Author:</strong> Your name/company for metadata.</li>
-                    <li><strong>Source Content:</strong>
-                        <ul>
-                            <li>Select <strong>Local Folder</strong>: Browse to a directory with <code>index.html</code> (e.g., your React/Vue build output).</li>
-                            <li>Select <strong>URL</strong>: Enter a full HTTPS URL (e.g., "https://example.com/app"). Validates regex.</li>
-                        </ul>
-                    </li>
-                </ol>
-                <p><strong>Validation:</strong> Real-time checks prevent invalid paths; tooltips guide inputs.</p>
-
-                <h3 id="window-tab">Window Tab: User Experience Settings</h3>
-                <p>Customize the desktop window for your end-users.</p>
-                <img src="https://via.placeholder.com/800x400?text=Window+Tab+Screenshot" alt="Window Tab Screenshot" class="img-fluid mb-3">
-                <ol>
-                    <li><strong>Title:</strong> Window bar text (e.g., "My Secure Dashboard").</li>
-                    <li><strong>Initial Size:</strong> Width x Height in pixels (default: 1024x768). Responsive tip: Test on various screens.</li>
-                    <li><strong>Resizable Window:</strong> Checkbox for dynamic sizing.</li>
-                    <li><strong>Start in Fullscreen:</strong> Checkbox for immersive mode.</li>
-                </ol>
-                <div class="pro-tip">
-                    <strong>Pro Tip:</strong> For kiosk apps, enable fullscreen and disable resizable for locked-down UX.
+</section>
+<!-- GUI Walkthrough -->
+<section class="guide-section" id="gui">
+<h2>GUI Walkthrough: Building Your First App</h2>
+<p>The GUI is a dark-themed, responsive interface built with CustomTkinter. Launch it via <code>python html2exe.py</code> or <code>HTML2exe.exe</code>. It features a sidebar for navigation and tabs for configuration.</p>
+<h3 id="project-tab">Project Tab: Core Configuration</h3>
+<p>This tab sets up your app's metadata and source content.</p>
+<img alt="Project Tab Screenshot" class="img-fluid mb-3" src="https://via.placeholder.com/800x400?text=Project+Tab+Screenshot"/>
+<ol>
+<li><strong>App Name:</strong> Enter your executable's name (e.g., "MyDashboard"). Validates for alphanumeric chars.</li>
+<li><strong>Version:</strong> Semantic versioning (e.g., "1.0.0"). Ensures format compliance.</li>
+<li><strong>Author:</strong> Your name/company for metadata.</li>
+<li><strong>Source Content:</strong>
+<ul>
+<li>Select <strong>Local Folder</strong>: Browse to a directory with <code>index.html</code> (e.g., your React/Vue build output).</li>
+<li>Select <strong>URL</strong>: Enter a full HTTPS URL (e.g., "https://example.com/app"). Validates regex.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Validation:</strong> Real-time checks prevent invalid paths; tooltips guide inputs.</p>
+<h3 id="window-tab">Window Tab: User Experience Settings</h3>
+<p>Customize the desktop window for your end-users.</p>
+<img alt="Window Tab Screenshot" class="img-fluid mb-3" src="https://via.placeholder.com/800x400?text=Window+Tab+Screenshot"/>
+<ol>
+<li><strong>Title:</strong> Window bar text (e.g., "My Secure Dashboard").</li>
+<li><strong>Initial Size:</strong> Width x Height in pixels (default: 1024x768). Responsive tip: Test on various screens.</li>
+<li><strong>Resizable Window:</strong> Checkbox for dynamic sizing.</li>
+<li><strong>Start in Fullscreen:</strong> Checkbox for immersive mode.</li>
+</ol>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> For kiosk apps, enable fullscreen and disable resizable for locked-down UX.
                 </div>
-
-                <h3 id="build-tab">Build Tab: Output Options</h3>
-                <p>Define how your executable is packaged.</p>
-                <img src="https://via.placeholder.com/800x400?text=Build+Tab+Screenshot" alt="Build Tab Screenshot" class="img-fluid mb-3">
-                <ol>
-                    <li><strong>Single File Executable:</strong> Checkbox for --onefile (default: on). Slower startup but portable.</li>
-                    <li><strong>Show Console Window:</strong> Checkbox for debugging (--console). Disable for production.</li>
-                    <li><strong>Application Icon:</strong> Browse for .ico (Windows) or .icns (macOS). Validates file type per platform.</li>
-                    <li><strong>Output Dir:</strong> Folder for artifacts (default: "dist"). Creates if missing.</li>
-                </ol>
-                <p><strong>Build Process:</strong> Click <strong>BUILD</strong> (green button). Progress bar tracks steps: Validate (5%), Launcher (15%), Resources (25%), PyInstaller (35%+). Cancel anytime.</p>
-
-                <h3 id="licenses-tab">Licenses Tab: Compliance Check</h3>
-                <p>Scan for dependency licenses to avoid GPL pitfalls in commercial distro.</p>
-                <img src="https://via.placeholder.com/800x400?text=Licenses+Tab+Screenshot" alt="Licenses Tab Screenshot" class="img-fluid mb-3">
-                <ol>
-                    <li>Click <strong>Scan Now</strong>. Outputs table: Package, Version, License, Status (ALLOWED/RESTRICTED/WARNING).</li>
-                    <li>Example: <code>PyInstaller v6.16.0 | GPL-2.0 with exceptions | ALLOWED</code></li>
-                    <li>Export: Copy-paste for your LICENSES.txt.</li>
-                </ol>
-                <p><strong>Rules:</strong> MIT/BSD/Apache = ALLOWED; GPL/AGPL = RESTRICTED.</p>
-            </section>
-
-            <!-- CLI Reference -->
-            <section id="cli" class="guide-section">
-                <h2>CLI Reference: Automation Mastery</h2>
-                <p>For scripts, CI/CD (GitHub Actions/Jenkins), use <code>python html2exe.py &lt;command&gt;</code> or <code>HTML2exe.exe &lt;command&gt;</code>. Headless mode auto-detects.</p>
-                <h3>Commands</h3>
-                <table class="table table-striped">
-                    <thead>
-                        <tr><th>Command</th><th>Description</th><th>Example</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>check-deps</td><td>Verify dependencies</td><td>python html2exe.py check-deps</td></tr>
-                        <tr><td>licenses [--format table|json]</td><td>Scan licenses</td><td>python html2exe.py licenses --format json</td></tr>
-                        <tr><td>build --source &lt;path/url&gt; [--project &lt;json&gt;] [--name &lt;name&gt;] [--output &lt;dir&gt;] [--console]</td><td>Build executable</td><td>python html2exe.py build --source ./myapp --name MyApp --output dist</td></tr>
-                    </tbody>
-                </table>
-                <h3>Build Flags Deep-Dive</h3>
-                <ul>
-                    <li><strong>--source:</strong> Required; folder with index.html or URL.</li>
-                    <li><strong>--project:</strong> JSON config file overrides flags.</li>
-                    <li><strong>--name:</strong> Executable name (default: HTMLApp).</li>
-                    <li><strong>--output:</strong> Dist folder (default: dist).</li>
-                    <li><strong>--console:</strong> Enables debug console.</li>
-                </ul>
-                <p><strong>Output:</strong> Progress logs to stdout; artifact path on success.</p>
-                <div class="pro-tip">
-                    <strong>Pro Tip:</strong> Integrate with GitHub Actions: Use build command in a matrix for cross-platform testing.
+<h3 id="build-tab">Build Tab: Output Options</h3>
+<p>Define how your executable is packaged.</p>
+<img alt="Build Tab Screenshot" class="img-fluid mb-3" src="https://via.placeholder.com/800x400?text=Build+Tab+Screenshot"/>
+<ol>
+<li><strong>Single File Executable:</strong> Checkbox for --onefile (default: on). Slower startup but portable.</li>
+<li><strong>Show Console Window:</strong> Checkbox for debugging (--console). Disable for production.</li>
+<li><strong>Application Icon:</strong> Browse for .ico (Windows) or .icns (macOS). Validates file type per platform.</li>
+<li><strong>Output Dir:</strong> Folder for artifacts (default: "dist"). Creates if missing.</li>
+</ol>
+<p><strong>Build Process:</strong> Click <strong>BUILD</strong> (green button). Progress bar tracks steps: Validate (5%), Launcher (15%), Resources (25%), PyInstaller (35%+). Cancel anytime.</p>
+<h3 id="licenses-tab">Licenses Tab: Compliance Check</h3>
+<p>Scan for dependency licenses to avoid GPL pitfalls in commercial distro.</p>
+<img alt="Licenses Tab Screenshot" class="img-fluid mb-3" src="https://via.placeholder.com/800x400?text=Licenses+Tab+Screenshot"/>
+<ol>
+<li>Click <strong>Scan Now</strong>. Outputs table: Package, Version, License, Status (ALLOWED/RESTRICTED/WARNING).</li>
+<li>Example: <code>PyInstaller v6.16.0 | GPL-2.0 with exceptions | ALLOWED</code></li>
+<li>Export: Copy-paste for your LICENSES.txt.</li>
+</ol>
+<p><strong>Rules:</strong> MIT/BSD/Apache = ALLOWED; GPL/AGPL = RESTRICTED.</p>
+</section>
+<!-- CLI Reference -->
+<section class="guide-section" id="cli">
+<h2>CLI Reference: Automation Mastery</h2>
+<p>For scripts, CI/CD (GitHub Actions/Jenkins), use <code>python html2exe.py &lt;command&gt;</code> or <code>HTML2exe.exe &lt;command&gt;</code>. Headless mode auto-detects.</p>
+<h3>Commands</h3>
+<table class="table table-striped">
+<thead>
+<tr><th>Command</th><th>Description</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>check-deps</td><td>Verify dependencies</td><td>python html2exe.py check-deps</td></tr>
+<tr><td>licenses [--format table|json]</td><td>Scan licenses</td><td>python html2exe.py licenses --format json</td></tr>
+<tr><td>build --source &lt;path/url&gt; [--project &lt;json&gt;] [--name &lt;name&gt;] [--output &lt;dir&gt;] [--console]</td><td>Build executable</td><td>python html2exe.py build --source ./myapp --name MyApp --output dist</td></tr>
+</tbody>
+</table>
+<h3>Build Flags Deep-Dive</h3>
+<ul>
+<li><strong>--source:</strong> Required; folder with index.html or URL.</li>
+<li><strong>--project:</strong> JSON config file overrides flags.</li>
+<li><strong>--name:</strong> Executable name (default: HTMLApp).</li>
+<li><strong>--output:</strong> Dist folder (default: dist).</li>
+<li><strong>--console:</strong> Enables debug console.</li>
+</ul>
+<p><strong>Output:</strong> Progress logs to stdout; artifact path on success.</p>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> Integrate with GitHub Actions: Use build command in a matrix for cross-platform testing.
                 </div>
-            </section>
-
-            <!-- Advanced Features -->
-            <section id="advanced" class="guide-section">
-                <h2>Advanced Features: Pro-Level Customization</h2>
-                <h3>Project Files (.json)</h3>
-                <p>Save/Load configs for teams. Structure:</p>
-                <pre><code>{
+</section>
+<!-- Advanced Features -->
+<section class="guide-section" id="advanced">
+<h2>Advanced Features: Pro-Level Customization</h2>
+<h3>Project Files (.json)</h3>
+<p>Save/Load configs for teams. Structure:</p>
+<pre><code>{
   "app_name": "MyApp",
   "app_version": "1.0.0",
   "source_type": "folder",
@@ -231,101 +254,116 @@
   "window_width": 1024,
   "single_file": true
 }</code></pre>
-                <p>Load via GUI (Save/Load buttons) or CLI (--project).</p>
-
-                <h3>Custom Icons & Resources</h3>
-                <p>Icons: .ico (16x16 to 256x256 PNG converted). Resources auto-bundle from source folder.</p>
-
-                <h3>Headless Mode</h3>
-                <p>Run with args like "build" to skip GUI. Ideal for servers.</p>
-
-                <h3>Logging & Progress</h3>
-                <p>Rotating logs (2MB max, 5 backups). GUI console mirrors file logs.</p>
-
-                <div class="pro-tip">
-                    <strong>Pro Tip:</strong> Hook into webview events for custom JS bridges in advanced apps.
+<p>Load via GUI (Save/Load buttons) or CLI (--project).</p>
+<h3>Custom Icons &amp; Resources</h3>
+<p>Icons: .ico (16x16 to 256x256 PNG converted). Resources auto-bundle from source folder.</p>
+<h3>Headless Mode</h3>
+<p>Run with args like "build" to skip GUI. Ideal for servers.</p>
+<h3>Logging &amp; Progress</h3>
+<p>Rotating logs (2MB max, 5 backups). GUI console mirrors file logs.</p>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> Hook into webview events for custom JS bridges in advanced apps.
                 </div>
-            </section>
-
-            <!-- Troubleshooting -->
-            <section id="troubleshooting" class="guide-section">
-                <h2>Troubleshooting: Bulletproof Fixes</h2>
-                <p>99% of issues stem from deps or paths. Always check logs first.</p>
-                <table class="table table-striped">
-                    <thead>
-                        <tr><th>Issue</th><th>Symptom</th><th>Solution</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Missing Dependencies</td><td>"PyInstaller not found"</td><td>pip install pyinstaller customtkinter pywebview</td></tr>
-                        <tr><td>Build Fails: No index.html</td><td>Validation error</td><td>Ensure source folder has index.html or valid URL</td></tr>
-                        <tr><td>Icon Error</td><td>"Invalid .ico"</td><td>Use online converter (e.g., icoconvert.com); match platform</td></tr>
-                        <tr><td>pywebview Compile Fail (Windows)</td><td>C++ 14.0 required</td><td>Install Visual Studio Build Tools</td></tr>
-                        <tr><td>Large .exe Size</td><td>>100MB</td><td>Use --onedir; compress with UPX: pyinstaller --upx-dir /path/to/upx</td></tr>
-                        <tr><td>Antivirus Flags</td><td>False positive</td><td>Sign with EV cert (e.g., DigiCert); whitelist in testing</td></tr>
-                        <tr><td>Cross-Platform Issues</td><td>macOS/Linux fail</td><td>Build on target OS; add --hidden-import=webview.platforms.[platform]</td></tr>
-                    </tbody>
-                </table>
-                <h3>Debug Mode</h3>
-                <p>Enable --console, tail logs: <code>tail -f ~/.html2exe_pro/app.log</code>.</p>
-                <div class="pro-tip">
-                    <strong>Pro Tip:</strong> For PyInstaller warnings, inspect build/warn-*.txt for hidden imports.
+</section>
+<!-- Troubleshooting -->
+<section class="guide-section" id="troubleshooting">
+<h2>Troubleshooting: Bulletproof Fixes</h2>
+<p>99% of issues stem from deps or paths. Always check logs first.</p>
+<table class="table table-striped">
+<thead>
+<tr><th>Issue</th><th>Symptom</th><th>Solution</th></tr>
+</thead>
+<tbody>
+<tr><td>Missing Dependencies</td><td>"PyInstaller not found"</td><td>pip install pyinstaller customtkinter pywebview</td></tr>
+<tr><td>Build Fails: No index.html</td><td>Validation error</td><td>Ensure source folder has index.html or valid URL</td></tr>
+<tr><td>Icon Error</td><td>"Invalid .ico"</td><td>Use online converter (e.g., icoconvert.com); match platform</td></tr>
+<tr><td>pywebview Compile Fail (Windows)</td><td>C++ 14.0 required</td><td>Install Visual Studio Build Tools</td></tr>
+<tr><td>Large .exe Size</td><td>&gt;100MB</td><td>Use --onedir; compress with UPX: pyinstaller --upx-dir /path/to/upx</td></tr>
+<tr><td>Antivirus Flags</td><td>False positive</td><td>Sign with EV cert (e.g., DigiCert); whitelist in testing</td></tr>
+<tr><td>Cross-Platform Issues</td><td>macOS/Linux fail</td><td>Build on target OS; add --hidden-import=webview.platforms.[platform]</td></tr>
+</tbody>
+</table>
+<h3>Debug Mode</h3>
+<p>Enable --console, tail logs: <code>tail -f ~/.html2exe_pro/app.log</code>.</p>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> For PyInstaller warnings, inspect build/warn-*.txt for hidden imports.
                 </div>
-            </section>
-
-            <!-- Best Practices -->
-            <section id="best-practices" class="guide-section">
-                <h2>Best Practices: Senior Dev Workflow</h2>
-                <ul>
-                    <li><strong>Test Iteratively:</strong> Build small prototypes; validate on target hardware.</li>
-                    <li><strong>Compliance First:</strong> Scan licenses pre-release; include LICENSES.txt in distro.</li>
-                    <li><strong>Optimize Size:</strong> Minify HTML/JS/CSS; exclude dev files from source.</li>
-                    <li><strong>Security:</strong> Use HTTPS URLs; sandbox webview if needed.</li>
-                    <li><strong>Version Control:</strong> Git-track .json projects; automate builds with CLI in CI.</li>
-                    <li><strong>Updates:</strong> Poll APP_UPDATE_URL for patches.</li>
-                </ul>
-                <div class="pro-tip">
-                    <strong>Pro Tip:</strong> For Electron migrants, HTML2EXE is lighter—bundle only essentials for sub-50MB apps.
+</section>
+<!-- Best Practices -->
+<section class="guide-section" id="best-practices">
+<h2>Best Practices: Senior Dev Workflow</h2>
+<ul>
+<li><strong>Test Iteratively:</strong> Build small prototypes; validate on target hardware.</li>
+<li><strong>Compliance First:</strong> Scan licenses pre-release; include LICENSES.txt in distro.</li>
+<li><strong>Optimize Size:</strong> Minify HTML/JS/CSS; exclude dev files from source.</li>
+<li><strong>Security:</strong> Use HTTPS URLs; sandbox webview if needed.</li>
+<li><strong>Version Control:</strong> Git-track .json projects; automate builds with CLI in CI.</li>
+<li><strong>Updates:</strong> Poll APP_UPDATE_URL for patches.</li>
+</ul>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> For Electron migrants, HTML2EXE is lighter—bundle only essentials for sub-50MB apps.
                 </div>
-            </section>
-
-            <!-- Support -->
-            <section id="support" class="guide-section">
-                <h2>Support & Updates</h2>
-                <p><strong>Community:</strong> Join Discord/GitHub Discussions at iD01t Productions.</p>
-                <p><strong>Updates:</strong> Check <code>https://api.github.com/repos/id01t/html2exe/releases/latest</code>.</p>
-                <p><strong>Contact:</strong> support@id01t.com | Twitter: @id01t_prod</p>
-                <p><strong>License:</strong> MIT for core; review scanner for deps. Commercial use: Allowed with attribution.</p>
-            </section>
-        </div>
-    </div>
+</section>
+<!-- Support -->
+<section class="guide-section" id="support">
+<h2>Support &amp; Updates</h2>
+<p><strong>Community:</strong> Join Discord/GitHub Discussions at iD01t Productions.</p>
+<p><strong>Updates:</strong> Check <code>https://api.github.com/repos/id01t/html2exe/releases/latest</code>.</p>
+<p><strong>Contact:</strong> support@id01t.com | Twitter: @id01t_prod</p>
+<p><strong>License:</strong> MIT for core; review scanner for deps. Commercial use: Allowed with attribution.</p>
+</section>
+</div>
+</div>
 </main>
-
 <!-- Footer: Inspired by iD01t - Stay Updated section with socials and copyright -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h5>Stay Updated</h5>
-                <p>Subscribe for tips on flawless app dev and HTML2EXE releases.</p>
-                <form>
-                    <div class="input-group">
-                        <input type="email" class="form-control" placeholder="Your email">
-                        <button class="btn btn-primary" type="submit">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <h5>Connect</h5>
-                <a href="https://twitter.com/id01t_prod" class="me-2">Twitter</a>
-                <a href="https://github.com/id01t" class="me-2">GitHub</a>
-                <a href="mailto:info@id01t.com">Email</a>
-                <br><br>
-                <p class="mb-0">&copy; 2025 iD01t Productions. All rights reserved. | <a href="#privacy">Privacy</a> | <a href="#terms">Terms</a></p>
-            </div>
-        </div>
-    </div>
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     // Simple smooth scroll for anchors
@@ -336,6 +374,5 @@
         });
     });
 </script>
-
 </body>
 </html>
