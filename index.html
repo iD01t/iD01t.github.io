@@ -109,7 +109,7 @@
 </head>
 
 <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
-  <!-- Navigation (kept same) -->
+  <!-- Navigation -->
   <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
@@ -125,6 +125,8 @@
             <a href="/apps.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Apps</a>
             <a href="/games.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Games</a>
             <a href="/music.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Music</a>
+            <a href="/blog.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Blog</a>
+            <a href="/nini.html" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline">Nini's Adventures</a>
           </div>
         </div>
         <div class="flex items-center space-x-4">
@@ -145,159 +147,191 @@
         </div>
       </div>
     </div>
-
-    <!-- Mobile Menu (kept same) -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-      <div class="px-4 py-4 space-y-3">
-        <a href="/store.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Store</a>
-        <a href="/ebooks.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">eBooks</a>
-        <a href="/audiobooks.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Audiobooks</a>
-        <a href="/apps.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Apps</a>
-        <a href="/games.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Games</a>
-        <a href="/music.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Music</a>
-        <a href="/contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <div class="px-4 py-4 space-y-2">
+        <a href="/store.html" class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Store</a>
+        <a href="/ebooks.html" class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">eBooks</a>
+        <a href="/audiobooks.html" class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Audiobooks</a>
+        <a href="/apps.html" class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Apps</a>
+        <a href="/games.html" class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Games</a>
+        <a href="/music.html" class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Music</a>
+        <a href="/blog.html" class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Blog</a>
+        <a href="/nini.html" class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Nini's Adventures</a>
+        <a href="/contact.html" class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="intersection-animate">
-        <h1 class="text-5xl md:text-7xl font-bold gradient-text mb-6">Apps, eBooks, Games & Music</h1>
-        <h2 class="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300 mb-8">Professional Windows utilities, technical eBooks, multiplayer games, and original music.</h2>
-        <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">Built for creators who demand <strong>quality, speed, and reliability</strong>.</p>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+      <img src="/assets/img/placeholders/hero-1600x900.webp" alt="Professional digital workspace" class="w-full h-full object-cover opacity-20 dark:opacity-10" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-50/80 to-brand-100/60 dark:from-slate-900/90 dark:to-slate-800/80"></div>
+    </div>
 
-        <div class="grid sm:grid-cols-3 gap-4 mb-8">
-          <a href="/apps.html" class="group flex items-center justify-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
-            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
-            Discover Apps
+    <!-- Content -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+      <div class="space-y-8 intersection-animate">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight">
+          <span class="gradient-text">Digital Tools</span>
+          <br />
+          <span class="text-slate-900 dark:text-white">for Creators</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">Professional Windows utilities, technical eBooks, multiplayer games, and original music. Built for creators who demand quality, speed, and reliability.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="/store.html" class="inline-flex items-center px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white text-lg font-semibold rounded-xl transition-all hover:scale-105 focus-ring shadow-lg shadow-brand-500/30">
+            Explore Store
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
           </a>
-          <a href="/ebooks.html" class="group flex items-center justify-center rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
-            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            Browse eBooks
-          </a>
-          <a href="/music.html" class="group flex items-center justify-center rounded-xl bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 transition-all duration-300 hover:scale-105 focus-ring">
-            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/></svg>
-            Listen to Music
-          </a>
-        </div>
-
-        <div class="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400 mb-6">
-          <div class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Professional Quality</div>
-          <div class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Instant Access</div>
-          <div class="flex items-center gap-2"><svg class="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z"/></svg>24/7 Support</div>
-        </div>
-        <p class="text-xs text-slate-500 dark:text-slate-400">
-          <time datetime="2025-10-02">Updated October 02, 2025</time> • <span class="inline-block">🔥</span> <strong>News:</strong> New builds live in Store
-        </p>
-      </div>
-
-      <div class="intersection-animate">
-        <div class="relative">
-          <img src="/assets/img/placeholders/hero-1600x900.webp" alt="Showcase of iD01t Productions products" class="aspect-[16/10] rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-slate-800 shadow-2xl hover:shadow-brand-500/25 transition-all duration-500 card-hover" width="1600" height="900" loading="eager" />
-          <div class="absolute -top-4 -right-4 w-20 h-20 bg-brand-500 rounded-full opacity-20 animate-pulse-glow" aria-hidden="true"></div>
-          <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-emerald-500 rounded-full opacity-20 animate-float" aria-hidden="true"></div>
+          <a href="/ebooks.html" class="inline-flex items-center px-8 py-4 bg-white dark:bg-slate-800 text-brand-600 dark:text-brand-400 text-lg font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all hover:scale-105 focus-ring shadow-lg border border-slate-200 dark:border-slate-700">View eBooks</a>
         </div>
       </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 intersection-animate">
+        <div class="space-y-2">
+          <div class="text-4xl md:text-5xl font-bold gradient-text">50K+</div>
+          <div class="text-sm text-slate-600 dark:text-slate-400">Active Users</div>
+        </div>
+        <div class="space-y-2">
+          <div class="text-4xl md:text-5xl font-bold gradient-text">15+</div>
+          <div class="text-sm text-slate-600 dark:text-slate-400">Digital Products</div>
+        </div>
+        <div class="space-y-2">
+          <div class="text-4xl md:text-5xl font-bold gradient-text">99%</div>
+          <div class="text-sm text-slate-600 dark:text-slate-400">Satisfaction Rate</div>
+        </div>
+        <div class="space-y-2">
+          <div class="text-4xl md:text-5xl font-bold gradient-text">24/7</div>
+          <div class="text-sm text-slate-600 dark:text-slate-400">Support Available</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+      <a href="#features" class="flex flex-col items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors focus-ring rounded" aria-label="Scroll to features">
+        <span class="text-sm">Discover More</span>
+        <svg class="w-6 h-6 animate-bounce-subtle" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </a>
     </div>
   </section>
 
-  <!-- Products -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <!-- Features -->
+  <section id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
     <div class="text-center mb-16 intersection-animate">
-      <h3 class="text-4xl font-bold gradient-text mb-4">Featured Products</h3>
-      <p class="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Professional tools and content built with real‑world testing and creator feedback.</p>
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">What We Offer</h2>
+      <p class="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">A complete suite of digital products designed to enhance your productivity and creativity.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- HTML2Win (repo image) -->
-      <article class="intersection-animate group card-hover">
-        <a href="https://id01t.itch.io/html2win" target="_blank" rel="noopener noreferrer" aria-label="HTML2Win on Itch.io">
-          <div class="relative overflow-hidden rounded-xl mb-4">
-            <img src="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/html.png" alt="HTML2Win" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="1280" height="720" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
-        </a>
-        <div class="glass-effect rounded-2xl p-6 h-full">
-          <h4 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">
-            <a href="https://id01t.itch.io/html2win" target="_blank" rel="noopener noreferrer">HTML2Win</a>
-          </h4>
-          <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">Transform your HTML/JS projects into standalone Windows executables. Perfect for web games, apps, and demos.</p>
-          <div class="flex items-center gap-4 mb-4 text-sm">
-            <span class="flex items-center gap-1 text-green-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Windows</span>
-            <span class="flex items-center gap-1 text-blue-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/></svg>Free</span>
-          </div>
-          <a href="https://id01t.itch.io/html2win" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded" target="_blank" rel="noopener noreferrer">View on Itch.io<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Windows Apps -->
+      <article class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover intersection-animate">
+        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
         </div>
-      </article>
-      <!-- Music (repo image) -->
-      <article class="intersection-animate group card-hover">
-        <a href="/music.html" aria-label="Original Music">
-          <div class="relative overflow-hidden rounded-xl mb-4">
-            <img src="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" alt="DJ iD01t cover art" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="1280" height="720" />
-            <div class="absolute top-3 right-3 bg-purple-600 text-white text-xs px-2 py-1 rounded-full font-medium">Music</div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
+        <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Windows Apps</h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-6">Professional utilities for automation, productivity, and system optimization. Lightweight, fast, and built for power users.</p>
+        <a href="/apps.html" class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium transition-colors focus-ring rounded">
+          Explore Apps
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
         </a>
-        <div class="glass-effect rounded-2xl p-6 h-full">
-          <h4 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">
-            <a href="/music.html">DJ iD01t</a>
-          </h4>
-          <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">Beats, instrumentals, and soundtrack-ready cuts crafted for creators. Stream tracks and grab creator-friendly loops and stems.</p>
-          <div class="flex items-center gap-4 mb-4 text-sm">
-            <span class="flex items-center gap-1 text-purple-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3a1 1 0 011.555-.832l10 6A1 1 0 0116 10H6v4a1 1 0 11-2 0V3z"/></svg>Listen</span>
-            <span class="flex items-center gap-1 text-emerald-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Creator loops</span>
-          </div>
-          <a href="/music.html" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Explore Music<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
-        </div>
       </article>
 
-      <!-- eBooks (repo image) -->
-      <article class="intersection-animate group card-hover">
-        <a href="/ebooks.html" aria-label="Technical eBooks">
-          <div class="relative overflow-hidden rounded-xl mb-4">
-            <img src="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/ebooks-hd.png" alt="Technical eBooks" class="w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width="1280" height="720" />
-            <div class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-medium">eBooks</div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
-        </a>
-        <div class="glass-effect rounded-2xl p-6 h-full">
-          <h4 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">
-            <a href="/ebooks.html">Technical eBooks</a>
-          </h4>
-          <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">Comprehensive guides on automation, AI integration, and digital creation workflows. Instant access on your devices.</p>
-          <div class="flex items-center gap-4 mb-4 text-sm">
-            <span class="flex items-center gap-1 text-emerald-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Instant Download</span>
-            <span class="flex items-center gap-1 text-amber-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>Expert Content</span>
-          </div>
-          <a href="/ebooks.html" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Browse Catalog<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+      <!-- Technical eBooks -->
+      <article class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover intersection-animate">
+        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
         </div>
+        <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Technical eBooks</h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-6">In-depth guides on programming, AI, automation, and technology. Written by developers, for developers.</p>
+        <a href="/ebooks.html" class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium transition-colors focus-ring rounded">
+          Browse eBooks
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
       </article>
 
-      <!-- Games (placeholder image from repo) -->
-      <article class="intersection-animate group card-hover">
-        <a href="/games.html" aria-label="Games">
-          <div class="relative overflow-hidden rounded-xl mb-4">
-            <img src="/assets/img/placeholders/hero-1600x900.webp" alt="Games and prototypes" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="1600" height="900" />
-            <div class="absolute top-3 right-3 bg-fuchsia-600 text-white text-xs px-2 py-1 rounded-full font-medium">Games</div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
-          </div>
-        </a>
-        <div class="glass-effect rounded-2xl p-6 h-full">
-          <h4 class="font-bold text-xl mb-3 group-hover:text-brand-600 transition-colors">
-            <a href="/games.html">Games</a>
-          </h4>
-          <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">Multiplayer-ready experiments and fast-paced prototypes. Play in browser or download Windows builds when available.</p>
-          <div class="flex items-center gap-4 mb-4 text-sm">
-            <span class="flex items-center gap-1 text-indigo-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>Online</span>
-            <span class="flex items-center gap-1 text-green-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Free</span>
-          </div>
-          <a href="/games.html" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium group-hover:gap-3 transition-all focus-ring rounded">Play & Learn<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+      <!-- Audiobooks -->
+      <article class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover intersection-animate">
+        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+          </svg>
         </div>
+        <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Audiobooks</h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-6">Learn on the go with professionally narrated audiobooks. Perfect for commutes, workouts, or multitasking.</p>
+        <a href="/audiobooks.html" class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium transition-colors focus-ring rounded">
+          Listen Now
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
       </article>
 
-      <!-- Add more cards in future only if assets exist in repo -->
+      <!-- Online Games -->
+      <article class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover intersection-animate">
+        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Online Games</h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-6">Multiplayer strategy games including chess, checkers, and more. Play with friends or challenge AI opponents.</p>
+        <a href="/games.html" class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium transition-colors focus-ring rounded">
+          Start Playing
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Original Music -->
+      <article class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover intersection-animate">
+        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Original Music</h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-6">Royalty-free instrumental tracks and soundscapes. Perfect for content creators, streamers, and projects.</p>
+        <a href="/music.html" class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium transition-colors focus-ring rounded">
+          Explore Music
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Community -->
+      <article class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover intersection-animate">
+        <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Join Our Community</h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-6">Connect with creators, developers, and innovators. Share ideas, get support, and collaborate on projects.</p>
+        <a href="/contact.html" class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-medium transition-colors focus-ring rounded">
+          Get In Touch
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </article>
     </div>
   </section>
 
@@ -314,7 +348,7 @@
     </div>
   </section>
 
-  <!-- Footer (kept same) -->
+  <!-- Footer -->
   <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
       <div class="space-y-4">
@@ -339,7 +373,8 @@
       <div>
         <h3 class="font-semibold text-white mb-4">Resources</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog & Guides</a></li>
+          <li><a href="/blog.html" class="hover:text-white transition-colors focus-ring rounded">Blog</a></li>
+          <li><a href="/nini.html" class="hover:text-white transition-colors focus-ring rounded">Nini's Adventures</a></li>
           <li><a href="/store.html" class="hover:text-white transition-colors focus-ring rounded">Store</a></li>
           <li><a href="/about.html" class="hover:text-white transition-colors focus-ring rounded">About Us</a></li>
           <li><a href="/contact.html" class="hover:text-white transition-colors focus-ring rounded">Contact</a></li>
