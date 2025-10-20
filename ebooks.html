@@ -1,122 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"/>
 <title>eBooks · iD01t Productions</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Browse 270+ professional eBooks by Guillaume Lessard / iD01t Productions. Programming, technology, business, and more on Google Play.">
-<link rel="canonical" href="https://id01t.github.io/ebooks.html">
-<link rel="preconnect" href="https://books.google.com" crossorigin>
-<link rel="preconnect" href="https://play.google.com" crossorigin>
-<link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0b0c0f">
-<meta property="og:title" content="eBooks - iD01t Productions">
-<meta property="og:description" content="Professional eBook catalog by Guillaume Lessard">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://id01t.github.io/ebooks.html">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/assets/css/site.css">
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Browse 270+ professional eBooks by Guillaume Lessard / iD01t Productions. Programming, technology, business, and more on Google Play." name="description"/>
+<link href="https://id01t.github.io/ebooks.html" rel="canonical"/>
+<link crossorigin="" href="https://books.google.com" rel="preconnect"/>
+<link crossorigin="" href="https://play.google.com" rel="preconnect"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<meta content="#0b0c0f" name="theme-color"/>
+<meta content="eBooks - iD01t Productions" property="og:title"/>
+<meta content="Professional eBook catalog by Guillaume Lessard" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.github.io/ebooks.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
-  <div class="topbar">
-    <a class="brand" href="/" aria-label="iD01t Productions Home">
-      <span class="dot" aria-hidden="true"></span>
-      <span>iD01t Productions</span>
-    </a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="/ebooks.html" aria-current="page">eBooks</a>
-      <a href="/audiobooks.html">Audiobooks</a>
-      <a href="/">Home</a>
-    </nav>
-  </div>
+<div class="topbar">
+<a aria-label="iD01t Productions Home" class="brand" href="/">
+<span aria-hidden="true" class="dot"></span>
+<span>iD01t Productions</span>
+</a>
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+</div>
 </header>
-
 <main>
-  <section class="main-hero container">
-    <h1 class="h1">📚 eBooks</h1>
-    <p class="muted">Full catalog with instant search, advanced filters, and direct Google Play links.</p>
-  </section>
-
-  <section class="controls" aria-label="Search and filter controls">
-    <div class="field" style="grid-column: 1 / -1">
-      <label for="q">Search</label>
-      <input 
-        id="q" 
-        class="input" 
-        type="search" 
-        placeholder="Title, author, publisher, keyword…"
-        aria-label="Search eBooks"
-      >
-    </div>
-    <div class="field">
-      <label for="lang">Language</label>
-      <select id="lang" aria-label="Filter by language">
-        <option value="">All Languages</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="brand">Creator</label>
-      <select id="brand" aria-label="Filter by creator">
-        <option value="">All Creators</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="min">Min Price (USD)</label>
-      <input 
-        id="min" 
-        class="input" 
-        type="number" 
-        step="0.01" 
-        inputmode="decimal" 
-        placeholder="0.00"
-        aria-label="Minimum price"
-      >
-    </div>
-    <div class="field">
-      <label for="max">Max Price (USD)</label>
-      <input 
-        id="max" 
-        class="input" 
-        type="number" 
-        step="0.01" 
-        inputmode="decimal" 
-        placeholder="99.99"
-        aria-label="Maximum price"
-      >
-    </div>
-    <div class="field">
-      <label for="sort">Sort By</label>
-      <select id="sort" aria-label="Sort results">
-        <option value="relevance">Relevance</option>
-        <option value="date-desc">Newest First</option>
-        <option value="date-asc">Oldest First</option>
-        <option value="title-asc">Title A→Z</option>
-        <option value="title-za">Title Z→A</option>
-        <option value="price-asc">Price Low→High</option>
-        <option value="price-desc">Price High→Low</option>
-      </select>
-    </div>
-  </section>
-
-  <section class="container">
-    <p id="count" class="muted" aria-live="polite">Loading catalog…</p>
-    <div id="grid" class="grid" aria-live="polite" aria-busy="true"></div>
-  </section>
+<section class="main-hero container">
+<h1 class="h1">📚 eBooks</h1>
+<p class="muted">Full catalog with instant search, advanced filters, and direct Google Play links.</p>
+</section>
+<section aria-label="Search and filter controls" class="controls">
+<div class="field" style="grid-column: 1 / -1">
+<label for="q">Search</label>
+<input aria-label="Search eBooks" class="input" id="q" placeholder="Title, author, publisher, keyword…" type="search"/>
+</div>
+<div class="field">
+<label for="lang">Language</label>
+<select aria-label="Filter by language" id="lang">
+<option value="">All Languages</option>
+</select>
+</div>
+<div class="field">
+<label for="brand">Creator</label>
+<select aria-label="Filter by creator" id="brand">
+<option value="">All Creators</option>
+</select>
+</div>
+<div class="field">
+<label for="min">Min Price (USD)</label>
+<input aria-label="Minimum price" class="input" id="min" inputmode="decimal" placeholder="0.00" step="0.01" type="number"/>
+</div>
+<div class="field">
+<label for="max">Max Price (USD)</label>
+<input aria-label="Maximum price" class="input" id="max" inputmode="decimal" placeholder="99.99" step="0.01" type="number"/>
+</div>
+<div class="field">
+<label for="sort">Sort By</label>
+<select aria-label="Sort results" id="sort">
+<option value="relevance">Relevance</option>
+<option value="date-desc">Newest First</option>
+<option value="date-asc">Oldest First</option>
+<option value="title-asc">Title A→Z</option>
+<option value="title-za">Title Z→A</option>
+<option value="price-asc">Price Low→High</option>
+<option value="price-desc">Price High→Low</option>
+</select>
+</div>
+</section>
+<section class="container">
+<p aria-live="polite" class="muted" id="count">Loading catalog…</p>
+<div aria-busy="true" aria-live="polite" class="grid" id="grid"></div>
+</section>
 </main>
-
-<footer class="footer">
-  <div class="inner container">
-    <span>© <span id="y"></span> iD01t Productions · Guillaume Lessard</span>
-    <nav aria-label="Footer navigation">
-      <a href="/ebooks.html">eBooks</a> · 
-      <a href="/audiobooks.html">Audiobooks</a> · 
-      <a href="/">Home</a>
-    </nav>
-  </div>
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
 </footer>
-
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-<script src="/assets/js/app.js" defer></script>
+<script defer="" src="/assets/js/app.js"></script>
 </body>
 </html>
