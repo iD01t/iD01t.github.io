@@ -2,6 +2,7 @@
  * Catalog application for iD01t Productions
  * Handles ebooks/audiobooks catalog display, search, filtering, and SEO
  */
+console.log('app.js script started');
 
 const SITE = {
   base: location.origin,
@@ -114,6 +115,7 @@ function makeIndex(item) {
 
 // Bootstrap list pages (ebooks/audiobooks)
 async function bootstrapList() {
+  console.log('bootstrapList called');
   const MODE = SITE.mode();
   if (!['ebooks', 'audiobooks'].includes(MODE)) return;
   
@@ -121,10 +123,16 @@ async function bootstrapList() {
   
   try {
     // Load and filter data
-    const allData = await getCatalog();
-    const data = allData.filter(x => 
-      isAudio ? x.format === 'Audiobook' : x.format === 'eBook'
-    );
+    const catalog = await getCatalog();
+    console.log('Catalog data:', catalog);
+    const data = isAudio ? (catalog.audiobooks || []) : (catalog.ebooks || []);
+    console.log('Filtered data:', data);
+
+    // Hide controls if no data
+    const controls = document.getElementById('controls');
+    if (controls && (!data || data.length === 0)) {
+        controls.style.display = 'none';
+    }
     
     // Build search index
     const index = data.map(d => ({
@@ -243,6 +251,7 @@ async function bootstrapList() {
       $count.textContent = `${rows.length} ${label}`;
       
       // Render cards
+      console.log('Rendering rows:', rows);
       renderCards(rows, $grid, isAudio);
       
       // Inject structured data
@@ -295,6 +304,7 @@ async function bootstrapList() {
 
 // Render catalog cards
 function renderCards(rows, $grid, isAudio) {
+  console.log('renderCards called with', rows.length, 'rows');
   if (!rows.length) {
     $grid.innerHTML = `
       <div class="col-span-full empty-state">
@@ -407,15 +417,17 @@ async function bootstrapDetail() {
   }
   
   try {
-    const data = await getCatalog();
-    const item = data.find(x => x.id === id);
+    const catalog = await getCatalog();
+    const allItems = [...(catalog.ebooks || []), ...(catalog.audiobooks || [])];
+    const item = allItems.find(x => x.id === id);
+    const isAudio = catalog.audiobooks?.some(book => book.id === id);
     
     if (!item) {
       $('#detailContainer').innerHTML = `
         <div class="empty-state">
           <p class="text-lg font-medium">Book not found</p>
           <p class="mt-2">The requested item could not be found.</p>
-          <a href="${item?.format === 'Audiobook' ? SITE.pages.audiobooks : SITE.pages.ebooks}" 
+          <a href="${isAudio ? SITE.pages.audiobooks : SITE.pages.ebooks}"
              class="mt-4 inline-block px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors">
             Browse catalog
           </a>
