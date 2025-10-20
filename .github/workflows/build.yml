@@ -1,75 +1,160 @@
-name: Build Catalog & Sitemap
+// ============================================================================
+// manifest.webmanifest
+// ============================================================================
+{
+  "name": "iD01t Productions - eBooks & Audiobooks",
+  "short_name": "iD01t",
+  "description": "Professional eBook and audiobook catalog by Guillaume Lessard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0c0f",
+  "theme_color": "#0b0c0f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["books", "education", "entertainment"],
+  "screenshots": []
+}
 
-on:
-  push:
-    branches: ["main", "master"]
-    paths:
-      - 'data/catalog.csv'
-      - 'tools/**'
-      - '.github/workflows/build.yml'
-  workflow_dispatch:
+// ============================================================================
+// service-worker.js
+// ============================================================================
+const VERSION = 'v1.0.0';
+const CACHE_NAME = `id01t-${VERSION}`;
 
-permissions:
-  contents: write
+const STATIC_ASSETS = [
+  '/',
+  '/ebooks.html',
+  '/audiobooks.html',
+  '/book.html',
+  '/assets/css/site.css',
+  '/assets/js/app.js',
+  '/manifest.webmanifest'
+];
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-      
-      - name: Install dependencies (if any)
-        run: |
-          python -m pip install --upgrade pip
-          # Add any Python dependencies here if needed
-      
-      - name: Build catalog JSON
-        run: |
-          python tools/build_catalog.py
-      
-      - name: Build sitemap XML
-        run: |
-          python tools/build_sitemap.py
-      
-      - name: Commit and push if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/catalog.json sitemap.xml
+// Install event - cache static assets
+self.addEventListener('install', event => {
+  console.log('[SW] Installing service worker...');
+  
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        console.log('[SW] Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
+      })
+      .then(() => self.skipWaiting())
+      .catch(err => console.error('[SW] Install failed:', err))
+  );
+});
+
+// Activate event - clean up old caches
+self.addEventListener('activate', event => {
+  console.log('[SW] Activating service worker...');
+  
+  event.waitUntil(
+    caches.keys()
+      .then(cacheNames => {
+        return Promise.all(
+          cacheNames
+            .filter(name => name.startsWith('id01t-') && name !== CACHE_NAME)
+            .map(name => {
+              console.log('[SW] Deleting old cache:', name);
+              return caches.delete(name);
+            })
+        );
+      })
+      .then(() => self.clients.claim())
+      .catch(err => console.error('[SW] Activate failed:', err))
+  );
+});
+
+// Fetch event - network first for data, cache first for assets
+self.addEventListener('fetch', event => {
+  const { request } = event;
+  const url = new URL(request.url);
+  
+  // Only handle GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+  
+  // Skip cross-origin requests
+  if (url.origin !== location.origin) {
+    return;
+  }
+  
+  // Network first for API/data
+  if (url.pathname.includes('/data/') || url.pathname.includes('.json')) {
+    event.respondWith(
+      fetch(request)
+        .then(response => {
+          // Clone and cache the response
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME)
+            .then(cache => cache.put(request, responseClone))
+            .catch(() => {}); // Ignore cache errors
+          return response;
+        })
+        .catch(() => {
+          // Fallback to cache if network fails
+          return caches.match(request);
+        })
+    );
+    return;
+  }
+  
+  // Cache first for static assets
+  event.respondWith(
+    caches.match(request)
+      .then(cached => {
+        if (cached) {
+          // Return cached version and update in background
+          fetch(request)
+            .then(response => {
+              caches.open(CACHE_NAME)
+                .then(cache => cache.put(request, response))
+                .catch(() => {});
+            })
+            .catch(() => {});
           
-          # Check if there are changes to commit
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "🤖 Auto-build: Update catalog and sitemap [skip ci]"
-            git push
-            echo "Changes committed and pushed"
-          fi
-      
-      - name: Build summary
-        if: always()
-        run: |
-          echo "## Build Results" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          if [ -f data/catalog.json ]; then
-            ITEM_COUNT=$(python -c "import json; print(len(json.load(open('data/catalog.json'))))")
-            echo "✅ Catalog built successfully with **$ITEM_COUNT** items" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "❌ Catalog build failed" >> $GITHUB_STEP_SUMMARY
-          fi
-          if [ -f sitemap.xml ]; then
-            URL_COUNT=$(grep -c "<loc>" sitemap.xml || echo "0")
-            echo "✅ Sitemap generated with **$URL_COUNT** URLs" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "❌ Sitemap generation failed" >> $GITHUB_STEP_SUMMARY
-          fi
+          return cached;
+        }
+        
+        // Not in cache, fetch from network
+        return fetch(request)
+          .then(response => {
+            // Cache successful responses
+            if (response.ok) {
+              const responseClone = response.clone();
+              caches.open(CACHE_NAME)
+                .then(cache => cache.put(request, responseClone))
+                .catch(() => {});
+            }
+            return response;
+          })
+          .catch(() => {
+            // Network failed, try to return offline page
+            return caches.match('/');
+          });
+      })
+  );
+});
+
+// Message event - allow clients to skip waiting
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
