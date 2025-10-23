@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+ fix-catalog-pages
 
 <html class="scroll-smooth" lang="en">
 <head>
@@ -22,6 +23,32 @@
 <meta content="summary_large_image" name="twitter:card"/>
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans antialiased">
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Audiobooks · iD01t Productions</title>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Browse professional audiobooks narrated by El'Nox Rah / Guillaume Lessard. Technology, programming, business audiobooks on Google Play." name="description"/>
+<link href="https://id01t.github.io/audiobooks.html" rel="canonical"/>
+<link crossorigin="" href="https://books.google.com" rel="preconnect"/>
+<link crossorigin="" href="https://play.google.com" rel="preconnect"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<meta content="#0b0c0f" name="theme-color"/>
+<meta content="Audiobooks - iD01t Productions" property="og:title"/>
+<meta content="Professional audiobook catalog narrated by El'Nox Rah" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.github.io/audiobooks.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="header">
+<div class="topbar">
+<a aria-label="iD01t Productions Home" class="brand" href="/">
+<span aria-hidden="true" class="dot"></span>
+<span>iD01t Productions</span>
+</a>
+ main
 <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between h-16">
@@ -68,12 +95,17 @@
 <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
 <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
 <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+ fix-catalog-pages
 <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition.colors" href="/blog.html">Blog</a>
+
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+ main
 <a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
 <a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
 </div>
 </div>
 </nav>
+ fix-catalog-pages
     <main>
         <!-- Hero Section -->
         <header class="py-24 sm:py-32 bg-gradient-to-b from-brand-50/50 to-white dark:from-brand-950/50 dark:to-slate-950">
@@ -127,6 +159,56 @@
 </div>
 </div>
 </section>
+</div>
+</header>
+<main>
+<section class="main-hero container">
+<h1 class="h1">🎧 Audiobooks</h1>
+<p class="muted">Narrated catalog with instant search, filters, and Google Play buy buttons.</p>
+</section>
+<section aria-label="Search and filter controls" class="controls">
+<div class="field" style="grid-column: 1 / -1">
+<label for="q">Search</label>
+<input aria-label="Search audiobooks" class="input" id="q" placeholder="Title, narrator, author, publisher, keyword…" type="search"/>
+</div>
+<div class="field">
+<label for="lang">Language</label>
+<select aria-label="Filter by language" id="lang">
+<option value="">All Languages</option>
+</select>
+</div>
+<div class="field">
+<label for="brand">Narrator</label>
+<select aria-label="Filter by narrator" id="brand">
+<option value="">All Narrators</option>
+</select>
+</div>
+<div class="field">
+<label for="min">Min Price (USD)</label>
+<input aria-label="Minimum price" class="input" id="min" inputmode="decimal" placeholder="0.00" step="0.01" type="number"/>
+</div>
+<div class="field">
+<label for="max">Max Price (USD)</label>
+<input aria-label="Maximum price" class="input" id="max" inputmode="decimal" placeholder="99.99" step="0.01" type="number"/>
+</div>
+<div class="field">
+<label for="sort">Sort By</label>
+<select aria-label="Sort results" id="sort">
+<option value="relevance">Relevance</option>
+<option value="date-desc">Newest First</option>
+<option value="date-asc">Oldest First</option>
+<option value="title-asc">Title A→Z</option>
+<option value="title-za">Title Z→A</option>
+<option value="price-asc">Price Low→High</option>
+<option value="price-desc">Price High→Low</option>
+</select>
+</div>
+</section>
+<section class="container">
+<p aria-live="polite" class="muted" id="count">Loading catalog…</p>
+<div aria-busy="true" aria-live="polite" class="grid" id="grid"></div>
+</section>
+ main
 </main>
 <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
@@ -176,6 +258,10 @@
 </div>
 </div>
 </footer>
+ fix-catalog-pages
+
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+ main
 <script defer="" src="/assets/js/app.js"></script>
 </body>
 </html>
