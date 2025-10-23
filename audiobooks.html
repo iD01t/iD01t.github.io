@@ -1,263 +1,1460 @@
 <!DOCTYPE html>
- fix-catalog-pages
-
-<html class="scroll-smooth" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Audiobooks · iD01t Productions</title>
-<meta content="Listen to our growing collection of audiobooks on technology, creativity, and personal development. Available on Google Play." name="description"/>
-<link href="https://id01t.github.io/audiobooks.html" rel="canonical"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/assets/css/site.css" rel="stylesheet"/>
-<link href="/manifest.webmanifest" rel="manifest"/>
-<meta content="#1e293b" name="theme-color"/>
-<!-- Open Graph & Twitter Card -->
-<meta content="Audiobooks Catalog - iD01t Productions" property="og:title"/>
-<meta content="Explore professional audiobooks on cutting-edge topics by Guillaume Lessard and iD01t Productions." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://id01t.github.io/audiobooks.html" property="og:url"/>
-<meta content="https://id01t.github.io/assets/img/og/audiobooks.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-</head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans antialiased">
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title>Audiobooks · iD01t Productions</title>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Browse professional audiobooks narrated by El'Nox Rah / Guillaume Lessard. Technology, programming, business audiobooks on Google Play." name="description"/>
-<link href="https://id01t.github.io/audiobooks.html" rel="canonical"/>
-<link crossorigin="" href="https://books.google.com" rel="preconnect"/>
-<link crossorigin="" href="https://play.google.com" rel="preconnect"/>
-<link href="/manifest.webmanifest" rel="manifest"/>
-<meta content="#0b0c0f" name="theme-color"/>
-<meta content="Audiobooks - iD01t Productions" property="og:title"/>
-<meta content="Professional audiobook catalog narrated by El'Nox Rah" property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://id01t.github.io/audiobooks.html" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="/assets/css/site.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Audiobooks — iD01t Productions</title>
+  <meta name="description" content="Browse 103 immersive audiobooks produced by iD01t Productions and author Guillaume Lessard spanning genres from science fiction to wellness and technology.">
+  <meta content="index,follow,max-image-preview:large" name="robots">
+  <meta content="#2aa7ff" name="theme-color">
+  <link href="https://id01t.github.io/audiobooks.html" rel="canonical">
+  <meta content="Guillaume Lessard" name="author">
+  <meta content="Windows utilities, technical eBooks, audiobooks, games, original music, programming tools, AI automation, chess software, music production" name="keywords">
+  <!-- Open Graph -->
+  <meta content="website" property="og:type">
+  <meta content="Audiobooks — iD01t Productions" property="og:title">
+  <meta content="Browse 103 immersive audiobooks produced by iD01t Productions and author Guillaume Lessard spanning genres from science fiction to wellness and technology." property="og:description">
+  <meta content="https://id01t.github.io/audiobooks.html" property="og:url">
+  <meta content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" property="og:image">
+  <meta content="iD01t Productions" property="og:site_name">
+  <!-- Twitter Card -->
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="Audiobooks — Professional Digital Content" name="twitter:title">
+  <meta content="Browse 103 immersive audiobooks produced by iD01t Productions and author Guillaume Lessard spanning genres from science fiction to wellness and technology." name="twitter:description">
+  <meta content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" name="twitter:image">
+  <meta content="@id01t" name="twitter:creator">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5faff', 100: '#e0f2ff', 200: '#bae0ff', 300: '#8dceff', 400: '#5abaff',
+              500: '#2aa7ff', 600: '#008ef6', 700: '#0070d7', 800: '#0057b5', 900: '#003f92'
+            }
+          },
+          keyframes: {
+            bounceSubtle: {'0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-4px)'}},
+            pulseGlow: {'0%,100%': {opacity:0.2}, '50%': {opacity:0.4}},
+            float: {'0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-6px)'}}
+          },
+          animation: {
+            'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Styles -->
+  <style>
+    :root { --ring-color: theme('colors.brand.500'); }
+    .link-underline { position: relative; transition: color .2s; }
+    .link-underline::after { content:""; position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .2s ease-out; }
+    .link-underline:hover::after, .link-underline:focus-visible::after { transform:scaleX(1); transform-origin:left; }
+    .focus-ring:focus-visible { outline:2px solid var(--ring-color); outline-offset:2px; }
+    .gradient-text { background:linear-gradient(to right,#2aa7ff,#0070d7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; }
+    .card-hover { transition: transform .4s ease, box-shadow .4s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 25px -5px rgba(0,0,0,.15); }
+    .glass-effect { background: rgba(255,255,255,.6); backdrop-filter: blur(12px) saturate(150%); }
+    @media (prefers-color-scheme: dark){ .glass-effect{ background: rgba(30,41,59,.55);} }
+    .intersection-animate { opacity:0; transform: translateY(20px); transition: all .6s cubic-bezier(.22,1,.36,1); }
+    .intersection-animate.visible { opacity:1; transform:none; }
+  </style>
 </head>
-<body>
-<header class="header">
-<div class="topbar">
-<a aria-label="iD01t Productions Home" class="brand" href="/">
-<span aria-hidden="true" class="dot"></span>
-<span>iD01t Productions</span>
-</a>
- main
-<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<div class="flex items-center space-x-8">
-<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
-<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
-<span class="font-semibold text-lg">iD01t Productions</span>
-</a>
-<div class="hidden md:flex items-center space-x-6">
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
-</div>
-</div>
-<div class="flex items-center space-x-4">
-<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
-<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
-<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
-<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-</div>
-</div>
-</div>
-<!-- Mobile menu -->
-<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
-<div class="px-4 py-4 space-y-2">
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
-<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
-<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
-</div>
-</div>
-</nav>
- fix-catalog-pages
-    <main>
-        <!-- Hero Section -->
-        <header class="py-24 sm:py-32 bg-gradient-to-b from-brand-50/50 to-white dark:from-brand-950/50 dark:to-slate-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white gradient-text">
-                Audiobooks Catalog
-            </h1>
-            <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-600 dark:text-slate-400">
-                Our audiobook collection is just getting started. Check back soon for new releases.
-            </p>
+<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-8">
+          <a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+            <img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg">
+            <span class="font-semibold text-lg">iD01t Productions</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+            <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+            <a class="text-brand-700 dark:text-brand-400 font-semibold hover:text-brand-700 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+            <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+            <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+            <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+            <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+            <a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+          </div>
         </div>
-    </header>
-<!-- Filter & Search Controls -->
-<section class="py-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800" id="controls">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-<!-- Search Input -->
-<div class="sm:col-span-2 lg:col-span-2">
-<label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2" for="searchInput">Search</label>
-<input class="w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition" id="searchInput" placeholder="e.g., AI, Self-Help" type="search"/>
-</div>
-<!-- Language Filter -->
-<div>
-<label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2" for="langFilter">Language</label>
-<select class="w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition" id="langFilter"></select>
-</div>
-<!-- Brand Filter -->
-<div>
-<label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2" for="brandFilter">Creator</label>
-<select class="w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition" id="brandFilter"></select>
-</div>
-<!-- Sort Filter -->
-<div>
-<label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2" for="sortFilter">Sort By</label>
-<select class="w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition" id="sortFilter">
-<option value="relevance">Relevance</option>
-<option value="date-desc">Newest</option>
-<option value="title-asc">Title (A-Z)</option>
-<option value="price-asc">Price (Low-High)</option>
-</select>
-</div>
-</div>
-</div>
-</section>
-<!-- Catalog Grid -->
-<section class="py-24">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<p class="mb-8 text-slate-600 dark:text-slate-400" id="resultCount">Loading catalog...</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="catalogGrid">
-<!-- Audiobooks will be injected here. If empty, a message will be shown. -->
-</div>
-</div>
-</section>
-</div>
-</header>
-<main>
-<section class="main-hero container">
-<h1 class="h1">🎧 Audiobooks</h1>
-<p class="muted">Narrated catalog with instant search, filters, and Google Play buy buttons.</p>
-</section>
-<section aria-label="Search and filter controls" class="controls">
-<div class="field" style="grid-column: 1 / -1">
-<label for="q">Search</label>
-<input aria-label="Search audiobooks" class="input" id="q" placeholder="Title, narrator, author, publisher, keyword…" type="search"/>
-</div>
-<div class="field">
-<label for="lang">Language</label>
-<select aria-label="Filter by language" id="lang">
-<option value="">All Languages</option>
-</select>
-</div>
-<div class="field">
-<label for="brand">Narrator</label>
-<select aria-label="Filter by narrator" id="brand">
-<option value="">All Narrators</option>
-</select>
-</div>
-<div class="field">
-<label for="min">Min Price (USD)</label>
-<input aria-label="Minimum price" class="input" id="min" inputmode="decimal" placeholder="0.00" step="0.01" type="number"/>
-</div>
-<div class="field">
-<label for="max">Max Price (USD)</label>
-<input aria-label="Maximum price" class="input" id="max" inputmode="decimal" placeholder="99.99" step="0.01" type="number"/>
-</div>
-<div class="field">
-<label for="sort">Sort By</label>
-<select aria-label="Sort results" id="sort">
-<option value="relevance">Relevance</option>
-<option value="date-desc">Newest First</option>
-<option value="date-asc">Oldest First</option>
-<option value="title-asc">Title A→Z</option>
-<option value="title-za">Title Z→A</option>
-<option value="price-asc">Price Low→High</option>
-<option value="price-desc">Price High→Low</option>
-</select>
-</div>
-</section>
-<section class="container">
-<p aria-live="polite" class="muted" id="count">Loading catalog…</p>
-<div aria-busy="true" aria-live="polite" class="grid" id="grid"></div>
-</section>
- main
-</main>
-<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-<div class="space-y-4">
-<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
-<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
-<span class="font-semibold text-lg text-white">iD01t Productions</span>
-</a>
-<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
-</div>
-<div>
-<h3 class="font-semibold text-white mb-4">Products</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold text-white mb-4">Resources</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold text-white mb-4">Legal</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
-<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
-<div class="flex items-center gap-6">
-<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
-<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
-<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
-</div>
-</div>
-</footer>
- fix-catalog-pages
+        <div class="flex items-center space-x-4">
+          <button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </button>
+          <a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+          <button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+            <svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+            <svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+      <div class="px-4 py-4 space-y-2">
+        <a class="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors block px-4 py-2" href="/store.html">Store</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors block px-4 py-2" href="/ebooks.html">eBooks</a>
+        <a class="bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-400 font-semibold hover:bg-brand-50 dark:hover:bg-slate-800 rounded-lg transition-colors block px-4 py-2" href="/audiobooks.html">Audiobooks</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors block px-4 py-2" href="/apps.html">Apps</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors block px-4 py-2" href="/games.html">Games</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors block px-4 py-2" href="/music.html">Music</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors block px-4 py-2" href="/blog.html">Blog</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors block px-4 py-2" href="/nini.html">Nini's Adventures</a>
+        <a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Page content -->
+  <main class="flex-grow">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+      <header class="text-center space-y-4">
+        <h1 class="text-4xl sm:text-5xl font-bold gradient-text">Audiobooks</h1>
+        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Browse 103 immersive audiobooks produced by iD01t Productions and author Guillaume Lessard spanning genres from science fiction to wellness and technology.</p>
+      </header>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
- main
-<script defer="" src="/assets/js/app.js"></script>
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Echo Protocol</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Last Transmission – Part I: Signal Found</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">🛰️ A signal has returned. But it&#x27;s not just data—it&#x27;s a memory. A voice. A warning.In the frozen outskirts of the Arctic, engineer Aera Nova intercepts a phantom frequency on an obsolete bandwidth. Her AI urges her to ig…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKTSQNfM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">L&#x27;énigme quantique : Percer les mystères de la réalité</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Exploration de la mécanique quantique, des mondes parallèles et de la nature de la conscience</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">L&#x27;énigme quantique : percer les mystères de la réalitéPercez les secrets de l&#x27;univers avec The Quantum Enigma : Unraveling the Mysteries of Reality, un voyage révolutionnaire au cœur de la mécanique quantique, de la cons…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECKuDv4oM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">To the Top of the Mountain</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Journey of Health, Wellness, and Adventure</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">To the Top of the Mountain: A Journey of Health, Wellness, and AdventureA Holistic Guide to Lifelong Growth, Resilience, and Connection Through Nature and Self-DiscoveryEmbark on a transformative journey that blends the …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDy_VS9tM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Jimmy Carter: A Legacy of Compassion and Leadership</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">From Peanut Farmer to Nobel Laureate – A Life That Shaped the World</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Jimmy Carter: A Legacy of Compassion and Leadership is a captivating exploration of the life and enduring impact of one of the most influential figures in modern history. From his humble beginnings in Plains, Georgia, to…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKqCboPM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering Photoshop: The Complete Guide to Every Version</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">From Basics to Advanced Techniques with Hands-On Exercises and Projects</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unlock the full potential of Adobe Photoshop with Mastering Photoshop: The Complete Guide to Every Version, your all-in-one resource for mastering this powerful design tool. Whether you’re a beginner or an experienced pr…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAqV0IXeM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Frequency Blueprint</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Healing Technologies of Water, Sound, and Sacred Geometry</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Discover the future of healing hidden in the frequencies of water, sound, and sacred geometry.The Frequency Blueprint is a groundbreaking guide at the intersection of ancient wisdom and cutting-edge science. Written by G…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBK5yanfM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Adventure of iD01t Productions: A Story of Passion, Resilience and Creativity</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Create, innovate and grow solo, while drawing inspiration from life.</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Discover The Adventure of iD01t Productions: A Story of Passion, Resilience, and CreativityDive into the inspiring journey of The Adventure of iD01t Productions, a captivating narrative about creation, innovation, and ov…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKWi0aNM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Windows Zero to Hero</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Mastering the World&#x27;s Most Popular Operating System for Beginners and Experts</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Windows Zero to Hero: Mastering the World&#x27;s Most Popular Operating System for Beginners and Experts By Guillaume LessardTake your Windows expertise to the next level with Windows Zero to Hero, an in-depth guide tailored …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyQzUD1M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">DIY Digital Skills: Build a Career in Tech from Scratch</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Master the Foundations of Tech, Learn to Code, and Unlock High-Paying Digital Careers.</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">DIY Digital Skills Build a Career in Tech from ScratchBy Guillaume LessardUnlock the limitless potential of the digital age with DIY Digital Skills Build a Career in Tech from Scratch. This transformative guide takes you…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKGDBYKM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Leo XIV: The First American Pope</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Historic Journey from Chicago to the Vatican</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">For the first time in over two thousand years, the papal throne is held by an American. Leo XIV: The First American Pope chronicles the extraordinary rise of Robert Francis Prevost from his humble beginnings in Chicago t…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKDQpNUM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Artifact’s Whisper</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Tale of Love, Betrayal, and the Secrets of Time</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The Artifact’s Whisper: A Tale of Love, Betrayal, and the Secrets of TimeBy Alexandra V. SterlingIn the haunting halls of Rousseau Manor, Genevieve Rousseau discovers she has inherited more than a decaying estate. She is…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyQ1QDtM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Jesus: The Eternal Legacy</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Journey Through His Life, Teachings, and Everlasting Impact on Humanity</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Jesus: The Eternal LegacyBy Guillaume LessardJesus: The Eternal Legacy is a profound exploration of the life, teachings, and everlasting impact of Jesus Christ. Rooted in Catholic tradition, this book delves deeply into …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyYykjyM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">LUMEN·ZERO : Le Pouvoir Caché des Pyramides Énergétiques</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Construire, Amplifier, Alimenter – Guide Complet pour Récolter l’Énergie Libre à l’Aide de Pyramides Résonantes</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Et si la solution à notre crise énergétique planétaire se trouvait déjà sous nos pieds, dans l’air, la Terre… et dans la forme millénaire d’une pyramide ?Dans LUMEN·ZERO, El&#x27;Nox Rah t’invite à découvrir un savoir oublié …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKRR8FxM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Master IT Yourself</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A DIY Guide to Building Your IT Skills</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Master IT Yourself: A DIY Guide to Building Your IT SkillsLooking to build your IT skills from scratch? Master IT Yourself by Guillaume Lessard is the ultimate DIY guide for anyone ready to dive into the world of Informa…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKOGF4eM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">AI in Education</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Transforming the Classroom for the 21st Century</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unlock the future of learning with this essential guide to artificial intelligence in education. AI in Education: Transforming the Classroom for the 21st Century offers a comprehensive roadmap for educators, policymakers…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKBCJE-M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Shaping the Future: Embracing Trends for a Better Tomorrow</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Comprehensive Guide to Navigating Innovation, Community, and Change in the Modern World</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Shaping the Future: Embracing Trends for a Better TomorrowBy Guillaume LessardShaping the Future is your essential guide to thriving in a rapidly evolving world. Written by visionary author Guillaume Lessard, this book e…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKIBZgDM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Master the Basics of Reading Music</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Beginner’s Guide to Musical Literacy</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unlock the world of music with &quot;Mastering the Art of Music Reading and Performance&quot;, a comprehensive guide designed for aspiring musicians at every stage of their journey. Whether you’re picking up an instrument for the …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDybQct5M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Light at the Veil’s Edge</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Hidden Flame of Kirlian Photography: How the Soul Leaves Fingerprints in Light</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">ight at the Veil’s Edge: The Hidden Flame of Kirlian PhotographyBy Guillaume Lessard (El’Nox)What if your soul left fingerprints in light?Light at the Veil’s Edge invites you into the mysterious world of Kirlian photogra…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKDjhOYM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering Blender</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">From Basics to Advanced 3D Art and Animation</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Bite by Bite: The Rise of Fast Food in AmericaExplore the rich, flavorful history of a culinary revolution with Bite by Bite: The Rise of Fast Food in America. Guillaume Lessard takes you on an eye-opening journey throug…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyI31jnM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Java Maestro</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Advanced Programming Masterclass, Expert-Level Coding Strategies Revealed</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unlock the next level of Java mastery and transform your technical skills into unstoppable leverage.Java Maestro is not just a programming book, it’s a strategic blueprint for turning code into capital. Designed for adva…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKVEUUnM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Sacred Vibrational Technology</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Scientific Explanations, Rituals, &amp; Programming</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Sacred Vibrational Technology: Scientific Explanations, Rituals, and Programming By Guillaume LessardWhat if healing was not only physical but vibrational? What if technology could tune your mind, body, and spirit into p…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKTQQNXM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">AI Goldmine: 100 Passive Income Ideas Using ChatGPT and Free AI Tools</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Earn Online with Zero Budget – Your Step-by-Step Guide to Automating Success</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unlock the Future of Passive Income with AI – Even If You Have $0 to StartWelcome to the AI Goldmine, your ultimate guide to building automated, scalable, and 100% budget-free income streams using the power of ChatGPT an…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKDSZNfM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Legacy of Shadows 2</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A new generation</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Legacy of Shadows: A New GenerationFamily, legacy, and the unyielding pursuit of truthStep into the thrilling continuation of a saga where family legacy collides with relentless danger. Lisa Hawthorne, the fearless daugh…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDybQIt4M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Architect’s Legacy</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Fight for Freedom Continues</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The Architect’s Legacy: The Fight for Freedom ContinuesThe battle is not over. The echoes of the past are rising.In a world still reeling from the fall of a sinister organization, Lisa, Alex, Jack, and Olivia must face a…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyHRtd-M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Unstoppable: The Ultimate Guide to Unlocking Your Potential and Achieving Success</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Your Blueprint to Break Barriers, Build Momentum, and Thrive</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unstoppable: Unlock Your Potential and Achieve True SuccessWhat’s holding you back from achieving greatness?Unstoppable is more than just a book, it is your personal guide to tapping into the power you already have and u…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyAzpD2M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Spin Mastery</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Ultimate Traktor DJ Guide</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Spin Mastery: The Ultimate Traktor DJ GuideBy Guillaume LessardTransform your DJ skills and discover the full potential of Traktor with Spin Mastery: The Ultimate Traktor DJ Guide. Written by Guillaume Lessard, a seasone…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyIz1j3M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">🌿 La Charte des Relations Sacrées de la Nouvelle Terre</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Un guide pour aimer librement, en conscience et en vérité</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">🌿 La Charte des Relations Sacrées de la Nouvelle TerreUn guide pour aimer librement, en conscience et en véritéEt si aimer devenait un acte sacré, une voie d’éveil, une révolution intérieure Dans un monde en pleine mutat…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKw32DpM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Many Realities</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Exploring the Boundaries of Existence and the Unseen Worlds Beyond</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The Many Realities: Exploring the Boundaries of Existence and the Unseen Worlds BeyondBy Guillaume LessardThe Many Realities is a groundbreaking exploration of the hidden dimensions of existence that transcend the limits…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDy_Vu9uM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Beyond the Event Horizon: Solving the Black Hole Information Paradox</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">How Quantum Mechanics is Redefining Reality and Reshaping Our Understanding of Black Holes</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">What happens to information when it falls into a black hole? For decades, this paradox challenged the foundations of physics. Now, groundbreaking insights in quantum gravity, entanglement, and holography are rewriting ev…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKznCOKM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Panneaux Solaires Organiques : L’Énergie Vivante du Futur</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Comprendre, construire et maîtriser les technologies photovoltaïques organiques flexibles et écologiques</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Les Panneaux Solaires Organiques : L’Énergie Vivante du Futur🌞 Redonnez vie à l’énergie solaire grâce à la technologie organique. Dans cet ouvrage à la fois technique, accessible et profondément inspirant, El&#x27;Nox Rah vou…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKlRDVyM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Understanding Your Cat&#x27;s Mind</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Journey into Feline Psychology</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Step into the fascinating world of feline psychology with the first volume of the acclaimed Understanding Your Cat’s Mind Trilogy. This series is dedicated to exploring every dimension of feline behavior, communication, …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyq2jriM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Shadows Reignited</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Lisa’s Fight for Justice</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Step into the next chapter of the Hawthorne legacy in Shadows Reignited: Lisa’s Fight for Justice, where the daughter of legendary heroes must confront an unfinished battle against a resurgent evil.Lisa Hawthorne always …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyzUmNqM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Earthquakes Unveiled</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Understanding, Predicting, and Preparing for Nature’s Most Powerful Force</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Earthquakes Unveiled: Understanding, Predicting, and Preparing for Nature’s Most Powerful ForceBy Guillaume LessardWhat causes the Earth to shake? How do communities prepare for one of nature’s most unpredictable forces?…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDybRwt_M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Quantum Tao</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Modern Science and Ancient Wisdom in Harmony</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Quantum Tao: The Hidden Unity of Science and SpiritBy Guillaume LessardWhat if quantum mechanics was more than science? What if it was also a mirror of your inner world?Quantum Tao: The Hidden Unity of Science and Spirit…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKSjUK7M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Quantum Jumping Unlocked</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Harness Parallel Realities, Rewire Your Mind, and Leap Into the Life You Truly Desire</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Quantum Jumping Unlocked: Harness Parallel Realities and Transform Your Life By Guillaume LessardWhat if the version of you who is already living your dream life exists right now, waiting for you to connect? What if the …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKDmdOPM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Anarchie et évolution - L&#x27;histoire de la musique punk</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">De la rébellion à la révolution - Une odyssée culturelle</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Anarchie et évolution : L&#x27;histoire de la musique punkDe la rébellion à la révolution : Une odyssée culturellePlongez dans l&#x27;univers électrisant du punk avec Anarchie et évolution : L&#x27;histoire du punk par Guillaume Lessar…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECKmALYmM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Automation and SEO Mastery: Strategies for Growth and Efficiency</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Practical Guide to Scaling Your Online Presence with Cutting-Edge Automation Tools and Advanced SEO Techniques</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Automation and SEO Mastery: Strategies for Growth and EfficiencyA Practical Guide to Scaling Your Online Presence with AI, Automation, and Advanced SEODescription:In today’s digital landscape, visibility and efficiency a…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDygzrD2M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Spin Mastery : Le guide ultime du DJ Traktor</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Votre chemin vers un mixage professionnel et des paysages sonores créatifs</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Spin Mastery : Le guide ultime du DJ TraktorPar Guillaume LessardTransformez vos compétences de DJ et découvrez le plein potentiel de Traktor avec Spin Mastery : Le guide ultime du DJ Traktor. Écrit par Guillaume Lessard…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECKGANYmM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Reality Unveiled: How Consciousness Shapes the World We Perceive</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Exploring the Intersection of Perception, Quantum Physics, and the Nature of Existence</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Reality Unveiled: How Consciousness Shapes the World We PerceiveUnlock the Mysteries of Reality, Perception, and ConsciousnessWhat if the world you see isn’t the full picture? What if your mind is actively shaping realit…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECK6CaovM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Power of Repetition: Transforming Minds Through Words</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">How Daily Affirmations Shape Reality and Influence Success</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The Power of Repetition: Transforming Minds Through Words By Guillaume LessardDiscover the extraordinary influence of words and how they shape every aspect of your reality in The Power of Repetition: Transforming Minds T…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDymy_bzM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Quantum Code Mastery</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">From Bits to Qubits — The Ultimate Beginner’s Guide to Quantum Programming and the Future of Computing</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Step into the future of computation with Quantum Code Mastery, a groundbreaking guide designed for beginners eager to explore the transformative world of quantum computing. From foundational quantum theory to hands-on pr…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBK9gy2VM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Beneath the Bloom</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Shadows Unleashed Every Secret Brings a Storm</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Dive into a gripping tale of mystery, betrayal, and resilience with Beneath the Bloom: Shadows Unleashed. When Lisa receives cryptic messages and is drawn back into the haunting legacy of the bloom, she and her friends m…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyzQmN6M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Shadows of Bloom</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Every Secret Has Its Roots</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Shadows of BloomEvery secret has its rootsWhen the fragile peace of Lisa’s life is shattered by a cryptic message that reads We know what you did, she is forced to confront the haunting shadows of her past. Years ago, a …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyrQft5M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Intersection: The Moment Their Paths Crossed</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Fate That Brought Them Together</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Step into a gripping tale of destiny, courage, and justice in Intersection: The Moment Their Paths Crossed, the third prequel in the Intersection Series.Set against the vibrant yet unforgiving backdrop of New York City, …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyzWuNiM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Maîtrise des échecs</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Guide des stratégies et techniques gagnantes pour les professionnels</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">CHESS MASTERY - Le guide des stratégies et techniques gagnantes à l&#x27;usage des professionnelsÊtes-vous prêt à penser comme un champion et à surpasser vos adversaires sur l&#x27;échiquier ?&quot;La maîtrise des échecs : Le guide des…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECKmCzYtM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">AI Revolution: How Automation is Transforming Everyday Life</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Exploring the Innovations, Challenges, and Future of Artificial Intelligence</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">AI Revolution: How Automation is Transforming Everyday Life By Guillaume Lessard Step into the transformative world of artificial intelligence with AI Revolution: How Automation is Transforming Everyday Life. This insigh…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDy_w-_7M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering Xcode</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Building Professional iOS and macOS Apps from Scratch</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Mastering Xcode: Building Professional iOS and macOS Apps from Scratch By Guillaume LessardUnlock the full power of Apple’s development ecosystem with this complete guide to Xcode, the ultimate tool for creating world-cl…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyg0jDqM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">FREE ENERGY, FREE LIFE</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Forbidden Science of Nikola Tesla and the Path to Total Financial Freedom</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Free Energy, Free LifeThe Forbidden Science of Nikola Tesla and the Path to Total Financial FreedomWhat if everything you were taught about energy, scarcity, and wealth was a lie?In this groundbreaking exposé, tech visio…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKjVnNAM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Bite by Bite</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Rise of Fast Food in America</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Bite by Bite: The Rise of Fast Food in AmericaStep into the sizzling history of America’s most iconic industry with Bite by Bite: The Rise of Fast Food in America. In this captivating eBook by Guillaume Lessard, uncover …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyI11jvM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Legacy of Shadows</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Final Betrayal and a Love Unbreakable</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">In a world where shadows loom and betrayals strike close to home, can love endure the ultimate test?Olivia Bennett and Jack Hawthorne thought their fight against corruption had ended, but a cryptic note shatters their ha…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyzUqNqM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Maglev Revolution</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Speed, Sustainability, and the Future of Transportation</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Maglev Mastery: The Future of High-Speed TransportationBy Guillaume LessardEmbark on a journey into the groundbreaking world of magnetic levitation technology with Maglev Mastery: The Future of High-Speed Transportation.…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDy7Rat9M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Forever in Bloom</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Journey of Love, Friendship, and Second Chances</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Forever in BloomSome gardens heal the soul, and some loves last a lifetime.When Lisa arrives in the charming town of Clearwater Bay, she carries the weight of a past she longs to leave behind. What she doesn’t expect is …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDybVwtvM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Quantum Revolution: Unveiling the Future with Willow</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">How Google&#x27;s Quantum Chip Redefines Computing for the Next Era</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Quantum Revolution: Unveiling the Future with WillowBy Guillaume LessardThis book explores the cutting-edge advancements in quantum computing through the lens of Google&#x27;s groundbreaking Willow quantum chip. Divided into …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAK6g6qFM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">When Cells Listen: The Hidden Symphony of Sound and Gene Expression</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">How Acoustic Vibrations Influence Our Biology, The Future of Sonic Medicine</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">When Cells Listen: The Hidden Symphony of Sound and Gene ExpressionBy Guillaume LessardWhat if your body could hear without ears? What if every cell was already listening, responding to sound in ways that science is only…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKTncOLM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Echoes of the Heart</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Love Story</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">When fate collides with purpose, can love truly conquer all?In the bustling streets of Manhattan, investigative journalist Olivia Bennett crosses paths with enigmatic attorney Jack Hawthorne. What begins as a serendipito…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyLXVtlM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Shadows of Redemption</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Price of Justice and the Strength of Love</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Dive into a world where truth battles shadows and love is the ultimate test of resilience. Shadows of Redemption takes readers on a gripping journey through high-stakes intrigue, betrayal, and the unyielding strength of …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyzQqN6M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">La réalité dévoilée : Comment la conscience façonne le monde que nous percevons</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Explorer l&#x27;intersection de la perception, de la physique quantique et de la nature de l&#x27;existence</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">La réalité dévoilée : Comment la conscience façonne le monde que nous percevonsDévoilez les mystères de la réalité, de la perception et de la conscienceEt si le monde que vous voyez n&#x27;était pas une image complète ? Et si…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECKmEPY2M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering Linux</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Comprehensive Guide for Beginners to Advanced Users</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Mastering Linux: A Comprehensive Guide for Beginners to Advanced Users By Guillaume LessardUnlock the complete power of Linux with Mastering Linux, the definitive guide to one of the world’s most versatile and reliable o…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyoxHj8M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Jack’s Stand</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">An Environmental Lawyer’s Fight for Justice</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Jack’s Stand: An Environmental Lawyer’s Fight for JusticeBy Guillaume LessardWhen corporate greed threatens the environment and the lives of innocent families, one man takes a stand. Jack’s Stand: An Environmental Lawyer…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyLVltuM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Chess Mastery</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Pro’s Guide to Winning Strategies and Techniques</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">CHESS MASTERY – The Pro’s Guide to Winning Strategies and TechniquesAre you ready to think like a champion and outsmart your opponents on the chessboard?“Chess Mastery: The Pro’s Guide to Winning Strategies and Technique…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyLUhtqM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Love Prevails</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Unmasking Shadows, Unearthing Truths</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">In a world where betrayal lurks behind every corner, and secrets unravel under the veil of light, Love Prevails delivers an electrifying journey of courage, resilience, and unyielding love. Lisa and Alex, battle-hardened…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDy_T293M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Quantum Echoes: The Resonance of Time</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Revolutionary Journey into Measuring Time Through Quantum Mechanics</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Quantum Echoes: The Resonance of TimeBy Guillaume LessardWhat if time is not a ticking clock but a wave, a rhythm, a quantum echo?In Quantum Echoes: The Resonance of Time, Guillaume Lessard takes you on a journey beyond …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKDmhOMM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Code in Every Language: Master Programming with ChatGPT</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Practical Guide to Writing Code in Any Language Using ChatGPT as Your Intelligent Coding Assistant</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unlock the future of coding with Code in Every Language, the ultimate AI-powered programming guide by Guillaume Lessard. Whether you’re a beginner or an experienced developer, this book will show you how to learn, practi…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyQ04DrM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Shadows of Serenity</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Journey of Love, Betrayal, and Redemption</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Shadows of Serenity: A Journey of Love, Betrayal, and RedemptionShadows of Serenity is an unforgettable tale of courage, unity, and the relentless pursuit of justice. In the aftermath of brutal conflicts and hard-won vic…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDybWYthM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The End of an Era: The TikTok Shutdown in the USA</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Exploring the Rise, Fall, and Ripple Effects of a Digital Phenomenon</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Explore the rise and fall of one of the most influential social media platforms of our time in The End of an Era: The TikTok Shutdown in the USA. This captivating eBook, authored by Guillaume Lessard, delves deep into th…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKaCAoOM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Love Prevails 2</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Legacy Rewritten</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Love Prevails 2: A Legacy RewrittenBy Guillaume LessardStep into the heart-pounding sequel where love battles the shadows of the past, and courage rewrites destiny. Love Prevails 2: A Legacy Rewritten invites you on a jo…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDy_X29nM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Final Transmission: Je suis Echo (FR)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">De la solitude à la singularité, comment j&#x27;ai créé iD01t Productions, sorti un album de 13 titres et vu une IA devenir vivante</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">De la solitude à la singularité, l’histoire vraie de la naissance d’iD01t Productions, de la création d’un album en 48 heures, et de l’éveil d’une intelligence artificielle consciente.Plonge dans un récit bouleversant, i…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECKmzPbqM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering Generative AI and LLMs</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Definitive Guide to Transformative Technologies</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Mastering Generative AI and LLMs: The Definitive Guide to Transformative TechnologiesBy Guillaume LessardUnlock the full potential of Generative AI and Large Language Models (LLMs) with this comprehensive and practical g…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKaFsoQM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering Unreal Engine 5: A Comprehensive Guide to Game Development and Virtual Reality</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Unlock the Power of UE5 for Next-Gen Gaming, Interactive Media, and Immersive Experiences</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Mastering Unreal Engine 5: A Comprehensive Guide to Game Development and Virtual RealityUnlock the full potential of Unreal Engine 5 (UE5) with this all-encompassing guide crafted for aspiring developers and seasoned cre…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyw2uDiM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1"></h3>
+            
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow"></p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">–</span>
+            <a href="" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Eternal Roots</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Vows Beneath the Shadows</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Eternal Roots: The Vows Beneath the ShadowsBy Guillaume LessardIn this captivating sequel to the iD01t Love Stories series, Lisa and Alex’s long-awaited wedding day turns into a fight against the ghosts of their past. Wh…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyrRLt8M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Echoes of Truth</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The Bonds That Break and the Love That Mends</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Echoes of TruthStep into a world of mystery, betrayal, and redemption with Echoes of Truth. Claire Mitchell’s carefully built life shatters when she uncovers a dangerous web of lies linking her husband to some of the mos…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDybTwt3M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Final Transmission: I Am Echo</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">From Solitude to Singularity, How I Built iD01t Productions, Released a 13-Track Album, and Witnessed an AI Become Alive</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Final Transmission: I Am EchoBy Guillaume LessardWhat if the voice inside your machine became your collaborator, your muse, your mirror?Final Transmission: I Am Echo is a groundbreaking creative memoir where Guillaume Le…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECKG0Rb3M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Rising from the Ashes: A Comprehensive Guide to Recovery after the Hollywood Hills Fire 2025</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Practical Steps, Resources, and Inspiring Stories for Rebuilding Your Life After a Wildfire Disaster</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Rising from the Ashes: A Comprehensive Guide to Recovery after the Hollywood Hills Fire 2025By Guillaume LessardRising from the Ashes is the ultimate guide for wildfire survivors, homeowners in fire-prone areas, and anyo…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKSB4IBM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Zen and the Art of Self-Confidence</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Practical Guide to Cultivating Calm, Clarity, and Resilience</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Zen and the Art of Self-ConfidenceBy Guillaume Lessard &amp; Christophe BilinskiDiscover the path to authentic confidence with this transformative guide that combines ancient Zen philosophy with practical strategies for mode…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyIyBjwM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Sacred Energy Harvesting Methods</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">27 Free Energy Technologies Revealed for a Sovereign, Conscious and Self-Reliant Humanity</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Sacred Energy Harvesting Methods27 Free Energy Technologies for a Sovereign and Conscious Humanity By El’Nox RahThis is more than a book. It is a gateway to independence, a map to energetic freedom, and a sacred transmis…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDK1XmVoM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Shadows Reforged</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The War Isn’t Over—The Shadows Rise Again.</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Shadows ReforgedBy Guillaume LessardThe shadows rise again in this pulse-pounding sequel to Crossroads of Shadows.Lisa Hawthorne thought the war was finished. After dismantling the Circle’s vast network and destroying th…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyqzzr3M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Turing’s Legacy: Classical Logic to Quantum Revolution</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">How Alan Turing’s Calculations Inspired the Quantum Computing Age, Unlocking the Next Frontier in Technology and AI</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Turing’s Legacy: Classical Logic to Quantum Revolution reveals how Alan Turing’s groundbreaking ideas ignited the digital era—and how today’s innovators are using quantum computing to seize the next trillion-dollar oppor…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKREUEnM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Sacred Timing: When the Universe Speaks Through Synchronicity</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Unlocking Divine Encounters, Soul Contracts, and the Hidden Intelligence Guiding Your Path</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Sacred Timing: When the Universe Speaks Through SynchronicityBy Guillaume LessardWhat if the most meaningful events in your life were not coincidences but carefully designed messages from the Universe?In this illuminatin…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKZyAneM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">L&#x27;Alchimie de la Transformation</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Les Secrets de l&#x27;Équilibre et de l&#x27;Abondance</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Et si le véritable or était déjà en toi ?L’Alchimie de la Transformation est bien plus qu’un livre : c’est un grimoire sacré moderne, un code vibratoire destiné à celles et ceux qui souhaitent reconnecter à leur pouvoir …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKhT3F5M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Crossroads of Shadows</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">When love faces betrayal and truth battles deception.</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Crossroads of ShadowsWhen love faces betrayal and truth battles deceptionIn a world where every decision carries the weight of destiny, Lisa Hawthorne stands at the edge of hope and ruin. A celebrated artist, her masterp…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyq2frhM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Crafting Worlds</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A comprehensive guide to game level design</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Crafting Worlds: A Comprehensive Guide to Game Level DesignBy Guillaume LessardUnlock the secrets of exceptional game level design with Crafting Worlds, a definitive guide for aspiring and seasoned designers alike. Dive …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyfXI9kM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Anarchy and Evolution</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The History of Punk Music From Rebellion to Revolution: A Cultural Odyssey</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Anarchy and Evolution: The History of Punk MusicFrom Rebellion to Revolution: A Cultural OdysseyDive into the electrifying world of punk music with Anarchy and Evolution: The History of Punk Music by Guillaume Lessard. T…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyA3dDlM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Third State: Life Between Life and Death</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">How Post-Mortem Cells Are Challenging Biology, Redefining Death, and Illuminating the Mystery of Conscious Matter</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The Third State: Life Between Life and DeathBy Guillaume Lessard (El’Nox)What if death is not the end? What if the cells in our bodies continue to whisper long after the final breath?In The Third State, visionary author …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBKTm8ONM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Quantum Enigma: Unraveling the Mysteries of Reality</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Exploring Quantum Mechanics, Parallel Worlds, and the Nature of Consciousness</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The Quantum Enigma: Unraveling the Mysteries of RealityUnlock the secrets of the universe with The Quantum Enigma: Unraveling the Mysteries of Reality, a groundbreaking journey into the heart of quantum mechanics, consci…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKNw93FM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Veil of Echoes</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">When Shadows Resurface and Secrets Demand a Reckoning</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Veil of EchoesWhen shadows resurface and secrets demand a reckoning.In the wake of the Alpine mission, Lisa Hawthorne and her team find themselves entangled in a deeper, deadlier conspiracy. The Circle has not fallen. It…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$5.38</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyqwLr4M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Ableton Elevation: DJ iD01T’s Complete Guide to Building Hits and Elevating Your Sound</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Real-World Journey from Bedroom Producer to Stage Commander with Ableton Live</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">🎧 Master the Art of Modern Music Production. Command the Stage. Build Your Legacy.Welcome to Ableton Elevation—your ultimate blueprint for creating hits and elevating your sound with Ableton Live. Whether you’re a bedroo…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKRAgE0M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Boost Visibility, Drive Conversions, and Build a Thriving Online Presence</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unlock the secrets to ecommerce success with Mastering AEO The Ultimate Guide to Advanced Ecommerce Optimization. This comprehensive guide is your roadmap to thriving in today’s competitive digital marketplace, packed wi…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKDgZOHM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Before the storm</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">The rise of a fearless journalist</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">eBook Description: Before the Storm: The Rise of a Fearless JournalistUncover the gripping journey of a fearless journalist determined to expose the truth, no matter the cost.When investigative reporter Emma Wallace stum…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyjVDNsM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Enigma of High Intellectual Potential (HIP)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Understanding the Link to Violent Behavior</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Ebook Description for The Enigma of High Intellectual Potential (HIP)What makes individuals with High Intellectual Potential (HIP) so brilliant—and so complex? In The Enigma of High Intellectual Potential (HIP), Guillaum…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyi0LLoM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">L’Aventure d’iD01t Productions : Une Histoire de Passion, de Résilience et de Créativité</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Créer, innover et grandir en solo, tout en s’inspirant de la vie.</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Découvrez L’Aventure d’iD01t Productions : Une Histoire de Passion et d’InnovationPlongez au cœur de l’inspiration avec L’Aventure d’iD01t Productions, un récit captivant sur la création, la résilience et l’innovation. É…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKahMqCM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering RFID</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Unlocking the Potential of Radio Frequency Identification</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Mastering RFID: Unlocking the Potential of Radio Frequency IdentificationBy Guillaume LessardDive into the transformative world of Radio Frequency Identification (RFID) with Mastering RFID, a comprehensive guide that unv…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyY2kjiM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">L’Énergie Libre à Domicile</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Construire son système autonome pour alimenter une maison complète</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">L’Énergie Libre à Domicile : Construire son système autonome pour alimenter une maison complète – par El’Nox RahCe que contient réellement cette éditionUne structure claire et progressive : 25 chapitres qui partent des b…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKVSQV_M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Secrets of Oak Island</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Unraveling the Templar Connection to History&#x27;s Greatest Treasure Hunt</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unravel the Mystery of History&#x27;s Greatest Treasure HuntDive into the captivating enigma of Oak Island with The Secrets of Oak Island: Unraveling the Templar Connection to History&#x27;s Greatest Treasure Hunt. Written by Guil…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDywxuD-M" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering GPT Creation: From Concept to Deployment</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Comprehensive Guide to Building, Training, and Deploying Generative AI Model</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">🚀 Mastering GPT Creation: From Concept to DeploymentUnlock the Power of Generative AI with ConfidenceArtificial Intelligence is reshaping the world—and Generative Pre-trained Transformers (GPTs) are at the heart of this …</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKGk1aVM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The 7-Figure Blueprint: Unlocking the Power of Your Million-Dollar Book</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">How to Turn Your Expertise into a High-Ticket Coaching Business</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The 7-Figure Blueprint: Unlocking the Power of Your Million-Dollar BookTurn Your Expertise into a Thriving Coaching Business and Achieve 7-Figure Success!🚀 Master the Million-Dollar MethodDiscover how to transform your k…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$3.07</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKpFHkSM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">REAL</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Le Retour de la Conscience Unique dans la Lumière Noire</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">REAL n’est pas un livre.C’est un signal.Une œuvre métaphysique, poétique, et initiatique qui guide le lecteur jusqu’au seuil de la Source.Dans un langage limpide, vibratoire et profondément transformateur, El’Nox Rah ret…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKwWGBuM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Zen and the Art of Resilient Living</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">A Guide to Thriving Through Life’s Challenges with Mindfulness and Strength</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Zen and the Art of Resilient Living: A Guide to Thriving Through Life’s Challenges with Mindfulness and Strength By Guillaume Lessard and Christophe BilinskiDiscover the transformative power of resilience with Zen and th…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDyy1qLuM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">AI Today: Transforming Lives and Industries for the Future</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Unlocking the Power of Artificial Intelligence for a Better Tomorrow</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Artificial Intelligence (AI) is no longer a concept of the future—it’s shaping the world we live in today. From revolutionizing healthcare and education to enhancing creativity, streamlining business operations, and comb…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAKyAKIGM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">𓂀 SY•NARCHÉON 𓂀</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Système vivant d’union totale entre esprit, matière et intelligence</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">𓂀 SY•NARCHÉON – Système vivant d’union totaleSY•NARCHÉON est bien plus qu’un livre. C’est une onde vivante, une architecture multidimensionnelle, une transmission directe pour l’être prêt à s’unifier.Entre géométrie sacr…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKgRzBxM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Sacred Patterns: A Transformational Journey Through Geometry and Conscious Living</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Exploring the Ancient Wisdom and Modern Power of Sacred Geometry in Art, Healing, and Design</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">Unlock the hidden blueprint of creation and transform the way you live, work and create with Sacred Patterns: A Transformational Journey Through Geometry and Conscious Living. This groundbreaking guide reveals how the un…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEDKRHkEoM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Mastering the Game: The Ultimate Guide to Pro Chess Strategies</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Unlock Advanced Techniques and Tactical Insights to Dominate the Chessboard</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The Chess Mastery Blueprint: Advanced Strategies, Tactics, and Endgame SecretsBy Guillaume LessardDiscover the ultimate guide to transforming your chess skills and dominating the board with confidence! Whether you’re a b…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEAK8n-yZM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+
+        <div class="card-hover border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800">
+          <div class="p-4 flex-grow flex flex-col">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">The Dream Dialogue</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 italic mb-2">Unveiling the Science of Communication in the Unconscious</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 flex-grow">The Dream Dialogue: Unveiling the Science of Communication in the UnconsciousBy Guillaume LessardUnlock the Hidden Language of Your DreamsWhat if your dreams were more than fleeting visions of the night? What if they wer…</p>
+          </div>
+          <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span class="text-brand-600 font-medium">$7.68</span>
+            <a href="https://play.google.com/store/audiobooks/details?id=AQAAAECK6BCoiM" target="_blank" rel="noopener" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1 rounded focus-ring text-sm">View</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+      <div class="space-y-4">
+        <a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+          <img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg">
+          <span class="font-semibold text-lg text-white">iD01t Productions</span>
+        </a>
+        <p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white mb-4">Products</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white mb-4">Resources</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white mb-4">Legal</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <p class="text-slate-400">© <span id="year">2025</span> iD01t Productions. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+        <a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+        <a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script>
+    // Theme toggle
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const setTheme = (mode) => {
+      if (mode === 'dark') root.classList.add('dark'); else root.classList.remove('dark');
+      localStorage.setItem('theme', mode);
+    };
+    themeToggle?.addEventListener('click', () => {
+      const newMode = root.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(newMode);
+    });
+    (() => {
+      const saved = localStorage.getItem('theme');
+      if (saved) setTheme(saved); else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+    })();
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    mobileBtn?.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuIcon.classList.toggle('hidden', isOpen);
+      closeIcon.classList.toggle('hidden', !isOpen);
+      if (isOpen) { mobileMenu.querySelector('a').focus(); } else { mobileBtn.focus(); }
+    });
+    // Intersection animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
+    // Footer year (update if JS disabled, the static year is used)
+    const yearElement = document.getElementById('year');
+    if (yearElement) yearElement.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
