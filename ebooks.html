@@ -1,4 +1,27 @@
 <!DOCTYPE html>
+fix-catalog-pages
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>eBooks · iD01t Productions</title>
+<meta content="Browse our extensive catalog of professional eBooks covering programming, technology, business, and more. Available on Google Play." name="description"/>
+<link href="https://id01t.github.io/ebooks.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<meta content="#1e293b" name="theme-color"/>
+<!-- Open Graph & Twitter Card -->
+<meta content="eBooks Catalog - iD01t Productions" property="og:title"/>
+<meta content="Explore professional eBooks on cutting-edge topics by Guillaume Lessard and iD01t Productions." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.github.io/ebooks.html" property="og:url"/>
+<meta content="https://id01t.github.io/assets/img/og/ebooks.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans antialiased">
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -24,6 +47,7 @@
 <span aria-hidden="true" class="dot"></span>
 <span>iD01t Productions</span>
 </a>
+ main
 <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between h-16">
@@ -76,6 +100,61 @@
 </div>
 </div>
 </nav>
+ fix-catalog-pages
+    <main>
+        <!-- Hero Section -->
+        <header class="py-24 sm:py-32 bg-gradient-to-b from-brand-50/50 to-white dark:from-brand-950/50 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white gradient-text">
+                eBooks Catalog
+            </h1>
+            <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-600 dark:text-slate-400">
+                Explore our comprehensive collection of professional eBooks. Use the filters below to find your next read.
+            </p>
+        </div>
+    </header>
+<!-- Filter & Search Controls -->
+<section class="py-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800" id="controls">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Search Input -->
+<div class="sm:col-span-2 lg:col-span-2">
+<label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2" for="searchInput">Search</label>
+<input class="w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition" id="searchInput" placeholder="e.g., Python, AI, Music" type="search"/>
+</div>
+<!-- Language Filter -->
+<div>
+<label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2" for="langFilter">Language</label>
+<select class="w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition" id="langFilter"></select>
+</div>
+<!-- Brand Filter -->
+<div>
+<label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2" for="brandFilter">Creator</label>
+<select class="w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition" id="brandFilter"></select>
+</div>
+<!-- Sort Filter -->
+<div>
+<label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2" for="sortFilter">Sort By</label>
+<select class="w-full px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition" id="sortFilter">
+<option value="relevance">Relevance</option>
+<option value="date-desc">Newest</option>
+<option value="title-asc">Title (A-Z)</option>
+<option value="price-asc">Price (Low-High)</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Catalog Grid -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<p class="mb-8 text-slate-600 dark:text-slate-400" id="resultCount">Loading catalog...</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="catalogGrid">
+<!-- Catalog items will be injected here -->
+</div>
+</div>
+</section>
+=======
 </div>
 </header>
 <main>
@@ -125,6 +204,7 @@
 <p aria-live="polite" class="muted" id="count">Loading catalog…</p>
 <div aria-busy="true" aria-live="polite" class="grid" id="grid"></div>
 </section>
+ main
 </main>
 <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
@@ -174,7 +254,9 @@
 </div>
 </div>
 </footer>
+ fix-catalog-pages
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+ main
 <script defer="" src="/assets/js/app.js"></script>
 </body>
 </html>

@@ -122,7 +122,7 @@ async function bootstrapList() {
   try {
     // Load and filter data
     const allData = await getCatalog();
-    const data = allData.filter(x => 
+    const data = allData.filter(x =>
       isAudio ? x.format === 'Audiobook' : x.format === 'eBook'
     );
     
@@ -415,7 +415,7 @@ async function bootstrapDetail() {
         <div class="empty-state">
           <p class="text-lg font-medium">Book not found</p>
           <p class="mt-2">The requested item could not be found.</p>
-          <a href="${item?.format === 'Audiobook' ? SITE.pages.audiobooks : SITE.pages.ebooks}" 
+          <a href="${item?.format === 'Audiobook' ? SITE.pages.audiobooks : SITE.pages.ebooks}"
              class="mt-4 inline-block px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors">
             Browse catalog
           </a>
