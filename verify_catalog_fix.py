@@ -7,7 +7,7 @@ async def main():
         page = await browser.new_page()
 
         # Listen for console events
-        page.on('console', lambda msg: print(f"Browser console: {msg.text()}"))
+        page.on('console', lambda msg: print(f"Browser console: {msg.text}"))
 
         # Verify ebooks page
         await page.goto('http://localhost:8000/ebooks.html')
