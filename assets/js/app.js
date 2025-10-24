@@ -100,6 +100,13 @@ function injectJSONLD(obj) {
   document.head.appendChild(script);
 }
 
+function injectLandingEnhancer() {
+    const script = document.createElement('script');
+    script.src = '/assets/js/landing-enhancer.js';
+    script.defer = true;
+    document.body.appendChild(script);
+}
+
 // Build search index for fast filtering
 function makeIndex(item) {
   return [
@@ -424,6 +431,7 @@ async function bootstrapDetail() {
       return;
     }
     
+    injectLandingEnhancer();
     const isAudio = item.format === 'Audiobook';
     
     // Update page metadata
