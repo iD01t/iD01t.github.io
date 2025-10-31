@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank you for your purchase — iD01t Productions</title>
+<meta content="Thanks for your purchase! Your order is confirmed. Access downloads, review your receipt, or continue shopping." name="description"/>
+<meta content="noindex,follow,max-image-preview:large" name="robots"/>
+<meta content="#2aa7ff" name="theme-color"/>
+<!-- Canonical -->
+<link href="https://id01t.github.io/thank-you.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Thank you — iD01t Productions" property="og:title"/>
+<meta content="Order confirmed. Your downloads and receipt are ready." property="og:description"/>
+<meta content="https://id01t.github.io/thank-you.html" property="og:url"/>
+<meta content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" property="og:image"/>
+<meta content="iD01t Productions" property="og:site_name"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Thank you — iD01t Productions" name="twitter:title"/>
+<meta content="Order confirmed. Your downloads and receipt are ready." name="twitter:description"/>
+<meta content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" name="twitter:image"/>
+<meta content="@id01t" name="twitter:creator"/>
+<!-- Tailwind CSS (same setup as index) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5faff', 100: '#e0f2ff', 200: '#bae0ff', 300: '#8dceff', 400: '#5abaff',
+              500: '#2aa7ff', 600: '#008ef6', 700: '#0070d7', 800: '#0057b5', 900: '#003f92'
+            }
+          },
+          keyframes: {
+            bounceSubtle: {'0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-4px)'}},
+            pulseGlow: {'0%,100%': {opacity:0.2}, '50%': {opacity:0.4}},
+            float: {'0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-6px)'}},
+            confetti: {
+              '0%': { transform: 'translateY(-20vh) rotate(0deg)', opacity: 0 },
+              '10%': { opacity: 1 },
+              '100%': { transform: 'translateY(110vh) rotate(720deg)', opacity: 0 }
+            }
+          },
+          animation: {
+            'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'confetti': 'confetti 2.8s ease-in-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles (reused + a few extras) -->
+<style>
+    :root { --ring-color: theme('colors.brand.500'); }
+    .link-underline { position: relative; transition: color .2s; }
+    .link-underline::after { content:""; position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .2s ease-out; }
+    .link-underline:hover::after, .link-underline:focus-visible::after { transform:scaleX(1); transform-origin:left; }
+    .focus-ring:focus-visible { outline:2px solid var(--ring-color); outline-offset:2px; }
+    .gradient-text { background:linear-gradient(to right,#2aa7ff,#0070d7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; }
+    .card-hover { transition: transform .4s ease, box-shadow .4s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 25px -5px rgba(0,0,0,.15); }
+    .glass-effect { background: rgba(255,255,255,.6); backdrop-filter: blur(12px) saturate(150%); }
+    @media (prefers-color-scheme: dark){ .glass-effect{ background: rgba(30,41,59,.55);} }
+    .intersection-animate { opacity:0; transform: translateY(20px); transition: all .6s cubic-bezier(.22,1,.36,1);} 
+    .intersection-animate.visible { opacity:1; transform:none; }
+    .confetti-piece {
+      position: fixed; top: -10vh; width: 8px; height: 12px; opacity: 0;
+      will-change: transform, opacity; z-index: 60; border-radius: 2px;
+    }
+    @media print {
+      nav, .no-print, footer { display: none !important; }
+      .print\:block { display:block !important; }
+      body { background: #fff !important; color: #000 !important; }
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
+<!-- ===== Header (copied from index (3).html) ===== -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<!-- ===== Success Hero ===== -->
+<section class="relative overflow-hidden">
+<!-- subtle confetti -->
+<div class="no-print pointer-events-none" id="confetti"></div>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-emerald-900/40 ring-1 ring-emerald-200 dark:ring-emerald-800 mb-6">
+<svg aria-hidden="true" class="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h1 class="text-4xl md:text-5xl font-extrabold gradient-text mb-4">Thank you! Your order is confirmed.</h1>
+<p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+        We emailed your receipt and download links to <strong id="customerEmail">your email</strong>. You can access everything below or from your inbox.
+      </p>
+</div>
+</section>
+<!-- ===== Order Summary Card ===== -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+<div class="glass-effect rounded-2xl p-6 md:p-8 ring-1 ring-slate-200 dark:ring-slate-800 card-hover intersection-animate">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+<div>
+<h2 class="text-2xl font-bold">Order <span class="text-brand-700 dark:text-brand-300" id="orderId">#000000</span></h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Placed on <time datetime="" id="orderDate"></time></p>
+</div>
+<div class="flex gap-3">
+<button class="no-print inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white focus-ring" id="printBtn">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Print receipt
+          </button>
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white focus-ring" href="/store.html#downloads" id="downloadsBtn">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            View downloads
+          </a>
+</div>
+</div>
+<div class="mt-6 overflow-hidden rounded-xl ring-1 ring-slate-200 dark:ring-slate-800">
+<table class="w-full text-sm">
+<thead class="bg-slate-50 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300">
+<tr>
+<th class="text-left p-3">Item</th>
+<th class="text-left p-3">Qty</th>
+<th class="text-right p-3">Price</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800 bg-white dark:bg-slate-900" id="itemsTbody">
+<!-- items will be injected here -->
+</tbody>
+<tfoot class="bg-slate-50 dark:bg-slate-800/60">
+<tr>
+<td class="p-3 font-semibold" colspan="2">Total</td>
+<td class="p-3 font-bold text-right" id="orderTotal">—</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div class="mt-6 text-sm text-slate-600 dark:text-slate-300">
+<p>Having trouble? <a class="text-brand-700 dark:text-brand-300 link-underline" href="/contact.html">Contact support</a> and include your order number.</p>
+</div>
+</div>
+</section>
+<!-- ===== Next Steps / CTAs ===== -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="grid md:grid-cols-3 gap-6">
+<a class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70" href="/store.html">
+<div class="flex items-center justify-between">
+<h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Continue Shopping</h3>
+<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Explore apps, eBooks, games, and music.</p>
+</a>
+<a class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70" href="/ebooks.html">
+<div class="flex items-center justify-between">
+<h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Read Your eBooks</h3>
+<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Access instant downloads any time.</p>
+</a>
+<a class="group rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 card-hover bg-white/70 dark:bg-slate-900/70" href="/apps.html">
+<div class="flex items-center justify-between">
+<h3 class="font-semibold text-lg group-hover:text-brand-600 transition-colors">Install Your Apps</h3>
+<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-sm mt-2 text-slate-600 dark:text-slate-300">Grab Windows builds and updates.</p>
+</a>
+</div>
+</section>
+<!-- ===== FAQs ===== -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+<div class="rounded-2xl p-6 ring-1 ring-slate-200 dark:ring-slate-800 bg-white/70 dark:bg-slate-900/70">
+<h3 class="text-2xl font-bold mb-4">Common questions</h3>
+<details class="border-t border-slate-200 dark:border-slate-800 py-4" open="">
+<summary class="cursor-pointer font-medium">Where do I find my downloads?</summary>
+<p class="mt-2 text-slate-600 dark:text-slate-300">We emailed links to <span class="font-medium" id="faqEmail">your email</span>. You can also revisit this page or go to <a class="link-underline text-brand-700 dark:text-brand-300" href="/store.html#downloads">Store → Downloads</a>.</p>
+</details>
+<details class="border-t border-slate-200 dark:border-slate-800 py-4">
+<summary class="cursor-pointer font-medium">Can I get a refund?</summary>
+<p class="mt-2 text-slate-600 dark:text-slate-300">Please review our <a class="link-underline text-brand-700 dark:text-brand-300" href="/legal/refunds.html">Refund Policy</a> for eligibility and instructions.</p>
+</details>
+<details class="border-t border-slate-200 dark:border-slate-800 py-4">
+<summary class="cursor-pointer font-medium">Need additional help?</summary>
+<p class="mt-2 text-slate-600 dark:text-slate-300">Reach us via <a class="link-underline text-brand-700 dark:text-brand-300" href="/contact.html">Contact</a>. Include your order number for faster support.</p>
+</details>
+</div>
+</section>
+<!-- ===== Footer (copied from index (3).html) ===== -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- ===== Scripts (reused + page logic) ===== -->
+<script>
+    // Theme toggle (same behavior as index)
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const setTheme = (mode) => {
+      if (mode === 'dark') root.classList.add('dark'); else root.classList.remove('dark');
+      localStorage.setItem('theme', mode);
+    };
+    themeToggle?.addEventListener('click', () => {
+      const newMode = root.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(newMode);
+    });
+    (() => {
+      const saved = localStorage.getItem('theme');
+      if (saved) setTheme(saved); else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+    })();
+
+    // Mobile menu (same behavior as index)
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    mobileBtn?.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuIcon.classList.toggle('hidden', isOpen);
+      closeIcon.classList.toggle('hidden', !isOpen);
+      if (isOpen) { mobileMenu.querySelector('a').focus(); } else { mobileBtn.focus(); }
+    });
+
+    // Intersection animations (same style as index)
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
+
+    // Footer year
+    const yearElement = document.getElementById('year');
+    if (yearElement) yearElement.textContent = new Date().getFullYear();
+
+    // Print
+    document.getElementById('printBtn')?.addEventListener('click', () => window.print());
+
+    // Parse URL params to populate receipt
+    const params = new URLSearchParams(window.location.search);
+    const currency = (params.get('currency') || 'USD').toUpperCase();
+    const fmt = (n) => new Intl.NumberFormat(undefined, { style: 'currency', currency }).format(parseFloat(n || 0));
+
+    const orderId = params.get('orderId') || Math.random().toString(36).slice(2, 8).toUpperCase();
+    const email = decodeURIComponent(params.get('email') || 'your-email@example.com');
+    const dateStr = params.get('date') || new Date().toISOString().slice(0,10);
+    const total = params.get('total');
+    const itemsParam = params.get('items');
+
+    document.getElementById('orderId').textContent = '#' + orderId;
+    document.getElementById('customerEmail').textContent = email;
+    document.getElementById('faqEmail').textContent = email;
+
+    const orderDateEl = document.getElementById('orderDate');
+    const isoDate = new Date(dateStr);
+    orderDateEl.setAttribute('datetime', isoDate.toISOString());
+    orderDateEl.textContent = isoDate.toLocaleDateString(undefined, { year:'numeric', month:'long', day:'numeric' });
+
+    const itemsTbody = document.getElementById('itemsTbody');
+    let computedTotal = 0;
+
+    const safeItems = (() => {
+      try {
+        const parsed = JSON.parse(itemsParam || '[]');
+        if (Array.isArray(parsed) && parsed.length) return parsed;
+      } catch(e) {}
+      // Fallback demo line when no items provided
+      return [{ name: 'Digital product', qty: 1, price: total || 0 }];
+    })();
+
+    safeItems.forEach((it) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="p-3">${(it.name || 'Item')}</td>
+        <td class="p-3">${(it.qty ?? 1)}</td>
+        <td class="p-3 text-right">${fmt((it.price || 0) * (it.qty || 1))}</td>
+      `;
+      itemsTbody.appendChild(tr);
+      computedTotal += (parseFloat(it.price || 0) * (it.qty || 1));
+    });
+
+    const finalTotal = isNaN(parseFloat(total)) ? computedTotal : parseFloat(total);
+    document.getElementById('orderTotal').textContent = fmt(finalTotal);
+
+    // Optional: direct download link support (?download=/path/to/file)
+    const downloadHref = params.get('download');
+    if (downloadHref) {
+      const btn = document.getElementById('downloadsBtn');
+      btn.setAttribute('href', downloadHref);
+      btn.textContent = 'Download now';
+    }
+
+    // Lightweight confetti
+    const confettiColors = ['#2aa7ff','#0070d7','#8dceff','#bae0ff','#5abaff','#22c55e','#a855f7','#f59e0b'];
+    const confettiRoot = document.getElementById('confetti');
+    for (let i = 0; i < 60; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+      piece.style.animation = `confetti ${2 + Math.random()*1.5}s ease-out ${Math.random()*0.8}s forwards`;
+      piece.style.transform = `translateY(-20vh) rotate(${Math.random()*360}deg)`;
+      confettiRoot.appendChild(piece);
+    }
+
+    // Accessibility: focus first actionable element
+    setTimeout(() => {
+      document.getElementById('downloadsBtn')?.focus();
+    }, 300);
+
+  </script>
+</body>
+</html>

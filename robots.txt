@@ -1,0 +1,35 @@
+# robots.txt for iD01t Productions
+# Version: 2.0.0
+# Last Updated: October 30, 2025
+# https://id01t.github.io
+
+# Allow all robots to crawl the entire site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://id01t.github.io/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
+# Specific rules for major search engines
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /assets/img/
+Allow: /images/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /

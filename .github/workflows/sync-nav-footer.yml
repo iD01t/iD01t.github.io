@@ -1,0 +1,162 @@
+name: Sync Navigation and Footer
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+  workflow_dispatch:
+
+jobs:
+  sync-header-footer:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install beautifulsoup4 lxml
+      
+      - name: Sync header and footer to all HTML files
+        run: |
+          python << 'EOF'
+          import os
+          import re
+          from pathlib import Path
+          from bs4 import BeautifulSoup
+
+          def extract_section(soup, tag, identifier):
+              """Extract a section from the soup"""
+              if identifier.startswith('#'):
+                  return soup.find(tag, id=identifier[1:])
+              elif identifier.startswith('.'):
+                  return soup.find(tag, class_=identifier[1:])
+              else:
+                  return soup.find(tag, attrs={k: v for k, v in [identifier.split('=')]})
+
+          def find_all_html_files(root_dir='.'):
+              """Find all HTML files in the repository"""
+              html_files = []
+              exclude_dirs = {'.git', 'node_modules', '.github', '__pycache__', 'venv', 'env'}
+              
+              for root, dirs, files in os.walk(root_dir):
+                  # Remove excluded directories
+                  dirs[:] = [d for d in dirs if d not in exclude_dirs]
+                  
+                  for file in files:
+                      if file.endswith('.html'):
+                          html_files.append(os.path.join(root, file))
+              
+              return html_files
+
+          def sync_navigation_and_footer(source_file='index.html'):
+              """Sync navigation and footer from source to all HTML files"""
+              print(f"Reading source file: {source_file}")
+              
+              # Read source file
+              with open(source_file, 'r', encoding='utf-8') as f:
+                  source_content = f.read()
+              
+              source_soup = BeautifulSoup(source_content, 'lxml')
+              
+              # Extract navigation and footer from source
+              source_nav = source_soup.find('nav')
+              source_footer = source_soup.find('footer')
+              
+              if not source_nav:
+                  print("ERROR: Could not find <nav> in source file")
+                  return
+              
+              if not source_footer:
+                  print("ERROR: Could not find <footer> in source file")
+                  return
+              
+              print(f"Extracted navigation and footer from {source_file}")
+              
+              # Find all HTML files
+              html_files = find_all_html_files()
+              print(f"Found {len(html_files)} HTML files")
+              
+              updated_count = 0
+              skipped_count = 0
+              
+              for html_file in html_files:
+                  # Skip the source file itself
+                  if os.path.abspath(html_file) == os.path.abspath(source_file):
+                      print(f"Skipping source file: {html_file}")
+                      skipped_count += 1
+                      continue
+                  
+                  try:
+                      # Read target file
+                      with open(html_file, 'r', encoding='utf-8') as f:
+                          target_content = f.read()
+                      
+                      target_soup = BeautifulSoup(target_content, 'lxml')
+                      
+                      # Find and replace navigation
+                      target_nav = target_soup.find('nav')
+                      if target_nav:
+                          target_nav.replace_with(source_nav)
+                          print(f"  Updated navigation in: {html_file}")
+                      else:
+                          print(f"  WARNING: No <nav> found in {html_file}")
+                      
+                      # Find and replace footer
+                      target_footer = target_soup.find('footer')
+                      if target_footer:
+                          target_footer.replace_with(source_footer)
+                          print(f"  Updated footer in: {html_file}")
+                      else:
+                          print(f"  WARNING: No <footer> found in {html_file}")
+                      
+                      # Write updated content back
+                      with open(html_file, 'w', encoding='utf-8') as f:
+                          f.write(str(target_soup))
+                      
+                      updated_count += 1
+                      
+                  except Exception as e:
+                      print(f"  ERROR processing {html_file}: {str(e)}")
+                      continue
+              
+              print(f"\n✅ Complete! Updated {updated_count} files, skipped {skipped_count} files")
+
+          # Run the sync
+          if __name__ == '__main__':
+              sync_navigation_and_footer('index.html')
+          EOF
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add *.html **/*.html
+          git commit -m "🔄 Auto-sync: Update navigation and footer across all HTML files"
+          git push
+      
+      - name: No changes detected
+        if: steps.check_changes.outputs.changes == 'false'
+        run: |
+          echo "ℹ️ No changes detected. All HTML files are already in sync."

@@ -1,0 +1,90 @@
+<!--
+  iD01t Productions - Hero CTA Component
+  Version: 2.0.0
+  Last Updated: October 30, 2025
+
+  Reusable hero call-to-action block for promotional content.
+  Currently featuring: DJ iD01t's "Cosmic Echoes" album
+
+  To customize:
+  - Change the album URL in the href attribute
+  - Update the image src to the album cover
+  - Modify the title text
+  - Update alt text to match the album name
+-->
+
+<section class="bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <a
+      href="https://open.spotify.com/album/5AWc3Fx9oC03E3vKEsnTIi?si=fD_oTFXXQdWNA6bnfW4szQ"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group block max-w-2xl mx-auto"
+      aria-label="Listen to Cosmic Echoes by DJ iD01t on Spotify"
+    >
+      <!-- Title -->
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+        <span class="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent">
+          DJ iD01t
+        </span>
+        <br>
+        New Album Available Now!
+      </h2>
+
+      <!-- Album Cover -->
+      <div class="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-300">
+        <img
+          src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/img/brand/distrokid_promocard_Cosmic_Echoes.jpg?raw=true"
+          alt="Cosmic Echoes Album Art - DJ iD01t's latest album featuring electronic and ambient tracks"
+          class="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+          width="800"
+          height="800"
+        >
+
+        <!-- Overlay on hover -->
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+          <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-full p-4 shadow-lg">
+              <svg class="w-12 h-12 text-brand-600 dark:text-brand-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <span class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors group-hover:scale-105 transform duration-300 shadow-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          </svg>
+          Listen on Spotify
+        </span>
+
+        <!-- Streaming Platforms (optional - can expand) -->
+        <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+          <span>Also available on</span>
+          <span class="font-semibold text-slate-900 dark:text-slate-200">Apple Music</span>
+          <span>•</span>
+          <span class="font-semibold text-slate-900 dark:text-slate-200">YouTube Music</span>
+        </div>
+      </div>
+
+      <!-- Subtitle/Description -->
+      <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+        Experience the latest electronic and ambient soundscapes from DJ iD01t.
+        Stream now on all major platforms.
+      </p>
+    </a>
+  </div>
+</section>
+
+<!-- Hero CTA Styles -->
+<style>
+  /* Custom hover effects for album art */
+  .shadow-3xl {
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+  }
+</style>

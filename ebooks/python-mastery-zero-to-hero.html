@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Python Mastery: From Zero to Hero | Guillaume Lessard | iD01t Productions</title>
+<meta content="Master Python programming from basics to advanced concepts with this comprehensive guide by Guillaume Lessard. Includes practical projects, best practices, and real-world applications." name="description"/>
+<meta content="Python programming, Python tutorial, learn Python, Python guide, Guillaume Lessard, programming education, Python projects" name="keywords"/>
+<link href="https://id01t.github.io/ebooks/python-mastery-zero-to-hero.html" rel="canonical"/>
+<meta content="index,follow" name="robots"/>
+<meta content="Guillaume Lessard" name="author"/>
+<!-- Open Graph -->
+<meta content="book" property="og:type"/>
+<meta content="Python Mastery: From Zero to Hero | Guillaume Lessard" property="og:title"/>
+<meta content="Master Python programming from basics to advanced concepts with this comprehensive guide by Guillaume Lessard." property="og:description"/>
+<meta content="https://id01t.github.io/ebooks/python-mastery-zero-to-hero.html" property="og:url"/>
+<meta content="https://id01t.github.io/assets/harvested/ebooks/img_10.jpg" property="og:image"/>
+<link href="/assets/favicon.ico" rel="icon"/>
+<link href="/assets/logo-512.png" rel="apple-touch-icon"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="/assets/site.css" rel="stylesheet"/>
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHX65WY0WZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date()); gtag('config', 'G-CHX65WY0WZ');
+  </script>
+<style>
+    :root{--border:rgba(255,255,255,.12);--card:rgba(255,255,255,.06);--muted:rgba(255,255,255,.78);--brand:#5468ff}
+    @media (prefers-color-scheme: dark){body{background:#0b0d10;color:#eaeaf0}}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    header.sticky{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .nav a{color:inherit;text-decoration:none;margin:0 8px;opacity:.9}
+    .nav a[aria-current="page"], .nav a:hover{opacity:1}
+    .hero{padding:56px 0;background:linear-gradient(135deg,#111827 0%,#0b0d10 60%,#0b0d10 100%)}
+    .hero h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px}
+    .hero p{opacity:.9;margin:0}
+    .book-detail{display:grid;grid-template-columns:300px 1fr;gap:32px;margin:40px 0}
+    .book-cover{width:100%;height:400px;object-fit:cover;border-radius:12px}
+    .book-info h2{font-size:32px;margin-bottom:16px}
+    .book-meta{color:var(--muted);margin-bottom:16px}
+    .book-description{line-height:1.6;margin-bottom:24px}
+    .book-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+    .book-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 24px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;background:rgba(255,255,255,.03);transition:all 0.2s}
+    .btn:hover{background:rgba(255,255,255,.1)}
+    .btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
+    .btn.primary:hover{background:var(--brand);opacity:0.9}
+    .tag{display:inline-block;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:12px;font-size:14px;margin-right:8px;margin-bottom:8px}
+    .price{font-weight:bold;color:var(--brand);font-size:24px}
+    .platform{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin:40px 0}
+    .feature-card{border:1px solid var(--border);border-radius:12px;padding:24px;background:var(--card)}
+    .feature-card h3{margin:0 0 12px;font-size:18px}
+    .feature-card p{color:var(--muted);line-height:1.5}
+    @media (max-width: 768px) {
+      .book-detail{grid-template-columns:1fr;text-align:center}
+    }
+  </style>
+<!-- Book JSON-LD -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Python Mastery: From Zero to Hero",
+    "author": {
+      "@type": "Person",
+      "name": "Guillaume Lessard"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "iD01t Productions"
+    },
+    "description": "Master Python programming from basics to advanced concepts with this comprehensive guide. Includes practical projects, best practices, and real-world applications.",
+    "image": "https://id01t.github.io/assets/harvested/ebooks/img_10.jpg",
+    "url": "https://id01t.github.io/ebooks/python-mastery-zero-to-hero.html",
+    "isbn": "978-1234567890",
+    "datePublished": "2024-01-15",
+    "bookFormat": "EBook",
+    "inLanguage": "en",
+    "numberOfPages": 350,
+    "offers": {
+      "@type": "Offer",
+      "price": "9.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Google Books"
+      }
+    }
+  }
+  </script>
+<!-- Breadcrumb JSON-LD -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://id01t.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "eBooks",
+        "item": "https://id01t.github.io/ebooks.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Python Mastery: From Zero to Hero",
+        "item": "https://id01t.github.io/ebooks/python-mastery-zero-to-hero.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-active="eBooks">
+<header class="sticky" id="site-header">
+<div class="wrap nav">
+<a aria-label="iD01t Home" class="logo" href="/"><strong>iD01t</strong></a>
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px;">
+<form action="/search.html" method="GET" style="display: flex; align-items: center;">
+<input name="q" placeholder="Search..." style="padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; width: 200px;" type="search"/>
+<button style="margin-left: 4px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; background: rgba(255,255,255,0.1); color: inherit; cursor: pointer;" type="submit">
+            🔍
+          </button>
+</form>
+</div>
+</div>
+</header>
+<main class="wrap" style="margin-top: 40px;">
+<!-- Book Detail Section -->
+<section class="book-detail">
+<div>
+<img alt="Python Mastery: From Zero to Hero" class="book-cover" loading="lazy" src="/assets/harvested/ebooks/img_10.jpg"/>
+</div>
+<div class="book-info">
+<h1>Python Mastery: From Zero to Hero</h1>
+<div class="book-meta">
+<p><strong>Author:</strong> Guillaume Lessard</p>
+<p><strong>Publisher:</strong> iD01t Productions</p>
+<p><strong>Published:</strong> January 15, 2024</p>
+<p><strong>Pages:</strong> 350</p>
+<p><strong>Language:</strong> English</p>
+<p><strong>Format:</strong> eBook</p>
+</div>
+<div class="book-description">
+<p>Master Python programming from the ground up with this comprehensive guide designed for both beginners and intermediate developers. This book takes you on a journey from basic syntax to advanced concepts, including object-oriented programming, data structures, algorithms, and real-world applications.</p>
+<p>What you'll learn:</p>
+<ul>
+<li>Python fundamentals and best practices</li>
+<li>Object-oriented programming concepts</li>
+<li>Data structures and algorithms</li>
+<li>File handling and database operations</li>
+<li>Web development with Flask and Django</li>
+<li>Data analysis with pandas and NumPy</li>
+<li>Automation and scripting</li>
+<li>Testing and debugging techniques</li>
+</ul>
+</div>
+<div class="book-tags">
+<span class="tag">Python</span>
+<span class="tag">Programming</span>
+<span class="tag">Tutorial</span>
+<span class="tag">Beginner</span>
+<span class="tag">Web Development</span>
+<span class="tag">Data Science</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+<span class="price">$9.99</span>
+<span class="platform">Google Books</span>
+</div>
+<div class="book-actions">
+<a class="btn primary" href="https://books.google.com/books/about/Python_Mastery_From_Zero_to_Hero.html?id=python-mastery-2024" rel="noopener" target="_blank">Buy on Google Books</a>
+<a class="btn" href="https://books.google.com/books/about/Python_Mastery_From_Zero_to_Hero.html?id=python-mastery-2024&amp;printsec=frontcover" rel="noopener" target="_blank">Preview</a>
+<a class="btn" href="/ebooks.html">Browse More eBooks</a>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section>
+<h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">What Makes This Book Special</h2>
+<div class="features">
+<div class="feature-card">
+<h3>🎯 Practical Projects</h3>
+<p>Build real-world applications including a web scraper, data analysis tool, and automation script. Each project reinforces the concepts you've learned.</p>
+</div>
+<div class="feature-card">
+<h3>📚 Comprehensive Coverage</h3>
+<p>From basic syntax to advanced topics like decorators, generators, and async programming. Everything you need to become a Python expert.</p>
+</div>
+<div class="feature-card">
+<h3>💡 Best Practices</h3>
+<p>Learn industry-standard coding practices, testing methodologies, and performance optimization techniques used by professional developers.</p>
+</div>
+<div class="feature-card">
+<h3>🔧 Hands-on Exercises</h3>
+<p>Over 100 coding exercises with detailed solutions. Practice makes perfect, and this book provides plenty of opportunities to code.</p>
+</div>
+<div class="feature-card">
+<h3>🌐 Real-world Applications</h3>
+<p>Learn how to build web applications, work with databases, create APIs, and develop data analysis tools using Python.</p>
+</div>
+<div class="feature-card">
+<h3>📖 Clear Explanations</h3>
+<p>Complex concepts explained in simple terms with plenty of examples and analogies to help you understand and remember.</p>
+</div>
+</div>
+</section>
+<!-- Table of Contents -->
+<section style="margin: 60px 0;">
+<h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Table of Contents</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+<div>
+<h3>Part I: Python Fundamentals</h3>
+<ul style="list-style: none; padding: 0;">
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 1: Getting Started with Python</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 2: Variables and Data Types</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 3: Control Flow and Loops</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 4: Functions and Modules</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 5: Error Handling and Debugging</li>
+</ul>
+</div>
+<div>
+<h3>Part II: Object-Oriented Programming</h3>
+<ul style="list-style: none; padding: 0;">
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 6: Classes and Objects</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 7: Inheritance and Polymorphism</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 8: Advanced OOP Concepts</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 9: Design Patterns</li>
+</ul>
+</div>
+<div>
+<h3>Part III: Advanced Topics</h3>
+<ul style="list-style: none; padding: 0;">
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 10: File Handling and I/O</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 11: Data Structures and Algorithms</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 12: Web Development with Flask</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 13: Data Analysis with pandas</li>
+<li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Chapter 14: Testing and Deployment</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Author Bio -->
+<section style="margin: 60px 0; padding: 40px; background: var(--card); border-radius: 16px; border: 1px solid var(--border);">
+<h2 style="text-align: center; margin-bottom: 32px; font-size: 28px;">About the Author</h2>
+<div style="display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center;">
+<img alt="Guillaume Lessard" src="/assets/harvested/brand/og_brand.jpg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"/>
+<div>
+<h3 style="margin: 0 0 16px; font-size: 24px;">Guillaume Lessard</h3>
+<p style="color: var(--muted); line-height: 1.6; margin-bottom: 16px;">
+            Guillaume Lessard is a Canadian developer, author, and music producer with over 10 years of experience in software development. 
+            He specializes in Python, automation, and AI technologies, and has created 100+ digital products including eBooks, apps, and music.
+          </p>
+<p style="color: var(--muted); line-height: 1.6;">
+            As the founder of iD01t Productions, Guillaume is passionate about teaching programming concepts in an accessible and practical way. 
+            His books are known for their clear explanations, real-world examples, and hands-on approach to learning.
+          </p>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

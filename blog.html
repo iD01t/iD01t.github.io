@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog — iD01t Productions</title>
+<meta content="Technical insights, tutorials, and industry perspectives on AI, prompt engineering, development, and digital creativity from iD01t Productions." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<meta content="#2aa7ff" name="theme-color"/>
+<link href="https://id01t.github.io/blog.html" rel="canonical"/>
+<meta content="Guillaume Lessard" name="author"/>
+<meta content="AI blog, prompt engineering tutorials, technical writing, development guides, music production, digital tools" name="keywords"/>
+
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Blog — iD01t Productions" property="og:title"/>
+<meta content="Technical insights and tutorials on AI, development, and digital creativity." property="og:description"/>
+<meta content="https://id01t.github.io/blog.html" property="og:url"/>
+<meta content="iD01t Productions" property="og:site_name"/>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5faff', 100: '#e0f2ff', 200: '#bae0ff', 300: '#8dceff', 400: '#5abaff',
+              500: '#2aa7ff', 600: '#008ef6', 700: '#0070d7', 800: '#0057b5', 900: '#003f92'
+            }
+          },
+          keyframes: {
+            bounceSubtle: {'0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-4px)'}},
+            float: {'0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-6px)'}}
+          },
+          animation: {
+            'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite'
+          }
+        }
+      }
+    }
+</script>
+
+<style>
+    :root { --ring-color: theme('colors.brand.500'); }
+    .link-underline { position: relative; transition: color .2s; }
+    .link-underline::after { content:""; position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .2s ease-out; }
+    .link-underline:hover::after, .link-underline:focus-visible::after { transform:scaleX(1); transform-origin:left; }
+    .focus-ring:focus-visible { outline:2px solid var(--ring-color); outline-offset:2px; }
+    .gradient-text { background:linear-gradient(to right,#2aa7ff,#0070d7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; }
+    .card-hover { transition: transform .4s ease, box-shadow .4s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 25px -5px rgba(0,0,0,.15); }
+    .intersection-animate { opacity:0; transform: translateY(20px); transition: all .6s cubic-bezier(.22,1,.36,1);} 
+    .intersection-animate.visible { opacity:1; transform:none; }
+</style>
+</head>
+
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
+
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-brand-600 dark:text-brand-400 font-semibold transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-brand-600 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-900 dark:to-slate-800 py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-5xl md:text-6xl font-bold gradient-text mb-6">iD01t Blog</h1>
+<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">Technical insights, practical tutorials, and industry perspectives on AI, prompt engineering, software development, and digital creativity. Written by creators, for creators.</p>
+</div>
+</section>
+
+<!-- All Blog Posts Grid -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="mb-12">
+<h2 class="text-3xl font-bold gradient-text mb-2">All Articles</h2>
+<p class="text-slate-600 dark:text-slate-400">Explore our complete collection of tutorials, guides, and insights</p>
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Blog Post: Why Prompt Engineering Matters -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
+<div class="h-48 bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center">
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
+<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">AI & Prompting</span>
+<time datetime="2025-01-15">Jan 15, 2025</time>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Why Prompt Engineering is the Most Important Skill You're Not Learning</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Most people use AI like a search engine. Power users treat it like a programming language. Learn the frameworks that separate casual users from professionals earning six figures.</p>
+<a class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium transition-colors" href="/blog/why-prompt-engineering-matters.html">
+Read Article
+<svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</article>
+
+<!-- Blog Post: RGCCO Framework -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
+<div class="h-48 bg-gradient-to-br from-purple-400 to-indigo-600 flex items-center justify-center">
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
+<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">Tutorial</span>
+<time datetime="2025-01-12">Jan 12, 2025</time>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">The RGCCO Framework: Five Elements Every Professional Prompt Needs</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Role, Goal, Context, Constraints, Output. Master this framework and watch your AI outputs transform from generic to exceptional. A complete guide with examples.</p>
+<a class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium transition-colors" href="/blog/rgcco-framework-guide.html">
+Read Article
+<svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</article>
+
+<!-- Blog Post: GPT vs Claude -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
+<div class="h-48 bg-gradient-to-br from-green-400 to-teal-600 flex items-center justify-center">
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
+<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">Comparison</span>
+<time datetime="2025-01-10">Jan 10, 2025</time>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">GPT-5 vs Claude 4: Which AI Model Should You Use?</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-4">A practical comparison of strengths, weaknesses, and ideal use cases for the two leading AI models of 2025. Make informed decisions about which tool fits your needs.</p>
+<a class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium transition-colors" href="/blog/gpt5-vs-claude4-comparison.html">
+Read Article
+<svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</article>
+
+<!-- Blog Post: AI Hallucinations -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
+<div class="h-48 bg-gradient-to-br from-red-400 to-pink-600 flex items-center justify-center">
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
+<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">Best Practices</span>
+<time datetime="2025-01-08">Jan 8, 2025</time>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">How to Stop AI from Making Things Up: A Verification Guide</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Hallucinations are inevitable, but manageable. Learn techniques to minimize false outputs and build verification into your workflows for reliable results.</p>
+<a class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium transition-colors" href="/blog/preventing-ai-hallucinations.html">
+Read Article
+<svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</article>
+
+<!-- Blog Post: Code Generation -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
+<div class="h-48 bg-gradient-to-br from-orange-400 to-red-600 flex items-center justify-center">
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
+<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">Development</span>
+<time datetime="2025-01-05">Jan 5, 2025</time>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">From Prototype to Production: Prompting for Professional Code</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Getting AI to write code is easy. Getting it to write production-ready code with tests, documentation, and proper architecture requires technique.</p>
+<a class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium transition-colors" href="/blog/ai-code-generation-best-practices.html">
+Read Article
+<svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</article>
+
+<!-- Blog Post: Marketing Copy -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
+<div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-600 flex items-center justify-center">
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
+<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">Marketing</span>
+<time datetime="2025-01-03">Jan 3, 2025</time>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Writing Marketing Copy That Actually Converts with AI</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Generic prompts produce generic copy. Learn how to craft prompts that generate conversion-optimized marketing materials that drive real results.</p>
+<a class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium transition-colors" href="/blog/ai-marketing-copy-techniques.html">
+Read Article
+<svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</article>
+
+<!-- Blog Post: Long Context -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
+<div class="h-48 bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center">
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
+<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">Advanced</span>
+<time datetime="2025-01-01">Jan 1, 2025</time>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Mastering Long-Context Prompts: Memory and Session Control</h3>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Large context windows are powerful, but only if you know how to structure information so models don't miss critical details buried in massive contexts.</p>
+<a class="inline-flex items-center text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium transition-colors" href="/blog/long-context-prompting-strategies.html">
+Read Article
+<svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</article>
+
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-8 md:p-12 text-center intersection-animate">
+<h3 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Ready to Master Prompt Engineering?</h3>
+<p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">Get the complete guide to professional prompting with "Prompt Mastery 2025 Deluxe Edition" — comprehensive frameworks, model-specific techniques, and real-world examples.</p>
+<a class="inline-flex items-center px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white text-lg font-semibold rounded-xl transition-all hover:scale-105 focus-ring shadow-lg" href="/ebooks.html">
+View the Book
+<svg aria-hidden="true" class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+
+<script>
+    // Theme toggle
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const setTheme = (mode) => {
+      if (mode === 'dark') root.classList.add('dark'); else root.classList.remove('dark');
+      localStorage.setItem('theme', mode);
+    };
+    themeToggle?.addEventListener('click', () => {
+      const newMode = root.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(newMode);
+    });
+    (() => {
+      const saved = localStorage.getItem('theme');
+      if (saved) setTheme(saved); else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+    })();
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    mobileBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', !isOpen);
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Intersection animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { 
+          entry.target.classList.add('visible'); 
+          observer.unobserve(entry.target); 
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
+
+    // Footer year
+    const yearElement = document.getElementById('year');
+    if (yearElement) yearElement.textContent = new Date().getFullYear();
+</script>
+</body>
+                                                                                           </html>

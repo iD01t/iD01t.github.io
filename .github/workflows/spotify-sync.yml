@@ -1,0 +1,70 @@
+name: Sync Spotify catalog
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spotify-catalog
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install --no-audit --no-fund
+          else
+            echo "No package.json, skipping"
+          fi
+
+      - name: Fetch Spotify catalog
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_ARTIST_ID: ${{ secrets.SPOTIFY_ARTIST_ID }}
+          # Or set one of these instead of SPOTIFY_ARTIST_ID:
+          # SPOTIFY_ARTIST_URL: https://open.spotify.com/artist/xxxxxxxxxxxxxxxxxxxx
+          # ARTIST_QUERY: DJ iD01t
+        run: |
+          mkdir -p assets/data
+          node scripts/spotify_fetch.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage only the expected output
+          git add assets/data/music.json
+
+          # Exit if no changes
+          if git diff --cached --quiet; then
+            echo "No changes in music.json"
+            exit 0
+          fi
+
+          # Rebase to avoid push races on scheduled runners
+          git pull --rebase
+          git commit -m "chore: update music.json from Spotify"
+          git push

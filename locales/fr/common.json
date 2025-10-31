@@ -1,0 +1,158 @@
+{
+  "site": {
+    "name": "iD01t Productions",
+    "tagline": "Outils numériques pour créateurs",
+    "description": "Utilitaires Windows professionnels, livres électroniques techniques, jeux multijoueurs et musique originale. Conçus pour les créateurs qui exigent qualité, rapidité et fiabilité."
+  },
+  "nav": {
+    "home": "Accueil",
+    "store": "Boutique",
+    "ebooks": "Livres numériques",
+    "audiobooks": "Livres audio",
+    "apps": "Applications",
+    "games": "Jeux",
+    "music": "Musique",
+    "blog": "Blog",
+    "nini": "Aventures de Nini",
+    "about": "À propos",
+    "contact": "Contact",
+    "newsletter": "Infolettre"
+  },
+  "hero": {
+    "title": "Outils numériques",
+    "subtitle": "pour créateurs",
+    "description": "Utilitaires Windows professionnels, livres électroniques techniques, jeux multijoueurs et musique originale. Conçus pour les créateurs qui exigent qualité, rapidité et fiabilité.",
+    "cta_primary": "Explorer la boutique",
+    "cta_secondary": "Voir les livres",
+    "scroll_prompt": "Découvrir plus"
+  },
+  "stats": {
+    "users": "Utilisateurs actifs",
+    "products": "Produits numériques",
+    "satisfaction": "Taux de satisfaction",
+    "support": "Support disponible"
+  },
+  "features": {
+    "heading": "Ce que nous offrons",
+    "description": "Une suite complète de produits numériques conçus pour améliorer votre productivité et votre créativité.",
+    "windows_apps": {
+      "title": "Applications Windows",
+      "description": "Utilitaires professionnels pour l'automation, la productivité et l'optimisation du système. Légers, rapides et conçus pour les utilisateurs avancés.",
+      "cta": "Explorer les applications"
+    },
+    "ebooks": {
+      "title": "Livres numériques techniques",
+      "description": "Guides approfondis sur la programmation, l'IA, l'automation et la technologie. Écrits par des développeurs, pour des développeurs.",
+      "cta": "Parcourir les livres"
+    },
+    "audiobooks": {
+      "title": "Livres audio",
+      "description": "Apprenez en déplacement avec des livres audio narrés professionnellement. Parfaits pour les trajets, les entraînements ou le multitâche.",
+      "cta": "Écouter maintenant"
+    },
+    "games": {
+      "title": "Jeux en ligne",
+      "description": "Jeux de stratégie multijoueurs incluant échecs, dames et plus encore. Jouez avec des amis ou affrontez des adversaires IA.",
+      "cta": "Commencer à jouer"
+    },
+    "music": {
+      "title": "Musique originale",
+      "description": "Pistes instrumentales et paysages sonores libres de droits. Parfaits pour les créateurs de contenu, streamers et projets.",
+      "cta": "Explorer la musique"
+    },
+    "community": {
+      "title": "Rejoignez notre communauté",
+      "description": "Connectez-vous avec des créateurs, développeurs et innovateurs. Partagez des idées, obtenez du support et collaborez sur des projets.",
+      "cta": "Entrer en contact"
+    }
+  },
+  "newsletter": {
+    "heading": "Restez informé",
+    "description": "Recevez les dernières mises à jour sur les nouvelles sorties, le contenu exclusif et les offres spéciales. Rejoignez notre communauté de créateurs et d'innovateurs.",
+    "email_placeholder": "Entrez votre adresse courriel",
+    "button": "S'abonner",
+    "privacy_note": "Pas de spam, désabonnement à tout moment. Politique de confidentialité respectée."
+  },
+  "footer": {
+    "description": "Outils numériques professionnels et contenu créatif pour développeurs, créateurs et innovateurs du monde entier.",
+    "products": "Produits",
+    "resources": "Ressources",
+    "legal": "Légal",
+    "copyright": "Tous droits réservés",
+    "status": "Tous les systèmes opérationnels",
+    "made_with": "Fait avec",
+    "for_creators": "pour les créateurs du monde entier",
+    "terms": "Conditions",
+    "privacy": "Confidentialité",
+    "refund_policy": "Politique de remboursement",
+    "cookie_policy": "Politique des cookies",
+    "terms_of_service": "Conditions d'utilisation",
+    "privacy_policy": "Politique de confidentialité"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "download": "Télécharger",
+    "share": "Partager",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "more": "Plus",
+    "less": "Moins",
+    "all": "Tout",
+    "none": "Aucun",
+    "yes": "Oui",
+    "no": "Non",
+    "ok": "OK"
+  },
+  "forms": {
+    "email": "Courriel",
+    "name": "Nom",
+    "message": "Message",
+    "subject": "Sujet",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "sent": "Envoyé !",
+    "required": "Requis",
+    "invalid_email": "Adresse courriel invalide",
+    "error_sending": "Erreur lors de l'envoi du message. Veuillez réessayer."
+  },
+  "accessibility": {
+    "skip_to_content": "Aller au contenu principal",
+    "toggle_theme": "Changer le thème",
+    "toggle_menu": "Basculer le menu mobile",
+    "close_menu": "Fermer le menu",
+    "switch_language": "Changer de langue",
+    "go_to_homepage": "Aller à la page d'accueil"
+  },
+  "consent": {
+    "title": "Consentement aux cookies",
+    "message": "Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic du site et à des fins marketing. En cliquant sur 'Tout accepter', vous consentez à notre utilisation des cookies.",
+    "accept_all": "Tout accepter",
+    "reject_all": "Tout refuser",
+    "customize": "Personnaliser",
+    "necessary": "Cookies nécessaires",
+    "necessary_description": "Ces cookies sont essentiels au bon fonctionnement du site web.",
+    "analytics": "Cookies analytiques",
+    "analytics_description": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web.",
+    "marketing": "Cookies marketing",
+    "marketing_description": "Ces cookies sont utilisés pour vous montrer des publicités pertinentes basées sur vos intérêts.",
+    "save_preferences": "Enregistrer les préférences",
+    "learn_more": "En savoir plus"
+  },
+  "album": {
+    "new_release": "Nouvel album disponible maintenant !",
+    "listen_on_spotify": "Écouter sur Spotify",
+    "also_available": "Également disponible sur",
+    "stream_now": "Diffusez maintenant sur toutes les principales plateformes",
+    "latest_music": "Découvrez les derniers paysages sonores électroniques et ambiants de DJ iD01t."
+  }
+}

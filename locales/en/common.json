@@ -1,0 +1,158 @@
+{
+  "site": {
+    "name": "iD01t Productions",
+    "tagline": "Digital Tools for Creators",
+    "description": "Professional Windows utilities, technical eBooks, multiplayer games, and original music. Built for creators who demand quality, speed, and reliability."
+  },
+  "nav": {
+    "home": "Home",
+    "store": "Store",
+    "ebooks": "eBooks",
+    "audiobooks": "Audiobooks",
+    "apps": "Apps",
+    "games": "Games",
+    "music": "Music",
+    "blog": "Blog",
+    "nini": "Nini's Adventures",
+    "about": "About",
+    "contact": "Contact",
+    "newsletter": "Newsletter"
+  },
+  "hero": {
+    "title": "Digital Tools",
+    "subtitle": "for Creators",
+    "description": "Professional Windows utilities, technical eBooks, multiplayer games, and original music. Built for creators who demand quality, speed, and reliability.",
+    "cta_primary": "Explore Store",
+    "cta_secondary": "View eBooks",
+    "scroll_prompt": "Discover More"
+  },
+  "stats": {
+    "users": "Active Users",
+    "products": "Digital Products",
+    "satisfaction": "Satisfaction Rate",
+    "support": "Support Available"
+  },
+  "features": {
+    "heading": "What We Offer",
+    "description": "A complete suite of digital products designed to enhance your productivity and creativity.",
+    "windows_apps": {
+      "title": "Windows Apps",
+      "description": "Professional utilities for automation, productivity, and system optimization. Lightweight, fast, and built for power users.",
+      "cta": "Explore Apps"
+    },
+    "ebooks": {
+      "title": "Technical eBooks",
+      "description": "In-depth guides on programming, AI, automation, and technology. Written by developers, for developers.",
+      "cta": "Browse eBooks"
+    },
+    "audiobooks": {
+      "title": "Audiobooks",
+      "description": "Learn on the go with professionally narrated audiobooks. Perfect for commutes, workouts, or multitasking.",
+      "cta": "Listen Now"
+    },
+    "games": {
+      "title": "Online Games",
+      "description": "Multiplayer strategy games including chess, checkers, and more. Play with friends or challenge AI opponents.",
+      "cta": "Start Playing"
+    },
+    "music": {
+      "title": "Original Music",
+      "description": "Royalty-free instrumental tracks and soundscapes. Perfect for content creators, streamers, and projects.",
+      "cta": "Explore Music"
+    },
+    "community": {
+      "title": "Join Our Community",
+      "description": "Connect with creators, developers, and innovators. Share ideas, get support, and collaborate on projects.",
+      "cta": "Get In Touch"
+    }
+  },
+  "newsletter": {
+    "heading": "Stay Updated",
+    "description": "Get the latest updates on new releases, exclusive content, and special offers. Join our community of creators and innovators.",
+    "email_placeholder": "Enter your email address",
+    "button": "Subscribe",
+    "privacy_note": "No spam, unsubscribe at any time. Privacy policy respected."
+  },
+  "footer": {
+    "description": "Professional digital tools and creative content for developers, creators, and innovators worldwide.",
+    "products": "Products",
+    "resources": "Resources",
+    "legal": "Legal",
+    "copyright": "All rights reserved",
+    "status": "All systems operational",
+    "made_with": "Made with",
+    "for_creators": "for creators worldwide",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "refund_policy": "Refund Policy",
+    "cookie_policy": "Cookie Policy",
+    "terms_of_service": "Terms of Service",
+    "privacy_policy": "Privacy Policy"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "download": "Download",
+    "share": "Share",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "more": "More",
+    "less": "Less",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK"
+  },
+  "forms": {
+    "email": "Email",
+    "name": "Name",
+    "message": "Message",
+    "subject": "Subject",
+    "send": "Send",
+    "sending": "Sending...",
+    "sent": "Sent!",
+    "required": "Required",
+    "invalid_email": "Invalid email address",
+    "error_sending": "Error sending message. Please try again."
+  },
+  "accessibility": {
+    "skip_to_content": "Skip to main content",
+    "toggle_theme": "Toggle theme",
+    "toggle_menu": "Toggle mobile menu",
+    "close_menu": "Close menu",
+    "switch_language": "Switch language",
+    "go_to_homepage": "Go to homepage"
+  },
+  "consent": {
+    "title": "Cookie Consent",
+    "message": "We use cookies to enhance your experience, analyze site traffic, and for marketing purposes. By clicking 'Accept All', you consent to our use of cookies.",
+    "accept_all": "Accept All",
+    "reject_all": "Reject All",
+    "customize": "Customize",
+    "necessary": "Necessary Cookies",
+    "necessary_description": "These cookies are essential for the website to function properly.",
+    "analytics": "Analytics Cookies",
+    "analytics_description": "These cookies help us understand how visitors interact with our website.",
+    "marketing": "Marketing Cookies",
+    "marketing_description": "These cookies are used to show you relevant ads based on your interests.",
+    "save_preferences": "Save Preferences",
+    "learn_more": "Learn More"
+  },
+  "album": {
+    "new_release": "New Album Available Now!",
+    "listen_on_spotify": "Listen on Spotify",
+    "also_available": "Also available on",
+    "stream_now": "Stream now on all major platforms",
+    "latest_music": "Experience the latest electronic and ambient soundscapes from DJ iD01t."
+  }
+}

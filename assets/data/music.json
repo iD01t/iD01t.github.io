@@ -1,0 +1,29 @@
+{
+  "generated_at": "2025-09-02T00:00:00Z",
+  "artist": {
+    "id": "YOUR_SPOTIFY_ARTIST_ID",
+    "name": "DJ iD01t",
+    "url": "https://open.spotify.com/artist/YOUR_SPOTIFY_ARTIST_ID",
+    "followers": 0,
+    "genres": [
+      "Electronic",
+      "Synthwave"
+    ]
+  },
+  "featured": null,
+  "releases": [
+    {
+      "id": "example1",
+      "name": "Sample Release",
+      "album_type": "album",
+      "album_group": "album",
+      "release_date": "2025-01-01",
+      "release_date_precision": "day",
+      "year": "2025",
+      "url": "https://open.spotify.com/album/REPLACE",
+      "image": "/assets/img/placeholders/card-square-640.webp",
+      "total_tracks": 10
+    }
+  ],
+  "top_tracks": []
+}

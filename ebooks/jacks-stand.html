@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jack’s Stand · iD01t Productions</title>
+<meta content="&lt;p&gt;Jack’s Stand: An Environmental Lawyer’s Fight for Justice (Edition 2)&lt;/p&gt;&lt;p&gt;By Guillaume Lessard&lt;/p&gt;&lt;p&gt;A poisoned river, a shattered community, and a corpora" name="description"/><!-- Tailwind (CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Early theme init to avoid FOUC -->
+<script>(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches; if(s==='dark'||(!s&&d)){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
+<script>
+  /* Extend Tailwind with brand palette */
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50:  '#f5faff',
+            100: '#e0f2ff',
+            200: '#bae0ff',
+            300: '#8dceff',
+            400: '#5abaff',
+            500: '#2aa7ff',
+            600: '#008ef6',
+            700: '#0070d7',
+            800: '#0057b5',
+            900: '#003f92'
+          }
+        },
+        keyframes: {
+          bounceSubtle: {
+            '0%,100%': { transform: 'translateY(0)' },
+            '50%': { transform: 'translateY(-4px)' }
+          },
+          pulseGlow: {
+            '0%,100%': { opacity: 0.2 },
+            '50%': { opacity: 0.4 }
+          },
+          float: {
+            '0%,100%': { transform: 'translateY(0)' },
+            '50%': { transform: 'translateY(-6px)' }
+          }
+        },
+        animation: {
+          'bounce-subtle': 'bounceSubtle 1.4s ease-in-out infinite',
+          'pulse-glow': 'pulseGlow 2.4s ease-in-out infinite',
+          float: 'float 6s ease-in-out infinite'
+        }
+      }
+    }
+  };
+</script>
+<!-- Custom utility classes -->
+<style>
+  :root {
+    --ring-color: theme('colors.brand.500');
+  }
+  /* underline utility */
+  .link-underline {
+    position: relative;
+    transition: color 0.2s;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-out;
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  /* focus ring */
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--ring-color);
+    outline-offset: 2px;
+  }
+  /* gradient text */
+  .gradient-text {
+    background: linear-gradient(to right, #2aa7ff, #0070d7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback to ensure visibility */
+  }
+  /* card hover lift */
+  .card-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  }
+  /* glass effect */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px) saturate(150%);
+  }
+  @media (prefers-color-scheme: dark) {
+    .glass-effect {
+      background: rgba(30, 41, 59, 0.55);
+    }
+  }
+  /* intersection animations */
+  .intersection-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .intersection-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+<!-- Favicons -->
+<link href="/favicon.ico" rel="icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<link href="https://id01t.store/ebooks/jacks-stand.html" rel="canonical"/>
+<meta content="book" property="og:type"/>
+<meta content="Jack’s Stand" property="og:title"/>
+<meta content="&lt;p&gt;Jack’s Stand: An Environmental Lawyer’s Fight for Justice (Edition 2)&lt;/p&gt;&lt;p&gt;By Guillaume Lessard&lt;/p&gt;&lt;p&gt;A poisoned river, a shattered community, and a corporation that will stop at nothing to silenc" property="og:description"/>
+<meta content="https://id01t.store/ebooks/jacks-stand.html" property="og:url"/>
+<meta content="/assets/images/jacks-stand-cover.webp" property="og:image"/>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Logo -->
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg hidden sm:inline">iD01t Productions</span>
+</a>
+<!-- Desktop nav -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button aria-label="Toggle theme" class="focus-ring rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" id="themeToggle">
+<span class="theme-text">Theme</span>
+</button>
+<a class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm px-4 py-2 transition-all duration-300 hover:scale-105 animate-pulse-glow focus-ring" href="/#newsletter">
+          Newsletter
+        </a>
+<button aria-expanded="false" aria-label="Open navigation menu" class="md:hidden focus-ring inline-flex items-center justify-center p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" id="mobileMenuBtn">
+<svg class="h-5 w-5 transition-transform" fill="none" id="menuIcon" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6h18M3 12h18M3 18h18"></path>
+</svg>
+<svg class="h-5 w-5 hidden transition-transform" fill="none" id="closeIcon" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6l12 12M6 18L18 6"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div aria-labelledby="mobile-menu-title" aria-modal="true" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 glass-effect" id="mobileMenu" role="dialog">
+<div class="px-4 py-3 flex flex-col gap-2">
+<h2 class="sr-only" id="mobile-menu-title">Navigation Menu</h2>
+<a class="py-2 px-2 rounded focus-ring" href="/store.html">Store</a>
+<a class="py-2 px-2 rounded focus-ring" href="/ebooks.html">eBooks</a>
+<a class="py-2 px-2 rounded focus-ring" href="/audiobooks.html">Audiobooks</a>
+<a class="py-2 px-2 rounded focus-ring" href="/apps.html">Apps</a>
+<a class="py-2 px-2 rounded focus-ring" href="/games.html">Games</a>
+<a class="py-2 px-2 rounded focus-ring" href="/music.html">Music</a>
+<a class="py-2 px-2 rounded focus-ring" href="/blog.html">Blog</a>
+<a class="py-2 px-2 rounded focus-ring" href="/about.html">About</a>
+<a class="py-2 px-2 rounded focus-ring" href="/contact.html">Contact</a>
+</div>
+</div>
+</header>
+<section class="relative overflow-hidden">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-10">
+<div class="grid md:grid-cols-2 gap-8 items-start">
+<img alt="Jack’s Stand cover" class="w-full aspect-[3/4] object-cover rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800" loading="eager" src="/assets/images/jacks-stand-cover.webp"/>
+<div>
+<h1 class="text-3xl font-bold tracking-tight">Jack’s Stand</h1>
+<p class="mt-3 text-slate-600 dark:text-slate-300"></p><p>Jack’s Stand: An Environmental Lawyer’s Fight for Justice (Edition 2)</p><p>By Guillaume Lessard</p><p>A poisoned river, a shattered community, and a corporation that will stop at nothing to silence the truth.</p><p>Jack Hawthorne, a relentless environmental lawyer, has dedicated his life to taking down Evergreen Industries—the corporate titan responsible for devastating Riverview’s water and destroying countless lives. When Olivia Bennett, a fearless investigative journalist, uncovers a trail of offshore accounts, shell companies, and secret projects, their worlds collide in a battle for justice.</p><p>What begins as a legal fight quickly spirals into a deadly conspiracy. Whistleblowers vanish, encrypted memos surface, and powerful figures will do anything to protect their empire. From midnight meetings at shadowy piers to high-stakes courtroom maneuvers, Jack and Olivia must navigate a web of lies, betrayal, and intimidation. Every step forward brings them closer to the trut, and deeper into danger.</p><p>Edition 2 is fully expanded with richer character development, heightened suspense, and new revelations, including the explosive chapter Into the Crosshairs. This definitive edition transforms Jack’s Stand into a cinematic legal thriller packed with corporate intrigue, moral dilemmas, and a relentless pursuit of justice.</p><p>Perfect for fans of John Grisham, Michael Connelly, and political thrillers, Jack’s Stand (Edition 2) will keep you turning pages late into the night, questioning how far you would go to expose the truth.</p><p>Part of the Romantic Stories Series</p><p>This book is part of the Romantic Stories Series by iD01t Productions. The collection explores timeless themes of love, passion, resilience, and emotional discovery. Readers will find stories filled with heartfelt characters, enchanting relationships, and unforgettable moments that capture the magic of romance.</p><p>The series is created for romance lovers who want emotional, character driven narratives and captivating journeys that linger long after the last page. Each title blends tenderness, courage, and beauty with twists that make every story unique and memorable.</p><p>Special Global Back to School Promotion</p><p>Buy 2 books and get 30 percent off</p><p>Buy 4 books and get 40 percent off</p><p>Buy 6 books and get 60 percent off</p><p>Available worldwide for a limited time on Google Play Books. Start reading today and fall in love with every story.</p><p><br/></p>
+<div class="mt-5 flex items-center gap-3">
+<a class="inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-700 text-white px-5 py-2" href="https://play.google.com/store/books/details?id=GGKEY:W9YWGNLC0Z2" rel="noopener" target="_blank">Buy Now</a>
+<a class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-5 py-2" href="/ebooks.html">All eBooks</a>
+</div>
+<ul class="mt-4 text-sm text-slate-500 space-y-1">
+<li>Language: EN</li>
+</ul>
+<div class="mt-6">
+<a class="text-xs text-slate-500 hover:underline" href="mailto:support@id01t.store?subject=Issue%20with%20eBook%3A%20Jack%E2%80%99s+Stand">Report an issue</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

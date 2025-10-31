@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="h-full scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Online Games - iD01t Productions</title>
+<meta content="Play free online games from iD01t Productions - Professional puzzle games, strategy games, and interactive entertainment" name="description"/>
+<meta content="online games, free games, puzzle games, web games, entertainment, interactive games, browser games" name="keywords"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="https://id01t.store/games.html" property="og:url"/>
+<meta content="Online Games - iD01t Productions" property="og:title"/>
+<meta content="Play free online games from iD01t Productions - Professional puzzle games, strategy games, and interactive entertainment" property="og:description"/>
+<meta content="https://id01t.store/assets/img/games-preview.png" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://id01t.store/games.html" property="twitter:url"/>
+<meta content="Online Games - iD01t Productions" property="twitter:title"/>
+<meta content="Play free online games from iD01t Productions - Professional puzzle games, strategy games, and interactive entertainment" property="twitter:description"/>
+<meta content="https://id01t.store/assets/img/games-preview.png" property="twitter:image"/>
+<!-- Favicon -->
+<link href="/assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/manifest.json" rel="manifest"/>
+<!-- Preload critical resources -->
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<!-- Structured Data -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Online Games - iD01t Productions",
+      "description": "Play free online games from iD01t Productions - Professional puzzle games, strategy games, and interactive entertainment",
+      "url": "https://id01t.store/games.html",
+      "mainEntity": {
+        "@type": "GameServer",
+        "name": "iD01t Productions Games",
+        "description": "Professional online gaming platform with puzzle games, strategy games, and interactive entertainment",
+        "url": "https://id01t.store/games.html",
+        "provider": {
+          "@type": "Organization",
+          "name": "iD01t Productions",
+          "url": "https://id01t.store"
+        }
+      }
+    }
+    </script>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            primary: '#16185c'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Custom styles -->
+<style>
+        .focus-ring {
+            outline: none;
+            box-shadow: 0 0 0 2px #16185c;
+            outline-offset: 2px;
+        }
+        .dark .focus-ring {
+            outline-offset: 2px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #16185c 0%, #1e40af 100%);
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0f123d 0%, #1d4ed8 100%);
+            transform: translateY(-1px);
+        }
+        .intersection-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        .intersection-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .game-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .dark .game-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(22, 24, 92, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 font-sans">
+<!-- ==================== HEADER ==================== -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-brand-primary via-blue-900 to-purple-900 text-white py-24 intersection-animate">
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+          Epic <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Games</span>
+</h1>
+<p class="text-xl sm:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto">
+          Professional online games designed for competitive multiplayer action and interactive entertainment
+        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-medium focus-ring inline-flex items-center gap-2" href="#featured-game">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Play Now
+          </a>
+<a class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg text-lg font-medium focus-ring transition-all" href="#beta">
+            🔑 Beta Access
+          </a>
+</div>
+</div>
+</section>
+<!-- Featured Game Section -->
+<section class="py-24 intersection-animate" id="featured-game">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+            Featured Game
+          </h2>
+<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            Experience our latest multiplayer masterpiece with professional-grade gameplay and stunning visuals
+          </p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Game Preview -->
+<div class="game-card rounded-2xl p-8 text-center">
+<div class="mb-6">
+<img alt="NINI Game Preview" class="w-full max-w-md mx-auto rounded-xl shadow-lg" src="https://img.itch.zone/aW1nLzIyOTk4NzEyLnBuZw==/original/SbMphI.png"/>
+</div>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-2">
+              NINI: Chaos Kitties
+            </h3>
+<p class="text-lg text-slate-600 dark:text-slate-300 mb-6">
+              Fast-paced multiplayer mayhem with adorable chaos kitties in destructible arenas
+            </p>
+<div class="flex flex-wrap gap-2 justify-center mb-8">
+<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">
+                🎮 Multiplayer
+              </span>
+<span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">
+                ⚡ Fast-Paced
+              </span>
+<span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">
+                🐱 Cat-Themed
+              </span>
+<span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">
+                🏟️ Arena Combat
+              </span>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="btn-primary text-white px-6 py-3 rounded-lg font-medium focus-ring inline-flex items-center gap-2" href="https://id01t.itch.io/nini" rel="noopener noreferrer" target="_blank">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                Play on itch.io
+              </a>
+<a class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-50 px-6 py-3 rounded-lg font-medium focus-ring transition-colors" href="#beta">
+                🔑 Request Beta Access
+              </a>
+</div>
+</div>
+<!-- Game Features -->
+<div class="space-y-8">
+<div class="game-card rounded-2xl p-6">
+<h4 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4 flex items-center gap-3">
+<span class="text-3xl">✨</span>
+                Key Features
+              </h4>
+<div class="space-y-4">
+<div class="flex gap-4">
+<span class="text-green-500 text-2xl flex-shrink-0">🎯</span>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-slate-50">Competitive Multiplayer</h5>
+<p class="text-slate-600 dark:text-slate-300">First public beta launching September 24, 2025</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="text-orange-500 text-2xl flex-shrink-0">🏟️</span>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-slate-50">Chaotic Arenas</h5>
+<p class="text-slate-600 dark:text-slate-300">Cat-themed environments with traps and destructible elements</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="text-blue-500 text-2xl flex-shrink-0">⚡</span>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-slate-50">Lightning Fast</h5>
+<p class="text-slate-600 dark:text-slate-300">Responsive gameplay designed for intense, quick matches</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="text-purple-500 text-2xl flex-shrink-0">☁️</span>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-slate-50">AWS Servers</h5>
+<p class="text-slate-600 dark:text-slate-300">Reliable, scalable infrastructure for smooth global play</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Specs -->
+<div class="game-card rounded-2xl p-6">
+<h4 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4 flex items-center gap-3">
+<span class="text-3xl">⚙️</span>
+                Technical Specs
+              </h4>
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400">🎮 Engine:</span>
+<span class="font-medium text-slate-900 dark:text-slate-50">Unity</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400">🎨 Art:</span>
+<span class="font-medium text-slate-900 dark:text-slate-50">Blender</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400">🖱️ Input:</span>
+<span class="font-medium text-slate-900 dark:text-slate-50">Keyboard + Mouse</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400">🌐 Mode:</span>
+<span class="font-medium text-slate-900 dark:text-slate-50">Online Only</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400">☁️ Servers:</span>
+<span class="font-medium text-slate-900 dark:text-slate-50">AWS</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400">⏱️ Session:</span>
+<span class="font-medium text-slate-900 dark:text-slate-50">3-5 minutes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Beta Access Section -->
+<section class="py-24 bg-slate-100 dark:bg-slate-800 intersection-animate" id="beta">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-6">
+          🔑 Join the Beta
+        </h2>
+<p class="text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto">
+          Get exclusive early access to NINI: Chaos Kitties and help shape the future of multiplayer gaming
+        </p>
+<div class="game-card rounded-2xl p-8 max-w-2xl mx-auto">
+<form class="space-y-6" data-netlify="true" method="POST" name="nini-beta">
+<input name="form-name" type="hidden" value="nini-beta"/>
+<div>
+<input class="w-full rounded-xl border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4 text-lg focus:border-brand-primary focus:outline-none transition-colors" name="email" placeholder="Enter your email address" required="" type="email"/>
+</div>
+<button class="w-full btn-primary text-white px-8 py-4 rounded-xl text-lg font-medium focus-ring transition-all hover:scale-105" type="submit">
+              🚀 Secure Beta Access
+            </button>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+              Free access • No payment required • Email updates only
+            </p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Spacer to ensure footer visibility on short viewports -->
+<div class="h-20"></div>
+<!-- ==================== FOOTER ==================== -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+    // Theme toggle (light/dark)
+    const themeToggle = document.getElementById('themeToggle');
+    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+    const root = document.documentElement;
+
+    const updateThemeText = () => {
+      const isDark = root.classList.contains('dark');
+      document.querySelectorAll('.theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
+      document.querySelectorAll('.mobile-theme-text').forEach(el => el.textContent = isDark ? 'Light' : 'Dark');
+    };
+
+    const setTheme = mode => {
+      if (mode === 'dark') {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+      localStorage.setItem('theme', mode);
+      updateThemeText();
+    };
+
+    [themeToggle, mobileThemeToggle].forEach(toggle => {
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const newMode = root.classList.contains('dark') ? 'light' : 'dark';
+          setTheme(newMode);
+        });
+      }
+    });
+
+    // Init theme based on saved value / system preference
+    (() => {
+      const saved = localStorage.getItem('theme');
+      if (saved) setTheme(saved);
+      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+    })();
+
+    // Mobile nav toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('hidden');
+        mobileBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        menuIcon.classList.toggle('hidden', !isOpen);
+        closeIcon.classList.toggle('hidden', isOpen);
+        if (!isOpen) {
+          mobileMenu.querySelector('a').focus();
+        } else {
+          mobileBtn.focus();
+        }
+      });
+    }
+
+    // Intersection animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
+
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form enhancement
+    const betaForm = document.querySelector('form[name="nini-beta"]');
+    if (betaForm) {
+      betaForm.addEventListener('submit', function(e) {
+        const submitBtn = this.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = '🚀 Submitting...';
+          submitBtn.disabled = true;
+
+          setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }, 2000);
+        }
+      });
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

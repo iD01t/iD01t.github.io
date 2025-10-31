@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Complete documentation for HTML2Win Pro - Convert HTML apps into professional Windows executables" name="description"/>
+<title>HTML2Win Pro - Documentation &amp; Help</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header .tagline {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 1rem 0;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            border-bottom-color: #667eea;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        main {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 2rem auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        h4 {
+            color: #333;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        p {
+            margin: 1rem 0;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .feature-card h4 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .warning-box strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .info-box strong {
+            color: #0c5460;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .legal-box {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .legal-box h3 {
+            color: #721c24;
+            margin-top: 0;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .step-list li {
+            counter-increment: step-counter;
+            margin: 1.5rem 0;
+            padding-left: 3rem;
+            position: relative;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        footer {
+            background: #2d2d2d;
+            color: white;
+            padding: 3rem 0 1rem 0;
+            margin-top: 4rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: #8ab4f8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        footer .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #999;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav .container {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+<main class="container">
+<section id="overview">
+<h2>Overview</h2>
+<p>HTML2Win Pro is a professional desktop application that converts HTML-based applications into standalone Windows executables. The tool provides a complete graphical user interface for configuring, building, and packaging your web applications as native Windows programs without requiring programming knowledge.</p>
+<p>Built on proven open-source technologies including PyWebView and PyInstaller, HTML2Win Pro streamlines the conversion process while offering advanced features for professional developers and businesses.</p>
+</section>
+<section id="getting-started">
+<h2>Getting Started</h2>
+<h3>System Requirements</h3>
+<ul>
+<li><strong>Operating System:</strong> Windows 10 or later (64-bit recommended)</li>
+<li><strong>Disk Space:</strong> Minimum 500 MB free space for the application plus additional space for builds</li>
+<li><strong>Memory:</strong> 4 GB RAM minimum, 8 GB recommended</li>
+<li><strong>Dependencies:</strong> Microsoft Edge WebView2 Runtime (installed automatically on Windows 10/11)</li>
+<li><strong>Internet:</strong> Required for URL-based projects and update checks</li>
+</ul>
+<h3>First Launch</h3>
+<ol class="step-list">
+<li><strong>Run the Application:</strong> Double-click <code>HTML2Win Pro.exe</code> to launch the application. The first launch may take a few seconds to initialize.</li>
+<li><strong>Interface Overview:</strong> You'll see a modern dark-themed interface with a sidebar for navigation and a main panel for configuration.</li>
+<li><strong>Check Dependencies:</strong> Go to Tools → Check Dependencies to verify all required packages are installed correctly.</li>
+<li><strong>Start Your First Project:</strong> Follow the Quick Start guide below to create your first executable.</li>
+</ol>
+<h3>Quick Start Guide</h3>
+<ol class="step-list">
+<li><strong>Prepare Your HTML Project:</strong> Ensure you have a folder containing your HTML application with an <code>index.html</code> file as the entry point.</li>
+<li><strong>Configure Application Information:</strong> In the Project tab, enter your app name, version, and author information.</li>
+<li><strong>Select Source:</strong> Choose "Local Folder" and browse to select your HTML project folder.</li>
+<li><strong>Configure Window Settings:</strong> Switch to the Window tab to set your application's window title and initial size.</li>
+<li><strong>Preview Your App:</strong> Click the "PREVIEW (F6)" button to test your application before building. This opens your app in a WebView window exactly as it will appear in the final executable.</li>
+<li><strong>Build Executable:</strong> Once satisfied with the preview, click "BUILD (F5)" to create your Windows executable. The build process typically takes 2-5 minutes depending on project size.</li>
+<li><strong>Locate Output:</strong> After successful build, click "Yes" when prompted to open the output folder containing your executable.</li>
+</ol>
+</section>
+<section id="features">
+<h2>Features &amp; Capabilities</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<h4>🎨 Intuitive GUI</h4>
+<p>Modern, professional interface built with CustomTkinter for easy configuration without command-line complexity.</p>
+</div>
+<div class="feature-card">
+<h4>👁️ Live Preview</h4>
+<p>Test your application before building with the integrated preview feature, including optional developer tools.</p>
+</div>
+<div class="feature-card">
+<h4>📦 Single File Output</h4>
+<p>Create standalone single-file executables for easy distribution, or multi-file builds for faster startup.</p>
+</div>
+<div class="feature-card">
+<h4>🔒 Code Signing</h4>
+<p>Support for digitally signing executables with your certificate to avoid Windows security warnings.</p>
+</div>
+<div class="feature-card">
+<h4>🌐 URL Support</h4>
+<p>Convert both local HTML projects and remote web URLs into desktop applications.</p>
+</div>
+<div class="feature-card">
+<h4>⚡ Build Caching</h4>
+<p>Intelligent caching system speeds up rebuilds by reusing unchanged resources.</p>
+</div>
+<div class="feature-card">
+<h4>🎯 Custom Icons</h4>
+<p>Add professional custom icons to your executables with validation and format checking.</p>
+</div>
+<div class="feature-card">
+<h4>📊 License Scanning</h4>
+<p>Automatic scanning of dependencies to identify licensing requirements and restrictions.</p>
+</div>
+<div class="feature-card">
+<h4>🔧 Git Integration</h4>
+<p>Automatically detect version numbers from Git tags for version-controlled projects.</p>
+</div>
+<div class="feature-card">
+<h4>💾 Project Management</h4>
+<p>Save and load project configurations as JSON files for reusable build profiles.</p>
+</div>
+<div class="feature-card">
+<h4>📝 Templates</h4>
+<p>Built-in project templates (Basic, Dashboard) for quick-starting new applications.</p>
+</div>
+<div class="feature-card">
+<h4>⌨️ CLI Support</h4>
+<p>Command-line interface available for automation and continuous integration workflows.</p>
+</div>
+</div>
+</section>
+<section id="building">
+<h2>Building Applications</h2>
+<h3>Project Configuration</h3>
+<h4>Application Information</h4>
+<ul>
+<li><strong>App Name:</strong> The name of your application and resulting executable file. Use only alphanumeric characters, spaces, hyphens, and underscores.</li>
+<li><strong>Version:</strong> Application version in format <code>1.0.0</code> or <code>1.0.0.0</code>. This appears in Windows file properties.</li>
+<li><strong>Author:</strong> Your name or company name. Appears in executable metadata.</li>
+<li><strong>Use Git Version:</strong> Automatically detect version from Git tags if your project is in a Git repository.</li>
+</ul>
+<h4>Source Content</h4>
+<p><strong>Local Folder:</strong> Select a folder containing your HTML application. Requirements:</p>
+<ul>
+<li>Must contain an <code>index.html</code> file in the root</li>
+<li>Can include subdirectories for CSS, JavaScript, images, and other assets</li>
+<li>Supports all standard web file types: HTML, CSS, JS, images, fonts, JSON</li>
+<li>Total project size should be under 500 MB for optimal build times</li>
+</ul>
+<p><strong>URL:</strong> Enter a web URL to package an online application:</p>
+<ul>
+<li>Must be a complete URL including <code>http://</code> or <code>https://</code></li>
+<li>The URL will be loaded when the application starts</li>
+<li>Requires internet connection to function</li>
+<li>Useful for web-based dashboards, documentation, or cloud applications</li>
+</ul>
+<h3>Window Configuration</h3>
+<ul>
+<li><strong>Window Title:</strong> Text displayed in the application's title bar</li>
+<li><strong>Initial Size:</strong> Starting window dimensions in pixels (width × height)</li>
+<li><strong>Resizable Window:</strong> Allow users to resize the application window</li>
+<li><strong>Start in Fullscreen:</strong> Launch application in fullscreen mode (users can exit with F11 or Alt+F4)</li>
+</ul>
+<h3>Build Options</h3>
+<h4>Executable Type</h4>
+<ul>
+<li><strong>Single File Executable:</strong> Creates one standalone .exe file. Advantages: Easy distribution, no installation needed. Disadvantages: Slower startup (2-5 seconds), larger file size.</li>
+<li><strong>Multi-File Build:</strong> Creates an executable with supporting files in a folder. Advantages: Faster startup, smaller main executable. Disadvantages: Requires distributing entire folder.</li>
+</ul>
+<h4>Advanced Options</h4>
+<ul>
+<li><strong>Show Console Window:</strong> Display a console window for debugging output. Only enable for development and troubleshooting.</li>
+<li><strong>Compress Resources:</strong> Apply lossless compression to images (PNG/JPEG) to reduce build size. May increase build time by 10-20%.</li>
+<li><strong>Use Build Cache:</strong> Cache processed resources between builds for faster rebuilds. Recommended for iterative development.</li>
+<li><strong>Enable Debug Tools:</strong> Enable developer tools (F12) in preview mode for debugging JavaScript and CSS.</li>
+</ul>
+<h4>Application Icon</h4>
+<p>Add a custom icon to your executable for professional branding:</p>
+<ul>
+<li><strong>Windows:</strong> Requires .ico format (256×256 pixels recommended)</li>
+<li><strong>File Size:</strong> Maximum 10 MB per icon file</li>
+<li><strong>Validation:</strong> Icon files are automatically validated for correct format</li>
+<li><strong>Creating Icons:</strong> Use tools like GIMP, Paint.NET, or online converters to create .ico files from PNG/JPG images</li>
+</ul>
+<h4>Code Signing (Optional)</h4>
+<p>Digital signatures prevent Windows SmartScreen warnings and verify authenticity:</p>
+<ul>
+<li><strong>Certificate:</strong> Path to your .pfx or .p12 code signing certificate</li>
+<li><strong>Password:</strong> Certificate password (if required)</li>
+<li><strong>Requirements:</strong> Windows SDK must be installed with signtool.exe</li>
+<li><strong>Timestamping:</strong> Automatically includes timestamp for long-term validity</li>
+</ul>
+<div class="info-box">
+<strong>💡 Code Signing Best Practices</strong>
+<p>Code signing certificates can be obtained from Certificate Authorities like DigiCert, Sectigo, or GlobalSign. Prices typically range from $100-$500 per year. Extended Validation (EV) certificates provide immediate SmartScreen reputation but require hardware tokens.</p>
+</div>
+<h4>Package Format</h4>
+<ul>
+<li><strong>None:</strong> Output raw executable/folder only</li>
+<li><strong>ZIP:</strong> Automatically create a compressed ZIP archive for easy distribution</li>
+</ul>
+<h3>Building Your Application</h3>
+<ol class="step-list">
+<li><strong>Configure All Settings:</strong> Complete all tabs (Project, Window, Build) with your desired configuration.</li>
+<li><strong>Save Project (Optional):</strong> Use File → Save Project to save your configuration as a .json file for future use.</li>
+<li><strong>Preview First:</strong> Always preview your application before building to verify functionality.</li>
+<li><strong>Start Build:</strong> Click "BUILD (F5)" or use Tools → Build App. The build process begins immediately.</li>
+<li><strong>Monitor Progress:</strong> Watch the progress bar and console output for build status. Typical builds take 2-5 minutes.</li>
+<li><strong>Handle Warnings:</strong> Review any warnings shown after build completion. Common warnings include missing WebView2 on target systems.</li>
+<li><strong>Test Executable:</strong> Always test the built executable on a clean system to verify all resources are included.</li>
+</ol>
+<div class="warning-box">
+<strong>⚠️ Build Process Notes</strong>
+<p>The build process temporarily uses significant disk space (up to 1 GB) for intermediate files. Ensure adequate free space before building. Temporary files are automatically cleaned up after successful or failed builds.</p>
+</div>
+<h3>Build Verification</h3>
+<p>HTML2Win Pro automatically verifies builds to ensure integrity:</p>
+<ul>
+<li>Checks output file exists and is not corrupted</li>
+<li>Verifies file size is reasonable (not truncated)</li>
+<li>Confirms executable permissions on non-Windows platforms</li>
+<li>Reports any anomalies in build output</li>
+</ul>
+</section>
+<section id="configuration">
+<h2>Advanced Configuration</h2>
+<h3>Project Files</h3>
+<p>Save your build configurations as reusable project files:</p>
+<ul>
+<li><strong>Format:</strong> JSON text format, human-readable and version-control friendly</li>
+<li><strong>Location:</strong> Save anywhere; commonly in your project root as <code>build-config.json</code></li>
+<li><strong>Sharing:</strong> Project files can be shared with team members for consistent builds</li>
+<li><strong>Recent Projects:</strong> Access recently used projects via File → Recent Projects</li>
+</ul>
+<h3>Templates</h3>
+<p>Create new projects from built-in templates:</p>
+<ul>
+<li><strong>Basic:</strong> Simple single-page application with modern gradient design</li>
+<li><strong>Dashboard:</strong> Multi-section dashboard with sidebar navigation and stat cards</li>
+</ul>
+<p>Use Tools → Create from Template to generate starter projects.</p>
+<h3>Build Cache</h3>
+<p>The caching system stores processed resources to speed up subsequent builds:</p>
+<ul>
+<li><strong>Location:</strong> <code>%USERPROFILE%\.html2win_pro\cache</code></li>
+<li><strong>Behavior:</strong> Automatically caches unchanged files between builds</li>
+<li><strong>Size:</strong> Cache grows over time; typically 100-500 MB</li>
+<li><strong>Clearing:</strong> Delete the cache folder manually if needed; rebuilds automatically</li>
+</ul>
+<h3>Logs and Debugging</h3>
+<ul>
+<li><strong>Application Logs:</strong> <code>%USERPROFILE%\.html2win_pro\app.log</code></li>
+<li><strong>Crash Reports:</strong> <code>%USERPROFILE%\.html2win_pro\crashes\</code></li>
+<li><strong>Build History:</strong> <code>%USERPROFILE%\.html2win_pro\build_history.json</code></li>
+<li><strong>Log Rotation:</strong> Logs automatically rotate at 10 MB with 10 backup copies</li>
+</ul>
+</section>
+<section id="cli">
+<h2>Command Line Interface</h2>
+<p>While HTML2Win Pro provides a graphical interface, advanced users can leverage the command-line interface for automation and CI/CD pipelines.</p>
+<div class="info-box">
+<strong>💡 CLI Access</strong>
+<p>The CLI is built into the same executable. Run commands from Command Prompt or PowerShell in the same folder as the executable.</p>
+</div>
+<h3>Build Command</h3>
+<pre><code>HTML2WinPro.exe build --source "C:\MyProject" --name "MyApp" --version-str "1.0.0"</code></pre>
+<h4>Build Options</h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--source</code></td>
+<td>Source folder or URL (required)</td>
+<td><code>--source "C:\MyApp"</code></td>
+</tr>
+<tr>
+<td><code>--project</code></td>
+<td>Load configuration from project file</td>
+<td><code>--project config.json</code></td>
+</tr>
+<tr>
+<td><code>--name</code></td>
+<td>Application name</td>
+<td><code>--name "MyApp"</code></td>
+</tr>
+<tr>
+<td><code>--version-str</code></td>
+<td>Application version</td>
+<td><code>--version-str "2.0.1"</code></td>
+</tr>
+<tr>
+<td><code>--output</code></td>
+<td>Output directory</td>
+<td><code>--output "dist"</code></td>
+</tr>
+<tr>
+<td><code>--icon</code></td>
+<td>Icon file path</td>
+<td><code>--icon "app.ico"</code></td>
+</tr>
+<tr>
+<td><code>--console</code></td>
+<td>Show console window</td>
+<td><code>--console</code></td>
+</tr>
+<tr>
+<td><code>--compress</code></td>
+<td>Compress resources</td>
+<td><code>--compress</code></td>
+</tr>
+<tr>
+<td><code>--git-version</code></td>
+<td>Use Git tag for version</td>
+<td><code>--git-version</code></td>
+</tr>
+<tr>
+<td><code>--package</code></td>
+<td>Package format (zip)</td>
+<td><code>--package zip</code></td>
+</tr>
+<tr>
+<td><code>--sign-cert</code></td>
+<td>Code signing certificate</td>
+<td><code>--sign-cert cert.pfx</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Preview Command</h3>
+<pre><code>HTML2WinPro.exe preview --source "C:\MyProject" --debug</code></pre>
+<h3>Template Command</h3>
+<pre><code>HTML2WinPro.exe template basic "C:\NewProject"</code></pre>
+<h3>Utility Commands</h3>
+<pre><code>HTML2WinPro.exe check-deps
+HTML2WinPro.exe install-deps
+HTML2WinPro.exe licenses --format table</code></pre>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting</h2>
+<h3>Common Build Issues</h3>
+<h4>Build Fails with "Missing index.html"</h4>
+<p><strong>Cause:</strong> The selected source folder doesn't contain an index.html file in the root.</p>
+<p><strong>Solution:</strong> Ensure your project has index.html in the main folder, not in a subdirectory.</p>
+<h4>Executable Won't Run on Target System</h4>
+<p><strong>Cause:</strong> Missing Microsoft Edge WebView2 Runtime on the target computer.</p>
+<p><strong>Solution:</strong> Install WebView2 Runtime from Microsoft's website (free). Windows 10/11 typically have it pre-installed.</p>
+<h4>Build Takes Very Long Time</h4>
+<p><strong>Cause:</strong> Large project size or disabled build cache.</p>
+<p><strong>Solution:</strong> Enable build cache, remove unnecessary files from source, consider using multi-file build instead of single-file.</p>
+<h4>"Icon file invalid" Error</h4>
+<p><strong>Cause:</strong> Icon file is not in proper .ico format or corrupted.</p>
+<p><strong>Solution:</strong> Recreate icon using proper tools. Ensure file starts with correct ICO header (00 00 01 00).</p>
+<h3>Runtime Issues</h3>
+<h4>Application Shows Blank White Screen</h4>
+<p><strong>Cause:</strong> JavaScript errors, missing resources, or incorrect file paths.</p>
+<p><strong>Solution:</strong> Test in preview mode with debug tools enabled (F12) to check console for errors. Verify all resource paths are relative, not absolute.</p>
+<h4>Resources Not Loading</h4>
+<p><strong>Cause:</strong> Incorrect file paths using absolute URLs or drive letters.</p>
+<p><strong>Solution:</strong> Use relative paths only (e.g., <code>./images/logo.png</code> not <code>C:\images\logo.png</code>). Test in preview mode first.</p>
+<h4>Antivirus Blocking Executable</h4>
+<p><strong>Cause:</strong> Unsigned executables may trigger false positives in antivirus software.</p>
+<p><strong>Solution:</strong> Sign your executable with a code signing certificate, or add exception in antivirus software. Report false positives to your antivirus vendor.</p>
+<h3>Performance Optimization</h3>
+<h4>Reduce Build Size</h4>
+<ul>
+<li>Enable resource compression for images</li>
+<li>Remove unused files from source folder</li>
+<li>Optimize images before building (compress to WebP or optimized PNG/JPEG)</li>
+<li>Remove development files (node_modules, .git, etc.)</li>
+<li>Use multi-file build instead of single-file for smaller main executable</li>
+</ul>
+<h4>Improve Startup Time</h4>
+<ul>
+<li>Use multi-file build (faster startup than single-file)</li>
+<li>Minimize JavaScript execution on load</li>
+<li>Use lazy loading for images and resources</li>
+<li>Reduce number of external dependencies</li>
+</ul>
+<h3>Getting Help</h3>
+<p>If you encounter issues not covered in this documentation:</p>
+<ul>
+<li>Check the console output in the application for detailed error messages</li>
+<li>Review log files in <code>%USERPROFILE%\.html2win_pro\</code></li>
+<li>Visit our support page at <a href="https://id01t.store">https://id01t.store</a></li>
+<li>Contact support: <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a></li>
+</ul>
+</section>
+<section id="legal">
+<h2>Legal Information &amp; Licensing</h2>
+<div class="legal-box">
+<h3>⚖️ IMPORTANT LEGAL NOTICES</h3>
+<p><strong>READ CAREFULLY BEFORE USING THIS SOFTWARE</strong></p>
+</div>
+<h3>Software License</h3>
+<p>HTML2Win Pro is licensed under the MIT License:</p>
+<pre><code>MIT License
+
+Copyright (c) 2025 Guillaume Lessard / iD01t Productions
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</code></pre>
+<h3>Disclaimer of Warranties</h3>
+<p><strong>HTML2Win Pro is provided "AS IS" without warranty of any kind.</strong> This includes but is not limited to:</p>
+<ul>
+<li>No warranty that the software will be error-free or uninterrupted</li>
+<li>No warranty that the software will meet your specific requirements</li>
+<li>No warranty regarding the quality, accuracy, or reliability of output</li>
+<li>No warranty of merchantability or fitness for a particular purpose</li>
+<li>No warranty that executables created will function on all systems</li>
+</ul>
+<h3>Limitation of Liability</h3>
+<p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+<ul>
+<li>Guillaume Lessard and iD01t Productions shall NOT be liable for any direct, indirect, incidental, special, consequential, or exemplary damages</li>
+<li>This includes but is not limited to: loss of profits, loss of data, business interruption, or any other commercial damages or losses</li>
+<li>This limitation applies even if advised of the possibility of such damages</li>
+<li>Some jurisdictions do not allow limitation of liability for consequential damages; in such cases, liability is limited to the maximum extent permitted by law</li>
+</ul>
+<h3>User Responsibilities</h3>
+<p><strong>As a user of HTML2Win Pro, you are solely responsible for:</strong></p>
+<ol>
+<li><strong>License Compliance:</strong> Ensuring all content, code, libraries, and resources included in your applications comply with their respective licenses. Use the built-in license scanner to review dependencies.</li>
+<li><strong>Intellectual Property:</strong> Ensuring you have the legal right to package and distribute all content included in your executables. This includes:
+                    <ul>
+<li>Source code (yours or properly licensed)</li>
+<li>Images, graphics, and media files</li>
+<li>Fonts and typography</li>
+<li>Third-party libraries and frameworks</li>
+<li>Any other resources or content</li>
+</ul>
+</li>
+<li><strong>Legal Compliance:</strong> Ensuring your application and its distribution comply with all applicable laws in your jurisdiction and target markets, including but not limited to:
+                    <ul>
+<li>Copyright and trademark laws</li>
+<li>Data protection and privacy regulations (GDPR, CCPA, etc.)</li>
+<li>Export control regulations</li>
+<li>Software licensing requirements</li>
+<li>Consumer protection laws</li>
+</ul>
+</li>
+<li><strong>Testing:</strong> Thoroughly testing executables before distribution to ensure functionality, security, and stability on target systems.</li>
+<li><strong>Security:</strong> Implementing appropriate security measures in your applications to protect user data and prevent malicious use.</li>
+<li><strong>End User Support:</strong> Providing appropriate support, documentation, and disclaimers to your end users.</li>
+</ol>
+<h3>Third-Party Dependencies</h3>
+<p>HTML2Win Pro incorporates the following open-source components:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>License</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PyWebView</td>
+<td>BSD 3-Clause</td>
+<td>Desktop window rendering</td>
+</tr>
+<tr>
+<td>PyInstaller</td>
+<td>GPL 2.0 with exception</td>
+<td>Executable building</td>
+</tr>
+<tr>
+<td>CustomTkinter</td>
+<td>MIT License</td>
+<td>User interface</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>PSF License</td>
+<td>Runtime environment</td>
+</tr>
+<tr>
+<td>Pillow</td>
+<td>HPND License</td>
+<td>Image processing</td>
+</tr>
+</tbody>
+</table>
+<div class="warning-box">
+<strong>⚠️ PyInstaller GPL Exception</strong>
+<p>PyInstaller is licensed under GPL 2.0 with a special exception that allows executables created with PyInstaller to be distributed under any license. This means executables you create with HTML2Win Pro are NOT subject to GPL requirements and can be distributed commercially under any license you choose.</p>
+</div>
+<h3>Prohibited Uses</h3>
+<p><strong>You may NOT use HTML2Win Pro to:</strong></p>
+<ul>
+<li>Create malware, viruses, trojans, or any malicious software</li>
+<li>Develop applications that violate laws or regulations</li>
+<li>Package content you do not have rights to distribute</li>
+<li>Circumvent software protection mechanisms or DRM</li>
+<li>Create applications that infringe intellectual property rights</li>
+<li>Develop software for illegal activities</li>
+<li>Create applications that harvest personal data without consent</li>
+<li>Build software that facilitates fraud or deception</li>
+</ul>
+<h3>Distribution of Executables</h3>
+<p><strong>When distributing applications created with HTML2Win Pro:</strong></p>
+<ul>
+<li>You are NOT required to mention HTML2Win Pro in your application (though attribution is appreciated)</li>
+<li>You may distribute executables under any license you choose</li>
+<li>You must ensure all included content complies with applicable licenses</li>
+<li>You should include appropriate disclaimers and terms of use with your application</li>
+<li>You are responsible for providing support to your end users</li>
+<li>You must comply with any platform-specific distribution requirements</li>
+</ul>
+<h3>Data Collection &amp; Privacy</h3>
+<p><strong>HTML2Win Pro respects your privacy:</strong></p>
+<ul>
+<li>No personal data is collected or transmitted to remote servers</li>
+<li>All processing occurs locally on your computer</li>
+<li>Project files and configurations remain on your system</li>
+<li>The "Check for Updates" feature only sends the current version number</li>
+<li>No telemetry, analytics, or usage tracking is performed</li>
+<li>Log files stored locally contain only technical information</li>
+</ul>
+<h3>Updates &amp; Modifications</h3>
+<ul>
+<li>Software updates may be provided but are not guaranteed</li>
+<li>Updates may change functionality or introduce breaking changes</li>
+<li>You are responsible for maintaining backups of your project files</li>
+<li>These terms may be updated; continued use constitutes acceptance</li>
+</ul>
+<h3>Indemnification</h3>
+<p>You agree to indemnify and hold harmless Guillaume Lessard, iD01t Productions, and their affiliates from any claims, damages, losses, or expenses (including legal fees) arising from:</p>
+<ul>
+<li>Your use of HTML2Win Pro</li>
+<li>Applications you create and distribute</li>
+<li>Violation of these terms or applicable laws</li>
+<li>Infringement of third-party rights</li>
+</ul>
+<h3>Export Compliance</h3>
+<p>HTML2Win Pro may be subject to export control laws. You are responsible for complying with all applicable export regulations when distributing software internationally.</p>
+<h3>Governing Law</h3>
+<p>This software and these terms are governed by the laws of the jurisdiction where iD01t Productions operates, without regard to conflict of law principles.</p>
+<h3>Severability</h3>
+<p>If any provision of these terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
+<div class="info-box">
+<strong>💡 Not Legal Advice</strong>
+<p>This documentation provides general information about the software and its use. It does not constitute legal advice. Consult with a qualified attorney regarding your specific legal obligations when developing and distributing software applications.</p>
+</div>
+<h3>License Scanning Tool</h3>
+<p>HTML2Win Pro includes a license scanning feature to help you identify dependencies and their licenses. However:</p>
+<ul>
+<li>The scanner provides information only and cannot guarantee completeness</li>
+<li>You remain solely responsible for license compliance</li>
+<li>Always review licenses manually for commercial projects</li>
+<li>Consult legal counsel for license interpretation</li>
+<li>Keep documentation of all third-party components used</li>
+</ul>
+<h3>Commercial Use</h3>
+<p><strong>YES, you may use HTML2Win Pro for commercial purposes:</strong></p>
+<ul>
+<li>Create and sell commercial applications</li>
+<li>Use in corporate/enterprise environments</li>
+<li>Offer applications as services</li>
+<li>Include in commercial products</li>
+<li>No royalties or fees owed to HTML2Win Pro creators</li>
+</ul>
+<p>The MIT License explicitly permits commercial use. However, you remain responsible for all licensing obligations of components included in your applications.</p>
+</section>
+<section id="best-practices">
+<h2>Best Practices &amp; Recommendations</h2>
+<h3>Development Workflow</h3>
+<ol class="step-list">
+<li><strong>Develop Locally:</strong> Create and test your HTML application in a browser first using standard web development tools.</li>
+<li><strong>Use Relative Paths:</strong> Ensure all resource references use relative paths, never absolute file paths.</li>
+<li><strong>Preview Early:</strong> Use HTML2Win Pro's preview feature frequently during development to catch issues early.</li>
+<li><strong>Save Configurations:</strong> Save project files to maintain consistent build settings across versions.</li>
+<li><strong>Version Control:</strong> Keep your source code in Git or another version control system. Use the Git version feature for automatic versioning.</li>
+<li><strong>Test Thoroughly:</strong> Test built executables on clean systems without development tools installed.</li>
+<li><strong>Document Dependencies:</strong> Maintain a clear record of all third-party libraries and their licenses.</li>
+</ol>
+<h3>Security Recommendations</h3>
+<ul>
+<li><strong>Code Signing:</strong> Always sign commercial applications to avoid security warnings</li>
+<li><strong>Input Validation:</strong> Validate all user inputs in your application code</li>
+<li><strong>Secure Communication:</strong> Use HTTPS for any network communications</li>
+<li><strong>Sensitive Data:</strong> Never hardcode passwords, API keys, or sensitive data in your application</li>
+<li><strong>Updates:</strong> Plan for application updates and include version checking in your app</li>
+<li><strong>Error Handling:</strong> Implement proper error handling to prevent information leakage</li>
+</ul>
+<h3>Performance Tips</h3>
+<ul>
+<li>Minimize JavaScript execution during startup</li>
+<li>Optimize and compress images before building</li>
+<li>Use modern web technologies (CSS Grid, Flexbox) over JavaScript for layout</li>
+<li>Lazy load non-critical resources</li>
+<li>Minimize external dependencies</li>
+<li>Use build cache for faster iteration during development</li>
+</ul>
+<h3>Distribution Guidelines</h3>
+<ul>
+<li>Include a README file with system requirements</li>
+<li>Provide clear installation instructions</li>
+<li>Include license information for your application</li>
+<li>Specify whether WebView2 is required (it usually is)</li>
+<li>Consider creating an installer for professional distribution</li>
+<li>Test on multiple Windows versions (10, 11, Server editions)</li>
+<li>Provide uninstall instructions if applicable</li>
+</ul>
+<h3>Maintenance Strategy</h3>
+<ul>
+<li>Keep source code and build configurations organized</li>
+<li>Document your build process for team members</li>
+<li>Maintain changelog of application versions</li>
+<li>Archive built executables with version tags</li>
+<li>Regularly update dependencies for security patches</li>
+<li>Test builds after dependency updates</li>
+</ul>
+</section>
+<section id="support">
+<h2>Support &amp; Resources</h2>
+<h3>Getting Support</h3>
+<p>If you need assistance with HTML2Win Pro:</p>
+<div class="feature-grid">
+<div class="feature-card">
+<h4>📧 Email Support</h4>
+<p><a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a></p>
+<p>For technical questions, bug reports, and general inquiries.</p>
+</div>
+<div class="feature-card">
+<h4>🌐 Website</h4>
+<p><a href="https://id01t.store" target="_blank">id01t.store</a></p>
+<p>Product information, updates, and additional resources.</p>
+</div>
+<div class="feature-card">
+<h4>📖 Documentation</h4>
+<p>This comprehensive guide covers all features and common issues.</p>
+</div>
+<div class="feature-card">
+<h4>🔄 Updates</h4>
+<p>Check for updates via Tools → Check for Updates in the application.</p>
+</div>
+</div>
+<h3>Reporting Issues</h3>
+<p>When reporting problems, please include:</p>
+<ul>
+<li>HTML2Win Pro version number</li>
+<li>Windows version and build number</li>
+<li>Detailed description of the issue</li>
+<li>Steps to reproduce the problem</li>
+<li>Error messages from console or log files</li>
+<li>Project configuration (if applicable)</li>
+<li>Screenshots if relevant</li>
+</ul>
+<h3>Feature Requests</h3>
+<p>We welcome suggestions for new features and improvements. Contact us via email with detailed descriptions of requested functionality.</p>
+<h3>Community Guidelines</h3>
+<p>When seeking help or sharing projects:</p>
+<ul>
+<li>Be respectful and professional</li>
+<li>Provide clear and detailed information</li>
+<li>Search existing resources before asking questions</li>
+<li>Share solutions when you solve problems</li>
+<li>Respect intellectual property and licenses</li>
+</ul>
+<h3>Additional Resources</h3>
+<ul>
+<li><strong>PyWebView Documentation:</strong> <a href="https://pywebview.flowrl.com/" target="_blank">pywebview.flowrl.com</a></li>
+<li><strong>PyInstaller Manual:</strong> <a href="https://pyinstaller.org/en/stable/" target="_blank">pyinstaller.org</a></li>
+<li><strong>WebView2 Runtime:</strong> <a href="https://developer.microsoft.com/microsoft-edge/webview2/" target="_blank">Microsoft Edge WebView2</a></li>
+<li><strong>Code Signing Guide:</strong> <a href="https://docs.microsoft.com/windows/win32/seccrypto/cryptography-tools" target="_blank">Microsoft Code Signing</a></li>
+</ul>
+</section>
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<h3>General Questions</h3>
+<h4>Q: Is HTML2Win Pro free to use?</h4>
+<p>A: Yes, HTML2Win Pro is licensed under the MIT License, which permits free commercial and personal use.</p>
+<h4>Q: Can I use HTML2Win Pro for commercial applications?</h4>
+<p>A: Yes, absolutely. You may create and sell commercial applications without any royalties or fees to the HTML2Win Pro creators.</p>
+<h4>Q: Do I need to mention HTML2Win Pro in my application?</h4>
+<p>A: No, attribution is not required, though it is appreciated.</p>
+<h4>Q: Will my executables work on Mac or Linux?</h4>
+<p>A: The current version creates Windows executables only. Cross-platform support may be added in future versions.</p>
+<h3>Technical Questions</h3>
+<h4>Q: Why does my executable take several seconds to start?</h4>
+<p>A: Single-file executables unpack themselves to a temporary directory on each launch. Use multi-file builds for faster startup.</p>
+<h4>Q: Can I include Node.js applications?</h4>
+<p>A: HTML2Win Pro is designed for client-side HTML/JavaScript applications. Server-side Node.js apps require different packaging approaches.</p>
+<h4>Q: How large will my executable be?</h4>
+<p>A: Base size is typically 40-60 MB due to embedded Python and WebView dependencies, plus your application content.</p>
+<h4>Q: Can users modify my application after building?</h4>
+<p>A: While resources are embedded in the executable, determined users can extract them. For true protection, implement server-side logic or additional encryption.</p>
+<h4>Q: Does HTML2Win Pro support Electron features?</h4>
+<p>A: HTML2Win Pro uses PyWebView, not Electron. Native OS integration is more limited but executables are much smaller.</p>
+<h3>Licensing Questions</h3>
+<h4>Q: What if my application uses GPL libraries?</h4>
+<p>A: GPL libraries require your application to also be GPL-licensed. Use the license scanner and consult legal counsel for GPL compliance.</p>
+<h4>Q: Can I sell executables created with HTML2Win Pro?</h4>
+<p>A: Yes, you may sell your applications under any license. Ensure all included components permit commercial use.</p>
+<h4>Q: Am I liable if my application causes problems?</h4>
+<p>A: You are solely responsible for applications you create and distribute. HTML2Win Pro is provided as-is without warranties.</p>
+<h3>Distribution Questions</h3>
+<h4>Q: How do I distribute my application to end users?</h4>
+<p>A: Single-file executables can be distributed directly. Multi-file builds require distributing the entire folder. Consider creating an installer for professional distribution.</p>
+<h4>Q: Will Windows Defender block my executable?</h4>
+<p>A: Unsigned executables may trigger SmartScreen warnings. Sign your application with a code signing certificate to avoid this.</p>
+<h4>Q: Can I create installers for my applications?</h4>
+<p>A: HTML2Win Pro creates executables, not installers. Use tools like Inno Setup or NSIS to create professional installers.</p>
+<h4>Q: Do end users need to install anything?</h4>
+<p>A: Only Microsoft Edge WebView2 Runtime, which is pre-installed on modern Windows systems or freely downloadable.</p>
+</section>
+<section id="version-history">
+<h2>Version History</h2>
+<h3>Version 1.0.0.0 (2025)</h3>
+<ul>
+<li>Initial public release</li>
+<li>Professional GUI with CustomTkinter</li>
+<li>Support for local folders and URLs</li>
+<li>Live preview functionality with optional debug tools</li>
+<li>Single-file and multi-file build options</li>
+<li>Custom icon support with validation</li>
+<li>Code signing integration</li>
+<li>Build caching system</li>
+<li>Git version integration</li>
+<li>License scanning tool</li>
+<li>Project templates (Basic, Dashboard)</li>
+<li>Command-line interface</li>
+<li>Comprehensive logging and crash reporting</li>
+<li>Resource compression</li>
+<li>Build verification</li>
+<li>ZIP packaging option</li>
+</ul>
+</section>
+</main>
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, footer a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Highlight current section in navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.borderBottomColor = 'transparent';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.borderBottomColor = '#667eea';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book Details · iD01t Productions</title>
+<meta content="View details and purchase information for this title from iD01t Productions." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<meta content="#2aa7ff" name="theme-color"/>
+<!-- Canonical (will be updated by JS) -->
+<link href="https://id01t.github.io/book.html" rel="canonical"/>
+<!-- Author -->
+<meta content="Guillaume Lessard" name="author"/>
+<!-- Preconnect to external domains -->
+<link crossorigin="" href="https://books.google.com" rel="preconnect"/>
+<link crossorigin="" href="https://play.google.com" rel="preconnect"/>
+<!-- PWA -->
+<link href="/manifest.webmanifest" rel="manifest"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5faff', 100: '#e0f2ff', 200: '#bae0ff', 300: '#8dceff', 400: '#5abaff',
+              500: '#2aa7ff', 600: '#008ef6', 700: '#0070d7', 800: '#0057b5', 900: '#003f92'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles -->
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<style>
+    :root { --ring-color: theme('colors.brand.500'); }
+    .link-underline { position: relative; transition: color .2s; }
+    .link-underline::after { content:""; position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .2s ease-out; }
+    .link-underline:hover::after, .link-underline:focus-visible::after { transform:scaleX(1); transform-origin:left; }
+    .focus-ring:focus-visible { outline:2px solid var(--ring-color); outline-offset:2px; }
+    .gradient-text { background:linear-gradient(to right,#2aa7ff,#0070d7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .card-hover { transition: transform .4s ease, box-shadow .4s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 25px -5px rgba(0,0,0,.15); }
+    .glass-effect { background: rgba(255,255,255,.9); backdrop-filter: blur(12px) saturate(150%); }
+    @media (prefers-color-scheme: dark){ .glass-effect{ background: rgba(30,41,59,.9);} }
+    .intersection-animate { opacity:0; transform: translateY(20px); transition: all .6s cubic-bezier(.22,1,.36,1);} 
+    .intersection-animate.visible { opacity:1; transform:none; }
+  </style>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+<div class="min-h-[50vh]" id="detailContainer">
+<!-- Detail content will be dynamically inserted here -->
+<div class="text-center py-20">
+<div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-brand-200 border-t-brand-600"></div>
+<p class="mt-4 text-slate-600 dark:text-slate-400">Loading...</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script>
+    // Theme toggle
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const setTheme = (mode) => {
+      if (mode === 'dark') root.classList.add('dark'); else root.classList.remove('dark');
+      localStorage.setItem('theme', mode);
+    };
+    themeToggle?.addEventListener('click', () => {
+      const newMode = root.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(newMode);
+    });
+    (() => {
+      const saved = localStorage.getItem('theme');
+      if (saved) setTheme(saved); else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+    })();
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    mobileBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      menuIcon.classList.toggle('hidden', !isOpen);
+      closeIcon.classList.toggle('hidden', isOpen);
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    async function loadBookDetails() {
+      const params = new URLSearchParams(window.location.search);
+      const bookId = params.get('id');
+
+      if (!bookId) {
+        document.getElementById('detailContainer').innerHTML = '<div class="text-center py-20"><h1 class="text-2xl font-bold text-red-600">Missing book ID</h1></div>';
+        return;
+      }
+
+      const data = await loadCatalog();
+      const allBooks = [...(data.ebooks || []), ...(data.audiobooks || [])];
+      const book = allBooks.find(b => b.id === bookId);
+
+      if (!book) {
+        document.getElementById('detailContainer').innerHTML = '<div class="text-center py-20"><h1 class="text-2xl font-bold text-red-600">Book not found</h1></div>';
+        return;
+      }
+
+      // Update page title and meta
+      document.title = `${book.title} · iD01t Productions`;
+
+      // Render detail view
+      document.getElementById('detailContainer').innerHTML = `
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Cover -->
+          <div>
+            <img
+              src="${book.cover_hd}"
+              alt="${book.title} cover"
+              class="w-full rounded-2xl shadow-2xl"
+              
+              feature/catalog-system
+              onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'"
+
+        feature/catalog-system
+              onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'"
+
+              feature/catalog-system
+              onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'"
+
+              onerror="this.src='/assets/img/placeholder-cover.jpg'"
+         main
+            />
+          </div>
+
+          <!-- Details -->
+          <div class="space-y-6">
+            <div>
+              <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-2">${book.title}</h1>
+              ${book.subtitle ? `<h2 class="text-xl text-slate-600 dark:text-slate-400">${book.subtitle}</h2>` : ''}
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              ${(book.categories || []).map(cat =>
+                `<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full text-sm font-medium">${cat}</span>`
+              ).join('')}
+            </div>
+
+            <div class="space-y-3 text-slate-600 dark:text-slate-400">
+              <p><strong class="text-slate-900 dark:text-slate-100">By:</strong> ${book.contributors}</p>
+              <p><strong class="text-slate-900 dark:text-slate-100">Publisher:</strong> ${book.publisher}</p>
+              <p><strong class="text-slate-900 dark:text-slate-100">Published:</strong> ${new Date(book.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              ${book.pages ? `<p><strong class="text-slate-900 dark:text-slate-100">Pages:</strong> ${book.pages}</p>` : ''}
+              ${book.duration ? `<p><strong class="text-slate-900 dark:text-slate-100">Duration:</strong> ${book.duration}</p>` : ''}
+              <p><strong class="text-slate-900 dark:text-slate-100">Language:</strong> ${book.language === 'en' ? 'English' : book.language === 'fr' ? 'French' : book.language}</p>
+            </div>
+
+            <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-bold text-brand-600 dark:text-brand-400">$${book.price}</span>
+              </div>
+              <a
+                href="${book.buy}"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="block w-full py-4 bg-brand-600 hover:bg-brand-700 text-white text-center font-bold rounded-lg transition-colors text-lg"
+              >
+                Buy on Google Play
+              </a>
+            </div>
+
+            ${book.description ? `
+              <div class="prose dark:prose-invert max-w-none">
+                <h3 class="text-2xl font-bold mb-4">About This Book</h3>
+                <p class="text-slate-600 dark:text-slate-400">${book.description}</p>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadBookDetails);
+    } else {
+      loadBookDetails();
+    }
+  </script>
+<script src="/assets/js/catalog.js"></script>
+</body>
+</html>

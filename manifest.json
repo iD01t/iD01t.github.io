@@ -1,0 +1,73 @@
+{
+  "name": "iD01t Productions: AI Apps, Tech eBooks, Electronic Music & Games",
+  "short_name": "iD01t",
+  "description": "Professional digital content creator specializing in AI apps, tech eBooks, and electronic music. Empowering developers with automation tools and creative content.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#5468ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "education", "entertainment", "business", "developer", "ai", "music"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/assets/harvested/brand/og_brand.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "iD01t Productions Homepage - AI Apps, Tech eBooks, Electronic Music & Games"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Apps",
+      "short_name": "Apps",
+      "description": "Browse AI automation tools and apps",
+      "url": "/apps.html",
+      "icons": [{ "src": "/assets/logo-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Tech eBooks",
+      "short_name": "eBooks",
+      "description": "Read programming and tech eBooks",
+      "url": "/ebooks.html",
+      "icons": [{ "src": "/assets/logo-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Electronic Music",
+      "short_name": "Music",
+      "description": "Listen to electronic music tracks",
+      "url": "/music.html",
+      "icons": [{ "src": "/assets/logo-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Store",
+      "short_name": "Store",
+      "description": "Shop all products",
+      "url": "/store.html",
+      "icons": [{ "src": "/assets/logo-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
