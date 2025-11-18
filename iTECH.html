@@ -7,6 +7,12 @@
     <meta name="theme-color" content="#667eea">
     <title>iTECHMobile - Remote Android Repair Platform</title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -549,11 +555,80 @@
             font-size: 14px;
         }
 
+        /* Hamburger base */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .hamburger { 
+                display: flex; 
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 23, 42, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 20px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
+                            padding 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+            }
+
+            .nav-links.active {
+                display: flex;
+                max-height: 500px;
+                padding: 30px 0;
+            }
+
+            .nav-links a {
+                padding: 14px 20px;
+                font-size: 18px;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            .nav-links.active a {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .nav-links.active a:nth-child(1) { transition-delay: 0.05s; }
+            .nav-links.active a:nth-child(2) { transition-delay: 0.10s; }
+            .nav-links.active a:nth-child(3) { transition-delay: 0.15s; }
+            .nav-links.active a:nth-child(4) { transition-delay: 0.20s; }
+            .nav-links.active a:nth-child(5) { transition-delay: 0.25s; }
+            .nav-links.active a:nth-child(6) { transition-delay: 0.30s; }
+
             .hero h1 { font-size: 36px; }
             .two-col { grid-template-columns: 1fr; }
             .section-title { font-size: 32px; }
+
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
         }
     </style>
 </head>
@@ -581,6 +656,11 @@
                 </ul>
                 <!-- TODO: Replace localhost with production download URL -->
                 <a href="http://localhost:8081" class="btn btn-primary">Download Client</a>
+
+                <!-- Hamburger -->
+                <button class="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -594,7 +674,7 @@
             </div>
             <h1>Remote Android Device Repair<br>via USB + AI + Expert Technicians</h1>
             <p>Connect your Android phone via USB. Our AI diagnoses issues, quotes a price, and a certified technician repairs it remotely via live screen mirroring—all while you watch.</p>
-
+            
             <div class="cta-group">
                 <a href="http://localhost:8081" class="btn btn-primary">Download USB Client (Win/Mac/Linux)</a>
                 <a href="http://localhost:8082" class="btn btn-secondary">Technician Dashboard Login</a>
@@ -618,7 +698,7 @@
                 <h2 class="section-title">How It Works</h2>
                 <p class="section-subtitle">End-to-end automated repair flow from your desktop</p>
             </div>
-
+            
             <div class="flow-steps">
                 <div class="flow-step" data-step="1">
                     <div class="flow-icon">📱</div>
@@ -821,7 +901,7 @@
 
             <div class="product-card" style="max-width: 700px; margin: 0 auto;">
                 <div class="product-title" style="text-align: center; margin-bottom: 30px;">Technician Dashboard Features</div>
-
+                
                 <ul class="product-features">
                     <li>Global job queue with real-time updates (Firebase)</li>
                     <li>Claim jobs in one click, start scrcpy instantly</li>
@@ -1027,9 +1107,26 @@
     </footer>
 
     <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
         console.log('%c iTECHMobile Official Website ', 'background: linear-gradient(135deg, #667eea, #764ba2); color: white; font-size: 20px; padding: 10px; font-weight: bold;');
         console.log('%c Production Master v11.0 | Android Remote Repair Platform ', 'color: #10b981; font-size: 14px; font-weight: bold;');
-        console.log('%c Built by iD01t Productions (Guillaume Lessard) ', 'color: #3b82f6; font-size: 12px;');
+        console.log('%c Built by iD01t Productions', 'color: #3b82f6; font-size: 12px;');
     </script>
 </body>
 </html>
