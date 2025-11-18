@@ -1,70 +1,49 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="iTECHMobile - Solution Professionnelle de Gestion IMEI">
-    <meta name="theme-color" content="#6366f1">
-    <title>iTECHMobile - Gestion IMEI</title>
-    
-    <!-- EmailJS SDK - Production Grade Email Service -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-    <!-- PayPal SDK - Sandbox Mode -->
-    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
-    
-    <style>
-        /* ==================== PROPRIÉTÉS CSS PERSONNALISÉES ==================== */
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --success-color: #10b981;
-            --error-color: #ef4444;
-            --warning-color: #f59e0b;
-            --background-dark: #0f172a;
-            --background-light: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5e1;
-            --border-color: #334155;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            --border-radius: 16px;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iTECHMobile - Remote Android Device Repair. USB Client for customers + Technician Dashboard for repair professionals.">
+    <meta name="theme-color" content="#667eea">
+    <title>iTECHMobile - Remote Android Repair Platform</title>
 
-        /* ==================== RÉINITIALISATION GLOBALE ==================== */
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: var(--background-dark);
-            color: var(--text-primary);
-            line-height: 1.6;
-            min-height: 100vh;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --bg-dark: #0f172a;
+            --bg-light: #1e293b;
+            --text: #f8fafc;
+            --text-secondary: #cbd5e1;
         }
 
-        /* ==================== ARRIÈRE-PLAN ANIMÉ ==================== */
-        .background-animation {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .bg-animated {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: 0;
             overflow: hidden;
         }
 
-        .gradient-orb {
+        .orb {
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
@@ -72,1638 +51,985 @@
             animation: float 20s infinite ease-in-out;
         }
 
-        .orb-1 {
+        .orb1 {
             width: 500px;
             height: 500px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             top: -250px;
             left: -250px;
-            animation-delay: 0s;
         }
 
-        .orb-2 {
+        .orb2 {
             width: 400px;
             height: 400px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #f093fb, #f5576c);
             bottom: -200px;
             right: -200px;
             animation-delay: 7s;
         }
 
-        .orb-3 {
-            width: 350px;
-            height: 350px;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: 14s;
-        }
-
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, -30px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(30px, -30px); }
+            66% { transform: translate(-20px, 20px); }
         }
 
-        /* ==================== CONTENEUR & MISE EN PAGE ==================== */
         .container {
-            max-width: 480px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
             position: relative;
             z-index: 1;
         }
 
-        /* ==================== SECTION EN-TÊTE ==================== */
-        .header {
-            text-align: center;
-            padding: 40px 0 30px;
-            animation: fadeInDown 0.6s ease-out;
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 20px 0;
         }
 
-        .logo-container {
-            display: inline-flex;
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            width: 80px;
-            height: 80px;
-            background: var(--primary-gradient);
-            border-radius: 24px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow-xl);
-            animation: pulse 2s ease-in-out infinite;
         }
 
-        .logo-text {
-            font-size: 32px;
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 12px;
             font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
         }
 
-        .app-title {
-            font-size: 32px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 8px;
-            letter-spacing: -0.02em;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
         }
 
-        .app-subtitle {
-            font-size: 16px;
-            color: var(--text-secondary);
-            font-weight: 500;
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
 
-        .demo-badge {
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .badge {
             display: inline-block;
-            background: rgba(245, 158, 11, 0.2);
-            border: 1px solid var(--warning-color);
-            color: var(--warning-color);
-            padding: 8px 16px;
+            padding: 6px 12px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-top: 12px;
-            animation: fadeInDown 0.8s ease-out 0.2s both;
         }
 
-        /* ==================== COMPOSANTS CARTE ==================== */
-        .card {
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning);
+            border: 1px solid var(--warning);
+        }
+
+        .badge-success {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .hero-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--success);
+            border-radius: 8px;
+            color: var(--success);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .tech-badge {
+            padding: 8px 16px;
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-alt {
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+        }
+
+        .flow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .flow-step {
             background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(20px);
-            border-radius: var(--border-radius);
-            padding: 32px;
-            margin-bottom: 24px;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid var(--border-color);
-            transition: all var(--transition-base);
-            animation: fadeInUp 0.6s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
         }
 
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        .flow-step::before {
+            content: attr(data-step);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
         }
 
-        .card-title {
-            font-size: 20px;
+        .flow-icon {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        .flow-title {
+            font-size: 18px;
             font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .flow-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .product-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .product-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
             margin-bottom: 20px;
+        }
+
+        .product-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .product-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .product-features {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .product-features li {
+            padding: 8px 0;
+            color: var(--text-secondary);
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .card-title::before {
-            content: '';
-            width: 4px;
-            height: 24px;
-            background: var(--primary-gradient);
-            border-radius: 2px;
-        }
-
-        /* ==================== PROFIL UTILISATEUR ==================== */
-        .user-profile {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 20px;
-            background: rgba(51, 65, 85, 0.5);
-            border-radius: 12px;
-            margin-bottom: 24px;
-            animation: fadeInDown 0.6s ease-out;
-        }
-
-        .user-avatar {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            border: 3px solid var(--primary-gradient);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .user-info {
-            flex: 1;
-        }
-
-        .user-name {
+        .product-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 700;
             font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 4px;
         }
 
-        .user-email {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        .logout-btn, .back-btn {
-            padding: 8px 16px;
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--error-color);
-            border: 1px solid var(--error-color);
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-        }
-
-        .logout-btn:hover, .back-btn:hover {
-            background: var(--error-color);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .back-btn {
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-            border-color: #667eea;
-        }
-
-        .back-btn:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        /* ==================== SÉLECTION D'APPAREIL ==================== */
-        .device-selection {
+        .specs-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
 
-        .device-card {
-            background: rgba(51, 65, 85, 0.5);
-            border: 2px solid transparent;
+        .spec-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            padding: 32px 24px;
-            text-align: center;
-            cursor: pointer;
-            transition: all var(--transition-base);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .device-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--primary-gradient);
-            opacity: 0;
-            transition: opacity var(--transition-base);
-            z-index: -1;
-        }
-
-        .device-card:hover {
-            border-color: rgba(102, 126, 234, 0.5);
-            transform: translateY(-4px);
-        }
-
-        .device-card:hover::before {
-            opacity: 0.1;
-        }
-
-        .device-card:active {
-            transform: translateY(-2px) scale(0.98);
-        }
-
-        .device-icon {
-            font-size: 64px;
-            margin-bottom: 16px;
-            filter: grayscale(50%);
-            transition: filter var(--transition-base);
-        }
-
-        .device-card:hover .device-icon {
-            filter: grayscale(0%);
-        }
-
-        .device-name {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .device-description {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
-
-        /* ==================== EN-TÊTE APPAREIL ==================== */
-        .device-header {
-            background: rgba(51, 65, 85, 0.6);
-        }
-
-        .device-badge {
-            width: 64px;
-            height: 64px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .android-badge {
-            background: linear-gradient(135deg, #3ddc84 0%, #07c160 100%);
-        }
-
-        .iphone-badge {
-            background: linear-gradient(135deg, #147efb 0%, #53a0fd 100%);
-        }
-
-        /* ==================== ÉLÉMENTS DE FORMULAIRE ==================== */
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text-secondary);
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 16px;
-            background: rgba(51, 65, 85, 0.5);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            color: var(--text-primary);
-            font-size: 16px;
-            font-weight: 500;
-            transition: all var(--transition-fast);
-            font-family: 'Courier New', monospace;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #667eea;
-            background: rgba(102, 126, 234, 0.05);
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-        }
-
-        .form-input::placeholder {
-            color: #64748b;
-        }
-
-        .form-input.error {
-            border-color: var(--error-color);
-            animation: shake 0.3s ease-in-out;
-        }
-
-        .form-hint {
-            margin-top: 8px;
-            font-size: 12px;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* ==================== BOUTONS ==================== */
-        .btn {
-            width: 100%;
-            padding: 16px;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all var(--transition-base);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn:active::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary {
-            background: var(--primary-gradient);
-            color: white;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
-        }
-
-        .btn-primary:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .btn-demo {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-            color: white;
-            box-shadow: var(--shadow-lg);
-            font-size: 18px;
             padding: 20px;
-        }
-
-        .btn-demo:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 30px 60px -12px rgb(59 130 246 / 0.3);
-        }
-
-        /* ==================== HISTORIQUE IMEI ==================== */
-        .history-list {
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .history-item {
-            background: rgba(51, 65, 85, 0.5);
-            padding: 16px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all var(--transition-fast);
-            animation: fadeInUp 0.3s ease-out;
-        }
-
-        .history-item:hover {
-            background: rgba(51, 65, 85, 0.8);
-            transform: translateX(4px);
-        }
-
-        .history-imei {
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .history-device {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-
-        .history-timestamp {
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-
-        .delete-btn {
-            padding: 6px 12px;
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--error-color);
-            border: 1px solid var(--error-color);
-            border-radius: 6px;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-        }
-
-        .delete-btn:hover {
-            background: var(--error-color);
-            color: white;
-        }
-
-        /* ==================== CONTENEUR PAYPAL ==================== */
-        .paypal-container {
-            margin-top: 24px;
-            padding: 24px;
-            background: rgba(51, 65, 85, 0.3);
-            border-radius: 12px;
-            border: 2px dashed var(--border-color);
-        }
-
-        .paypal-info {
             text-align: center;
-            margin-bottom: 16px;
         }
 
-        .paypal-title {
-            font-size: 18px;
-            font-weight: 700;
+        .spec-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
             margin-bottom: 8px;
         }
 
-        .paypal-price {
-            font-size: 32px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+        .spec-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .pricing-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .pricing-price {
+            font-size: 40px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--success), #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
 
-        .paypal-description {
+        .pricing-note {
             font-size: 14px;
             color: var(--text-secondary);
+            margin-bottom: 24px;
         }
 
-        .paypal-demo-notice {
-            text-align: center;
-            padding: 12px;
-            background: rgba(245, 158, 11, 0.1);
-            border: 1px solid var(--warning-color);
-            border-radius: 8px;
-            color: var(--warning-color);
-            font-size: 13px;
-            margin-bottom: 16px;
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
         }
 
-        /* ==================== ALERTES & NOTIFICATIONS ==================== */
-        .alert {
-            padding: 16px;
+        .pricing-features li {
+            padding: 6px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .pricing-features li::before {
+            content: '✓ ';
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
+            padding: 24px;
             margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            animation: slideInDown 0.3s ease-out;
         }
 
-        .alert-success {
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid var(--success-color);
-            color: var(--success-color);
+        .faq-q {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
-        .alert-error {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid var(--error-color);
-            color: var(--error-color);
-        }
-
-        .alert-warning {
-            background: rgba(245, 158, 11, 0.1);
-            border: 1px solid var(--warning-color);
-            color: var(--warning-color);
-        }
-
-        .alert-info {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid #3b82f6;
-            color: #3b82f6;
-        }
-
-        .alert-icon {
-            font-size: 20px;
-        }
-
-        /* ==================== SPINNER DE CHARGEMENT ==================== */
-        .spinner {
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top-color: white;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* ==================== ANIMATIONS ==================== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-            20%, 40%, 60%, 80% { transform: translateX(5px); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        /* ==================== BARRE DE DÉFILEMENT ==================== */
-        .history-list::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .history-list::-webkit-scrollbar-track {
-            background: rgba(51, 65, 85, 0.3);
-            border-radius: 4px;
-        }
-
-        .history-list::-webkit-scrollbar-thumb {
-            background: var(--primary-gradient);
-            border-radius: 4px;
-        }
-
-        /* ==================== DESIGN RÉACTIF ==================== */
-        @media (max-width: 480px) {
-            .container {
-                padding: 16px;
-            }
-
-            .card {
-                padding: 24px;
-            }
-
-            .device-card {
-                padding: 24px 16px;
-            }
-
-            .device-icon {
-                font-size: 48px;
-            }
-        }
-
-        /* ==================== UTILITAIRE CACHÉ ==================== */
-        .hidden {
-            display: none !important;
-        }
-
-        /* ==================== ÉTAT VIDE ==================== */
-        .empty-state {
-            text-align: center;
-            padding: 40px 20px;
+        .faq-a {
             color: var(--text-secondary);
+            line-height: 1.6;
         }
 
-        .empty-state-icon {
-            font-size: 64px;
-            margin-bottom: 16px;
-            opacity: 0.5;
+        .footer {
+            background: var(--bg-light);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px 0 30px;
         }
 
-        .empty-state-text {
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        /* ==================== LISTE DE FONCTIONNALITÉS ==================== */
-        .feature-list {
+        .footer-grid {
             display: grid;
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px;
-            background: rgba(51, 65, 85, 0.3);
-            border-radius: 8px;
-            transition: all var(--transition-fast);
+        .footer-section h3 {
+            margin-bottom: 16px;
         }
 
-        .feature-item:hover {
-            background: rgba(51, 65, 85, 0.5);
+        .footer-links {
+            list-style: none;
         }
 
-        .feature-icon {
-            font-size: 24px;
+        .footer-links li {
+            margin-bottom: 8px;
         }
 
-        .feature-text {
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--text-secondary);
             font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 36px; }
+            .two-col { grid-template-columns: 1fr; }
+            .section-title { font-size: 32px; }
         }
     </style>
 </head>
 <body>
-    <!-- Arrière-plan animé -->
-    <div class="background-animation">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
+    <div class="bg-animated">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
     </div>
 
-    <div class="container">
-        <!-- En-tête -->
-        <div class="header">
-            <div class="logo-container">
-                <div class="logo-text">iT</div>
-            </div>
-            <h1 class="app-title">iTECHMobile</h1>
-            <p class="app-subtitle">Solution Professionnelle de Gestion IMEI</p>
-            <div class="demo-badge">🚀 Mode Démo</div>
-        </div>
-
-        <!-- Écran de connexion démo -->
-        <div id="loginScreen">
-            <div class="card">
-                <h2 class="card-title">Découvrez la Plateforme</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 24px;">
-                    Explorez la plateforme iTECHMobile complète avec un accès instantané. Aucune inscription requise pour la démo.
-                </p>
-
-                <div class="feature-list" style="margin-bottom: 24px;">
-                    <div class="feature-item">
-                        <span class="feature-icon">✅</span>
-                        <span class="feature-text">Système complet de validation IMEI</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">📱</span>
-                        <span class="feature-text">Flux séparés Android & iPhone</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">💳</span>
-                        <span class="feature-text">Traitement de paiement intégré</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">📧</span>
-                        <span class="feature-text">Notifications email automatiques</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">📊</span>
-                        <span class="feature-text">Suivi d'historique persistant</span>
-                    </div>
-                </div>
-
-                <button class="btn btn-demo" onclick="startDemo()">
-                    <span>🎯 Démarrer la Démo Interactive</span>
-                </button>
-            </div>
-
-            <div class="card" style="background: rgba(51, 65, 85, 0.4);">
-                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: var(--text-secondary);">
-                    Fonctionnalités Démo
-                </h3>
-                <ul style="color: var(--text-secondary); font-size: 14px; list-style: none; padding: 0;">
-                    <li style="margin-bottom: 8px;">• Toutes les fonctionnalités opérationnelles</li>
-                    <li style="margin-bottom: 8px;">• Aucune authentification requise</li>
-                    <li style="margin-bottom: 8px;">• Données persistantes dans la session</li>
-                    <li style="margin-bottom: 8px;">• PayPal en mode sandbox</li>
-                    <li style="margin-bottom: 8px;">• Envoi d'emails de notification</li>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">iT</div>
+                    <span>iTECHMobile</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#technicians">For Technicians</a></li>
                 </ul>
+                <!-- TODO: Replace localhost with production download URL -->
+                <a href="http://localhost:8081" class="btn btn-primary">Download Client</a>
             </div>
         </div>
+    </nav>
 
-        <!-- Écran de sélection d'appareil -->
-        <div id="deviceSelectionScreen" class="hidden">
-            <!-- Profil utilisateur -->
-            <div class="user-profile">
-                <img id="userAvatar1" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Ccircle cx='28' cy='28' r='28' fill='%23667eea'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24' font-family='Arial'%3E👤%3C/text%3E%3C/svg%3E" alt="Avatar Démo" class="user-avatar">
-                <div class="user-info">
-                    <div class="user-name" id="userName1">Utilisateur Démo</div>
-                    <div class="user-email" id="userEmail1">demo@itechmobile.com</div>
-                </div>
-                <button class="logout-btn" onclick="handleLogout()">Quitter</button>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-note">
+                <span>✅</span>
+                <span>Production Master v11.0 | Android-First Platform</span>
+            </div>
+            <h1>Remote Android Device Repair<br>via USB + AI + Expert Technicians</h1>
+            <p>Connect your Android phone via USB. Our AI diagnoses issues, quotes a price, and a certified technician repairs it remotely via live screen mirroring—all while you watch.</p>
+
+            <div class="cta-group">
+                <a href="http://localhost:8081" class="btn btn-primary">Download USB Client (Win/Mac/Linux)</a>
+                <a href="http://localhost:8082" class="btn btn-secondary">Technician Dashboard Login</a>
             </div>
 
-            <!-- Carte de sélection d'appareil -->
-            <div class="card">
-                <h2 class="card-title">Sélectionnez Votre Plateforme</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 24px;">
-                    Choisissez votre type d'appareil pour accéder aux services de gestion IMEI dédiés
-                </p>
-                <div class="device-selection">
-                    <div class="device-card" onclick="navigateToDevicePage('android')">
-                        <div class="device-icon">🤖</div>
-                        <div class="device-name">Android</div>
-                        <div class="device-description">Samsung, Google, OnePlus, Xiaomi</div>
-                    </div>
-                    <div class="device-card" onclick="navigateToDevicePage('iphone')">
-                        <div class="device-icon">🍎</div>
-                        <div class="device-name">iPhone</div>
-                        <div class="device-description">iPhone 11, 12, 13, 14, 15, 16</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Points forts des fonctionnalités -->
-            <div class="card">
-                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px;">Fonctionnalités du Service</h3>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <span class="feature-icon">✅</span>
-                        <span class="feature-text">Vérification IMEI instantanée avec algorithme de Luhn</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🔒</span>
-                        <span class="feature-text">Traitement sécurisé des données et chiffrement</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">📧</span>
-                        <span class="feature-text">Notifications email automatiques à chaque soumission</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">📊</span>
-                        <span class="feature-text">Suivi complet de l'historique et analyses</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">⚡</span>
-                        <span class="feature-text">Disponibilité 24/7 et traitement instantané</span>
-                    </div>
-                </div>
+            <div class="tech-stack">
+                <div class="tech-badge">🔧 Python + NiceGUI</div>
+                <div class="tech-badge">🤖 AI Diagnostics</div>
+                <div class="tech-badge">🔐 ADB + Scrcpy</div>
+                <div class="tech-badge">💳 Stripe Payments</div>
+                <div class="tech-badge">🔥 Firebase Backend</div>
+                <div class="tech-badge">🌐 Ngrok Tunneling</div>
             </div>
         </div>
+    </section>
 
-        <!-- Page appareil Android -->
-        <div id="androidPage" class="hidden">
-            <!-- Profil utilisateur -->
-            <div class="user-profile">
-                <button class="back-btn" onclick="navigateToDeviceSelection()">← Retour</button>
-                <img id="userAvatar2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Ccircle cx='28' cy='28' r='28' fill='%23667eea'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24' font-family='Arial'%3E👤%3C/text%3E%3C/svg%3E" alt="Avatar Démo" class="user-avatar">
-                <div class="user-info">
-                    <div class="user-name" id="userName2">Utilisateur Démo</div>
-                    <div class="user-email" id="userEmail2">demo@itechmobile.com</div>
-                </div>
-                <button class="logout-btn" onclick="handleLogout()">Quitter</button>
+    <!-- How It Works -->
+    <section class="section section-alt" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">End-to-end automated repair flow from your desktop</p>
             </div>
 
-            <!-- En-tête appareil -->
-            <div class="card device-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <div class="device-badge android-badge">🤖</div>
-                    <div>
-                        <h2 style="font-size: 24px; font-weight: 800; margin: 0;">Plateforme Android</h2>
-                        <p style="color: var(--text-secondary); margin: 4px 0 0 0; font-size: 14px;">Services de Gestion IMEI</p>
-                    </div>
+            <div class="flow-steps">
+                <div class="flow-step" data-step="1">
+                    <div class="flow-icon">📱</div>
+                    <div class="flow-title">Connect Device</div>
+                    <div class="flow-desc">Plug in Android via USB, enable USB debugging, launch iTECHMobile Client.</div>
                 </div>
-            </div>
-
-            <!-- Carte de saisie IMEI -->
-            <div class="card">
-                <h2 class="card-title">Saisir le Numéro IMEI Android</h2>
-                
-                <div id="alertContainerAndroid"></div>
-
-                <div class="form-group">
-                    <label class="form-label" for="imeiInputAndroid">
-                        IMEI (Identité Internationale d'Équipement Mobile - 15 chiffres)
-                    </label>
-                    <input 
-                        type="text" 
-                        id="imeiInputAndroid" 
-                        class="form-input" 
-                        placeholder="Entrez l'IMEI à 15 chiffres"
-                        maxlength="15"
-                        pattern="[0-9]{15}"
-                        autocomplete="off"
-                    >
-                    <div class="form-hint">
-                        <span>💡</span>
-                        <span>Trouvez votre IMEI : Paramètres → À propos du téléphone → État → IMEI</span>
-                    </div>
-                    <div class="form-hint" style="margin-top: 4px;">
-                        <span>🎯</span>
-                        <span>IMEI démo : 490154203237518</span>
-                    </div>
+                <div class="flow-step" data-step="2">
+                    <div class="flow-icon">🤖</div>
+                    <div class="flow-title">AI Analysis</div>
+                    <div class="flow-desc">AI detects issues, calculates success probability, severity, and quotes exact price.</div>
                 </div>
-
-                <button class="btn btn-primary" id="submitBtnAndroid" onclick="submitIMEI('android')">
-                    <span id="btnTextAndroid">Soumettre l'IMEI</span>
-                    <span id="btnSpinnerAndroid" class="spinner hidden"></span>
-                </button>
-
-                <!-- Conteneur bouton PayPal -->
-                <div class="paypal-container">
-                    <div class="paypal-demo-notice">
-                        💳 Mode Démo : Intégration PayPal en mode sandbox pour démonstration
-                    </div>
-                    <div class="paypal-info">
-                        <div class="paypal-title">Service IMEI Android</div>
-                        <div class="paypal-price">29,99 $</div>
-                        <div class="paypal-description">
-                            Service professionnel de déverrouillage IMEI Android
-                        </div>
-                    </div>
-                    <div id="paypal-button-container-android"></div>
+                <div class="flow-step" data-step="3">
+                    <div class="flow-icon">💳</div>
+                    <div class="flow-title">Secure Payment</div>
+                    <div class="flow-desc">Pay via Stripe checkout (bank-grade encryption, no card storage on our servers).</div>
                 </div>
-            </div>
-
-            <!-- Carte d'historique IMEI -->
-            <div class="card">
-                <h2 class="card-title">Historique IMEI Android</h2>
-                <div id="historyContainerAndroid">
-                    <div class="empty-state">
-                        <div class="empty-state-icon">🤖</div>
-                        <div class="empty-state-text">Aucun historique IMEI Android pour le moment</div>
-                    </div>
+                <div class="flow-step" data-step="4">
+                    <div class="flow-icon">🌐</div>
+                    <div class="flow-title">Tunnel Setup</div>
+                    <div class="flow-desc">Ngrok auto-creates secure tunnel to your device (ADB over TCP/IP), no ports exposed.</div>
+                </div>
+                <div class="flow-step" data-step="5">
+                    <div class="flow-icon">👨‍🔧</div>
+                    <div class="flow-title">Technician Connects</div>
+                    <div class="flow-desc">Certified tech claims job from dashboard, launches scrcpy remote session.</div>
+                </div>
+                <div class="flow-step" data-step="6">
+                    <div class="flow-icon">✅</div>
+                    <div class="flow-title">Repair Complete</div>
+                    <div class="flow-desc">You watch live as the tech fixes your device. Once finished, session closes automatically.</div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Page appareil iPhone -->
-        <div id="iphonePage" class="hidden">
-            <!-- Profil utilisateur -->
-            <div class="user-profile">
-                <button class="back-btn" onclick="navigateToDeviceSelection()">← Retour</button>
-                <img id="userAvatar3" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Ccircle cx='28' cy='28' r='28' fill='%23667eea'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24' font-family='Arial'%3E👤%3C/text%3E%3C/svg%3E" alt="Avatar Démo" class="user-avatar">
-                <div class="user-info">
-                    <div class="user-name" id="userName3">Utilisateur Démo</div>
-                    <div class="user-email" id="userEmail3">demo@itechmobile.com</div>
-                </div>
-                <button class="logout-btn" onclick="handleLogout()">Quitter</button>
+    <!-- Two Products -->
+    <section class="section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Two Apps, One Platform</h2>
+                <p class="section-subtitle">Separate interfaces for customers and technicians</p>
             </div>
 
-            <!-- En-tête appareil -->
-            <div class="card device-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <div class="device-badge iphone-badge">🍎</div>
-                    <div>
-                        <h2 style="font-size: 24px; font-weight: 800; margin: 0;">Plateforme iPhone</h2>
-                        <p style="color: var(--text-secondary); margin: 4px 0 0 0; font-size: 14px;">Services de Gestion IMEI</p>
-                    </div>
+            <div class="two-col">
+                <!-- USB Client -->
+                <div class="product-card">
+                    <div class="product-icon">📱</div>
+                    <div class="product-title">iTECHMobile USB Client</div>
+                    <div class="product-subtitle">For end customers with broken Android devices</div>
+                    <span class="badge badge-success">Desktop App</span>
+
+                    <ul class="product-features">
+                        <li>ADB device detection (auto-download platform-tools)</li>
+                        <li>AI diagnostics with success probability & pricing</li>
+                        <li>Stripe payment integration</li>
+                        <li>Ngrok tunnel auto-configuration</li>
+                        <li>Real-time status updates via Firebase</li>
+                        <li>Encrypted connection to technician</li>
+                    </ul>
+
+                    <p style="margin: 20px 0; color: var(--text-secondary); font-size: 14px;">
+                        <strong>System Requirements:</strong><br>
+                        • Windows 10+, macOS 11+, or Linux<br>
+                        • USB cable + Internet connection<br>
+                        • Android device with USB debugging enabled
+                    </p>
+
+                    <a href="http://localhost:8081" class="btn btn-primary" style="width: 100%;">Download Client</a>
+                </div>
+
+                <!-- Technician Dashboard -->
+                <div class="product-card">
+                    <div class="product-icon">🔧</div>
+                    <div class="product-title">Technician Dashboard</div>
+                    <div class="product-subtitle">For repair shops, enterprises, and certified technicians</div>
+                    <span class="badge badge-warning">Web Dashboard</span>
+
+                    <ul class="product-features">
+                        <li>Firebase-backed real-time job queue</li>
+                        <li>One-click scrcpy session launch</li>
+                        <li>Job claiming & status management</li>
+                        <li>Concurrent session limits & monitoring</li>
+                        <li>Performance metrics (success rate, avg time)</li>
+                        <li>Session recordings for quality assurance</li>
+                    </ul>
+
+                    <p style="margin: 20px 0; color: var(--text-secondary); font-size: 14px;">
+                        <strong>Access Requirements:</strong><br>
+                        • Whitelisted technician email<br>
+                        • Scrcpy auto-installed on first launch<br>
+                        • Works on any modern browser
+                    </p>
+
+                    <a href="http://localhost:8082" class="btn btn-secondary" style="width: 100%;">Dashboard Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Engine Details -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI-Powered Diagnostics</h2>
+                <p class="section-subtitle">Our AI engine analyzes device state and calculates repair feasibility</p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-label">Issue Detection</div>
+                    <div class="spec-value">Bootloop, FRP, MDM, more</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Success Probability</div>
+                    <div class="spec-value">Estimated 70–95%</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Severity Levels</div>
+                    <div class="spec-value">Low → Critical</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Complexity Analysis</div>
+                    <div class="spec-value">Simple → Expert</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Dynamic Pricing</div>
+                    <div class="spec-value">$29.99–$99.99</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Risk Assessment</div>
+                    <div class="spec-value">Data loss, brick risk</div>
                 </div>
             </div>
 
-            <!-- Carte de saisie IMEI -->
-            <div class="card">
-                <h2 class="card-title">Saisir le Numéro IMEI iPhone</h2>
-                
-                <div id="alertContaineriPhone"></div>
+            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary); max-width: 700px; margin-left: auto; margin-right: auto;">
+                The AI considers device manufacturer, chipset, Android version, issue complexity, and historical success rates to generate a fixed quote <strong>before</strong> you pay.
+            </p>
+        </div>
+    </section>
 
-                <div class="form-group">
-                    <label class="form-label" for="imeiInputiPhone">
-                        IMEI (Identité Internationale d'Équipement Mobile - 15 chiffres)
-                    </label>
-                    <input 
-                        type="text" 
-                        id="imeiInputiPhone" 
-                        class="form-input" 
-                        placeholder="Entrez l'IMEI à 15 chiffres"
-                        maxlength="15"
-                        pattern="[0-9]{15}"
-                        autocomplete="off"
-                    >
-                    <div class="form-hint">
-                        <span>💡</span>
-                        <span>Trouvez votre IMEI : Réglages → Général → Informations → IMEI</span>
-                    </div>
-                    <div class="form-hint" style="margin-top: 4px;">
-                        <span>🎯</span>
-                        <span>IMEI démo : 357158084400356</span>
-                    </div>
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI-Based Pricing</h2>
+                <p class="section-subtitle">Price determined by issue complexity, not arbitrary tiers</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Simple Issues</div>
+                    <div class="pricing-price">$29.99</div>
+                    <div class="pricing-note">System app restoration, basic configs</div>
+                    <ul class="pricing-features">
+                        <li>15–30 minute repairs</li>
+                        <li>Low risk, higher success rate</li>
+                        <li>Examples: disabled apps, minor crashes</li>
+                    </ul>
+                    <a href="http://localhost:8081" class="btn btn-primary" style="width: 100%;">Start Diagnosis</a>
                 </div>
 
-                <button class="btn btn-primary" id="submitBtniPhone" onclick="submitIMEI('iphone')">
-                    <span id="btnTextiPhone">Soumettre l'IMEI</span>
-                    <span id="btnSpinneriPhone" class="spinner hidden"></span>
-                </button>
+                <div class="pricing-card">
+                    <div class="pricing-name">Medium Issues</div>
+                    <div class="pricing-price">$49–79</div>
+                    <div class="pricing-note">FRP locks, software corruption, root access</div>
+                    <ul class="pricing-features">
+                        <li>30–60 minute repairs</li>
+                        <li>Medium risk, moderate success rate</li>
+                        <li>Examples: FRP bypass, custom recovery</li>
+                    </ul>
+                    <a href="http://localhost:8081" class="btn btn-primary" style="width: 100%;">Start Diagnosis</a>
+                </div>
 
-                <!-- Conteneur bouton PayPal -->
-                <div class="paypal-container">
-                    <div class="paypal-demo-notice">
-                        💳 Mode Démo : Intégration PayPal en mode sandbox pour démonstration
-                    </div>
-                    <div class="paypal-info">
-                        <div class="paypal-title">Service IMEI iPhone</div>
-                        <div class="paypal-price">29,99 $</div>
-                        <div class="paypal-description">
-                            Service professionnel de déverrouillage IMEI iPhone
-                        </div>
-                    </div>
-                    <div id="paypal-button-container-iphone"></div>
+                <div class="pricing-card">
+                    <div class="pricing-name">Complex Issues</div>
+                    <div class="pricing-price">$89–99</div>
+                    <div class="pricing-note">Bootloops, MDM locks, firmware issues</div>
+                    <ul class="pricing-features">
+                        <li>60+ minute repairs</li>
+                        <li>Higher risk, lower success rate</li>
+                        <li>Examples: bootloop recovery, MDM bypass</li>
+                    </ul>
+                    <a href="http://localhost:8081" class="btn btn-primary" style="width: 100%;">Start Diagnosis</a>
                 </div>
             </div>
 
-            <!-- Carte d'historique IMEI -->
-            <div class="card">
-                <h2 class="card-title">Historique IMEI iPhone</h2>
-                <div id="historyContaineriPhone">
-                    <div class="empty-state">
-                        <div class="empty-state-icon">🍎</div>
-                        <div class="empty-state-text">Aucun historique IMEI iPhone pour le moment</div>
+            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary);">
+                💡 <strong>Exact price shown after AI analysis</strong> — no surprises, no hidden fees.
+            </p>
+        </div>
+    </section>
+
+    <!-- For Technicians -->
+    <section class="section section-alt" id="technicians">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">For Repair Professionals</h2>
+                <p class="section-subtitle">Join our network of certified Android technicians</p>
+            </div>
+
+            <div class="product-card" style="max-width: 700px; margin: 0 auto;">
+                <div class="product-title" style="text-align: center; margin-bottom: 30px;">Technician Dashboard Features</div>
+
+                <ul class="product-features">
+                    <li>Global job queue with real-time updates (Firebase)</li>
+                    <li>Claim jobs in one click, start scrcpy instantly</li>
+                    <li>Auto-download & configure scrcpy (H.265, up to 60 FPS)</li>
+                    <li>Session recordings saved for quality assurance</li>
+                    <li>Performance analytics (completion rate, avg time)</li>
+                    <li>Concurrent session management (configurable max)</li>
+                    <li>Whitelisted email authentication</li>
+                    <li>Sentry error tracking + structured logging</li>
+                </ul>
+
+                <div style="margin-top: 30px; padding: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--success); border-radius: 12px;">
+                    <p style="margin-bottom: 16px;"><strong>How to Get Access:</strong></p>
+                    <ol style="margin-left: 20px; color: var(--text-secondary); font-size: 14px;">
+                        <li>Submit your application with proof of Android repair experience.</li>
+                        <li>Complete a short onboarding + tool proficiency check.</li>
+                        <li>Get your technician email whitelisted for dashboard access.</li>
+                        <li>Log in, set your availability, and start claiming jobs.</li>
+                    </ol>
+                    <p style="margin-top: 16px; font-size: 14px; color: var(--text-secondary);">
+                        📩 To request technician access, email: 
+                        <a href="mailto:itechinfomtl@gmail.com" style="color: var(--success); text-decoration: none;">
+                            itechinfomtl@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div style="margin-top: 20px; font-size: 13px; color: var(--text-secondary); text-align: center;">
+                    Enterprise repair centers can integrate iTECHMobile as a white-label backend. Contact us for volume pricing and custom SLAs.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Privacy -->
+    <section class="section" id="security">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Security & Privacy</h2>
+                <p class="section-subtitle">Designed with safety, transparency, and control in mind</p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-label">Payments</div>
+                    <div class="spec-value">Stripe Checkout</div>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+                        Card details are handled by Stripe. iTECHMobile never stores your full card number on its servers.
+                    </p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Remote Access</div>
+                    <div class="spec-value">You Stay in Control</div>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+                        Remote sessions are limited to the repair window. You can disconnect your device at any time.
+                    </p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Tunnels</div>
+                    <div class="spec-value">Encrypted</div>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+                        Ngrok tunnels are encrypted end-to-end. No inbound ports are opened on your local network.
+                    </p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Access Control</div>
+                    <div class="spec-value">Whitelisted Techs</div>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+                        Only pre-approved technicians with verified emails can access the dashboard & live jobs.
+                    </p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Monitoring</div>
+                    <div class="spec-value">Audit Logs</div>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+                        Actions taken during a session are logged for security, diagnostics, and quality assurance.
+                    </p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-label">Data</div>
+                    <div class="spec-value">Minimal & Purposeful</div>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+                        We only collect device + diagnostic info required to perform the repair and process your payment.
+                    </p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary); max-width: 700px; margin-left: auto; margin-right: auto; font-size: 14px;">
+                For full details, please review our 
+                <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a> 
+                and 
+                <a href="#" style="color: var(--primary); text-decoration: none;">Terms of Service</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Answers to common questions from customers and technicians</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-q">What devices do you support?</div>
+                    <div class="faq-a">
+                        We currently focus on Android smartphones and tablets. Support may vary by manufacturer, chipset, and Android version. 
+                        The iTECHMobile Client will automatically check compatibility during diagnostics.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">Do you see my personal data?</div>
+                    <div class="faq-a">
+                        Technicians see your screen during the repair session, similar to handing your device to a local shop. 
+                        We do not deliberately browse personal content and only access settings and tools required for the repair. 
+                        You can disconnect at any time if you're uncomfortable.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">What if the repair fails?</div>
+                    <div class="faq-a">
+                        If the AI engine estimates a low probability of success, we will tell you before payment. 
+                        In cases where a repair cannot be completed after payment, our support team will review the session for a partial or full refund 
+                        depending on the circumstances and our refund policy.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">Is this safe for my device?</div>
+                    <div class="faq-a">
+                        Any repair carries some risk, but our AI includes a risk assessment and our technicians follow standardized procedures. 
+                        High-risk operations are clearly indicated and may be declined if the risk of permanent damage is too high.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">Do I need to be at the computer during the repair?</div>
+                    <div class="faq-a">
+                        We recommend that you stay nearby while your device is connected. 
+                        You can watch the entire repair via live mirroring and disconnect when we’re done.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">How do I become a technician on the platform?</div>
+                    <div class="faq-a">
+                        Experienced Android repair professionals can apply by emailing 
+                        <a href="mailto:itechinfomtl@gmail.com" style="color: var(--primary); text-decoration: none;">itechinfomtl@gmail.com</a>. 
+                        We’ll ask for basic credentials, verify your skills, and then whitelist your dashboard login if approved.
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- ==================== LOGIQUE JAVASCRIPT - ARCHITECTURE ENTERPRISE ==================== -->
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>iTECHMobile</h3>
+                    <p style="color: var(--text-secondary); font-size: 14px; max-width: 260px;">
+                        Remote Android repair powered by AI diagnostics, secure tunneling, and expert technicians.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#products">USB Client</a></li>
+                        <li><a href="#products">Technician Dashboard</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#technicians">For Technicians</a></li>
+                        <li><a href="#security">Security & Privacy</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="mailto:itechinfomtl@gmail.com">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 iTECHMobile — Built by iD01t Productions (Guillaume Lessard)</p>
+                <p style="margin-top: 8px;">Production Master v11.0 | Android Remote Repair Platform</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        'use strict';
-
-        /**
-         * iTECHMobile - French Localization with EmailJS Integration
-         * Version: 2.0.0-FR
-         * 
-         * ARCHITECTURAL ENHANCEMENTS:
-         * 
-         * 1. EMAIL SUBSYSTEM:
-         *    - EmailJS SDK integration for transactional emails
-         *    - Circuit breaker pattern for email delivery failures
-         *    - Async/await error boundary with graceful degradation
-         *    - Email queue with retry logic (3 attempts, exponential backoff)
-         * 
-         * 2. SECURITY POSTURE:
-         *    - EmailJS Public Key exposed client-side (acceptable - rate limited by service)
-         *    - IMEI data sanitized before email transmission (XSS vector mitigation)
-         *    - No PII leakage beyond explicitly transmitted IMEI
-         *    - Template-based email rendering (prevents injection attacks)
-         * 
-         * 3. OBSERVABILITY:
-         *    - Comprehensive logging of email delivery lifecycle
-         *    - User-facing status notifications for email operations
-         *    - Graceful degradation: IMEI submission succeeds even if email fails
-         * 
-         * 4. I18N IMPLEMENTATION:
-         *    - Full French localization (UI strings, alerts, emails)
-         *    - Date formatting respects French locale conventions
-         *    - Currency display maintained in USD (requirement-driven)
-         * 
-         * CRITICAL CONFIGURATION REQUIRED:
-         * - EmailJS Account Setup:
-         *   1. Create account at https://www.emailjs.com/
-         *   2. Create email service (Gmail recommended)
-         *   3. Create email template with variables: {imei}, {device}, {timestamp}, {user_email}
-         *   4. Replace SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY below
-         * 
-         * PRODUCTION READINESS SCORE: 92/100
-         * - Deductions: 
-         *   - No email delivery SLA monitoring (-3)
-         *   - No A/B testing for email templates (-2)
-         *   - Missing email analytics integration (-3)
-         */
-
-        // ==================== CONFIGURATION GLOBALE ==================== 
-        const EmailConfig = {
-            SERVICE_ID: 'service_YOUR_ID',      // REQUIS: Remplacer avec votre Service ID EmailJS
-            TEMPLATE_ID: 'template_YOUR_ID',    // REQUIS: Remplacer avec votre Template ID EmailJS
-            PUBLIC_KEY: 'YOUR_PUBLIC_KEY',      // REQUIS: Remplacer avec votre clé publique EmailJS
-            TO_EMAIL: 'itechinfomtl@gmail.com', // Email de destination (configuration requise)
-            MAX_RETRIES: 3,                      // Nombre maximum de tentatives d'envoi
-            RETRY_DELAY: 1000,                   // Délai entre les tentatives (ms)
-            TIMEOUT: 10000                       // Timeout d'envoi (ms)
-        };
-
-        const AppState = {
-            currentUser: {
-                name: 'Utilisateur Démo',
-                email: 'demo@itechmobile.com',
-                picture: '',
-                sub: 'demo_' + Date.now(),
-                timestamp: new Date().toISOString()
-            },
-            selectedDevice: null,
-            imeiHistory: [],
-            isProcessing: false,
-            emailInitialized: false,
-            emailQueueActive: false,
-            config: {
-                storageKey: 'iTECHMobile_fr_demo_history',
-                maxHistoryItems: 50,
-                imeiPattern: /^[0-9]{15}$/,
-                demoMode: true,
-                locale: 'fr-FR'
-            }
-        };
-
-        // ==================== INITIALISATION ==================== 
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('[iTECHMobile FR] Initialisation de l\'application...');
-            
-            try {
-                initializeApp();
-                initializeEmailJS();
-                console.log('[iTECHMobile FR] Application prête');
-            } catch (error) {
-                console.error('[iTECHMobile FR] Erreur d\'initialisation:', error);
-                showAlert('Échec de l\'initialisation de l\'application. Veuillez actualiser la page.', 'error', 'alertContainerAndroid');
-            }
-        });
-
-        /**
-         * Initialise les composants de l'application
-         * INVARIANT: Doit être idempotent (safe to call multiple times)
-         */
-        function initializeApp() {
-            loadIMEIHistory();
-            initializePayPalButton('android');
-            initializePayPalButton('iphone');
-            
-            // Gestionnaires d'entrée IMEI
-            ['imeiInputAndroid', 'imeiInputiPhone'].forEach(id => {
-                const input = document.getElementById(id);
-                if (input) {
-                    input.addEventListener('input', handleIMEIInput);
-                    input.addEventListener('paste', handleIMEIPaste);
-                }
-            });
-        }
-
-        /**
-         * Initialise le SDK EmailJS
-         * CIRCUIT BREAKER: Échoue silencieusement si SDK non chargé
-         * 
-         * @throws {Error} Si EmailJS SDK n'est pas chargé
-         */
-        function initializeEmailJS() {
-            try {
-                if (typeof emailjs === 'undefined') {
-                    throw new Error('EmailJS SDK non chargé');
-                }
-                
-                emailjs.init(EmailConfig.PUBLIC_KEY);
-                AppState.emailInitialized = true;
-                
-                console.log('[EmailJS] Initialisé avec succès');
-                console.log('[EmailJS] Service:', EmailConfig.SERVICE_ID);
-                console.log('[EmailJS] Template:', EmailConfig.TEMPLATE_ID);
-                console.log('[EmailJS] Destination:', EmailConfig.TO_EMAIL);
-            } catch (error) {
-                console.error('[EmailJS] Échec d\'initialisation:', error);
-                console.warn('[EmailJS] Les notifications par email seront désactivées');
-                AppState.emailInitialized = false;
-            }
-        }
-
-        /**
-         * Envoie un email de notification IMEI avec retry logic
-         * 
-         * ARCHITECTURE DE FIABILITÉ:
-         * - Exponential backoff: 1s, 2s, 4s entre les tentatives
-         * - Circuit breaker: Abandonne après MAX_RETRIES échecs
-         * - Async/non-blocking: N'interfère pas avec le flux utilisateur
-         * 
-         * @param {string} imei - Numéro IMEI (validé en amont)
-         * @param {string} deviceType - Type d'appareil ('android' | 'iphone')
-         * @param {number} attempt - Numéro de tentative actuelle (1-indexed)
-         * @returns {Promise<boolean>} true si envoyé, false sinon
-         * 
-         * SECURITY NOTE: 
-         * - IMEI est sanitized par escapeHtml avant transmission
-         * - Pas de données sensibles (mots de passe, tokens) dans l'email
-         * - Template EmailJS doit être configuré pour échapper les variables
-         */
-        async function sendIMEINotificationEmail(imei, deviceType, attempt = 1) {
-            // Vérification préalable: EmailJS initialisé
-            if (!AppState.emailInitialized) {
-                console.warn('[Email] Service non initialisé, notification ignorée');
-                return false;
-            }
-
-            const suffix = deviceType === 'android' ? 'Android' : 'iPhone';
-            const alertContainer = 'alertContainer' + suffix;
-
-            try {
-                console.log(`[Email] Tentative ${attempt}/${EmailConfig.MAX_RETRIES} - Envoi notification IMEI`);
-
-                // Construction des paramètres d'email
-                // TEMPLATE VARIABLES ATTENDUES:
-                // - {imei}: Le numéro IMEI
-                // - {device}: Type d'appareil (Android/iPhone)  
-                // - {timestamp}: Horodatage formaté
-                // - {user_email}: Email de l'utilisateur
-                const templateParams = {
-                    to_email: EmailConfig.TO_EMAIL,
-                    imei: escapeHtml(imei),
-                    device: deviceType === 'android' ? 'Android' : 'iPhone',
-                    timestamp: new Date().toLocaleString('fr-FR', {
-                        dateStyle: 'full',
-                        timeStyle: 'long'
-                    }),
-                    user_email: AppState.currentUser.email
-                };
-
-                // Envoi avec timeout
-                const sendPromise = emailjs.send(
-                    EmailConfig.SERVICE_ID,
-                    EmailConfig.TEMPLATE_ID,
-                    templateParams
-                );
-
-                // Timeout wrapper (évite les hangs)
-                const timeoutPromise = new Promise((_, reject) => 
-                    setTimeout(() => reject(new Error('Timeout d\'envoi d\'email')), EmailConfig.TIMEOUT)
-                );
-
-                const response = await Promise.race([sendPromise, timeoutPromise]);
-                
-                console.log('[Email] ✅ Envoyé avec succès:', response);
-                showAlert('📧 Notification envoyée à ' + EmailConfig.TO_EMAIL, 'info', alertContainer);
-                
-                return true;
-
-            } catch (error) {
-                console.error(`[Email] ❌ Tentative ${attempt} échouée:`, error);
-
-                // Retry logic avec exponential backoff
-                if (attempt < EmailConfig.MAX_RETRIES) {
-                    const delay = EmailConfig.RETRY_DELAY * Math.pow(2, attempt - 1);
-                    console.log(`[Email] ⏳ Nouvelle tentative dans ${delay}ms...`);
-                    
-                    await new Promise(resolve => setTimeout(resolve, delay));
-                    return sendIMEINotificationEmail(imei, deviceType, attempt + 1);
-                }
-
-                // Échec final après MAX_RETRIES
-                console.error('[Email] ⚠️ Échec d\'envoi après', EmailConfig.MAX_RETRIES, 'tentatives');
-                showAlert('⚠️ Notification email non envoyée (erreur réseau)', 'warning', alertContainer);
-                
-                return false;
-            }
-        }
-
-        // ==================== AUTHENTIFICATION DÉMO ==================== 
-        function startDemo() {
-            try {
-                console.log('[Démo] Démarrage de la session');
-                saveUserSession(AppState.currentUser);
-                showDeviceSelectionScreen();
-                showAlert('Bienvenue dans la démo iTECHMobile !', 'success', 'alertContainerAndroid');
-            } catch (error) {
-                console.error('[Démo] Erreur de démarrage:', error);
-            }
-        }
-
-        function handleLogout() {
-            try {
-                clearUserSession();
-                showLoginScreen();
-                showAlert('Session démo terminée', 'success', 'alertContainerAndroid');
-            } catch (error) {
-                console.error('[Déconnexion] Erreur:', error);
-            }
-        }
-
-        // ==================== NAVIGATION ==================== 
-        function showLoginScreen() {
-            hideAllScreens();
-            document.getElementById('loginScreen').classList.remove('hidden');
-        }
-
-        function showDeviceSelectionScreen() {
-            hideAllScreens();
-            document.getElementById('deviceSelectionScreen').classList.remove('hidden');
-        }
-
-        function navigateToDevicePage(deviceType) {
-            try {
-                if (!['android', 'iphone'].includes(deviceType)) {
-                    throw new Error('Type d\'appareil invalide');
-                }
-                
-                AppState.selectedDevice = deviceType;
-                hideAllScreens();
-                
-                document.getElementById(deviceType + 'Page').classList.remove('hidden');
-                renderHistory(deviceType);
-                
-                const msg = 'Affichage de la plateforme ' + (deviceType === 'android' ? 'Android' : 'iPhone');
-                showAlert(msg, 'success', 'alertContainer' + (deviceType === 'android' ? 'Android' : 'iPhone'));
-            } catch (error) {
-                console.error('[Navigation] Erreur:', error);
-            }
-        }
-
-        function navigateToDeviceSelection() {
-            AppState.selectedDevice = null;
-            showDeviceSelectionScreen();
-        }
-
-        function hideAllScreens() {
-            ['loginScreen', 'deviceSelectionScreen', 'androidPage', 'iphonePage'].forEach(id => {
-                document.getElementById(id).classList.add('hidden');
-            });
-        }
-
-        // ==================== VALIDATION IMEI ==================== 
-        function handleIMEIInput(event) {
-            event.target.value = event.target.value.replace(/[^0-9]/g, '');
-            event.target.classList.remove('error');
-        }
-
-        function handleIMEIPaste(event) {
-            event.preventDefault();
-            const text = (event.clipboardData || window.clipboardData).getData('text');
-            event.target.value = text.replace(/[^0-9]/g, '').substring(0, 15);
-        }
-
-        /**
-         * Valide le format IMEI avec l'algorithme de Luhn
-         * STANDARD: ISO/IEC 7812-1 (même algorithme que cartes de crédit)
-         * 
-         * @param {string} imei - Numéro IMEI à valider
-         * @returns {boolean} true si valide, false sinon
-         */
-        function validateIMEI(imei) {
-            if (!imei || typeof imei !== 'string' || !AppState.config.imeiPattern.test(imei)) {
-                return false;
-            }
-            
-            try {
-                let sum = 0;
-                let shouldDouble = false;
-                
-                for (let i = imei.length - 1; i >= 0; i--) {
-                    let digit = parseInt(imei.charAt(i), 10);
-                    if (shouldDouble) {
-                        digit *= 2;
-                        if (digit > 9) digit -= 9;
-                    }
-                    sum += digit;
-                    shouldDouble = !shouldDouble;
-                }
-                
-                return (sum % 10) === 0;
-            } catch (error) {
-                console.error('[Validation IMEI] Erreur:', error);
-                return false;
-            }
-        }
-
-        // ==================== SOUMISSION IMEI ==================== 
-        /**
-         * Soumet un IMEI avec notification email intégrée
-         * 
-         * FLUX D'EXÉCUTION:
-         * 1. Validation d'entrée (format, Luhn checksum)
-         * 2. Soumission API simulée (1.2s latency)
-         * 3. Ajout à l'historique local
-         * 4. Envoi email asynchrone (non-bloquant)
-         * 5. Mise à jour UI
-         * 
-         * GARANTIES:
-         * - Validation IMEI toujours exécutée côté client
-         * - Email envoyé de manière asynchrone (n'affecte pas UX)
-         * - Soumission réussit même si email échoue (graceful degradation)
-         * 
-         * @param {string} deviceType - 'android' | 'iphone'
-         */
-        async function submitIMEI(deviceType) {
-            if (AppState.isProcessing) return;
-            
-            const suffix = deviceType === 'android' ? 'Android' : 'iPhone';
-            const alertContainer = 'alertContainer' + suffix;
-            
-            try {
-                AppState.isProcessing = true;
-                setButtonLoading(deviceType, true);
-                
-                const input = document.getElementById('imeiInput' + suffix);
-                const imei = input.value.trim();
-                
-                // Validation
-                if (!imei) throw new Error('Veuillez saisir un numéro IMEI');
-                if (!validateIMEI(imei)) {
-                    input.classList.add('error');
-                    throw new Error('Format IMEI invalide. Veuillez saisir un IMEI valide à 15 chiffres');
-                }
-                
-                console.log('[IMEI] Soumission:', imei, 'Appareil:', deviceType);
-                
-                // Simulation API
-                await simulateAPICall(1200);
-                
-                // Ajout à l'historique
-                const entry = {
-                    id: generateUUID(),
-                    imei: imei,
-                    device: deviceType,
-                    timestamp: new Date().toISOString(),
-                    user: AppState.currentUser.email
-                };
-                
-                addToHistory(entry, deviceType);
-                input.value = '';
-                input.classList.remove('error');
-                
-                // Envoi email asynchrone (non-bloquant)
-                // Fire-and-forget pattern: on n'attend pas le résultat
-                sendIMEINotificationEmail(imei, deviceType).catch(err => {
-                    console.error('[Email] Erreur d\'envoi en arrière-plan:', err);
-                    // L'utilisateur a déjà reçu une notification d'erreur si applicable
-                });
-                
-                showAlert('✅ IMEI soumis avec succès !', 'success', alertContainer);
-                console.log('[IMEI] Soumission réussie');
-
-            } catch (error) {
-                console.error('[IMEI] Erreur de soumission:', error);
-                showAlert(error.message || 'Échec de soumission de l\'IMEI', 'error', alertContainer);
-            } finally {
-                AppState.isProcessing = false;
-                setButtonLoading(deviceType, false);
-            }
-        }
-
-        // ==================== GESTION DE L'HISTORIQUE ==================== 
-        function addToHistory(entry, deviceType) {
-            try {
-                AppState.imeiHistory.unshift(entry);
-                if (AppState.imeiHistory.length > AppState.config.maxHistoryItems) {
-                    AppState.imeiHistory = AppState.imeiHistory.slice(0, AppState.config.maxHistoryItems);
-                }
-                saveIMEIHistory();
-                renderHistory(deviceType);
-            } catch (error) {
-                console.error('[Historique] Erreur d\'ajout:', error);
-                throw new Error('Échec de sauvegarde dans l\'historique');
-            }
-        }
-
-        function deleteHistoryEntry(id, deviceType) {
-            try {
-                AppState.imeiHistory = AppState.imeiHistory.filter(e => e.id !== id);
-                saveIMEIHistory();
-                renderHistory(deviceType);
-                showAlert('Entrée d\'historique supprimée', 'success', 'alertContainer' + (deviceType === 'android' ? 'Android' : 'iPhone'));
-            } catch (error) {
-                console.error('[Historique] Erreur de suppression:', error);
-            }
-        }
-
-        function renderHistory(deviceType) {
-            const suffix = deviceType === 'android' ? 'Android' : 'iPhone';
-            const container = document.getElementById('historyContainer' + suffix);
-            if (!container) return;
-            
-            const deviceHistory = AppState.imeiHistory.filter(e => e.device === deviceType);
-            
-            if (deviceHistory.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-state-icon">${deviceType === 'android' ? '🤖' : '🍎'}</div>
-                        <div class="empty-state-text">Aucun historique IMEI ${deviceType === 'android' ? 'Android' : 'iPhone'} pour le moment</div>
-                    </div>
-                `;
-                return;
-            }
-            
-            const html = deviceHistory.map(e => `
-                <div class="history-item">
-                    <div>
-                        <div class="history-imei">${escapeHtml(e.imei)}</div>
-                        <div class="history-device">
-                            <span>${e.device === 'android' ? '🤖' : '🍎'}</span>
-                            <span>${e.device === 'android' ? 'Android' : 'iPhone'}</span>
-                            <span>•</span>
-                            <span class="history-timestamp">${formatTimestamp(e.timestamp)}</span>
-                        </div>
-                    </div>
-                    <button class="delete-btn" onclick="deleteHistoryEntry('${e.id}', '${deviceType}')">Supprimer</button>
-                </div>
-            `).join('');
-            
-            container.innerHTML = `<div class="history-list">${html}</div>`;
-        }
-
-        // ==================== PAYPAL ==================== 
-        function initializePayPalButton(deviceType) {
-            try {
-                if (typeof paypal !== 'undefined') {
-                    const containerId = 'paypal-button-container-' + deviceType;
-                    const alertContainer = 'alertContainer' + (deviceType === 'android' ? 'Android' : 'iPhone');
-                    
-                    paypal.Buttons({
-                        style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'pay', height: 45 },
-                        createOrder: function(data, actions) {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    description: `Service IMEI ${deviceType} iTECHMobile (Démo)`,
-                                    amount: { currency_code: 'USD', value: '29.99' }
-                                }]
-                            });
-                        },
-                        onApprove: function(data, actions) {
-                            return actions.order.capture().then(function(orderData) {
-                                showAlert('✅ Paiement démo réussi ! Commande : ' + orderData.id, 'success', alertContainer);
-                            });
-                        },
-                        onError: function(err) {
-                            showAlert('⚠️ Erreur de paiement démo (attendue en mode démo)', 'warning', alertContainer);
-                        },
-                        onCancel: function(data) {
-                            showAlert('Paiement annulé', 'warning', alertContainer);
-                        }
-                    }).render('#' + containerId);
-                }
-            } catch (error) {
-                console.error('[PayPal] Erreur d\'initialisation:', error);
-            }
-        }
-
-        // ==================== STOCKAGE ==================== 
-        function saveIMEIHistory() {
-            try {
-                localStorage.setItem(AppState.config.storageKey, JSON.stringify(AppState.imeiHistory));
-            } catch (error) {
-                console.error('[Stockage] Erreur de sauvegarde:', error);
-            }
-        }
-
-        function loadIMEIHistory() {
-            try {
-                const data = localStorage.getItem(AppState.config.storageKey);
-                if (data) AppState.imeiHistory = JSON.parse(data);
-            } catch (error) {
-                console.error('[Stockage] Erreur de chargement:', error);
-                AppState.imeiHistory = [];
-            }
-        }
-
-        function saveUserSession(user) {
-            try {
-                sessionStorage.setItem('iTECHMobile_fr_demo_user', JSON.stringify(user));
-            } catch (error) {
-                console.error('[Session] Erreur de sauvegarde:', error);
-            }
-        }
-
-        function clearUserSession() {
-            try {
-                sessionStorage.removeItem('iTECHMobile_fr_demo_user');
-            } catch (error) {
-                console.error('[Session] Erreur d\'effacement:', error);
-            }
-        }
-
-        // ==================== UTILITAIRES UI ==================== 
-        function setButtonLoading(deviceType, isLoading) {
-            const suffix = deviceType === 'android' ? 'Android' : 'iPhone';
-            const btn = document.getElementById('submitBtn' + suffix);
-            const btnText = document.getElementById('btnText' + suffix);
-            const btnSpinner = document.getElementById('btnSpinner' + suffix);
-            
-            if (isLoading) {
-                btn.disabled = true;
-                btnText.textContent = 'Traitement...';
-                btnSpinner.classList.remove('hidden');
-            } else {
-                btn.disabled = false;
-                btnText.textContent = 'Soumettre l\'IMEI';
-                btnSpinner.classList.add('hidden');
-            }
-        }
-
-        function showAlert(message, type, containerId) {
-            const container = document.getElementById(containerId);
-            if (!container) return;
-            
-            const icons = { success: '✅', error: '❌', warning: '⚠️', info: '📧' };
-            const html = `
-                <div class="alert alert-${type}">
-                    <span class="alert-icon">${icons[type] || '📢'}</span>
-                    <span>${escapeHtml(message)}</span>
-                </div>
-            `;
-            
-            container.innerHTML = html;
-            setTimeout(() => { if (container.innerHTML === html) container.innerHTML = ''; }, 5000);
-        }
-
-        // ==================== UTILITAIRES ==================== 
-        function generateUUID() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-                const r = Math.random() * 16 | 0;
-                return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-            });
-        }
-
-        function formatTimestamp(timestamp) {
-            try {
-                const date = new Date(timestamp);
-                const diff = new Date() - date;
-                
-                if (diff < 60000) return 'À l\'instant';
-                if (diff < 3600000) {
-                    const m = Math.floor(diff / 60000);
-                    return `Il y a ${m} minute${m > 1 ? 's' : ''}`;
-                }
-                if (diff < 86400000) {
-                    const h = Math.floor(diff / 3600000);
-                    return `Il y a ${h} heure${h > 1 ? 's' : ''}`;
-                }
-                return date.toLocaleDateString('fr-FR') + ' ' + date.toLocaleTimeString('fr-FR', {hour: '2-digit', minute: '2-digit'});
-            } catch (error) {
-                return 'Inconnu';
-            }
-        }
-
-        function escapeHtml(text) {
-            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
-            return String(text).replace(/[&<>"']/g, m => map[m]);
-        }
-
-        function simulateAPICall(delay) {
-            return new Promise(resolve => setTimeout(resolve, delay));
-        }
-
-        // ==================== GESTIONNAIRES D'ERREURS ==================== 
-        window.addEventListener('error', function(e) {
-            console.error('[Erreur globale]', e.error);
-        });
-
-        window.addEventListener('unhandledrejection', function(e) {
-            console.error('[Rejet non géré]', e.reason);
-        });
-
-        console.log('%c iTECHMobile Démo FR ', 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 20px; padding: 10px;');
-        console.log('%c v2.0.0-FR | Avec Notifications Email ', 'color: #10b981; font-size: 12px;');
-        console.log('%c Destination Email: ' + EmailConfig.TO_EMAIL, 'color: #3b82f6; font-size: 10px;');
+        console.log('%c iTECHMobile Official Website ', 'background: linear-gradient(135deg, #667eea, #764ba2); color: white; font-size: 20px; padding: 10px; font-weight: bold;');
+        console.log('%c Production Master v11.0 | Android Remote Repair Platform ', 'color: #10b981; font-size: 14px; font-weight: bold;');
+        console.log('%c Built by iD01t Productions (Guillaume Lessard) ', 'color: #3b82f6; font-size: 12px;');
     </script>
 </body>
 </html>
