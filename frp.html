@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRP Bypass Pro | Android Quick Access Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .link-item:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .link-text {
+            font-weight: 500;
+            flex-grow: 1;
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            background: #00d084;
+            border-radius: 50%;
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .footer-text {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+
+        .warning-box strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #d39e00;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔓 FRP Bypass Pro</h1>
+            <p class="subtitle">Professional Android Quick Access Tools</p>
+            <span class="badge">Updated 2025 | All Devices</span>
+            
+            <div class="warning-box">
+                <strong>⚠️ Legal Notice</strong>
+                These tools are for authorized device owners only. Only use on devices you own or have explicit permission to access.
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- Google Services -->
+            <div class="card">
+                <div class="card-header">📧 Google Services</div>
+                <a href="intent://com.google.android.gm/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">📧</div>
+                    <span class="link-text">Gmail</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="google@gmail.com" class="link-item">
+                    <div class="icon">📨</div>
+                    <span class="link-text">Gmail V2</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.google.android.apps.maps/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🗺️</div>
+                    <span class="link-text">Google Maps</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="https://www.google.com/maps/@54.5260,15.2551,4z" class="link-item">
+                    <div class="icon">🌍</div>
+                    <span class="link-text">Google Maps V2</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.google.android.googlequicksearchbox/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🔍</div>
+                    <span class="link-text">Google Search</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.google.android.gms/.googlehelp.helpactivities.DeviceSignalsExportActivity/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">❓</div>
+                    <span class="link-text">Google Help</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.google.android.gsf.login.LoginActivity/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">👤</div>
+                    <span class="link-text">Google Login</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.google.android.apps.googleassistant/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🎤</div>
+                    <span class="link-text">Google Assistant</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.google.android.youtube/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">▶️</div>
+                    <span class="link-text">YouTube</span>
+                    <div class="status-indicator"></div>
+                </a>
+            </div>
+
+            <!-- System Settings -->
+            <div class="card">
+                <div class="card-header">⚙️ System Settings</div>
+                <a href="intent://com.android.settings/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">⚙️</div>
+                    <span class="link-text">Settings</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="https://apps.samsung.com/appquery/appDetail.as?appId=com.jami.tool.hiddensetting.other" class="link-item">
+                    <div class="icon">🔧</div>
+                    <span class="link-text">Hidden Settings</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.google.android.gms/#Intent;scheme=promote_smartlock_scheme;end" class="link-item">
+                    <div class="icon">🔒</div>
+                    <span class="link-text">Set Lock Screen</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.activitymanager/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">📊</div>
+                    <span class="link-text">Activity Manager</span>
+                    <div class="status-indicator"></div>
+                </a>
+            </div>
+
+            <!-- Browsers -->
+            <div class="card">
+                <div class="card-header">🌐 Browsers</div>
+                <a href="intent://com.android.chrome/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🌐</div>
+                    <span class="link-text">Chrome</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.sec.android.app.sbrowser/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🌐</div>
+                    <span class="link-text">Samsung Internet</span>
+                    <div class="status-indicator"></div>
+                </a>
+            </div>
+
+            <!-- Samsung Apps -->
+            <div class="card">
+                <div class="card-header">📱 Samsung Apps</div>
+                <a href="intent://com.sec.android.app.samsungapps/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🏪</div>
+                    <span class="link-text">Galaxy Store</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="https://www.samsung.com/fr/apps/galaxy-store/" class="link-item">
+                    <div class="icon">🛒</div>
+                    <span class="link-text">Galaxy Store Web</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.sec.android.app.myfiles/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">📁</div>
+                    <span class="link-text">My Files</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.samsung.knox.securefolder/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🔐</div>
+                    <span class="link-text">Secure Folder</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.sec.android.easyMover/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">📲</div>
+                    <span class="link-text">Smart Switch</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.elmklab.package.disabler.pro/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🛠️</div>
+                    <span class="link-text">Samsung Service</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.sec.android.app.launcher/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🏠</div>
+                    <span class="link-text">Home Launcher</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.galaxys9launcher.galaxylaucher2018/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🎨</div>
+                    <span class="link-text">S9 Launcher</span>
+                    <div class="status-indicator"></div>
+                </a>
+            </div>
+
+            <!-- File Managers -->
+            <div class="card">
+                <div class="card-header">📂 File Managers</div>
+                <a href="intent://com.mi.android.globalFileexplorer/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">📂</div>
+                    <span class="link-text">Mi File Manager</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.estrongs.android.pop/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">📁</div>
+                    <span class="link-text">ES File Explorer</span>
+                    <div class="status-indicator"></div>
+                </a>
+            </div>
+
+            <!-- Utilities -->
+            <div class="card">
+                <div class="card-header">🔧 Utilities</div>
+                <a href="intent://com.google.android.setupwizard.qrprovision.QrScanActivity/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">📷</div>
+                    <span class="link-text">QR Scanner</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.sec.android.app.popupcalculator/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🔢</div>
+                    <span class="link-text">Calculator</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.rrivenllc.shieldx/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">🛡️</div>
+                    <span class="link-text">Alliance Shield</span>
+                    <div class="status-indicator"></div>
+                </a>
+            </div>
+
+            <!-- Dialer & Codes -->
+            <div class="card">
+                <div class="card-header">📞 Dialer & Secret Codes</div>
+                <a href="tel:123456789" class="link-item">
+                    <div class="icon">📞</div>
+                    <span class="link-text">Dial Pad</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="tel:*#0*#" class="link-item">
+                    <div class="icon">🔓</div>
+                    <span class="link-text">*#0*# (Enable ADB)</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="tel:*#85#" class="link-item">
+                    <div class="icon">🔑</div>
+                    <span class="link-text">*#85# (Tecno/Infinix)</span>
+                    <div class="status-indicator"></div>
+                </a>
+                <a href="intent://com.samsung.adnroid.dialer/#Intent;scheme=android-app;end" class="link-item">
+                    <div class="icon">☎️</div>
+                    <span class="link-text">Samsung Dialer</span>
+                    <div class="status-indicator"></div>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p class="footer-text"><strong>FRP Bypass Pro</strong> | Professional Android Access Tools</p>
+            <p class="footer-text">For educational and authorized use only | Updated November 2025</p>
+            <p class="footer-text">⚡ Built with precision for technicians and device owners</p>
+        </footer>
+    </div>
+</body>
+</html>
