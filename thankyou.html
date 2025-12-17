@@ -10,6 +10,14 @@
 <meta content="#2aa7ff" name="theme-color"/>
 <!-- Canonical -->
 <link href="https://id01t.github.io/thank-you.html" rel="canonical"/>
+<!-- Hreflang for Internationalization -->
+<link rel="alternate" hreflang="en" href="https://id01t.github.io/thankyou.html">
+<link rel="alternate" hreflang="fr" href="https://id01t.github.io/fr/thankyou.html">
+<link rel="alternate" hreflang="x-default" href="https://id01t.github.io/thankyou.html">
+<!-- Security Headers -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self';">
 <!-- Open Graph -->
 <meta content="website" property="og:type"/>
 <meta content="Thank you — iD01t Productions" property="og:title"/>
@@ -24,7 +32,7 @@
 <meta content="https://raw.githubusercontent.com/iD01t/iD01t.github.io/main/assets/img/brand/og-home.jpg" name="twitter:image"/>
 <meta content="@id01t" name="twitter:creator"/>
 <!-- Tailwind CSS (same setup as index) -->
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script>
 <script>
     tailwind.config = {
       theme: {
