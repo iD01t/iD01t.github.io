@@ -11,6 +11,14 @@
 <meta content="#2aa7ff" name="theme-color"/>
 <!-- Canonical -->
 <link href="https://id01t.github.io/" rel="canonical"/>
+<!-- Hreflang for Internationalization -->
+<link rel="alternate" hreflang="en" href="https://id01t.github.io/"/>
+<link rel="alternate" hreflang="fr" href="https://id01t.github.io/fr/"/>
+<link rel="alternate" hreflang="x-default" href="https://id01t.github.io/"/>
+<!-- Security Headers -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self';">
 <!-- Author / Keywords -->
 <meta content="Guillaume Lessard" name="author"/>
 <meta content="Windows utilities, technical eBooks, multiplayer games, original music, programming tools, AI automation, chess software, music production" name="keywords"/>
@@ -58,7 +66,7 @@
   }
   </script>
 <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script>
 <script>
     tailwind.config = {
       theme: {
@@ -210,22 +218,25 @@
 </div>
 </section>
 <!-- New Album Promotion -->
-<section class="bg-gray-100 dark:bg-gray-800 py-12">
- fix-catalog-pages
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<a class="group" href="https://open.spotify.com/album/5AWc3Fx9oC03E3vKEsnTIi?si=fD_oTFXXQdWNA6bnfW4szQ" rel="noopener noreferrer" target="_blank">
-<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">DJ iD01t New Album Available Now!</h2>
-<img alt="Cosmic Echoes Album Art" class="w-full max-w-md mx-auto rounded-lg shadow-lg group-hover:opacity-80 transition-opacity" src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/img/brand/distrokid_promocard_Cosmic_Echoes.jpg?raw=true"/>
-</a>
-</div>
-
+<section class="bg-slate-50 dark:bg-slate-800 py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <a href="https://open.spotify.com/album/5AWc3Fx9oC03E3vKEsnTIi?si=fD_oTFXXQdWNA6bnfW4szQ" target="_blank" rel="noopener noreferrer" class="group">
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">DJ iD01t New Album Available Now!</h2>
-      <img src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/img/brand/distrokid_promocard_Cosmic_Echoes.jpg?raw=true" alt="Cosmic Echoes Album Art" class="w-full max-w-md mx-auto rounded-lg shadow-lg group-hover:opacity-80 transition-opacity">
+    <a href="https://open.spotify.com/album/5AWc3Fx9oC03E3vKEsnTIi?si=fD_oTFXXQdWNA6bnfW4szQ" target="_blank" rel="noopener noreferrer" class="group block">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+        <span class="gradient-text">DJ iD01t</span> New Album Available Now!
+      </h2>
+      <img
+        src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/img/brand/distrokid_promocard_Cosmic_Echoes.jpg?raw=true"
+        alt="Cosmic Echoes Album Art - Latest release from DJ iD01t"
+        class="w-full max-w-md mx-auto rounded-xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+        width="800"
+        height="800"
+      />
+      <p class="mt-6 text-lg text-slate-600 dark:text-slate-300">
+        Stream now on Spotify, Apple Music, and all major platforms
+      </p>
     </a>
   </div>
- main
 </section>
 <!-- Features -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24" id="features">
