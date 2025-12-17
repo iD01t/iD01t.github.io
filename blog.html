@@ -10,25 +10,23 @@
 <meta content="#2aa7ff" name="theme-color"/>
 <link href="https://id01t.github.io/blog.html" rel="canonical"/>
 <!-- Hreflang for Internationalization -->
-<link rel="alternate" hreflang="en" href="https://id01t.github.io/blog.html">
-<link rel="alternate" hreflang="fr" href="https://id01t.github.io/fr/blog.html">
-<link rel="alternate" hreflang="x-default" href="https://id01t.github.io/blog.html">
+<link href="https://id01t.github.io/blog.html" hreflang="en" rel="alternate"/>
+<link href="https://id01t.github.io/fr/blog.html" hreflang="fr" rel="alternate"/>
+<link href="https://id01t.github.io/blog.html" hreflang="x-default" rel="alternate"/>
 <!-- Security Headers -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self';">
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
+<meta content="SAMEORIGIN" http-equiv="X-Frame-Options"/>
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
 <meta content="Guillaume Lessard" name="author"/>
 <meta content="AI blog, prompt engineering tutorials, technical writing, development guides, music production, digital tools" name="keywords"/>
-
 <!-- Open Graph -->
 <meta content="website" property="og:type"/>
 <meta content="Blog — iD01t Productions" property="og:title"/>
 <meta content="Technical insights and tutorials on AI, development, and digital creativity." property="og:description"/>
 <meta content="https://id01t.github.io/blog.html" property="og:url"/>
 <meta content="iD01t Productions" property="og:site_name"/>
-
 <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script>
+<script crossorigin="anonymous" src="https://cdn.tailwindcss.com"></script>
 <script>
     tailwind.config = {
       theme: {
@@ -51,7 +49,6 @@
       }
     }
 </script>
-
 <style>
     :root { --ring-color: theme('colors.brand.500'); }
     .link-underline { position: relative; transition: color .2s; }
@@ -65,9 +62,7 @@
     .intersection-animate.visible { opacity:1; transform:none; }
 </style>
 </head>
-
 <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
-
 <!-- Navigation -->
 <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,7 +116,6 @@
 </div>
 </div>
 </nav>
-
 <!-- Hero Section -->
 <section class="relative bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-900 dark:to-slate-800 py-20">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -129,24 +123,21 @@
 <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">Technical insights, practical tutorials, and industry perspectives on AI, prompt engineering, software development, and digital creativity. Written by creators, for creators.</p>
 </div>
 </section>
-
 <!-- All Blog Posts Grid -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 <div class="mb-12">
 <h2 class="text-3xl font-bold gradient-text mb-2">All Articles</h2>
 <p class="text-slate-600 dark:text-slate-400">Explore our complete collection of tutorials, guides, and insights</p>
 </div>
-
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
 <!-- Blog Post: Why Prompt Engineering Matters -->
 <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
 <div class="h-48 bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center">
-<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
 <div class="p-6">
 <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
-<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">AI & Prompting</span>
+<span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full font-medium">AI &amp; Prompting</span>
 <time datetime="2025-01-15">Jan 15, 2025</time>
 </div>
 <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Why Prompt Engineering is the Most Important Skill You're Not Learning</h3>
@@ -159,11 +150,10 @@ Read Article
 </a>
 </div>
 </article>
-
 <!-- Blog Post: RGCCO Framework -->
 <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
 <div class="h-48 bg-gradient-to-br from-purple-400 to-indigo-600 flex items-center justify-center">
-<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
 <div class="p-6">
 <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
@@ -180,11 +170,10 @@ Read Article
 </a>
 </div>
 </article>
-
 <!-- Blog Post: GPT vs Claude -->
 <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
 <div class="h-48 bg-gradient-to-br from-green-400 to-teal-600 flex items-center justify-center">
-<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
 <div class="p-6">
 <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
@@ -201,11 +190,10 @@ Read Article
 </a>
 </div>
 </article>
-
 <!-- Blog Post: AI Hallucinations -->
 <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
 <div class="h-48 bg-gradient-to-br from-red-400 to-pink-600 flex items-center justify-center">
-<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
 <div class="p-6">
 <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
@@ -222,11 +210,10 @@ Read Article
 </a>
 </div>
 </article>
-
 <!-- Blog Post: Code Generation -->
 <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
 <div class="h-48 bg-gradient-to-br from-orange-400 to-red-600 flex items-center justify-center">
-<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
 <div class="p-6">
 <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
@@ -243,11 +230,10 @@ Read Article
 </a>
 </div>
 </article>
-
 <!-- Blog Post: Marketing Copy -->
 <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
 <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-600 flex items-center justify-center">
-<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
 <div class="p-6">
 <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
@@ -264,11 +250,10 @@ Read Article
 </a>
 </div>
 </article>
-
 <!-- Blog Post: Long Context -->
 <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover intersection-animate">
 <div class="h-48 bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center">
-<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+<svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
 <div class="p-6">
 <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-3">
@@ -285,10 +270,8 @@ Read Article
 </a>
 </div>
 </article>
-
 </div>
 </section>
-
 <!-- CTA Section -->
 <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 <div class="bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-8 md:p-12 text-center intersection-animate">
@@ -302,7 +285,6 @@ View the Book
 </a>
 </div>
 </section>
-
 <!-- Footer -->
 <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
@@ -352,7 +334,6 @@ View the Book
 </div>
 </div>
 </footer>
-
 <script>
     // Theme toggle
     const root = document.documentElement;
@@ -399,4 +380,4 @@ View the Book
     if (yearElement) yearElement.textContent = new Date().getFullYear();
 </script>
 </body>
-                                                                                           </html>
+</html>

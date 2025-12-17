@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="iTECHMobile - Remote Android Device Repair. USB Client for customers + Technician Dashboard for repair professionals.">
-    <meta name="theme-color" content="#667eea">
-    <title>iTECHMobile - Remote Android Repair Platform</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="iTECHMobile - Remote Android Device Repair. USB Client for customers + Technician Dashboard for repair professionals." name="description"/>
+<meta content="#667eea" name="theme-color"/>
+<title>iTECHMobile - Remote Android Repair Platform</title>
+<!-- Favicon -->
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -633,12 +630,11 @@
     </style>
 </head>
 <body>
-    <div class="bg-animated">
-        <div class="orb orb1"></div>
-        <div class="orb orb2"></div>
-    </div>
-
-    <!-- Navigation -->
+<div class="bg-animated">
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+</div>
+<!-- Navigation -->
 <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between h-16">
@@ -691,404 +687,366 @@
 </div>
 </div>
 </nav>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-note">
-                <span>✅</span>
-                <span>Production Master v11.0 | Android-First Platform</span>
-            </div>
-            <h1>Remote Android Device Repair<br>via USB + AI + Expert Technicians</h1>
-            <p>Connect your Android phone via USB. Our AI diagnoses issues, quotes a price, and a certified technician repairs it remotely via live screen mirroring—all while you watch.</p>
-            
-            <div class="cta-group">
-                <a href="http://localhost:8081" class="btn btn-primary">Download USB Client (Win/Mac/Linux)</a>
-                <a href="http://localhost:8082" class="btn btn-secondary">Technician Dashboard Login</a>
-            </div>
-
-            <div class="tech-stack">
-                <div class="tech-badge">🔧 Python + NiceGUI</div>
-                <div class="tech-badge">🤖 AI Diagnostics</div>
-                <div class="tech-badge">🔐 ADB + Scrcpy</div>
-                <div class="tech-badge">💳 Stripe Payments</div>
-                <div class="tech-badge">🔥 Firebase Backend</div>
-                <div class="tech-badge">🌐 Ngrok Tunneling</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="section section-alt" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">End-to-end automated repair flow from your desktop</p>
-            </div>
-            
-            <div class="flow-steps">
-                <div class="flow-step" data-step="1">
-                    <div class="flow-icon">📱</div>
-                    <div class="flow-title">Connect Device</div>
-                    <div class="flow-desc">Plug in Android via USB, enable USB debugging, launch iTECHMobile Client.</div>
-                </div>
-                <div class="flow-step" data-step="2">
-                    <div class="flow-icon">🤖</div>
-                    <div class="flow-title">AI Analysis</div>
-                    <div class="flow-desc">AI detects issues, calculates success probability, severity, and quotes exact price.</div>
-                </div>
-                <div class="flow-step" data-step="3">
-                    <div class="flow-icon">💳</div>
-                    <div class="flow-title">Secure Payment</div>
-                    <div class="flow-desc">Pay via Stripe checkout (bank-grade encryption, no card storage on our servers).</div>
-                </div>
-                <div class="flow-step" data-step="4">
-                    <div class="flow-icon">🌐</div>
-                    <div class="flow-title">Tunnel Setup</div>
-                    <div class="flow-desc">Ngrok auto-creates secure tunnel to your device (ADB over TCP/IP), no ports exposed.</div>
-                </div>
-                <div class="flow-step" data-step="5">
-                    <div class="flow-icon">👨‍🔧</div>
-                    <div class="flow-title">Technician Connects</div>
-                    <div class="flow-desc">Certified tech claims job from dashboard, launches scrcpy remote session.</div>
-                </div>
-                <div class="flow-step" data-step="6">
-                    <div class="flow-icon">✅</div>
-                    <div class="flow-title">Repair Complete</div>
-                    <div class="flow-desc">You watch live as the tech fixes your device. Once finished, session closes automatically.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Two Products -->
-    <section class="section" id="products">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Two Apps, One Platform</h2>
-                <p class="section-subtitle">Separate interfaces for customers and technicians</p>
-            </div>
-
-            <div class="two-col">
-                <!-- USB Client -->
-                <div class="product-card">
-                    <div class="product-icon">📱</div>
-                    <div class="product-title">iTECHMobile USB Client</div>
-                    <div class="product-subtitle">For end customers with broken Android devices</div>
-                    <span class="badge badge-success">Desktop App</span>
-
-                    <ul class="product-features">
-                        <li>ADB device detection (auto-download platform-tools)</li>
-                        <li>AI diagnostics with success probability & pricing</li>
-                        <li>Stripe payment integration</li>
-                        <li>Ngrok tunnel auto-configuration</li>
-                        <li>Real-time status updates via Firebase</li>
-                        <li>Encrypted connection to technician</li>
-                    </ul>
-
-                    <p style="margin: 20px 0; color: var(--text-secondary); font-size: 14px;">
-                        <strong>System Requirements:</strong><br>
-                        • Windows 10+, macOS 11+, or Linux<br>
-                        • USB cable + Internet connection<br>
+<!-- Hero -->
+<section class="hero">
+<div class="container">
+<div class="hero-note">
+<span>✅</span>
+<span>Production Master v11.0 | Android-First Platform</span>
+</div>
+<h1>Remote Android Device Repair<br/>via USB + AI + Expert Technicians</h1>
+<p>Connect your Android phone via USB. Our AI diagnoses issues, quotes a price, and a certified technician repairs it remotely via live screen mirroring—all while you watch.</p>
+<div class="cta-group">
+<a class="btn btn-primary" href="http://localhost:8081">Download USB Client (Win/Mac/Linux)</a>
+<a class="btn btn-secondary" href="http://localhost:8082">Technician Dashboard Login</a>
+</div>
+<div class="tech-stack">
+<div class="tech-badge">🔧 Python + NiceGUI</div>
+<div class="tech-badge">🤖 AI Diagnostics</div>
+<div class="tech-badge">🔐 ADB + Scrcpy</div>
+<div class="tech-badge">💳 Stripe Payments</div>
+<div class="tech-badge">🔥 Firebase Backend</div>
+<div class="tech-badge">🌐 Ngrok Tunneling</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="section section-alt" id="how-it-works">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">How It Works</h2>
+<p class="section-subtitle">End-to-end automated repair flow from your desktop</p>
+</div>
+<div class="flow-steps">
+<div class="flow-step" data-step="1">
+<div class="flow-icon">📱</div>
+<div class="flow-title">Connect Device</div>
+<div class="flow-desc">Plug in Android via USB, enable USB debugging, launch iTECHMobile Client.</div>
+</div>
+<div class="flow-step" data-step="2">
+<div class="flow-icon">🤖</div>
+<div class="flow-title">AI Analysis</div>
+<div class="flow-desc">AI detects issues, calculates success probability, severity, and quotes exact price.</div>
+</div>
+<div class="flow-step" data-step="3">
+<div class="flow-icon">💳</div>
+<div class="flow-title">Secure Payment</div>
+<div class="flow-desc">Pay via Stripe checkout (bank-grade encryption, no card storage on our servers).</div>
+</div>
+<div class="flow-step" data-step="4">
+<div class="flow-icon">🌐</div>
+<div class="flow-title">Tunnel Setup</div>
+<div class="flow-desc">Ngrok auto-creates secure tunnel to your device (ADB over TCP/IP), no ports exposed.</div>
+</div>
+<div class="flow-step" data-step="5">
+<div class="flow-icon">👨‍🔧</div>
+<div class="flow-title">Technician Connects</div>
+<div class="flow-desc">Certified tech claims job from dashboard, launches scrcpy remote session.</div>
+</div>
+<div class="flow-step" data-step="6">
+<div class="flow-icon">✅</div>
+<div class="flow-title">Repair Complete</div>
+<div class="flow-desc">You watch live as the tech fixes your device. Once finished, session closes automatically.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Two Products -->
+<section class="section" id="products">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Two Apps, One Platform</h2>
+<p class="section-subtitle">Separate interfaces for customers and technicians</p>
+</div>
+<div class="two-col">
+<!-- USB Client -->
+<div class="product-card">
+<div class="product-icon">📱</div>
+<div class="product-title">iTECHMobile USB Client</div>
+<div class="product-subtitle">For end customers with broken Android devices</div>
+<span class="badge badge-success">Desktop App</span>
+<ul class="product-features">
+<li>ADB device detection (auto-download platform-tools)</li>
+<li>AI diagnostics with success probability &amp; pricing</li>
+<li>Stripe payment integration</li>
+<li>Ngrok tunnel auto-configuration</li>
+<li>Real-time status updates via Firebase</li>
+<li>Encrypted connection to technician</li>
+</ul>
+<p style="margin: 20px 0; color: var(--text-secondary); font-size: 14px;">
+<strong>System Requirements:</strong><br/>
+                        • Windows 10+, macOS 11+, or Linux<br/>
+                        • USB cable + Internet connection<br/>
                         • Android device with USB debugging enabled
                     </p>
-
-                    <a href="http://localhost:8081" class="btn btn-primary" style="width: 100%;">Download Client</a>
-                </div>
-
-                <!-- Technician Dashboard -->
-                <div class="product-card">
-                    <div class="product-icon">🔧</div>
-                    <div class="product-title">Technician Dashboard</div>
-                    <div class="product-subtitle">For repair shops, enterprises, and certified technicians</div>
-                    <span class="badge badge-warning">Web Dashboard</span>
-
-                    <ul class="product-features">
-                        <li>Firebase-backed real-time job queue</li>
-                        <li>One-click scrcpy session launch</li>
-                        <li>Job claiming & status management</li>
-                        <li>Concurrent session limits & monitoring</li>
-                        <li>Performance metrics (success rate, avg time)</li>
-                        <li>Session recordings for quality assurance</li>
-                    </ul>
-
-                    <p style="margin: 20px 0; color: var(--text-secondary); font-size: 14px;">
-                        <strong>Access Requirements:</strong><br>
-                        • Whitelisted technician email<br>
-                        • Scrcpy auto-installed on first launch<br>
+<a class="btn btn-primary" href="http://localhost:8081" style="width: 100%;">Download Client</a>
+</div>
+<!-- Technician Dashboard -->
+<div class="product-card">
+<div class="product-icon">🔧</div>
+<div class="product-title">Technician Dashboard</div>
+<div class="product-subtitle">For repair shops, enterprises, and certified technicians</div>
+<span class="badge badge-warning">Web Dashboard</span>
+<ul class="product-features">
+<li>Firebase-backed real-time job queue</li>
+<li>One-click scrcpy session launch</li>
+<li>Job claiming &amp; status management</li>
+<li>Concurrent session limits &amp; monitoring</li>
+<li>Performance metrics (success rate, avg time)</li>
+<li>Session recordings for quality assurance</li>
+</ul>
+<p style="margin: 20px 0; color: var(--text-secondary); font-size: 14px;">
+<strong>Access Requirements:</strong><br/>
+                        • Whitelisted technician email<br/>
+                        • Scrcpy auto-installed on first launch<br/>
                         • Works on any modern browser
                     </p>
-
-                    <a href="http://localhost:8082" class="btn btn-secondary" style="width: 100%;">Dashboard Login</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Engine Details -->
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">AI-Powered Diagnostics</h2>
-                <p class="section-subtitle">Our AI engine analyzes device state and calculates repair feasibility</p>
-            </div>
-
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <div class="spec-label">Issue Detection</div>
-                    <div class="spec-value">Bootloop, FRP, MDM, more</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Success Probability</div>
-                    <div class="spec-value">Estimated 70–95%</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Severity Levels</div>
-                    <div class="spec-value">Low → Critical</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Complexity Analysis</div>
-                    <div class="spec-value">Simple → Expert</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Dynamic Pricing</div>
-                    <div class="spec-value">$29.99–$99.99</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Risk Assessment</div>
-                    <div class="spec-value">Data loss, brick risk</div>
-                </div>
-            </div>
-
-            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary); max-width: 700px; margin-left: auto; margin-right: auto;">
+<a class="btn btn-secondary" href="http://localhost:8082" style="width: 100%;">Dashboard Login</a>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Engine Details -->
+<section class="section section-alt">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">AI-Powered Diagnostics</h2>
+<p class="section-subtitle">Our AI engine analyzes device state and calculates repair feasibility</p>
+</div>
+<div class="specs-grid">
+<div class="spec-card">
+<div class="spec-label">Issue Detection</div>
+<div class="spec-value">Bootloop, FRP, MDM, more</div>
+</div>
+<div class="spec-card">
+<div class="spec-label">Success Probability</div>
+<div class="spec-value">Estimated 70–95%</div>
+</div>
+<div class="spec-card">
+<div class="spec-label">Severity Levels</div>
+<div class="spec-value">Low → Critical</div>
+</div>
+<div class="spec-card">
+<div class="spec-label">Complexity Analysis</div>
+<div class="spec-value">Simple → Expert</div>
+</div>
+<div class="spec-card">
+<div class="spec-label">Dynamic Pricing</div>
+<div class="spec-value">$29.99–$99.99</div>
+</div>
+<div class="spec-card">
+<div class="spec-label">Risk Assessment</div>
+<div class="spec-value">Data loss, brick risk</div>
+</div>
+</div>
+<p style="text-align: center; margin-top: 40px; color: var(--text-secondary); max-width: 700px; margin-left: auto; margin-right: auto;">
                 The AI considers device manufacturer, chipset, Android version, issue complexity, and historical success rates to generate a fixed quote <strong>before</strong> you pay.
             </p>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="section" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">AI-Based Pricing</h2>
-                <p class="section-subtitle">Price determined by issue complexity, not arbitrary tiers</p>
-            </div>
-
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-name">Simple Issues</div>
-                    <div class="pricing-price">$29.99</div>
-                    <div class="pricing-note">System app restoration, basic configs</div>
-                    <ul class="pricing-features">
-                        <li>15–30 minute repairs</li>
-                        <li>Low risk, higher success rate</li>
-                        <li>Examples: disabled apps, minor crashes</li>
-                    </ul>
-                    <a href="http://localhost:8081" class="btn btn-primary" style="width: 100%;">Start Diagnosis</a>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-name">Medium Issues</div>
-                    <div class="pricing-price">$49–79</div>
-                    <div class="pricing-note">FRP locks, software corruption, root access</div>
-                    <ul class="pricing-features">
-                        <li>30–60 minute repairs</li>
-                        <li>Medium risk, moderate success rate</li>
-                        <li>Examples: FRP bypass, custom recovery</li>
-                    </ul>
-                    <a href="http://localhost:8081" class="btn btn-primary" style="width: 100%;">Start Diagnosis</a>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-name">Complex Issues</div>
-                    <div class="pricing-price">$89–99</div>
-                    <div class="pricing-note">Bootloops, MDM locks, firmware issues</div>
-                    <ul class="pricing-features">
-                        <li>60+ minute repairs</li>
-                        <li>Higher risk, lower success rate</li>
-                        <li>Examples: bootloop recovery, MDM bypass</li>
-                    </ul>
-                    <a href="http://localhost:8081" class="btn btn-primary" style="width: 100%;">Start Diagnosis</a>
-                </div>
-            </div>
-
-            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary);">
+</div>
+</section>
+<!-- Pricing -->
+<section class="section" id="pricing">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">AI-Based Pricing</h2>
+<p class="section-subtitle">Price determined by issue complexity, not arbitrary tiers</p>
+</div>
+<div class="pricing-grid">
+<div class="pricing-card">
+<div class="pricing-name">Simple Issues</div>
+<div class="pricing-price">$29.99</div>
+<div class="pricing-note">System app restoration, basic configs</div>
+<ul class="pricing-features">
+<li>15–30 minute repairs</li>
+<li>Low risk, higher success rate</li>
+<li>Examples: disabled apps, minor crashes</li>
+</ul>
+<a class="btn btn-primary" href="http://localhost:8081" style="width: 100%;">Start Diagnosis</a>
+</div>
+<div class="pricing-card">
+<div class="pricing-name">Medium Issues</div>
+<div class="pricing-price">$49–79</div>
+<div class="pricing-note">FRP locks, software corruption, root access</div>
+<ul class="pricing-features">
+<li>30–60 minute repairs</li>
+<li>Medium risk, moderate success rate</li>
+<li>Examples: FRP bypass, custom recovery</li>
+</ul>
+<a class="btn btn-primary" href="http://localhost:8081" style="width: 100%;">Start Diagnosis</a>
+</div>
+<div class="pricing-card">
+<div class="pricing-name">Complex Issues</div>
+<div class="pricing-price">$89–99</div>
+<div class="pricing-note">Bootloops, MDM locks, firmware issues</div>
+<ul class="pricing-features">
+<li>60+ minute repairs</li>
+<li>Higher risk, lower success rate</li>
+<li>Examples: bootloop recovery, MDM bypass</li>
+</ul>
+<a class="btn btn-primary" href="http://localhost:8081" style="width: 100%;">Start Diagnosis</a>
+</div>
+</div>
+<p style="text-align: center; margin-top: 40px; color: var(--text-secondary);">
                 💡 <strong>Exact price shown after AI analysis</strong> — no surprises, no hidden fees.
             </p>
-        </div>
-    </section>
-
-    <!-- For Technicians -->
-    <section class="section section-alt" id="technicians">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">For Repair Professionals</h2>
-                <p class="section-subtitle">Join our network of certified Android technicians</p>
-            </div>
-
-            <div class="product-card" style="max-width: 700px; margin: 0 auto;">
-                <div class="product-title" style="text-align: center; margin-bottom: 30px;">Technician Dashboard Features</div>
-                
-                <ul class="product-features">
-                    <li>Global job queue with real-time updates (Firebase)</li>
-                    <li>Claim jobs in one click, start scrcpy instantly</li>
-                    <li>Auto-download & configure scrcpy (H.265, up to 60 FPS)</li>
-                    <li>Session recordings saved for quality assurance</li>
-                    <li>Performance analytics (completion rate, avg time)</li>
-                    <li>Concurrent session management (configurable max)</li>
-                    <li>Whitelisted email authentication</li>
-                    <li>Sentry error tracking + structured logging</li>
-                </ul>
-
-                <div style="margin-top: 30px; padding: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--success); border-radius: 12px;">
-                    <p style="margin-bottom: 16px;"><strong>How to Get Access:</strong></p>
-                    <ol style="margin-left: 20px; color: var(--text-secondary); font-size: 14px;">
-                        <li>Submit your application with proof of Android repair experience.</li>
-                        <li>Complete a short onboarding + tool proficiency check.</li>
-                        <li>Get your technician email whitelisted for dashboard access.</li>
-                        <li>Log in, set your availability, and start claiming jobs.</li>
-                    </ol>
-                    <p style="margin-top: 16px; font-size: 14px; color: var(--text-secondary);">
+</div>
+</section>
+<!-- For Technicians -->
+<section class="section section-alt" id="technicians">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">For Repair Professionals</h2>
+<p class="section-subtitle">Join our network of certified Android technicians</p>
+</div>
+<div class="product-card" style="max-width: 700px; margin: 0 auto;">
+<div class="product-title" style="text-align: center; margin-bottom: 30px;">Technician Dashboard Features</div>
+<ul class="product-features">
+<li>Global job queue with real-time updates (Firebase)</li>
+<li>Claim jobs in one click, start scrcpy instantly</li>
+<li>Auto-download &amp; configure scrcpy (H.265, up to 60 FPS)</li>
+<li>Session recordings saved for quality assurance</li>
+<li>Performance analytics (completion rate, avg time)</li>
+<li>Concurrent session management (configurable max)</li>
+<li>Whitelisted email authentication</li>
+<li>Sentry error tracking + structured logging</li>
+</ul>
+<div style="margin-top: 30px; padding: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--success); border-radius: 12px;">
+<p style="margin-bottom: 16px;"><strong>How to Get Access:</strong></p>
+<ol style="margin-left: 20px; color: var(--text-secondary); font-size: 14px;">
+<li>Submit your application with proof of Android repair experience.</li>
+<li>Complete a short onboarding + tool proficiency check.</li>
+<li>Get your technician email whitelisted for dashboard access.</li>
+<li>Log in, set your availability, and start claiming jobs.</li>
+</ol>
+<p style="margin-top: 16px; font-size: 14px; color: var(--text-secondary);">
                         📩 To request technician access, email: 
                         <a href="mailto:itechinfomtl@gmail.com" style="color: var(--success); text-decoration: none;">
                             itechinfomtl@gmail.com
                         </a>
-                    </p>
-                </div>
-
-                <div style="margin-top: 20px; font-size: 13px; color: var(--text-secondary); text-align: center;">
+</p>
+</div>
+<div style="margin-top: 20px; font-size: 13px; color: var(--text-secondary); text-align: center;">
                     Enterprise repair centers can integrate iTECHMobile as a white-label backend. Contact us for volume pricing and custom SLAs.
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Security & Privacy -->
-    <section class="section" id="security">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Security & Privacy</h2>
-                <p class="section-subtitle">Designed with safety, transparency, and control in mind</p>
-            </div>
-
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <div class="spec-label">Payments</div>
-                    <div class="spec-value">Stripe Checkout</div>
-                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+</div>
+</div>
+</section>
+<!-- Security & Privacy -->
+<section class="section" id="security">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Security &amp; Privacy</h2>
+<p class="section-subtitle">Designed with safety, transparency, and control in mind</p>
+</div>
+<div class="specs-grid">
+<div class="spec-card">
+<div class="spec-label">Payments</div>
+<div class="spec-value">Stripe Checkout</div>
+<p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
                         Card details are handled by Stripe. iTECHMobile never stores your full card number on its servers.
                     </p>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Remote Access</div>
-                    <div class="spec-value">You Stay in Control</div>
-                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+</div>
+<div class="spec-card">
+<div class="spec-label">Remote Access</div>
+<div class="spec-value">You Stay in Control</div>
+<p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
                         Remote sessions are limited to the repair window. You can disconnect your device at any time.
                     </p>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Tunnels</div>
-                    <div class="spec-value">Encrypted</div>
-                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+</div>
+<div class="spec-card">
+<div class="spec-label">Tunnels</div>
+<div class="spec-value">Encrypted</div>
+<p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
                         Ngrok tunnels are encrypted end-to-end. No inbound ports are opened on your local network.
                     </p>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Access Control</div>
-                    <div class="spec-value">Whitelisted Techs</div>
-                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
-                        Only pre-approved technicians with verified emails can access the dashboard & live jobs.
+</div>
+<div class="spec-card">
+<div class="spec-label">Access Control</div>
+<div class="spec-value">Whitelisted Techs</div>
+<p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+                        Only pre-approved technicians with verified emails can access the dashboard &amp; live jobs.
                     </p>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Monitoring</div>
-                    <div class="spec-value">Audit Logs</div>
-                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+</div>
+<div class="spec-card">
+<div class="spec-label">Monitoring</div>
+<div class="spec-value">Audit Logs</div>
+<p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
                         Actions taken during a session are logged for security, diagnostics, and quality assurance.
                     </p>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Data</div>
-                    <div class="spec-value">Minimal & Purposeful</div>
-                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
+</div>
+<div class="spec-card">
+<div class="spec-label">Data</div>
+<div class="spec-value">Minimal &amp; Purposeful</div>
+<p style="margin-top: 10px; font-size: 14px; color: var(--text-secondary);">
                         We only collect device + diagnostic info required to perform the repair and process your payment.
                     </p>
-                </div>
-            </div>
-
-            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary); max-width: 700px; margin-left: auto; margin-right: auto; font-size: 14px;">
+</div>
+</div>
+<p style="text-align: center; margin-top: 40px; color: var(--text-secondary); max-width: 700px; margin-left: auto; margin-right: auto; font-size: 14px;">
                 For full details, please review our 
                 <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a> 
                 and 
                 <a href="#" style="color: var(--primary); text-decoration: none;">Terms of Service</a>.
             </p>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section-alt" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Answers to common questions from customers and technicians</p>
-            </div>
-
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-q">What devices do you support?</div>
-                    <div class="faq-a">
+</div>
+</section>
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<p class="section-subtitle">Answers to common questions from customers and technicians</p>
+</div>
+<div class="faq-grid">
+<div class="faq-item">
+<div class="faq-q">What devices do you support?</div>
+<div class="faq-a">
                         We currently focus on Android smartphones and tablets. Support may vary by manufacturer, chipset, and Android version. 
                         The iTECHMobile Client will automatically check compatibility during diagnostics.
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q">Do you see my personal data?</div>
-                    <div class="faq-a">
+</div>
+<div class="faq-item">
+<div class="faq-q">Do you see my personal data?</div>
+<div class="faq-a">
                         Technicians see your screen during the repair session, similar to handing your device to a local shop. 
                         We do not deliberately browse personal content and only access settings and tools required for the repair. 
                         You can disconnect at any time if you're uncomfortable.
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q">What if the repair fails?</div>
-                    <div class="faq-a">
+</div>
+<div class="faq-item">
+<div class="faq-q">What if the repair fails?</div>
+<div class="faq-a">
                         If the AI engine estimates a low probability of success, we will tell you before payment. 
                         In cases where a repair cannot be completed after payment, our support team will review the session for a partial or full refund 
                         depending on the circumstances and our refund policy.
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q">Is this safe for my device?</div>
-                    <div class="faq-a">
+</div>
+<div class="faq-item">
+<div class="faq-q">Is this safe for my device?</div>
+<div class="faq-a">
                         Any repair carries some risk, but our AI includes a risk assessment and our technicians follow standardized procedures. 
                         High-risk operations are clearly indicated and may be declined if the risk of permanent damage is too high.
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q">Do I need to be at the computer during the repair?</div>
-                    <div class="faq-a">
+</div>
+<div class="faq-item">
+<div class="faq-q">Do I need to be at the computer during the repair?</div>
+<div class="faq-a">
                         We recommend that you stay nearby while your device is connected. 
                         You can watch the entire repair via live mirroring and disconnect when we’re done.
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q">How do I become a technician on the platform?</div>
-                    <div class="faq-a">
+</div>
+<div class="faq-item">
+<div class="faq-q">How do I become a technician on the platform?</div>
+<div class="faq-a">
                         Experienced Android repair professionals can apply by emailing 
                         <a href="mailto:itechinfomtl@gmail.com" style="color: var(--primary); text-decoration: none;">itechinfomtl@gmail.com</a>. 
                         We’ll ask for basic credentials, verify your skills, and then whitelist your dashboard login if approved.
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
 <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
 <div class="space-y-4">
@@ -1137,8 +1095,7 @@
 </div>
 </div>
 </footer>
-
-    <script>
+<script>
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
 
