@@ -153,17 +153,399 @@
   <!-- Skip to main content link -->
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-lg">Skip to main content</a>
 
-  <!-- Shared Header -->
-  <script>
-    fetch('/includes/header.html')
-      .then(response => response.text())
-      .then(html => {
-        const headerContainer = document.createElement('div');
-        headerContainer.innerHTML = html;
-        document.body.insertBefore(headerContainer.firstElementChild, document.body.firstChild);
-      })
-      .catch(error => console.error('Error loading header:', error));
-  </script>
+  <!-- Shared Header (from includes/header.html) -->
+<!--
+  iD01t Productions - Shared Header Component
+  Version: 2.0.0
+  Last Updated: October 30, 2025
+
+  This header should be included on all pages for consistency.
+  Includes: Navigation, Theme Toggle, Language Switcher, Mobile Menu
+-->
+
+<!-- Skip to main content link for accessibility -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Main Navigation -->
+<nav role="navigation" aria-label="Main navigation" class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo and Desktop Navigation -->
+      <div class="flex items-center space-x-8">
+        <!-- Logo -->
+        <a href="/" aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring rounded">
+          <img
+            src="/assets/img/brand/logo.svg"
+            alt="iD01t Productions logo"
+            class="h-8 w-8"
+            width="32"
+            height="32"
+          >
+          <span class="font-semibold text-lg text-slate-900 dark:text-white">iD01t Productions</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="/store.html" class="nav-link">Store</a>
+          <a href="/ebooks.html" class="nav-link">eBooks</a>
+          <a href="/audiobooks.html" class="nav-link">Audiobooks</a>
+          <a href="/apps.html" class="nav-link">Apps</a>
+          <a href="/games.html" class="nav-link">Games</a>
+          <a href="/music.html" class="nav-link">Music</a>
+          <a href="/blog.html" class="nav-link">Blog</a>
+          <a href="/nini.html" class="nav-link">Nini's Adventures</a>
+        </div>
+      </div>
+
+      <!-- Right Side Controls -->
+      <div class="flex items-center space-x-4">
+        <!-- Language Switcher -->
+        <div class="language-switcher hidden sm:flex items-center gap-2">
+          <button
+            data-lang="en"
+            class="lang-btn px-2 py-1 rounded text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+            aria-label="Switch to English"
+          >
+            EN
+          </button>
+          <span class="text-slate-300 dark:text-slate-600">|</span>
+          <button
+            data-lang="fr"
+            class="lang-btn px-2 py-1 rounded text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+            aria-label="Passer au français"
+          >
+            FR
+          </button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button
+          id="themeToggle"
+          aria-label="Toggle theme"
+          class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5 text-slate-700 dark:text-slate-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <!-- Moon icon for light mode, sun icon for dark mode -->
+            <path
+              class="dark-icon"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              class="light-icon hidden"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+
+        <!-- Contact Button (Desktop) -->
+        <a
+          href="/contact.html"
+          class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring font-medium"
+        >
+          Contact
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobileMenuBtn"
+          aria-expanded="false"
+          aria-label="Toggle mobile menu"
+          class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+        >
+          <svg
+            id="menuIcon"
+            aria-hidden="true"
+            class="w-6 h-6 text-slate-700 dark:text-slate-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+          <svg
+            id="closeIcon"
+            aria-hidden="true"
+            class="w-6 h-6 hidden text-slate-700 dark:text-slate-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobileMenu"
+    class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"
+  >
+    <div class="px-4 py-4 space-y-2">
+      <a href="/store.html" class="mobile-nav-link">Store</a>
+      <a href="/ebooks.html" class="mobile-nav-link">eBooks</a>
+      <a href="/audiobooks.html" class="mobile-nav-link">Audiobooks</a>
+      <a href="/apps.html" class="mobile-nav-link">Apps</a>
+      <a href="/games.html" class="mobile-nav-link">Games</a>
+      <a href="/music.html" class="mobile-nav-link">Music</a>
+      <a href="/blog.html" class="mobile-nav-link">Blog</a>
+      <a href="/nini.html" class="mobile-nav-link">Nini's Adventures</a>
+
+      <!-- Mobile Language Switcher -->
+      <div class="flex items-center gap-2 px-4 py-2">
+        <button data-lang="en" class="lang-btn flex-1 px-3 py-2 rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">EN</button>
+        <button data-lang="fr" class="lang-btn flex-1 px-3 py-2 rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">FR</button>
+      </div>
+
+      <!-- Mobile Contact Button -->
+      <a
+        href="/contact.html"
+        class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center font-medium"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Shared CSS for Navigation -->
+<style>
+  /* Skip Link */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--brand-600, #008ef6);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 0.5rem 0;
+    font-weight: 600;
+    z-index: 100;
+    text-decoration: none;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Navigation Links */
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    color: #64748b; /* slate-500 */
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .dark .nav-link {
+    color: #cbd5e1; /* slate-300 */
+  }
+
+  .nav-link:hover {
+    color: #008ef6; /* brand-600 */
+    background: #f1f5f9; /* slate-100 */
+    text-decoration: none;
+  }
+
+  .dark .nav-link:hover {
+    color: #5abaff; /* brand-400 */
+    background: #1e293b; /* slate-800 */
+  }
+
+  /* Active state (add .active class via JavaScript based on current page) */
+  .nav-link.active {
+    color: #008ef6;
+    background: #e0f2ff; /* brand-100 */
+  }
+
+  .dark .nav-link.active {
+    color: #5abaff;
+    background: #1e293b;
+  }
+
+  /* Mobile Navigation Links */
+  .mobile-nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #64748b;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .dark .mobile-nav-link {
+    color: #cbd5e1;
+  }
+
+  .mobile-nav-link:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+    text-decoration: none;
+  }
+
+  .dark .mobile-nav-link:hover {
+    background: #1e293b;
+    color: #f1f5f9;
+  }
+
+  /* Focus Ring */
+  .focus-ring:focus-visible {
+    outline: 2px solid #008ef6;
+    outline-offset: 2px;
+  }
+
+  /* Language Switcher */
+  .lang-btn {
+    font-weight: 600;
+    color: #64748b;
+    transition: all 0.2s ease;
+  }
+
+  .dark .lang-btn {
+    color: #cbd5e1;
+  }
+
+  .lang-btn.active {
+    color: #008ef6;
+    font-weight: 700;
+  }
+
+  .dark .lang-btn.active {
+    color: #5abaff;
+  }
+</style>
+
+<!-- Shared JavaScript for Navigation -->
+<script>
+  (function() {
+    // Theme Toggle
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const darkIcon = document.querySelector('.dark-icon');
+    const lightIcon = document.querySelector('.light-icon');
+
+    const setTheme = (mode) => {
+      if (mode === 'dark') {
+        root.classList.add('dark');
+        if (darkIcon && lightIcon) {
+          darkIcon.classList.add('hidden');
+          lightIcon.classList.remove('hidden');
+        }
+      } else {
+        root.classList.remove('dark');
+        if (darkIcon && lightIcon) {
+          darkIcon.classList.remove('hidden');
+          lightIcon.classList.add('hidden');
+        }
+      }
+      localStorage.setItem('theme', mode);
+    };
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const newMode = root.classList.contains('dark') ? 'light' : 'dark';
+        setTheme(newMode);
+      });
+    }
+
+    // Initialize theme
+    (() => {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        setTheme(saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+      }
+    })();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('hidden');
+        mobileBtn.setAttribute('aria-expanded', !isOpen);
+
+        if (menuIcon && closeIcon) {
+          menuIcon.classList.toggle('hidden', !isOpen);
+          closeIcon.classList.toggle('hidden', isOpen);
+        }
+
+        // Focus management
+        if (!isOpen) {
+          const firstLink = mobileMenu.querySelector('a');
+          if (firstLink) firstLink.focus();
+        } else {
+          mobileBtn.focus();
+        }
+      });
+    }
+
+    // Active Page Highlighting
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+    navLinks.forEach(link => {
+      const linkPath = new URL(link.href, window.location.origin).pathname;
+      if (linkPath === currentPath || (currentPath === '/' && linkPath === '/index.html')) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
+    // Language Switcher
+    const currentLang = localStorage.getItem('language') || 'en';
+    const langBtns = document.querySelectorAll('.lang-btn');
+
+    const setLanguage = (lang) => {
+      localStorage.setItem('language', lang);
+      langBtns.forEach(btn => {
+        if (btn.dataset.lang === lang) {
+          btn.classList.add('active');
+          btn.setAttribute('aria-pressed', 'true');
+        } else {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-pressed', 'false');
+        }
+      });
+
+      // Dispatch custom event for language change
+      document.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
+    };
+
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.dataset.lang);
+      });
+    });
+
+    // Initialize language
+    setLanguage(currentLang);
+  })();
+</script>
+
 
   <!-- Main Content -->
   <main id="main" role="main">
@@ -304,25 +686,796 @@
 
   </main>
 
-  <!-- Shared Footer -->
-  <script>
-    fetch('/includes/footer.html')
-      .then(response => response.text())
-      .then(html => {
-        document.body.insertAdjacentHTML('beforeend', html);
-      })
-      .catch(error => console.error('Error loading footer:', error));
-  </script>
+  <!-- Shared Footer (from includes/footer.html) -->
+<!--
+  iD01t Productions - Shared Footer Component
+  Version: 2.0.0
+  Last Updated: October 30, 2025
 
-  <!-- Consent Banner -->
-  <script>
-    fetch('/includes/consent-banner.html')
-      .then(response => response.text())
-      .then(html => {
-        document.body.insertAdjacentHTML('beforeend', html);
-      })
-      .catch(error => console.error('Error loading consent banner:', error));
-  </script>
+  This footer should be included on all pages for consistency.
+  Includes: Site map, Legal links, Social links, Copyright
+-->
+
+<footer role="contentinfo" class="mt-24 bg-slate-900 text-slate-300 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Main Footer Content -->
+    <div class="grid md:grid-cols-4 gap-12 mb-12">
+      <!-- Brand Section -->
+      <div class="space-y-4">
+        <a href="/" aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring rounded">
+          <img
+            src="/assets/img/brand/logo.svg"
+            alt="iD01t Productions logo"
+            class="h-8 w-8"
+            width="32"
+            height="32"
+          >
+          <span class="font-semibold text-lg text-white">iD01t Productions</span>
+        </a>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Professional digital tools and creative content for developers, creators, and innovators worldwide.
+        </p>
+        <!-- Social Links -->
+        <div class="flex items-center gap-4 pt-2">
+          <a
+            href="https://github.com/iD01t"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="text-slate-400 hover:text-white transition-colors focus-ring rounded"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a
+            href="https://twitter.com/id01t"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="text-slate-400 hover:text-white transition-colors focus-ring rounded"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@djid01t"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="text-slate-400 hover:text-white transition-colors focus-ring rounded"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a
+            href="https://id01t.itch.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Itch.io"
+            class="text-slate-400 hover:text-white transition-colors focus-ring rounded"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3.129 1.338c-1.047.622-.824 3.023-.824 3.023s.678.94 1.53.94c.853 0 1.53-.94 1.53-.94s-.678-.94-1.53-.94c-.85 0-1.529.917-1.529.917s-.136-2.051.823-3.018z"/>
+              <path d="M20.895 1.338c1.047.622.824 3.023.824 3.023s-.678.94-1.53.94c-.853 0-1.53-.94-1.53-.94s.678-.94 1.53-.94c.85 0 1.529.917 1.529.917s.136-2.051-.823-3.018z"/>
+              <path d="M12 3.802c-.851 0-1.53.941-1.53.941s.679.941 1.53.941 1.531-.941 1.531-.941-.679-.941-1.531-.941z"/>
+              <path d="M12.012 8.116c-3.495 0-6.376 2.881-6.376 6.376 0 .555.081 1.1.227 1.617h12.298c.146-.517.227-1.062.227-1.617 0-3.495-2.881-6.376-6.376-6.376zm0 10.126c-1.948 0-3.533-1.585-3.533-3.533s1.585-3.533 3.533-3.533 3.533 1.585 3.533 3.533-1.585 3.533-3.533 3.533z"/>
+              <path d="M12 13.409c-.74 0-1.341.601-1.341 1.341s.601 1.341 1.341 1.341 1.341-.601 1.341-1.341-.601-1.341-1.341-1.341z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Products Column -->
+      <div>
+        <h3 class="font-semibold text-white mb-4">Products</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/apps.html" class="footer-link">Windows Apps</a></li>
+          <li><a href="/ebooks.html" class="footer-link">Technical eBooks</a></li>
+          <li><a href="/audiobooks.html" class="footer-link">Audiobooks</a></li>
+          <li><a href="/games.html" class="footer-link">Online Games</a></li>
+          <li><a href="/music.html" class="footer-link">Original Music</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div>
+        <h3 class="font-semibold text-white mb-4">Resources</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/blog.html" class="footer-link">Blog</a></li>
+          <li><a href="/nini.html" class="footer-link">Nini's Adventures</a></li>
+          <li><a href="/store.html" class="footer-link">Store</a></li>
+          <li><a href="/about.html" class="footer-link">About Us</a></li>
+          <li><a href="/contact.html" class="footer-link">Contact</a></li>
+          <li><a href="/#newsletter" class="footer-link">Newsletter</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div>
+        <h3 class="font-semibold text-white mb-4">Legal</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/legal/terms.html" class="footer-link">Terms of Service</a></li>
+          <li><a href="/legal/privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="/legal/refunds.html" class="footer-link">Refund Policy</a></li>
+          <li><a href="/legal/cookies.html" class="footer-link">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <!-- Copyright -->
+        <p class="text-slate-400">
+          &copy; <span id="copyrightYear"></span> iD01t Productions. All rights reserved.
+        </p>
+
+        <!-- Status & Quick Links -->
+        <div class="flex items-center gap-6">
+          <!-- System Status -->
+          <span class="flex items-center gap-2">
+            <span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span class="text-slate-400">All systems operational</span>
+          </span>
+
+          <!-- Quick Links -->
+          <a href="/legal/terms.html" class="text-slate-400 hover:text-white transition-colors focus-ring rounded">Terms</a>
+          <a href="/legal/privacy.html" class="text-slate-400 hover:text-white transition-colors focus-ring rounded">Privacy</a>
+        </div>
+      </div>
+
+      <!-- Made with Love -->
+      <p class="text-center text-slate-500 text-xs mt-4">
+        Made with <span class="text-red-500" aria-label="love">♥</span> for creators worldwide
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer Styles -->
+<style>
+  .footer-link {
+    color: #cbd5e1; /* slate-300 */
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+  }
+
+  .footer-link:hover {
+    color: #f1f5f9; /* slate-100 */
+    text-decoration: none;
+  }
+
+  .footer-link:focus-visible {
+    outline: 2px solid #008ef6; /* brand-600 */
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+</style>
+
+<!-- Footer JavaScript -->
+<script>
+  (function() {
+    // Set current year in copyright
+    const yearElement = document.getElementById('copyrightYear');
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+
+    // Optional: Add smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+          // Update URL without triggering scroll
+          history.pushState(null, null, targetId);
+
+          // Focus target for accessibility
+          target.setAttribute('tabindex', '-1');
+          target.focus();
+        }
+      });
+    });
+  })();
+</script>
+
+
+  <!-- Consent Banner (from includes/consent-banner.html) -->
+<!--
+  iD01t Productions - Cookie Consent Banner
+  Version: 2.0.0
+  Last Updated: October 30, 2025
+
+  GDPR/CCPA compliant cookie consent banner
+  Supports: Necessary, Analytics, Marketing cookies
+-->
+
+<!-- Consent Banner -->
+<div id="consentBanner" class="consent-banner hidden" role="dialog" aria-labelledby="consentTitle" aria-modal="false">
+  <div class="consent-content">
+    <!-- Title & Message -->
+    <div class="consent-header">
+      <h2 id="consentTitle" class="consent-title">🍪 Cookie Consent</h2>
+      <p class="consent-message">
+        We use cookies to enhance your experience, analyze site traffic, and for marketing purposes.
+        By clicking 'Accept All', you consent to our use of cookies.
+        <a href="/legal/privacy.html" class="consent-link">Learn more</a>
+      </p>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="consent-actions">
+      <button id="consentAcceptAll" class="consent-btn consent-btn-primary">
+        Accept All
+      </button>
+      <button id="consentRejectAll" class="consent-btn consent-btn-secondary">
+        Reject All
+      </button>
+      <button id="consentCustomize" class="consent-btn consent-btn-text">
+        Customize
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Customization Modal -->
+<div id="consentModal" class="consent-modal hidden" role="dialog" aria-labelledby="consentModalTitle" aria-modal="true">
+  <div class="consent-modal-overlay" id="consentModalOverlay"></div>
+  <div class="consent-modal-content">
+    <div class="consent-modal-header">
+      <h2 id="consentModalTitle" class="consent-modal-title">Cookie Preferences</h2>
+      <button id="consentModalClose" class="consent-modal-close" aria-label="Close">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="consent-modal-body">
+      <!-- Necessary Cookies (Always On) -->
+      <div class="consent-option">
+        <div class="consent-option-header">
+          <label class="consent-option-label">
+            <input type="checkbox" checked disabled class="consent-checkbox">
+            <span class="consent-option-name">Necessary Cookies</span>
+            <span class="consent-option-badge">Always Active</span>
+          </label>
+        </div>
+        <p class="consent-option-description">
+          These cookies are essential for the website to function properly. They enable basic features like page navigation and access to secure areas.
+        </p>
+      </div>
+
+      <!-- Analytics Cookies -->
+      <div class="consent-option">
+        <div class="consent-option-header">
+          <label class="consent-option-label">
+            <input type="checkbox" id="consentAnalytics" class="consent-checkbox">
+            <span class="consent-option-name">Analytics Cookies</span>
+          </label>
+        </div>
+        <p class="consent-option-description">
+          These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our services.
+        </p>
+      </div>
+
+      <!-- Marketing Cookies -->
+      <div class="consent-option">
+        <div class="consent-option-header">
+          <label class="consent-option-label">
+            <input type="checkbox" id="consentMarketing" class="consent-checkbox">
+            <span class="consent-option-name">Marketing Cookies</span>
+          </label>
+        </div>
+        <p class="consent-option-description">
+          These cookies are used to show you relevant ads based on your interests. We may share this information with third-party advertising partners.
+        </p>
+      </div>
+    </div>
+
+    <div class="consent-modal-footer">
+      <button id="consentSavePreferences" class="consent-btn consent-btn-primary">
+        Save Preferences
+      </button>
+      <button id="consentAcceptAllModal" class="consent-btn consent-btn-secondary">
+        Accept All
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Consent Banner Styles -->
+<style>
+  /* Banner */
+  .consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .dark .consent-banner {
+    background: #1e293b;
+    border-top-color: #334155;
+  }
+
+  .consent-banner.hidden {
+    transform: translateY(100%);
+  }
+
+  .consent-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .consent-content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .consent-header {
+    flex: 1;
+  }
+
+  .consent-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #0f172a;
+  }
+
+  .dark .consent-title {
+    color: #f1f5f9;
+  }
+
+  .consent-message {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .dark .consent-message {
+    color: #cbd5e1;
+  }
+
+  .consent-link {
+    color: #008ef6;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .dark .consent-link {
+    color: #5abaff;
+  }
+
+  .consent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .consent-btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    white-space: nowrap;
+  }
+
+  .consent-btn-primary {
+    background: #008ef6;
+    color: white;
+  }
+
+  .consent-btn-primary:hover {
+    background: #0070d7;
+  }
+
+  .consent-btn-secondary {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+
+  .dark .consent-btn-secondary {
+    background: #334155;
+    color: #f1f5f9;
+  }
+
+  .consent-btn-secondary:hover {
+    background: #cbd5e1;
+  }
+
+  .dark .consent-btn-secondary:hover {
+    background: #475569;
+  }
+
+  .consent-btn-text {
+    background: transparent;
+    color: #64748b;
+    text-decoration: underline;
+  }
+
+  .dark .consent-btn-text {
+    color: #cbd5e1;
+  }
+
+  .consent-btn-text:hover {
+    color: #008ef6;
+  }
+
+  /* Modal */
+  .consent-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .consent-modal.hidden {
+    display: none;
+  }
+
+  .consent-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .consent-modal-content {
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .dark .consent-modal-content {
+    background: #1e293b;
+  }
+
+  .consent-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .dark .consent-modal-header {
+    border-bottom-color: #334155;
+  }
+
+  .consent-modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #0f172a;
+  }
+
+  .dark .consent-modal-title {
+    color: #f1f5f9;
+  }
+
+  .consent-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #64748b;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .dark .consent-modal-close {
+    color: #cbd5e1;
+  }
+
+  .consent-modal-close:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+  }
+
+  .dark .consent-modal-close:hover {
+    background: #334155;
+    color: #f1f5f9;
+  }
+
+  .consent-modal-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .consent-option {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+
+  .dark .consent-option {
+    border-color: #334155;
+  }
+
+  .consent-option-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .consent-option-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .dark .consent-option-label {
+    color: #f1f5f9;
+  }
+
+  .consent-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+  }
+
+  .consent-checkbox:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .consent-option-name {
+    flex: 1;
+  }
+
+  .consent-option-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: #e0f2ff;
+    color: #0369a1;
+    border-radius: 9999px;
+    font-weight: 600;
+  }
+
+  .dark .consent-option-badge {
+    background: #0c4a6e;
+    color: #7dd3fc;
+  }
+
+  .consent-option-description {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .dark .consent-option-description {
+    color: #cbd5e1;
+  }
+
+  .consent-modal-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+  }
+
+  .dark .consent-modal-footer {
+    border-top-color: #334155;
+  }
+</style>
+
+<!-- Consent Banner JavaScript -->
+<script>
+  (function() {
+    const CONSENT_KEY = 'id01t_cookie_consent';
+    const CONSENT_VERSION = '1.0';
+
+    // Elements
+    const banner = document.getElementById('consentBanner');
+    const modal = document.getElementById('consentModal');
+    const modalOverlay = document.getElementById('consentModalOverlay');
+
+    // Banner buttons
+    const acceptAllBtn = document.getElementById('consentAcceptAll');
+    const rejectAllBtn = document.getElementById('consentRejectAll');
+    const customizeBtn = document.getElementById('consentCustomize');
+
+    // Modal buttons
+    const modalClose = document.getElementById('consentModalClose');
+    const savePreferencesBtn = document.getElementById('consentSavePreferences');
+    const acceptAllModalBtn = document.getElementById('consentAcceptAllModal');
+
+    // Checkboxes
+    const analyticsCheckbox = document.getElementById('consentAnalytics');
+    const marketingCheckbox = document.getElementById('consentMarketing');
+
+    // Get current consent
+    function getConsent() {
+      try {
+        const stored = localStorage.getItem(CONSENT_KEY);
+        return stored ? JSON.parse(stored) : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // Save consent
+    function saveConsent(consent) {
+      const data = {
+        version: CONSENT_VERSION,
+        timestamp: new Date().toISOString(),
+        ...consent
+      };
+      localStorage.setItem(CONSENT_KEY, JSON.stringify(data));
+      applyConsent(consent);
+      hideBanner();
+      hideModal();
+    }
+
+    // Apply consent (load scripts based on consent)
+    function applyConsent(consent) {
+      // Trigger custom event for other scripts to listen to
+      document.dispatchEvent(new CustomEvent('consentChanged', {
+        detail: consent
+      }));
+
+      // Example: Load Google Analytics if analytics consent given
+      if (consent.analytics) {
+        loadAnalytics();
+      }
+
+      // Example: Load marketing scripts if marketing consent given
+      if (consent.marketing) {
+        loadMarketing();
+      }
+    }
+
+    // Load analytics (placeholder - replace with your analytics)
+    function loadAnalytics() {
+      console.log('Analytics enabled');
+      // Example: Load Google Analytics
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag(){dataLayer.push(arguments);}
+      // gtag('js', new Date());
+      // gtag('config', 'GA_MEASUREMENT_ID');
+    }
+
+    // Load marketing (placeholder - replace with your marketing scripts)
+    function loadMarketing() {
+      console.log('Marketing enabled');
+      // Load marketing/advertising scripts here
+    }
+
+    // Show/hide banner
+    function showBanner() {
+      banner.classList.remove('hidden');
+      document.body.style.paddingBottom = banner.offsetHeight + 'px';
+    }
+
+    function hideBanner() {
+      banner.classList.add('hidden');
+      document.body.style.paddingBottom = '0';
+    }
+
+    // Show/hide modal
+    function showModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+
+      // Load current preferences
+      const consent = getConsent();
+      if (consent) {
+        analyticsCheckbox.checked = consent.analytics || false;
+        marketingCheckbox.checked = consent.marketing || false;
+      }
+    }
+
+    function hideModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Event handlers
+    acceptAllBtn.addEventListener('click', () => {
+      saveConsent({
+        necessary: true,
+        analytics: true,
+        marketing: true
+      });
+    });
+
+    rejectAllBtn.addEventListener('click', () => {
+      saveConsent({
+        necessary: true,
+        analytics: false,
+        marketing: false
+      });
+    });
+
+    customizeBtn.addEventListener('click', () => {
+      showModal();
+    });
+
+    acceptAllModalBtn.addEventListener('click', () => {
+      saveConsent({
+        necessary: true,
+        analytics: true,
+        marketing: true
+      });
+    });
+
+    savePreferencesBtn.addEventListener('click', () => {
+      saveConsent({
+        necessary: true,
+        analytics: analyticsCheckbox.checked,
+        marketing: marketingCheckbox.checked
+      });
+    });
+
+    modalClose.addEventListener('click', hideModal);
+    modalOverlay.addEventListener('click', hideModal);
+
+    // Initialize
+    const consent = getConsent();
+    if (!consent) {
+      // No consent yet, show banner
+      showBanner();
+    } else {
+      // Consent exists, apply it
+      applyConsent(consent);
+    }
+
+    // Allow programmatic access
+    window.cookieConsent = {
+      show: showBanner,
+      hide: hideBanner,
+      get: getConsent,
+      reset: () => {
+        localStorage.removeItem(CONSENT_KEY);
+        showBanner();
+      }
+    };
+  })();
+</script>
+
 
 </body>
 </html>
