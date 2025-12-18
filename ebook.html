@@ -3,7 +3,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title id="title">Loading…</title>
-<link as="fetch" crossorigin="" href="/assets/catalog.json" rel="preload"/>
+<link as="fetch" crossorigin="" href="/data/catalog.json" rel="preload"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
        tailwind.config = {
@@ -159,7 +159,7 @@
        async function boot(){
          const params=new URLSearchParams(location.search);const slug=params.get("slug");
          if(!slug){document.body.innerHTML="<h1>Missing slug</h1>";return;}
-         const data=await fetch("/assets/catalog.json",{cache:"no-store"}).then(r=>r.json());
+         const data=await fetch("/data/catalog.json",{cache:"no-store"}).then(r=>r.json());
          const e=data.ebooks.find(x=>slugify(x.title)===slug); if(!e){document.body.innerHTML="<h1>Not found</h1>";return;}
          // SEO updates
          document.title = e.title + " — iD01t Productions";

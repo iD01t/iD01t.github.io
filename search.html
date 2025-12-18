@@ -189,7 +189,7 @@
     // Load search data
     async function loadSearchData() {
       try {
-        const response = await fetch('/assets/catalog.json');
+        const response = await fetch('/data/catalog.json');
         const data = await response.json();
         searchData = [
           ...(data.ebooks || []).map(item => ({...item, type: 'ebooks'})),
