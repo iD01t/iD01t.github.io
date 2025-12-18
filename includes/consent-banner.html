@@ -5,102 +5,92 @@
 
   GDPR/CCPA compliant cookie consent banner
   Supports: Necessary, Analytics, Marketing cookies
--->
-
-<!-- Consent Banner -->
-<div id="consentBanner" class="consent-banner hidden" role="dialog" aria-labelledby="consentTitle" aria-modal="false">
-  <div class="consent-content">
-    <!-- Title & Message -->
-    <div class="consent-header">
-      <h2 id="consentTitle" class="consent-title">🍪 Cookie Consent</h2>
-      <p class="consent-message">
+--><!-- Consent Banner --><html><body><div aria-labelledby="consentTitle" aria-modal="false" class="consent-banner hidden" id="consentBanner" role="dialog">
+<div class="consent-content">
+<!-- Title & Message -->
+<div class="consent-header">
+<h2 class="consent-title" id="consentTitle">🍪 Cookie Consent</h2>
+<p class="consent-message">
         We use cookies to enhance your experience, analyze site traffic, and for marketing purposes.
         By clicking 'Accept All', you consent to our use of cookies.
-        <a href="/legal/privacy.html" class="consent-link">Learn more</a>
-      </p>
-    </div>
-
-    <!-- Quick Actions -->
-    <div class="consent-actions">
-      <button id="consentAcceptAll" class="consent-btn consent-btn-primary">
+        <a class="consent-link" href="/legal/privacy.html">Learn more</a>
+</p>
+</div>
+<!-- Quick Actions -->
+<div class="consent-actions">
+<button class="consent-btn consent-btn-primary" id="consentAcceptAll">
         Accept All
       </button>
-      <button id="consentRejectAll" class="consent-btn consent-btn-secondary">
+<button class="consent-btn consent-btn-secondary" id="consentRejectAll">
         Reject All
       </button>
-      <button id="consentCustomize" class="consent-btn consent-btn-text">
+<button class="consent-btn consent-btn-text" id="consentCustomize">
         Customize
       </button>
-    </div>
-  </div>
 </div>
-
+</div>
+</div>
 <!-- Customization Modal -->
-<div id="consentModal" class="consent-modal hidden" role="dialog" aria-labelledby="consentModalTitle" aria-modal="true">
-  <div class="consent-modal-overlay" id="consentModalOverlay"></div>
-  <div class="consent-modal-content">
-    <div class="consent-modal-header">
-      <h2 id="consentModalTitle" class="consent-modal-title">Cookie Preferences</h2>
-      <button id="consentModalClose" class="consent-modal-close" aria-label="Close">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        </svg>
-      </button>
-    </div>
-
-    <div class="consent-modal-body">
-      <!-- Necessary Cookies (Always On) -->
-      <div class="consent-option">
-        <div class="consent-option-header">
-          <label class="consent-option-label">
-            <input type="checkbox" checked disabled class="consent-checkbox">
-            <span class="consent-option-name">Necessary Cookies</span>
-            <span class="consent-option-badge">Always Active</span>
-          </label>
-        </div>
-        <p class="consent-option-description">
+<div aria-labelledby="consentModalTitle" aria-modal="true" class="consent-modal hidden" id="consentModal" role="dialog">
+<div class="consent-modal-overlay" id="consentModalOverlay"></div>
+<div class="consent-modal-content">
+<div class="consent-modal-header">
+<h2 class="consent-modal-title" id="consentModalTitle">Cookie Preferences</h2>
+<button aria-label="Close" class="consent-modal-close" id="consentModalClose">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="consent-modal-body">
+<!-- Necessary Cookies (Always On) -->
+<div class="consent-option">
+<div class="consent-option-header">
+<label class="consent-option-label">
+<input checked="" class="consent-checkbox" disabled="" type="checkbox"/>
+<span class="consent-option-name">Necessary Cookies</span>
+<span class="consent-option-badge">Always Active</span>
+</label>
+</div>
+<p class="consent-option-description">
           These cookies are essential for the website to function properly. They enable basic features like page navigation and access to secure areas.
         </p>
-      </div>
-
-      <!-- Analytics Cookies -->
-      <div class="consent-option">
-        <div class="consent-option-header">
-          <label class="consent-option-label">
-            <input type="checkbox" id="consentAnalytics" class="consent-checkbox">
-            <span class="consent-option-name">Analytics Cookies</span>
-          </label>
-        </div>
-        <p class="consent-option-description">
+</div>
+<!-- Analytics Cookies -->
+<div class="consent-option">
+<div class="consent-option-header">
+<label class="consent-option-label">
+<input class="consent-checkbox" id="consentAnalytics" type="checkbox"/>
+<span class="consent-option-name">Analytics Cookies</span>
+</label>
+</div>
+<p class="consent-option-description">
           These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our services.
         </p>
-      </div>
-
-      <!-- Marketing Cookies -->
-      <div class="consent-option">
-        <div class="consent-option-header">
-          <label class="consent-option-label">
-            <input type="checkbox" id="consentMarketing" class="consent-checkbox">
-            <span class="consent-option-name">Marketing Cookies</span>
-          </label>
-        </div>
-        <p class="consent-option-description">
+</div>
+<!-- Marketing Cookies -->
+<div class="consent-option">
+<div class="consent-option-header">
+<label class="consent-option-label">
+<input class="consent-checkbox" id="consentMarketing" type="checkbox"/>
+<span class="consent-option-name">Marketing Cookies</span>
+</label>
+</div>
+<p class="consent-option-description">
           These cookies are used to show you relevant ads based on your interests. We may share this information with third-party advertising partners.
         </p>
-      </div>
-    </div>
-
-    <div class="consent-modal-footer">
-      <button id="consentSavePreferences" class="consent-btn consent-btn-primary">
+</div>
+</div>
+<div class="consent-modal-footer">
+<button class="consent-btn consent-btn-primary" id="consentSavePreferences">
         Save Preferences
       </button>
-      <button id="consentAcceptAllModal" class="consent-btn consent-btn-secondary">
+<button class="consent-btn consent-btn-secondary" id="consentAcceptAllModal">
         Accept All
       </button>
-    </div>
-  </div>
 </div>
-
+</div>
+</div>
 <!-- Consent Banner Styles -->
 <style>
   /* Banner */
@@ -406,7 +396,6 @@
     border-top-color: #334155;
   }
 </style>
-
 <!-- Consent Banner JavaScript -->
 <script>
   (function() {
@@ -580,3 +569,4 @@
     };
   })();
 </script>
+</body></html>

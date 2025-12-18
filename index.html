@@ -18,7 +18,7 @@
 <!-- Security Headers -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self';">
 <!-- Author / Keywords -->
 <meta content="Guillaume Lessard" name="author"/>
 <meta content="Windows utilities, technical eBooks, multiplayer games, original music, programming tools, AI automation, chess software, music production" name="keywords"/>
@@ -66,7 +66,8 @@
   }
   </script>
 <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="assets/js/tailwindcss.js" crossorigin="anonymous"></script>
 <script>
     tailwind.config = {
       theme: {

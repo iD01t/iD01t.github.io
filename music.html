@@ -27,13 +27,13 @@
 <link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
 <!-- Hreflang for Internationalization -->
-<link rel="alternate" hreflang="en" href="https://id01t.github.io/music.html">
-<link rel="alternate" hreflang="fr" href="https://id01t.github.io/fr/music.html">
-<link rel="alternate" hreflang="x-default" href="https://id01t.github.io/music.html">
+<link href="https://id01t.github.io/music.html" hreflang="en" rel="alternate"/>
+<link href="https://id01t.github.io/fr/music.html" hreflang="fr" rel="alternate"/>
+<link href="https://id01t.github.io/music.html" hreflang="x-default" rel="alternate"/>
 <!-- Security Headers -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self';">
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
+<meta content="SAMEORIGIN" http-equiv="X-Frame-Options"/>
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
 <!-- Structured Data -->
 <script type="application/ld+json">
     {
@@ -58,7 +58,7 @@
     }
     </script>
 <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script>
+<script crossorigin="anonymous" src="https://cdn.tailwindcss.com"></script>
 <script>
         tailwind.config = {
             darkMode: 'class',

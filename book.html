@@ -17,6 +17,8 @@
 <link crossorigin="" href="https://play.google.com" rel="preconnect"/>
 <!-- PWA -->
 <link href="/manifest.webmanifest" rel="manifest"/>
+<!-- Open Graph -->
+<meta property="og:image" content=""/>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -206,9 +208,8 @@
         return;
       }
 
-      const data = await loadCatalog();
-      const allBooks = [...(data.ebooks || []), ...(data.audiobooks || [])];
-      const book = allBooks.find(b => b.id === bookId);
+      const catalog = await fetch("/data/catalog.json").then(res => res.json());
+      const book = catalog.find(b => b.id === bookId);
 
       if (!book) {
         document.getElementById('detailContainer').innerHTML = '<div class="text-center py-20"><h1 class="text-2xl font-bold text-red-600">Book not found</h1></div>';
@@ -217,28 +218,18 @@
 
       // Update page title and meta
       document.title = `${book.title} · iD01t Productions`;
+      document.querySelector("meta[property='og:image']").setAttribute("content", book.cover_hd);
 
       // Render detail view
       document.getElementById('detailContainer').innerHTML = `
         <div class="grid md:grid-cols-2 gap-12">
           <!-- Cover -->
-          <div>
+          <div class="book-cover">
             <img
               src="${book.cover_hd}"
               alt="${book.title} cover"
               class="w-full rounded-2xl shadow-2xl"
-              
-              feature/catalog-system
               onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'"
-
-        feature/catalog-system
-              onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'"
-
-              feature/catalog-system
-              onerror="this.src='/assets/img/placeholders/card-portrait-384x576.webp'"
-
-              onerror="this.src='/assets/img/placeholder-cover.jpg'"
-         main
             />
           </div>
 
