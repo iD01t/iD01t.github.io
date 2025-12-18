@@ -20,9 +20,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
       }
 
-      // The catalog is an array of objects, where the second element is an object with ebooks and audiobooks arrays.
-      const allBooks = [...(catalog[1].ebooks || []), ...(catalog[1].audiobooks || [])];
-      const book = allBooks.find(b => b.id === bookId);
+      // The catalog is a flat array of book objects.
+      const book = catalog.find(b => b.id === bookId);
 
       if (book && book.cover_hd) {
         const ogImage = document.querySelector("meta[property='og:image']");

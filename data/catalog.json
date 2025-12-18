@@ -1,4 +1,3 @@
- fix-catalog-pages
 [
   {
     "id": "NT1UEQAAQBAJ",
@@ -2083,7 +2082,7 @@
   {
     "id": "V_05EQAAQBAJ",
     "title": "Zen and the Art of Self-Confidence",
-     "subtitle": "",
+    "subtitle": "",
     "format": "eBook",
     "contributors": "Guillaume Lessard",
     "publisher": "iD01t Productions",
@@ -2172,23 +2171,3 @@
     "price": "9.99"
   }
 ]
-
-{
-  "ebooks": [
-    {
-      "id": "P3NoEQAAQBAJ",
-      "title": "🌿 La Charte des Relations Sacrées de la Nouvelle Terre",
-      "subtitle": "",
-      "format": "eBook",
-      "contributors": "Guillaume Lessard",
-      "publisher": "iD01t Productions",
-      "language": "en",
-      "date": "2024-01-01",
-      "cover_hd": "https://books.google.com/books/content?id=P3NoEQAAQBAJ&printsec=frontcover&img=1&zoom=3&source=gbs_api",
-      "buy": "https://play.google.com/store/books/details?id=P3NoEQAAQBAJ",
-      "price": "9.99"
-    }
-  ],
-  "audiobooks": []
-}
- main
