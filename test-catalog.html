@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Catalog Test</title>
+</head>
+<body>
+<h1>Testing Catalog Loading</h1>
+<div id="status">Testing...</div>
+<div id="result"></div>
+
+<script>
+async function test() {
+  const status = document.getElementById('status');
+  const result = document.getElementById('result');
+  
+  try {
+    status.textContent = 'Fetching /data/catalog.json...';
+    const response = await fetch('/data/catalog.json');
+    status.textContent = `Response: ${response.status} ${response.statusText}`;
+    
+    if (!response.ok) {
+      result.innerHTML = `<pre>Error: ${response.status}</pre>`;
+      return;
+    }
+    
+    const data = await response.json();
+    result.innerHTML = `<pre>Success!\nKeys: ${Object.keys(data).join(', ')}\neBooks: ${data.ebooks?.length || 0}\nAudiobooks: ${data.audiobooks?.length || 0}</pre>`;
+    
+  } catch (error) {
+    status.textContent = 'Error!';
+    result.innerHTML = `<pre>Error: ${error.message}\n${error.stack}</pre>`;
+  }
+}
+
+test();
+</script>
+</body>
+</html>
