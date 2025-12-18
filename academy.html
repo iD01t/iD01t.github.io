@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iD01t Academy — Professional Learning by iD01t Productions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>iD01t Academy — Professional Learning by iD01t Productions</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Orbitron:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -496,243 +495,267 @@
     </style>
 </head>
 <body>
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <!-- Header -->
-    <header id="header">
-        <nav>
-            <a href="/" class="logo">iD01t</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/">Home</a></li>
-                <li><a href="/store">Store</a></li>
-                <li class="dropdown">
-                    <span class="dropdown-toggle">
-                        Courses <i class="fas fa-chevron-down"></i>
-                    </span>
-                    <div class="dropdown-menu">
-                        <a href="#prompts">Prompts Mastery</a>
-                        <a href="#python">Python Development</a>
-                        <a href="#java">Java Applications</a>
-                        <a href="#csharp">C# Enterprise</a>
-                        <a href="#dj">DJ & Production</a>
-                    </div>
-                </li>
-                <li><a href="https://github.com/id01t" target="_blank">GitHub</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>iD01t Academy</h1>
-            <p>Master Technology, Creativity, and AI — One Course at a Time</p>
-            <div class="cta-buttons">
-                <a href="#prompts" class="btn btn-primary">Start Learning</a>
-                <a href="#courses" class="btn btn-secondary">Explore All Courses</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Course Sections -->
-    <div class="courses-container">
-        <!-- Prompts Course -->
-        <section id="prompts" class="course-section">
-            <div class="section-header">
-                <h2>Prompt Mastery 2025</h2>
-                <p class="subtitle">Professional Certification in AI Prompt Engineering</p>
-                <p>Learn the RGCCO and PACE frameworks, model-specific prompting techniques, and advanced LLM interaction design. Master communication with GPT, Claude, Gemini, and all major AI models.</p>
-            </div>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-brain"></i></div>
-                    <h3>Comprehensive Curriculum</h3>
-                    <p>25 structured lessons covering foundations, model-specific techniques, advanced patterns, and production deployment strategies.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Professional Level</h3>
-                    <p>Transform from casual AI user to skilled prompt engineer capable of extracting maximum value from any language model.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-certificate"></i></div>
-                    <h3>Full Certification</h3>
-                    <p>8 weeks of intensive training with practical exercises, real-world case studies, and capstone project. Professional certificate upon completion.</p>
-                </div>
-            </div>
-            <div class="course-cta">
-                <a href="/academy/prompts.html" class="btn btn-primary">Start Prompt Mastery →</a>
-            </div>
-        </section>
-
-        <!-- Python Course -->
-        <section id="python" class="course-section">
-            <div class="section-header">
-                <h2>Python Development</h2>
-                <p class="subtitle">From Automation to AI Integration</p>
-                <p>Learn real-world Python workflows for MusicForge automation, AI API integration, data processing, and intelligent application development.</p>
-            </div>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <div class="icon"><i class="fab fa-python"></i></div>
-                    <h3>Practical Automation</h3>
-                    <p>Build real tools like MusicForge audio processors, automated workflows, and API integrations that solve actual problems.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-robot"></i></div>
-                    <h3>AI Integration</h3>
-                    <p>Master OpenAI, Anthropic, and Google AI APIs. Build intelligent applications that leverage cutting-edge language models.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Data Processing</h3>
-                    <p>Learn pandas, NumPy, and visualization libraries. Process, analyze, and visualize data professionally.</p>
-                </div>
-            </div>
-            <div class="course-cta">
-                <a href="/academy/python.html" class="btn btn-primary">Start Python Course →</a>
-            </div>
-        </section>
-
-        <!-- Java Course -->
-        <section id="java" class="course-section">
-            <div class="section-header">
-                <h2>Java Applications</h2>
-                <p class="subtitle">Build Intelligent Enterprise Applications</p>
-                <p>Enterprise-grade backend development, Android applications, and modern LLM integration. Learn professional Java development with AI capabilities.</p>
-            </div>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <div class="icon"><i class="fab fa-java"></i></div>
-                    <h3>Enterprise Backend</h3>
-                    <p>Spring Boot, microservices architecture, RESTful APIs, and database integration for production-grade applications.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Android Development</h3>
-                    <p>Build modern Android applications with Kotlin, Jetpack Compose, and AI-powered features.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-network-wired"></i></div>
-                    <h3>AI Integration</h3>
-                    <p>Connect enterprise applications to language models, implement intelligent features, and build AI-powered workflows.</p>
-                </div>
-            </div>
-            <div class="course-cta">
-                <a href="/academy/java.html" class="btn btn-primary">Start Java Course →</a>
-            </div>
-        </section>
-
-        <!-- C# Course -->
-        <section id="csharp" class="course-section">
-            <div class="section-header">
-                <h2>C# Enterprise</h2>
-                <p class="subtitle">Systems Development & Enterprise Tools</p>
-                <p>Learn full-stack C# development with .NET, desktop applications, web services, and AI tooling integration for enterprise systems.</p>
-            </div>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-code"></i></div>
-                    <h3>.NET Ecosystem</h3>
-                    <p>Master ASP.NET Core, Entity Framework, Blazor, and modern C# patterns for professional development.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-desktop"></i></div>
-                    <h3>Desktop & Web</h3>
-                    <p>Build powerful desktop applications with WPF, web applications with Blazor, and cross-platform tools with .NET MAUI.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-cogs"></i></div>
-                    <h3>Enterprise Systems</h3>
-                    <p>Develop scalable enterprise applications with proper architecture, testing, and deployment strategies.</p>
-                </div>
-            </div>
-            <div class="course-cta">
-                <a href="/academy/csharp.html" class="btn btn-primary">Start C# Course →</a>
-            </div>
-        </section>
-
-        <!-- DJ Course -->
-        <section id="dj" class="course-section">
-            <div class="section-header">
-                <h2>DJ & Production</h2>
-                <p class="subtitle">Master the Art of Sound & Branding</p>
-                <p>Professional DJ training in mixing, music production, and stage branding — led by DJ iD01t / Guillaume Lessard. From bedroom to main stage.</p>
-            </div>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-headphones"></i></div>
-                    <h3>Professional Mixing</h3>
-                    <p>Learn beatmatching, harmonic mixing, EQ techniques, effects processing, and crowd reading for unforgettable sets.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-music"></i></div>
-                    <h3>Music Production</h3>
-                    <p>Create original tracks, remixes, and edits. Master DAWs, sound design, arrangement, and professional audio production.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-star"></i></div>
-                    <h3>DJ Branding</h3>
-                    <p>Build your artist identity, social media presence, promotional materials, and professional DJ career strategy.</p>
-                </div>
-            </div>
-            <div class="course-cta">
-                <a href="/academy/dj.html" class="btn btn-primary">Start DJ Course →</a>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>iD01t Academy</h3>
-                <p>Professional learning for the future of technology, creativity, and AI.</p>
-                <div class="social-links" style="margin-top: 1.5rem;">
-                    <a href="https://github.com/id01t" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/store">Store</a></li>
-                    <li><a href="/academy">Academy</a></li>
-                    <li><a href="https://github.com/id01t" target="_blank">GitHub</a></li>
-                    <li><a href="#contact">Community</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Courses</h3>
-                <ul>
-                    <li><a href="#prompts">Prompt Mastery</a></li>
-                    <li><a href="#python">Python Development</a></li>
-                    <li><a href="#java">Java Applications</a></li>
-                    <li><a href="#csharp">C# Enterprise</a></li>
-                    <li><a href="#dj">DJ & Production</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p><i class="fas fa-envelope"></i> itechinfomtl@gmail.com</p>
-                <p><i class="fas fa-globe"></i> id01t.store</p>
-                <p><i class="fas fa-map-marker-alt"></i> Montreal, QC</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Guillaume Lessard / iD01t Productions. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+<!-- Header -->
+<header id="header">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<a aria-label="iD01t Productions home" class="flex items-center space-x-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg">iD01t Productions</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/store.html">Store</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/ebooks.html">eBooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/audiobooks.html">Audiobooks</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/apps.html">Apps</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/games.html">Games</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/music.html">Music</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors link-underline" href="/nini.html">Nini's Adventures</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="themeToggle">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="hidden md:inline-flex items-center px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" href="/contact.html">Contact</a>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring" id="mobileMenuBtn">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" id="menuIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg aria-hidden="true" class="w-6 h-6 hidden" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900" id="mobileMenu">
+<div class="px-4 py-4 space-y-2">
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/store.html">Store</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/ebooks.html">eBooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/audiobooks.html">Audiobooks</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/apps.html">Apps</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/games.html">Games</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/music.html">Music</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/blog.html">Blog</a>
+<a class="block px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="/nini.html">Nini's Adventures</a>
+<a class="block px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors text-center" href="/contact.html">Contact</a>
+</div>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-content">
+<h1>iD01t Academy</h1>
+<p>Master Technology, Creativity, and AI — One Course at a Time</p>
+<div class="cta-buttons">
+<a class="btn btn-primary" href="#prompts">Start Learning</a>
+<a class="btn btn-secondary" href="#courses">Explore All Courses</a>
+</div>
+</div>
+</section>
+<!-- Course Sections -->
+<div class="courses-container">
+<!-- Prompts Course -->
+<section class="course-section" id="prompts">
+<div class="section-header">
+<h2>Prompt Mastery 2025</h2>
+<p class="subtitle">Professional Certification in AI Prompt Engineering</p>
+<p>Learn the RGCCO and PACE frameworks, model-specific prompting techniques, and advanced LLM interaction design. Master communication with GPT, Claude, Gemini, and all major AI models.</p>
+</div>
+<div class="feature-cards">
+<div class="feature-card">
+<div class="icon"><i class="fas fa-brain"></i></div>
+<h3>Comprehensive Curriculum</h3>
+<p>25 structured lessons covering foundations, model-specific techniques, advanced patterns, and production deployment strategies.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-rocket"></i></div>
+<h3>Professional Level</h3>
+<p>Transform from casual AI user to skilled prompt engineer capable of extracting maximum value from any language model.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-certificate"></i></div>
+<h3>Full Certification</h3>
+<p>8 weeks of intensive training with practical exercises, real-world case studies, and capstone project. Professional certificate upon completion.</p>
+</div>
+</div>
+<div class="course-cta">
+<a class="btn btn-primary" href="/academy/prompts.html">Start Prompt Mastery →</a>
+</div>
+</section>
+<!-- Python Course -->
+<section class="course-section" id="python">
+<div class="section-header">
+<h2>Python Development</h2>
+<p class="subtitle">From Automation to AI Integration</p>
+<p>Learn real-world Python workflows for MusicForge automation, AI API integration, data processing, and intelligent application development.</p>
+</div>
+<div class="feature-cards">
+<div class="feature-card">
+<div class="icon"><i class="fab fa-python"></i></div>
+<h3>Practical Automation</h3>
+<p>Build real tools like MusicForge audio processors, automated workflows, and API integrations that solve actual problems.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-robot"></i></div>
+<h3>AI Integration</h3>
+<p>Master OpenAI, Anthropic, and Google AI APIs. Build intelligent applications that leverage cutting-edge language models.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-chart-line"></i></div>
+<h3>Data Processing</h3>
+<p>Learn pandas, NumPy, and visualization libraries. Process, analyze, and visualize data professionally.</p>
+</div>
+</div>
+<div class="course-cta">
+<a class="btn btn-primary" href="/academy/python.html">Start Python Course →</a>
+</div>
+</section>
+<!-- Java Course -->
+<section class="course-section" id="java">
+<div class="section-header">
+<h2>Java Applications</h2>
+<p class="subtitle">Build Intelligent Enterprise Applications</p>
+<p>Enterprise-grade backend development, Android applications, and modern LLM integration. Learn professional Java development with AI capabilities.</p>
+</div>
+<div class="feature-cards">
+<div class="feature-card">
+<div class="icon"><i class="fab fa-java"></i></div>
+<h3>Enterprise Backend</h3>
+<p>Spring Boot, microservices architecture, RESTful APIs, and database integration for production-grade applications.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-mobile-alt"></i></div>
+<h3>Android Development</h3>
+<p>Build modern Android applications with Kotlin, Jetpack Compose, and AI-powered features.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-network-wired"></i></div>
+<h3>AI Integration</h3>
+<p>Connect enterprise applications to language models, implement intelligent features, and build AI-powered workflows.</p>
+</div>
+</div>
+<div class="course-cta">
+<a class="btn btn-primary" href="/academy/java.html">Start Java Course →</a>
+</div>
+</section>
+<!-- C# Course -->
+<section class="course-section" id="csharp">
+<div class="section-header">
+<h2>C# Enterprise</h2>
+<p class="subtitle">Systems Development &amp; Enterprise Tools</p>
+<p>Learn full-stack C# development with .NET, desktop applications, web services, and AI tooling integration for enterprise systems.</p>
+</div>
+<div class="feature-cards">
+<div class="feature-card">
+<div class="icon"><i class="fas fa-code"></i></div>
+<h3>.NET Ecosystem</h3>
+<p>Master ASP.NET Core, Entity Framework, Blazor, and modern C# patterns for professional development.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-desktop"></i></div>
+<h3>Desktop &amp; Web</h3>
+<p>Build powerful desktop applications with WPF, web applications with Blazor, and cross-platform tools with .NET MAUI.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-cogs"></i></div>
+<h3>Enterprise Systems</h3>
+<p>Develop scalable enterprise applications with proper architecture, testing, and deployment strategies.</p>
+</div>
+</div>
+<div class="course-cta">
+<a class="btn btn-primary" href="/academy/csharp.html">Start C# Course →</a>
+</div>
+</section>
+<!-- DJ Course -->
+<section class="course-section" id="dj">
+<div class="section-header">
+<h2>DJ &amp; Production</h2>
+<p class="subtitle">Master the Art of Sound &amp; Branding</p>
+<p>Professional DJ training in mixing, music production, and stage branding — led by DJ iD01t / Guillaume Lessard. From bedroom to main stage.</p>
+</div>
+<div class="feature-cards">
+<div class="feature-card">
+<div class="icon"><i class="fas fa-headphones"></i></div>
+<h3>Professional Mixing</h3>
+<p>Learn beatmatching, harmonic mixing, EQ techniques, effects processing, and crowd reading for unforgettable sets.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-music"></i></div>
+<h3>Music Production</h3>
+<p>Create original tracks, remixes, and edits. Master DAWs, sound design, arrangement, and professional audio production.</p>
+</div>
+<div class="feature-card">
+<div class="icon"><i class="fas fa-star"></i></div>
+<h3>DJ Branding</h3>
+<p>Build your artist identity, social media presence, promotional materials, and professional DJ career strategy.</p>
+</div>
+</div>
+<div class="course-cta">
+<a class="btn btn-primary" href="/academy/dj.html">Start DJ Course →</a>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="mt-24 bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<a aria-label="iD01t Productions home" class="flex items-center gap-2 focus-ring" href="/">
+<img alt="iD01t Productions logo" class="h-8 w-8" src="/assets/img/brand/logo.svg"/>
+<span class="font-semibold text-lg text-white">iD01t Productions</span>
+</a>
+<p class="text-sm">Professional digital tools and creative content for developers, creators, and innovators worldwide.</p>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Products</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/apps.html">Windows Apps</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/ebooks.html">Technical eBooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/audiobooks.html">Audiobooks</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/games.html">Online Games</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/music.html">Original Music</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Resources</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/blog.html">Blog</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/nini.html">Nini's Adventures</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/store.html">Store</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/contact.html">Contact</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/#newsletter">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-white mb-4">Legal</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors focus-ring rounded" href="/legal/refunds.html">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 mt-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+<p class="text-slate-400">© <span id="year"></span> iD01t Productions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2"><span aria-hidden="true" class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-slate-400">All systems operational</span></span>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/terms.html">Terms</a>
+<a class="hover:text-white transition-colors focus-ring rounded" href="/legal/privacy.html">Privacy</a>
+</div>
+</div>
+</footer>
+<script>
         // Mobile menu toggle
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
