@@ -100,8 +100,8 @@
   }
   </script>
 <!-- Tailwind CSS -->
-<link rel="stylesheet" href="/css/site.css">
-<script src="assets/js/tailwindcss.js" crossorigin="anonymous"></script>
+<link href="/css/site.css" rel="stylesheet"/>
+<script crossorigin="anonymous" src="assets/js/tailwindcss.js"></script>
 <script>
     tailwind.config = {
       theme: {
@@ -166,11 +166,9 @@
   </style>
 </head>
 <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
-
-  <!-- Skip to main content link -->
-  <a href="#main" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-lg">Skip to main content</a>
-
-  <!-- Shared Header (from includes/header.html) -->
+<!-- Skip to main content link -->
+<a class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-lg" href="#main">Skip to main content</a>
+<!-- Shared Header (from includes/header.html) -->
 <!--
   iD01t Productions - Shared Header Component
   Version: 2.0.0
@@ -179,10 +177,8 @@
   This header should be included on all pages for consistency.
   Includes: Navigation, Theme Toggle, Language Switcher, Mobile Menu
 -->
-
 <!-- Skip to main content link for accessibility -->
-<a href="#main" class="skip-link">Skip to main content</a>
-
+<a class="skip-link" href="#main">Skip to main content</a>
 <!-- Main Navigation -->
 <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -236,7 +232,6 @@
 </div>
 </div>
 </nav>
-
 <!-- Shared CSS for Navigation -->
 <style>
   /* Skip Link */
@@ -348,7 +343,6 @@
     color: #5abaff;
   }
 </style>
-
 <!-- Shared JavaScript for Navigation -->
 <script>
   (function() {
@@ -460,32 +454,25 @@
     setLanguage(currentLang);
   })();
 </script>
-
-
-  <!-- Main Content -->
-  <main id="main" role="main">
-
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-900 dark:to-slate-800 py-16 sm:py-20 overflow-hidden">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-64 h-64 bg-brand-500 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-300 rounded-full blur-3xl"></div>
-      </div>
-
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <nav aria-label="Breadcrumb" class="mb-8">
-          <ol class="flex items-center justify-center gap-2 text-sm">
-            <li><a href="/" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Home</a></li>
-            <li><span class="text-slate-400">/</span></li>
-            <li aria-current="page" class="text-slate-900 dark:text-white font-medium">eBooks</li>
-          </ol>
-
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-          <span class="gradient-text">Technical eBooks</span>
-        </h1>
-
-        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-
+<!-- Main Content -->
+<main id="main" role="main">
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-900 dark:to-slate-800 py-16 sm:py-20 overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-10 left-10 w-64 h-64 bg-brand-500 rounded-full blur-3xl"></div>
+<div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-300 rounded-full blur-3xl"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<nav aria-label="Breadcrumb" class="mb-8">
+<ol class="flex items-center justify-center gap-2 text-sm">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" href="/">Home</a></li>
+<li><span class="text-slate-400">/</span></li>
+<li aria-current="page" class="text-slate-900 dark:text-white font-medium">eBooks</li>
+</ol>
+<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+<span class="gradient-text">Technical eBooks</span>
+</h1>
+<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
 <!-- Skip to main content link -->
 <a class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-lg" href="#main">Skip to main content</a>
 <!-- Shared Header -->
@@ -593,7 +580,7 @@ main
 <span class="px-3 py-1 bg-white dark:bg-slate-800 rounded-full text-sm font-medium">JavaScript</span>
 <span class="px-3 py-1 bg-white dark:bg-slate-800 rounded-full text-sm font-medium">Automation</span>
 </div>
-</div>
+</nav></div>
 </section>
 <!-- Filter Bar -->
 <section aria-label="Filter eBooks" class="filter-bar-sticky glass-effect border-b border-slate-200 dark:border-slate-800 py-4" role="search">
@@ -697,12 +684,10 @@ main
 <button class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors focus-ring" id="retryLoad">
           Retry
         </button>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Shared Footer (from includes/footer.html) -->
+</div>
+</section>
+</main>
+<!-- Shared Footer (from includes/footer.html) -->
 <!--
   iD01t Productions - Shared Footer Component
   Version: 2.0.0
@@ -711,7 +696,6 @@ main
   This footer should be included on all pages for consistency.
   Includes: Site map, Legal links, Social links, Copyright
 -->
-
 <footer class="mt-24 bg-slate-900 text-slate-300 py-16">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12">
 <div class="space-y-4">
@@ -760,7 +744,6 @@ main
 </div>
 </div>
 </footer>
-
 <!-- Footer Styles -->
 <style>
   .footer-link {
@@ -781,7 +764,6 @@ main
     border-radius: 0.25rem;
   }
 </style>
-
 <!-- Footer JavaScript -->
 <script>
   (function() {
@@ -816,9 +798,7 @@ main
     });
   })();
 </script>
-
-
-  <!-- Consent Banner (from includes/consent-banner.html) -->
+<!-- Consent Banner (from includes/consent-banner.html) -->
 <!--
   iD01t Productions - Cookie Consent Banner
   Version: 2.0.0
@@ -827,101 +807,93 @@ main
   GDPR/CCPA compliant cookie consent banner
   Supports: Necessary, Analytics, Marketing cookies
 -->
-
 <!-- Consent Banner -->
-<div id="consentBanner" class="consent-banner hidden" role="dialog" aria-labelledby="consentTitle" aria-modal="false">
-  <div class="consent-content">
-    <!-- Title & Message -->
-    <div class="consent-header">
-      <h2 id="consentTitle" class="consent-title">🍪 Cookie Consent</h2>
-      <p class="consent-message">
+</p><div aria-labelledby="consentTitle" aria-modal="false" class="consent-banner hidden" id="consentBanner" role="dialog">
+<div class="consent-content">
+<!-- Title & Message -->
+<div class="consent-header">
+<h2 class="consent-title" id="consentTitle">🍪 Cookie Consent</h2>
+<p class="consent-message">
         We use cookies to enhance your experience, analyze site traffic, and for marketing purposes.
         By clicking 'Accept All', you consent to our use of cookies.
-        <a href="/legal/privacy.html" class="consent-link">Learn more</a>
-      </p>
-    </div>
-
-    <!-- Quick Actions -->
-    <div class="consent-actions">
-      <button id="consentAcceptAll" class="consent-btn consent-btn-primary">
+        <a class="consent-link" href="/legal/privacy.html">Learn more</a>
+</p>
+</div>
+<!-- Quick Actions -->
+<div class="consent-actions">
+<button class="consent-btn consent-btn-primary" id="consentAcceptAll">
         Accept All
       </button>
-      <button id="consentRejectAll" class="consent-btn consent-btn-secondary">
+<button class="consent-btn consent-btn-secondary" id="consentRejectAll">
         Reject All
       </button>
-      <button id="consentCustomize" class="consent-btn consent-btn-text">
+<button class="consent-btn consent-btn-text" id="consentCustomize">
         Customize
       </button>
-    </div>
-  </div>
 </div>
-
+</div>
+</div>
 <!-- Customization Modal -->
-<div id="consentModal" class="consent-modal hidden" role="dialog" aria-labelledby="consentModalTitle" aria-modal="true">
-  <div class="consent-modal-overlay" id="consentModalOverlay"></div>
-  <div class="consent-modal-content">
-    <div class="consent-modal-header">
-      <h2 id="consentModalTitle" class="consent-modal-title">Cookie Preferences</h2>
-      <button id="consentModalClose" class="consent-modal-close" aria-label="Close">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        </svg>
-      </button>
-    </div>
-
-    <div class="consent-modal-body">
-      <!-- Necessary Cookies (Always On) -->
-      <div class="consent-option">
-        <div class="consent-option-header">
-          <label class="consent-option-label">
-            <input type="checkbox" checked disabled class="consent-checkbox">
-            <span class="consent-option-name">Necessary Cookies</span>
-            <span class="consent-option-badge">Always Active</span>
-          </label>
-        </div>
-        <p class="consent-option-description">
+<div aria-labelledby="consentModalTitle" aria-modal="true" class="consent-modal hidden" id="consentModal" role="dialog">
+<div class="consent-modal-overlay" id="consentModalOverlay"></div>
+<div class="consent-modal-content">
+<div class="consent-modal-header">
+<h2 class="consent-modal-title" id="consentModalTitle">Cookie Preferences</h2>
+<button aria-label="Close" class="consent-modal-close" id="consentModalClose">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="consent-modal-body">
+<!-- Necessary Cookies (Always On) -->
+<div class="consent-option">
+<div class="consent-option-header">
+<label class="consent-option-label">
+<input checked="" class="consent-checkbox" disabled="" type="checkbox"/>
+<span class="consent-option-name">Necessary Cookies</span>
+<span class="consent-option-badge">Always Active</span>
+</label>
+</div>
+<p class="consent-option-description">
           These cookies are essential for the website to function properly. They enable basic features like page navigation and access to secure areas.
         </p>
-      </div>
-
-      <!-- Analytics Cookies -->
-      <div class="consent-option">
-        <div class="consent-option-header">
-          <label class="consent-option-label">
-            <input type="checkbox" id="consentAnalytics" class="consent-checkbox">
-            <span class="consent-option-name">Analytics Cookies</span>
-          </label>
-        </div>
-        <p class="consent-option-description">
+</div>
+<!-- Analytics Cookies -->
+<div class="consent-option">
+<div class="consent-option-header">
+<label class="consent-option-label">
+<input class="consent-checkbox" id="consentAnalytics" type="checkbox"/>
+<span class="consent-option-name">Analytics Cookies</span>
+</label>
+</div>
+<p class="consent-option-description">
           These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our services.
         </p>
-      </div>
-
-      <!-- Marketing Cookies -->
-      <div class="consent-option">
-        <div class="consent-option-header">
-          <label class="consent-option-label">
-            <input type="checkbox" id="consentMarketing" class="consent-checkbox">
-            <span class="consent-option-name">Marketing Cookies</span>
-          </label>
-        </div>
-        <p class="consent-option-description">
+</div>
+<!-- Marketing Cookies -->
+<div class="consent-option">
+<div class="consent-option-header">
+<label class="consent-option-label">
+<input class="consent-checkbox" id="consentMarketing" type="checkbox"/>
+<span class="consent-option-name">Marketing Cookies</span>
+</label>
+</div>
+<p class="consent-option-description">
           These cookies are used to show you relevant ads based on your interests. We may share this information with third-party advertising partners.
         </p>
-      </div>
-    </div>
-
-    <div class="consent-modal-footer">
-      <button id="consentSavePreferences" class="consent-btn consent-btn-primary">
+</div>
+</div>
+<div class="consent-modal-footer">
+<button class="consent-btn consent-btn-primary" id="consentSavePreferences">
         Save Preferences
       </button>
-      <button id="consentAcceptAllModal" class="consent-btn consent-btn-secondary">
+<button class="consent-btn consent-btn-secondary" id="consentAcceptAllModal">
         Accept All
       </button>
-    </div>
-  </div>
 </div>
-
+</div>
+</div>
 <!-- Consent Banner Styles -->
 <style>
   /* Banner */
@@ -1227,7 +1199,6 @@ main
     border-top-color: #334155;
   }
 </style>
-
 <!-- Consent Banner JavaScript -->
 <script>
   (function() {
@@ -1401,10 +1372,8 @@ main
     };
   })();
 </script>
-
-
-  <!-- Catalog JavaScript -->
-  <script>
+<!-- Catalog JavaScript -->
+<script>
 
 </div>
 </section>
@@ -1747,5 +1716,5 @@ main
       document.querySelectorAll('.intersection-animate').forEach(el => observer.observe(el));
     });
   </script>
-</body>
+</nav></div></section></main></body>
 </html>
