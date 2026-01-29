@@ -33,7 +33,7 @@
 <!-- Security Headers -->
 <meta content="nosniff" http-equiv="X-Content-Type-Options"/>
 <meta content="SAMEORIGIN" http-equiv="X-Frame-Options"/>
-<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://w.soundcloud.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com https://w.soundcloud.com; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://w.soundcloud.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: http:; font-src 'self' data:; connect-src 'self' https:; media-src 'self' https:; frame-src 'self' https://open.spotify.com https://www.youtube.com https://player.vimeo.com https://w.soundcloud.com; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
 <!-- Structured Data -->
 <script type="application/ld+json">
     {
@@ -58,7 +58,8 @@
     }
     </script>
 <!-- Tailwind CSS -->
-<script crossorigin="anonymous" src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="assets/js/tailwindcss.js" crossorigin="anonymous"></script>
 <script>
         tailwind.config = {
             darkMode: 'class',
@@ -308,7 +309,7 @@ Stream on SoundCloud
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 <a class="group" href="https://open.spotify.com/album/5AWc3Fx9oC03E3vKEsnTIi?si=fD_oTFXXQdWNA6bnfW4szQ" rel="noopener noreferrer" target="_blank">
 <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">DJ iD01t New Album Available Now!</h2>
-<img alt="Cosmic Echoes Album Art" class="w-full max-w-md mx-auto rounded-lg shadow-lg group-hover:opacity-80 transition-opacity" src="https://github.com/iD01t/iD01t.github.io/blob/main/assets/img/brand/distrokid_promocard_Cosmic_Echoes.jpg?raw=true"/>
+<img alt="Cosmic Echoes Album Art" class="w-full max-w-md mx-auto rounded-lg shadow-lg group-hover:opacity-80 transition-opacity" loading="lazy" src="/assets/img/brand/distrokid_promocard_Cosmic_Echoes.jpg"/>
 </a>
 </div>
 </section>

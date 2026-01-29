@@ -38,8 +38,6 @@
 <!-- Preconnect to External Domains -->
 <link crossorigin="anonymous" href="https://books.google.com" rel="preconnect"/>
 <link href="https://books.google.com" rel="dns-prefetch"/>
-<link crossorigin="anonymous" href="https://cdn.tailwindcss.com" rel="preconnect"/>
-<link href="https://cdn.tailwindcss.com" rel="dns-prefetch"/>
 <!-- Favicons -->
 <link href="/favicon.ico" rel="icon"/>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
@@ -101,8 +99,9 @@
     }
   }
   </script>
-<!-- Tailwind CSS CDN -->
-<script crossorigin="anonymous" src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind CSS -->
+<link rel="stylesheet" href="/css/site.css">
+<script src="assets/js/tailwindcss.js" crossorigin="anonymous"></script>
 <script>
     tailwind.config = {
       theme: {
@@ -127,8 +126,6 @@
       }
     }
   </script>
-<!-- Site Styles -->
-<link href="/site.css" rel="stylesheet"/>
 <!-- Additional Custom Styles -->
 <style>
     /* Loading skeleton */
