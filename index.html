@@ -19,7 +19,7 @@
         function loadLocalPorthole() {
             console.warn('CDN failed, loading local copy...');
             var script = document.createElement('script');
-            script.src = '/porthole.min.js'; // Place this file in your site's root
+            script.src = '/js/porthole.min.js'; // ✅ FIXED PATH
             document.head.appendChild(script);
         }
     </script>
@@ -31,13 +31,11 @@
     <script>
         // Wait for both Porthole and the iframe to be ready
         (function() {
-            // Ensure Porthole is loaded (if CDN and fallback both fail, we'll log an error)
             if (typeof Porthole === 'undefined') {
                 console.error('Porthole failed to load!');
                 return;
             }
 
-            // Enable debug output (useful for troubleshooting)
             Porthole.debug = true;
 
             var iframe = document.getElementById('kartraFrame');
@@ -51,13 +49,10 @@
                 var kartraProxy = new Porthole.WindowProxy('', 'kartraFrame');
 
                 kartraProxy.addEventListener(function(event) {
-                    // Security: only accept messages from the Bashar domain
                     if (event.origin !== 'https://www.bashar.org') return;
                     console.log('Received from Kartra:', event.data);
                     if (event.data.action === 'userData' && event.data.kuuid) {
                         console.log('✅ Kartra kuuid:', event.data.kuuid);
-                        // You can now use the kuuid in your React app
-                        // e.g., dispatch a custom event or store it globally
                         window.kartraKuuid = event.data.kuuid;
                         window.dispatchEvent(new CustomEvent('kartraKuuid', { detail: event.data.kuuid }));
                     }
