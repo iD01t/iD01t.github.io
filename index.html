@@ -19,7 +19,7 @@
         function loadLocalPorthole() {
             console.warn('CDN failed, loading local copy...');
             var script = document.createElement('script');
-            script.src = '/js/porthole.min.js'; // ✅ FIXED PATH
+            script.src = '/js/porthole.min.js';  // ✅ Correct path
             document.head.appendChild(script);
         }
     </script>
@@ -29,7 +29,6 @@
             onerror="loadLocalPorthole()"></script>
 
     <script>
-        // Wait for both Porthole and the iframe to be ready
         (function() {
             if (typeof Porthole === 'undefined') {
                 console.error('Porthole failed to load!');
