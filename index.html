@@ -1,75 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Page – Kartra Bridge</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jess Damaged Archives</title>
 </head>
 <body>
-    <div id="root"></div> <!-- Your React app mounts here -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
 
     <!-- Iframe for Kartra communication -->
     <iframe id="kartraFrame" name="kartraFrame" 
             src="https://www.bashar.org/help" 
-            width="100%" height="600" style="border:1px solid #ccc;"></iframe>
+            width="100%" height="600"></iframe>
 
-    <!-- Load Porthole from CDN; fallback to local if CDN fails -->
-    <script src="https://cdn.jsdelivr.net/npm/porthole@3.0.0/porthole.min.js"
-            onerror="loadLocalPorthole()"></script>
+    <!-- Fallback function for Porthole (defined first) -->
     <script>
         function loadLocalPorthole() {
             console.warn('CDN failed, loading local copy...');
             var script = document.createElement('script');
-            script.src = '/porthole.min.js'; // Place file in your site's root
+            script.src = '/porthole.min.js'; // Place this file in your site's root
             document.head.appendChild(script);
         }
     </script>
 
-    <script>
-        // Wait for the iframe to load and set up the proxy
-        document.addEventListener('DOMContentLoaded', function() {
-            var iframe = document.getElementById('kartraFrame');
+    <!-- Porthole library from CDN, with fallback if it fails -->
+    <script src="https://cdn.jsdelivr.net/npm/porthole@3.0.0/porthole.min.js"
+            onerror="loadLocalPorthole()"></script>
 
-            // Enable Porthole debug output (useful for troubleshooting)
-            if (typeof Porthole !== 'undefined') {
-                Porthole.debug = true;
-            } else {
-                console.error('Porthole not loaded!');
+    <script>
+        // Wait for both Porthole and the iframe to be ready
+        (function() {
+            // Ensure Porthole is loaded (if CDN and fallback both fail, we'll log an error)
+            if (typeof Porthole === 'undefined') {
+                console.error('Porthole failed to load!');
+                return;
+            }
+
+            // Enable debug output (useful for troubleshooting)
+            Porthole.debug = true;
+
+            var iframe = document.getElementById('kartraFrame');
+            if (!iframe) {
+                console.error('Iframe not found!');
                 return;
             }
 
             iframe.onload = function() {
                 console.log('Iframe loaded, setting up proxy...');
-
-                // Create a proxy to receive messages from the iframe
-                // First arg: proxy URL ('' because we're not using a legacy proxy iframe)
-                // Second arg: target window name (must match iframe's name)
                 var kartraProxy = new Porthole.WindowProxy('', 'kartraFrame');
 
-                // Add event listener for incoming messages
                 kartraProxy.addEventListener(function(event) {
                     // Security: only accept messages from the Bashar domain
-                    if (event.origin !== 'https://www.bashar.org') {
-                        console.warn('Ignored message from untrusted origin:', event.origin);
-                        return;
-                    }
-
+                    if (event.origin !== 'https://www.bashar.org') return;
                     console.log('Received from Kartra:', event.data);
-
-                    // If the message contains the kuuid, process it
-                    if (event.data && event.data.action === 'userData' && event.data.kuuid) {
+                    if (event.data.action === 'userData' && event.data.kuuid) {
                         console.log('✅ Kartra kuuid:', event.data.kuuid);
-                        // Dispatch a custom event for your React app to listen to
-                        window.dispatchEvent(new CustomEvent('kartraKuuid', { detail: event.data.kuuid }));
-                        // Or store it globally
+                        // You can now use the kuuid in your React app
+                        // e.g., dispatch a custom event or store it globally
                         window.kartraKuuid = event.data.kuuid;
+                        window.dispatchEvent(new CustomEvent('kartraKuuid', { detail: event.data.kuuid }));
                     }
                 });
-
-                // Optional: send a ping to test the connection
-                // kartraProxy.post({ action: 'ping' }, 'https://www.bashar.org');
             };
-        });
+        })();
     </script>
 </body>
 </html>
