@@ -14,24 +14,42 @@
             src="https://www.bashar.org/help" 
             width="100%" height="600"></iframe>
 
-    <!-- Porthole library -->
+    <!-- Porthole library from CDN with local fallback -->
     <script src="https://cdn.jsdelivr.net/npm/porthole@3.0.0/porthole.min.js"></script>
+    <script>
+        // If CDN fails, load from your own site (file must be in /public folder)
+        if (typeof Porthole === 'undefined') {
+            document.write('<script src="/porthole.min.js"><\/script>');
+        }
+    </script>
 
     <script>
-      Porthole.debug = true;
+        // Enable debug output in the console
+        Porthole.debug = true;
 
-      document.getElementById('kartraFrame').onload = function() {
-        var kartraProxy = new Porthole.WindowProxy('', 'kartraFrame');
+        document.getElementById('kartraFrame').onload = function() {
+            console.log('Iframe loaded, setting up proxy...');
+            var kartraProxy = new Porthole.WindowProxy('', 'kartraFrame');
 
-        kartraProxy.addEventListener(function(event) {
-          if (event.origin !== 'https://www.bashar.org') return;
-          console.log('Received from Kartra:', event.data);
-          if (event.data.action === 'userData' && event.data.kuuid) {
-            console.log('Kartra kuuid:', event.data.kuuid);
-            // Use the kuuid as needed
-          }
-        });
-      };
+            kartraProxy.addEventListener(function(event) {
+                // Security: only accept messages from the Kartra domain
+                if (event.origin !== 'https://www.bashar.org') {
+                    console.warn('Ignored message from untrusted origin:', event.origin);
+                    return;
+                }
+                console.log('Received from Kartra:', event.data);
+
+                // If the message contains the kuuid, do something with it
+                if (event.data.action === 'userData' && event.data.kuuid) {
+                    console.log('Kartra kuuid:', event.data.kuuid);
+                    // You can now use the kuuid in your React app,
+                    // e.g., store it in a global variable or dispatch a custom event.
+                }
+            });
+
+            // Optional: send a ping to Kartra to confirm communication
+            // kartraProxy.post({ action: 'ping' }, 'https://www.bashar.org');
+        };
     </script>
 </body>
 </html>
