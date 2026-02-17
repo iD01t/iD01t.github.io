@@ -1,12 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jess Damaged Archives</title>
-  </head>
-  <body>
+</head>
+<body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+    <!-- Iframe for Kartra communication -->
+    <iframe id="kartraFrame" name="kartraFrame" 
+            src="https://www.bashar.org/help" 
+            width="100%" height="600"></iframe>
+
+    <!-- Porthole library -->
+    <script src="https://cdn.jsdelivr.net/npm/porthole@3.0.0/porthole.min.js"></script>
+
+    <script>
+      Porthole.debug = true;
+
+      document.getElementById('kartraFrame').onload = function() {
+        var kartraProxy = new Porthole.WindowProxy('', 'kartraFrame');
+
+        kartraProxy.addEventListener(function(event) {
+          if (event.origin !== 'https://www.bashar.org') return;
+          console.log('Received from Kartra:', event.data);
+          if (event.data.action === 'userData' && event.data.kuuid) {
+            console.log('Kartra kuuid:', event.data.kuuid);
+            // Use the kuuid as needed
+          }
+        });
+      };
+    </script>
+</body>
 </html>
