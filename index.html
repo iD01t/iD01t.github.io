@@ -2,62 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <title>Jess Damaged Archives</title>
 </head>
 <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-
-    <!-- Iframe for Kartra communication -->
-    <iframe id="kartraFrame" name="kartraFrame" 
-            src="https://www.bashar.org/help" 
-            width="100%" height="600"></iframe>
-
-    <!-- Fallback function for Porthole (defined first) -->
-<script>
-    function loadLocalPorthole() {
-        console.warn('CDN failed, loading local copy from GitHub...');
-        var script = document.createElement('script');
-        script.src = 'https://id01t.github.io/js/porthole.min.js';
-        document.head.appendChild(script);
-    }
-script>window.FreshworksWidget = function(){};</script>
-
-    <!-- Porthole library from CDN, with fallback if it fails -->
-    <script src="https://cdn.jsdelivr.net/npm/porthole@3.0.0/porthole.min.js"
-            onerror="loadLocalPorthole()"></script>
-
-    <script>
-        (function() {
-            if (typeof Porthole === 'undefined') {
-                console.error('Porthole failed to load!');
-                return;
-            }
-
-            Porthole.debug = true;
-
-            var iframe = document.getElementById('kartraFrame');
-            if (!iframe) {
-                console.error('Iframe not found!');
-                return;
-            }
-
-            iframe.onload = function() {
-                console.log('Iframe loaded, setting up proxy...');
-                var kartraProxy = new Porthole.WindowProxy('', 'kartraFrame');
-
-                kartraProxy.addEventListener(function(event) {
-                    if (event.origin !== 'https://www.bashar.org') return;
-                    console.log('Received from Kartra:', event.data);
-                    if (event.data.action === 'userData' && event.data.kuuid) {
-                        console.log('✅ Kartra kuuid:', event.data.kuuid);
-                        window.kartraKuuid = event.data.kuuid;
-                        window.dispatchEvent(new CustomEvent('kartraKuuid', { detail: event.data.kuuid }));
-                    }
-                });
-            };
-        })();
-    </script>
 </body>
 </html>
