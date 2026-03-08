@@ -1,6 +1,28 @@
 import { useEffect, useRef, useState } from 'react';
 import { Play, Music, Calendar, ChevronDown, ChevronUp, Zap } from 'lucide-react';
-import { albumsConfig, singlesConfig } from '../config';
+import { albumsConfig } from '../config';
+
+// Singles data — move to ../config when ready
+const singlesConfig: Single[] = [
+  {
+    id: 'brute-force',
+    title: 'BRUTE_FORCE',
+    releaseDate: 'Mar 4, 2026',
+    duration: '2:58',
+    concept: 'A relentless, high-energy assault on the senses — raw power distilled into pure electronic force.',
+    image: '',
+    spotifyUrl: 'https://open.spotify.com/album/6qHqwS3bNMu8qqHDlMPraL',
+  },
+  {
+    id: 'syntax-error',
+    title: 'SYNTAX_ERROR',
+    releaseDate: 'Mar 4, 2026',
+    duration: '2:59',
+    concept: 'When the code breaks and beauty emerges from the glitch — a meditation on failure as creation.',
+    image: '',
+    spotifyUrl: 'https://open.spotify.com/album/0mkG4oS3fTcn1NIj1jN4xI',
+  },
+];
 
 interface Album {
   id: string;
@@ -458,7 +480,7 @@ export default function Albums() {
 
             {/* Singles Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {singlesConfig.map((single, index) => (
+              {singlesConfig.map((single: Single, index: number) => (
                 <SingleCard key={single.id} single={single} index={index} />
               ))}
             </div>
