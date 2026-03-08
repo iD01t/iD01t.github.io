@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { Play, Music, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
-import { albumsConfig } from '../config';
+import { Play, Music, Calendar, ChevronDown, ChevronUp, Zap } from 'lucide-react';
+import { albumsConfig, singlesConfig } from '../config';
 
 interface Album {
   id: string;
@@ -16,6 +16,17 @@ interface Album {
   spotifyUrl: string;
   appleMusicUrl: string;
   featured?: boolean;
+}
+
+interface Single {
+  id: string;
+  title: string;
+  releaseDate: string;
+  duration: string;
+  concept: string;
+  image: string;
+  spotifyUrl: string;
+  appleMusicUrl?: string;
 }
 
 const AlbumCard = ({ album, index }: { album: Album; index: number }) => {
@@ -72,7 +83,7 @@ const AlbumCard = ({ album, index }: { album: Album; index: number }) => {
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div 
+      <div
         className={`bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl ${colors.glow} border border-white/10 hover:border-white/20 ${
           album.featured ? `border-2 ${colors.border}` : ''
         }`}
@@ -85,7 +96,7 @@ const AlbumCard = ({ album, index }: { album: Album; index: number }) => {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-          
+
           {/* Phase Badge */}
           <div className={`absolute top-4 left-4 px-3 py-1 rounded-full ${colors.bg} ${colors.border} border`}>
             <span className={`text-xs font-medium ${colors.text}`}>{album.phase}</span>
@@ -141,7 +152,7 @@ const AlbumCard = ({ album, index }: { album: Album; index: number }) => {
           {isExpanded && (
             <div className="mt-4 space-y-4 animate-in slide-in-from-top-2">
               <p className="text-sm text-slate-300">{album.concept}</p>
-              
+
               <div>
                 <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
                   Key Tracks
@@ -186,6 +197,127 @@ const AlbumCard = ({ album, index }: { album: Album; index: number }) => {
   );
 };
 
+const SingleCard = ({ single, index }: { single: Single; index: number }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={cardRef}
+      className={`group relative transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+      }`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <div className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl shadow-orange-500/10 border border-white/10 hover:border-orange-500/30">
+        {/* Cover */}
+        <div className="relative aspect-square overflow-hidden">
+          <img
+            src={single.image}
+            alt={single.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+          {/* Single Badge */}
+          <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30">
+            <span className="text-xs font-medium text-orange-400 flex items-center gap-1">
+              <Zap className="w-3 h-3" />
+              Single
+            </span>
+          </div>
+
+          {/* Play Overlay */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <a
+              href={single.spotifyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors"
+            >
+              <Play className="w-8 h-8 text-white ml-1" />
+            </a>
+          </div>
+
+          {/* Title Overlay */}
+          <div className="absolute bottom-0 left-0 right-0 p-4">
+            <h3 className="text-xl font-bold text-white">{single.title}</h3>
+            <div className="flex items-center gap-4 mt-2 text-sm text-slate-400">
+              <span className="flex items-center gap-1">
+                <Calendar className="w-4 h-4" />
+                {single.releaseDate}
+              </span>
+              <span className="flex items-center gap-1">
+                <Music className="w-4 h-4" />
+                {single.duration}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Expandable Content */}
+        <div className="p-4">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="w-full flex items-center justify-between text-sm text-slate-400 hover:text-white transition-colors"
+          >
+            <span>View Details</span>
+            {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+          </button>
+
+          {isExpanded && (
+            <div className="mt-4 space-y-4 animate-in slide-in-from-top-2">
+              <p className="text-sm text-slate-300">{single.concept}</p>
+
+              <div className="flex gap-3">
+                <a
+                  href={single.spotifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm font-medium transition-colors"
+                >
+                  <Play className="w-4 h-4" />
+                  Spotify
+                </a>
+                {single.appleMusicUrl && (
+                  <a
+                    href={single.appleMusicUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg text-sm font-medium transition-colors"
+                  >
+                    <Music className="w-4 h-4" />
+                    Apple Music
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Albums() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -215,7 +347,7 @@ export default function Albums() {
   ];
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       id="albums"
       className="relative py-24 bg-[#0a0a0f]"
@@ -233,31 +365,38 @@ export default function Albums() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div 
+        <div
           className={`text-center mb-16 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             The <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">9-LP Canon</span>
+            <span className="block text-2xl md:text-3xl mt-2 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+              + Singles
+            </span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            Journey through cinematic soundscapes and emotional depths. 
+            Journey through cinematic soundscapes and emotional depths.
             Each album tells a unique story through immersive electronic compositions.
           </p>
-          
+
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-8 mt-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400">111</div>
+              <div className="text-3xl font-bold text-cyan-400">9</div>
+              <div className="text-xs text-slate-500 uppercase tracking-wider">LPs</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-400">{singlesConfig.length}</div>
+              <div className="text-xs text-slate-500 uppercase tracking-wider">Singles</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400">111+</div>
               <div className="text-xs text-slate-500 uppercase tracking-wider">Total Tracks</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">254+</div>
-              <div className="text-xs text-slate-500 uppercase tracking-wider">Minutes</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400">11</div>
+              <div className="text-3xl font-bold text-pink-400">12+</div>
               <div className="text-xs text-slate-500 uppercase tracking-wider">Months</div>
             </div>
           </div>
@@ -268,7 +407,7 @@ export default function Albums() {
           {phases.map((phase, phaseIndex) => (
             <div key={phase.name}>
               {/* Phase Header */}
-              <div 
+              <div
                 className={`flex items-center gap-4 mb-8 transition-all duration-700 ${
                   isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
                 }`}
@@ -298,6 +437,33 @@ export default function Albums() {
             </div>
           ))}
         </div>
+
+        {/* Singles Section */}
+        {singlesConfig.length > 0 && (
+          <div className="mt-24">
+            {/* Singles Header */}
+            <div
+              className={`flex items-center gap-4 mb-8 transition-all duration-700 ${
+                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+              }`}
+            >
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-orange-500/20 text-orange-400">
+                <Zap className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white">Singles</h3>
+                <p className="text-slate-400 text-sm">Standalone transmissions from the iD01T universe</p>
+              </div>
+            </div>
+
+            {/* Singles Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {singlesConfig.map((single, index) => (
+                <SingleCard key={single.id} single={single} index={index} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
