@@ -205,16 +205,16 @@ export const albumsConfig: Album[] = [
   {
     id: 'love-rising',
     title: 'LOVE RISING — CLASSIFIED',
-    releaseDate: 'Late 2025',
-    tracks: 0,
-    duration: '—',
+    releaseDate: 'March 2026',
+    tracks: 1,
+    duration: '37:51',
     phase: 'Phase III: Culmination',
     phaseColor: 'gold',
     concept: 'Platform-exclusive release with "CLASSIFIED" designation. Love as state secret, emotional truth as restricted information.',
-    keyTracks: ['YouTube Exclusive'],
-    image: 'https://i.scdn.co/image/ab67616d00001e02dfd50ba4f41b277e0efbf48a',
-    spotifyUrl: 'https://www.youtube.com/watch?v=dpn-XW0yen0',
-    appleMusicUrl: 'https://www.youtube.com/watch?v=dpn-XW0yen0'
+    keyTracks: ['Love Rising'],
+    image: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/60/25/05/60250592-e6af-c195-2ae3-e03a37f75a26/artwork.jpg/316x316bb.webp',
+    spotifyUrl: 'https://open.spotify.com/album/6vSCNVIMsoGmfqJTE1sOP6',
+    appleMusicUrl: 'https://music.apple.com/ca/album/love-rising/1881282585'
   },
   {
     id: 'root-access',
@@ -227,7 +227,7 @@ export const albumsConfig: Album[] = [
     concept: 'Total system infiltration and cyberpunk rebellion. Unix superuser privilege as revolutionary capability.',
     keyTracks: ['ZERO DAY', 'sudo chmod +x install.sh', 'Ghost in the shell'],
     image: 'https://i.scdn.co/image/ab67616d00001e02161649285321f294f8c754bf',
-    spotifyUrl: 'https://open.spotify.com/album/0tUOIdVIe63qCu4bUHOk0F',
+    spotifyUrl: 'https://open.spotify.com/album/289GI3lUhLBfBHjtjDG2kZ',
     appleMusicUrl: 'https://music.apple.com/us/album/root-access/1838000000',
     featured: true
   }
@@ -243,7 +243,7 @@ export const rootAccessLP = {
   image: "https://i.scdn.co/image/ab67616d00001e02161649285321f294f8c754bf",
   soundcloudUrl: "https://soundcloud.com/dj-id01t-128224342/sets/dj-id01t-root_access-lp",
   itchUrl: "https://id01t.itch.io/root-access-cyberpunk",
-  spotifyUrl: "https://open.spotify.com/album/0tUOIdVIe63qCu4bUHOk0F",
+  spotifyUrl: "https://open.spotify.com/album/289GI3lUhLBfBHjtjDG2kZ",
   appleMusicUrl: "https://music.apple.com/us/album/root-access/1838000000",
   tracksList: [
     { name: 'ZERO DAY', duration: '2:14', type: 'exploit' },
