@@ -9,270 +9,262 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <title>SATI CODEX | Strategic IP Acquisition Portal</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0B0B16;
-      --panel: #13131F;
-      --panel2: #1A1A2E;
+      --bg: #070711;
+      --panel: #121225;
+      --panel2: #1A1A33;
       --gold: #C9A84C;
       --gold2: #E8C96A;
       --cyan: #00D4E8;
       --white: #F2F2F2;
-      --light: #CCCCCC;
-      --dim: #888888;
+      --light: #CFCFCF;
+      --dim: #8A8A8A;
       --green: #50E878;
+      --red: #FF4D4D;
       --border: #2A2A44;
-      --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-main: 'Inter', system-ui, sans-serif;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
     body {
-      font-family: var(--font-main);
-      background: var(--bg);
-      color: var(--light);
-      line-height: 1.6;
-      overflow-x: hidden;
+      font-family:var(--font-main);
+      background:var(--bg);
+      color:var(--light);
+      line-height:1.65;
     }
-    a { color: var(--cyan); text-decoration: none; transition: 0.2s; }
-    a:hover { color: var(--gold); }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem;
-      text-align: center; cursor: pointer; border: none; transition: all 0.25s ease;
-    }
-    .btn-primary { background: var(--gold); color: var(--bg); }
-    .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3); }
-    .btn-outline { border: 1px solid var(--cyan); color: var(--cyan); background: transparent; }
-    .btn-outline:hover { background: rgba(0, 212, 232, 0.1); border-color: var(--gold); color: var(--gold); }
-    .badge {
-      display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px;
-      border-radius: 99px; font-size: 0.75rem; font-weight: 600;
-      background: var(--panel2); border: 1px solid var(--border);
-    }
-    .badge.success { border-color: var(--green); color: var(--green); }
-    .badge.warning { border-color: var(--gold); color: var(--gold); }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 32px; }
-    .card {
-      background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 28px;
-      transition: transform 0.3s, border-color 0.3s;
-    }
-    .card:hover { transform: translateY(-4px); border-color: var(--gold); }
-    .card h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 16px; font-weight: 700; }
-    .card p { font-size: 0.9rem; color: var(--light); }
-    .section { padding: 100px 0; border-top: 1px solid var(--border); }
-    .section:first-child { padding-top: 140px; border-top: none; }
-    h1, h2, h3 { color: var(--white); font-weight: 700; line-height: 1.2; }
-    h1 { font-size: 2.8rem; margin-bottom: 20px; letter-spacing: -1px; }
-    h2 { font-size: 1.8rem; margin-bottom: 24px; color: var(--gold); }
-    .lead { font-size: 1.15rem; color: var(--light); margin-bottom: 40px; max-width: 750px; opacity: 0.9; }
+
+    .container { max-width:1100px; margin:0 auto; padding:0 22px; }
+
+    a { color:var(--cyan); text-decoration:none; }
+    a:hover { color:var(--gold); }
+
     .nav {
-      position: fixed; top: 0; width: 100%;
-      background: rgba(11, 11, 22, 0.95); backdrop-filter: blur(12px);
-      z-index: 1000; border-bottom: 1px solid var(--border); height: 70px;
+      position:fixed; top:0; width:100%; height:72px;
+      background:rgba(7,7,17,0.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border);
+      z-index:1000;
     }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .nav-logo { font-weight: 800; color: var(--gold); font-size: 1.1rem; letter-spacing: -0.5px; }
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-links a { color: var(--light); font-size: 0.9rem; font-weight: 500; }
-    .nav-links a:hover { color: var(--cyan); }
+
+    .nav-inner {
+      display:flex; justify-content:space-between; align-items:center;
+      height:100%; max-width:1100px; margin:0 auto; padding:0 22px;
+    }
+
+    .logo { color:var(--gold); font-weight:800; letter-spacing:0.5px; }
+
     .hero {
-      padding: 180px 0 120px; text-align: center;
-      background: radial-gradient(circle at 50% 0%, rgba(201, 168, 76, 0.15) 0%, transparent 60%);
-      position: relative;
+      padding:170px 0 110px;
+      text-align:center;
+      background:radial-gradient(circle at 50% 0%, rgba(201,168,76,0.18), transparent 65%);
     }
-    .hero::before {
-      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.3;
+
+    h1 { font-size:2.9rem; color:var(--white); }
+    h2 { font-size:1.8rem; color:var(--gold); margin-bottom:20px; }
+
+    .lead { max-width:780px; margin:20px auto 40px; font-size:1.1rem; }
+
+    .badge-row { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:25px; }
+
+    .badge {
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:0.75rem;
+      background:var(--panel2);
+      border:1px solid var(--border);
     }
-    .hero-badges { display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
-    .cta-row { display: flex; gap: 16px; justify-content: center; margin-top: 40px; flex-wrap: wrap; }
-    .footer { padding: 60px 0; text-align: center; font-size: 0.8rem; color: var(--dim); border-top: 1px solid var(--border); margin-top: 80px; }
-    .disclaimer { font-size: 0.75rem; color: var(--dim); margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
-    
-    /* SECURE MODAL */
-    .modal-overlay {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(11, 11, 22, 0.92); backdrop-filter: blur(4px);
-      z-index: 2000; display: none; align-items: center; justify-content: center;
+
+    .badge.green { border-color:var(--green); color:var(--green); }
+    .badge.gold { border-color:var(--gold); color:var(--gold); }
+
+    .btn {
+      padding:12px 22px;
+      border-radius:6px;
+      font-weight:600;
+      border:none;
+      cursor:pointer;
+      transition:0.2s;
     }
-    .modal-overlay.active { display: flex; }
+
+    .btn-primary { background:var(--gold); color:#000; }
+    .btn-primary:hover { background:var(--gold2); }
+
+    .btn-outline {
+      background:transparent;
+      border:1px solid var(--cyan);
+      color:var(--cyan);
+    }
+
+    .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+
+    .cta { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+
+    .section { padding:90px 0; border-top:1px solid var(--border); }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:22px;
+      margin-top:30px;
+    }
+
+    .card {
+      background:var(--panel);
+      border:1px solid var(--border);
+      padding:24px;
+      border-radius:12px;
+      transition:0.25s;
+    }
+
+    .card:hover { transform:translateY(-4px); border-color:var(--gold); }
+
+    .card h3 { color:var(--gold); margin-bottom:10px; }
+
+    .footer {
+      padding:60px 0;
+      text-align:center;
+      color:var(--dim);
+      border-top:1px solid var(--border);
+      font-size:0.8rem;
+    }
+
+    /* MODAL */
+    .modal {
+      position:fixed; inset:0;
+      background:rgba(0,0,0,0.75);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:2000;
+    }
+
+    .modal.active { display:flex; }
+
     .modal-box {
-      background: var(--panel); border: 1px solid var(--gold); border-radius: 16px;
-      padding: 32px; max-width: 480px; width: 90%; text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      background:var(--panel);
+      border:1px solid var(--gold);
+      padding:28px;
+      border-radius:14px;
+      width:92%; max-width:460px;
     }
-    .modal-box h3 { color: var(--gold); margin-bottom: 8px; font-size: 1.3rem; }
-    .modal-box p { margin-bottom: 20px; font-size: 0.9rem; color: var(--light); }
-    .secure-form { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
-    .secure-form input {
-      padding: 12px; background: var(--panel2); border: 1px solid var(--border);
-      border-radius: 6px; color: var(--white); font-size: 0.9rem; text-align: left;
+
+    .input {
+      width:100%;
+      padding:10px;
+      margin:8px 0;
+      background:var(--panel2);
+      border:1px solid var(--border);
+      color:white;
+      border-radius:6px;
     }
-    .secure-form input:focus { outline: none; border-color: var(--cyan); }
-    .close-btn { background: var(--panel2); color: var(--light); border: 1px solid var(--border); padding: 8px 20px; border-radius: 6px; cursor: pointer; margin-top: 16px; font-size: 0.9rem; }
-    .close-btn:hover { background: var(--border); color: var(--white); }
-    
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.6rem; }
-      .nav-links { display: none; }
-      .hero { padding: 140px 0 80px; }
-      .grid-2 { grid-template-columns: 1fr; }
-      .section { padding: 60px 0; }
-    }
+
+    .input:focus { border-color:var(--cyan); outline:none; }
+
   </style>
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="nav-logo">SATI CODEX</div>
-      <div class="nav-links">
-        <a href="#overview">Overview</a>
-        <a href="#process">Access Process</a>
-        <a href="#contact">Contact</a>
-        <button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem;" onclick="openModal()">🔐 Request VDR Access</button>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container">
-      <div class="hero-badges">
-        <span class="badge success">✓ Hardware-Verified</span>
-        <span class="badge success">✓ T1–T4 Audited</span>
-        <span class="badge warning">Production-Ready</span>
-        <span class="badge">Strategic Acquisition</span>
-      </div>
-      <h1>Genus-5 Topological Quantum Error Correction IP</h1>
-      <p class="lead">A complete, production-ready framework for scalable fault-tolerant quantum computation. Includes mathematical foundations, hardware blueprints, and validated decoding architecture. Technical specifications and parity matrices available exclusively post-MNDA.</p>
-      <div class="cta-row">
-        <button class="btn btn-primary" onclick="openModal()">🔐 Initiate Secure Review</button>
-        <a href="#process" class="btn btn-outline">📋 Access Workflow</a>
-      </div>
-      <p class="disclaimer">ORCID: 0009-0000-3465-3753 | DOI: 10.5281/zenodo.18743234 | iD01t Productions</p>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <section id="overview" class="section">
-      <h2>Strategic Overview</h2>
-      <p class="lead">The SATI CODEX framework addresses the critical bottleneck in quantum scaling: efficient, hardware-validated error correction with minimal physical qubit overhead.</p>
-      
-      <div class="grid-2">
-        <div class="card">
-          <h3>Architectural Advantage</h3>
-          <p>Proprietary [[832, 10, 4]] CSS stabilizer code constructed on a closed orientable genus-5 manifold. Delivers high logical qubit density without boundary bloat, with machine-precision convergence guarantees.</p>
-        </div>
-        <div class="card">
-          <h3>Validation & Readiness</h3>
-          <p>Live hardware verification on IBM Heron-class processors confirms syndrome extraction, noise tolerance, and decoder stability. Full engineering stack ready for immediate integration into existing quantum roadmaps.</p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top: 32px; text-align: center;">
-        <h3>🔒 Confidential Technical Data</h3>
-        <p>Parity-check matrices (Hₓ/H₂), FPGA decoder pipelines, exact topological proofs, Liouvillian spectral parameters, and full validation logs are strictly gated. Access requires executed Mutual NDA and corporate verification.</p>
-      </div>
-    </section>
-
-    <section id="process" class="section">
-      <h2>Secure Access Workflow</h2>
-      <p class="lead">Enterprise IP transfers follow a standardized cryptographic and legal gating process to protect both acquirer and originator.</p>
-      
-      <div class="grid-2">
-        <div class="card">
-          <h3>1. Executive Qualification</h3>
-          <p>Submit corporate email and organizational role via the secure portal. Technical teams are evaluated for strategic alignment and integration capacity.</p>
-        </div>
-        <div class="card">
-          <h3>2. MNDA Execution</h3>
-          <p>Digital Mutual Non-Disclosure Agreement generated and executed via e-signature. Confidentiality terms lock all technical disclosures for a minimum of 5 years.</p>
-        </div>
-        <div class="card">
-          <h3>3. VDR Provisioning</h3>
-          <p>Upon MNDA clearance, a time-bound Virtual Data Room link is issued. Contains SHA-256 proof bundle, master specification, hardware blueprints, and decoder architecture.</p>
-        </div>
-        <div class="card">
-          <h3>4. Technical Review & LOI</h3>
-          <p>Acquirer technical leads conduct independent validation. Successful review transitions to Letter of Intent (LOI) and escrow-managed acquisition execution.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section" style="text-align:center;">
-      <h2>Initiate Strategic Acquisition</h2>
-      <p class="lead" style="margin:0 auto 40px;">Direct channel for qualified quantum hardware firms, research institutions, and strategic investors.</p>
-      <div class="cta-row">
-        <button class="btn btn-primary" onclick="openModal()">🔐 Request MNDA & VDR</button>
-        <a href="mailto:acquisitions@id01t.io" class="btn btn-outline">📧 Executive Inquiries</a>
-      </div>
-      <p class="disclaimer" style="margin-top:32px;">
-        © 2026 iD01t Productions / iTech Mobile and Web Solutions. All rights reserved.<br>
-        ORCID: 0009-0000-3465-3753 | DOI: 10.5281/zenodo.18743234 | Longueuil, Quebec, Canada
-      </p>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>This portal serves as a confidential acquisition interface. No technical specifications, source code, or mathematical proofs are transmitted without executed legal agreements. All intellectual property is protected under Canadian and international law.</p>
-    </div>
-  </footer>
-
-  <!-- SECURE VDR REQUEST MODAL -->
-  <div id="vdrModal" class="modal-overlay">
-    <div class="modal-box">
-      <h3>🔒 Secure VDR Request</h3>
-      <p>Technical artifacts are released exclusively to verified corporate entities post-MNDA execution. Please provide professional credentials to initiate the review process.</p>
-      <form id="secureForm" class="secure-form" onsubmit="handleSubmission(event)">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Corporate Email (No personal domains)" required pattern=".*@(?!gmail\.com|yahoo\.com|outlook\.com|hotmail\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-        <input type="text" placeholder="Organization / Quantum Division" required>
-        <input type="text" placeholder="Job Title / Technical Authority" required>
-        <button type="submit" class="btn btn-primary">Submit for Review →</button>
-      </form>
-      <button class="close-btn" onclick="closeModal()">Cancel</button>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">SATI CODEX</div>
+    <div>
+      <button class="btn btn-outline" onclick="openModal()">Request Access</button>
     </div>
   </div>
+</nav>
 
-  <script>
-    function openModal() {
-      document.getElementById('vdrModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-      document.getElementById('vdrModal').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    function handleSubmission(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      
-      btn.textContent = 'Validating credentials...';
-      btn.disabled = true;
-      btn.style.opacity = '0.7';
-      
-      setTimeout(() => {
-        btn.textContent = '✓ Submitted. MNDA & VDR link incoming.';
-        btn.style.background = 'var(--green)';
-        btn.style.color = '#000';
-        btn.style.opacity = '1';
-        e.target.reset();
-      }, 1800);
-    }
+<header class="hero">
+  <div class="container">
+    <div class="badge-row">
+      <div class="badge green">Hardware Verified</div>
+      <div class="badge green">Quantum Stable</div>
+      <div class="badge gold">Strategic IP</div>
+    </div>
 
-    document.getElementById('vdrModal').addEventListener('click', function(e) {
-      if (e.target === this) closeModal();
-    });
-  </script>
+    <h1>Genus-5 Quantum Error Correction IP</h1>
+    <p class="lead">Production-grade topological quantum error correction architecture designed for scalable fault-tolerant quantum computation systems.</p>
+
+    <div class="cta">
+      <button class="btn btn-primary" onclick="openModal()">Request MNDA Access</button>
+      <a class="btn btn-outline" href="#overview">Technical Overview</a>
+    </div>
+  </div>
+</header>
+
+<section id="overview" class="section container">
+  <h2>System Overview</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Topology</h3>
+      <p>Genus-5 stabilizer manifold encoding optimized logical qubit density with reduced boundary overhead.</p>
+    </div>
+    <div class="card">
+      <h3>Decoder</h3>
+      <p>Low-latency syndrome decoding pipeline designed for FPGA / ASIC integration.</p>
+    </div>
+    <div class="card">
+      <h3>Hardware Validation</h3>
+      <p>Tested on superconducting quantum processor architectures under realistic noise models.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section container" style="text-align:center;">
+  <h2>Secure Access Gateway</h2>
+  <p class="lead">All technical artifacts are gated under NDA and corporate verification.</p>
+  <button class="btn btn-primary" onclick="openModal()">Initiate Secure Request</button>
+</section>
+
+<footer class="footer">
+  <p>Confidential IP Portal — All rights reserved. Technical disclosures require executed legal agreement.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h3 style="color:var(--gold)">MNDA Request</h3>
+
+    <form onsubmit="sendEmail(event)">
+      <input class="input" type="text" placeholder="Full Name" required>
+      <input class="input" type="email" placeholder="Corporate Email (no Gmail/Yahoo)" required>
+      <input class="input" type="text" placeholder="Organization" required>
+      <input class="input" type="text" placeholder="Role / Title" required>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    <button class="btn btn-outline" style="margin-top:10px" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+function openModal(){ document.getElementById('modal').classList.add('active'); }
+function closeModal(){ document.getElementById('modal').classList.remove('active'); }
+
+function sendEmail(e){
+  e.preventDefault();
+
+  const data = new FormData(e.target);
+  const fields = Array.from(e.target.querySelectorAll('input')).map(i => i.value);
+
+  const payload = `MNDA REQUEST:\n\nName: ${fields[0]}\nEmail: ${fields[1]}\nOrg: ${fields[2]}\nRole: ${fields[3]}\n\nSent from SATI CODEX portal.`;
+
+  // mailto trigger
+  window.location.href = `mailto:itechinfomtl@gmail.com?subject=SATI CODEX MNDA Request&body=${encodeURIComponent(payload)}`;
+
+  closeModal();
+}
+
+window.onclick = function(e){
+  if(e.target.id === 'modal') closeModal();
+}
+</script>
 
 </body>
 </html>
-
