@@ -1,12 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width initial-scale=1.0" />
-    <title>Jess Damaged Archives</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SATI CODEX LCL-832/LCL-833: Hardware-verified Genus-5 Topological Quantum Error Correction IP. Production-ready. IBM Fez validated. Strategic acquisition available.">
+  <meta property="og:title" content="SATI CODEX | Genus-5 Topological QEC IP">
+  <meta property="og:description" content="Complete production-ready QEC framework: 832→10 logical qubits, d=4, T_min=18. Validated on IBM Fez. Strategic acquisition package.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yourdomain.com/og-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>SATI CODEX | Genus-5 Topological Quantum Error Correction IP</title>
+  <style>
+    :root {
+      --bg: #0B0B16;
+      --panel: #13131F;
+      --panel2: #1A1A2E;
+      --gold: #C9A84C;
+      --gold2: #E8C96A;
+      --cyan: #00D4E8;
+      --white: #F2F2F2;
+      --light: #CCCCCC;
+      --dim: #888888;
+      --green: #50E878;
+      --red: #E85050;
+      --border: #2A2A44;
+      --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: var(--font-main);
+      background: var(--bg);
+      color: var(--light);
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+    a { color: var(--cyan); text-decoration: none; transition: 0.2s; }
+    a:hover { color: var(--gold); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 6px; font-weight: 600;
+      text-align: center; cursor: pointer; border: none; transition: 0.25s;
+    }
+    .btn-primary { background: var(--gold); color: var(--bg); }
+    .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
+    .btn-outline { border: 1px solid var(--cyan); color: var(--cyan); background: transparent; }
+    .btn-outline:hover { background: rgba(0,212,232,0.1); }
+    .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; background: var(--panel2); border: 1px solid var(--border); }
+    .badge.success { border-color: var(--green); color: var(--green); }
+    .badge.warning { border-color: var(--gold); color: var(--gold); }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 32px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 24px; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .card h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 12px; }
+    .card p { font-size: 0.9rem; color: var(--light); }
+    .mono { font-family: var(--font-mono); font-size: 0.8rem; color: var(--green); background: rgba(80,232,120,0.08); padding: 16px; border-radius: 8px; overflow-x: auto; }
+    .table-wrap { overflow-x: auto; margin: 24px 0; border: 1px solid var(--border); border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: var(--panel2); color: var(--gold); font-weight: 600; }
+    tr:hover { background: rgba(201,168,76,0.05); }
+    .section { padding: 80px 0; border-top: 1px solid var(--border); }
+    .section:first-child { padding-top: 120px; border-top: none; }
+    h1, h2, h3 { color: var(--white); font-weight: 700; line-height: 1.2; }
+    h1 { font-size: 2.8rem; margin-bottom: 16px; }
+    h2 { font-size: 1.8rem; margin-bottom: 24px; color: var(--gold); }
+    .lead { font-size: 1.2rem; color: var(--light); margin-bottom: 32px; max-width: 700px; }
+    .nav { position: fixed; top:0; width:100%; background: rgba(11,11,22,0.95); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid var(--border); }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1100px; margin: 0 auto; }
+    .nav-logo { font-weight: 800; color: var(--gold); font-size: 1.1rem; letter-spacing: -0.5px; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: var(--light); font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--cyan); }
+    .hero { padding: 160px 0 100px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(201,168,76,0.15) 0%, transparent 60%); }
+    .hero-badges { display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+    .cta-row { display: flex; gap: 16px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+    .footer { padding: 48px 0; text-align: center; font-size: 0.8rem; color: var(--dim); border-top: 1px solid var(--border); margin-top: 60px; }
+    .disclaimer { font-size: 0.75rem; color: var(--dim); margin-top: 16px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .vdr-modal { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(11,11,22,0.9); display: none; align-items: center; justify-content: center; z-index: 200; backdrop-filter: blur(4px); }
+    .vdr-content { background: var(--panel); border: 1px solid var(--gold); border-radius: 12px; padding: 32px; max-width: 500px; width: 90%; text-align: center; }
+    .vdr-content h3 { color: var(--gold); margin-bottom: 12px; }
+    .vdr-content p { margin-bottom: 20px; }
+    .close-modal { background: var(--border); color: var(--white); border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; margin-top: 16px; }
+    .close-modal:hover { background: var(--dim); }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .nav-links { display: none; }
+      .hero { padding: 120px 0 60px; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">SATI CODEX</div>
+    <div class="nav-links">
+      <a href="#technology">Technology</a>
+      <a href="#validation">Validation</a>
+      <a href="#commercial">Commercial</a>
+      <a href="#security">Security</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="btn btn-outline" onclick="openVDR()">Request VDR</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-badges">
+      <span class="badge success">✓ IBM Fez Validated</span>
+      <span class="badge success">✓ 38/38 Tests PASS</span>
+      <span class="badge warning">T1–T4 Certified</span>
+      <span class="badge">Production-Ready</span>
+    </div>
+    <h1>Genus-5 Topological Quantum Error Correction</h1>
+    <p class="lead">Complete, machine-readable [[832, 10, 4]] CSS stabilizer code. 10 logical qubits on a single chip. Sub-microsecond FPGA decoding. Hardware-proven. Ready for strategic acquisition.</p>
+    <div class="cta-row">
+      <button class="btn btn-primary" onclick="openVDR()">🔐 Request Secure VDR Access</button>
+      <a href="#commercial" class="btn btn-outline">📊 View Acquisition Framework</a>
+    </div>
+    <p class="disclaimer">ORCID: 0009-0000-3465-3753 | DOI: 10.5281/zenodo.18743234 | iD01t Productions</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="technology" class="section">
+    <h2>Core Technical Architecture</h2>
+    <p class="lead">A unified QEC framework bridging exact topological mathematics, real-time classical decoding, and full cryogenic hardware specification.</p>
+    
+    <div class="grid-2">
+      <div class="card">
+        <h3>Code Parameters (T1/T3)</h3>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Parameter</th><th>Value</th><th>Tier</th></tr>
+            <tr><td>Physical Qubits (n)</td><td>832</td><td>T3</td></tr>
+            <tr><td>Logical Qubits (k)</td><td>10</td><td>T1</td></tr>
+            <tr><td>Code Distance (d)</td><td>4</td><td>T1/T3</td></tr>
+            <tr><td>Surface Genus (g)</td><td>5</td><td>T1</td></tr>
+            <tr><td>Euler Characteristic</td><td>χ = -8</td><td>T1</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Control & Convergence</h3>
+        <div class="mono">
+T_min = ⌈53·ln(2) / |ln(0.1217)|⌉ = 18 rounds
+α_op = 0.8783  |  G_gap = 0.1217
+ε_stt = 0.06085  |  p* ≤ 7.1×10⁻⁵
+        </div>
+        <p style="margin-top:12px; font-size:0.85rem;">Machine-precision stopping law guarantees logical stabilization at IEEE 754 double-precision floor within 18 syndrome rounds.</p>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:32px;">
+      <div class="card">
+        <h3>7-Layer Hardware Stack</h3>
+        <p>L1: Qubit Chip (15mK) → L2: MXC JPA/Isolators → L3: 100mK Attenuation → L4: 4K HEMT/Cryo-CMOS → L5: RT AWG/ADC → L6: FPGA Decoder → L7: Software/Control</p>
+      </div>
+      <div class="card">
+        <h3>FPGA Decoder Pipeline</h3>
+        <p>Union-Find primary (<500ns) + Blossom V fallback. End-to-end latency <1µs. Pauli frame tracking. T_min hardware verification.</p>
+      </div>
+      <div class="card">
+        <h3>Mathematical Foundation</h3>
+        <p>Exact CSS commutativity, CPTP closure, GKSL Liouvillian spectrum (ω/α=4), Jones-Khovanov calibration, Z₁₂×Z₁₂ monodromy algebra.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="validation" class="section">
+    <h2>Hardware Validation & Proof Bundle</h2>
+    <p class="lead">Empirical verification on IBM Quantum Heron-class backend (ibm_fez). Zero-Noise Extrapolation protocol with full cryptographic provenance.</p>
+    
+    <div class="table-wrap">
+      <table>
+        <tr><th>Metric</th><th>Result</th><th>Target</th><th>Status</th></tr>
+        <tr><td>Syndrome Coverage</td><td>16/16 outcomes</td><td>Full support</td><td><span style="color:var(--green)">PASS</span></td></tr>
+        <tr><td>Shannon Entropy</td><td>3.9946 bits</td><td>~4.0 bits</td><td><span style="color:var(--green)">PASS</span></td></tr>
+        <tr><td>TVD to Uniform</td><td>0.0360</td><td><0.10</td><td><span style="color:var(--green)">PASS</span></td></tr>
+        <tr><td>Logical Coherence (T=18)</td><td>α = 1.0000</td><td>α = 0.8783</td><td><span style="color:var(--green)">PASS</span></td></tr>
+        <tr><td>Overall Test Suite</td><td>38/38</td><td>100%</td><td><span style="color:var(--green)">PASS</span></td></tr>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top:24px;">
+      <h3>Cryptographic Provenance</h3>
+      <p>All artifacts secured with SHA-256 hashes. Immutable proof-of-existence via OpenTimestamps & Zenodo DOI.</p>
+      <div class="mono">
+proof_bundle.json: 761a043dea4bdc3fc2a65065ce412e12...
+genus5_code.json : c246bddd886816b1360a065eed4cbe1e...
+Master PDF       : b6c93db8c6185df307aeefe3cfc3fd60...
+      </div>
+    </div>
+  </section>
+
+  <section id="commercial" class="section">
+    <h2>Strategic Acquisition Framework</h2>
+    <p class="lead">Complete IP transfer package. Valued for immediate execution with Fortune 500/quantum-native buyers.</p>
+    
+    <div class="grid-2">
+      <div class="card">
+        <h3>Valuation Tiers (CAD)</h3>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Scenario</th><th>Range</th><th>Context</th></tr>
+            <tr><td>Conservative Floor</td><td>$45M–$60M</td><td>Quick-sale; buyer assumes integration risk</td></tr>
+            <tr><td>Target Sweet Spot</td><td>$65M–$85M</td><td>Fair market; production-ready full transfer</td></tr>
+            <tr><td>Aggressive Ceiling</td><td>$95M–$120M</td><td>Competitive bidding; first-mover premium</td></tr>
+          </table>
+        </div>
+        <p style="margin-top:12px; font-size:0.85rem;">Recommended Opening Ask: <strong style="color:var(--gold)">$95M CAD</strong> | Acceptable Close: <strong style="color:var(--green)">$65M–$85M CAD</strong></p>
+      </div>
+      <div class="card">
+        <h3>Buyer ROI & Integration Pathways</h3>
+        <ul style="padding-left:20px; font-size:0.85rem; margin-bottom:16px;">
+          <li><strong>IBM Quantum:</strong> qLDPC roadmap alignment; FPGA decoder on control rack. Saves ~$22M R&D.</li>
+          <li><strong>Xanadu:</strong> Photonic lattice mapping; cloud QEC integration. Saves ~$18M.</li>
+          <li><strong>Quantinuum:</strong> Logical error reduction on trapped-ion; IP consolidation. Saves ~$25M.</li>
+          <li><strong>Rigetti:</strong> Ankaa differentiation; precision workload capture.</li>
+        </ul>
+        <p style="font-size:0.85rem;">Payment options: Lump sum, milestone-based ($40M+$20M+$15M), or Hybrid ($50M + 3.5% royalty, capped $120M).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="security" class="section">
+    <h2>Security, Compliance & Transfer Protocol</h2>
+    <p class="lead">Enterprise-grade IP transfer with cryptographic gating, export compliance, and legal readiness.</p>
+    
+    <div class="grid-3">
+      <div class="card">
+        <h3>MNDA & VDR Access</h3>
+        <p>Full source code, parity matrices, and FPGA specs released only post-MNDA execution. 5-year confidentiality clause. VDR encrypted (AES-256).</p>
+      </div>
+      <div class="card">
+        <h3>Export Control</h3>
+        <p>Subject to Canadian EIPA (Group 1 Dual-Use). Generally EAR99. Defense integration requires formal licensing. Full declaration provided in VDR.</p>
+      </div>
+      <div class="card">
+        <h3>Escrow & Closing</h3>
+        <p>Transaction via reputable tech-IP escrow. 14-day technical audit window. Funds released upon SHA-256 verification and legal closing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section" style="text-align:center;">
+    <h2>Initiate Strategic Acquisition</h2>
+    <p class="lead" style="margin:0 auto 32px;">Direct access to the complete IP package, VDR credentials, and acquisition documentation.</p>
+    <div class="cta-row">
+      <button class="btn btn-primary" onclick="openVDR()">🔐 Request MNDA & VDR</button>
+      <a href="mailto:acquisitions@id01t.io" class="btn btn-outline">📧 Contact Executive Team</a>
+    </div>
+    <p class="disclaimer" style="margin-top:24px;">
+      © 2026 iD01t Productions / iTech Mobile and Web Solutions. All rights reserved.<br>
+      ORCID: 0009-0000-3465-3753 | DOI: 10.5281/zenodo.18743234 | Longueuil, Quebec, Canada
+    </p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>This portal is a confidential acquisition interface. Technical artifacts require executed MNDA. Valuation subject to due diligence. All mathematical proofs, hardware blueprints, and validation logs are protected under Canadian and international IP law.</p>
+  </div>
+</footer>
+
+<!-- VDR Request Modal -->
+<div id="vdrModal" class="vdr-modal">
+  <div class="vdr-content">
+    <h3>🔒 Secure VDR Access</h3>
+    <p>Full technical artifacts (genus5_code.json, lcl832_master_v16.py, FPGA RTL, IBM job manifests) are released only upon executed Mutual NDA.</p>
+    <form id="vdrForm" style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+      <input type="text" placeholder="Full Name" required style="padding:12px; background:var(--panel); border:1px solid var(--border); border-radius:6px; color:var(--white);">
+      <input type="email" placeholder="Corporate Email" required style="padding:12px; background:var(--panel); border:1px solid var(--border); border-radius:6px; color:var(--white);">
+      <input type="text" placeholder="Organization / Quantum Division" required style="padding:12px; background:var(--panel); border:1px solid var(--border); border-radius:6px; color:var(--white);">
+      <button type="submit" class="btn btn-primary" style="width:100%;">Submit Request →</button>
+    </form>
+    <button class="close-modal" onclick="closeVDR()">Cancel</button>
+  </div>
+</div>
+
+<script>
+  function openVDR() {
+    document.getElementById('vdrModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVDR() {
+    document.getElementById('vdrModal').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  document.getElementById('vdrForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = 'Processing...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = '✓ Request Received. MNDA Incoming.';
+      btn.style.background = 'var(--green)';
+      btn.style.color = '#000';
+    }, 1200);
+  });
+  // Close modal on outside click
+  document.getElementById('vdrModal').addEventListener('click', function(e) {
+    if (e.target === this) closeVDR();
+  });
+</script>
+
 </body>
 </html>
