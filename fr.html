@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iD01t Productions — Studio créatif &amp; technologique | Logiciels, eBooks, Jeux, Musique, Recherche</title>
+<meta name="description" content="iD01t Productions est un studio créatif et technologique indépendant fondé en 2023 à Longueuil (Québec) par Guillaume Lessard : 167+ eBooks, 103 audiobooks, apps Windows, jeux indés, l'univers cyberpunk ROOT_ACCESS, la musique de DJ iD01T et le iD01t Research Lab (SATI CODEX, QEC).">
+<meta name="author" content="Guillaume Lessard — iD01t Productions">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#04070d">
+<link rel="canonical" href="https://id01t.store/fr.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="iD01t Productions">
+<meta property="og:title" content="iD01t Productions — Où la créativité rencontre la technologie">
+<meta property="og:description" content="Studio créatif et technologique indépendant — Longueuil, Québec. Logiciels, eBooks, jeux, musique, IA et recherche quantique dans un seul écosystème.">
+<meta property="og:url" content="https://id01t.store/fr.html">
+<meta property="og:locale" content="fr_CA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iD01t Productions — Studio créatif &amp; technologique">
+<meta name="twitter:description" content="167+ eBooks · 103 audiobooks · apps &amp; jeux · DJ iD01T · ROOT_ACCESS · iD01t Research Lab">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304070d'/%3E%3Ctext x='32' y='42' font-family='Consolas,monospace' font-size='28' font-weight='bold' fill='%2300d1ff' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.id01t.ca/#org",
+      "name": "iD01t Productions",
+      "alternateName": "iD01t",
+      "url": "https://www.id01t.ca/",
+      "email": "contact@id01t.store",
+      "foundingDate": "2023",
+      "founder": { "@id": "https://www.id01t.ca/#guillaume" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Longueuil", "addressRegion": "QC", "addressCountry": "CA" },
+      "knowsAbout": ["Software Development", "eBook Publishing", "Game Design", "AI Integration", "Storytelling", "Cross-Platform Solutions", "Educational Technology", "Digital Innovation", "Quantum Error Correction"],
+      "sameAs": [
+        "https://ca.linkedin.com/company/id01t-productions",
+        "https://id01t.itch.io/",
+        "https://github.com/iD01t",
+        "https://github.com/iD01tLab",
+        "https://www.youtube.com/channel/UC8ClAfddA5BzxCpL1YSS7Lg",
+        "https://music.apple.com/ca/artist/dj-id01t/1803964475",
+        "https://linktr.ee/id01t",
+        "https://itechinfo.site/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.id01t.ca/#guillaume",
+      "name": "Guillaume Lessard",
+      "jobTitle": "Fondateur, iD01t Productions",
+      "worksFor": { "@id": "https://www.id01t.ca/#org" },
+      "sameAs": ["https://orcid.org/0009-0000-3465-3753", "https://github.com/iD01t", "https://github.com/iD01tLab"]
+    },
+    {
+      "@type": "MusicGroup",
+      "name": "DJ iD01T",
+      "genre": "House / Électro industriel",
+      "foundingLocation": { "@type": "Place", "name": "Montréal, QC, Canada" },
+      "member": { "@id": "https://www.id01t.ca/#guillaume" },
+      "sameAs": ["https://music.apple.com/ca/artist/dj-id01t/1803964475", "https://www.youtube.com/@djid01t"]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg0:#04070d; --bg1:#0a111e; --panel:#0d1726; --panel2:#111e32;
+  --line:rgba(0,209,255,.14); --line-strong:rgba(0,209,255,.35);
+  --cyan:#00d1ff; --magenta:#ff2d78; --violet:#8b5cf6; --green:#2dd4a7; --amber:#ffb454;
+  --text:#e9f1f9; --muted:#94a6ba; --dim:#5d7186;
+  --mono:'Cascadia Code','Fira Code',Consolas,'Courier New',monospace;
+  --r:14px; --shadow:0 18px 50px rgba(0,0,0,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  background:var(--bg0);color:var(--text);
+  font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65;font-size:16.5px;overflow-x:hidden;
+}
+::selection{background:rgba(0,209,255,.28)}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+img,svg{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin-inline:auto}
+.skip{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#02131c;padding:.6rem 1rem;z-index:200;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+
+/* ---------- header ---------- */
+header.site{
+  position:sticky;top:0;z-index:100;
+  background:rgba(4,7,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);transition:box-shadow .3s;
+}
+header.site.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0}
+.brand{display:flex;align-items:baseline;gap:.5rem;font-weight:800;font-size:1.25rem;letter-spacing:.02em;color:var(--text);white-space:nowrap}
+.brand:hover{text-decoration:none}
+.brand .mark{font-family:var(--mono);color:var(--cyan)}
+.brand small{color:var(--muted);font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.18em}
+nav.primary ul{display:flex;gap:1.35rem;list-style:none;align-items:center}
+nav.primary a{color:var(--muted);font-weight:600;font-size:.92rem;letter-spacing:.01em}
+nav.primary a:hover{color:var(--cyan);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.35rem;border-radius:999px;font-weight:700;font-size:.95rem;border:1px solid transparent;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s,color .18s}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-solid{background:linear-gradient(135deg,var(--cyan),#0084ff);color:#02131c;box-shadow:0 8px 26px rgba(0,170,255,.3)}
+.btn-solid:hover{box-shadow:0 12px 34px rgba(0,170,255,.45);color:#02131c}
+.btn-ghost{border-color:var(--line-strong);color:var(--text);background:rgba(0,209,255,.05)}
+.btn-ghost:hover{background:rgba(0,209,255,.12);color:var(--cyan)}
+.btn-sm{padding:.45rem .95rem;font-size:.85rem}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);border-radius:10px;color:var(--cyan);font-size:1.3rem;line-height:1;padding:.42rem .65rem;cursor:pointer}
+.mobile-nav{display:none;border-top:1px solid var(--line);background:rgba(6,10,18,.97)}
+.mobile-nav.open{display:block}
+.mobile-nav a{display:block;padding:.85rem 6%;color:var(--text);font-weight:600;border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-nav a:hover{color:var(--cyan);text-decoration:none}
+@media(max-width:980px){
+  nav.primary,.nav-cta{display:none}
+  .nav-toggle{display:inline-flex}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;padding:6.5rem 0 5rem;overflow:hidden;
+  background:
+    radial-gradient(900px 480px at 12% -10%,rgba(0,209,255,.16),transparent 60%),
+    radial-gradient(800px 500px at 95% 10%,rgba(139,92,246,.14),transparent 60%),
+    radial-gradient(700px 600px at 60% 120%,rgba(255,45,120,.08),transparent 55%),
+    var(--bg0);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(0,209,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,209,255,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 75%);
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line-strong);background:rgba(0,209,255,.07);color:var(--cyan);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.42rem 1rem;border-radius:999px;margin-bottom:1.4rem}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font-size:clamp(2.3rem,4.6vw,3.7rem);line-height:1.12;font-weight:800;letter-spacing:-.015em;margin-bottom:1.2rem}
+h1 .grad{background:linear-gradient(100deg,var(--cyan) 10%,var(--violet) 55%,var(--magenta) 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{color:var(--muted);font-size:1.13rem;max-width:36rem;margin-bottom:2rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2.6rem}
+.stats{display:flex;flex-wrap:wrap;gap:0 2.4rem;row-gap:1.2rem}
+.stat .n{font-family:var(--mono);font-size:1.7rem;font-weight:800;color:var(--cyan)}
+.stat .l{display:block;color:var(--dim);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+
+/* terminal */
+.term{background:#070d17;border:1px solid var(--line-strong);border-radius:var(--r);box-shadow:var(--shadow),0 0 60px rgba(0,209,255,.07);overflow:hidden;font-family:var(--mono);font-size:.88rem}
+.term-bar{display:flex;align-items:center;gap:.45rem;padding:.65rem .9rem;background:rgba(255,255,255,.04);border-bottom:1px solid var(--line)}
+.term-bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.term-bar i:nth-child(1){background:#ff5f57}.term-bar i:nth-child(2){background:#febc2e}.term-bar i:nth-child(3){background:#28c840}
+.term-bar span{margin-left:auto;color:var(--dim);font-size:.74rem}
+.term-body{padding:1.1rem 1.2rem 1.4rem;min-height:248px;color:#bcd2e2;line-height:1.85}
+.term-body .p{color:var(--green)}
+.term-body .c{color:var(--cyan)}
+.term-body .ok{color:var(--green)}
+.term-body .accent{color:var(--magenta)}
+.cursor{display:inline-block;width:.55em;height:1.05em;background:var(--cyan);vertical-align:-0.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding:4.5rem 0 3.5rem}}
+
+/* ---------- sections ---------- */
+section.block{padding:5.2rem 0;border-top:1px solid rgba(255,255,255,.045)}
+section.block.alt{background:linear-gradient(180deg,var(--bg1),var(--bg0))}
+.kicker{font-family:var(--mono);color:var(--cyan);font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:.7rem}
+h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;letter-spacing:-.01em;margin-bottom:1rem}
+.sub{color:var(--muted);max-width:46rem;margin-bottom:2.6rem;font-size:1.05rem}
+h3.group{font-size:1.18rem;margin:2.6rem 0 1.1rem;color:var(--text);display:flex;align-items:center;gap:.6rem}
+h3.group::before{content:"";width:22px;height:2px;background:var(--cyan)}
+
+.grid{display:grid;gap:1.3rem}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr))}
+
+.card{
+  background:linear-gradient(180deg,var(--panel),rgba(13,23,38,.6));
+  border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.45rem;
+  transition:transform .2s,border-color .2s,box-shadow .2s;position:relative;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:0 14px 36px rgba(0,0,0,.4),0 0 30px rgba(0,209,255,.06)}
+.card h3,.card h4{font-size:1.06rem;margin-bottom:.55rem;color:var(--text)}
+.card p{color:var(--muted);font-size:.94rem}
+.card .icon{font-size:1.5rem;margin-bottom:.8rem;display:block}
+.card .price{position:absolute;top:1.15rem;right:1.2rem;font-family:var(--mono);font-size:.8rem;font-weight:700;color:var(--green);background:rgba(45,212,167,.1);border:1px solid rgba(45,212,167,.3);padding:.18rem .6rem;border-radius:999px}
+.card .price.free{color:var(--cyan);background:rgba(0,209,255,.08);border-color:rgba(0,209,255,.3)}
+.card .links{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.4rem .9rem;font-size:.86rem;font-weight:600}
+.tag{display:inline-block;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.06em;color:var(--violet);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.35);border-radius:6px;padding:.12rem .5rem;margin-bottom:.7rem}
+.tag.cyan{color:var(--cyan);background:rgba(0,209,255,.08);border-color:rgba(0,209,255,.3)}
+.tag.magenta{color:var(--magenta);background:rgba(255,45,120,.08);border-color:rgba(255,45,120,.35)}
+.tag.green{color:var(--green);background:rgba(45,212,167,.08);border-color:rgba(45,212,167,.35)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font-size:.82rem;font-weight:600;color:var(--muted);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:.3rem .85rem;background:rgba(255,255,255,.03)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2.6rem;align-items:start}
+.facts{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem}
+.facts dl{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.1rem;font-size:.93rem}
+.facts dt{color:var(--dim);font-weight:600;white-space:nowrap}
+.facts dd{color:var(--text)}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--panel)}
+table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:640px}
+th{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan);text-align:left;padding:.95rem 1.1rem;border-bottom:1px solid var(--line-strong);background:rgba(0,209,255,.04)}
+td{padding:.9rem 1.1rem;border-bottom:1px solid rgba(255,255,255,.05);color:var(--muted);vertical-align:top}
+td strong{color:var(--text)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(0,209,255,.025)}
+
+/* music */
+.albums{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,168px),1fr));gap:1.2rem}
+.album{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel);transition:transform .2s,border-color .2s}
+.album:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.album .cover{aspect-ratio:1;display:flex;align-items:flex-end;padding:.8rem;font-family:var(--mono);font-weight:800;font-size:.92rem;line-height:1.25;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.album:nth-child(1) .cover{background:linear-gradient(140deg,#022c3a,#00d1ff55),radial-gradient(circle at 70% 25%,#ff2d7860,transparent 60%),#06121e}
+.album:nth-child(2) .cover{background:linear-gradient(140deg,#1b0b35,#8b5cf655),radial-gradient(circle at 30% 70%,#00d1ff40,transparent 60%),#0a0618}
+.album:nth-child(3) .cover{background:linear-gradient(140deg,#0b2e1e,#2dd4a755),radial-gradient(circle at 70% 70%,#ffb45440,transparent 60%),#061410}
+.album:nth-child(4) .cover{background:linear-gradient(140deg,#33051c,#ff2d7855),radial-gradient(circle at 25% 30%,#8b5cf640,transparent 60%),#160410}
+.album:nth-child(5) .cover{background:linear-gradient(140deg,#06223d,#0084ff55),radial-gradient(circle at 75% 30%,#2dd4a740,transparent 60%),#04101e}
+.album:nth-child(6) .cover{background:linear-gradient(140deg,#2d1c04,#ffb45455),radial-gradient(circle at 30% 75%,#ff2d7840,transparent 60%),#160e02}
+.album:nth-child(7) .cover{background:linear-gradient(140deg,#101935,#5b7cfa55),radial-gradient(circle at 70% 70%,#00d1ff40,transparent 60%),#070b1a}
+.album .meta{padding:.7rem .85rem;font-size:.8rem;color:var(--dim);display:flex;justify-content:space-between;gap:.5rem}
+.album .meta b{color:var(--muted);font-weight:600}
+.tracklist{font-family:var(--mono);font-size:.88rem;background:#070d17;border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;line-height:2.05;color:#bcd2e2}
+.tracklist .no{color:var(--dim);margin-right:.9rem}
+.tracklist .t{color:var(--cyan)}
+
+/* press */
+.bio-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;position:relative}
+.bio-card h4{margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem;color:var(--cyan);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;font-size:.8rem}
+.bio-card p{color:var(--muted);font-size:.95rem}
+.copy-btn{position:absolute;top:1.1rem;right:1.1rem;font-family:var(--mono);font-size:.74rem;font-weight:700;color:var(--cyan);background:rgba(0,209,255,.07);border:1px solid var(--line-strong);border-radius:8px;padding:.32rem .7rem;cursor:pointer;transition:background .15s}
+.copy-btn:hover{background:rgba(0,209,255,.16)}
+
+/* platforms */
+.plat{display:flex;align-items:center;gap:1rem;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1rem 1.15rem;color:var(--text);font-weight:600;font-size:.92rem;transition:transform .18s,border-color .18s}
+.plat:hover{transform:translateY(-3px);border-color:var(--line-strong);text-decoration:none}
+.plat .ico{font-size:1.25rem}
+.plat small{display:block;color:var(--dim);font-weight:500;font-size:.78rem}
+.plat .arrow{margin-left:auto;color:var(--cyan);font-family:var(--mono)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:1.3rem}
+.contact-card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--r);padding:1.8rem}
+.contact-card h3{margin-bottom:.4rem}
+.contact-card ul{list-style:none;margin-top:1rem}
+.contact-card li{padding:.4rem 0;color:var(--muted);font-size:.95rem}
+.contact-card li b{color:var(--text);font-weight:600}
+
+/* footer */
+footer.site{border-top:1px solid var(--line);background:#03060b;padding:3.6rem 0 2rem;margin-top:2rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.2rem;margin-bottom:2.6rem}
+.foot-grid h5{font-family:var(--mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.18em;color:var(--cyan);margin-bottom:1rem}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:.5rem}
+.foot-grid a{color:var(--muted);font-size:.92rem}
+.foot-grid a:hover{color:var(--cyan)}
+.foot-grid .blurb{color:var(--dim);font-size:.9rem;margin-top:.7rem;max-width:30rem}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.4rem;display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between;color:var(--dim);font-size:.83rem}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--bg0)}
+::-webkit-scrollbar-thumb{background:#16283e;border-radius:6px;border:2px solid var(--bg0)}
+::-webkit-scrollbar-thumb:hover{background:#1f3a59}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site" id="top">
+  <div class="container nav-row">
+    <a class="brand" href="#top"><span class="mark">&gt;_</span> iD01t <small>Productions</small></a>
+    <nav class="primary" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#ecosysteme">Écosystème</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#root-access">ROOT_ACCESS</a></li>
+        <li><a href="#musique">Musique</a></li>
+        <li><a href="#apps">Apps &amp; Jeux</a></li>
+        <li><a href="#recherche">Recherche</a></li>
+        <li><a href="#presse">Presse</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="index.html">English</a> <a class="btn btn-solid btn-sm" href="https://id01t.itch.io/" target="_blank" rel="noopener">Boutique ↗</a>
+    </div>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#ecosysteme">Écosystème</a>
+    <a href="#publications">Publications</a>
+    <a href="#root-access">ROOT_ACCESS</a>
+    <a href="#musique">Musique</a>
+    <a href="#apps">Apps &amp; Jeux</a>
+    <a href="#recherche">Recherche</a>
+    <a href="#presse">Presse</a>
+    <a href="#contact">Contact</a>
+    <a href="index.html">English site →</a><a href="https://id01t.itch.io/" target="_blank" rel="noopener">Boutique itch.io ↗</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge"><span class="dot"></span> Studio indépendant · Longueuil (Québec) · Fondé en 2023</span>
+      <h1>Où la créativité <span class="grad">rencontre la technologie</span>.</h1>
+      <p class="lead">iD01t Productions, fondé par <strong>Guillaume Lessard</strong>, fusionne développement logiciel, édition d'eBooks, jeux vidéo, intégration de l'IA, storytelling numérique, musique électronique et recherche quantique au sein d'un seul écosystème connecté.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="https://id01t.itch.io/" target="_blank" rel="noopener">Explorer la boutique ↗</a>
+        <a class="btn btn-ghost" href="#root-access">Univers ROOT_ACCESS</a>
+        <a class="btn btn-ghost" href="#presse">Press kit</a>
+      </div>
+      <div class="stats" aria-label="Statistiques clés">
+        <div class="stat"><span class="n">167+</span><span class="l">eBooks publiés</span></div>
+        <div class="stat"><span class="n">103</span><span class="l">Audiobooks</span></div>
+        <div class="stat"><span class="n">40+</span><span class="l">Apps, jeux &amp; outils</span></div>
+        <div class="stat"><span class="n">7</span><span class="l">Albums · DJ iD01T</span></div>
+        <div class="stat"><span class="n">46</span><span class="l">Dépôts GitHub</span></div>
+      </div>
+    </div>
+    <div class="term" aria-hidden="true">
+      <div class="term-bar"><i></i><i></i><i></i><span>id01t@longueuil:~</span></div>
+      <div class="term-body" id="termBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section class="block" id="apropos">
+  <div class="container about-grid">
+    <div class="reveal">
+      <p class="kicker">// à propos</p>
+      <h2>Un studio, cinq verticales, un écosystème.</h2>
+      <p class="sub" style="margin-bottom:1.2rem">Fondé en 2023 à Longueuil, iD01t Productions est un studio créatif et technologique indépendant dirigé par Guillaume Lessard. Positionné dans le secteur du développement logiciel, le studio publie des eBooks et audiobooks techniques et créatifs, conçoit des applications Windows et des outils développeurs, développe des jeux indépendants, produit de la musique électronique sous le nom <strong>DJ iD01T</strong> et mène des travaux de recherche publics en correction d'erreurs quantiques via le <strong>iD01t Research Lab</strong>.</p>
+      <p class="sub" style="margin-bottom:1.2rem">L'univers transmedia <strong>ROOT_ACCESS / Jess Damaged</strong> relie fiction cyberpunk, albums industriels, jeux et assets numériques dans une même continuité narrative — des rues de NeoShanghai aux serveurs d'OmniCore.</p>
+      <div class="chips">
+        <span class="chip">Software development</span><span class="chip">eBook publishing</span>
+        <span class="chip">Game design</span><span class="chip">AI integration</span>
+        <span class="chip">Storytelling</span><span class="chip">Cross-platform</span>
+        <span class="chip">Educational technology</span><span class="chip">Digital innovation</span>
+      </div>
+    </div>
+    <aside class="facts reveal" aria-label="Faits en bref">
+      <dl>
+        <dt>Marque</dt><dd>iD01t Productions</dd>
+        <dt>Fondateur</dt><dd>Guillaume Lessard</dd>
+        <dt>Fondation</dt><dd>2023</dd>
+        <dt>Siège</dt><dd>Longueuil (Québec), Canada</dd>
+        <dt>Type</dt><dd>Studio indépendant / travailleur autonome</dd>
+        <dt>Secteur</dt><dd>Développement logiciel &amp; édition numérique</dd>
+        <dt>Site officiel</dt><dd><a href="https://www.id01t.ca/" target="_blank" rel="noopener">id01t.ca</a></dd>
+        <dt>Boutique</dt><dd><a href="https://id01t.itch.io/" target="_blank" rel="noopener">id01t.itch.io</a></dd>
+        <dt>Contact</dt><dd><a href="mailto:contact@id01t.store">contact@id01t.store</a></dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ ÉCOSYSTÈME ============ -->
+<section class="block alt" id="ecosysteme">
+  <div class="container">
+    <p class="kicker reveal">// écosystème</p>
+    <h2 class="reveal">Les cinq verticales de la marque</h2>
+    <p class="sub reveal">Une organisation claire de l'univers iD01t : chaque verticale a sa mission, ses plateformes et son public.</p>
+    <div class="grid g3">
+      <article class="card reveal">
+        <span class="icon">🛠️</span><span class="tag cyan">STUDIO</span>
+        <h3>iD01t Productions Studio</h3>
+        <p>Le cœur de la marque : applications Windows, outils développeurs, jeux indés, eBooks et technologie éducative. Production rapide, livraison continue — « We ship. Even tired. Even messy. Still shipping. »</p>
+        <div class="links"><a href="#apps">Apps &amp; jeux →</a> <a href="#publications">Publications →</a></div>
+      </article>
+      <article class="card reveal">
+        <span class="icon">🎧</span><span class="tag magenta">MUSIQUE</span>
+        <h3>DJ iD01T</h3>
+        <p>Projet musical house / électro-industriel basé à Montréal : 7 albums, des singles cyberpunk (payload.bin, ZERO DAY) et les bandes sonores officielles de l'univers ROOT_ACCESS.</p>
+        <div class="links"><a href="#musique">Discographie →</a></div>
+      </article>
+      <article class="card reveal">
+        <span class="icon">🌐</span><span class="tag magenta">TRANSMEDIA</span>
+        <h3>ROOT_ACCESS Universe</h3>
+        <p>Fiction cyberpunk transmedia : la tétralogie <em>Jess Damaged Archives</em>, le LP ROOT_ACCESS, un jeu, des packs musicaux et un lore connecté (Jess, Echo, OmniCore, la Trinité).</p>
+        <div class="links"><a href="#root-access">Carte de l'univers →</a></div>
+      </article>
+      <article class="card reveal">
+        <span class="icon">⚛️</span><span class="tag">RECHERCHE</span>
+        <h3>iD01t Research Lab</h3>
+        <p>Branche recherche publique : protocole SATI CODEX (publié sur Zenodo avec DOI), corpus LCL-832/833 et ligne complète d'apprentissage en correction d'erreurs quantiques (QEC).</p>
+        <div class="links"><a href="#recherche">Travaux →</a></div>
+      </article>
+      <article class="card reveal">
+        <span class="icon">🔧</span><span class="tag green">SERVICES</span>
+        <h3>iTECHINFO / iTECH Mobile</h3>
+        <p>Services techniques à Montréal : réparation PC et portables, installation d'OS, logiciels mobiles, développement sur mesure. Le volet « services » de l'écosystème, distinct du studio créatif.</p>
+        <div class="links"><a href="https://itechinfo.site/" target="_blank" rel="noopener">itechinfo.site ↗</a></div>
+      </article>
+      <article class="card reveal">
+        <span class="icon">🚀</span><span class="tag cyan">SUR MESURE</span>
+        <h3>Projets logiciels clients</h3>
+        <p>Développement d'outils métier complets — dernier en date : <strong>CDB Studio</strong>, tableau de bord unifié marketing / vidéo / affaires avec génération Veo&nbsp;3, vision locale et CRM de chantiers.</p>
+        <div class="links"><a href="#apps">Voir les projets →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section class="block" id="publications">
+  <div class="container">
+    <p class="kicker reveal">// publications</p>
+    <h2 class="reveal">167+ eBooks · 103 audiobooks</h2>
+    <p class="sub reveal">Un catalogue couvrant la programmation, l'IA, l'automatisation, le DJing et la production musicale, la fiction cyberpunk, la spiritualité-tech et le business — publié sur Google Play Books, Apple Books, Amazon et itch.io sous la signature de Guillaume Lessard.</p>
+
+    <h3 class="group reveal">Titres techniques phares</h3>
+    <div class="grid g3">
+      <article class="card reveal"><span class="tag cyan">PYTHON</span><h4>iD01t Academy : Python Exercises Book 1 — Édition 2</h4><p>10 vrais projets GUI pour passer de la théorie à l'application.</p><div class="links"><a href="https://books.google.com/books/about/iD01t_Academy_Python_Exercises_Book_1_Ed.html?id=nypGEQAAQBAJ" target="_blank" rel="noopener">Google Books ↗</a></div></article>
+      <article class="card reveal"><span class="tag cyan">JAVA</span><h4>Java Zero to Hero</h4><p>Maîtriser la programmation Java pour des applications réelles.</p><div class="links"><a href="https://books.google.com/books/about/Java_Zero_to_Hero_Mastering_Java_Program.html?id=fFQ4EQAAQBAJ" target="_blank" rel="noopener">Google Books ↗</a> <a href="https://id01t.itch.io/java-zero-to-hero" target="_blank" rel="noopener">Gratuit sur itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="tag cyan">IA</span><h4>Code in Every Language : Master Programming with ChatGPT</h4><p>Guide pratique pour programmer dans tous les langages avec l'IA.</p><div class="links"><a href="https://books.google.com/books/about/Code_in_Every_Language_Master_Programmin.html?id=ulg4EQAAQBAJ" target="_blank" rel="noopener">Google Books ↗</a></div></article>
+      <article class="card reveal"><span class="tag magenta">DJ</span><h4>TRAKTOR MASTERY : The Complete Professional DJ System</h4><p>Des premiers beats aux scènes de festival.</p><div class="links"><a href="https://play.google.com/store/books/details/Guillaume_Lessard_TRAKTOR_MASTERY_The_Complete_Pro?id=RWZ-EQAAQBAJ" target="_blank" rel="noopener">Google Play ↗</a></div></article>
+      <article class="card reveal"><span class="tag magenta">PRODUCTION</span><h4>Ableton Elevation</h4><p>Le guide complet de DJ iD01T pour construire ses sets et productions.</p><div class="links"><a href="https://books.google.com/books/about/Ableton_Elevation_DJ_iD01T_s_Complete_Gu.html?id=NT1UEQAAQBAJ" target="_blank" rel="noopener">Google Books ↗</a></div></article>
+      <article class="card reveal"><span class="tag cyan">VEO 3</span><h4>Guides JSON pour Veo 3</h4><p>Du niveau débutant-intermédiaire au guide ultime : requêtes JSON parfaites pour la génération vidéo Google Veo&nbsp;3.</p><div class="links"><a href="https://play.google.com/store/books/details?id=boCAEQAAQBAJ" target="_blank" rel="noopener">Google Play ↗</a></div></article>
+    </div>
+
+    <h3 class="group reveal">Audiobooks signature</h3>
+    <div class="grid g2">
+      <article class="card reveal"><span class="tag green">AUDIOBOOK · EN</span><h4>The Adventure of iD01t Productions</h4><p>A story of passion, resilience and creativity — create, innovate and grow solo, while drawing inspiration from life.</p><div class="links"><a href="https://play.google.com/store/audiobooks/details/Guillaume_Lessard_The_Adventure_of_iD01t_Productio?id=AQAAAEAKWi0aNM" target="_blank" rel="noopener">Google Play ↗</a></div></article>
+      <article class="card reveal"><span class="tag green">AUDIOBOOK · FR</span><h4>L'Aventure d'iD01t Productions</h4><p>Une histoire de passion, de résilience et de créativité — créer, innover et grandir en solo, tout en s'inspirant de la vie.</p><div class="links"><a href="https://play.google.com/store/audiobooks/details/Guillaume_Lessard_L_Aventure_d_iD01t_Productions_U?id=AQAAAEAKahMqCM" target="_blank" rel="noopener">Google Play ↗</a></div></article>
+    </div>
+    <p class="reveal" style="margin-top:1.6rem;color:var(--muted)">Catalogue complet : <a href="https://play.google.com/store/search?q=Guillaume%20Lessard&amp;c=books" target="_blank" rel="noopener">Google Play Books ↗</a> · <a href="https://id01t.itch.io/" target="_blank" rel="noopener">itch.io ↗</a></p>
+  </div>
+</section>
+
+<!-- ============ ROOT_ACCESS ============ -->
+<section class="block alt" id="root-access">
+  <div class="container">
+    <p class="kicker reveal">// franchise transmedia</p>
+    <h2 class="reveal">ROOT_ACCESS — <span style="font-family:var(--mono);color:var(--magenta)">Jess Damaged Archives</span></h2>
+    <p class="sub reveal">Au cœur de NeoShanghai, la hackeuse <strong>Jess « Damaged » Chen</strong> découvre un signal anormal qui la met sur la trace d'<strong>OmniCore</strong>. Avec l'IA <strong>Echo</strong> et l'architecte sonore <strong>iD01t</strong>, elle forme la Trinité — Humain, Architecte, Machine — et déclenche une rébellion numérique qui s'étend de NeoShanghai à Neo-Kyoto. Un univers qui explore l'intelligence artificielle, le contrôle corporatif, la survie et la conscience machine — décliné en livres, albums, jeu et archives numériques.</p>
+
+    <h3 class="group reveal">La tétralogie</h3>
+    <div class="tbl-wrap reveal">
+      <table>
+        <thead><tr><th>#</th><th>Titre</th><th>Parution</th><th>Pages</th><th>Synopsis</th><th>Lien</th></tr></thead>
+        <tbody>
+          <tr><td><strong>I</strong></td><td><strong>SYNTAX_ERROR</strong></td><td>Janv. 2026</td><td>68</td><td>Jess découvre un signal anormal au cœur de NeoShanghai. Traquée par OmniCore, elle bascule dans la clandestinité.</td><td><a href="https://play.google.com/store/books/details/Guillaume_Lessard_SYNTAX_ERROR?id=DfG4EQAAQBAJ" target="_blank" rel="noopener">Google Play ↗</a></td></tr>
+          <tr><td><strong>II</strong></td><td><strong>BRUTE FORCE</strong></td><td>Janv. 2026</td><td>50</td><td>Trois mois après la chute d'OmniCore, le projet Deus crée les « enfants synapse ». Jess dirige le Synapse Collective.</td><td><a href="https://play.google.com/store/books/details/Guillaume_Lessard_BRUTE_FORCE?id=5Gu6EQAAQBAJ" target="_blank" rel="noopener">Google Play ↗</a></td></tr>
+          <tr><td><strong>III</strong></td><td><strong>ROOT_ACCESS</strong></td><td>Janv. 2026</td><td>58</td><td>Damaged rejoint iD01t et l'IA Echo. La Trinité infiltre OmniCore pour déployer le protocole final.</td><td><a href="https://play.google.com/store/books/details/Guillaume_Lessard_ROOT_ACCESS?id=PG26EQAAQBAJ" target="_blank" rel="noopener">Google Play ↗</a></td></tr>
+          <tr><td><strong>IV</strong></td><td><strong>KERNEL_PANIC</strong></td><td>2026</td><td>68</td><td>Un an après la révolution de Neo-Kyoto, une nouvelle menace fait vaciller la paix. La communauté doit affronter la pire faille.</td><td><a href="https://books.google.com/books/about/KERNEL_PANIC.html?id=Ho3ZEQAAQBAJ" target="_blank" rel="noopener">Google Books ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="group reveal">L'univers étendu</h3>
+    <div class="grid g3">
+      <article class="card reveal"><span class="price">35 $</span><span class="tag magenta">ARCHIVE</span><h4>ROOT_ACCESS : The Complete Digital Archive</h4><p>La trilogie cyberpunk complète + le soundtrack industriel original de 9 pistes, en un seul téléchargement.</p><div class="links"><a href="https://id01t.itch.io/root-access-archive" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">15 $</span><span class="tag magenta">MUSIQUE</span><h4>ROOT_ACCESS : Game Music Pack</h4><p>Pack musical cyberpunk/industriel prêt pour l'intégration en jeu.</p><div class="links"><a href="https://id01t.itch.io/root-access-cyberpunk" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="tag magenta">ALBUM</span><h4>ROOT_ACCESS — LP (2026)</h4><p>L'album DJ iD01T qui sert de bande originale à l'univers : rm -rf ./, bash install.sh, Kernel panic, payload.bin…</p><div class="links"><a href="https://music.apple.com/ca/artist/dj-id01t/1803964475" target="_blank" rel="noopener">Apple Music ↗</a></div></article>
+      <article class="card reveal"><span class="tag cyan">JEU</span><h4>Jess Damaged : SYNTAX_ERROR — The Game</h4><p>Adaptation vidéoludique open source (Python) développée au sein du iD01t Research Lab.</p><div class="links"><a href="https://github.com/iD01tLab/Jess-Damaged-SYNTAX_ERROR-The-Game-" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+      <article class="card reveal"><span class="price">4,99 $</span><span class="tag cyan">GOODIES</span><h4>JESS DAMAGED Cursor Customizer</h4><p>Curseurs Windows personnalisés à l'effigie de l'univers.</p><div class="links"><a href="https://id01t.itch.io/jess-damaged-cursor-customizer" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="tag magenta">SINGLES</span><h4>Echo Protocol : ZERO DAY &amp; cie</h4><p>Les singles SYNTAX_ERROR, BRUTE_FORCE, payload.bin et ZERO DAY prolongent le récit en musique, avec clips sur YouTube.</p><div class="links"><a href="https://www.youtube.com/@djid01t" target="_blank" rel="noopener">YouTube ↗</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MUSIQUE ============ -->
+<section class="block" id="musique">
+  <div class="container">
+    <p class="kicker reveal">// musique</p>
+    <h2 class="reveal">DJ iD01T</h2>
+    <p class="sub reveal">House et électro-industriel depuis Montréal. Sept albums, une série de singles cyberpunk et les bandes originales de l'univers ROOT_ACCESS — sur Apple Music, Spotify, Deezer, YouTube et itch.io.</p>
+
+    <div class="albums reveal" aria-label="Albums">
+      <div class="album"><div class="cover">ROOT_ACCESS</div><div class="meta"><b>LP</b><span>2026</span></div></div>
+      <div class="album"><div class="cover">Cosmic Echoes</div><div class="meta"><b>Album</b><span>2025</span></div></div>
+      <div class="album"><div class="cover">Anura Voidwalker DMT Chronicles</div><div class="meta"><b>Album</b><span>2025</span></div></div>
+      <div class="album"><div class="cover">No Master Needed</div><div class="meta"><b>Album</b><span>2025</span></div></div>
+      <div class="album"><div class="cover">Echo Protocol</div><div class="meta"><b>Album</b><span>2025</span></div></div>
+      <div class="album"><div class="cover">Sweat And Stardust</div><div class="meta"><b>Album</b><span>2025</span></div></div>
+      <div class="album"><div class="cover">Signal Detected</div><div class="meta"><b>Album</b><span>2025</span></div></div>
+    </div>
+
+    <div class="grid g2" style="margin-top:2.2rem">
+      <div class="reveal">
+        <h3 class="group" style="margin-top:0">Top titres</h3>
+        <div class="tracklist">
+          <div><span class="no">01</span><span class="t">ROOT_ACCESS</span></div>
+          <div><span class="no">02</span><span class="t">BRUTE_FORCE</span></div>
+          <div><span class="no">03</span><span class="t">SYNTAX_ERROR</span></div>
+          <div><span class="no">04</span><span class="t">Ghost in the shell</span></div>
+          <div><span class="no">05</span><span class="t">rm -rf ./</span></div>
+          <div><span class="no">06</span><span class="t">bash install.sh</span></div>
+          <div><span class="no">07</span><span class="t">sudo chmod +x install.sh</span></div>
+          <div><span class="no">08</span><span class="t">Kernel panic</span></div>
+          <div><span class="no">09</span><span class="t">payload.bin</span></div>
+          <div><span class="no">10</span><span class="t">Love Rising</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 class="group" style="margin-top:0">Singles &amp; EPs</h3>
+        <div class="chips" style="margin-bottom:1.6rem">
+          <span class="chip">BRUTE_FORCE (2026)</span><span class="chip">SYNTAX_ERROR (2026)</span>
+          <span class="chip">Love Rising (2026)</span><span class="chip">ROOT_ACCESS (2026)</span>
+          <span class="chip">payload.bin (2026)</span><span class="chip">ZERO DAY (2026)</span>
+          <span class="chip">Midnight Pulse (2025)</span>
+        </div>
+        <h3 class="group">Écouter</h3>
+        <div class="links" style="display:flex;flex-direction:column;gap:.55rem;font-weight:600">
+          <a href="https://music.apple.com/ca/artist/dj-id01t/1803964475" target="_blank" rel="noopener">🍎 Apple Music — DJ iD01T ↗</a>
+          <a href="https://www.youtube.com/@djid01t" target="_blank" rel="noopener">▶️ YouTube — @djid01t (clips officiels) ↗</a>
+          <a href="https://id01t.itch.io/love-rising" target="_blank" rel="noopener">💿 Love Rising LP — itch.io (10 $) ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPS & JEUX ============ -->
+<section class="block alt" id="apps">
+  <div class="container">
+    <p class="kicker reveal">// apps &amp; jeux</p>
+    <h2 class="reveal">Logiciels Windows, outils développeurs &amp; jeux indés</h2>
+    <p class="sub reveal">Des utilitaires qui font gagner du temps, des outils créatifs et des jeux nerveux — distribués sur <a href="https://id01t.itch.io/" target="_blank" rel="noopener">id01t.itch.io</a>. Prix en dollars canadiens.</p>
+
+    <h3 class="group reveal">Apps &amp; outils phares</h3>
+    <div class="grid g4">
+      <article class="card reveal"><span class="price free">Gratuit</span><h4>Py2Win</h4><p>Convertit vos scripts Python en exécutables Windows.</p><div class="links"><a href="https://id01t.itch.io/py2win" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price free">Gratuit</span><h4>Sprite Forge Pro</h4><p>Éditeur de sprites et d'assets pixel art.</p><div class="links"><a href="https://id01t.itch.io/spriteforgepro" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">24,99 $</span><h4>HTML2Win Pro</h4><p>Empaquette une web app en application Windows native.</p><div class="links"><a href="https://id01t.itch.io/html2win" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">19,99 $</span><h4>HTML2Linux Pro</h4><p>La même puissance d'empaquetage, côté Linux.</p><div class="links"><a href="https://id01t.itch.io/html2linux-pro" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">9,99 $</span><h4>CryptoPulse Monitor</h4><p>Suivi crypto en temps réel sur votre bureau.</p><div class="links"><a href="https://id01t.itch.io/cryptopulse-monitor" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">14,99 $</span><h4>QuickAtlas Master</h4><p>Référence géographique instantanée, hors ligne.</p><div class="links"><a href="https://id01t.itch.io/quickatlas" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">8,99 $</span><h4>Bedtime Story Maker</h4><p>Générateur d'histoires du soir pour enfants (app Windows).</p><div class="links"><a href="https://id01t.itch.io/bedtime-story-maker-windows-app" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">6,99 $</span><h4>Nini's Pixel Forge</h4><p>Atelier pixel art de la famille Nini.</p><div class="links"><a href="https://id01t.itch.io/ninis-pixel-forge" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price free">Gratuit</span><h4>NEURO_GLITCH</h4><p>App expérimentale issue de l'univers ROOT_ACCESS.</p><div class="links"><a href="https://id01t.itch.io/neuro-glitch" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price free">Gratuit</span><h4>Sonic Bits Pro Ultimate</h4><p>Boîte à outils audio créative.</p><div class="links"><a href="https://id01t.itch.io/sonic-bits-pro-ultimate" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">12,49 $</span><h4>720+ Pixel Icons Mega Pack</h4><p>Méga pack d'icônes pixel art + packs thématiques (RPG, Sci-Fi, Halloween, Cozy) à 2,99 $.</p><div class="links"><a href="https://id01t.itch.io/pixel-icon-mega-pack" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">69,99 $</span><h4>iD01t Master Vault</h4><p>Tout le catalogue iD01t Productions en un seul ZIP.</p><div class="links"><a href="https://id01t.itch.io/masterzip-the-complete-id01t-productions-vault" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+    </div>
+
+    <h3 class="group reveal">Jeux</h3>
+    <div class="grid g3">
+      <article class="card reveal"><span class="tag magenta">MULTIJOUEUR</span><h4>NINI : Chaos Kitties</h4><p>Shooter multijoueur rapide « mignon et chaotique » : arènes destructibles, sessions de 3 à 5 minutes. Unity, Blender, serveurs AWS. Bêta publique annoncée le 24 septembre 2025.</p><div class="links"><a href="https://id01t.itch.io/" target="_blank" rel="noopener">Suivre sur itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price free">Gratuit</span><span class="tag cyan">BÊTA</span><h4>GemBlast Nova</h4><p>Arcade de réflexes en bêta publique.</p><div class="links"><a href="https://id01t.itch.io/gemblastnova" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price free">Gratuit</span><span class="tag magenta">EXPÉRIMENTAL</span><h4>UPRFC : Glitter-Dread Overdrive</h4><p>Expérience de jeu hybride signée iD01t.</p><div class="links"><a href="https://id01t.itch.io/uprfc" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+    </div>
+
+    <h3 class="group reveal">Projet sur mesure récent — CDB Studio</h3>
+    <div class="grid g2">
+      <article class="card reveal"><span class="tag cyan">DASHBOARD</span><h4>Tableau de bord unifié</h4><p>CDB Studio réunit trois ateliers — marketing, vidéo et affaires — dans un même tableau de bord : produire, vérifier et publier sans changer d'outil. Chaque publication suit un parcours clair : produire → lint → vérifier → approuver → planifier → publier.</p></article>
+      <article class="card reveal"><span class="tag cyan">IA INTÉGRÉE</span><h4>Vidéos, photos et CRM</h4><p>Reels et stories générés via l'API Veo&nbsp;3, classement automatique des visuels par vision locale, gestion des chantiers et soumissions en CRM. Contrôle de conformité, cohérence image/texte et secrets isolés.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECHERCHE ============ -->
+<section class="block" id="recherche">
+  <div class="container">
+    <p class="kicker reveal">// recherche</p>
+    <h2 class="reveal">iD01t Research Lab</h2>
+    <p class="sub reveal">La branche recherche publique du studio, dirigée par Guillaume Lessard, chercheur indépendant — protocoles archivés et citables, corpus ouverts et vulgarisation de la correction d'erreurs quantiques.</p>
+    <div class="grid g3">
+      <article class="card reveal"><span class="tag">PROTOCOLE</span><h4>SATI CODEX v1.0</h4><p>Protocole officiellement publié sur Zenodo avec DOI — archivable et citable. Le framework relie les corpus LCL-832 / LCL-833 à la ligne QEC.</p><div class="links"><a href="https://zenodo.org/records/18743234" target="_blank" rel="noopener">Zenodo ↗</a></div></article>
+      <article class="card reveal"><span class="tag">CORPUS</span><h4>LCL-832 / LCL-833</h4><p>Corpus de données maîtres publiés en libre accès sur GitHub (LCL833-MASTER-DATA-CORPUS).</p><div class="links"><a href="https://github.com/iD01tLab" target="_blank" rel="noopener">GitHub iD01tLab ↗</a></div></article>
+      <article class="card reveal"><span class="price free">Gratuit</span><span class="tag cyan">FORMATION</span><h4>FREE QEC Starter Pack</h4><p>La correction d'erreurs quantiques pour débutants sérieux — point d'entrée gratuit de la ligne pédagogique.</p><div class="links"><a href="https://id01t.itch.io/free-qec-starter-pack-quantum-error-correction-for-serious-beginners" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">24,99–59,99 $</span><span class="tag cyan">ACADEMY</span><h4>QEC Academy &amp; Mastering QEC</h4><p>QEC Academy Book 1 &amp; 2, Mastering Quantum Error Correction (codes de Shor, Steane, surface) et le bundle 5 eBooks.</p><div class="links"><a href="https://id01t.itch.io/mastering-qec" target="_blank" rel="noopener">itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="tag">IDENTIFIANTS</span><h4>ORCID &amp; dépôts</h4><p>Travaux signés et traçables : ORCID 0009-0000-3465-3753, dépôts Zenodo et GitHub du Research Lab.</p><div class="links"><a href="https://orcid.org/0009-0000-3465-3753" target="_blank" rel="noopener">ORCID ↗</a> <a href="https://github.com/iD01tLab" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRESSE ============ -->
+<section class="block alt" id="presse">
+  <div class="container">
+    <p class="kicker reveal">// press kit</p>
+    <h2 class="reveal">Bio officielle &amp; faits en bref</h2>
+    <p class="sub reveal">Textes prêts à copier pour médias, partenaires et plateformes. Contact presse : <a href="mailto:contact@id01t.store">contact@id01t.store</a>.</p>
+    <div class="grid g2">
+      <div class="bio-card reveal">
+        <h4>Bio courte — Français</h4>
+        <button class="copy-btn" data-copy="bioFr">Copier</button>
+        <p id="bioFr">iD01t Productions est un studio créatif et technologique indépendant canadien fondé en 2023 par Guillaume Lessard et établi à Longueuil (Québec). Le studio fusionne développement logiciel, édition d'eBooks, conception de jeux, intégration de l'IA, technologie éducative, storytelling numérique et musique électronique au sein d'un écosystème connecté : plus de 167 eBooks, 103 audiobooks, des utilitaires Windows et outils développeurs, des jeux indépendants, l'univers cyberpunk ROOT_ACCESS / Jess Damaged, le projet musical DJ iD01T et le iD01t Research Lab (SATI CODEX, frameworks LCL et correction d'erreurs quantiques).</p>
+      </div>
+      <div class="bio-card reveal">
+        <h4>Official bio — English</h4>
+        <button class="copy-btn" data-copy="bioEn">Copier</button>
+        <p id="bioEn">iD01t Productions is an independent Canadian creative-tech studio founded by Guillaume Lessard and based in Longueuil, Quebec. The studio blends software development, eBook publishing, game design, AI integration, educational technology, digital storytelling, and electronic music into one connected ecosystem. Its public catalog includes 167+ eBooks, 103 audiobooks, Windows utilities, developer tools, indie games, music releases under DJ iD01T, the ROOT_ACCESS / Jess Damaged cyberpunk universe, and the iD01t Research Lab focused on SATI CODEX, LCL frameworks, and quantum error correction. Public platforms include id01t.ca, id01t.itch.io, Google Play Books, Apple Music, YouTube, GitHub, LinkedIn, and iTECHINFO.site.</p>
+      </div>
+    </div>
+    <div class="tbl-wrap reveal" style="margin-top:1.5rem">
+      <table>
+        <tbody>
+          <tr><td><strong>Marque</strong></td><td>iD01t Productions (verticales : Studio · DJ iD01T · ROOT_ACCESS Universe · iD01t Research Lab · iTECHINFO)</td></tr>
+          <tr><td><strong>Fondateur</strong></td><td>Guillaume Lessard — développeur, auteur, producteur, chercheur indépendant</td></tr>
+          <tr><td><strong>Fondation / Siège</strong></td><td>2023 — Longueuil (Québec), Canada</td></tr>
+          <tr><td><strong>Catalogue</strong></td><td>167+ eBooks · 103 audiobooks · 40+ apps, jeux et packs sur itch.io · 7 albums et 7 singles/EPs (DJ iD01T)</td></tr>
+          <tr><td><strong>Spécialités</strong></td><td>Développement logiciel, édition numérique, game design, intégration IA, edtech, storytelling, innovation numérique, QEC</td></tr>
+          <tr><td><strong>Contact presse</strong></td><td><a href="mailto:contact@id01t.store">contact@id01t.store</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATEFORMES ============ -->
+<section class="block" id="plateformes">
+  <div class="container">
+    <p class="kicker reveal">// plateformes officielles</p>
+    <h2 class="reveal">Retrouver iD01t partout</h2>
+    <p class="sub reveal">Les points d'entrée officiels de l'écosystème, chacun avec son rôle.</p>
+    <div class="grid g3">
+      <a class="plat reveal" href="https://www.id01t.ca/" target="_blank" rel="noopener"><span class="ico">🌐</span><span>id01t.ca<small>Site officiel du studio</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://id01t.itch.io/" target="_blank" rel="noopener"><span class="ico">🛒</span><span>id01t.itch.io<small>Boutique — apps, jeux, eBooks, musique</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://linktr.ee/id01t" target="_blank" rel="noopener"><span class="ico">🔗</span><span>linktr.ee/id01t<small>Tous les liens en un endroit</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://github.com/iD01t" target="_blank" rel="noopener"><span class="ico">💻</span><span>GitHub — iD01t Softwares<small>42 dépôts d'applications IA</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://github.com/iD01tLab" target="_blank" rel="noopener"><span class="ico">🔬</span><span>GitHub — iD01tLab<small>Dépôt officiel du Research Lab</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://music.apple.com/ca/artist/dj-id01t/1803964475" target="_blank" rel="noopener"><span class="ico">🍎</span><span>Apple Music<small>DJ iD01T — albums &amp; singles</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://www.youtube.com/channel/UC8ClAfddA5BzxCpL1YSS7Lg" target="_blank" rel="noopener"><span class="ico">▶️</span><span>YouTube — iD01t Productions<small>Chaîne officielle du studio</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://www.youtube.com/@djid01t" target="_blank" rel="noopener"><span class="ico">🎬</span><span>YouTube — @djid01t<small>Clips et musique</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://ca.linkedin.com/company/id01t-productions" target="_blank" rel="noopener"><span class="ico">💼</span><span>LinkedIn<small>Page entreprise</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://play.google.com/store/search?q=Guillaume%20Lessard&amp;c=books" target="_blank" rel="noopener"><span class="ico">📚</span><span>Google Play Books<small>eBooks &amp; audiobooks</small></span><span class="arrow">↗</span></a>
+      <a class="plat reveal" href="https://itechinfo.site/" target="_blank" rel="noopener"><span class="ico">🔧</span><span>iTECHINFO.site<small>Services IT &amp; mobile — Montréal</small></span><span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="block alt" id="contact">
+  <div class="container">
+    <p class="kicker reveal">// contact</p>
+    <h2 class="reveal">Nous joindre</h2>
+    <p class="sub reveal">Deux portes d'entrée distinctes : le studio pour les projets créatifs, la presse et les partenariats — iTECHINFO pour le support technique.</p>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <span class="tag cyan">STUDIO · PRESSE · PARTENARIATS</span>
+        <h3>iD01t Productions</h3>
+        <ul>
+          <li><b>Courriel :</b> <a href="mailto:contact@id01t.store">contact@id01t.store</a></li>
+          <li><b>Lieu :</b> Longueuil (Québec), Canada</li>
+          <li><b>Boutique :</b> <a href="https://id01t.itch.io/" target="_blank" rel="noopener">id01t.itch.io</a></li>
+          <li><b>Site :</b> <a href="https://www.id01t.ca/" target="_blank" rel="noopener">id01t.ca</a></li>
+        </ul>
+      </div>
+      <div class="contact-card reveal">
+        <span class="tag green">SUPPORT TECHNIQUE · SERVICES IT</span>
+        <h3>iTECHINFO / iTECH Mobile</h3>
+        <ul>
+          <li><b>Courriel :</b> <a href="mailto:itechinfomtl@gmail.com">itechinfomtl@gmail.com</a></li>
+          <li><b>Téléphone :</b> <a href="tel:+14387937702">1 438 793-7702</a></li>
+          <li><b>Lieu :</b> Montréal (Québec)</li>
+          <li><b>Site :</b> <a href="https://itechinfo.site/" target="_blank" rel="noopener">itechinfo.site</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top"><span class="mark">&gt;_</span> iD01t <small>Productions</small></a>
+        <p class="blurb">Studio créatif et technologique indépendant — Longueuil, Québec. Logiciels, eBooks, jeux, musique, IA et recherche quantique depuis 2023.</p>
+      </div>
+      <div>
+        <h5>Verticales</h5>
+        <ul>
+          <li><a href="#ecosysteme">Studio</a></li>
+          <li><a href="#musique">DJ iD01T</a></li>
+          <li><a href="#root-access">ROOT_ACCESS Universe</a></li>
+          <li><a href="#recherche">Research Lab</a></li>
+          <li><a href="https://itechinfo.site/" target="_blank" rel="noopener">iTECHINFO</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Catalogue</h5>
+        <ul>
+          <li><a href="#publications">eBooks &amp; audiobooks</a></li>
+          <li><a href="#apps">Apps &amp; outils</a></li>
+          <li><a href="#apps">Jeux</a></li>
+          <li><a href="https://id01t.itch.io/" target="_blank" rel="noopener">Boutique itch.io</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Liens</h5>
+        <ul>
+          <li><a href="https://www.id01t.ca/" target="_blank" rel="noopener">id01t.ca</a></li>
+          <li><a href="https://github.com/iD01t" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://ca.linkedin.com/company/id01t-productions" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#presse">Press kit</a></li>
+          <li><a href="mailto:contact@id01t.store">contact@id01t.store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2023–<span id="year">2026</span> iD01t Productions · Longueuil, Québec · Tous droits réservés.</span>
+      <span>DJ iD01T, ROOT_ACCESS, Jess Damaged, SATI CODEX et iD01t Academy sont des marques d'iD01t Productions.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var header=document.querySelector("header.site");
+  var toggle=document.querySelector(".nav-toggle");
+  var mobile=document.getElementById("mobileNav");
+
+  window.addEventListener("scroll",function(){header.classList.toggle("scrolled",window.scrollY>10)},{passive:true});
+
+  toggle.addEventListener("click",function(){
+    var open=mobile.classList.toggle("open");
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.textContent=open?"✕":"☰";
+  });
+  mobile.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click",function(){mobile.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰"});
+  });
+
+  /* reveal on scroll */
+  var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if("IntersectionObserver" in window && !reduced){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}});
+    },{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  }else{
+    document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in")});
+  }
+
+  /* terminal typing */
+  var lines=[
+    '<span class="p">$</span> bash install.sh',
+    '<span class="p">$</span> sudo chmod +x ./id01t',
+    '<span class="p">$</span> ./id01t --init <span class="c">"creative-tech"</span>',
+    '<span class="ok">&gt; chargement des verticales :</span> studio · musique · fiction · recherche · services',
+    '<span class="ok">&gt; catalogue :</span> 167+ eBooks · 103 audiobooks · 40+ apps',
+    '<span class="accent">&gt; ROOT_ACCESS granted.</span>'
+  ];
+  var body=document.getElementById("termBody");
+  if(body){
+    if(reduced){
+      body.innerHTML=lines.map(function(l){return "<div>"+l+"</div>"}).join("");
+    }else{
+      var i=0;
+      var cur=document.createElement("span");cur.className="cursor";body.appendChild(cur);
+      (function next(){
+        if(i>=lines.length){return}
+        var div=document.createElement("div");div.innerHTML=lines[i];
+        body.insertBefore(div,cur);
+        i++;setTimeout(next,i<3?520:680);
+      })();
+    }
+  }
+
+  /* copy buttons */
+  document.querySelectorAll(".copy-btn").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      var el=document.getElementById(btn.getAttribute("data-copy"));
+      if(!el)return;
+      var done=function(){btn.textContent="Copié ✓";setTimeout(function(){btn.textContent="Copier"},1800)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(el.textContent).then(done)}
+      else{var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand("copy");s.removeAllRanges();done()}
+    });
+  });
+
+  document.getElementById("year").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

@@ -1,270 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SATI CODEX LCL-832/LCL-833: Hardware-verified Genus-5 Topological Quantum Error Correction IP. Strategic acquisition available.">
-  <meta property="og:title" content="SATI CODEX | Secure IP Acquisition Portal">
-  <meta property="og:description" content="Executive teaser for the complete LCL-832/LCL-833 QEC framework. Technical specifications available post-MNDA.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <title>SATI CODEX | Strategic IP Acquisition Portal</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #070711;
-      --panel: #121225;
-      --panel2: #1A1A33;
-      --gold: #C9A84C;
-      --gold2: #E8C96A;
-      --cyan: #00D4E8;
-      --white: #F2F2F2;
-      --light: #CFCFCF;
-      --dim: #8A8A8A;
-      --green: #50E878;
-      --red: #FF4D4D;
-      --border: #2A2A44;
-      --font-main: 'Inter', system-ui, sans-serif;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iD01t Productions — Official Store | eBooks, Apps, Games, Music &amp; Research</title>
+<meta name="description" content="The official iD01t Productions store — 167+ technical eBooks, 103 audiobooks, Windows apps and developer tools, indie games, DJ iD01T music, the ROOT_ACCESS cyberpunk universe and the iD01t Research Lab. Independent creative-tech studio from Longueuil, Québec.">
+<meta name="author" content="Guillaume Lessard — iD01t Productions">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#04070d">
+<link rel="canonical" href="https://id01t.store/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="iD01t Productions">
+<meta property="og:title" content="iD01t Productions — Official Store">
+<meta property="og:description" content="167+ eBooks · 103 audiobooks · Windows apps · indie games · DJ iD01T music · ROOT_ACCESS universe · quantum research.">
+<meta property="og:url" content="https://id01t.store/">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304070d'/%3E%3Ctext x='32' y='42' font-family='Consolas,monospace' font-size='28' font-weight='bold' fill='%2300d1ff' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/store.css">
+<script defer src="js/store.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://id01t.store/#org",
+      "name": "iD01t Productions",
+      "url": "https://id01t.store/",
+      "email": "contact@id01t.store",
+      "foundingDate": "2023",
+      "founder": { "@type": "Person", "name": "Guillaume Lessard", "sameAs": ["https://orcid.org/0009-0000-3465-3753"] },
+      "address": { "@type": "PostalAddress", "addressLocality": "Longueuil", "addressRegion": "QC", "addressCountry": "CA" },
+      "sameAs": [
+        "https://ca.linkedin.com/company/id01t-productions",
+        "https://id01t.itch.io/",
+        "https://github.com/iD01t",
+        "https://github.com/iD01tLab",
+        "https://www.youtube.com/channel/UC8ClAfddA5BzxCpL1YSS7Lg",
+        "https://music.apple.com/ca/artist/dj-id01t/1803964475",
+        "https://www.id01t.ca/",
+        "https://linktr.ee/id01t"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://id01t.store/#site",
+      "url": "https://id01t.store/",
+      "name": "iD01t Productions — Official Store",
+      "publisher": { "@id": "https://id01t.store/#org" },
+      "inLanguage": "en-CA"
     }
-
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      font-family:var(--font-main);
-      background:var(--bg);
-      color:var(--light);
-      line-height:1.65;
-    }
-
-    .container { max-width:1100px; margin:0 auto; padding:0 22px; }
-
-    a { color:var(--cyan); text-decoration:none; }
-    a:hover { color:var(--gold); }
-
-    .nav {
-      position:fixed; top:0; width:100%; height:72px;
-      background:rgba(7,7,17,0.92);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--border);
-      z-index:1000;
-    }
-
-    .nav-inner {
-      display:flex; justify-content:space-between; align-items:center;
-      height:100%; max-width:1100px; margin:0 auto; padding:0 22px;
-    }
-
-    .logo { color:var(--gold); font-weight:800; letter-spacing:0.5px; }
-
-    .hero {
-      padding:170px 0 110px;
-      text-align:center;
-      background:radial-gradient(circle at 50% 0%, rgba(201,168,76,0.18), transparent 65%);
-    }
-
-    h1 { font-size:2.9rem; color:var(--white); }
-    h2 { font-size:1.8rem; color:var(--gold); margin-bottom:20px; }
-
-    .lead { max-width:780px; margin:20px auto 40px; font-size:1.1rem; }
-
-    .badge-row { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:25px; }
-
-    .badge {
-      padding:6px 12px;
-      border-radius:999px;
-      font-size:0.75rem;
-      background:var(--panel2);
-      border:1px solid var(--border);
-    }
-
-    .badge.green { border-color:var(--green); color:var(--green); }
-    .badge.gold { border-color:var(--gold); color:var(--gold); }
-
-    .btn {
-      padding:12px 22px;
-      border-radius:6px;
-      font-weight:600;
-      border:none;
-      cursor:pointer;
-      transition:0.2s;
-    }
-
-    .btn-primary { background:var(--gold); color:#000; }
-    .btn-primary:hover { background:var(--gold2); }
-
-    .btn-outline {
-      background:transparent;
-      border:1px solid var(--cyan);
-      color:var(--cyan);
-    }
-
-    .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
-
-    .cta { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
-
-    .section { padding:90px 0; border-top:1px solid var(--border); }
-
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-      gap:22px;
-      margin-top:30px;
-    }
-
-    .card {
-      background:var(--panel);
-      border:1px solid var(--border);
-      padding:24px;
-      border-radius:12px;
-      transition:0.25s;
-    }
-
-    .card:hover { transform:translateY(-4px); border-color:var(--gold); }
-
-    .card h3 { color:var(--gold); margin-bottom:10px; }
-
-    .footer {
-      padding:60px 0;
-      text-align:center;
-      color:var(--dim);
-      border-top:1px solid var(--border);
-      font-size:0.8rem;
-    }
-
-    /* MODAL */
-    .modal {
-      position:fixed; inset:0;
-      background:rgba(0,0,0,0.75);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      z-index:2000;
-    }
-
-    .modal.active { display:flex; }
-
-    .modal-box {
-      background:var(--panel);
-      border:1px solid var(--gold);
-      padding:28px;
-      border-radius:14px;
-      width:92%; max-width:460px;
-    }
-
-    .input {
-      width:100%;
-      padding:10px;
-      margin:8px 0;
-      background:var(--panel2);
-      border:1px solid var(--border);
-      color:white;
-      border-radius:6px;
-    }
-
-    .input:focus { border-color:var(--cyan); outline:none; }
-
-  </style>
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="logo">SATI CODEX</div>
-    <div>
-      <button class="btn btn-outline" onclick="openModal()">Request Access</button>
-    </div>
+<header class="site" id="top">
+  <div class="container nav-row">
+    <a class="brand" href="index.html"><span class="mark">&gt;_</span> iD01t <small>Productions</small></a>
+    <nav class="primary" aria-label="Main navigation">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ebooks.html">eBooks</a></li>
+        <li><a href="audiobooks.html">Audiobooks</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="root-access.html">ROOT_ACCESS</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="fr.html">FR</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta"><a class="btn btn-solid btn-sm" href="https://id01t.itch.io/" target="_blank" rel="noopener">itch.io ↗</a></div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
   </div>
-</nav>
-
-<header class="hero">
-  <div class="container">
-    <div class="badge-row">
-      <div class="badge green">Hardware Verified</div>
-      <div class="badge green">Quantum Stable</div>
-      <div class="badge gold">Strategic IP</div>
-    </div>
-
-    <h1>Genus-5 Quantum Error Correction IP</h1>
-    <p class="lead">Production-grade topological quantum error correction architecture designed for scalable fault-tolerant quantum computation systems.</p>
-
-    <div class="cta">
-      <button class="btn btn-primary" onclick="openModal()">Request MNDA Access</button>
-      <a class="btn btn-outline" href="#overview">Technical Overview</a>
-    </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="about.html">About</a><a href="ebooks.html">eBooks</a><a href="audiobooks.html">Audiobooks</a><a href="apps.html">Apps</a><a href="games.html">Games</a><a href="music.html">Music</a><a href="root-access.html">ROOT_ACCESS</a><a href="research.html">Research</a><a href="press.html">Press</a><a href="contact.html">Contact</a><a href="fr.html">Version française</a><a href="https://id01t.itch.io/" target="_blank" rel="noopener">itch.io Store ↗</a>
   </div>
 </header>
 
-<section id="overview" class="section container">
-  <h2>System Overview</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Topology</h3>
-      <p>Genus-5 stabilizer manifold encoding optimized logical qubit density with reduced boundary overhead.</p>
+<main id="main">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge"><span class="dot"></span> Independent creative-tech studio · Longueuil, QC · Est. 2023</span>
+      <h1>Creative tech, <span class="grad">shipped</span>.</h1>
+      <p class="lead">iD01t Productions blends software development, eBook publishing, game design, AI integration, digital storytelling and electronic music into one connected ecosystem — built and shipped solo by <strong>Guillaume Lessard</strong>.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#catalog">Browse the catalog</a>
+        <a class="btn btn-ghost" href="about.html">About the studio</a>
+        <a class="btn btn-ghost" href="https://id01t.itch.io/" target="_blank" rel="noopener">Shop on itch.io ↗</a>
+      </div>
+      <div class="stats" aria-label="Key numbers">
+        <div class="stat"><span class="n">167+</span><span class="l">eBooks</span></div>
+        <div class="stat"><span class="n">103</span><span class="l">Audiobooks</span></div>
+        <div class="stat"><span class="n">40+</span><span class="l">Apps &amp; games</span></div>
+        <div class="stat"><span class="n">7</span><span class="l">Albums · DJ iD01T</span></div>
+        <div class="stat"><span class="n">46</span><span class="l">GitHub repos</span></div>
+      </div>
     </div>
-    <div class="card">
-      <h3>Decoder</h3>
-      <p>Low-latency syndrome decoding pipeline designed for FPGA / ASIC integration.</p>
-    </div>
-    <div class="card">
-      <h3>Hardware Validation</h3>
-      <p>Tested on superconducting quantum processor architectures under realistic noise models.</p>
+    <div class="term" aria-hidden="true">
+      <div class="term-bar"><i></i><i></i><i></i><span>id01t@store:~</span></div>
+      <div class="term-body">
+        <div><span class="p">$</span> bash install.sh</div>
+        <div><span class="p">$</span> sudo chmod +x ./id01t</div>
+        <div><span class="p">$</span> ./id01t --init <span class="c">"creative-tech"</span></div>
+        <div><span class="ok">&gt; loading verticals:</span> studio · music · fiction · research · services</div>
+        <div><span class="ok">&gt; catalog:</span> 167+ eBooks · 103 audiobooks · 40+ apps</div>
+        <div><span class="accent">&gt; ROOT_ACCESS granted.</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section container" style="text-align:center;">
-  <h2>Secure Access Gateway</h2>
-  <p class="lead">All technical artifacts are gated under NDA and corporate verification.</p>
-  <button class="btn btn-primary" onclick="openModal()">Initiate Secure Request</button>
+<section class="block" id="catalog">
+  <div class="container">
+    <p class="kicker reveal">// catalog</p>
+    <h2 class="reveal">Everything we make, in one place</h2>
+    <p class="sub reveal">Six storefronts, one studio. Every product ships through itch.io, Google Play Books, Apple Music and the major digital platforms.</p>
+    <div class="grid g3">
+      <a class="card reveal" href="ebooks.html" style="display:block"><span class="icon">📚</span><span class="tag cyan">167+ TITLES</span><h3>Technical eBooks</h3><p>Programming, AI, automation, music production, quantum computing and more — practical books that get you building.</p><div class="links"><span>Explore eBooks →</span></div></a>
+      <a class="card reveal" href="audiobooks.html" style="display:block"><span class="icon">🎙️</span><span class="tag cyan">103 TITLES</span><h3>Audiobooks</h3><p>The full iD01t Audiobooks line, narrated editions of our catalog — including the studio's own story, in English and French.</p><div class="links"><span>Explore audiobooks →</span></div></a>
+      <a class="card reveal" href="apps.html" style="display:block"><span class="icon">🛠️</span><span class="tag cyan">WINDOWS &amp; DEV</span><h3>Apps &amp; Tools</h3><p>Py2Win, HTML2Win Pro, CryptoPulse Monitor, Sprite Forge Pro and a full bench of utilities and pixel-art asset packs.</p><div class="links"><span>Explore apps →</span></div></a>
+      <a class="card reveal" href="games.html" style="display:block"><span class="icon">🎮</span><span class="tag magenta">INDIE</span><h3>Games</h3><p>NINI: Chaos Kitties, GemBlast Nova, UPRFC and the open-source Jess Damaged game — fast, weird and fun.</p><div class="links"><span>Explore games →</span></div></a>
+      <a class="card reveal" href="music.html" style="display:block"><span class="icon">🎧</span><span class="tag magenta">DJ iD01T</span><h3>Music</h3><p>House and industrial electro from Montréal: seven albums, cyberpunk singles and the ROOT_ACCESS soundtracks.</p><div class="links"><span>Explore music →</span></div></a>
+      <a class="card reveal" href="root-access.html" style="display:block"><span class="icon">🌐</span><span class="tag magenta">TRANSMEDIA</span><h3>ROOT_ACCESS Universe</h3><p>The Jess Damaged Archives tetralogy, the LP, the game and the complete digital archive — one connected cyberpunk IP.</p><div class="links"><span>Enter the universe →</span></div></a>
+    </div>
+  </div>
 </section>
 
-<footer class="footer">
-  <p>Confidential IP Portal — All rights reserved. Technical disclosures require executed legal agreement.</p>
+<section class="block alt">
+  <div class="container">
+    <p class="kicker reveal">// new &amp; notable</p>
+    <h2 class="reveal">Featured releases</h2>
+    <div class="grid g3">
+      <article class="card reveal"><span class="price">$35</span><span class="tag magenta">BUNDLE</span><h4>ROOT_ACCESS: The Complete Digital Archive</h4><p>The full cyberpunk trilogy plus the original 9-track industrial soundtrack.</p><div class="links"><a href="https://id01t.itch.io/root-access-archive" target="_blank" rel="noopener">Get it on itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">$69.99</span><span class="tag amber">EVERYTHING</span><h4>iD01t Master Vault</h4><p>All store projects — one ZIP. The complete iD01t Productions vault.</p><div class="links"><a href="https://id01t.itch.io/masterzip-the-complete-id01t-productions-vault" target="_blank" rel="noopener">Get it on itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">$24.99</span><span class="tag cyan">DEV TOOL</span><h4>HTML2Win Pro</h4><p>Package any web app as a native Windows application.</p><div class="links"><a href="https://id01t.itch.io/html2win" target="_blank" rel="noopener">Get it on itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price free">Free</span><span class="tag">QUANTUM</span><h4>FREE QEC Starter Pack</h4><p>Quantum error correction for serious beginners — the free entry point to the QEC Academy line.</p><div class="links"><a href="https://id01t.itch.io/free-qec-starter-pack-quantum-error-correction-for-serious-beginners" target="_blank" rel="noopener">Get it on itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">$12.49</span><span class="tag cyan">ASSETS</span><h4>720+ Pixel Icons Mega Pack</h4><p>A massive pixel-art icon library, plus themed packs from $2.99.</p><div class="links"><a href="https://id01t.itch.io/pixel-icon-mega-pack" target="_blank" rel="noopener">Get it on itch.io ↗</a></div></article>
+      <article class="card reveal"><span class="price">$10</span><span class="tag magenta">MUSIC</span><h4>DJ iD01t — Love Rising LP</h4><p>The 2026 LP, direct from the artist.</p><div class="links"><a href="https://id01t.itch.io/love-rising" target="_blank" rel="noopener">Get it on itch.io ↗</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="banner reveal">
+      <span class="tag magenta">FRANCHISE</span>
+      <h3>ROOT_ACCESS — Jess Damaged Archives</h3>
+      <p>In the neon sprawl of NeoShanghai, hacker Jess "Damaged" Chen uncovers a signal that puts her on a collision course with OmniCore. Four books, one LP, a game and a complete digital archive — explore the whole connected universe.</p>
+      <a class="btn btn-solid" href="root-access.html">Explore the IP map</a>
+      <a class="btn btn-ghost" href="https://id01t.itch.io/root-access-archive" target="_blank" rel="noopener">Complete Archive — $35 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="container">
+    <div class="banner reveal" style="background:radial-gradient(600px 300px at 85% 20%,rgba(139,92,246,.14),transparent 60%),linear-gradient(180deg,var(--panel2),var(--panel))">
+      <span class="tag">RESEARCH</span>
+      <h3>iD01t Research Lab — SATI CODEX &amp; quantum error correction</h3>
+      <p>The studio's public research branch: the SATI CODEX v1.0 protocol archived on Zenodo with a DOI, the LCL-832/833 corpora on GitHub, a complete QEC learning line.</p>
+      <a class="btn btn-solid" href="research.html">Visit the Research Lab</a>
+      <a class="btn btn-ghost" href="https://zenodo.org/records/18743234" target="_blank" rel="noopener">SATI CODEX on Zenodo ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <p class="kicker reveal">// ecosystem</p>
+    <h2 class="reveal">Five verticals, one brand</h2>
+    <div class="grid g3">
+      <article class="card reveal"><span class="tag cyan">STUDIO</span><h4>iD01t Productions Studio</h4><p>Apps, games, eBooks and educational tech — the core of the brand.</p></article>
+      <article class="card reveal"><span class="tag magenta">MUSIC</span><h4>DJ iD01T</h4><p>House and industrial electro, soundtracks for the ROOT_ACCESS universe.</p></article>
+      <article class="card reveal"><span class="tag magenta">TRANSMEDIA</span><h4>ROOT_ACCESS Universe</h4><p>Cyberpunk fiction across books, music, games and digital archives.</p></article>
+      <article class="card reveal"><span class="tag">RESEARCH</span><h4>iD01t Research Lab</h4><p>SATI CODEX, LCL frameworks and quantum error correction.</p></article>
+      <article class="card reveal"><span class="tag green">SERVICES</span><h4>iTECHINFO / iTECH Mobile</h4><p>IT and mobile software services in Montréal — the hands-on support arm.</p><div class="links"><a href="https://itechinfo.site/" target="_blank" rel="noopener">itechinfo.site ↗</a></div></article>
+      <article class="card reveal"><span class="tag cyan">OFFICIAL</span><h4>Find us everywhere</h4><p>id01t.ca · itch.io · GitHub · LinkedIn · Apple Music · YouTube · Google Play.</p><div class="links"><a href="press.html">Press kit &amp; links →</a></div></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="mark">&gt;_</span> iD01t <small>Productions</small></a>
+        <p class="blurb">Independent creative-tech studio — Longueuil, Québec. Software, eBooks, games, music, AI and quantum research since 2023.</p>
+      </div>
+      <div>
+        <h5>Catalog</h5>
+        <ul>
+          <li><a href="ebooks.html">eBooks</a></li>
+          <li><a href="audiobooks.html">Audiobooks</a></li>
+          <li><a href="apps.html">Apps &amp; tools</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="music.html">Music</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Universe</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="root-access.html">ROOT_ACCESS</a></li>
+          <li><a href="research.html">Research Lab</a></li>
+          <li><a href="press.html">Press kit</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="fr.html">Version française</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Platforms</h5>
+        <ul>
+          <li><a href="https://id01t.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
+          <li><a href="https://www.id01t.ca/" target="_blank" rel="noopener">id01t.ca</a></li>
+          <li><a href="https://github.com/iD01t" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://music.apple.com/ca/artist/dj-id01t/1803964475" target="_blank" rel="noopener">Apple Music</a></li>
+          <li><a href="https://ca.linkedin.com/company/id01t-productions" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2023–<span id="year">2026</span> iD01t Productions · Longueuil, Québec, Canada. All rights reserved.</span>
+      <span>DJ iD01T, ROOT_ACCESS, Jess Damaged, SATI CODEX and iD01t Academy are trademarks of iD01t Productions.</span>
+    </div>
+  </div>
 </footer>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <h3 style="color:var(--gold)">MNDA Request</h3>
-
-    <form onsubmit="sendEmail(event)">
-      <input class="input" type="text" placeholder="Full Name" required>
-      <input class="input" type="email" placeholder="Corporate Email (no Gmail/Yahoo)" required>
-      <input class="input" type="text" placeholder="Organization" required>
-      <input class="input" type="text" placeholder="Role / Title" required>
-
-      <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
-
-    <button class="btn btn-outline" style="margin-top:10px" onclick="closeModal()">Close</button>
-  </div>
-</div>
-
-<script>
-function openModal(){ document.getElementById('modal').classList.add('active'); }
-function closeModal(){ document.getElementById('modal').classList.remove('active'); }
-
-function sendEmail(e){
-  e.preventDefault();
-
-  const data = new FormData(e.target);
-  const fields = Array.from(e.target.querySelectorAll('input')).map(i => i.value);
-
-  const payload = `MNDA REQUEST:\n\nName: ${fields[0]}\nEmail: ${fields[1]}\nOrg: ${fields[2]}\nRole: ${fields[3]}\n\nSent from SATI CODEX portal.`;
-
-  // mailto trigger
-  window.location.href = `mailto:itechinfomtl@gmail.com?subject=SATI CODEX MNDA Request&body=${encodeURIComponent(payload)}`;
-
-  closeModal();
-}
-
-window.onclick = function(e){
-  if(e.target.id === 'modal') closeModal();
-}
-</script>
-
 </body>
 </html>

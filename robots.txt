@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://id01t.store/sitemap.xml
