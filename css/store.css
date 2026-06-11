@@ -130,20 +130,64 @@ td strong{color:var(--text)}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:rgba(0,209,255,.025)}
 
-/* music */
+/* music — real artwork */
 .albums{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,168px),1fr));gap:1.2rem}
-.album{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel);transition:transform .2s,border-color .2s}
-.album:hover{transform:translateY(-4px);border-color:var(--line-strong)}
-.album .cover{aspect-ratio:1;display:flex;align-items:flex-end;padding:.8rem;font-family:var(--mono);font-weight:800;font-size:.92rem;line-height:1.25;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
-.album:nth-child(1) .cover{background:linear-gradient(140deg,#022c3a,#00d1ff55),radial-gradient(circle at 70% 25%,#ff2d7860,transparent 60%),#06121e}
-.album:nth-child(2) .cover{background:linear-gradient(140deg,#1b0b35,#8b5cf655),radial-gradient(circle at 30% 70%,#00d1ff40,transparent 60%),#0a0618}
-.album:nth-child(3) .cover{background:linear-gradient(140deg,#0b2e1e,#2dd4a755),radial-gradient(circle at 70% 70%,#ffb45440,transparent 60%),#061410}
-.album:nth-child(4) .cover{background:linear-gradient(140deg,#33051c,#ff2d7855),radial-gradient(circle at 25% 30%,#8b5cf640,transparent 60%),#160410}
-.album:nth-child(5) .cover{background:linear-gradient(140deg,#06223d,#0084ff55),radial-gradient(circle at 75% 30%,#2dd4a740,transparent 60%),#04101e}
-.album:nth-child(6) .cover{background:linear-gradient(140deg,#2d1c04,#ffb45455),radial-gradient(circle at 30% 75%,#ff2d7840,transparent 60%),#160e02}
-.album:nth-child(7) .cover{background:linear-gradient(140deg,#101935,#5b7cfa55),radial-gradient(circle at 70% 70%,#00d1ff40,transparent 60%),#070b1a}
-.album .meta{padding:.7rem .85rem;font-size:.8rem;color:var(--dim);display:flex;justify-content:space-between;gap:.5rem}
-.album .meta b{color:var(--muted);font-weight:600}
+a.album{display:block;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel);transition:transform .2s,border-color .2s,box-shadow .2s;color:var(--text)}
+a.album:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:0 14px 36px rgba(0,0,0,.45),0 0 30px rgba(0,209,255,.08);text-decoration:none}
+.album .cover{position:relative;aspect-ratio:1;overflow:hidden;background:#0a1320}
+.album .cover img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.album:hover .cover img{transform:scale(1.06)}
+.album .cover::after{content:"▶";position:absolute;right:.65rem;bottom:.65rem;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(4,7,13,.82);color:var(--cyan);font-size:.9rem;opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s;border:1px solid var(--line-strong)}
+.album:hover .cover::after{opacity:1;transform:none}
+.album .meta{padding:.7rem .85rem;font-size:.8rem;color:var(--dim);display:flex;justify-content:space-between;align-items:baseline;gap:.5rem}
+.album .meta b{color:var(--text);font-weight:700;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.album .meta span{flex-shrink:0}
+
+/* singles wall */
+.singles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,128px),1fr));gap:1rem}
+a.single{display:block;color:var(--text);border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);transition:transform .2s,border-color .2s}
+a.single:hover{transform:translateY(-3px);border-color:var(--line-strong);text-decoration:none}
+.single img{aspect-ratio:1;width:100%;height:auto;object-fit:cover;display:block}
+.single .s-meta{padding:.5rem .65rem;font-size:.73rem;line-height:1.4}
+.single .s-meta b{display:block;font-weight:600;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.single .s-meta span{color:var(--dim)}
+
+/* media cards — itch.io / product artwork on top */
+.card.media{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.card.media>.cover{position:relative;aspect-ratio:63/50;overflow:hidden;background:#0a1320;border-bottom:1px solid var(--line)}
+.card.media>.cover img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.card.media:hover>.cover img{transform:scale(1.05)}
+.card.media>.body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;flex:1}
+.card.media>.body .links{margin-top:auto;padding-top:.9rem}
+.card.media .price{background:rgba(4,12,9,.8);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:2}
+.card.media .price.free{background:rgba(3,10,16,.8)}
+
+/* book cards — portrait cover + text */
+.card.hbook{display:flex;gap:1.15rem;align-items:flex-start}
+.card.hbook .bcov{flex:0 0 92px}
+.card.hbook .bcov img{width:92px;height:auto;aspect-ratio:48/69;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,.1);box-shadow:0 10px 24px rgba(0,0,0,.5);transition:transform .25s ease}
+.card.hbook:hover .bcov img{transform:scale(1.04) rotate(-1deg)}
+.card.hbook .bbody{flex:1;min-width:0}
+.card.hbook .bcov.wide{flex-basis:128px}
+.card.hbook .bcov.wide img{width:128px;height:auto;aspect-ratio:63/50}
+@media(max-width:480px){.card.hbook{flex-direction:column}.card.hbook .bcov img{width:120px}.card.hbook .bcov.wide img{width:160px}}
+
+/* bookshelf — wall of real covers */
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,132px),1fr));gap:1rem}
+a.shelf-book{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--panel);transition:transform .2s,border-color .2s,box-shadow .2s}
+a.shelf-book:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+a.shelf-book img{width:100%;height:auto;aspect-ratio:48/69;object-fit:cover;display:block}
+
+/* cover strip — home page artwork marquee */
+.cover-strip{overflow:hidden;border-block:1px solid var(--line);background:#060b14;padding:1.1rem 0;position:relative}
+.cover-strip::before,.cover-strip::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+.cover-strip::before{left:0;background:linear-gradient(90deg,var(--bg0),transparent)}
+.cover-strip::after{right:0;background:linear-gradient(-90deg,var(--bg0),transparent)}
+.strip-track{display:flex;gap:1rem;width:max-content;animation:strip 60s linear infinite}
+.cover-strip:hover .strip-track{animation-play-state:paused}
+.strip-track img{width:118px;height:118px;object-fit:cover;border-radius:10px;border:1px solid var(--line);flex-shrink:0}
+@keyframes strip{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.strip-track{animation:none}}
 .tracklist{font-family:var(--mono);font-size:.88rem;background:#070d17;border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;line-height:2.05;color:#bcd2e2}
 .tracklist .no{color:var(--dim);margin-right:.9rem}
 .tracklist .t{color:var(--cyan)}

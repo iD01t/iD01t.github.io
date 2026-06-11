@@ -66,6 +66,17 @@
     });
   });
 
+  /* gentle fade-in for lazy-loaded artwork */
+  if (!reduced) {
+    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
+      if (img.complete) return;
+      img.style.opacity = "0";
+      img.style.transition = "opacity .45s ease";
+      img.addEventListener("load", function () { img.style.opacity = "1"; });
+      img.addEventListener("error", function () { img.style.opacity = "1"; });
+    });
+  }
+
   /* dynamic year */
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
